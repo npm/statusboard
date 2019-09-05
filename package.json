@@ -1,0 +1,27 @@
+{
+  "name": "statusboard",
+  "version": "1.0.0",
+  "description": "Community &amp; Open Source Statusboard",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "serve": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/statusboard.git"
+  },
+  "keywords": [],
+  "author": "Darcy Clarke <darcy@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/statusboard/issues"
+  },
+  "homepage": "https://github.com/npm/statusboard#readme",
+  "devDependencies": {
+    "handlebars": "^4.2.0"
+  },
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>npm statusboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>npm statusboard</h1>
+<table class="project-list">
+{{#repos}}
+  <tr>
+    <td>
+      <a href="https://www.github.com/{{this}}" target="_blank">/{{this}}</a>
+    </td>
+    <td title="Stars">
+      <a href="https://npmjs.org/package/{{this}}">
+        <img src="https://badgen.net/github/stars/{{this}}?color=yellow" />
+      </a>
+    </td>
+    <td title="Watchers">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/githu{{this}}b/watchers/{{this}}" />
+      </a>
+    </td>
+    <td title="Issues">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/github/open-issues/{{this}}" />
+      </a>
+    </td>
+    <td title="PRs">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/github/open-prs/{{this}}" />
+      </a>
+    </td>
+    <td title="commits">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/github/commits/{{this}}" />
+      </a>
+    </td>
+    <td title="License">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/github/license/{{this}}" />
+      </a>
+    </td>
+    <td title="Contributors">
+      <a href="https://www.github.com/{{this}}">
+        <img src="https://badgen.net/github/contributors/{{this}}" />
+      </a>
+    </td>
+    <td>
+      <a href="https://npmjs.org/package/{{this}}">
+        <img src="https://badgen.net/npm/v/{{this}}" />
+      </a>
+    </td>
+    <td>
+      <a href="https://npmjs.org/package/{{this}}">
+        <img src="https://badgen.net/npm/dm/{{this}}" />
+      </a>
+    </td>
+    <td>
+      <a href="https://travis-ci.org/{{this}}">
+        <img src="https://badgen.net/travis/{{this}}" />
+      </a>
+    </td>
+  </tr>
+{{/repos}}
+</table>
+</body>
+</html>
