@@ -1,0 +1,37 @@
+query($per_page: Int = 100, $after: String) {
+  organization(login: "npm") {
+    repositories(first: $per_page, after: $after, privacy: PUBLIC) {
+      nodes {
+        updatedAt
+        nameWithOwner
+        name
+        stargazers {
+          totalCount
+        }
+        pushedAt
+        issues(states:OPEN) {
+          totalCount
+        }
+        pullRequests(states:OPEN) {
+          totalCount
+        }
+        licenseInfo {
+          name
+        }
+        watchers {
+          totalCount
+        }
+        releases {
+          totalCount
+        }
+        codeOfConduct {
+          name
+        }
+      }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+    }
+  }
+}

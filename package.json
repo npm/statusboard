@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node index.js",
-    "serve": "http-server ."
+    "serve": "http-server ./",
+    "fetch": "node fetch.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
     "handlebars": "^4.2.0"
   },
   "dependencies": {
+    "@octokit/graphql": "^4.2.0",
+    "copyfiles": "^2.1.1",
+    "dotenv": "^8.1.0",
     "http-server": "^0.11.1"
   }
 }

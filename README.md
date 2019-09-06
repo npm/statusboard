@@ -18,7 +18,33 @@ repos() {
       organization(login: $user) {
 				repositories(first: $per_page, after: $after, privacy: PUBLIC) {
           nodes {
+            updatedAt
             nameWithOwner
+            stargazers {
+              totalCount
+            }
+            pushedAt
+            issues(states:OPEN) {
+              totalCount
+            }
+            pullRequests(states:OPEN) {
+              totalCount
+            }
+            licenseInfo {
+              name
+            }
+            watchers {
+              totalCount
+            }
+            collaborators {
+              totalCount
+            }
+            releases {
+              totalCount
+            }
+            codeOfConduct {
+              name
+            }
           }
           pageInfo {
             hasNextPage
