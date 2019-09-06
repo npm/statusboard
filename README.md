@@ -14,6 +14,7 @@ You can view the live board here: [npm.github.io/statusboard](https://npm.github
 - [ ] Add secondary metrics (ex. specific labels/count)
 - [ ] Store data snapshots
 - [ ] Generate charts/diagrams/histograms
+- [ ] Go public with project (ie. allow others to copy/clone this work)
 
 ### Developing
 
