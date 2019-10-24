@@ -1,1 +1,2 @@
-_extends: open-source-project-boilerplate
+---
+_extends: 'open-source-project-boilerplate'
