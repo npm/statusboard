@@ -1,37 +1,29 @@
 (async function () {
   require('dotenv').config()
   const fs = require('fs')
-  const { sleep } = require('sleepover')
-  const query = fs.readFileSync('./query.gql', 'utf8')
-  const { graphql } = require('@octokit/graphql')
+  const Octokit = require("@octokit/rest")
+  const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   let repositories = []
-  let opts = { headers: { authorization: `token ${process.env.AUTH_TOKEN}` }}
   function write (data) {
-    console.log('writing...')
     fs.writeFileSync('./dump.json', JSON.stringify(data), 'utf8')
   }
-  async function run (query, after, cb) {
-    if (after) {
-      opts.after = after
-    }
-    console.log('running....', after)
-    try {
-      const response = await graphql(query, opts)
-      const data = response.organization.repositories
-      console.log('repos found:', data.nodes.length)
-      repositories = repositories.concat(data.nodes)
-      if (data.pageInfo.hasNextPage) {
-        sleep(1500)
-        run(query, data.pageInfo.endCursor, cb)
-      } else {
-        cb(repositories)
-      }
-    } catch (error) {
-      console.log("Request failed:", error.request)
-      console.log(error.message)
-      console.log(error.data)
-      cb(repositories)
-    }
+  function run (page, cb) {
+    page = page || 1
+    octokit.repos
+      .listForOrg({
+        org: "npm",
+        type: "public",
+        per_page: 100,
+        page: page
+      }).then(({ data }) => {
+        if (!data || !data.length) {
+          cb(repositories)
+        } else {
+          page++
+          repositories = repositories.concat(data)
+          run(page, cb)
+        }
+      })
   }
-  await run(query, null, write)
+  run(null, write)
 })()
