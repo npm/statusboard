@@ -20,12 +20,14 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
-    "handlebars": "^4.2.0"
+    "handlebars": "^4.5.1"
   },
   "dependencies": {
     "@octokit/graphql": "^4.2.0",
+    "@octokit/rest": "^16.34.0",
     "copyfiles": "^2.1.1",
     "dotenv": "^8.1.0",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "sleepover": "^1.1.4"
   }
 }

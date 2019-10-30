@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { organization } = require('./dump')
+const repos = require('./dump')
 const copyfiles = require('copyfiles')
 const Handlebars = require('handlebars')
 const source = fs.readFileSync('./template.hbs', 'utf8')
@@ -11,8 +11,7 @@ copyfiles(['./src/*.js', './src/*.css', './dist/'], (err) => {
   console.log('files copied!')
 })
 
-const repos = organization.repositories.nodes.filter(r => !r.isArchived)
-fs.writeFile(file, template({ repos }), 'utf8', (err) => {
+fs.writeFile(file, template({ repos: repos.filter(r => !r.isArchived) }), 'utf8', (err) => {
   if (err) throw err
   console.log(`${file} was created!`)
 })
