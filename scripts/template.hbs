@@ -33,7 +33,7 @@
   </style>
 </head>
 <body>
-  <h2><strong>npm</strong> project statusboard</h2>
+  <h2><strong>npm</strong> project statusboard <small>Last built: {{}}</small></h2>
   <table class="table table-striped table-bordered" data-sortable>
     <thead>
     <tr>
@@ -54,9 +54,6 @@
       </th>
       <th>
         Last Commit
-      </th>
-      <th>
-        Code&nbsp;of&nbsp;Conduct
       </th>
       <th>
         Build&nbsp;Status
@@ -97,16 +94,15 @@
         {{pushed_at}}
       </td>
       <td>
-        {{codeOfConduct.name}}
-      </td>
-      <td>
         {{build_status}}
       </td>
       <td>
         {{node}}
       </td>
       <td>
-        {{downloads}}
+        {{#if version}}
+          <img alt="npm" src="https://img.shields.io/npm/dm/{{name}}">
+        {{/if}}
       </td>
       <td>
         {{size}}
