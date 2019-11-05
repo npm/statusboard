@@ -4,9 +4,13 @@
   "description": "Community &amp; Open Source Statusboard",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js",
+    "build": "node ./scripts/build.js",
     "serve": "http-server ./",
-    "fetch": "node fetch.js"
+    "fetch": "node ./scripts/fetch.js",
+    "agenda": "node ./scripts/agenda.js",
+    "contributions": "node ./scripts/contributions.js",
+    "stats": "node ./scripts/stats.js",
+    "info": "node ./scripts/info.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,7 @@
     "copyfiles": "^2.1.1",
     "dotenv": "^8.1.0",
     "http-server": "^0.11.1",
+    "mkdirp": "^0.5.1",
     "sleepover": "^1.1.4"
   }
 }
