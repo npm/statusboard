@@ -36,12 +36,25 @@
                 repo: r.name,
                 ref: r.default_branch
               })
+              let prs = await octokit.pulls.list({
+                owner: 'npm',
+                repo: r.name,
+                per_page: 100
+              })
+              let issues = await octokit.issues.listForRepo({
+                owner: 'npm',
+                repo: r.name,
+                per_page: 100
+              })
               let response = await fetch(`https://raw.githack.com/npm/${r.name}/master/package.json`)
-              let data = await response.json()
+              let pkg = await response.json()
+              r.prs_count = prs.data.length
+              console.log('>>>>', prs.data.length, issues.data.length)
+              r.issues_count = issues.data.length
               r.build_status = status.data[0].state
-              r.node = data && data.engines && data.engines.node ? data.engines.node : null
-              r.license.key = data.license || r.license.key
-              r.version = data.version
+              r.node = pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
+              r.license.key = pkg.license || r.license.key
+              r.version = pkg.version
               return r
             } catch (e) {
               console.log(e)

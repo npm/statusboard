@@ -33,7 +33,8 @@
   </style>
 </head>
 <body>
-  <h2><strong>npm</strong> project statusboard <small>Last built: {{}}</small></h2>
+  <h2><strong>npm</strong> project statusboard</h2>
+  <small>Last built: {{built}}</small>
   <table class="table table-striped table-bordered" data-sortable>
     <thead>
     <tr>
@@ -82,10 +83,10 @@
         {{stargazers_count}}
       </td>
       <td>
-        {{open_issues_count}}
+        {{issues_count}}
       </td>
       <td>
-        {{pullRequests.totalCount}}
+        {{prs_count}}
       </td>
       <td class="uppercase">
         {{license.key}}
