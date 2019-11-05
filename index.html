@@ -2,16 +2,38 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>npm statusboard</title>
+  <title>npm - project statusboard</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css"/>
   <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css");
-    @import url("https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css");
+    body {
+      padding: 50px 25px;
+      margin: 0;
+    }
+    body:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+    }
+    input[type="search"] {
+      padding: 10px;
+      width: 250px !important;
+    }
+    .uppercase {
+      text-transform: uppercase;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h2>npm statusboard</h2>
+  <h2><strong>npm</strong> project statusboard</h2>
   <table class="table table-striped table-bordered" data-sortable>
     <thead>
     <tr>
@@ -46,7 +68,7 @@
         Downloads
       </th>
       <th>
-        Size
+        Size&nbsp;(KB)
       </th>
       <th>
         Version
@@ -67,8 +89,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-03-15T08:29:37Z
@@ -80,7 +102,7 @@
         
       </td>
       <td>
-        
+        *
       </td>
       <td>
         
@@ -89,7 +111,7 @@
         161
       </td>
       <td>
-        
+        1.1.6
       </td>
     </tr>
     <tr>
@@ -105,8 +127,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-28T02:23:18Z
@@ -127,7 +149,7 @@
         993
       </td>
       <td>
-        
+        2.7.2
       </td>
     </tr>
     <tr>
@@ -143,8 +165,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-19T19:17:42Z
@@ -165,7 +187,7 @@
         560
       </td>
       <td>
-        
+        6.3.0
       </td>
     </tr>
     <tr>
@@ -181,8 +203,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-06T20:08:20Z
@@ -194,7 +216,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 8
       </td>
       <td>
         
@@ -203,7 +225,7 @@
         9149
       </td>
       <td>
-        
+        5.0.5
       </td>
     </tr>
     <tr>
@@ -219,8 +241,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-26T01:38:50Z
@@ -241,7 +263,7 @@
         106
       </td>
       <td>
-        
+        4.0.1
       </td>
     </tr>
     <tr>
@@ -257,8 +279,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-07-04T21:55:26Z
@@ -270,7 +292,7 @@
         
       </td>
       <td>
-        
+        *
       </td>
       <td>
         
@@ -279,7 +301,7 @@
         67
       </td>
       <td>
-        
+        1.3.5
       </td>
     </tr>
     <tr>
@@ -295,8 +317,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-23T22:37:58Z
@@ -308,7 +330,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 8
       </td>
       <td>
         
@@ -317,7 +339,7 @@
         133
       </td>
       <td>
-        
+        2.0.1
       </td>
     </tr>
     <tr>
@@ -333,8 +355,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-05-15T00:45:45Z
@@ -346,7 +368,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.6
       </td>
       <td>
         
@@ -355,7 +377,7 @@
         215
       </td>
       <td>
-        
+        1.0.12
       </td>
     </tr>
     <tr>
@@ -371,8 +393,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-10-15T23:10:42Z
@@ -384,7 +406,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.8
       </td>
       <td>
         
@@ -393,7 +415,7 @@
         213
       </td>
       <td>
-        
+        1.0.7
       </td>
     </tr>
     <tr>
@@ -409,8 +431,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-10-08T03:57:18Z
@@ -422,7 +444,7 @@
         
       </td>
       <td>
-        
+        *
       </td>
       <td>
         
@@ -431,7 +453,7 @@
         138
       </td>
       <td>
-        
+        0.0.6
       </td>
     </tr>
     <tr>
@@ -447,8 +469,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-05-17T20:48:18Z
@@ -469,7 +491,7 @@
         45
       </td>
       <td>
-        
+        1.0.5
       </td>
     </tr>
     <tr>
@@ -485,8 +507,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-05-13T16:51:35Z
@@ -507,7 +529,7 @@
         64
       </td>
       <td>
-        
+        1.2.1
       </td>
     </tr>
     <tr>
@@ -523,8 +545,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2014-04-22T22:25:06Z
@@ -536,7 +558,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.7.7
       </td>
       <td>
         
@@ -545,7 +567,7 @@
         391
       </td>
       <td>
-        
+        1.1.0
       </td>
     </tr>
     <tr>
@@ -561,8 +583,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-09-24T00:58:39Z
@@ -583,7 +605,7 @@
         314
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -599,8 +621,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-21T22:54:14Z
@@ -621,7 +643,7 @@
         162
       </td>
       <td>
-        
+        4.1.2
       </td>
     </tr>
     <tr>
@@ -637,7 +659,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -675,7 +697,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -713,8 +735,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-17T21:13:00Z
@@ -735,7 +757,7 @@
         154
       </td>
       <td>
-        
+        4.0.3
       </td>
     </tr>
     <tr>
@@ -751,8 +773,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-04-15T09:31:56Z
@@ -773,7 +795,7 @@
         46
       </td>
       <td>
-        
+        0.3.0
       </td>
     </tr>
     <tr>
@@ -789,7 +811,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -827,8 +849,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-02-20T17:55:48Z
@@ -849,7 +871,7 @@
         38
       </td>
       <td>
-        
+        0.1.5
       </td>
     </tr>
     <tr>
@@ -865,8 +887,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-08T13:46:23Z
@@ -887,7 +909,7 @@
         90
       </td>
       <td>
-        
+        1.0.4
       </td>
     </tr>
     <tr>
@@ -903,8 +925,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-05-20T07:41:42Z
@@ -925,7 +947,7 @@
         120
       </td>
       <td>
-        
+        0.0.0
       </td>
     </tr>
     <tr>
@@ -941,8 +963,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-02T09:24:39Z
@@ -963,7 +985,7 @@
         35
       </td>
       <td>
-        
+        0.0.8
       </td>
     </tr>
     <tr>
@@ -979,8 +1001,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-01-05T19:32:13Z
@@ -1001,7 +1023,7 @@
         198
       </td>
       <td>
-        
+        2.1.2
       </td>
     </tr>
     <tr>
@@ -1017,8 +1039,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-04T04:05:27Z
@@ -1039,7 +1061,7 @@
         295
       </td>
       <td>
-        
+        3.0.3
       </td>
     </tr>
     <tr>
@@ -1055,8 +1077,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        BSD-2-Clause
       </td>
       <td>
         2019-11-02T07:02:12Z
@@ -1077,7 +1099,7 @@
         232
       </td>
       <td>
-        
+        2.5.0
       </td>
     </tr>
     <tr>
@@ -1093,8 +1115,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        BSD-2-Clause
       </td>
       <td>
         2018-11-16T12:49:37Z
@@ -1115,7 +1137,7 @@
         20
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -1131,8 +1153,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        BSD-2-Clause
       </td>
       <td>
         2019-09-18T20:11:24Z
@@ -1153,7 +1175,7 @@
         589
       </td>
       <td>
-        
+        1.2.1
       </td>
     </tr>
     <tr>
@@ -1169,8 +1191,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2014-01-08T22:57:28Z
@@ -1191,7 +1213,7 @@
         152
       </td>
       <td>
-        
+        0.0.0
       </td>
     </tr>
     <tr>
@@ -1207,8 +1229,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2014-08-14T23:00:05Z
@@ -1229,7 +1251,7 @@
         201
       </td>
       <td>
-        
+        1.0.2
       </td>
     </tr>
     <tr>
@@ -1245,8 +1267,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-07-03T00:02:06Z
@@ -1267,7 +1289,7 @@
         497
       </td>
       <td>
-        
+        1.1.4
       </td>
     </tr>
     <tr>
@@ -1283,8 +1305,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2014-11-16T19:55:49Z
@@ -1305,7 +1327,7 @@
         1204
       </td>
       <td>
-        
+        2.2.1
       </td>
     </tr>
     <tr>
@@ -1321,8 +1343,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        BSD-2-Clause
       </td>
       <td>
         2019-09-30T20:53:27Z
@@ -1343,7 +1365,7 @@
         164
       </td>
       <td>
-        
+        3.0.0
       </td>
     </tr>
     <tr>
@@ -1359,8 +1381,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-01-16T18:50:04Z
@@ -1381,7 +1403,7 @@
         158
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -1397,8 +1419,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-04-09T06:49:36Z
@@ -1419,7 +1441,7 @@
         20
       </td>
       <td>
-        
+        1.3.1
       </td>
     </tr>
     <tr>
@@ -1435,7 +1457,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -1473,7 +1495,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -1511,8 +1533,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-09-29T23:25:57Z
@@ -1533,7 +1555,7 @@
         137
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -1549,7 +1571,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -1587,8 +1609,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-07-15T22:54:01Z
@@ -1609,7 +1631,7 @@
         135
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -1625,8 +1647,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-25T19:57:43Z
@@ -1647,7 +1669,7 @@
         150
       </td>
       <td>
-        
+        2.0.1
       </td>
     </tr>
     <tr>
@@ -1663,7 +1685,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -1701,8 +1723,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-25T23:01:25Z
@@ -1723,7 +1745,7 @@
         34
       </td>
       <td>
-        
+        1.0.6
       </td>
     </tr>
     <tr>
@@ -1739,7 +1761,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -1777,8 +1799,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-11-02T18:14:09Z
@@ -1799,7 +1821,7 @@
         144
       </td>
       <td>
-        
+        0.0.3
       </td>
     </tr>
     <tr>
@@ -1815,8 +1837,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-09-17T17:15:31Z
@@ -1837,7 +1859,7 @@
         318
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -1853,8 +1875,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-29T01:38:07Z
@@ -1875,7 +1897,7 @@
         24
       </td>
       <td>
-        
+        1.0.2
       </td>
     </tr>
     <tr>
@@ -1891,8 +1913,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2014-07-31T17:43:27Z
@@ -1913,7 +1935,7 @@
         204
       </td>
       <td>
-        
+        1.1.1
       </td>
     </tr>
     <tr>
@@ -1929,7 +1951,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -1967,8 +1989,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-02T07:02:08Z
@@ -1989,7 +2011,7 @@
         306
       </td>
       <td>
-        
+        3.11.3
       </td>
     </tr>
     <tr>
@@ -2005,7 +2027,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2043,7 +2065,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -2081,8 +2103,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-24T23:39:34Z
@@ -2103,7 +2125,7 @@
         61
       </td>
       <td>
-        
+        1.2.10
       </td>
     </tr>
     <tr>
@@ -2119,8 +2141,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-24T23:41:19Z
@@ -2141,7 +2163,7 @@
         28
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -2157,8 +2179,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-07-13T13:09:12Z
@@ -2179,7 +2201,7 @@
         52
       </td>
       <td>
-        
+        1.3.2
       </td>
     </tr>
     <tr>
@@ -2195,7 +2217,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -2233,7 +2255,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -2271,7 +2293,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2309,8 +2331,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-09-10T18:02:05Z
@@ -2331,7 +2353,7 @@
         163
       </td>
       <td>
-        
+        1.0.2
       </td>
     </tr>
     <tr>
@@ -2347,8 +2369,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-20T17:42:10Z
@@ -2369,7 +2391,7 @@
         230
       </td>
       <td>
-        
+        5.3.1
       </td>
     </tr>
     <tr>
@@ -2385,7 +2407,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2423,8 +2445,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-09-25T17:32:33Z
@@ -2445,7 +2467,7 @@
         136
       </td>
       <td>
-        
+        4.3.0
       </td>
     </tr>
     <tr>
@@ -2461,7 +2483,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2499,7 +2521,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2537,8 +2559,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-02T07:02:38Z
@@ -2559,7 +2581,7 @@
         300
       </td>
       <td>
-        
+        3.0.1
       </td>
     </tr>
     <tr>
@@ -2575,7 +2597,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2613,7 +2635,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2651,8 +2673,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-05-31T23:47:05Z
@@ -2673,7 +2695,7 @@
         144
       </td>
       <td>
-        
+        2.0.3
       </td>
     </tr>
     <tr>
@@ -2689,8 +2711,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-06-12T09:54:31Z
@@ -2711,7 +2733,7 @@
         8
       </td>
       <td>
-        
+        1.0.2
       </td>
     </tr>
     <tr>
@@ -2727,8 +2749,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-25T00:00:29Z
@@ -2749,7 +2771,7 @@
         69
       </td>
       <td>
-        
+        1.0.10
       </td>
     </tr>
     <tr>
@@ -2765,7 +2787,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -2803,8 +2825,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-04-21T10:03:46Z
@@ -2825,7 +2847,7 @@
         27
       </td>
       <td>
-        
+        3.0.3
       </td>
     </tr>
     <tr>
@@ -2841,7 +2863,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -2879,7 +2901,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2917,7 +2939,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -2955,7 +2977,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -2993,8 +3015,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2014-10-25T01:01:06Z
@@ -3015,7 +3037,7 @@
         116
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -3031,8 +3053,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-07-12T00:59:22Z
@@ -3053,7 +3075,7 @@
         58
       </td>
       <td>
-        
+        1.5.3
       </td>
     </tr>
     <tr>
@@ -3069,7 +3091,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3107,7 +3129,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3145,7 +3167,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3183,8 +3205,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-03T16:53:20Z
@@ -3205,7 +3227,7 @@
         27
       </td>
       <td>
-        
+        3.0.0
       </td>
     </tr>
     <tr>
@@ -3221,8 +3243,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        Proprietary
       </td>
       <td>
         2019-09-06T17:29:57Z
@@ -3243,7 +3265,7 @@
         2283
       </td>
       <td>
-        
+        1.3.0
       </td>
     </tr>
     <tr>
@@ -3259,7 +3281,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3297,7 +3319,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3335,8 +3357,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-09-26T15:31:21Z
@@ -3357,7 +3379,7 @@
         88
       </td>
       <td>
-        
+        1.1.5
       </td>
     </tr>
     <tr>
@@ -3373,7 +3395,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3411,7 +3433,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3449,8 +3471,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-28T23:47:01Z
@@ -3471,7 +3493,7 @@
         33
       </td>
       <td>
-        
+        3.0.2
       </td>
     </tr>
     <tr>
@@ -3487,8 +3509,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-09-13T22:56:34Z
@@ -3509,7 +3531,7 @@
         432
       </td>
       <td>
-        
+        2.7.4
       </td>
     </tr>
     <tr>
@@ -3525,7 +3547,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -3563,7 +3585,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -3601,8 +3623,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2014-11-18T12:45:53Z
@@ -3623,7 +3645,7 @@
         750
       </td>
       <td>
-        
+        0.0.17
       </td>
     </tr>
     <tr>
@@ -3639,7 +3661,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3677,8 +3699,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-10-25T14:19:13Z
@@ -3699,7 +3721,7 @@
         71
       </td>
       <td>
-        
+        5.0.0
       </td>
     </tr>
     <tr>
@@ -3715,7 +3737,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3753,7 +3775,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3791,8 +3813,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-03-02T22:22:23Z
@@ -3813,7 +3835,7 @@
         93
       </td>
       <td>
-        
+        0.1.5
       </td>
     </tr>
     <tr>
@@ -3829,7 +3851,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3867,7 +3889,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3905,7 +3927,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -3943,7 +3965,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -3981,8 +4003,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-02T07:02:36Z
@@ -4003,7 +4025,7 @@
         118
       </td>
       <td>
-        
+        2.0.2
       </td>
     </tr>
     <tr>
@@ -4019,8 +4041,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-28T02:24:01Z
@@ -4041,7 +4063,7 @@
         5
       </td>
       <td>
-        
+        1.1.1
       </td>
     </tr>
     <tr>
@@ -4057,8 +4079,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-05-12T22:14:24Z
@@ -4079,7 +4101,7 @@
         128
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -4095,7 +4117,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4133,7 +4155,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4171,7 +4193,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4209,7 +4231,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4247,8 +4269,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2017-02-11T05:12:45Z
@@ -4269,7 +4291,7 @@
         291
       </td>
       <td>
-        
+        1.2.0
       </td>
     </tr>
     <tr>
@@ -4285,8 +4307,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2015-12-16T04:07:19Z
@@ -4307,7 +4329,7 @@
         574
       </td>
       <td>
-        
+        0.0.0
       </td>
     </tr>
     <tr>
@@ -4323,8 +4345,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-10-21T23:05:07Z
@@ -4345,7 +4367,7 @@
         115
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -4361,8 +4383,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2015-08-05T21:07:20Z
@@ -4383,7 +4405,7 @@
         157
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -4399,8 +4421,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2015-08-18T19:59:48Z
@@ -4421,7 +4443,7 @@
         472
       </td>
       <td>
-        
+        0.0.1
       </td>
     </tr>
     <tr>
@@ -4437,7 +4459,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4475,7 +4497,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4513,7 +4535,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4551,8 +4573,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2016-10-21T21:23:27Z
@@ -4564,7 +4586,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 0.8.x
       </td>
       <td>
         
@@ -4573,7 +4595,7 @@
         46
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -4589,8 +4611,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-04T08:02:50Z
@@ -4611,7 +4633,7 @@
         57
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -4627,7 +4649,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4665,7 +4687,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4703,8 +4725,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-11-22T18:11:55Z
@@ -4725,7 +4747,7 @@
         12
       </td>
       <td>
-        
+        1.3.0
       </td>
     </tr>
     <tr>
@@ -4741,7 +4763,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -4779,7 +4801,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4817,7 +4839,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4855,7 +4877,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4893,7 +4915,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -4931,7 +4953,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -4969,8 +4991,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-08-12T13:26:43Z
@@ -4991,7 +5013,7 @@
         30
       </td>
       <td>
-        
+        1.1.4
       </td>
     </tr>
     <tr>
@@ -5007,7 +5029,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5045,8 +5067,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-11T14:09:59Z
@@ -5067,7 +5089,7 @@
         632
       </td>
       <td>
-        
+        2.3.5
       </td>
     </tr>
     <tr>
@@ -5083,7 +5105,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5121,7 +5143,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5159,8 +5181,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-10-11T18:14:04Z
@@ -5181,7 +5203,7 @@
         2538
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5197,8 +5219,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-06-01T00:03:50Z
@@ -5219,7 +5241,7 @@
         20
       </td>
       <td>
-        
+        1.2.2
       </td>
     </tr>
     <tr>
@@ -5235,8 +5257,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-03-22T20:11:33Z
@@ -5257,7 +5279,7 @@
         40913
       </td>
       <td>
-        
+        8.5.0
       </td>
     </tr>
     <tr>
@@ -5273,8 +5295,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-05-17T16:27:52Z
@@ -5295,7 +5317,7 @@
         23
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5311,7 +5333,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -5349,7 +5371,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5387,7 +5409,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -5425,8 +5447,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-02-23T23:20:22Z
@@ -5447,7 +5469,7 @@
         4
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5463,8 +5485,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2016-10-11T13:04:06Z
@@ -5485,7 +5507,7 @@
         1703
       </td>
       <td>
-        
+        1.1.1
       </td>
     </tr>
     <tr>
@@ -5501,8 +5523,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-07-26T17:12:39Z
@@ -5523,7 +5545,7 @@
         7331
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5539,8 +5561,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-09-04T18:30:48Z
@@ -5561,7 +5583,7 @@
         14
       </td>
       <td>
-        
+        1.0.2
       </td>
     </tr>
     <tr>
@@ -5577,8 +5599,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2016-03-17T13:36:55Z
@@ -5599,7 +5621,7 @@
         3
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5615,8 +5637,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-04-18T13:59:34Z
@@ -5637,7 +5659,7 @@
         34
       </td>
       <td>
-        
+        1.1.2
       </td>
     </tr>
     <tr>
@@ -5653,7 +5675,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5691,8 +5713,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-05-31T21:25:00Z
@@ -5713,7 +5735,7 @@
         67
       </td>
       <td>
-        
+        1.6.1
       </td>
     </tr>
     <tr>
@@ -5729,8 +5751,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        SEE LICENSE IN LICENSE
       </td>
       <td>
         2016-03-29T20:34:24Z
@@ -5742,7 +5764,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.8
       </td>
       <td>
         
@@ -5751,7 +5773,7 @@
         463
       </td>
       <td>
-        
+        3.0.0-b2
       </td>
     </tr>
     <tr>
@@ -5767,8 +5789,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        SEE LICENSE IN LICENSE
       </td>
       <td>
         2016-03-29T20:57:01Z
@@ -5780,7 +5802,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.11
       </td>
       <td>
         
@@ -5789,7 +5811,7 @@
         26
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -5805,8 +5827,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-06-14T18:07:59Z
@@ -5818,7 +5840,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;0.10
       </td>
       <td>
         
@@ -5827,7 +5849,7 @@
         178
       </td>
       <td>
-        
+        1.0.5
       </td>
     </tr>
     <tr>
@@ -5843,8 +5865,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-05-31T21:25:04Z
@@ -5865,7 +5887,7 @@
         30
       </td>
       <td>
-        
+        2.4.0
       </td>
     </tr>
     <tr>
@@ -5881,8 +5903,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-05-31T21:25:07Z
@@ -5903,7 +5925,7 @@
         39
       </td>
       <td>
-        
+        1.6.0
       </td>
     </tr>
     <tr>
@@ -5919,7 +5941,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5957,7 +5979,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -5995,8 +6017,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-04-14T17:14:42Z
@@ -6017,7 +6039,7 @@
         12
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -6033,8 +6055,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-09-30T15:04:09Z
@@ -6055,7 +6077,7 @@
         30
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -6071,8 +6093,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-05-16T17:04:15Z
@@ -6093,7 +6115,7 @@
         1752
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6109,8 +6131,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-05-17T19:45:50Z
@@ -6131,7 +6153,7 @@
         1656
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6147,8 +6169,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-10-04T21:40:33Z
@@ -6169,7 +6191,7 @@
         1749
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6185,8 +6207,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-05-16T17:10:58Z
@@ -6207,7 +6229,7 @@
         1693
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6223,8 +6245,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-07-31T22:25:18Z
@@ -6245,7 +6267,7 @@
         26
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6261,8 +6283,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-07-05T22:22:50Z
@@ -6283,7 +6305,7 @@
         358
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6299,7 +6321,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -6337,8 +6359,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-06-01T13:59:25Z
@@ -6359,7 +6381,7 @@
         346
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -6375,8 +6397,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-06-08T14:07:10Z
@@ -6397,7 +6419,7 @@
         2
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6413,7 +6435,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         mit
       </td>
       <td>
@@ -6451,8 +6473,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-06-23T22:56:25Z
@@ -6473,7 +6495,7 @@
         3
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6489,8 +6511,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-10-22T18:20:28Z
@@ -6511,7 +6533,7 @@
         183
       </td>
       <td>
-        
+        1.4.0
       </td>
     </tr>
     <tr>
@@ -6527,8 +6549,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-28T02:21:21Z
@@ -6549,7 +6571,7 @@
         30
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6565,7 +6587,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6603,7 +6625,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6641,7 +6663,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6679,7 +6701,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6717,7 +6739,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6755,7 +6777,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6793,7 +6815,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6831,7 +6853,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -6869,7 +6891,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6882,7 +6904,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;4
       </td>
       <td>
         
@@ -6907,8 +6929,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-10-21T21:53:02Z
@@ -6929,7 +6951,7 @@
         3
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -6945,7 +6967,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -6983,8 +7005,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2016-10-31T19:52:05Z
@@ -7005,7 +7027,7 @@
         3
       </td>
       <td>
-        
+        0.1.0
       </td>
     </tr>
     <tr>
@@ -7021,8 +7043,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2019-08-27T22:16:32Z
@@ -7034,7 +7056,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;8.6
       </td>
       <td>
         
@@ -7043,7 +7065,7 @@
         10074
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -7059,8 +7081,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2016-11-03T22:14:25Z
@@ -7081,7 +7103,7 @@
         9
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -7097,7 +7119,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7135,8 +7157,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2016-11-15T21:45:43Z
@@ -7157,7 +7179,7 @@
         171
       </td>
       <td>
-        
+        1.1.1
       </td>
     </tr>
     <tr>
@@ -7173,7 +7195,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         mit
       </td>
       <td>
@@ -7211,8 +7233,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-09-05T18:32:13Z
@@ -7233,7 +7255,7 @@
         67
       </td>
       <td>
-        
+        3.1.0
       </td>
     </tr>
     <tr>
@@ -7249,7 +7271,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7287,8 +7309,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-10-23T23:04:37Z
@@ -7309,7 +7331,7 @@
         14
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -7325,8 +7347,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2018-11-11T22:42:52Z
@@ -7347,7 +7369,7 @@
         86
       </td>
       <td>
-        
+        1.3.2
       </td>
     </tr>
     <tr>
@@ -7363,7 +7385,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -7401,7 +7423,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -7439,8 +7461,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2017-05-31T20:13:46Z
@@ -7461,7 +7483,7 @@
         1295
       </td>
       <td>
-        
+        0.2.1
       </td>
     </tr>
     <tr>
@@ -7477,7 +7499,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7515,7 +7537,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         mit
       </td>
       <td>
@@ -7528,7 +7550,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 0.10.0
       </td>
       <td>
         
@@ -7537,7 +7559,7 @@
         448
       </td>
       <td>
-        
+        0.8.1
       </td>
     </tr>
     <tr>
@@ -7553,8 +7575,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2018-12-06T03:19:09Z
@@ -7566,7 +7588,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;4
       </td>
       <td>
         
@@ -7575,7 +7597,7 @@
         754
       </td>
       <td>
-        
+        2.0.0-alpha.3
       </td>
     </tr>
     <tr>
@@ -7591,8 +7613,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-03-30T19:24:36Z
@@ -7613,7 +7635,7 @@
         15
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -7629,7 +7651,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7667,8 +7689,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-30T22:09:54Z
@@ -7689,7 +7711,7 @@
         127
       </td>
       <td>
-        
+        3.0.3
       </td>
     </tr>
     <tr>
@@ -7705,8 +7727,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-05T01:08:00Z
@@ -7727,7 +7749,7 @@
         427
       </td>
       <td>
-        
+        2.0.0
       </td>
     </tr>
     <tr>
@@ -7743,8 +7765,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-02-05T04:52:48Z
@@ -7765,7 +7787,7 @@
         52
       </td>
       <td>
-        
+        1.0.6
       </td>
     </tr>
     <tr>
@@ -7781,7 +7803,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7819,7 +7841,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7857,7 +7879,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -7895,8 +7917,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2017-07-17T22:59:39Z
@@ -7917,7 +7939,7 @@
         12
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -7933,7 +7955,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -7971,7 +7993,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8009,7 +8031,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -8047,7 +8069,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8085,7 +8107,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8123,7 +8145,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8161,7 +8183,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -8199,8 +8221,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-20T23:11:05Z
@@ -8212,7 +8234,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 8
       </td>
       <td>
         
@@ -8221,7 +8243,7 @@
         115
       </td>
       <td>
-        
+        2.0.0
       </td>
     </tr>
     <tr>
@@ -8237,7 +8259,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -8275,7 +8297,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8313,7 +8335,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8351,8 +8373,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-30T10:10:07Z
@@ -8373,7 +8395,7 @@
         613
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -8389,7 +8411,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8427,8 +8449,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-02T07:02:07Z
@@ -8449,7 +8471,7 @@
         96
       </td>
       <td>
-        
+        2.0.0
       </td>
     </tr>
     <tr>
@@ -8465,7 +8487,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8503,7 +8525,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -8541,7 +8563,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         mit
       </td>
       <td>
@@ -8579,7 +8601,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8617,7 +8639,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8655,7 +8677,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8693,7 +8715,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8731,7 +8753,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8769,8 +8791,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-10-16T15:58:23Z
@@ -8791,7 +8813,7 @@
         166
       </td>
       <td>
-        
+        1.0.5
       </td>
     </tr>
     <tr>
@@ -8807,7 +8829,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8845,7 +8867,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8883,7 +8905,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8921,7 +8943,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -8959,7 +8981,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -8997,7 +9019,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9035,7 +9057,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -9073,8 +9095,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-16T20:43:34Z
@@ -9095,7 +9117,7 @@
         141
       </td>
       <td>
-        
+        1.0.3
       </td>
     </tr>
     <tr>
@@ -9103,7 +9125,7 @@
         <a href="https://www.github.com/npm/cli" target="_blank">cli</a>
       </td>
       <td>
-        2393
+        2394
       </td>
       <td>
         43
@@ -9111,7 +9133,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -9149,7 +9171,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9187,7 +9209,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9225,7 +9247,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -9263,7 +9285,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9301,7 +9323,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9339,7 +9361,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9377,8 +9399,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-08-23T04:27:27Z
@@ -9399,7 +9421,7 @@
         41
       </td>
       <td>
-        
+        0.5.0
       </td>
     </tr>
     <tr>
@@ -9415,7 +9437,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9453,7 +9475,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9491,8 +9513,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2018-09-24T23:39:08Z
@@ -9513,7 +9535,7 @@
         41
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -9529,8 +9551,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-02T07:02:13Z
@@ -9551,7 +9573,7 @@
         381
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -9567,8 +9589,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2018-11-13T18:19:51Z
@@ -9589,7 +9611,7 @@
         237
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -9605,7 +9627,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         cc-by-4.0
       </td>
       <td>
@@ -9643,7 +9665,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -9681,7 +9703,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9719,8 +9741,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-01-25T13:11:00Z
@@ -9741,7 +9763,7 @@
         155
       </td>
       <td>
-        
+        0.4.5
       </td>
     </tr>
     <tr>
@@ -9757,7 +9779,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -9795,8 +9817,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-02-13T02:10:10Z
@@ -9808,7 +9830,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D; 8.3.0
       </td>
       <td>
         
@@ -9817,7 +9839,7 @@
         133
       </td>
       <td>
-        
+        0.0.0-development
       </td>
     </tr>
     <tr>
@@ -9833,7 +9855,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9871,7 +9893,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9909,8 +9931,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2019-03-28T22:27:37Z
@@ -9931,7 +9953,7 @@
         8
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -9947,7 +9969,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -9985,7 +10007,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -10023,7 +10045,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -10061,7 +10083,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -10099,7 +10121,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10137,7 +10159,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10175,7 +10197,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         isc
       </td>
       <td>
@@ -10213,7 +10235,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10251,7 +10273,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         mit
       </td>
       <td>
@@ -10289,7 +10311,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10327,7 +10349,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10365,8 +10387,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-11-05T00:11:12Z
@@ -10387,7 +10409,7 @@
         725
       </td>
       <td>
-        
+        0.0.0
       </td>
     </tr>
     <tr>
@@ -10403,8 +10425,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2019-07-15T21:29:23Z
@@ -10425,7 +10447,7 @@
         75
       </td>
       <td>
-        
+        2.4.4
       </td>
     </tr>
     <tr>
@@ -10441,8 +10463,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-07-19T23:13:18Z
@@ -10463,7 +10485,7 @@
         129
       </td>
       <td>
-        
+        1.0.4
       </td>
     </tr>
     <tr>
@@ -10479,8 +10501,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-04T18:58:17Z
@@ -10501,7 +10523,7 @@
         73
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -10517,7 +10539,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10555,7 +10577,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10593,8 +10615,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2019-08-02T17:28:37Z
@@ -10615,7 +10637,7 @@
         223
       </td>
       <td>
-        
+        2.0.2
       </td>
     </tr>
     <tr>
@@ -10631,8 +10653,8 @@
       <td>
         
       </td>
-      <td>
-        isc
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-08-09T05:59:11Z
@@ -10653,7 +10675,7 @@
         68
       </td>
       <td>
-        
+        1.0.1
       </td>
     </tr>
     <tr>
@@ -10669,7 +10691,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         apache-2.0
       </td>
       <td>
@@ -10707,8 +10729,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-22T17:03:58Z
@@ -10729,7 +10751,7 @@
         26
       </td>
       <td>
-        
+        0.0.0
       </td>
     </tr>
     <tr>
@@ -10745,8 +10767,8 @@
       <td>
         
       </td>
-      <td>
-        mit
+      <td class="uppercase">
+        ISC
       </td>
       <td>
         2019-10-30T06:12:34Z
@@ -10767,7 +10789,7 @@
         15
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -10783,8 +10805,8 @@
       <td>
         
       </td>
-      <td>
-        other
+      <td class="uppercase">
+        MIT
       </td>
       <td>
         2019-10-20T21:48:39Z
@@ -10796,7 +10818,7 @@
         
       </td>
       <td>
-        
+        &gt;&#x3D;8
       </td>
       <td>
         
@@ -10805,7 +10827,7 @@
         401
       </td>
       <td>
-        
+        1.2.1
       </td>
     </tr>
     <tr>
@@ -10821,7 +10843,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         other
       </td>
       <td>
@@ -10859,7 +10881,7 @@
       <td>
         
       </td>
-      <td>
+      <td class="uppercase">
         
       </td>
       <td>
@@ -10887,10 +10909,14 @@
   </tbody>
   </table>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
 <script>
 $(document).ready(function () {
-  $('table').DataTable({ paging: false })
+  $('table').DataTable({
+    paging: false,
+    colReorder: true,
+    buttons: [ 'colvis' ]
+  })
 })
 </script>
 </body>

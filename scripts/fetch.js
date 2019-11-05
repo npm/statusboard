@@ -2,6 +2,7 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
+  const fetch = require('node-fetch')
   const mkdirp = require('mkdirp')
   const Octokit = require("@octokit/rest")
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
@@ -27,7 +28,20 @@
         page: page
       }).then(({ data }) => {
         if (!data || !data.length) {
-          cb(repositories.filter(r => !r.archived))
+          repositories = repositories.filter(r => !r.archived)
+          Promise.all(repositories.map(async r => {
+            try {
+              let response = await fetch(`https://raw.githack.com/npm/${r.name}/master/package.json`)
+              let data = await response.json()
+              r.node = data && data.engines && data.engines.node ? data.engines.node : null
+              r.license.key = data.license || r.license.key
+              r.version = data.version
+              return r
+            } catch (e) {
+              console.log(e)
+            }
+            return r
+          })).then(cb)
         } else {
           page++
           repositories = repositories.concat(data)

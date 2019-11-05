@@ -2,16 +2,38 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>npm statusboard</title>
+  <title>npm - project statusboard</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css"/>
   <style>
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css");
-    @import url("https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css");
+    body {
+      padding: 50px 25px;
+      margin: 0;
+    }
+    body:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+    }
+    input[type="search"] {
+      padding: 10px;
+      width: 250px !important;
+    }
+    .uppercase {
+      text-transform: uppercase;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h2>npm statusboard</h2>
+  <h2><strong>npm</strong> project statusboard</h2>
   <table class="table table-striped table-bordered" data-sortable>
     <thead>
     <tr>
@@ -46,7 +68,7 @@
         Downloads
       </th>
       <th>
-        Size
+        Size&nbsp;(KB)
       </th>
       <th>
         Version
@@ -68,7 +90,7 @@
       <td>
         {{pullRequests.totalCount}}
       </td>
-      <td>
+      <td class="uppercase">
         {{license.key}}
       </td>
       <td>
@@ -81,7 +103,7 @@
         {{build_status}}
       </td>
       <td>
-        {{node_version}}
+        {{node}}
       </td>
       <td>
         {{downloads}}
@@ -90,17 +112,22 @@
         {{size}}
       </td>
       <td>
-        {{package_version}}
+        {{version}}
       </td>
     </tr>
   {{/each}}
   </tbody>
   </table>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+{{!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> --}}
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
 <script>
 $(document).ready(function () {
-  $('table').DataTable({ paging: false })
+  $('table').DataTable({
+    paging: false,
+    colReorder: true,
+    buttons: [ 'colvis' ]
+  })
 })
 </script>
 </body>
