@@ -1,13 +1,15 @@
 (async function () {
   require('dotenv').config()
   const fs = require('fs')
+  const path = require('path')
   const { sleep } = require('sleepover')
-  const query = fs.readFileSync('./query.gql', 'utf8')
+  const query = fs.readFileSync(path.resolve(__dirname, './query.gql'), 'utf8')
   const { graphql } = require('@octokit/graphql')
   let repositories = []
   let opts = { headers: { authorization: `token ${process.env.AUTH_TOKEN}` }}
   function write (data) {
-    fs.writeFileSync('./dump.json', JSON.stringify(data), 'utf8')
+    console.log(data.length)
+    // fs.writeFileSync('./dump.json', JSON.stringify(data), 'utf8')
   }
   async function run (query, after, cb) {
     if (after) {
@@ -18,7 +20,8 @@
       const data = response.organization.repositories
       repositories = repositories.concat(data.nodes)
       if (data.pageInfo.hasNextPage) {
-        sleep(1500)
+        sleep(150)
+        console.log('cursor:', data.pageInfo.endCursor)
         run(query, data.pageInfo.endCursor, cb)
       } else {
         cb(repositories)

@@ -1,34 +1,32 @@
-query($per_page: Int = 100, $after: String) {
+query($per_page: Int = 50, $after: String) {
   organization(login: "npm") {
     repositories(first: $per_page, after: $after, privacy: PUBLIC) {
       nodes {
-        ... on Repository {
-          isArchived
-          updatedAt
-          nameWithOwner
+        isArchived
+        updatedAt
+        nameWithOwner
+        name
+        stargazers {
+          totalCount
+        }
+        pushedAt
+        issues(states:OPEN) {
+          totalCount
+        }
+        pullRequests(states:OPEN) {
+          totalCount
+        }
+        licenseInfo {
           name
-          stargazers {
-            totalCount
-          }
-          pushedAt
-          issues(states:OPEN) {
-            totalCount
-          }
-          pullRequests(states:OPEN) {
-            totalCount
-          }
-          licenseInfo {
-            name
-          }
-          watchers {
-            totalCount
-          }
-          releases {
-            totalCount
-          }
-          codeOfConduct {
-            name
-          }
+        }
+        watchers {
+          totalCount
+        }
+        releases {
+          totalCount
+        }
+        codeOfConduct {
+          name
         }
       }
       pageInfo {
