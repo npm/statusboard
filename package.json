@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
-    "handlebars": "^4.5.1"
+    "handlebars": "^4.5.3"
   },
   "dependencies": {
     "@actions/github": "^1.1.0",

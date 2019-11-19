@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro&:300,400,600,700Sour&display=swap" rel="stylesheet">
   <style>
     body {
       padding: 50px 25px;
       margin: 0;
+      font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
     }
     body:before {
       content: '';
@@ -30,11 +32,14 @@
       text-transform: uppercase;
       text-align: center;
     }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
   </style>
 </head>
 <body>
   <h2><strong>npm</strong> project statusboard</h2>
-  <small>Last built: 2019-10-15</small>
+  <small>Last built: 2019-10-19</small>
   <table class="table table-striped table-bordered" data-sortable>
     <thead>
     <tr>
@@ -63,7 +68,13 @@
         Node
       </th>
       <th>
-        Downloads
+        Downloads&nbsp;(/m)
+      </th>
+      <th>
+        Dependencies
+      </th>
+      <th>
+        Test&nbsp;Coverage
       </th>
       <th>
         Size&nbsp;(KB)
@@ -82,30 +93,37 @@
         132
       </td>
       <td>
-        
+        2
       </td>
       <td>
-        
+        2
       </td>
       <td class="uppercase">
-        isc
+        ISC
       </td>
       <td>
         2019-03-15T08:29:37Z
       </td>
       <td>
-        
+        success
+      </td>
+      <td>
+        *
       </td>
       <td>
         
       </td>
       <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/slide-flow-control">
+      </td>
+      <td>
+        58
       </td>
       <td>
         161
       </td>
       <td>
-        
+        1.1.6
       </td>
     </tr>
     <tr>
@@ -134,7 +152,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-registry-couchapp">
+        5160
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-couchapp">
+      </td>
+      <td>
+        10
       </td>
       <td>
         993
@@ -148,19 +172,19 @@
         <a href="https://www.github.com/npm/node-semver" target="_blank">node-semver</a>
       </td>
       <td>
-        3018
+        3022
       </td>
       <td>
         36
       </td>
       <td>
-        11
+        12
       </td>
       <td class="uppercase">
         ISC
       </td>
       <td>
-        2019-11-15T06:00:34Z
+        2019-11-18T20:05:54Z
       </td>
       <td>
         success
@@ -169,7 +193,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/node-semver">
+        
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-semver">
+      </td>
+      <td>
+        100
       </td>
       <td>
         560
@@ -204,7 +234,13 @@
         &gt;&#x3D; 8
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/node-tar">
+        
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-tar">
+      </td>
+      <td>
+        76
       </td>
       <td>
         9149
@@ -239,7 +275,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/nopt">
+        65130084
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/nopt">
+      </td>
+      <td>
+        89
       </td>
       <td>
         106
@@ -256,31 +298,36 @@
         452
       </td>
       <td>
-        46
+        
       </td>
       <td>
-        23
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-07-04T21:55:26Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
-        *
+        
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/ini">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         67
       </td>
       <td>
-        1.3.5
+        
       </td>
     </tr>
     <tr>
@@ -294,13 +341,13 @@
         8
       </td>
       <td>
-        3
+        2
       </td>
       <td class="uppercase">
         ISC
       </td>
       <td>
-        2019-10-23T22:37:58Z
+        2019-11-18T22:26:22Z
       </td>
       <td>
         success
@@ -309,13 +356,19 @@
         &gt;&#x3D; 8
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/node-which">
+        
       </td>
       <td>
-        133
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-which">
       </td>
       <td>
-        2.0.1
+        100
+      </td>
+      <td>
+        169
+      </td>
+      <td>
+        2.0.2
       </td>
     </tr>
     <tr>
@@ -344,7 +397,13 @@
         &gt;&#x3D;0.6
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/fstream">
+        20288128
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fstream">
+      </td>
+      <td>
+        67
       </td>
       <td>
         215
@@ -379,7 +438,13 @@
         &gt;&#x3D;0.8
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/read">
+        7791738
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read">
+      </td>
+      <td>
+        74
       </td>
       <td>
         213
@@ -396,31 +461,36 @@
         18
       </td>
       <td>
-        1
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2015-10-08T03:57:18Z
       </td>
       <td>
-        failure
+        
       </td>
       <td>
-        *
+        
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/uid-number">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         138
       </td>
       <td>
-        0.0.6
+        
       </td>
     </tr>
     <tr>
@@ -449,7 +519,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npmlog">
+        37951858
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npmlog">
+      </td>
+      <td>
+        86
       </td>
       <td>
         162
@@ -484,6 +560,12 @@
         
       </td>
       <td>
+        1506586
+      </td>
+      <td>
+      </td>
+      <td>
+        91
       </td>
       <td>
         721
@@ -518,6 +600,12 @@
         
       </td>
       <td>
+        7108704
+      </td>
+      <td>
+      </td>
+      <td>
+        75
       </td>
       <td>
         216
@@ -552,7 +640,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/read-installed">
+        2135115
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-installed">
+      </td>
+      <td>
+        94
       </td>
       <td>
         154
@@ -569,31 +663,36 @@
         75
       </td>
       <td>
-        8
+        
       </td>
       <td>
-        3
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-04-15T09:31:56Z
       </td>
       <td>
-        failure
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/promzard">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         46
       </td>
       <td>
-        0.3.0
+        
       </td>
     </tr>
     <tr>
@@ -622,6 +721,12 @@
         
       </td>
       <td>
+        3524998
+      </td>
+      <td>
+      </td>
+      <td>
+        78
       </td>
       <td>
         378
@@ -656,7 +761,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/osenv">
+        33453515
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/osenv">
+      </td>
+      <td>
+        78
       </td>
       <td>
         38
@@ -691,7 +802,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/lockfile">
+        2905545
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/lockfile">
+      </td>
+      <td>
+        84
       </td>
       <td>
         113
@@ -726,7 +843,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/mute-stream">
+        48791329
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mute-stream">
+      </td>
+      <td>
+        79
       </td>
       <td>
         57
@@ -743,31 +866,36 @@
         45
       </td>
       <td>
-        4
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-10-04T04:05:27Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/cmd-shim">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         295
       </td>
       <td>
-        3.0.3
+        
       </td>
     </tr>
     <tr>
@@ -796,7 +924,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/normalize-package-data">
+        42958165
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/normalize-package-data">
+      </td>
+      <td>
+        87
       </td>
       <td>
         232
@@ -813,30 +947,37 @@
         6
       </td>
       <td>
-        
+        3
       </td>
       <td>
-        
+        1
       </td>
       <td class="uppercase">
-        other
+        BSD-2-Clause
       </td>
       <td>
         2018-11-16T12:49:37Z
       </td>
       <td>
-        
+        success
       </td>
       <td>
         
       </td>
       <td>
+        1633923
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-user-validate">
+      </td>
+      <td>
+        100
       </td>
       <td>
         20
       </td>
       <td>
-        
+        1.0.0
       </td>
     </tr>
     <tr>
@@ -865,7 +1006,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-registry-mock">
+        5351
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-mock">
+      </td>
+      <td>
+        100
       </td>
       <td>
         640
@@ -882,31 +1029,36 @@
         7
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        BSD-2-Clause
+        other
       </td>
       <td>
         2019-09-30T20:53:27Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-install-checks">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         164
       </td>
       <td>
-        3.0.0
+        
       </td>
     </tr>
     <tr>
@@ -914,13 +1066,13 @@
         <a href="https://www.github.com/npm/download-counts" target="_blank">download-counts</a>
       </td>
       <td>
-        274
+        278
       </td>
       <td>
-        9
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -935,6 +1087,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         2051
@@ -960,7 +1118,7 @@
         ISC
       </td>
       <td>
-        2019-11-09T07:17:31Z
+        2019-11-19T12:38:50Z
       </td>
       <td>
         success
@@ -969,10 +1127,16 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/dynector">
+        31
       </td>
       <td>
-        152
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/dynector">
+      </td>
+      <td>
+        73
+      </td>
+      <td>
+        155
       </td>
       <td>
         2.0.1
@@ -1004,6 +1168,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         28
@@ -1038,7 +1208,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/inflight">
+        50349125
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/inflight">
+      </td>
+      <td>
+        100
       </td>
       <td>
         34
@@ -1073,6 +1249,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         13
@@ -1089,10 +1271,10 @@
         3
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         isc
@@ -1107,6 +1289,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         144
@@ -1123,10 +1311,10 @@
         53
       </td>
       <td>
-        4
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         other
@@ -1141,6 +1329,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         318
@@ -1157,10 +1351,10 @@
         3
       </td>
       <td>
-        1
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         isc
@@ -1175,6 +1369,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         47
@@ -1209,7 +1409,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/ndm">
+        540
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/ndm">
+      </td>
+      <td>
+        
       </td>
       <td>
         306
@@ -1244,6 +1450,12 @@
         
       </td>
       <td>
+        9621592
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         333
@@ -1260,31 +1472,36 @@
         6
       </td>
       <td>
-        5
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-11-06T17:32:32Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/fs-vacuum">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         125
       </td>
       <td>
-        1.2.10
+        
       </td>
     </tr>
     <tr>
@@ -1313,6 +1530,12 @@
         
       </td>
       <td>
+        6940473
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         51
@@ -1347,7 +1570,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-remote-ls">
+        1059
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-remote-ls">
+      </td>
+      <td>
+        95
       </td>
       <td>
         52
@@ -1382,7 +1611,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/read-package-tree">
+        6145329
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-package-tree">
+      </td>
+      <td>
+        100
       </td>
       <td>
         230
@@ -1399,31 +1634,36 @@
         37
       </td>
       <td>
-        46
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        other
       </td>
       <td>
         2017-09-25T17:32:33Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npme-installer">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         136
       </td>
       <td>
-        4.3.0
+        
       </td>
     </tr>
     <tr>
@@ -1431,7 +1671,7 @@
         <a href="https://www.github.com/npm/write-file-atomic" target="_blank">write-file-atomic</a>
       </td>
       <td>
-        126
+        127
       </td>
       <td>
         10
@@ -1452,7 +1692,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/write-file-atomic">
+        49075430
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/write-file-atomic">
+      </td>
+      <td>
+        100
       </td>
       <td>
         300
@@ -1466,7 +1712,7 @@
         <a href="https://www.github.com/npm/npm-expansions" target="_blank">npm-expansions</a>
       </td>
       <td>
-        1185
+        1190
       </td>
       <td>
         
@@ -1478,7 +1724,7 @@
         
       </td>
       <td>
-        2019-11-15T18:35:47Z
+        2019-11-16T21:09:21Z
       </td>
       <td>
         
@@ -1487,6 +1733,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         911
@@ -1521,7 +1773,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/wrappy">
+        53386989
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/wrappy">
+      </td>
+      <td>
+        93
       </td>
       <td>
         8
@@ -1556,7 +1814,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/fs-write-stream-atomic">
+        25996934
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fs-write-stream-atomic">
+      </td>
+      <td>
+        99
       </td>
       <td>
         161
@@ -1591,6 +1855,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         27
@@ -1625,6 +1895,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         175
@@ -1659,6 +1935,12 @@
         
       </td>
       <td>
+        47922620
+      </td>
+      <td>
+      </td>
+      <td>
+        95
       </td>
       <td>
         646
@@ -1672,7 +1954,7 @@
         <a href="https://www.github.com/npm/validate-npm-package-name" target="_blank">validate-npm-package-name</a>
       </td>
       <td>
-        127
+        128
       </td>
       <td>
         10
@@ -1693,7 +1975,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/validate-npm-package-name">
+        9108172
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/validate-npm-package-name">
+      </td>
+      <td>
+        88
       </td>
       <td>
         27
@@ -1710,10 +1998,10 @@
         35
       </td>
       <td>
-        4
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         other
@@ -1728,6 +2016,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         2283
@@ -1744,31 +2038,36 @@
         119
       </td>
       <td>
-        6
+        
       </td>
       <td>
-        4
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-09-26T15:31:21Z
       </td>
       <td>
-        error
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/are-we-there-yet">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         88
       </td>
       <td>
-        1.1.5
+        
       </td>
     </tr>
     <tr>
@@ -1797,6 +2096,12 @@
         
       </td>
       <td>
+        3639
+      </td>
+      <td>
+      </td>
+      <td>
+        54
       </td>
       <td>
         1242
@@ -1831,7 +2136,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/normalize-git-url">
+        542128
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/normalize-git-url">
+      </td>
+      <td>
+        100
       </td>
       <td>
         56
@@ -1848,31 +2159,36 @@
         247
       </td>
       <td>
-        17
+        
       </td>
       <td>
-        7
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-11-06T16:22:56Z
       </td>
       <td>
-        failure
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/gauge">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         545
       </td>
       <td>
-        2.7.4
+        
       </td>
     </tr>
     <tr>
@@ -1892,7 +2208,7 @@
         other
       </td>
       <td>
-        2019-11-05T19:56:08Z
+        2019-11-18T19:04:01Z
       </td>
       <td>
         
@@ -1901,9 +2217,15 @@
         
       </td>
       <td>
+        
       </td>
       <td>
-        455949
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        467728
       </td>
       <td>
         
@@ -1935,6 +2257,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         156
@@ -1969,7 +2297,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/mustache-mailer">
+        107
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mustache-mailer">
+      </td>
+      <td>
+        100
       </td>
       <td>
         71
@@ -1986,10 +2320,10 @@
         6
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         
@@ -2004,6 +2338,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         12
@@ -2020,10 +2360,10 @@
         45
       </td>
       <td>
-        10
+        
       </td>
       <td>
-        5
+        
       </td>
       <td class="uppercase">
         
@@ -2038,6 +2378,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         46
@@ -2072,6 +2418,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         6
@@ -2106,7 +2458,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/unique-slug">
+        27205387
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/unique-slug">
+      </td>
+      <td>
+        100
       </td>
       <td>
         158
@@ -2123,10 +2481,10 @@
         25
       </td>
       <td>
-        8
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         isc
@@ -2141,6 +2499,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         5
@@ -2175,6 +2539,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         14741
@@ -2191,10 +2561,10 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         other
@@ -2209,6 +2579,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         46
@@ -2225,10 +2601,10 @@
         4
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         isc
@@ -2243,6 +2619,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         61
@@ -2259,10 +2641,10 @@
         19
       </td>
       <td>
-        6
+        
       </td>
       <td>
-        3
+        
       </td>
       <td class="uppercase">
         isc
@@ -2277,6 +2659,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         12
@@ -2311,6 +2699,12 @@
         
       </td>
       <td>
+        259
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         632
@@ -2327,10 +2721,10 @@
         6
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         
@@ -2339,12 +2733,18 @@
         2019-01-18T04:49:13Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         44
@@ -2379,6 +2779,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         7331
@@ -2395,31 +2801,36 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2018-09-04T18:30:48Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/rewrite-url-follower">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         14
       </td>
       <td>
-        1.0.2
+        
       </td>
     </tr>
     <tr>
@@ -2448,7 +2859,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/oauth2-server-pg">
+        27
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/oauth2-server-pg">
+      </td>
+      <td>
+        90
       </td>
       <td>
         67
@@ -2465,31 +2882,36 @@
         34
       </td>
       <td>
-        57
+        
       </td>
       <td>
-        52
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2018-06-14T18:07:59Z
       </td>
       <td>
-        failure
+        
       </td>
       <td>
-        &gt;&#x3D;0.10
+        
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/wombat-cli">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         178
       </td>
       <td>
-        1.0.5
+        
       </td>
     </tr>
     <tr>
@@ -2518,7 +2940,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/annotation-poller">
+        50
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/annotation-poller">
+      </td>
+      <td>
+        100
       </td>
       <td>
         30
@@ -2535,10 +2963,10 @@
         19
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         isc
@@ -2553,6 +2981,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         30
@@ -2587,7 +3021,13 @@
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/couch-url-rewrite-proxy">
+        
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/couch-url-rewrite-proxy">
+      </td>
+      <td>
+        93
       </td>
       <td>
         183
@@ -2604,10 +3044,10 @@
         42
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        3
+        
       </td>
       <td class="uppercase">
         isc
@@ -2622,6 +3062,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         30
@@ -2638,10 +3084,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -2656,6 +3102,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         1
@@ -2690,6 +3142,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         1
@@ -2706,10 +3164,10 @@
         12
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -2724,6 +3182,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         1
@@ -2740,10 +3204,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -2752,12 +3216,18 @@
         2017-01-02T21:13:04Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
-        &gt;&#x3D;4
+        
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         5
@@ -2792,6 +3262,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         102
@@ -2808,10 +3284,10 @@
         3
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         mit
@@ -2826,6 +3302,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         10074
@@ -2842,10 +3324,10 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         mit
@@ -2860,6 +3342,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         171
@@ -2876,30 +3364,37 @@
         8
       </td>
       <td>
-        
+        1
       </td>
       <td>
-        
+        1
       </td>
       <td class="uppercase">
-        isc
+        ISC
       </td>
       <td>
         2018-09-05T18:32:13Z
       </td>
       <td>
-        
+        success
       </td>
       <td>
         
       </td>
       <td>
+        28
+      </td>
+      <td>
+          <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/micro-monitor">
+      </td>
+      <td>
+        100
       </td>
       <td>
         67
       </td>
       <td>
-        
+        3.1.0
       </td>
     </tr>
     <tr>
@@ -2910,31 +3405,36 @@
         3
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        mit
       </td>
       <td>
         2018-10-23T23:04:37Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/my-first-publish-bot">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         14
       </td>
       <td>
-        1.0.0
+        
       </td>
     </tr>
     <tr>
@@ -2945,10 +3445,10 @@
         4
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         mit
@@ -2963,6 +3463,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         86
@@ -2997,6 +3503,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         10
@@ -3031,6 +3543,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         112
@@ -3047,31 +3565,36 @@
         0
       </td>
       <td>
-        5
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        MIT
+        mit
       </td>
       <td>
         2017-05-31T20:13:46Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/tarpit">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         1295
       </td>
       <td>
-        0.2.1
+        
       </td>
     </tr>
     <tr>
@@ -3082,10 +3605,10 @@
         5
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         mit
@@ -3100,6 +3623,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         754
@@ -3134,6 +3663,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         15
@@ -3150,10 +3685,10 @@
         2
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3168,6 +3703,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         5
@@ -3184,31 +3725,36 @@
         21
       </td>
       <td>
-        4
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-10-30T22:09:54Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/ignore-walk">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         127
       </td>
       <td>
-        3.0.3
+        
       </td>
     </tr>
     <tr>
@@ -3219,16 +3765,16 @@
         24
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
       </td>
       <td>
-        2019-11-05T01:08:00Z
+        2019-11-16T00:20:40Z
       </td>
       <td>
         
@@ -3237,9 +3783,15 @@
         
       </td>
       <td>
+        
       </td>
       <td>
-        427
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        462
       </td>
       <td>
         
@@ -3271,6 +3823,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         73
@@ -3305,6 +3863,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         14
@@ -3321,10 +3885,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3339,6 +3903,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         164
@@ -3355,31 +3925,36 @@
         0
       </td>
       <td>
-        1
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2017-07-17T22:59:39Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-docker-couchdb">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         12
       </td>
       <td>
-        1.0.0
+        
       </td>
     </tr>
     <tr>
@@ -3408,6 +3983,12 @@
         
       </td>
       <td>
+        3475449
+      </td>
+      <td>
+      </td>
+      <td>
+        74
       </td>
       <td>
         414
@@ -3424,10 +4005,10 @@
         1
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         
@@ -3436,12 +4017,18 @@
         2019-02-12T16:43:05Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         81
@@ -3476,6 +4063,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         25
@@ -3492,10 +4085,10 @@
         2
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3510,6 +4103,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         59
@@ -3544,6 +4143,12 @@
         
       </td>
       <td>
+        1204615
+      </td>
+      <td>
+      </td>
+      <td>
+        66
       </td>
       <td>
         208
@@ -3578,6 +4183,12 @@
         
       </td>
       <td>
+        1209943
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         245
@@ -3594,31 +4205,36 @@
         10
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-10-20T23:11:05Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
-        &gt;&#x3D; 8
+        
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/fs-minipass">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         115
       </td>
       <td>
-        2.0.0
+        
       </td>
     </tr>
     <tr>
@@ -3647,6 +4263,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         11
@@ -3681,6 +4303,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         164
@@ -3715,6 +4343,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        96
       </td>
       <td>
         69
@@ -3731,31 +4365,36 @@
         26
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
-        ISC
+        other
       </td>
       <td>
-        2019-11-11T03:51:41Z
-      </td>
-      <td>
-        success
+        2019-11-18T01:08:05Z
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/npm-registry-fetch">
+        
+      </td>
+      <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         693
       </td>
       <td>
-        1.0.0
+        
       </td>
     </tr>
     <tr>
@@ -3766,10 +4405,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3784,6 +4423,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         26
@@ -3800,31 +4445,36 @@
         3
       </td>
       <td>
-        1
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
-        ISC
+        isc
       </td>
       <td>
         2019-11-02T07:02:07Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/seq-save">
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         96
       </td>
       <td>
-        2.0.0
+        
       </td>
     </tr>
     <tr>
@@ -3835,10 +4485,10 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3847,12 +4497,18 @@
         2018-11-08T14:43:34Z
       </td>
       <td>
-        failure
+        
       </td>
       <td>
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         96
@@ -3887,6 +4543,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         153
@@ -3921,6 +4583,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         21
@@ -3955,6 +4623,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         106
@@ -3971,10 +4645,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -3983,12 +4657,18 @@
         2018-09-10T20:11:08Z
       </td>
       <td>
-        success
+        
       </td>
       <td>
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         7
@@ -4005,10 +4685,10 @@
         3
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -4023,6 +4703,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         571
@@ -4039,10 +4725,10 @@
         1
       </td>
       <td>
-        1
+        
       </td>
       <td>
-        1
+        
       </td>
       <td class="uppercase">
         
@@ -4057,6 +4743,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         20
@@ -4073,10 +4765,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -4091,6 +4783,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         3
@@ -4107,10 +4805,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         other
@@ -4125,6 +4823,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         166
@@ -4159,6 +4863,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         217
@@ -4175,10 +4885,10 @@
         2
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -4193,6 +4903,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         473
@@ -4227,6 +4943,12 @@
         
       </td>
       <td>
+        1083621
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         375
@@ -4261,6 +4983,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         199
@@ -4295,6 +5023,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         53
@@ -4308,7 +5042,7 @@
         <a href="https://www.github.com/npm/rfcs" target="_blank">rfcs</a>
       </td>
       <td>
-        140
+        143
       </td>
       <td>
         
@@ -4320,7 +5054,7 @@
         
       </td>
       <td>
-        2019-11-12T17:44:16Z
+        2019-11-19T01:00:41Z
       </td>
       <td>
         
@@ -4329,6 +5063,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         103
@@ -4363,6 +5103,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         95
@@ -4379,10 +5125,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         mit
@@ -4397,6 +5143,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         141
@@ -4410,7 +5162,7 @@
         <a href="https://www.github.com/npm/cli" target="_blank">cli</a>
       </td>
       <td>
-        2429
+        2437
       </td>
       <td>
         
@@ -4422,7 +5174,7 @@
         other
       </td>
       <td>
-        2019-11-15T19:41:32Z
+        2019-11-18T18:50:51Z
       </td>
       <td>
         
@@ -4431,9 +5183,15 @@
         
       </td>
       <td>
+        
       </td>
       <td>
-        45796
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        45906
       </td>
       <td>
         
@@ -4465,6 +5223,12 @@
         
       </td>
       <td>
+        1342089
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         68
@@ -4499,6 +5263,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         98
@@ -4512,7 +5282,7 @@
         <a href="https://www.github.com/npm/tink" target="_blank">tink</a>
       </td>
       <td>
-        2073
+        2076
       </td>
       <td>
         
@@ -4533,6 +5303,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         728
@@ -4567,6 +5343,12 @@
         
       </td>
       <td>
+        1267585
+      </td>
+      <td>
+      </td>
+      <td>
+        100
       </td>
       <td>
         201
@@ -4601,6 +5383,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         89
@@ -4614,7 +5402,7 @@
         <a href="https://www.github.com/npm/registry" target="_blank">registry</a>
       </td>
       <td>
-        94
+        97
       </td>
       <td>
         
@@ -4635,6 +5423,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         12527
@@ -4651,10 +5445,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
@@ -4669,6 +5463,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         41
@@ -4703,6 +5503,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         85
@@ -4737,6 +5543,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         150
@@ -4753,16 +5565,16 @@
         3
       </td>
       <td>
-        3
+        
       </td>
       <td>
-        3
+        
       </td>
       <td class="uppercase">
         mit
       </td>
       <td>
-        2019-11-06T19:02:41Z
+        2019-11-18T16:13:34Z
       </td>
       <td>
         
@@ -4771,6 +5583,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         69
@@ -4805,6 +5623,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         381
@@ -4839,6 +5663,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         342
@@ -4873,6 +5703,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         64
@@ -4907,6 +5743,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         30
@@ -4923,10 +5765,10 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -4941,6 +5783,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         7
@@ -4957,10 +5805,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
@@ -4975,6 +5823,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         155
@@ -5009,6 +5863,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         336
@@ -5025,10 +5885,10 @@
         1
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
@@ -5043,6 +5903,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         133
@@ -5059,10 +5925,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -5077,6 +5943,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         42
@@ -5111,6 +5983,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         0
@@ -5127,10 +6005,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         mit
@@ -5145,6 +6023,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         8
@@ -5161,10 +6045,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -5179,6 +6063,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         94
@@ -5195,10 +6085,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -5213,6 +6103,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         49
@@ -5229,10 +6125,10 @@
         0
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -5247,6 +6143,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         3
@@ -5281,6 +6183,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         15
@@ -5315,6 +6223,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         139
@@ -5328,7 +6242,7 @@
         <a href="https://www.github.com/npm/cacache" target="_blank">cacache</a>
       </td>
       <td>
-        27
+        29
       </td>
       <td>
         
@@ -5349,6 +6263,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         790
@@ -5383,6 +6303,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         1305
@@ -5396,7 +6322,7 @@
         <a href="https://www.github.com/npm/npx" target="_blank">npx</a>
       </td>
       <td>
-        146
+        149
       </td>
       <td>
         
@@ -5417,6 +6343,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         814
@@ -5451,6 +6383,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         952
@@ -5485,6 +6423,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         486
@@ -5498,7 +6442,7 @@
         <a href="https://www.github.com/npm/make-fetch-happen" target="_blank">make-fetch-happen</a>
       </td>
       <td>
-        21
+        22
       </td>
       <td>
         
@@ -5510,7 +6454,7 @@
         other
       </td>
       <td>
-        2019-11-14T15:14:08Z
+        2019-11-19T15:30:12Z
       </td>
       <td>
         
@@ -5519,6 +6463,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         3834
@@ -5544,7 +6494,7 @@
         isc
       </td>
       <td>
-        2019-11-14T20:17:00Z
+        2019-11-18T05:32:17Z
       </td>
       <td>
         
@@ -5553,9 +6503,15 @@
         
       </td>
       <td>
+        
       </td>
       <td>
-        869
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        1053
       </td>
       <td>
         
@@ -5587,6 +6543,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         75
@@ -5603,10 +6565,10 @@
         4
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
@@ -5621,6 +6583,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         129
@@ -5637,10 +6605,10 @@
         99
       </td>
       <td>
-        4
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         isc
@@ -5655,6 +6623,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         73
@@ -5689,6 +6663,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         197
@@ -5723,6 +6703,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         529
@@ -5757,6 +6743,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         223
@@ -5773,10 +6765,10 @@
         19
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         isc
@@ -5791,6 +6783,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         68
@@ -5825,6 +6823,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         145758
@@ -5841,31 +6845,36 @@
         0
       </td>
       <td>
-        23
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
-        ISC
+        mit
       </td>
       <td>
-        2019-11-12T22:51:11Z
-      </td>
-      <td>
-        success
+        2019-11-15T21:20:17Z
       </td>
       <td>
         
       </td>
       <td>
-          <img alt="npm" src="https://img.shields.io/npm/dm/statusboard">
+        
       </td>
       <td>
-        1921
+        
       </td>
       <td>
-        1.0.0
+      </td>
+      <td>
+        
+      </td>
+      <td>
+        1994
+      </td>
+      <td>
+        
       </td>
     </tr>
     <tr>
@@ -5876,10 +6885,10 @@
         1
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        2
+        
       </td>
       <td class="uppercase">
         other
@@ -5894,6 +6903,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         26
@@ -5910,10 +6925,10 @@
         3
       </td>
       <td>
-        2
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         mit
@@ -5928,6 +6943,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         21
@@ -5962,6 +6983,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         401
@@ -5996,6 +7023,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         88
@@ -6012,10 +7045,10 @@
         8
       </td>
       <td>
-        0
+        
       </td>
       <td>
-        0
+        
       </td>
       <td class="uppercase">
         
@@ -6030,6 +7063,12 @@
         
       </td>
       <td>
+        
+      </td>
+      <td>
+      </td>
+      <td>
+        
       </td>
       <td>
         10

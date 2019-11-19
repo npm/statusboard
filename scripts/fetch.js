@@ -2,6 +2,7 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
+  const { sleep } = require('sleepover')
   const fetch = require('node-fetch')
   const mkdirp = require('mkdirp')
   const Octokit = require("@octokit/rest")
@@ -46,7 +47,13 @@
                 repo: r.name,
                 per_page: 100
               })
-              let response = await fetch(`https://raw.githack.com/npm/${r.name}/master/package.json`)
+              let response = await fetch(`https://coveralls.io/github/npm/${r.name}.json`)
+              let stats = await response.json()
+              r.coverage = Math.round(stats.covered_percent) || ''
+              response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${r.name}`)
+              let data = await response.json()
+              r.downloads = data.downloads
+              response = await fetch(`https://raw.githack.com/npm/${r.name}/master/package.json`)
               let pkg = await response.json()
               r.prs_count = prs.data.length
               r.issues_count = issues.data.length
@@ -56,13 +63,14 @@
               r.version = pkg.version
               return r
             } catch (e) {
-              console.log(e)
+              //console.log(e)
             }
             return r
           })).then(cb)
         } else {
           page++
           repositories = repositories.concat(data)
+          sleep(1500)
           run(page, cb)
         }
       })
