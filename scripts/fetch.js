@@ -50,6 +50,7 @@
               let response = await fetch(`https://coveralls.io/github/npm/${r.name}.json`)
               let stats = await response.json()
               r.coverage = Math.round(stats.covered_percent) || ''
+              r.coverageLevel = r.coverage ? (r.coverage === 100) ? 'high' : (r.coverage > 80) ? 'medium' : 'low' : ''
               response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${r.name}`)
               let data = await response.json()
               r.downloads = data.downloads
