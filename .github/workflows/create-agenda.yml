@@ -1,0 +1,26 @@
+name: Create Open RFC Agenda
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 12 * * WED'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, fetch & create
+      run: |
+        npm ci
+        npm run agenda
+      env:
+        AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        CALENDAR_AUTH_TOKEN: ${{ secrets.CALENDAR_AUTH_TOKEN }}
