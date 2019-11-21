@@ -20,8 +20,10 @@ jobs:
     - name: npm install, fetch & build
       run: |
         npm ci
-        AUTH_TOKEN=${{ secrets.SECRET_NAME }} npm run fetch
+        npm run fetch
         npm run build
+      env:
+        AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
@@ -30,4 +32,4 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}:  
+        github_token: ${{ secrets.GITHUB_TOKEN }}
