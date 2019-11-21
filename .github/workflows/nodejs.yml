@@ -20,6 +20,7 @@ jobs:
     - name: npm install & build
       run: |
         npm ci
-        npm run build --if-present
+        AUTH_TOKEN=${{ secrets.SECRET_NAME }} npm run fetch
+        npm run build
       env:
         CI: true
