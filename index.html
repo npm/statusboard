@@ -32,12 +32,79 @@
     main {
       padding: 30px 40px 50px;
     }
-    input[type="search"] {
-      padding: 10px;
-      width: 250px !important;
+    .built {
+      display: block;
+      margin: 0 0 20px 0;
     }
-    h1, h2, h3, h4, h5, h6 {
+    .columns {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .columns li {
+      margin: 0 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+    .columns li button {
+      background: transparent;
+      border: 1px solid #dee2e6;
+      border-radius: 3px; 
+      padding: 5px 10px 5px 25px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .columns li button:before {
+      content: '';
+      display: block;
+      background: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 13px;
+      left: 10px;
+    }
+    .columns li button.hidden:before {
+      background: none;
+    }
+    .columns li button:hover {
+      cursor: pointer;
+      color: #333;
+      background: #dee2e6;
+    }
+    .columns li button.hidden:hover:before {
+      background: #333;
+    }
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_filter label {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .dataTables_wrapper .dataTables_filter {
+      text-align: left;
+      margin: 10px 0;
+    }
+    .dataTables_wrapper .dataTables_filter label input[type="search"] {
+      padding: 10px;
+      width: 100%;
+      margin: 0;
+    }
+    .table {
+      width:100%;
+    }
+    h1, h2, h3, h4, h5 {
       font-family: 'Poppins', sans-serif;
+    }
+    h6 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: bold;
     }
     header {
       padding: 25px 40px 15px;
@@ -48,7 +115,6 @@
     a:hover {
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
       line-height: 100%;
       color: rgb(65, 56, 68); 
     }
@@ -59,13 +125,16 @@
     header a span {
       margin: 0 15px 0 0;
     }
+    table,
+    table a {
+      font-size: 14px;
+    }
     table tr th:not(:nth-of-type(1)),
     table tr td:not(:nth-of-type(1)) {
       text-align: center;
     }
     table tr td span {
       background: #333;
-      font-size: 12px;
       color: white; 
       padding: 5px 0;
       border-radius: 3px;
@@ -105,7 +174,24 @@
   </header>
   <main>
     <h2><strong>npm</strong> project statusboard</h2>
-    <small>Last built: 2019-10-20</small>
+    <small class="built">Last built: 2019-10-21</small>
+    <h6>Toggle Columns:</h6>
+    <ul class="columns">
+      <li><button data-column="1">Stars</button></li>
+      <li><button data-column="2">Issues</button></li>
+      <li><button data-column="3">Pull Requests</button></li>
+      <li><button data-column="4">License</button></li>
+      <li><button data-column="5">Last Commit</button></li>
+      <li><button data-column="6">Build Status</button></li>
+      <li><button data-column="7">Node</button></li>
+      <li><button data-column="8">Downloads (/m)</button></li>
+      <li><button data-column="9">Dependants</button></li>
+      <li><button data-column="10">Dependencies</button></li>
+      <li><button data-column="11">Vulnerabilities</button></li>
+      <li><button data-column="12">Test Coverage</button></li>
+      <li><button data-column="13">Size</button></li>
+      <li><button data-column="14">Version</button></li>
+    </ul>
     <table class="table table-striped table-bordered" data-sortable>
       <thead>
       <tr>
@@ -137,7 +223,13 @@
           Downloads&nbsp;(/m)
         </th>
         <th>
+          Dependants
+        </th>
+        <th>
           Dependencies
+        </th>
+        <th>
+          Vulnerabilities
         </th>
         <th>
           Test&nbsp;Coverage
@@ -180,7 +272,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/slide-flow-control">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/slide-flow-control?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/slide-flow-control?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/slide-flow-control?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">58</span>
@@ -221,7 +319,13 @@
           5261
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-couchapp">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npm-registry-couchapp?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-couchapp?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npm-registry-couchapp?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">10</span>
@@ -262,7 +366,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-semver">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/node-semver?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-semver?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/node-semver?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -303,7 +413,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-tar">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/node-tar?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-tar?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/node-tar?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">76</span>
@@ -344,7 +460,13 @@
           67590807
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/nopt">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/nopt?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/nopt?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/nopt?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">89</span>
@@ -382,6 +504,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -423,7 +549,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-which">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/node-which?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/node-which?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/node-which?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -464,7 +596,13 @@
           21078684
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fstream">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/fstream?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fstream?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/fstream?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">67</span>
@@ -505,7 +643,13 @@
           8076219
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/read?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/read?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">74</span>
@@ -543,6 +687,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -584,7 +732,13 @@
           39373481
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npmlog">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npmlog?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npmlog?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npmlog?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">86</span>
@@ -622,6 +776,10 @@
         </td>
         <td>
           1563067
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -664,6 +822,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
             <span class="low">75</span>
         </td>
@@ -703,7 +865,13 @@
           2218172
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-installed">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/read-installed?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-installed?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/read-installed?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">94</span>
@@ -744,6 +912,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -779,6 +951,10 @@
         </td>
         <td>
           3667382
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -821,7 +997,13 @@
           34744709
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/osenv">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/osenv?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/osenv?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/osenv?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">78</span>
@@ -862,7 +1044,13 @@
           3009213
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/lockfile">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/lockfile?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/lockfile?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/lockfile?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">84</span>
@@ -903,7 +1091,13 @@
           50680931
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mute-stream">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/mute-stream?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mute-stream?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/mute-stream?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">79</span>
@@ -941,6 +1135,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -982,6 +1180,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -1020,7 +1222,13 @@
           1693691
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-user-validate">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npm-user-validate?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-user-validate?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npm-user-validate?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -1061,7 +1269,13 @@
           5449
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-mock">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npm-registry-mock?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-mock?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npm-registry-mock?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -1099,6 +1313,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1140,6 +1358,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -1178,7 +1400,13 @@
           31
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/dynector">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/dynector?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/dynector?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/dynector?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">73</span>
@@ -1216,6 +1444,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1257,7 +1489,13 @@
           52098732
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/inflight">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/inflight?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/inflight?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/inflight?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -1295,6 +1533,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1336,6 +1578,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -1371,6 +1617,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1412,6 +1662,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -1450,7 +1704,13 @@
           472
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/ndm">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/ndm?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/ndm?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/ndm?style=flat-square">
         </td>
         <td class="coverage">
         </td>
@@ -1487,6 +1747,10 @@
         </td>
         <td>
           10008797
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1529,7 +1793,13 @@
           1862677
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fs-vacuum">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/fs-vacuum?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fs-vacuum?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/fs-vacuum?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">79</span>
@@ -1567,6 +1837,10 @@
         </td>
         <td>
           7215208
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1609,7 +1883,13 @@
           1097
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-remote-ls">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npm-remote-ls?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-remote-ls?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npm-remote-ls?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">95</span>
@@ -1650,7 +1930,13 @@
           6389200
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-package-tree">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/read-package-tree?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/read-package-tree?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/read-package-tree?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -1688,6 +1974,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1729,7 +2019,13 @@
           50907924
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/write-file-atomic">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/write-file-atomic?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/write-file-atomic?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/write-file-atomic?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -1767,6 +2063,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1808,7 +2108,13 @@
           55188110
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/wrappy">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/wrappy?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/wrappy?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/wrappy?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">93</span>
@@ -1849,7 +2155,13 @@
           27009709
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fs-write-stream-atomic">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/fs-write-stream-atomic?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/fs-write-stream-atomic?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/fs-write-stream-atomic?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">99</span>
@@ -1887,6 +2199,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -1928,6 +2244,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -1963,6 +2283,10 @@
         </td>
         <td>
           49688641
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2005,6 +2329,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2043,6 +2371,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2078,6 +2410,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2120,6 +2456,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
             <span class="low">54</span>
         </td>
@@ -2159,7 +2499,13 @@
           556996
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/normalize-git-url">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/normalize-git-url?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/normalize-git-url?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/normalize-git-url?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -2197,6 +2543,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2238,6 +2588,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2273,6 +2627,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2314,7 +2672,13 @@
           110
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mustache-mailer">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/mustache-mailer?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/mustache-mailer?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/mustache-mailer?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -2352,6 +2716,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2393,6 +2761,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2428,6 +2800,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2469,7 +2845,13 @@
           28264576
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/unique-slug">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/unique-slug?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/unique-slug?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/unique-slug?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -2507,6 +2889,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2548,6 +2934,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2583,6 +2973,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2624,6 +3018,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2662,6 +3060,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2697,6 +3099,10 @@
         </td>
         <td>
           234
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2739,6 +3145,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2774,6 +3184,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -2815,6 +3229,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -2853,7 +3271,13 @@
           27
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/oauth2-server-pg">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/oauth2-server-pg?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/oauth2-server-pg?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/oauth2-server-pg?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">90</span>
@@ -2894,7 +3318,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/wombat-cli">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/wombat-cli?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/wombat-cli?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/wombat-cli?style=flat-square">
         </td>
         <td class="coverage">
             <span class="low">78</span>
@@ -2935,7 +3365,13 @@
           51
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/annotation-poller">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/annotation-poller?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/annotation-poller?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/annotation-poller?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -2973,6 +3409,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3014,7 +3454,13 @@
           
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/couch-url-rewrite-proxy">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/couch-url-rewrite-proxy?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/couch-url-rewrite-proxy?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/couch-url-rewrite-proxy?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">93</span>
@@ -3052,6 +3498,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3093,6 +3543,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3128,6 +3582,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3169,6 +3627,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3204,6 +3666,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3245,6 +3711,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3280,6 +3750,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3321,6 +3795,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3356,6 +3834,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3397,6 +3879,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3432,6 +3918,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3473,6 +3963,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3508,6 +4002,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3549,6 +4047,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3584,6 +4086,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3625,6 +4131,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3660,6 +4170,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3701,6 +4215,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3736,6 +4254,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3777,6 +4299,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3812,6 +4338,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3853,6 +4383,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3891,6 +4425,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -3926,6 +4464,10 @@
         </td>
         <td>
           3618747
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -3968,6 +4510,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4003,6 +4549,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4044,6 +4594,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4079,6 +4633,10 @@
         </td>
         <td>
           1252586
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4121,6 +4679,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
             <span class="high">100</span>
         </td>
@@ -4157,6 +4719,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4198,6 +4764,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4233,6 +4803,10 @@
         </td>
         <td>
           1252216
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4275,6 +4849,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4313,7 +4891,13 @@
           7267451
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-fetch">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/npm-registry-fetch?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/npm-registry-fetch?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/npm-registry-fetch?style=flat-square">
         </td>
         <td class="coverage">
             <span class="medium">98</span>
@@ -4351,6 +4935,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4392,6 +4980,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4427,6 +5019,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4468,6 +5064,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4503,6 +5103,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4544,6 +5148,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4579,6 +5187,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4620,6 +5232,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4655,6 +5271,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4696,6 +5316,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4734,6 +5358,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4769,6 +5397,10 @@
         </td>
         <td>
           910640
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4811,6 +5443,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4846,6 +5482,10 @@
         </td>
         <td>
           1126584
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4888,6 +5528,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4923,6 +5567,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -4964,6 +5612,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -4999,6 +5651,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5040,6 +5696,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5078,6 +5738,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5113,6 +5777,10 @@
         </td>
         <td>
           1397367
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5155,6 +5823,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5193,6 +5865,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5228,6 +5904,10 @@
         </td>
         <td>
           1321137
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5270,6 +5950,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
             <span class="high">100</span>
         </td>
@@ -5306,6 +5990,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5347,6 +6035,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5385,6 +6077,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5420,6 +6116,10 @@
         </td>
         <td>
           955753
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5462,6 +6162,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5500,7 +6204,13 @@
           1284355
         </td>
         <td>
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/libnpmpublish">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/libnpmpublish?style=flat-square">
+        </td>
+        <td>
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/libnpmpublish?style=flat-square">
+        </td>
+        <td>
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/libnpmpublish?style=flat-square">
         </td>
         <td class="coverage">
             <span class="high">100</span>
@@ -5538,6 +6248,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5579,6 +6293,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5614,6 +6332,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5655,6 +6377,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5690,6 +6416,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5731,6 +6461,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5766,6 +6500,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5807,6 +6545,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5842,6 +6584,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5883,6 +6629,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5918,6 +6668,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -5959,6 +6713,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -5994,6 +6752,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6035,6 +6797,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6070,6 +6836,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6111,6 +6881,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6146,6 +6920,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6187,6 +6965,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6222,6 +7004,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6263,6 +7049,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6298,6 +7088,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6339,6 +7133,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6374,6 +7172,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6415,6 +7217,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6450,6 +7256,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6491,6 +7301,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6526,6 +7340,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6567,6 +7385,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6602,6 +7424,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6643,6 +7469,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6678,6 +7508,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6719,6 +7553,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6754,6 +7592,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6795,6 +7637,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6830,6 +7676,10 @@
         </td>
         <td>
           
+        </td>
+        <td>
+        </td>
+        <td>
         </td>
         <td>
         </td>
@@ -6871,6 +7721,10 @@
         </td>
         <td>
         </td>
+        <td>
+        </td>
+        <td>
+        </td>
         <td class="coverage">
         </td>
         <td>
@@ -6887,10 +7741,26 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
 <script>
 $(document).ready(function () {
-  $('table').DataTable({
+  $table = $('table').DataTable({
     paging: false,
     colReorder: true,
-    buttons: [ 'colvis' ]
+    stateSave: true,
+    autoWidth: false,
+    language: {
+      search: 'Filter Projects:',
+      searchPlaceholder: 'Search...'
+    },
+    buttons: [ 'colvis' ],
+    stateLoaded: function (settings, data) {
+      data.columns.forEach((c, i) => !c.visible && $(`[data-column=${i}]`).addClass('hidden'))
+    }
+  })
+  $('.columns button').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('hidden')
+    var column = $table.column($(this).attr('data-column'))
+    column.visible(!column.visible())
+    $table.columns.adjust().draw()
   })
 })
 </script>

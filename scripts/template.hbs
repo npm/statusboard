@@ -32,12 +32,79 @@
     main {
       padding: 30px 40px 50px;
     }
-    input[type="search"] {
-      padding: 10px;
-      width: 250px !important;
+    .built {
+      display: block;
+      margin: 0 0 20px 0;
     }
-    h1, h2, h3, h4, h5, h6 {
+    .columns {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .columns li {
+      margin: 0 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+    .columns li button {
+      background: transparent;
+      border: 1px solid #dee2e6;
+      border-radius: 3px; 
+      padding: 5px 10px 5px 25px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .columns li button:before {
+      content: '';
+      display: block;
+      background: #333;
+      border-radius: 50%;
+      border: 1px solid #333;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 13px;
+      left: 10px;
+    }
+    .columns li button.hidden:before {
+      background: none;
+    }
+    .columns li button:hover {
+      cursor: pointer;
+      color: #333;
+      background: #dee2e6;
+    }
+    .columns li button.hidden:hover:before {
+      background: #333;
+    }
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_filter label {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .dataTables_wrapper .dataTables_filter {
+      text-align: left;
+      margin: 10px 0;
+    }
+    .dataTables_wrapper .dataTables_filter label input[type="search"] {
+      padding: 10px;
+      width: 100%;
+      margin: 0;
+    }
+    .table {
+      width:100%;
+    }
+    h1, h2, h3, h4, h5 {
       font-family: 'Poppins', sans-serif;
+    }
+    h6 {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: bold;
     }
     header {
       padding: 25px 40px 15px;
@@ -48,7 +115,6 @@
     a:hover {
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
       line-height: 100%;
       color: rgb(65, 56, 68); 
     }
@@ -59,13 +125,16 @@
     header a span {
       margin: 0 15px 0 0;
     }
+    table,
+    table a {
+      font-size: 14px;
+    }
     table tr th:not(:nth-of-type(1)),
     table tr td:not(:nth-of-type(1)) {
       text-align: center;
     }
     table tr td span {
       background: #333;
-      font-size: 12px;
       color: white; 
       padding: 5px 0;
       border-radius: 3px;
@@ -105,7 +174,24 @@
   </header>
   <main>
     <h2><strong>npm</strong> project statusboard</h2>
-    <small>Last built: {{built}}</small>
+    <small class="built">Last built: {{built}}</small>
+    <h6>Toggle Columns:</h6>
+    <ul class="columns">
+      <li><button data-column="1">Stars</button></li>
+      <li><button data-column="2">Issues</button></li>
+      <li><button data-column="3">Pull Requests</button></li>
+      <li><button data-column="4">License</button></li>
+      <li><button data-column="5">Last Commit</button></li>
+      <li><button data-column="6">Build Status</button></li>
+      <li><button data-column="7">Node</button></li>
+      <li><button data-column="8">Downloads (/m)</button></li>
+      <li><button data-column="9">Dependants</button></li>
+      <li><button data-column="10">Dependencies</button></li>
+      <li><button data-column="11">Vulnerabilities</button></li>
+      <li><button data-column="12">Test Coverage</button></li>
+      <li><button data-column="13">Size</button></li>
+      <li><button data-column="14">Version</button></li>
+    </ul>
     <table class="table table-striped table-bordered" data-sortable>
       <thead>
       <tr>
@@ -137,7 +223,13 @@
           Downloads&nbsp;(/m)
         </th>
         <th>
+          Dependants
+        </th>
+        <th>
           Dependencies
+        </th>
+        <th>
+          Vulnerabilities
         </th>
         <th>
           Test&nbsp;Coverage
@@ -188,7 +280,17 @@
         </td>
         <td>
           {{#if version}}
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/{{name}}">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/{{name}}?style=flat-square">
+          {{/if}}
+        </td>
+        <td>
+          {{#if version}}
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/{{name}}?style=flat-square">
+          {{/if}}
+        </td>
+        <td>
+          {{#if version}}
+            <img src="https://img.shields.io/snyk/vulnerabilities/npm/{{name}}?style=flat-square">
           {{/if}}
         </td>
         <td class="coverage">
@@ -208,14 +310,29 @@
     </table>
   </main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-{{!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> --}}
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
 <script>
 $(document).ready(function () {
-  $('table').DataTable({
+  $table = $('table').DataTable({
     paging: false,
     colReorder: true,
-    buttons: [ 'colvis' ]
+    stateSave: true,
+    autoWidth: false,
+    language: {
+      search: 'Filter Projects:',
+      searchPlaceholder: 'Search...'
+    },
+    buttons: [ 'colvis' ],
+    stateLoaded: function (settings, data) {
+      data.columns.forEach((c, i) => !c.visible && $(`[data-column=${i}]`).addClass('hidden'))
+    }
+  })
+  $('.columns button').on('click', function(e) {
+    e.preventDefault()
+    $(this).toggleClass('hidden')
+    var column = $table.column($(this).attr('data-column'))
+    column.visible(!column.visible())
+    $table.columns.adjust().draw()
   })
 })
 </script>
