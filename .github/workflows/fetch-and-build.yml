@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install & build
+    - name: npm install, fetch & build
       run: |
         npm ci
         AUTH_TOKEN=${{ secrets.SECRET_NAME }} npm run fetch
