@@ -50,7 +50,7 @@ https://npm.zoom.us/j/584504445
 +1 646 558 8656 US (New York)
 
 **Meeting ID:** 584 504 445
-Find your local number: https://zoom.us/u/abR8OFljr8]
+Find your local number: https://zoom.us/u/abR8OFljr8
 
 **Add to your Calendar**
 You add this and all other public npm events with the following link:
