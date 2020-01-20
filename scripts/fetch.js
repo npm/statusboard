@@ -57,8 +57,8 @@
               r.downloads = data.downloads
               response = await fetch(`https://raw.githack.com/npm/${r.name}/master/package.json`)
               let pkg = await response.json()
-              r.prs_count = prs.data.length
-              r.issues_count = issues.data.length
+              r.prs_count = prs.data.length || 0
+              r.issues_count = (issues.data.length || 0) - r.prs_count
               r.build_status = status.data[0].state
               r.node = pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
               r.license.key = pkg.license || r.license.key

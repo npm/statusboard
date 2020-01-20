@@ -5,7 +5,8 @@ const Handlebars = require('handlebars')
 const source = fs.readFileSync(path.resolve(__dirname, 'template.hbs'), 'utf8')
 const template = Handlebars.compile(source)
 const now = new Date()
-const built = `${now.getUTCFullYear()}-${now.getUTCMonth()}-${now.getUTCDate()}`
+const month = String('00' + (now.getUTCMonth()+1)).slice(-2)
+const built = `${now.getUTCFullYear()}-${month}-${now.getUTCDate()}`
 const contents = template({ repos, built })
 fs.writeFile(path.resolve(__dirname, '../index.html'), contents, 'utf8', (err) => {
   if (err) throw err
