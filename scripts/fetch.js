@@ -8,7 +8,8 @@
   const Octokit = require("@octokit/rest")
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   const now = new Date()
-  const dest = `../data/${now.getUTCFullYear()}/${now.getUTCMonth()}/${now.getUTCDate()}.json`
+  const month = String('00' + (now.getUTCMonth()+1)).slice(-2)
+  const dest = `../data/${now.getUTCFullYear()}/${month}/${now.getUTCDate()}.json`
   const latest = `../data/latest.json`
   const dir = dest.split('/').slice(0, -1).join('/')
   let repositories = []

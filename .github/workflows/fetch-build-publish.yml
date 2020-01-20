@@ -29,5 +29,5 @@ jobs:
           # Git Commands
           git config --local user.email "ops+npm-deploy-user@npmjs.com"
           git config --local user.name "beep boop I am a robot"
-          git commit -m "feat: build changes" -a
+          git commit -m "feat: build changes" -A
           git push origin master
