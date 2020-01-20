@@ -50,7 +50,7 @@
     .columns li button {
       background: transparent;
       border: 1px solid #dee2e6;
-      border-radius: 3px; 
+      border-radius: 3px;
       padding: 5px 10px 5px 25px;
       white-space: nowrap;
       position: relative;
@@ -116,7 +116,7 @@
       text-decoration: none;
       font-weight: bold;
       line-height: 100%;
-      color: rgb(65, 56, 68); 
+      color: rgb(65, 56, 68);
     }
     header a {
       font-family: 'Poppins', sans-serif;
@@ -135,7 +135,7 @@
     }
     table tr td span {
       background: #333;
-      color: white; 
+      color: white;
       padding: 5px 0;
       border-radius: 3px;
       width: 100%;
@@ -165,6 +165,33 @@
     }
     .status {
       text-transform: capitalize;
+    }
+    table.dataTable thead .sorting,
+    table.dataTable thead .sorting_desc,
+    table.dataTable thead .sorting_asc {
+      background-image: none;
+    }
+    table.dataTable thead th {
+      position: relative;
+      padding-right: 25px;
+    }
+    table.dataTable thead th:before {
+      content: '▿';
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+    }
+    table.dataTable thead .sorting:before,
+    table.dataTable thead .sorting_desc:before {
+      transform: rotate(180deg);
+    }
+    table.dataTable thead .sorting_asc:before {
+      top: 10px;
+    }
+    table.dataTable thead .sorting_desc:before,
+    table.dataTable thead .sorting_asc:before {
+      content: '▾';
     }
   </style>
 </head>
