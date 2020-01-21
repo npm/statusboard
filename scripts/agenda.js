@@ -7,19 +7,20 @@
   const datetime = `${now.getFullYear()}-${(now.getMonth()+1)}-${now.getDate()}T10:00:00-07:00`
   const calendar = 'npmjs.com_oonluqt8oftrt0vmgrfbg6q6go%40group.calendar.google.com'
   const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${calendar}/events?key=${process.env.CALENDAR_AUTH_TOKEN}&q="Open RFC"&timeMin=${datetime}&orderBy=starttime&singleEvents=true&maxResults=1`)
+  const force = process.argv.indexOf('-f') || process.argv.indexOf('--force')
   let data = await response.json()
   let meeting = data.items[0]
   let start = new Date(meeting.start.dateTime)
-  let options = { 
-    weekday: 'long', 
-    year: 'numeric', 
-    month: 'long', 
+  let options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
     day: 'numeric',
-    hour: 'numeric', 
-    minute: 'numeric' 
+    hour: 'numeric',
+    minute: 'numeric'
   }
   let diff = new Date(start - now)
-  if ((diff.getUTCDate() - 1) <= 6) {
+  if (!force && (diff.getUTCDate() - 1) <= 6) {
     console.error('Error: Agenda should exist already!')
     return
   }
