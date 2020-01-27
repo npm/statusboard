@@ -1,11 +1,14 @@
-# 📊 statusboard
-Community &amp; Open Source Statusboard
+## 📊 statusboard
 
-You can view the live board here: [npm.github.io/statusboard](https://npm.github.io/statusboard/)
+A single view to help monitor the status/health of [npm](https://github.com/npm)'s Open Source Projects
 
-### Developing
+[View statusboard here: **npm.github.io/statusboard**](https://npm.github.io/statusboard/)
+
+### Developing:
 
 1. Install `npm i`
 2. `npm run` (lists the available commands to run)
 
-![Screenshot_2020-01-27 npm - project statusboard](https://user-images.githubusercontent.com/459713/73183520-ec57f880-40e8-11ea-9aad-5b3912b1ceda.png)
+### Preview:
+
+<a href="https://npm.github.io/statusboard/"><img src="https://user-images.githubusercontent.com/459713/73183520-ec57f880-40e8-11ea-9aad-5b3912b1ceda.png"></a>
