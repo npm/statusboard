@@ -38,6 +38,8 @@
 
 ## What?
 
+All discussions surrounding RFCs are covered by the [npm Code of Conduct](https://www.npmjs.com/policies/conduct). Please keep conversations constructive, civil & be mindful of when others are speaking. As is tradition, "raise your hand" when requesting to comment on a topic or request to comment asynchronously within the chat. The npm team may, at its own discretion, moderate, mute &/or remove a person from an Open RFC call for any reason.
+
 1. Housekeeping (introductions, outlining intentions & desired outcomes)
 ${items.join('\n')}
 
