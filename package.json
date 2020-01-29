@@ -18,7 +18,7 @@
     "url": "git+https://github.com/npm/statusboard.git"
   },
   "keywords": [],
-  "author": "Darcy Clarke <darcy@npmjs.com>",
+  "author": "npm Inc. <support@npmjs.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/statusboard/issues"
