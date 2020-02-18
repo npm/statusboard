@@ -30,7 +30,7 @@
         repo: 'rfcs',
         title,
         body,
-        labels: ['Agenda', 'Meeting'],
+        labels: ['Meeting'],
         assignees: ['darcyclarke']
       }).catch(e => console.error(e))
     }).catch(e => console.error(e))  
