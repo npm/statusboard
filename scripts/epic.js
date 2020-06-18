@@ -31,10 +31,10 @@
       let existing = response.data.items.map(i => i.title)
       let diff = issues.filter(i => !existing[i.title])
       for(let n = 0; diff.length > n; n++) {
-        let { title, url, labels } = diff[n]
+        let { title, html_url, labels } = diff[n]
         labels = labels.map(l => l.name).concat(['CLI-Team', 'Feature'])
-        const body = template({ title, url })
-        console.log(title, url, labels, body)
+        const body = template({ title, url: html_url })
+        console.log(title, html_url, labels, body)
         github.issues.create({
           owner: 'github',
           repo: 'npm-cli',
