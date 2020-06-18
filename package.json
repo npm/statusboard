@@ -9,6 +9,7 @@
     "watch": "watch 'npm run build' ./scripts/",
     "fetch": "node ./scripts/fetch.js",
     "agenda": "node ./scripts/agenda.js",
+    "epic": "node ./scripts/epic.js",
     "contributions": "node ./scripts/contributions.js",
     "stats": "node ./scripts/stats.js",
     "info": "node ./scripts/info.js"
@@ -25,7 +26,7 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
-    "handlebars": "^4.7.3"
+    "handlebars": "^4.7.6"
   },
   "dependencies": {
     "@actions/github": "^2.1.1",
@@ -33,11 +34,12 @@
     "@octokit/rest": "^17.1.1",
     "copyfiles": "^2.2.0",
     "dotenv": "^8.2.0",
-    "http-server": "^0.12.1",
+    "http-server": "^0.12.3",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.3",
     "node-fetch": "^2.6.0",
     "sleepover": "^1.1.4",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "zenhub-api": "^0.2.0"
   }
 }

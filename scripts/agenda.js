@@ -2,7 +2,7 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
-  const Octokit = require("@octokit/rest")
+  const { Octokit } = require("@octokit/rest")
   const Handlebars = require('handlebars')
   const source = fs.readFileSync(path.resolve(__dirname, 'agenda.hbs'), 'utf8')
   const template = Handlebars.compile(source)
@@ -33,7 +33,7 @@
         labels: ['Meeting'],
         assignees: ['darcyclarke']
       }).catch(e => console.error(e))
-    }).catch(e => console.error(e))  
+    }).catch(e => console.error(e))
   }
   try {
     const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${calendar}/events?key=${process.env.CALENDAR_AUTH_TOKEN}&q="Open RFC"&timeMin=${datetime}&orderBy=starttime&singleEvents=true&maxResults=1`)

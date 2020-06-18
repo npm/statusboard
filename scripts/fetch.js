@@ -5,7 +5,7 @@
   const { sleep } = require('sleepover')
   const fetch = require('node-fetch')
   const mkdirp = require('mkdirp')
-  const Octokit = require("@octokit/rest")
+  const { Octokit } = require('@octokit/rest')
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   const now = new Date()
   const month = String('00' + (now.getUTCMonth()+1)).slice(-2)

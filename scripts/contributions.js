@@ -1,6 +1,6 @@
 (async function () {
   require('dotenv').config()
-  const Octokit = require("@octokit/rest")
+  const { Octokit } = require("@octokit/rest")
   const { teams } = require('../data/info')
   const involves = teams.oss.join('+involves:')
   const datime = '2019-10-25'

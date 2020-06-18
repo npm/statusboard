@@ -1,7 +1,7 @@
 (async function () {
   require('dotenv').config()
   let repos = require('../data/archive')
-  const Octokit = require("@octokit/rest")
+  const { Octokit } = require("@octokit/rest")
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   repos = repos.map(r => r.replace('https://github.com/npm/',''))
   for (let i = 0; i < repos.length; i++) {
