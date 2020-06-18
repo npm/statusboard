@@ -240,16 +240,16 @@
         <th>
           Last Commit
         </th>
-        <th>
+        {{!-- <th>
           Build&nbsp;Status
-        </th>
+        </th> --}}
         <th>
           Node
         </th>
         <th>
           Downloads&nbsp;(/m)
         </th>
-        <th>
+        {{!-- <th>
           Dependants
         </th>
         <th>
@@ -257,7 +257,7 @@
         </th>
         <th>
           Vulnerabilities
-        </th>
+        </th> --}}
         <th>
           Test&nbsp;Coverage
         </th>
@@ -292,20 +292,20 @@
           {{/if}}
         </td>
         <td>
-          {{pushed_at}}
+          {{pushed_at_diff}}
         </td>
-        <td class="status">
+        {{!-- <td class="status">
           {{#if build_status}}
             <span class="{{build_status}}">{{build_status}}</span>
           {{/if}}
-        </td>
+        </td> --}}
         <td>
           {{node}}
         </td>
         <td>
           {{downloads}}
         </td>
-        <td>
+        {{!-- <td>
           {{#if version}}
             <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/{{name}}?style=flat-square">
           {{/if}}
@@ -319,7 +319,7 @@
           {{#if version}}
             <img src="https://img.shields.io/snyk/vulnerabilities/npm/{{name}}?style=flat-square">
           {{/if}}
-        </td>
+        </td> --}}
         <td class="coverage">
           {{#if coverage}}
             <span class="{{coverageLevel}}">{{coverage}}</span>
