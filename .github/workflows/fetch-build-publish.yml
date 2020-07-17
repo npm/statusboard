@@ -32,8 +32,8 @@ jobs:
           git commit -m "chore: store fetched data"
           git push origin latest
       - name: Build Template
-          run: |
-            npm run build
+        run: |
+          npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
