@@ -210,13 +210,10 @@
       <li><button data-column="4">Pull Requests</button></li>
       <li><button data-column="5">License</button></li>
       <li><button data-column="6">Last Commit</button></li>
-      {{!-- <li><button data-column="7">Build Status</button></li> --}}
+      <li><button data-column="7">Build Status</button></li>
       <li><button data-column="8">Node</button></li>
       <li><button data-column="9">Downloads (/m)</button></li>
-      <li><button data-column="10">Dependants</button></li>
-      <li><button data-column="11">Dependencies</button></li>
-      <li><button data-column="12">Vulnerabilities</button></li>
-      <li><button data-column="13">Test Coverage</button></li>
+      <li><button data-column="13">Coverage</button></li>
       <li><button data-column="14">Size</button></li>
       <li><button data-column="15">Version</button></li>
       <li><button data-column="16">Branch</button></li>
@@ -245,26 +242,17 @@
         <th>
           Last Commit
         </th>
-        {{!-- <th>
+        <th>
           Build&nbsp;Status
-        </th> --}}
+        </th>
         <th>
           Node
         </th>
         <th>
           Downloads&nbsp;(/m)
         </th>
-        {{!-- <th>
-          Dependants
-        </th>
         <th>
-          Dependencies
-        </th>
-        <th>
-          Vulnerabilities
-        </th> --}}
-        <th>
-          Test&nbsp;Coverage
+          Coverage
         </th>
         <th>
           Size&nbsp;(KB)
@@ -305,32 +293,17 @@
         <td>
           {{pushed_at_diff}}
         </td>
-        {{!-- <td class="status">
+        <td class="status">
           {{#if build_status}}
             <span class="{{build_status}}">{{build_status}}</span>
           {{/if}}
-        </td> --}}
+        </td>
         <td>
           {{node}}
         </td>
         <td>
           {{downloads}}
         </td>
-        {{!-- <td>
-          {{#if version}}
-            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/{{owner}}/{{name}}?style=flat-square">
-          {{/if}}
-        </td>
-        <td>
-          {{#if version}}
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/{{owner}}/{{name}}?style=flat-square">
-          {{/if}}
-        </td>
-        <td>
-          {{#if version}}
-            <img src="https://img.shields.io/snyk/vulnerabilities/{{owner}}/{{name}}?style=flat-square">
-          {{/if}}
-        </td> --}}
         <td class="coverage">
           {{#if coverage}}
             <span class="{{coverageLevel}}">{{coverage}}</span>
