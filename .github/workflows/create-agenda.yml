@@ -1,7 +1,7 @@
 name: Create Open RFC Agenda
 on:
   schedule:
-    - cron: "0 0 * * WED"
+    - cron: "0 0 * * MON"
 jobs:
   build:
     runs-on: ubuntu-latest
