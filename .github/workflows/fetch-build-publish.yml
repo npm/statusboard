@@ -29,7 +29,7 @@ jobs:
           git config --local user.email "ops+npm-deploy-user@npmjs.com"
           git config --local user.name "beep boop I am a robot"
           git add .
-          git commit -m "feat: store fetched"
+          git commit -m "chore: store fetched data"
           git push origin latest
       - name: Build Template
           run: |
