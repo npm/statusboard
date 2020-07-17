@@ -59,10 +59,12 @@
       try {
         response = await fetch(`https://unpkg.com/${r.package}/package.json`)
         pkg = await response.json()
-        if (r.package) {
-          response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${r.package}`)
-          data = await response.json()
-        }
+      } catch (e) {
+        console.error(e)
+      }
+      try {
+        response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${r.package}`)
+        data = await response.json()
       } catch (e) {
         console.error(e)
       }
@@ -73,8 +75,7 @@
     } catch (e) {
       console.error(e)
     }
-
-    sleep(1000)
+    sleep(600)
     return r
   })).then(writeFile).catch(e => console.error(e))
 })()
