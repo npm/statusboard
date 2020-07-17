@@ -6,18 +6,34 @@ on:
     branches:
       - latest
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
         with:
-          persist-credentials: false
-      - name: Install and Build 🔧
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, fetch & build
+        env:
+          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm ci
           npm run fetch
-          npm run build
+      - name: Fetch & Store Data
+        run: |
+          # Git Commands
+          git config --local user.email "ops+npm-deploy-user@npmjs.com"
+          git config --local user.name "beep boop I am a robot"
+          git add .
+          git commit -m "feat: store fetched"
+          git push origin latest
+      - name: Build Template
+          run: |
+            npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
