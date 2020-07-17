@@ -2,15 +2,15 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
-  const { sleep, over } = require('sleepover')
-  const repos = require('../data/latest')
-  const ZenHub = require('zenhub-api')
-  const zenhub = new ZenHub(process.env.ZENHUB_AUTH_TOKEN)
+  const { sleep } = require('sleepover')
+  // const repos = require('../data/latest')
+  // const ZenHub = require('zenhub-api')
+  // const zenhub = new ZenHub(process.env.ZENHUB_AUTH_TOKEN)
   const { Octokit } = require('@octokit/rest')
   const Handlebars = require('handlebars')
   const source = fs.readFileSync(path.resolve(__dirname, 'epic.hbs'), 'utf8')
   const template = Handlebars.compile(source)
-  const fetch = require('node-fetch')
+  // const fetch = require('node-fetch')
   const npm = new Octokit({ auth: process.env.AUTH_TOKEN })
   const github = new Octokit({ auth: process.env.GITHUB_AUTH_TOKEN })
   const queryNPM = `org:npm is:issue label:epic -label:backlog is:open is:public`
@@ -26,15 +26,13 @@
   // fs.writeFileSync(path.resolve(__dirname, '../data/tickets.json'), JSON.stringify(epics), 'utf8')
   npm.search.issuesAndPullRequests({ q: queryNPM }).then(response => {
     let issues = response.data.items.filter(i => i.url)
-    console.log(issues)
     github.search.issuesAndPullRequests({ q: queryGitHub }).then(response => {
       let existing = response.data.items.map(i => i.title)
       let diff = issues.filter(i => !existing[i.title])
-      for(let n = 0; diff.length > n; n++) {
-        let { title, html_url, labels } = diff[n]
+      for (let n = 0; diff.length > n; n++) {
+        let { title, labels } = diff[n]
         labels = labels.map(l => l.name).concat(['CLI-Team', 'Feature'])
-        const body = template({ title, url: html_url })
-        console.log(title, html_url, labels, body)
+        const body = template({ title, url: diff[n].html_url })
         github.issues.create({
           owner: 'github',
           repo: 'npm-cli',

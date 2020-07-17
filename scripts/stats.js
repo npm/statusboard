@@ -3,7 +3,7 @@
   const { sleep } = require('sleepover')
   const { teams } = require('../data/info')
   const employees = teams.employees
-  const Octokit = require("@octokit/rest")
+  const Octokit = require('@octokit/rest')
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   octokit.search.issuesAndPullRequests({ q: `org:"npm"+merged:>=2019-10-01+is:pr+is:merged+is:public` }).then(response => {
     console.log('# of issues/prs merged', response.data['total_count'])
@@ -31,7 +31,9 @@
     let obj = {}
     contributors = contributors.filter(i => employees.indexOf(i) < 0)
     console.log(contributors)
-    contributors.forEach((c) => obj[c] ? obj[c]++ : obj[c] = 1)
+    contributors.forEach((c) => {
+      obj[c] ? obj[c]++ : obj[c] = 1
+    })
     Object.keys(obj).forEach(i => obj[i] > 5 && console.log(i, obj[i]))
     console.log('# of uniques:', [...new Set(contributors)].length)
   })

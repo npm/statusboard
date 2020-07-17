@@ -2,14 +2,14 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
-  const { Octokit } = require("@octokit/rest")
+  const { Octokit } = require('@octokit/rest')
   const Handlebars = require('handlebars')
   const source = fs.readFileSync(path.resolve(__dirname, 'agenda.hbs'), 'utf8')
   const template = Handlebars.compile(source)
   const fetch = require('node-fetch')
   const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
   const now = new Date()
-  const datetime = `${now.getFullYear()}-${(now.getMonth()+1)}-${now.getDate()}T10:00:00-07:00`
+  const datetime = `${now.getFullYear()}-${(now.getMonth() + 1)}-${now.getDate()}T10:00:00-07:00`
   const calendar = 'npmjs.com_oonluqt8oftrt0vmgrfbg6q6go%40group.calendar.google.com'
   const force = ~process.argv.indexOf('-f') || ~process.argv.indexOf('--force')
   let options = {

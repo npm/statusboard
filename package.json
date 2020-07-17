@@ -12,7 +12,9 @@
     "epic": "node ./scripts/epic.js",
     "contributions": "node ./scripts/contributions.js",
     "stats": "node ./scripts/stats.js",
-    "roadmap": "node ./scripts/roadmap.js"
+    "roadmap": "node ./scripts/roadmap.js",
+    "test": "npm run lint",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -27,18 +29,19 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {},
   "dependencies": {
-    "handlebars": "^4.7.6",
     "@actions/github": "^4.0.0",
     "@octokit/graphql": "^4.5.1",
     "@octokit/rest": "^18.0.1",
     "copyfiles": "^2.3.0",
     "dotenv": "^8.2.0",
+    "handlebars": "^4.7.6",
     "http-server": "^0.12.3",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",
     "sleepover": "^1.1.4",
+    "standard": "^14.3.4",
     "watch": "^1.0.2",
     "zenhub-api": "^0.2.0"
   }
