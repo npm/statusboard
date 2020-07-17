@@ -57,11 +57,10 @@
       r.coverage = stats ? Math.round(stats.covered_percent) : ''
       r.coverageLevel = r.coverage ? (r.coverage === 100) ? 'high' : (r.coverage > 80) ? 'medium' : 'low' : ''
       try {
-        response = await fetch(`https://raw.githack.com/${owner}/${name}/${r.default_branch}/package.json`)
-        // response = await fetch(`https://unpkg.com/${_.name}/package.json`)
+        response = await fetch(`https://unpkg.com/${r.package}/package.json`)
         pkg = await response.json()
-        if (pkg && pkg.name) {
-          response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg.name}`)
+        if (r.package) {
+          response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${r.package}`)
           data = await response.json()
         }
       } catch (e) {
