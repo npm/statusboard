@@ -390,12 +390,6 @@
     "package": "npm-expansions"
   },
   {
-    "name": "node-tar",
-    "description": "tar for node",
-    "repository": "https://github.com/npm/node-tar",
-    "package": "tar"
-  },
-  {
     "name": "marky-markdown",
     "description": "npm's markdown parser",
     "repository": "https://github.com/npm/marky-markdown",
