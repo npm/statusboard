@@ -12,7 +12,7 @@
     "epic": "node ./scripts/epic.js",
     "contributions": "node ./scripts/contributions.js",
     "stats": "node ./scripts/stats.js",
-    "info": "node ./scripts/info.js"
+    "roadmap": "node ./scripts/roadmap.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,9 @@
     "url": "https://github.com/npm/statusboard/issues"
   },
   "homepage": "https://github.com/npm/statusboard#readme",
-  "devDependencies": {
-    "handlebars": "^4.7.6"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "handlebars": "^4.7.6",
     "@actions/github": "^4.0.0",
     "@octokit/graphql": "^4.5.1",
     "@octokit/rest": "^18.0.1",
