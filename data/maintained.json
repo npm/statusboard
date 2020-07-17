@@ -248,7 +248,7 @@
   {
     "name": "cacache",
     "description": "Manage local key and content address caches",
-    "repository": "https://github.com/zkat/cacache",
+    "repository": "https://github.com/npm/cacache",
     "package": "https://www.npmjs.com/package/cacache"
   },
   {
