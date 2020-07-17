@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "serve": "http-server ./",
+    "serve": "http-server ./dist/",
     "watch": "watch 'npm run build' ./scripts/",
     "fetch": "node ./scripts/fetch.js",
     "agenda": "node ./scripts/agenda.js",

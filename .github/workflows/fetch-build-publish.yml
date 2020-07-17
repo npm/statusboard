@@ -2,30 +2,25 @@ name: Build statusboard
 on:
   schedule:
     - cron: "0 1 * * *"
+  push:
+    branches:
+      - latest
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install, fetch & build
-        env:
-          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
+      - name: Install and Build 🔧
         run: |
           npm ci
           npm run fetch
           npm run build
-      - name: Commit/Push Files
-        run: |
-          # Git Commands
-          git config --local user.email "ops+npm-deploy-user@npmjs.com"
-          git config --local user.name "beep boop I am a robot"
-          git add .
-          git commit -m "feat: build changes"
-          git push origin latest
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.5.7
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: ./dist

@@ -8,7 +8,8 @@ const now = new Date()
 const month = String('00' + (now.getUTCMonth() + 1)).slice(-2)
 const built = `${now.getUTCFullYear()}-${month}-${now.getUTCDate()}`
 const contents = template({ repos, built })
-fs.writeFile(path.resolve(__dirname, '../index.html'), contents, 'utf8', (err) => {
+fs.mkdirSync(path.resolve(__dirname, '../dist/'), { recursive: true })
+fs.writeFile(path.resolve(__dirname, '../dist/index.html'), contents, 'utf8', (err) => {
   if (err) throw err
   console.log(`Build complete!`)
 })
