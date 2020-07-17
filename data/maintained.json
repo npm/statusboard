@@ -1,0 +1,1088 @@
+[
+  {
+    "name": "bin-links",
+    "description": ".bin/ script linker.",
+    "repository": "https://github.com/npm/bin-links",
+    "package": "https://www.npmjs.com/package/bin-links"
+  },
+  {
+    "name": "copy-concurrently",
+    "description": "Promises of copies of files, directories and symlinks, with concurrency controls and win32 junction fallback.",
+    "repository": "https://github.com/npm/copy-concurrently",
+    "package": "https://www.npmjs.com/package/copy-concurrently"
+  },
+  {
+    "name": "dezalgo",
+    "description": "async insanity.",
+    "repository": "https://github.com/npm/dezalgo",
+    "package": "https://www.npmjs.com/package/dezalgo"
+  },
+  {
+    "name": "find-npm-prefix",
+    "description": "Find the npm project directory associated with for a given directory.",
+    "repository": "https://github.com/npm/find-npm-prefix",
+    "package": "https://www.npmjs.com/package/find-npm-prefix"
+  },
+  {
+    "name": "fs-vacuum",
+    "description": "Remove empty branches in a directory tree.",
+    "repository": "https://github.com/npm/fs-vacuum",
+    "package": "https://www.npmjs.com/package/fs-vacuum"
+  },
+  {
+    "name": "fs-write-stream-atomic",
+    "description": "Like fs.createWriteStream(...), but atomic.",
+    "repository": "https://github.com/npm/fs-write-stream-atomic",
+    "package": "https://www.npmjs.com/package/fs-write-stream-atomic"
+  },
+  {
+    "name": "gauge",
+    "description": "A terminal based horizontal guage aka, a progress bar.",
+    "repository": "https://github.com/iarna/gauge",
+    "package": "https://www.npmjs.com/package/gauge"
+  },
+  {
+    "name": "hosted-git-info",
+    "description": "Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab.",
+    "repository": "https://github.com/npm/hosted-git-info",
+    "package": "https://www.npmjs.com/package/hosted-git-info"
+  },
+  {
+    "name": "ignore-walk",
+    "description": "Nested/recursive .gitignore/.npmignore parsing and filtering.",
+    "repository": "https://github.com/isaacs/ignore-walk",
+    "package": "https://www.npmjs.com/package/ignore-walk"
+  },
+  {
+    "name": "inflight",
+    "description": "Add callbacks to requests in flight to avoid async duplication.",
+    "repository": "https://github.com/isaacs/inflight",
+    "package": "https://www.npmjs.com/package/inflight"
+  },
+  {
+    "name": "init-package-json",
+    "description": "A node module to get your node module started.",
+    "repository": "https://github.com/isaacs/init-package-json",
+    "package": "https://www.npmjs.com/package/init-package-json"
+  },
+  {
+    "name": "lockfile",
+    "description": "A very polite lock file utility, which endeavors to not litter, and to wait patiently for others.",
+    "repository": "https://github.com/isaacs/lockfile",
+    "package": "https://www.npmjs.com/package/lockfile"
+  },
+  {
+    "name": "node-which",
+    "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
+    "repository": "https://github.com/npm/node-which",
+    "package": "https://www.npmjs.com/package/node-which"
+  },
+  {
+    "name": "nopt",
+    "description": "Node.js/npm Option Parsing.",
+    "repository": "https://github.com/isaacs/nopt",
+    "package": "https://www.npmjs.com/package/nopt"
+  },
+  {
+    "name": "normalize-git-url",
+    "description": "turn a Git URL into its canonical form.",
+    "repository": "https://github.com/npm/normalize-git-url",
+    "package": "https://www.npmjs.com/package/normalize-git-url"
+  },
+  {
+    "name": "normalize-package-data",
+    "description": "normalizes package metadata, typically found in package.json file.",
+    "repository": "https://github.com/npm/normalize-package-data",
+    "package": "https://www.npmjs.com/package/normalize-package-data"
+  },
+  {
+    "name": "npm-bundled",
+    "description": "Run this in a node package, and it'll tell you which things in node_modules are bundledDependencies, or transitive dependencies of bundled dependencies.",
+    "repository": "https://github.com/npm/npm-bundled",
+    "package": "https://www.npmjs.com/package/npm-bundled"
+  },
+  {
+    "name": "npm-cache-filename",
+    "description": "Given a cache folder and url, return the appropriate cache folder.",
+    "repository": "https://github.com/npm/npm-cache-filename",
+    "package": "https://www.npmjs.com/package/npm-cache-filename"
+  },
+  {
+    "name": "npm-install-checks",
+    "description": "Contains checks that npm runs during the installation.",
+    "repository": "https://github.com/npm/npm-install-checks",
+    "package": "https://www.npmjs.com/package/npm-install-checks"
+  },
+  {
+    "name": "npm-lifecycle",
+    "description": "npm lifecycle script runner",
+    "repository": "https://github.com/npm/lifecycle",
+    "package": "https://www.npmjs.com/package/npm-lifecycle"
+  },
+  {
+    "name": "npm-package-arg",
+    "description": "Parse the things that can be arguments to npm install.",
+    "repository": "https://github.com/npm/npm-package-arg",
+    "package": "https://www.npmjs.com/package/npm-package-arg"
+  },
+  {
+    "name": "npm-packlist",
+    "description": "Walk through a folder and figure out what goes in an npm package.",
+    "repository": "https://github.com/npm/npm-packlist",
+    "package": "https://www.npmjs.com/package/npm-packlist"
+  },
+  {
+    "name": "npm-profile",
+    "description": "Make changes to your npmjs.com profile via cli or library.",
+    "repository": "https://github.com/npm/npm-profile",
+    "package": "https://www.npmjs.com/package/npm-profile"
+  },
+  {
+    "name": "npm-registry-client",
+    "description": "handling all the caching and HTTP calls to the registry.",
+    "repository": "https://github.com/isaacs/npm-registry-client",
+    "package": "https://www.npmjs.com/package/npm-registry-client"
+  },
+  {
+    "name": "npm-user-validate",
+    "description": "user validation.",
+    "repository": "https://github.com/npm/npm-user-validate",
+    "package": "https://www.npmjs.com/package/npm-user-validate"
+  },
+  {
+    "name": "npmlog",
+    "description": "The logger that npm uses.",
+    "repository": "https://github.com/npm/npmlog",
+    "package": "https://www.npmjs.com/package/npmlog"
+  },
+  {
+    "name": "osenv",
+    "description": "Look up environment settings specific to different operating systems.",
+    "repository": "https://github.com/npm/osenv",
+    "package": "https://www.npmjs.com/package/osenv"
+  },
+  {
+    "name": "read-cmd-shim",
+    "description": "Read the path a cmd-shim is pointing at. Acts like fs.readlink but for cmd-shims.",
+    "repository": "https://github.com/npm/read-cmd-shim",
+    "package": "https://www.npmjs.com/package/read-cmd-shim"
+  },
+  {
+    "name": "read-installed",
+    "description": "Read all the installed packages in a folder, and return a tree structure with all the data.",
+    "repository": "https://github.com/npm/read-installed",
+    "package": "https://www.npmjs.com/package/read-installed"
+  },
+  {
+    "name": "read-package-json",
+    "description": "The thing npm uses to read package.json files with semantics and defaults and validation and stuff.",
+    "repository": "https://github.com/npm/read-package-json",
+    "package": "https://www.npmjs.com/package/read-package-json"
+  },
+  {
+    "name": "read-package-tree",
+    "description": "Read the contents of node_modules.",
+    "repository": "https://github.com/npm/read-package-tree",
+    "package": "https://www.npmjs.com/package/read-package-tree"
+  },
+  {
+    "name": "semver",
+    "description": "The semver parser for node.",
+    "repository": "https://github.com/npm/node-semver",
+    "package": "https://www.npmjs.com/package/semver"
+  },
+  {
+    "name": "slide",
+    "description": "A flow control library that fits in a slideshow.",
+    "repository": "https://github.com/npm/slide-flow-control",
+    "package": "https://www.npmjs.com/package/slide"
+  },
+  {
+    "name": "tar",
+    "description": "tar for node.",
+    "repository": "https://github.com/npm/node-tar",
+    "package": "https://www.npmjs.com/package/tar"
+  },
+  {
+    "name": "uid-number",
+    "description": "Convert a username/group name to a uid/gid number.",
+    "repository": "https://github.com/npm/uid-number",
+    "package": "https://www.npmjs.com/package/uid-number"
+  },
+  {
+    "name": "unique-filename",
+    "description": "Generate a unique filename for use in temporary directories or caches.",
+    "repository": "https://github.com/npm/unique-filename",
+    "package": "https://www.npmjs.com/package/unique-filename"
+  },
+  {
+    "name": "validate-npm-package-name",
+    "description": "Check if the given string is an acceptable npm package name.",
+    "repository": "https://github.com/npm/validate-npm-package-name",
+    "package": "https://www.npmjs.com/package/validate-npm-package-name"
+  },
+  {
+    "name": "wrappy",
+    "description": "Callback wrapping utility.",
+    "repository": "https://github.com/npm/wrappy",
+    "package": "https://www.npmjs.com/package/wrappy"
+  },
+  {
+    "name": "write-file-atomic",
+    "description": "Write files in an atomic fashion w/configurable ownership.",
+    "repository": "https://github.com/iarna/write-file-atomic",
+    "package": "https://www.npmjs.com/package/write-file-atomic"
+  },
+  {
+    "name": "abbrev",
+    "description": "Like ruby's Abbrev module.",
+    "repository": "https://github.com/isaacs/abbrev-js",
+    "package": "https://www.npmjs.com/package/abbrev"
+  },
+  {
+    "name": "aproba",
+    "description": "Rediculously light-weight function argument validator.",
+    "repository": "https://github.com/iarna/aproba",
+    "package": "https://www.npmjs.com/package/aproba"
+  },
+  {
+    "name": "cacache",
+    "description": "Manage local key and content address caches",
+    "repository": "https://github.com/zkat/cacache",
+    "package": "https://www.npmjs.com/package/cacache"
+  },
+  {
+    "name": "chownr",
+    "description": "Like chown -R.",
+    "repository": "https://github.com/isaacs/chownr",
+    "package": "https://www.npmjs.com/package/chownr"
+  },
+  {
+    "name": "cipm",
+    "description": "Standalone ci-oriented package installer for npm projects.",
+    "repository": "https://github.com/zkat/cipm",
+    "package": "https://www.npmjs.com/package/cipm"
+  },
+  {
+    "name": "has-unicode",
+    "description": "Try to guess if your terminal supports unicode.",
+    "repository": "https://github.com/iarna/has-unicode",
+    "package": "https://www.npmjs.com/package/has-unicode"
+  },
+  {
+    "name": "inherits",
+    "description": "Easy simple tiny inheritance in JavaScript.",
+    "repository": "https://github.com/isaacs/inherits",
+    "package": "https://www.npmjs.com/package/inherits"
+  },
+  {
+    "name": "ini",
+    "description": "An ini parser/serializer in JavaScript.",
+    "repository": "https://github.com/isaacs/ini",
+    "package": "https://www.npmjs.com/package/ini"
+  },
+  {
+    "name": "make-fetch-happen",
+    "description": "Wraps node-fetch-npm with additional features node-fetch doesn't intend to include, including HTTP Cache support, request pooling, proxies, retries, and more.",
+    "repository": "https://github.com/zkat/make-fetch-happen",
+    "package": "https://www.npmjs.com/package/make-fetch-happen"
+  },
+  {
+    "name": "my-precious",
+    "description": "A local package archive.",
+    "repository": "https://github.com/zkat/my-precious",
+    "package": "https://www.npmjs.com/package/my-precious"
+  },
+  {
+    "name": "node-glob",
+    "description": "Glob functionality for node.js.",
+    "repository": "https://github.com/isaacs/node-glob",
+    "package": "https://www.npmjs.com/package/node-glob"
+  },
+  {
+    "name": "node-graceful-fs",
+    "description": "fs with incremental backoff on EMFILE.",
+    "repository": "https://github.com/isaacs/node-graceful-fs",
+    "package": "https://www.npmjs.com/package/node-graceful-fs"
+  },
+  {
+    "name": "npx",
+    "description": "Execute npm package binaries.",
+    "repository": "https://github.com/zkat/npx",
+    "package": "https://www.npmjs.com/package/npx"
+  },
+  {
+    "name": "once",
+    "description": "Run a function exactly one time.",
+    "repository": "https://github.com/isaacs/once",
+    "package": "https://www.npmjs.com/package/once"
+  },
+  {
+    "name": "pacote",
+    "description": "Programmatic npm package and metadata downloader.",
+    "repository": "https://github.com/zkat/pacote",
+    "package": "https://www.npmjs.com/package/pacote"
+  },
+  {
+    "name": "read",
+    "description": "read(1) for node.",
+    "repository": "https://github.com/npm/read",
+    "package": "https://www.npmjs.com/package/read"
+  },
+  {
+    "name": "rimraf",
+    "description": "A rm -rf util for nodejs.",
+    "repository": "https://github.com/isaacs/rimraf",
+    "package": "https://www.npmjs.com/package/rimraf"
+  },
+  {
+    "name": "ssri",
+    "description": "Standard Subresource Integrity library for Node.js.",
+    "repository": "https://github.com/zkat/ssri",
+    "package": "https://www.npmjs.com/package/ssri"
+  },
+  {
+    "name": "npm-registry-couchapp",
+    "description": "couchapp bits of the registry.",
+    "repository": "https://github.com/npm/npm-registry-couchapp",
+    "package": "https://www.npmjs.com/package/npm-registry-couchapp"
+  },
+  {
+    "name": "npm-registry-mock",
+    "description": "Mock the npm registry.",
+    "repository": "https://github.com/npm/npm-registry-mock",
+    "package": "https://www.npmjs.com/package/npm-registry-mock"
+  },
+  {
+    "name": "tap",
+    "description": "Test Anything Protocol tools for node.",
+    "repository": "https://github.com/tapjs/node-tap",
+    "package": "https://www.npmjs.com/package/tap"
+  },
+  {
+    "name": "tacks",
+    "description": "Generate fixture modules from folders.",
+    "repository": "https://github.com/iarna/tacks",
+    "package": "https://www.npmjs.com/package/tacks"
+  },
+  {
+    "name": "require-inject",
+    "description": "A simple mock injector compatible needing no instrumentation in the libraries being tested.",
+    "repository": "https://github.com/iarna/require-inject",
+    "package": "https://www.npmjs.com/package/require-inject"
+  },
+  {
+    "name": "cli",
+    "description": "the package manager for JavaScript",
+    "repository": "https://github.com/npm/cli",
+    "package": "https://www.npmjs.com/package/cli"
+  },
+  {
+    "name": "node-semver",
+    "description": "The semver parser for node (the one npm uses)",
+    "repository": "https://github.com/npm/node-semver",
+    "package": "https://www.npmjs.com/package/node-semver"
+  },
+  {
+    "name": "tink",
+    "description": "a dependency unwinder for javascript ",
+    "repository": "https://github.com/npm/tink",
+    "package": "https://www.npmjs.com/package/tink"
+  },
+  {
+    "name": "npm-expansions",
+    "description": "Send us a pull request by editing expansions.txt",
+    "repository": "https://github.com/npm/npm-expansions",
+    "package": "https://www.npmjs.com/package/npm-expansions"
+  },
+  {
+    "name": "node-tar",
+    "description": "tar for node",
+    "repository": "https://github.com/npm/node-tar",
+    "package": "https://www.npmjs.com/package/node-tar"
+  },
+  {
+    "name": "marky-markdown",
+    "description": "npm's markdown parser",
+    "repository": "https://github.com/npm/marky-markdown",
+    "package": "https://www.npmjs.com/package/marky-markdown"
+  },
+  {
+    "name": "rfcs",
+    "description": "Public change requests for the npm CLI & associated tooling",
+    "repository": "https://github.com/npm/rfcs",
+    "package": "https://www.npmjs.com/package/rfcs"
+  },
+  {
+    "name": "fstream",
+    "description": "Advanced FS Streaming for Node",
+    "repository": "https://github.com/npm/fstream",
+    "package": "https://www.npmjs.com/package/fstream"
+  },
+  {
+    "name": "npm-merge-driver",
+    "description": "git merge driver for resolving conflicts in npm-related files",
+    "repository": "https://github.com/npm/npm-merge-driver",
+    "package": "https://www.npmjs.com/package/npm-merge-driver"
+  },
+  {
+    "name": "ndm",
+    "description": "ndm allows you to deploy OS-specific service-wrappers directly from npm-packages.",
+    "repository": "https://github.com/npm/ndm",
+    "package": "https://www.npmjs.com/package/ndm"
+  },
+  {
+    "name": "registry",
+    "description": "npm registry documentation",
+    "repository": "https://github.com/npm/registry",
+    "package": "https://www.npmjs.com/package/registry"
+  },
+  {
+    "name": "arborist",
+    "description": "npm's tree doctor",
+    "repository": "https://github.com/npm/arborist",
+    "package": "https://www.npmjs.com/package/arborist"
+  },
+  {
+    "name": "slide-flow-control",
+    "description": "A flow control library that fits in a slideshow",
+    "repository": "https://github.com/npm/slide-flow-control",
+    "package": "https://www.npmjs.com/package/slide-flow-control"
+  },
+  {
+    "name": "are-we-there-yet",
+    "description": "Track complex hiearchies of asynchronous task completion statuses.",
+    "repository": "https://github.com/npm/are-we-there-yet",
+    "package": "https://www.npmjs.com/package/are-we-there-yet"
+  },
+  {
+    "name": "treeverse",
+    "description": "Walk any kind of tree structure depth- or breadth-first. Supports promises and advanced map-reduce operations with a very small API.",
+    "repository": "https://github.com/npm/treeverse",
+    "package": "https://www.npmjs.com/package/treeverse"
+  },
+  {
+    "name": "libnpm",
+    "description": "programmatic npm API",
+    "repository": "https://github.com/npm/libnpm",
+    "package": "https://www.npmjs.com/package/libnpm"
+  },
+  {
+    "name": "promzard",
+    "description": "A prompting json thingie",
+    "repository": "https://github.com/npm/promzard",
+    "package": "https://www.npmjs.com/package/promzard"
+  },
+  {
+    "name": "npm-remote-ls",
+    "description": "Examine a package's dependency graph before you install it",
+    "repository": "https://github.com/npm/npm-remote-ls",
+    "package": "https://www.npmjs.com/package/npm-remote-ls"
+  },
+  {
+    "name": "policies",
+    "description": "Privacy policy, code of conduct, license, and other npm legal stuff",
+    "repository": "https://github.com/npm/policies",
+    "package": "https://www.npmjs.com/package/policies"
+  },
+  {
+    "name": "cmd-shim",
+    "description": "The cmd-shim used in npm",
+    "repository": "https://github.com/npm/cmd-shim",
+    "package": "https://www.npmjs.com/package/cmd-shim"
+  },
+  {
+    "name": "registry-follower-tutorial",
+    "description": "write you a registry follower for great good",
+    "repository": "https://github.com/npm/registry-follower-tutorial",
+    "package": "https://www.npmjs.com/package/registry-follower-tutorial"
+  },
+  {
+    "name": "npm-registry-fetch",
+    "description": "like fetch() but for the npm registry",
+    "repository": "https://github.com/npm/npm-registry-fetch",
+    "package": "https://www.npmjs.com/package/npm-registry-fetch"
+  },
+  {
+    "name": "logical-tree",
+    "description": "Calculates a nested logical tree using a package.json and a package lock.",
+    "repository": "https://github.com/npm/logical-tree",
+    "package": "https://www.npmjs.com/package/logical-tree"
+  },
+  {
+    "name": "jobs",
+    "description": null,
+    "repository": "https://github.com/npm/jobs",
+    "package": "https://www.npmjs.com/package/jobs"
+  },
+  {
+    "name": "mute-stream",
+    "description": "Bytes go in, but they don't come out (when muted). ",
+    "repository": "https://github.com/npm/mute-stream",
+    "package": "https://www.npmjs.com/package/mute-stream"
+  },
+  {
+    "name": "wombat-cli",
+    "description": "The wombat cli tool.",
+    "repository": "https://github.com/npm/wombat-cli",
+    "package": "https://www.npmjs.com/package/wombat-cli"
+  },
+  {
+    "name": "ansible-nagios",
+    "description": "Ansible role for building Nagios 4.",
+    "repository": "https://github.com/npm/ansible-nagios",
+    "package": "https://www.npmjs.com/package/ansible-nagios"
+  },
+  {
+    "name": "lock-verify",
+    "description": "Report if your package.json is out of sync with your package-lock.json",
+    "repository": "https://github.com/npm/lock-verify",
+    "package": "https://www.npmjs.com/package/lock-verify"
+  },
+  {
+    "name": "git",
+    "description": "a util for spawning git from npm CLI contexts",
+    "repository": "https://github.com/npm/git",
+    "package": "https://www.npmjs.com/package/git"
+  },
+  {
+    "name": "ci-detect",
+    "description": "Detect what kind of CI environment the program is in",
+    "repository": "https://github.com/npm/ci-detect",
+    "package": "https://www.npmjs.com/package/ci-detect"
+  },
+  {
+    "name": "npm-audit-report",
+    "description": "npm audit security report",
+    "repository": "https://github.com/npm/npm-audit-report",
+    "package": "https://www.npmjs.com/package/npm-audit-report"
+  },
+  {
+    "name": "libnpmpublish",
+    "description": null,
+    "repository": "https://github.com/npm/libnpmpublish",
+    "package": "https://www.npmjs.com/package/libnpmpublish"
+  },
+  {
+    "name": "parse-conflict-json",
+    "description": "Parse a JSON string that has git merge conflicts, resolving if possible",
+    "repository": "https://github.com/npm/parse-conflict-json",
+    "package": "https://www.npmjs.com/package/parse-conflict-json"
+  },
+  {
+    "name": "libnpmaccess",
+    "description": "programmatic api for `npm access`",
+    "repository": "https://github.com/npm/libnpmaccess",
+    "package": "https://www.npmjs.com/package/libnpmaccess"
+  },
+  {
+    "name": "libnpmsearch",
+    "description": "programmatic API for the shiny new npm search endpoint",
+    "repository": "https://github.com/npm/libnpmsearch",
+    "package": "https://www.npmjs.com/package/libnpmsearch"
+  },
+  {
+    "name": "concurrent-couch-follower",
+    "description": "a couch follower wrapper that you can use to be sure you don't miss any documents even if you process them asynchronously.",
+    "repository": "https://github.com/npm/concurrent-couch-follower",
+    "package": "https://www.npmjs.com/package/concurrent-couch-follower"
+  },
+  {
+    "name": "unique-slug",
+    "description": "Generate a unique character string suitible for use in files and URLs.",
+    "repository": "https://github.com/npm/unique-slug",
+    "package": "https://www.npmjs.com/package/unique-slug"
+  },
+  {
+    "name": "npm-hook-slack",
+    "description": "Report on registry events to slack, tersely.",
+    "repository": "https://github.com/npm/npm-hook-slack",
+    "package": "https://www.npmjs.com/package/npm-hook-slack"
+  },
+  {
+    "name": "etcetera",
+    "description": "read service config from etcd in a truly boring way",
+    "repository": "https://github.com/npm/etcetera",
+    "package": "https://www.npmjs.com/package/etcetera"
+  },
+  {
+    "name": "do-you-even-lift",
+    "description": "Calculate package sizes in various configurations",
+    "repository": "https://github.com/npm/do-you-even-lift",
+    "package": "https://www.npmjs.com/package/do-you-even-lift"
+  },
+  {
+    "name": "logos",
+    "description": "official logos for npm, Inc",
+    "repository": "https://github.com/npm/logos",
+    "package": "https://www.npmjs.com/package/logos"
+  },
+  {
+    "name": "ansible-nagios-config",
+    "description": "Ansible role for configuring Nagios 4.",
+    "repository": "https://github.com/npm/ansible-nagios-config",
+    "package": "https://www.npmjs.com/package/ansible-nagios-config"
+  },
+  {
+    "name": "read-package-json-fast",
+    "description": "Like read-package-json, but faster",
+    "repository": "https://github.com/npm/read-package-json-fast",
+    "package": "https://www.npmjs.com/package/read-package-json-fast"
+  },
+  {
+    "name": "move-concurrently",
+    "description": "Promises of moves of files or directories with rename, falling back to recursive rename/copy on EXDEV errors, with configurable concurrency and win32 junction support.",
+    "repository": "https://github.com/npm/move-concurrently",
+    "package": "https://www.npmjs.com/package/move-concurrently"
+  },
+  {
+    "name": "npm-v7-blog",
+    "description": "a repo to hold blog posts about npm v7 that'll end up on the npm blog",
+    "repository": "https://github.com/npm/npm-v7-blog",
+    "package": "https://www.npmjs.com/package/npm-v7-blog"
+  },
+  {
+    "name": "deprecate-holder",
+    "description": "An npm package that holds a spot.",
+    "repository": "https://github.com/npm/deprecate-holder",
+    "package": "https://www.npmjs.com/package/deprecate-holder"
+  },
+  {
+    "name": "fs-minipass",
+    "description": "fs read and write streams based on minipass",
+    "repository": "https://github.com/npm/fs-minipass",
+    "package": "https://www.npmjs.com/package/fs-minipass"
+  },
+  {
+    "name": "ansible-pg-wale",
+    "description": "Configure WAL-E S3 backups for Postgres",
+    "repository": "https://github.com/npm/ansible-pg-wale",
+    "package": "https://www.npmjs.com/package/ansible-pg-wale"
+  },
+  {
+    "name": "libnpmversion",
+    "description": "library to do the things that 'npm version' does",
+    "repository": "https://github.com/npm/libnpmversion",
+    "package": "https://www.npmjs.com/package/libnpmversion"
+  },
+  {
+    "name": "run-script",
+    "description": "Run a lifecycle script for a package (descendant of npm-lifecycle)",
+    "repository": "https://github.com/npm/run-script",
+    "package": "https://www.npmjs.com/package/run-script"
+  },
+  {
+    "name": "minipass-fetch",
+    "description": "An implementation of window.fetch in Node.js using Minipass streams",
+    "repository": "https://github.com/npm/minipass-fetch",
+    "package": "https://www.npmjs.com/package/minipass-fetch"
+  },
+  {
+    "name": "proxy-registry",
+    "description": null,
+    "repository": "https://github.com/npm/proxy-registry",
+    "package": "https://www.npmjs.com/package/proxy-registry"
+  },
+  {
+    "name": "statusboard",
+    "description": "A single view to help monitor the status/health of npm's Open Source Projects",
+    "repository": "https://github.com/npm/statusboard",
+    "package": "https://www.npmjs.com/package/statusboard"
+  },
+  {
+    "name": "libcipm",
+    "description": "npm ci lib",
+    "repository": "https://github.com/npm/libcipm",
+    "package": "https://www.npmjs.com/package/libcipm"
+  },
+  {
+    "name": "dynector",
+    "description": "DynECT DNS command-line tool",
+    "repository": "https://github.com/npm/dynector",
+    "package": "https://www.npmjs.com/package/dynector"
+  },
+  {
+    "name": "oauth2-server-pg",
+    "description": "PostgreSQL and Express powered OAuth 2.0 server",
+    "repository": "https://github.com/npm/oauth2-server-pg",
+    "package": "https://www.npmjs.com/package/oauth2-server-pg"
+  },
+  {
+    "name": "libnpmhook",
+    "description": "programmatic registry hooks API",
+    "repository": "https://github.com/npm/libnpmhook",
+    "package": "https://www.npmjs.com/package/libnpmhook"
+  },
+  {
+    "name": "micro-monitor",
+    "description": "add a monitoring endpoint to your node background services",
+    "repository": "https://github.com/npm/micro-monitor",
+    "package": "https://www.npmjs.com/package/micro-monitor"
+  },
+  {
+    "name": "stringify-package",
+    "description": "stringifies npm-written json files",
+    "repository": "https://github.com/npm/stringify-package",
+    "package": "https://www.npmjs.com/package/stringify-package"
+  },
+  {
+    "name": "mustache-mailer",
+    "description": "send emails using nodemailer and mustache templates",
+    "repository": "https://github.com/npm/mustache-mailer",
+    "package": "https://www.npmjs.com/package/mustache-mailer"
+  },
+  {
+    "name": "pull",
+    "description": "A bash script for landing pull requests",
+    "repository": "https://github.com/npm/pull",
+    "package": "https://www.npmjs.com/package/pull"
+  },
+  {
+    "name": "pneumatic-tubes",
+    "description": "migrate packages between registries (using npm publish)",
+    "repository": "https://github.com/npm/pneumatic-tubes",
+    "package": "https://www.npmjs.com/package/pneumatic-tubes"
+  },
+  {
+    "name": "token-facilitator",
+    "description": "generates tokens and stores them with relevant data in redis",
+    "repository": "https://github.com/npm/token-facilitator",
+    "package": "https://www.npmjs.com/package/token-facilitator"
+  },
+  {
+    "name": "npme-docs",
+    "description": "documentation for npm Enterprise",
+    "repository": "https://github.com/npm/npme-docs",
+    "package": "https://www.npmjs.com/package/npme-docs"
+  },
+  {
+    "name": "pg-db-session",
+    "description": ":hocho: :skull: Associate PG connections with requests using domains :ghost: :crescent_moon:",
+    "repository": "https://github.com/npm/pg-db-session",
+    "package": "https://www.npmjs.com/package/pg-db-session"
+  },
+  {
+    "name": "gh-issues",
+    "description": "Batch close github issues.",
+    "repository": "https://github.com/npm/gh-issues",
+    "package": "https://www.npmjs.com/package/gh-issues"
+  },
+  {
+    "name": "shelby",
+    "description": "a system agent in rust for the numbat metrics system",
+    "repository": "https://github.com/npm/shelby",
+    "package": "https://www.npmjs.com/package/shelby"
+  },
+  {
+    "name": "infer-owner",
+    "description": "Infer the owner of a path based on the owner of its nearest existing parent",
+    "repository": "https://github.com/npm/infer-owner",
+    "package": "https://www.npmjs.com/package/infer-owner"
+  },
+  {
+    "name": "types",
+    "description": "Typescript definitions for npm registry content",
+    "repository": "https://github.com/npm/types",
+    "package": "https://www.npmjs.com/package/types"
+  },
+  {
+    "name": "gentle-fs",
+    "description": null,
+    "repository": "https://github.com/npm/gentle-fs",
+    "package": "https://www.npmjs.com/package/gentle-fs"
+  },
+  {
+    "name": "fallback-fs",
+    "description": "undefined",
+    "repository": "https://github.com/npm/fallback-fs",
+    "package": "https://www.npmjs.com/package/fallback-fs"
+  },
+  {
+    "name": "create-oss",
+    "description": "Boilerplate project all OSS projects should be created from.",
+    "repository": "https://github.com/npm/create-oss",
+    "package": "https://www.npmjs.com/package/create-oss"
+  },
+  {
+    "name": "static-pages",
+    "description": "These are static pages for the npm website",
+    "repository": "https://github.com/npm/static-pages",
+    "package": "https://www.npmjs.com/package/static-pages"
+  },
+  {
+    "name": "installed-package-contents",
+    "description": "Get the list of files installed in a package in node_modules, including bundled dependencies",
+    "repository": "https://github.com/npm/installed-package-contents",
+    "package": "https://www.npmjs.com/package/installed-package-contents"
+  },
+  {
+    "name": "couch-url-rewrite-proxy",
+    "description": "a proxy that rewrites registry URLs on their way out of CouchDB, making it easier to migrate data.",
+    "repository": "https://github.com/npm/couch-url-rewrite-proxy",
+    "package": "https://www.npmjs.com/package/couch-url-rewrite-proxy"
+  },
+  {
+    "name": "realize-package-specifier",
+    "description": "Like npm-package-arg, but more so, producing full file paths and differentiating local tar and directory sources.",
+    "repository": "https://github.com/npm/realize-package-specifier",
+    "package": "https://www.npmjs.com/package/realize-package-specifier"
+  },
+  {
+    "name": "seq-save",
+    "description": "save a sequence # to a configurable backend (etcd, files, etc.)",
+    "repository": "https://github.com/npm/seq-save",
+    "package": "https://www.npmjs.com/package/seq-save"
+  },
+  {
+    "name": "annotation-poller",
+    "description": "poll for third-party annotations for entities, such as packages, and display them",
+    "repository": "https://github.com/npm/annotation-poller",
+    "package": "https://www.npmjs.com/package/annotation-poller"
+  },
+  {
+    "name": "name-from-folder",
+    "description": "Get the package name from a folder path",
+    "repository": "https://github.com/npm/name-from-folder",
+    "package": "https://www.npmjs.com/package/name-from-folder"
+  },
+  {
+    "name": "notify-by-ses",
+    "description": "A script for sending Nagios notifications using SES.",
+    "repository": "https://github.com/npm/notify-by-ses",
+    "package": "https://www.npmjs.com/package/notify-by-ses"
+  },
+  {
+    "name": "my-first-publish-bot",
+    "description": "a twitter bot that congratulates people for their first npm publication",
+    "repository": "https://github.com/npm/my-first-publish-bot",
+    "package": "https://www.npmjs.com/package/my-first-publish-bot"
+  },
+  {
+    "name": ".github",
+    "description": "GitHub Automation > actions / templates / probot configurations > automated with GitHub actions",
+    "repository": "https://github.com/npm/.github",
+    "package": "https://www.npmjs.com/package/.github"
+  },
+  {
+    "name": "decorate",
+    "description": "decorate a function transparently",
+    "repository": "https://github.com/npm/decorate",
+    "package": "https://www.npmjs.com/package/decorate"
+  },
+  {
+    "name": "nm",
+    "description": "Manage your `node_modules` as a set of directories on disk.",
+    "repository": "https://github.com/npm/nm",
+    "package": "https://www.npmjs.com/package/nm"
+  },
+  {
+    "name": "spife-ratelimit",
+    "description": ":alarm_clock: :no_entry_sign: ratelimit spife apps with token buckets!",
+    "repository": "https://github.com/npm/spife-ratelimit",
+    "package": "https://www.npmjs.com/package/spife-ratelimit"
+  },
+  {
+    "name": "community",
+    "description": "Community hub for resources/references",
+    "repository": "https://github.com/npm/community",
+    "package": "https://www.npmjs.com/package/community"
+  },
+  {
+    "name": "s3-time-stream",
+    "description": "binary search to and stream an exact time range from logs stored in s3.",
+    "repository": "https://github.com/npm/s3-time-stream",
+    "package": "https://www.npmjs.com/package/s3-time-stream"
+  },
+  {
+    "name": "libpickupdates",
+    "description": null,
+    "repository": "https://github.com/npm/libpickupdates",
+    "package": "https://www.npmjs.com/package/libpickupdates"
+  },
+  {
+    "name": "libnpmpack",
+    "description": "Programmatic API for the bits behind npm pack",
+    "repository": "https://github.com/npm/libnpmpack",
+    "package": "https://www.npmjs.com/package/libnpmpack"
+  },
+  {
+    "name": "rust-readme-client",
+    "description": "interface to npm pkg readmes in rust",
+    "repository": "https://github.com/npm/rust-readme-client",
+    "package": "https://www.npmjs.com/package/rust-readme-client"
+  },
+  {
+    "name": "libnpm-resolve-module-tree",
+    "description": "Given a set of dependencies return a fully realized logical tree using only the most recent package versions.",
+    "repository": "https://github.com/npm/libnpm-resolve-module-tree",
+    "package": "https://www.npmjs.com/package/libnpm-resolve-module-tree"
+  },
+  {
+    "name": "libnpmconfig",
+    "description": "Standalone library for reading/writing/managing npm configurations",
+    "repository": "https://github.com/npm/libnpmconfig",
+    "package": "https://www.npmjs.com/package/libnpmconfig"
+  },
+  {
+    "name": "docker-ops-tools",
+    "description": "Docker image for the @buzuli/ops-tools utilities",
+    "repository": "https://github.com/npm/docker-ops-tools",
+    "package": "https://www.npmjs.com/package/docker-ops-tools"
+  },
+  {
+    "name": "npmepm",
+    "description": "npm Enterprise Post Mortem utils",
+    "repository": "https://github.com/npm/npmepm",
+    "package": "https://www.npmjs.com/package/npmepm"
+  },
+  {
+    "name": "npm-docker-elasticsearch",
+    "description": null,
+    "repository": "https://github.com/npm/npm-docker-elasticsearch",
+    "package": "https://www.npmjs.com/package/npm-docker-elasticsearch"
+  },
+  {
+    "name": "npm-normalize-package-bin",
+    "description": "Turn any flavor of allowable package.json bin into a normalized object",
+    "repository": "https://github.com/npm/npm-normalize-package-bin",
+    "package": "https://www.npmjs.com/package/npm-normalize-package-bin"
+  },
+  {
+    "name": "promise-spawn",
+    "description": "spawn processes the way the npm cli likes to do",
+    "repository": "https://github.com/npm/promise-spawn",
+    "package": "https://www.npmjs.com/package/promise-spawn"
+  },
+  {
+    "name": "action-deploy",
+    "description": "Action to manage GitHub deployments",
+    "repository": "https://github.com/npm/action-deploy",
+    "package": "https://www.npmjs.com/package/action-deploy"
+  },
+  {
+    "name": "npm2es2",
+    "description": "fork of npm2es that supports npm's modern configuration and dockerization approaches.",
+    "repository": "https://github.com/npm/npm2es2",
+    "package": "https://www.npmjs.com/package/npm2es2"
+  },
+  {
+    "name": "libnpmfund",
+    "description": "Programmatic API for npm fund",
+    "repository": "https://github.com/npm/libnpmfund",
+    "package": "https://www.npmjs.com/package/libnpmfund"
+  },
+  {
+    "name": "benchmarks",
+    "description": null,
+    "repository": "https://github.com/npm/benchmarks",
+    "package": "https://www.npmjs.com/package/benchmarks"
+  },
+  {
+    "name": "joi-env",
+    "description": "A joi extension to allow reading values from environment variables",
+    "repository": "https://github.com/npm/joi-env",
+    "package": "https://www.npmjs.com/package/joi-env"
+  },
+  {
+    "name": "libnpmteam",
+    "description": "programmatic api for `npm team`",
+    "repository": "https://github.com/npm/libnpmteam",
+    "package": "https://www.npmjs.com/package/libnpmteam"
+  },
+  {
+    "name": "libnpm-read-package-manifest",
+    "description": "Read package manifest data off disk",
+    "repository": "https://github.com/npm/libnpm-read-package-manifest",
+    "package": "https://www.npmjs.com/package/libnpm-read-package-manifest"
+  },
+  {
+    "name": "fastify-monitor",
+    "description": "a small fastify plugin to provide some very basic monitoring endpoints",
+    "repository": "https://github.com/npm/fastify-monitor",
+    "package": "https://www.npmjs.com/package/fastify-monitor"
+  },
+  {
+    "name": "disparity-colors",
+    "description": "Colorizes unified diff output",
+    "repository": "https://github.com/npm/disparity-colors",
+    "package": "https://www.npmjs.com/package/disparity-colors"
+  },
+  {
+    "name": "libnpmorg",
+    "description": "programmatic api for `npm org`",
+    "repository": "https://github.com/npm/libnpmorg",
+    "package": "https://www.npmjs.com/package/libnpmorg"
+  },
+  {
+    "name": "external-fetch",
+    "description": null,
+    "repository": "https://github.com/npm/external-fetch",
+    "package": "https://www.npmjs.com/package/external-fetch"
+  },
+  {
+    "name": "map-workspaces",
+    "description": "Retrieves a name:pathname Map for a given workspaces config",
+    "repository": "https://github.com/npm/map-workspaces",
+    "package": "https://www.npmjs.com/package/map-workspaces"
+  },
+  {
+    "name": "npm-docker-couchdb",
+    "description": "couchdb instance based on klaemo/couchdb, which installs registry-couchapp and npm's bespoke couchdb config",
+    "repository": "https://github.com/npm/npm-docker-couchdb",
+    "package": "https://www.npmjs.com/package/npm-docker-couchdb"
+  },
+  {
+    "name": "npme-slug-validate",
+    "description": "Slug validator for npme",
+    "repository": "https://github.com/npm/npme-slug-validate",
+    "package": "https://www.npmjs.com/package/npme-slug-validate"
+  },
+  {
+    "name": "npms-brunch",
+    "description": null,
+    "repository": "https://github.com/npm/npms-brunch",
+    "package": "https://www.npmjs.com/package/npms-brunch"
+  },
+  {
+    "name": "content-type-to-language-name",
+    "description": "Maps a list of content types to a list of language names",
+    "repository": "https://github.com/npm/content-type-to-language-name",
+    "package": "https://www.npmjs.com/package/content-type-to-language-name"
+  },
+  {
+    "name": "fastify-metrics",
+    "description": "a small fastify plugin to emit metrics via numbat-emitter",
+    "repository": "https://github.com/npm/fastify-metrics",
+    "package": "https://www.npmjs.com/package/fastify-metrics"
+  },
+  {
+    "name": "spife-dev-logger",
+    "description": "A JSON log prettyprinter for knork.",
+    "repository": "https://github.com/npm/spife-dev-logger",
+    "package": "https://www.npmjs.com/package/spife-dev-logger"
+  },
+  {
+    "name": "tarpit",
+    "description": "tarpit actions based on a key",
+    "repository": "https://github.com/npm/tarpit",
+    "package": "https://www.npmjs.com/package/tarpit"
+  },
+  {
+    "name": "redis",
+    "description": null,
+    "repository": "https://github.com/npm/redis",
+    "package": "https://www.npmjs.com/package/redis"
+  },
+  {
+    "name": "with-fixtures",
+    "description": null,
+    "repository": "https://github.com/npm/with-fixtures",
+    "package": "https://www.npmjs.com/package/with-fixtures"
+  },
+  {
+    "name": "rewrite-url-follower",
+    "description": "rewrite the tarball URLs in couchdb from one registry to another",
+    "repository": "https://github.com/npm/rewrite-url-follower",
+    "package": "https://www.npmjs.com/package/rewrite-url-follower"
+  }
+]
