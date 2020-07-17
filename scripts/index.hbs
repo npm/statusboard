@@ -277,7 +277,7 @@
     {{#each repos}}
       <tr>
         <td>
-          <a href="https://www.github.com/npm/{{name}}" target="_blank">{{name}}</a>
+          <a href="https://www.github.com/{{owner}}/{{name}}" target="_blank">{{name}}</a>
         </td>
         <td>
           {{stargazers_count}}
@@ -311,17 +311,17 @@
         </td>
         {{!-- <td>
           {{#if version}}
-            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/npm/{{name}}?style=flat-square">
+            <img alt="dependants" src="https://img.shields.io/librariesio/dependent-repos/{{owner}}/{{name}}?style=flat-square">
           {{/if}}
         </td>
         <td>
           {{#if version}}
-            <img alt="dependencies" src="https://img.shields.io/librariesio/release/npm/{{name}}?style=flat-square">
+            <img alt="dependencies" src="https://img.shields.io/librariesio/release/{{owner}}/{{name}}?style=flat-square">
           {{/if}}
         </td>
         <td>
           {{#if version}}
-            <img src="https://img.shields.io/snyk/vulnerabilities/npm/{{name}}?style=flat-square">
+            <img src="https://img.shields.io/snyk/vulnerabilities/{{owner}}/{{name}}?style=flat-square">
           {{/if}}
         </td> --}}
         <td class="coverage">

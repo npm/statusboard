@@ -41,6 +41,8 @@
         repo: name
       })
       r = r.data
+      r.owner = owner
+      r.name = name
       r.prs_count = prs.data.length || 0
       r.prs_count = r.prs_count  === 100 ? '100+' : r.prs_count
       r.issues_count = (r.open_issues_count || 0) - r.prs_count
