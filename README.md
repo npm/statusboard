@@ -6,7 +6,7 @@ A single view to help monitor the status/health of [npm](https://github.com/npm)
 
 ### Developing:
 
-1. Install `npm i`
+1. Install `npm i`  (if it is already installed then skip this)
 2. `npm run` (lists the available commands to run)
 
 ### Preview:
