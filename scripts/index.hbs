@@ -121,6 +121,7 @@
     header a {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
+      display: block;
     }
     header a span {
       margin: 0 15px 0 0;
@@ -136,10 +137,11 @@
     table tr td span {
       background: #333;
       color: white;
-      padding: 5px 0;
+      padding: 8px 0;
       border-radius: 3px;
       width: 100%;
       display: block;
+      line-height: 100%;
     }
     table tr td {
       vertical-align: middle !important;
@@ -152,6 +154,11 @@
     table tr td span.medium {
       background: orange;
     }
+    table tr td span.na {
+      background: red;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
     table tr td span.pending {
       background: blue;
     }
@@ -160,7 +167,6 @@
       background: green;
     }
     .license {
-      text-transform: uppercase;
       font-weight: bold;
     }
     .status {
@@ -284,13 +290,13 @@
           <a href="{{html_url}}/pulls" target="_blank">{{prs_count}}</a>
         </td>
         <td class="license">
-          {{#if license.key}}
+          {{#if license}}
             {{license.key}}
           {{else}}
-            <span class="error">N/A</span>
+            <span class="na">n/a</span>
           {{/if}}
         </td>
-        <td>
+        <td data-order="{{pushed_at}}">
           {{pushed_at_diff}}
         </td>
         <td class="status">
@@ -298,21 +304,29 @@
             <span class="{{build_status}}">{{build_status}}</span>
           {{/if}}
         </td>
-        <td>
-          {{node}}
+        <td data-order="{{node}}">
+          {{#if version}}
+            {{#if node}}
+              {{node}}
+            {{ else }}
+              <span class="na">n/a</span>
+            {{/if}}
+          {{/if}}
         </td>
         <td>
           {{downloads}}
         </td>
-        <td class="coverage">
+        <td class="coverage" data-order="{{coverage}}">
           {{#if coverage}}
             <a href="https://coveralls.io/github/{{owner}}/{{name}}" target="_blank"><span class="{{coverageLevel}}">{{coverage}}</span></a>
+          {{else}}
+            <span class="na">n/a</span>
           {{/if}}
         </td>
-        <td>
+        <td data-order="{{size}}">
           {{size}}
         </td>
-        <td>
+        <td data-order="{{version}}">
           {{version}}
         </td>
         <td>
