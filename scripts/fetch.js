@@ -28,7 +28,7 @@
     }).catch(err => console.error(err))
   }
   let temp = []
-  for (let i=0; i <= repositories.length; i++) {
+  for (let i=0; i < repositories.length; i++) {
     let r = _ = repositories[i]
     try {
       let response
@@ -81,5 +81,5 @@
     temp.push(r)
     sleep(600)
   }
-  writeFile(data)
+  writeFile(temp)
 })()

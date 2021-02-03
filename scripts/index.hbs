@@ -275,19 +275,19 @@
     {{#each repos}}
       <tr>
         <td>
-          <a href="{{html_url}}" target="_blank">{{name}}</a>
+          <a href="{{url}}" target="_blank">{{name}}</a>
         </td>
         <td>
           <a href="https://www.npmjs.com/package/{{package}}" target="_blank">{{package}}</a>
         </td>
         <td>
-          <a href="{{html_url}}/stargazers" target="_blank">{{stargazers_count}}</a>
+          <a href="{{url}}/stargazers" target="_blank">{{stargazers_count}}</a>
         </td>
         <td>
-          <a href="{{html_url}}/issues" target="_blank">{{issues_count}}</a>
+          <a href="{{url}}/issues" target="_blank">{{issues_count}}</a>
         </td>
         <td>
-          <a href="{{html_url}}/pulls" target="_blank">{{prs_count}}</a>
+          <a href="{{url}}/pulls" target="_blank">{{prs_count}}</a>
         </td>
         <td class="license">
           {{#if license}}

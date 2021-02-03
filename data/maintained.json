@@ -38,7 +38,7 @@
   {
     "name": "gauge",
     "description": "A terminal based horizontal guage aka, a progress bar.",
-    "repository": "https://github.com/iarna/gauge",
+    "repository": "https://github.com/npm/gauge",
     "package": "gauge"
   },
   {
@@ -56,19 +56,19 @@
   {
     "name": "inflight",
     "description": "Add callbacks to requests in flight to avoid async duplication.",
-    "repository": "https://github.com/isaacs/inflight",
+    "repository": "https://github.com/npm/inflight",
     "package": "inflight"
   },
   {
     "name": "init-package-json",
     "description": "A node module to get your node module started.",
-    "repository": "https://github.com/isaacs/init-package-json",
+    "repository": "https://github.com/npm/init-package-json",
     "package": "init-package-json"
   },
   {
     "name": "lockfile",
     "description": "A very polite lock file utility, which endeavors to not litter, and to wait patiently for others.",
-    "repository": "https://github.com/isaacs/lockfile",
+    "repository": "https://github.com/npm/lockfile",
     "package": "lockfile"
   },
   {
@@ -80,7 +80,7 @@
   {
     "name": "nopt",
     "description": "Node.js/npm Option Parsing.",
-    "repository": "https://github.com/isaacs/nopt",
+    "repository": "https://github.com/npm/nopt",
     "package": "nopt"
   },
   {
@@ -140,7 +140,7 @@
   {
     "name": "npm-registry-client",
     "description": "handling all the caching and HTTP calls to the registry.",
-    "repository": "https://github.com/isaacs/npm-registry-client",
+    "repository": "https://github.com/npm/npm-registry-client",
     "package": "npm-registry-client"
   },
   {
@@ -230,20 +230,14 @@
   {
     "name": "write-file-atomic",
     "description": "Write files in an atomic fashion w/configurable ownership.",
-    "repository": "https://github.com/iarna/write-file-atomic",
+    "repository": "https://github.com/npm/write-file-atomic",
     "package": "write-file-atomic"
   },
   {
     "name": "abbrev",
     "description": "Like ruby's Abbrev module.",
-    "repository": "https://github.com/isaacs/abbrev-js",
+    "repository": "https://github.com/npm/abbrev-js",
     "package": "abbrev"
-  },
-  {
-    "name": "aproba",
-    "description": "Rediculously light-weight function argument validator.",
-    "repository": "https://github.com/iarna/aproba",
-    "package": "aproba"
   },
   {
     "name": "cacache",
@@ -252,64 +246,22 @@
     "package": "cacache"
   },
   {
-    "name": "chownr",
-    "description": "Like chown -R.",
-    "repository": "https://github.com/isaacs/chownr",
-    "package": "chownr"
-  },
-  {
-    "name": "has-unicode",
-    "description": "Try to guess if your terminal supports unicode.",
-    "repository": "https://github.com/iarna/has-unicode",
-    "package": "has-unicode"
-  },
-  {
-    "name": "inherits",
-    "description": "Easy simple tiny inheritance in JavaScript.",
-    "repository": "https://github.com/isaacs/inherits",
-    "package": "inherits"
-  },
-  {
     "name": "ini",
     "description": "An ini parser/serializer in JavaScript.",
-    "repository": "https://github.com/isaacs/ini",
+    "repository": "https://github.com/npm/ini",
     "package": "ini"
   },
   {
     "name": "make-fetch-happen",
     "description": "Wraps node-fetch-npm with additional features node-fetch doesn't intend to include, including HTTP Cache support, request pooling, proxies, retries, and more.",
-    "repository": "https://github.com/zkat/make-fetch-happen",
+    "repository": "https://github.com/npm/make-fetch-happen",
     "package": "make-fetch-happen"
-  },
-  {
-    "name": "my-precious",
-    "description": "A local package archive.",
-    "repository": "https://github.com/zkat/my-precious",
-    "package": "my-precious"
-  },
-  {
-    "name": "node-glob",
-    "description": "Glob functionality for node.js.",
-    "repository": "https://github.com/isaacs/node-glob",
-    "package": "glob"
-  },
-  {
-    "name": "node-graceful-fs",
-    "description": "fs with incremental backoff on EMFILE.",
-    "repository": "https://github.com/isaacs/node-graceful-fs",
-    "package": "graceful-fs"
   },
   {
     "name": "npx",
     "description": "Execute npm package binaries.",
     "repository": "https://github.com/npm/npx",
     "package": "npx"
-  },
-  {
-    "name": "once",
-    "description": "Run a function exactly one time.",
-    "repository": "https://github.com/isaacs/once",
-    "package": "once"
   },
   {
     "name": "pacote",
@@ -322,12 +274,6 @@
     "description": "read(1) for node.",
     "repository": "https://github.com/npm/read",
     "package": "read"
-  },
-  {
-    "name": "rimraf",
-    "description": "A rm -rf util for nodejs.",
-    "repository": "https://github.com/isaacs/rimraf",
-    "package": "rimraf"
   },
   {
     "name": "ssri",
@@ -346,24 +292,6 @@
     "description": "Mock the npm registry.",
     "repository": "https://github.com/npm/npm-registry-mock",
     "package": "npm-registry-mock"
-  },
-  {
-    "name": "tap",
-    "description": "Test Anything Protocol tools for node.",
-    "repository": "https://github.com/tapjs/node-tap",
-    "package": "tap"
-  },
-  {
-    "name": "tacks",
-    "description": "Generate fixture modules from folders.",
-    "repository": "https://github.com/iarna/tacks",
-    "package": "tacks"
-  },
-  {
-    "name": "require-inject",
-    "description": "A simple mock injector compatible needing no instrumentation in the libraries being tested.",
-    "repository": "https://github.com/iarna/require-inject",
-    "package": "require-inject"
   },
   {
     "name": "cli",
@@ -480,12 +408,6 @@
     "package": "cmd-shim"
   },
   {
-    "name": "registry-follower-tutorial",
-    "description": "write you a registry follower for great good",
-    "repository": "https://github.com/npm/registry-follower-tutorial",
-    "package": ""
-  },
-  {
     "name": "npm-registry-fetch",
     "description": "like fetch() but for the npm registry",
     "repository": "https://github.com/npm/npm-registry-fetch",
@@ -502,12 +424,6 @@
     "description": "Bytes go in, but they don't come out (when muted). ",
     "repository": "https://github.com/npm/mute-stream",
     "package": "mute-stream"
-  },
-  {
-    "name": "wombat-cli",
-    "description": "The wombat cli tool.",
-    "repository": "https://github.com/npm/wombat-cli",
-    "package": "wombat"
   },
   {
     "name": "ansible-nagios",
@@ -582,22 +498,10 @@
     "package": "npm-hook-slack"
   },
   {
-    "name": "etcetera",
-    "description": "read service config from etcd in a truly boring way",
-    "repository": "https://github.com/npm/etcetera",
-    "package": "etcetera"
-  },
-  {
     "name": "do-you-even-lift",
     "description": "Calculate package sizes in various configurations",
     "repository": "https://github.com/npm/do-you-even-lift",
     "package": "do-you-even-lift"
-  },
-  {
-    "name": "logos",
-    "description": "official logos for npm, Inc",
-    "repository": "https://github.com/npm/logos",
-    "package": "logos"
   },
   {
     "name": "ansible-nagios-config",
@@ -616,12 +520,6 @@
     "description": "Promises of moves of files or directories with rename, falling back to recursive rename/copy on EXDEV errors, with configurable concurrency and win32 junction support.",
     "repository": "https://github.com/npm/move-concurrently",
     "package": "move-concurrently"
-  },
-  {
-    "name": "npm-v7-blog",
-    "description": "a repo to hold blog posts about npm v7 that'll end up on the npm blog",
-    "repository": "https://github.com/npm/npm-v7-blog",
-    "package": ""
   },
   {
     "name": "deprecate-holder",
@@ -726,18 +624,6 @@
     "package": "pneumatic-tubes"
   },
   {
-    "name": "token-facilitator",
-    "description": "generates tokens and stores them with relevant data in redis",
-    "repository": "https://github.com/npm/token-facilitator",
-    "package": "token-facilitator"
-  },
-  {
-    "name": "npme-docs",
-    "description": "documentation for npm Enterprise",
-    "repository": "https://github.com/npm/npme-docs",
-    "package": ""
-  },
-  {
     "name": "pg-db-session",
     "description": ":hocho: :skull: Associate PG connections with requests using domains :ghost: :crescent_moon:",
     "repository": "https://github.com/npm/pg-db-session",
@@ -783,12 +669,6 @@
     "name": "create-oss",
     "description": "Boilerplate project all OSS projects should be created from.",
     "repository": "https://github.com/npm/create-oss",
-    "package": ""
-  },
-  {
-    "name": "static-pages",
-    "description": "These are static pages for the npm website",
-    "repository": "https://github.com/npm/static-pages",
     "package": ""
   },
   {
@@ -858,18 +738,6 @@
     "package": "nm"
   },
   {
-    "name": "spife-ratelimit",
-    "description": ":alarm_clock: :no_entry_sign: ratelimit spife apps with token buckets!",
-    "repository": "https://github.com/npm/spife-ratelimit",
-    "package": "@npm/spife-ratelimit"
-  },
-  {
-    "name": "community",
-    "description": "Community hub for resources/references",
-    "repository": "https://github.com/npm/community",
-    "package": ""
-  },
-  {
     "name": "s3-time-stream",
     "description": "binary search to and stream an exact time range from logs stored in s3.",
     "repository": "https://github.com/npm/s3-time-stream",
@@ -886,12 +754,6 @@
     "description": "Programmatic API for the bits behind npm pack",
     "repository": "https://github.com/npm/libnpmpack",
     "package": "libnpmpack"
-  },
-  {
-    "name": "rust-readme-client",
-    "description": "interface to npm pkg readmes in rust",
-    "repository": "https://github.com/npm/rust-readme-client",
-    "package": ""
   },
   {
     "name": "libnpm-resolve-module-tree",
@@ -918,12 +780,6 @@
     "package": "npmepm"
   },
   {
-    "name": "npm-docker-elasticsearch",
-    "description": null,
-    "repository": "https://github.com/npm/npm-docker-elasticsearch",
-    "package": ""
-  },
-  {
     "name": "npm-normalize-package-bin",
     "description": "Turn any flavor of allowable package.json bin into a normalized object",
     "repository": "https://github.com/npm/npm-normalize-package-bin",
@@ -939,12 +795,6 @@
     "name": "action-deploy",
     "description": "Action to manage GitHub deployments",
     "repository": "https://github.com/npm/action-deploy",
-    "package": ""
-  },
-  {
-    "name": "npm2es2",
-    "description": "fork of npm2es that supports npm's modern configuration and dockerization approaches.",
-    "repository": "https://github.com/npm/npm2es2",
     "package": ""
   },
   {
@@ -996,12 +846,6 @@
     "package": "libnpmorg"
   },
   {
-    "name": "external-fetch",
-    "description": null,
-    "repository": "https://github.com/npm/external-fetch",
-    "package": "@npmcorp/external-fetch"
-  },
-  {
     "name": "map-workspaces",
     "description": "Retrieves a name:pathname Map for a given workspaces config",
     "repository": "https://github.com/npm/map-workspaces",
@@ -1020,46 +864,10 @@
     "package": "npme-slug-validate"
   },
   {
-    "name": "npms-brunch",
-    "description": null,
-    "repository": "https://github.com/npm/npms-brunch",
-    "package": ""
-  },
-  {
     "name": "content-type-to-language-name",
     "description": "Maps a list of content types to a list of language names",
     "repository": "https://github.com/npm/content-type-to-language-name",
     "package": "content-type-to-language-name"
-  },
-  {
-    "name": "fastify-metrics",
-    "description": "a small fastify plugin to emit metrics via numbat-emitter",
-    "repository": "https://github.com/npm/fastify-metrics",
-    "package": "@npmcorp/fastify-metrics"
-  },
-  {
-    "name": "spife-dev-logger",
-    "description": "A JSON log prettyprinter for knork.",
-    "repository": "https://github.com/npm/spife-dev-logger",
-    "package": "@npm/knork-dev-logger"
-  },
-  {
-    "name": "tarpit",
-    "description": "tarpit actions based on a key",
-    "repository": "https://github.com/npm/tarpit",
-    "package": "tarpit"
-  },
-  {
-    "name": "redis",
-    "description": null,
-    "repository": "https://github.com/npm/redis",
-    "package": "@npmcorp/redis"
-  },
-  {
-    "name": "with-fixtures",
-    "description": null,
-    "repository": "https://github.com/npm/with-fixtures",
-    "package": "with-fixtures"
   },
   {
     "name": "rewrite-url-follower",
