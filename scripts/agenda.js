@@ -25,14 +25,14 @@
       const items = response.data.items.map(i => `1. **${i.pull_request ? 'PR' : 'Issue'}**: [#${i.number} ${i.title}](${i.html_url}) - @${i.user.login}`).join('\n')
       const body = template({ formatted, items })
       console.log('Creating agenda:', formatted, title, body)
-      // octokit.issues.create({
-      //   owner: 'npm',
-      //   repo: 'rfcs',
-      //   title,
-      //   body,
-      //   labels: ['Meeting'],
-      //   assignees: ['darcyclarke']
-      // }).catch(e => console.error(e))
+      octokit.issues.create({
+        owner: 'npm',
+        repo: 'rfcs',
+        title,
+        body,
+        labels: ['Meeting'],
+        assignees: ['darcyclarke']
+      }).catch(e => console.error(e))
     }).catch(e => console.error(e))
   }
   try {
