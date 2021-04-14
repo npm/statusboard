@@ -7,14 +7,13 @@
     "build": "node ./scripts/build.js",
     "serve": "http-server ./dist/",
     "watch": "watch 'npm run build' ./scripts/",
-    "fetch": "node ./scripts/fetch.js",
+    "fetch": "node ./scripts/fetchv2.js",
     "agenda": "node ./scripts/agenda.js",
     "epic": "node ./scripts/epic.js",
     "contributions": "node ./scripts/contributions.js",
     "stats": "node ./scripts/stats.js",
     "roadmap": "node ./scripts/roadmap.js",
-    "test": "npm run lint",
-    "lint": "standard"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -30,8 +29,11 @@
   "dependencies": {
     "@actions/github": "^4.0.0",
     "@octokit/graphql": "^4.5.1",
+    "@octokit/plugin-retry": "^3.0.7",
+    "@octokit/plugin-throttling": "^3.4.1",
     "@octokit/rest": "^18.0.1",
     "copyfiles": "^2.3.0",
+    "date-fns": "^2.21.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
@@ -41,8 +43,14 @@
     "moment": "^2.27.0",
     "node-fetch": "^2.6.1",
     "sleepover": "^1.1.4",
-    "standard": "^14.3.4",
     "watch": "^1.0.2",
     "zenhub-api": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
   }
 }
