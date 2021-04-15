@@ -8,7 +8,6 @@
   const Rest = require('@octokit/rest')
   const { throttling } = require('@octokit/plugin-throttling')
   const { retry } = require('@octokit/plugin-retry')
-  const sparkline = require('sparkline')
 
   const fetchRetry = require('fetch-retry')(fetch)
 
@@ -124,51 +123,52 @@
         ? Math.round(coverallsData.covered_percent)
         : ''
 
-      console.log(
-        'Fetching package data:',
-        `https://unpkg.com/${repository.package}/package.json`
-      )
-      const pkgResponse = await fetchRetry(
-        `https://unpkg.com/${repository.package}/package.json`,
-        opts
-      )
+      let pkg, downloads, nodeVersion
+      if (repository.package) {
+        console.log(
+          'Fetching package data:',
+          `https://unpkg.com/${repository.package}/package.json`
+        )
+        const pkgResponse = await fetchRetry(
+          `https://unpkg.com/${repository.package}/package.json`,
+          opts
+        )
 
-      let pkg = null
-      try {
-        pkg = await pkgResponse.json()
-      } catch (error) {
-        if (error.type === 'invalid-json') {
-          console.warn(
-            'No package data:',
-            `https://unpkg.com/${repository.package}/package.json`
-          )
-        } else {
-          console.error(error)
+        try {
+          pkg = await pkgResponse.json()
+        } catch (error) {
+          if (error.type === 'invalid-json') {
+            console.warn(
+              'No package data:',
+              `https://unpkg.com/${repository.package}/package.json`
+            )
+          } else {
+            console.error(error)
+          }
         }
-      }
-      const nodeVersion =
-        pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
+        nodeVersion =
+          pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
 
-      console.log(
-        'Fetching downloads:',
-        `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
-      )
-      const downloadResponse = await fetchRetry(
-        `https://api.npmjs.org/downloads/point/last-month/${repository.package}`,
-        opts
-      )
+        console.log(
+          'Fetching downloads:',
+          `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
+        )
+        const downloadResponse = await fetchRetry(
+          `https://api.npmjs.org/downloads/point/last-month/${repository.package}`,
+          opts
+        )
 
-      let downloads = null
-      try {
-        downloads = await downloadResponse.json()
-      } catch (error) {
-        if (error.type === 'invalid-json') {
-          console.warn(
-            'No download data:',
-            `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
-          )
-        } else {
-          console.error(error)
+        try {
+          downloads = await downloadResponse.json()
+        } catch (error) {
+          if (error.type === 'invalid-json') {
+            console.warn(
+              'No download data:',
+              `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
+            )
+          } else {
+            console.error(error)
+          }
         }
       }
 
@@ -202,10 +202,7 @@
             }
           : {},
         version: pkg ? pkg.version : null,
-        downloads: downloads && downloads.downloads ? downloads.downloads : 0,
-        sparklines: {
-          sevenDay: sparkline([1, 2, 3, 4, 5, 6, 7])
-        }
+        downloads: downloads && downloads.downloads ? downloads.downloads : 0
       }
       return data
     } catch (error) {
