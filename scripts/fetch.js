@@ -9,8 +9,6 @@
   const { throttling } = require('@octokit/plugin-throttling')
   const { retry } = require('@octokit/plugin-retry')
 
-  const fetchRetry = require('fetch-retry')(fetch)
-
   const Octokit = Rest.Octokit.plugin(throttling, retry)
   const octokit = new Octokit({
     auth: process.env.AUTH_TOKEN,
@@ -101,7 +99,7 @@
         'Fetching coverage:',
         `https://coveralls.io/github/${owner}/${name}.json`
       )
-      const coverallsResponse = await fetchRetry(
+      const coverallsResponse = await fetch(
         `https://coveralls.io/github/${owner}/${name}.json`,
         opts
       )
@@ -129,7 +127,7 @@
           'Fetching package data:',
           `https://unpkg.com/${repository.package}/package.json`
         )
-        const pkgResponse = await fetchRetry(
+        const pkgResponse = await fetch(
           `https://unpkg.com/${repository.package}/package.json`,
           opts
         )
@@ -153,7 +151,7 @@
           'Fetching downloads:',
           `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
         )
-        const downloadResponse = await fetchRetry(
+        const downloadResponse = await fetch(
           `https://api.npmjs.org/downloads/point/last-month/${repository.package}`,
           opts
         )
