@@ -23,6 +23,9 @@ jobs:
         run: |
           npm ci
           npm run fetch
+      - name: Publish data folder
+        run: |
+          cp -r data dist/data
       - name: Fetch & Store Data
         run: |
           # Git Commands
