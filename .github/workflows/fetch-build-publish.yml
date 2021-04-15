@@ -23,9 +23,6 @@ jobs:
         run: |
           npm ci
           npm run fetch
-      - name: Publish data folder
-        run: |
-          cp -r data dist/data
       - name: Fetch & Store Data
         run: |
           # Git Commands
@@ -34,9 +31,10 @@ jobs:
           git add .
           git commit -m "chore: store fetched data"
           git push origin latest
-      - name: Build Template
+      - name: Build Template & Publish data folder
         run: |
           npm run build
+          cp -r data dist/data
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
