@@ -12,7 +12,7 @@
   const datetime = `${now.getFullYear()}-${(now.getMonth() + 1)}-${now.getDate()}T10:00:00-07:00`
   const calendar = 'npmjs.com_oonluqt8oftrt0vmgrfbg6q6go%40group.calendar.google.com'
   const force = ~process.argv.indexOf('-f') || ~process.argv.indexOf('--force')
-  let options = {
+  const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
@@ -21,7 +21,7 @@
     minute: 'numeric'
   }
   function createAgenda (title, formatted) {
-    octokit.search.issuesAndPullRequests({ q: `label:"Agenda"+org:"npm"` }).then(response => {
+    octokit.search.issuesAndPullRequests({ q: 'label:"Agenda"+org:"npm"' }).then(response => {
       const items = response.data.items.map(i => `1. **${i.pull_request ? 'PR' : 'Issue'}**: [#${i.number} ${i.title}](${i.html_url}) - @${i.user.login}`).join('\n')
       const body = template({ formatted, items })
       console.log('Creating agenda:', formatted, title, body)

@@ -1,368 +1,430 @@
 <!doctype html>
 <html class="no-js" lang="">
+
 <head>
-  <meta charset="utf-8">
-  <title>npm - project statusboard</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro&:300,400,600,700Sour&display=swap" rel="stylesheet">
-  <style>
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
-    body {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-      font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
-    }
-    body:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 10px;
-      color: rgb(65, 56, 68);
-      background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
-    }
-    main {
-      padding: 30px 40px 50px;
-    }
-    .built {
-      display: block;
-      margin: 0 0 20px 0;
-    }
-    .columns {
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    .columns li {
-      margin: 0 10px 0 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-    }
-    .columns li button {
-      background: transparent;
-      border: 1px solid #dee2e6;
-      border-radius: 3px;
-      padding: 5px 10px 5px 25px;
-      white-space: nowrap;
-      position: relative;
-    }
-    .columns li button:before {
-      content: '';
-      display: block;
-      background: #333;
-      border-radius: 50%;
-      border: 1px solid #333;
-      width: 8px;
-      height: 8px;
-      position: absolute;
-      top: 13px;
-      left: 10px;
-    }
-    .columns li button.hidden:before {
-      background: none;
-    }
-    .columns li button:hover {
-      cursor: pointer;
-      color: #333;
-      background: #dee2e6;
-    }
-    .columns li button.hidden:hover:before {
-      background: #333;
-    }
-    .dataTables_wrapper .dataTables_filter,
-    .dataTables_wrapper .dataTables_filter label {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .dataTables_wrapper .dataTables_filter {
-      text-align: left;
-      margin: 10px 0;
-    }
-    .dataTables_wrapper .dataTables_filter label input[type="search"] {
-      padding: 10px;
-      width: 100%;
-      margin: 0;
-    }
-    .table {
-      width:100%;
-    }
-    h1, h2, h3, h4, h5 {
-      font-family: 'Poppins', sans-serif;
-    }
-    h6 {
-      margin: 0 0 10px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    header {
-      padding: 25px 40px 15px;
-      border-bottom: 1px solid rgba(134, 131, 131, 0.2);
-    }
-    a,
-    a:active,
-    a:hover {
-      text-decoration: none;
-      font-weight: bold;
-      line-height: 100%;
-      color: rgb(65, 56, 68);
-    }
-    header a {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      display: block;
-    }
-    header a span {
-      margin: 0 15px 0 0;
-    }
-    table,
-    table a {
-      font-size: 14px;
-    }
-    table tr th:not(:nth-of-type(1)),
-    table tr td:not(:nth-of-type(1)) {
-      text-align: center;
-    }
-    table tr td span {
-      background: #333;
-      color: white;
-      padding: 8px 0;
-      border-radius: 3px;
-      width: 100%;
-      display: block;
-      line-height: 100%;
-    }
-    table tr td {
-      vertical-align: middle !important;
-    }
-    table tr td span.error,
-    table tr td span.failure,
-    table tr td span.low {
-      background: red;
-    }
-    table tr td span.medium {
-      background: orange;
-    }
-    table tr td span.na {
-      background: red;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-    table tr td span.pending {
-      background: blue;
-    }
-    table tr td span.success,
-    table tr td span.high {
-      background: green;
-    }
-    .license {
-      font-weight: bold;
-    }
-    .status {
-      text-transform: capitalize;
-    }
-    table.dataTable thead .sorting,
-    table.dataTable thead .sorting_desc,
-    table.dataTable thead .sorting_asc {
-      background-image: none;
-    }
-    table.dataTable thead th {
-      position: relative;
-      padding-right: 25px;
-    }
-    table.dataTable thead th:before {
-      content: '▿';
-      display: block;
-      position: absolute;
-      top: 12px;
-      right: 10px;
-    }
-    table.dataTable thead .sorting:before,
-    table.dataTable thead .sorting_desc:before {
-      transform: rotate(180deg);
-    }
-    table.dataTable thead .sorting_asc:before {
-      top: 10px;
-    }
-    table.dataTable thead .sorting_desc:before,
-    table.dataTable thead .sorting_asc:before {
-      content: '▾';
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>npm - project statusboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro&:300,400,600,700Sour&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
+        }
+
+        body:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            color: rgb(65, 56, 68);
+            background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+        }
+
+        main {
+            padding: 30px 40px 50px;
+        }
+
+        .built {
+            display: block;
+            margin: 0 0 20px 0;
+        }
+
+        .columns {
+            margin: 0 0 0 1rem 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .columns li {
+            margin: 0 10px 0 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .columns li button {
+            background: transparent;
+            border: 1px solid #dee2e6;
+            border-radius: 3px;
+            padding: 5px 10px 5px 25px;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .columns li button:before {
+            content: '';
+            display: block;
+            background: #333;
+            border-radius: 50%;
+            border: 1px solid #333;
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            top: 13px;
+            left: 10px;
+        }
+
+        .columns li button.hidden:before {
+            background: none;
+        }
+
+        .columns li button:hover {
+            cursor: pointer;
+            color: #333;
+            background: #dee2e6;
+        }
+
+        .columns li button.hidden:hover:before {
+            background: #333;
+        }
+
+        .dataTables_wrapper .dataTables_filter,
+        .dataTables_wrapper .dataTables_filter label {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .dataTables_wrapper .dataTables_filter {
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .dataTables_wrapper .dataTables_filter label input[type="search"] {
+            padding: 10px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h6 {
+            margin: 0 0 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        header {
+            padding: 25px 40px 15px;
+            border-bottom: 1px solid rgba(134, 131, 131, 0.2);
+        }
+
+        a,
+        a:active,
+        a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            line-height: 100%;
+            color: rgb(65, 56, 68);
+        }
+
+        header a {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            display: block;
+        }
+
+        header a span {
+            margin: 0 15px 0 0;
+        }
+
+        table,
+        table a {
+            font-size: 14px;
+        }
+
+        table tr th:not(:nth-of-type(1)),
+        table tr td:not(:nth-of-type(1)) {
+            text-align: center;
+        }
+
+        table tr td span {
+            background: #333;
+            color: white;
+            padding: 8px 0;
+            border-radius: 3px;
+            width: 100%;
+            display: block;
+            line-height: 100%;
+        }
+
+        table tr td {
+            vertical-align: middle !important;
+        }
+
+        table tr td span.error,
+        table tr td span.failure,
+        table tr td span.low {
+            background: red;
+        }
+
+        table tr td span.medium {
+            background: orange;
+        }
+
+        table tr td span.na {
+            background: red;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        table tr td span.pending {
+            background: blue;
+        }
+
+        table tr td span.success,
+        table tr td span.high {
+            background: green;
+        }
+
+        .license {
+            font-weight: bold;
+        }
+
+        .status {
+            text-transform: capitalize;
+        }
+
+        table.dataTable thead .sorting,
+        table.dataTable thead .sorting_desc,
+        table.dataTable thead .sorting_asc {
+            background-image: none;
+        }
+
+        table.dataTable thead th {
+            position: relative;
+            padding-right: 25px;
+        }
+
+        table.dataTable thead th:before {
+            content: '▿';
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 10px;
+        }
+
+        table.dataTable thead .sorting:before,
+        table.dataTable thead .sorting_desc:before {
+            transform: rotate(180deg);
+        }
+
+        table.dataTable thead .sorting_asc:before {
+            top: 10px;
+        }
+
+        table.dataTable thead .sorting_desc:before,
+        table.dataTable thead .sorting_asc:before {
+            content: '▾';
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <a href="https://npmjs.com/"><span>❤</span>npmjs.com</a>
-  </header>
-  <main>
-    <h2><strong>npm</strong> project statusboard</h2>
-    <small class="built"><strong>Last built: {{built}}</strong></small>
-    <h6>Toggle Columns:</h6>
-    <ul class="columns">
-      <li><button data-column="1">Package</button></li>
-      <li><button data-column="2">Stars</button></li>
-      <li><button data-column="3">Issues</button></li>
-      <li><button data-column="4">Pull Requests</button></li>
-      <li><button data-column="5">License</button></li>
-      <li><button data-column="6">Last Commit</button></li>
-      <li><button data-column="7">Build Status</button></li>
-      <li><button data-column="8">Node</button></li>
-      <li><button data-column="9">Downloads (/m)</button></li>
-      <li><button data-column="10">Coverage</button></li>
-      <li><button data-column="11">Size</button></li>
-      <li><button data-column="12">Version</button></li>
-      <li><button data-column="13">Branch</button></li>
-    </ul>
-    <table class="table table-striped table-bordered" data-sortable>
-      <thead>
-      <tr>
-        <th>
-          Name
-        </th>
-        <th>
-          Package
-        </th>
-        <th>
-          Stars
-        </th>
-        <th>
-          Issues
-        </th>
-        <th>
-          Pull&nbsp;Requests
-        </th>
-        <th>
-          License
-        </th>
-        <th>
-          Last Commit
-        </th>
-        <th>
-          Build&nbsp;Status
-        </th>
-        <th>
-          Node
-        </th>
-        <th>
-          Downloads&nbsp;(/m)
-        </th>
-        <th>
-          Coverage
-        </th>
-        <th>
-          Size&nbsp;(KB)
-        </th>
-        <th>
-          Version
-        </th>
-        <th>
-          Branch
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-    {{#each repos}}
-      <tr>
-        <td>
-          <a href="{{url}}" target="_blank">{{name}}</a>
-        </td>
-        <td>
-          <a href="https://www.npmjs.com/package/{{package}}" target="_blank">{{package}}</a>
-        </td>
-        <td>
-          <a href="{{url}}/stargazers" target="_blank">{{stargazers_count}}</a>
-        </td>
-        <td>
-          <a href="{{url}}/issues" target="_blank">{{issues_count}}</a>
-        </td>
-        <td>
-          <a href="{{url}}/pulls" target="_blank">{{prs_count}}</a>
-        </td>
-        <td class="license">
-          {{#if license}}
-            {{license.key}}
-          {{else}}
-            <span class="na">n/a</span>
-          {{/if}}
-        </td>
-        <td data-order="{{pushed_at}}">
-          {{pushed_at_diff}}
-        </td>
-        <td class="status">
-          {{#if build_status}}
-            <span class="{{build_status}}">{{build_status}}</span>
-          {{/if}}
-        </td>
-        <td data-order="{{node}}">
-          {{#if version}}
-            {{#if node}}
-              {{node}}
-            {{ else }}
-              <span class="na">n/a</span>
-            {{/if}}
-          {{/if}}
-        </td>
-        <td>
-          {{downloads}}
-        </td>
-        <td class="coverage" data-order="{{coverage}}">
-          {{#if coverage}}
-            <a href="https://coveralls.io/github/{{owner}}/{{name}}" target="_blank"><span class="{{coverageLevel}}">{{coverage}}</span></a>
-          {{else}}
-            <span class="na">n/a</span>
-          {{/if}}
-        </td>
-        <td data-order="{{size}}">
-          {{size}}
-        </td>
-        <td data-order="{{version}}">
-          {{version}}
-        </td>
-        <td>
-          {{default_branch}}
-        </td>
-      </tr>
-    {{/each}}
-    </tbody>
-    </table>
-  </main>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
-<script>
-$(document).ready(function () {
-  $table = $('table').DataTable({
-    paging: false,
-    colReorder: true,
-    stateSave: true,
-    autoWidth: false,
-    language: {
-      search: 'Filter Projects:',
-      searchPlaceholder: 'Search...'
-    },
-    buttons: [ 'colvis' ],
-    stateLoaded: function (settings, data) {
-      data.columns.forEach((c, i) => !c.visible && $(`[data-column=${i}]`).addClass('hidden'))
-    }
-  })
-  $('.columns button').on('click', function(e) {
-    e.preventDefault()
-    $(this).toggleClass('hidden')
-    var column = $table.column($(this).attr('data-column'))
-    column.visible(!column.visible())
-    $table.columns.adjust().draw()
-  })
-})
-</script>
+    <header>
+        <a href="https://npmjs.com/"><span>❤</span>npmjs.com</a>
+    </header>
+    <main>
+        <h2><strong>npm</strong> project statusboard</h2>
+        <small class="built"><strong>Last built: {{built}}</strong></small>
+        <h6>Toggle Columns:</h6>
+        <ul class="columns">
+            <li><button data-column="1">Package</button></li>
+            <li><button data-column="2">Stars</button></li>
+            <li><button data-column="3">Issues</button></li>
+            <li><button data-column="4">Issue Trendline</button></li>
+            <li><button data-column="5">Pull Requests</button></li>
+            <li><button data-column="6">License</button></li>
+            <li><button data-column="7">Last Commit</button></li>
+            <li><button data-column="8">Build Status</button></li>
+            <li><button data-column="9">Node</button></li>
+            <li><button data-column="10">Downloads (/m)</button></li>
+            <li><button data-column="11">Coverage</button></li>
+            <li><button data-column="12">Size</button></li>
+            <li><button data-column="13">Version</button></li>
+            <li><button data-column="14">Branch</button></li>
+        </ul>
+        <table class="table table-striped table-bordered" data-sortable>
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Package
+                    </th>
+                    <th>
+                        Stars
+                    </th>
+                    <th>
+                        Issues
+                    </th>
+                    <th>
+                        Issue Trend
+                    </th>
+                    <th>
+                        Pull&nbsp;Requests
+                    </th>
+                    <th>
+                        License
+                    </th>
+                    <th>
+                        Last Commit
+                    </th>
+                    <th>
+                        Build&nbsp;Status
+                    </th>
+                    <th>
+                        Node
+                    </th>
+                    <th>
+                        Downloads&nbsp;(/m)
+                    </th>
+                    <th>
+                        Coverage
+                    </th>
+                    <th>
+                        Size&nbsp;(KB)
+                    </th>
+                    <th>
+                        Version
+                    </th>
+                    <th>
+                        Branch
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each repos}}
+                <tr>
+                    <td>
+                        <a href="{{url}}" target="_blank">{{name}}</a>
+                    </td>
+                    <td>
+                        <a href="https://www.npmjs.com/package/{{package}}" target="_blank">{{package}}</a>
+                    </td>
+                    <td>
+                        <a href="{{url}}/stargazers" target="_blank">{{stargazers_count}}</a>
+                    </td>
+                    <td>
+                        <a href="{{url}}/issues" target="_blank">{{issues_count}}</a>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <a href="{{url}}/pulls" target="_blank">{{prs_count}}</a>
+                    </td>
+                    <td class="license">
+                        {{#if license}}
+                        {{license.key}}
+                        {{else}}
+                        <span class="na">n/a</span>
+                        {{/if}}
+                    </td>
+                    <td data-order="{{pushed_at}}">
+                        {{pushed_at_diff}}
+                    </td>
+                    <td class="status">
+                        {{#if build_status}}
+                        <span class="{{build_status}}">{{build_status}}</span>
+                        {{/if}}
+                    </td>
+                    <td data-order="{{node}}">
+                        {{#if version}}
+                        {{#if node}}
+                        {{node}}
+                        {{ else }}
+                        <span class="na">n/a</span>
+                        {{/if}}
+                        {{/if}}
+                    </td>
+                    <td>
+                        {{downloads}}
+                    </td>
+                    <td class="coverage" data-order="{{coverage}}">
+                        {{#if coverage}}
+                        <a href="https://coveralls.io/github/{{owner}}/{{name}}" target="_blank"><span
+                                class="{{coverageLevel}}">{{coverage}}</span></a>
+                        {{else}}
+                        <span class="na">n/a</span>
+                        {{/if}}
+                    </td>
+                    <td data-order="{{size}}">
+                        {{size}}
+                    </td>
+                    <td data-order="{{version}}">
+                        {{version}}
+                    </td>
+                    <td>
+                        {{default_branch}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sparkline@0.2.0/lib/sparkline.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log(sparkline([1, 10, 3, 23, 25]));
+            $table = $('table').DataTable({
+                paging: false,
+                colReorder: true,
+                stateSave: true,
+                autoWidth: false,
+                language: {
+                    search: 'Filter Projects:',
+                    searchPlaceholder: 'Search...'
+                },
+                buttons: ['colvis'],
+                stateLoaded: function (settings, data) {
+                    data.columns.forEach((c, i) => !c.visible && $(`[data-column=${i}]`).addClass('hidden'))
+                }
+            })
+            $('.columns button').on('click', function (e) {
+                e.preventDefault()
+                $(this).toggleClass('hidden')
+                var column = $table.column($(this).attr('data-column'))
+                column.visible(!column.visible())
+                $table.columns.adjust().draw()
+            })
+        })
+    </script>
 </body>
+
 </html>

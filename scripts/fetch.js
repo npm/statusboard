@@ -2,27 +2,67 @@
   require('dotenv').config()
   const fs = require('fs')
   const path = require('path')
-  const { sleep } = require('sleepover')
   const fetch = require('node-fetch')
   const mkdirp = require('mkdirp')
-  const moment = require('moment')
-  const repositories = require('../../data/maintained.json')
-  const { Octokit } = require('@octokit/rest')
-  const octokit = new Octokit({ auth: process.env.AUTH_TOKEN })
+  const dateFns = require('date-fns')
+  const Rest = require('@octokit/rest')
+  const { throttling } = require('@octokit/plugin-throttling')
+  const { retry } = require('@octokit/plugin-retry')
+  const sparkline = require('sparkline')
+
+  const fetchRetry = require('fetch-retry')(fetch)
+
+  const Octokit = Rest.Octokit.plugin(throttling, retry)
+  const octokit = new Octokit({
+    auth: process.env.AUTH_TOKEN,
+    retry: {
+      doNotRetry: [404]
+    },
+    throttle: {
+      onRateLimit: (retryAfter, options, octokit) => {
+        octokit.log.warn(
+          `Request quota exhausted for request ${options.method} ${options.url}`
+        )
+
+        if (options.request.retryCount === 0) {
+          // only retries once
+          octokit.log.info(`Retrying after ${retryAfter} seconds!`)
+          return true
+        }
+      },
+      onAbuseLimit: (retryAfter, options, octokit) => {
+        octokit.log.warn(
+          `Abuse detected for request ${options.method} ${options.url}`
+        )
+      }
+    }
+  })
+
+  const repositories = require('../data/maintained.json')
+  const latestJSON = '../data/latest.json'
+
   const now = new Date()
   const month = String('00' + (now.getUTCMonth() + 1)).slice(-2)
   const dest = `../data/${now.getUTCFullYear()}/${month}/${now.getUTCDate()}.json`
-  const latest = '../data/latest.json'
   const dir = dest.split('/').slice(0, -1).join('/')
   const opts = {
     redirect: 'follow',
-    follow: 5
+    follow: 5,
+    retries: 3,
+    retryDelay: function (attempt, error, response) {
+      return Math.pow(2, attempt) * 500
+    },
+    retryOn: function (attempt, error, response) {
+      // retry when we have networking errors & response code an error but not 404
+      if (
+        error !== null ||
+        (response.status !== 404 && response.status >= 400)
+      ) {
+        return true
+      }
+    }
   }
-  function isJSON (response) {
-    return (
-      response.ok && response.headers.get('content-type') === 'application/json'
-    )
-  }
+
   function writeFile (data) {
     mkdirp(path.resolve(__dirname, dir))
       .then(() => {
@@ -32,93 +72,147 @@
           'utf8'
         )
         fs.writeFileSync(
-          path.resolve(__dirname, latest),
+          path.resolve(__dirname, latestJSON),
           JSON.stringify(data),
           'utf8'
         )
       })
       .catch((err) => console.error(err))
   }
-  const temp = []
-  for (let i = 0; i < repositories.length; i++) {
-    let r = (_ = repositories[i])
+
+  const repoPromises = repositories.map(async (repository) => {
     try {
-      let response
-      let pkg
-      let stats
-      let data
-      const repo = _.repository.split('/').slice(-2)
-      const owner = repo[0]
-      const name = repo[1]
+      const repoString = repository.repository.split('/').slice(-2)
+      const owner = repoString[0]
+      const name = repoString[1]
+
       const prs = await octokit.pulls.list({
         owner,
         repo: name,
         per_page: 100
       })
-      r = await octokit.repos.get({
+      const prCount = prs.data.length || 0
+
+      const { data: repoData } = await octokit.repos.get({
         owner,
         repo: name
       })
-      r = r.data
-      r.owner = owner
-      r.name = name
-      r.package = _.package
-      r.prs_count = prs.data.length || 0
-      r.prs_count = r.prs_count >= 100 ? '100+' : r.prs_count
-      r.issues_count = (r.open_issues_count || 0) - r.prs_count
-      r.pushed_at_diff = moment(r.pushed_at).fromNow()
 
       console.log(
-        'fetching coverage:',
+        'Fetching coverage:',
         `https://coveralls.io/github/${owner}/${name}.json`
       )
-      response = await fetch(
+      const coverallsResponse = await fetchRetry(
         `https://coveralls.io/github/${owner}/${name}.json`,
         opts
       )
-      stats = isJSON(response) ? await response.json() : null
-      r.coverage = stats ? Math.round(stats.covered_percent) : ''
-      r.coverageLevel = r.coverage
-        ? r.coverage === 100
-          ? 'high'
-          : r.coverage > 80
-            ? 'medium'
-            : 'low'
+
+      let coverallsData = null
+      try {
+        coverallsData = await coverallsResponse.json()
+      } catch (error) {
+        if (error.type === 'invalid-json') {
+          console.warn(
+            'No coverage data:',
+            `https://coveralls.io/github/${owner}/${name}.json`
+          )
+        } else {
+          console.error(error)
+        }
+      }
+      const coverage = coverallsData
+        ? Math.round(coverallsData.covered_percent)
         : ''
 
       console.log(
-        'fetching pkg:',
-        `https://unpkg.com/${r.package}/package.json`
+        'Fetching package data:',
+        `https://unpkg.com/${repository.package}/package.json`
       )
-      response = await fetch(
-        `https://unpkg.com/${r.package}/package.json`,
+      const pkgResponse = await fetchRetry(
+        `https://unpkg.com/${repository.package}/package.json`,
         opts
       )
-      pkg = isJSON(response) ? await response.json() : null
+
+      let pkg = null
+      try {
+        pkg = await pkgResponse.json()
+      } catch (error) {
+        if (error.type === 'invalid-json') {
+          console.warn(
+            'No package data:',
+            `https://unpkg.com/${repository.package}/package.json`
+          )
+        } else {
+          console.error(error)
+        }
+      }
+      const nodeVersion =
+        pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
 
       console.log(
-        'fetching downloads:',
-        `https://api.npmjs.org/downloads/point/last-month/${r.package}`
+        'Fetching downloads:',
+        `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
       )
-      response = await fetch(
-        `https://api.npmjs.org/downloads/point/last-month/${r.package}`,
+      const downloadResponse = await fetchRetry(
+        `https://api.npmjs.org/downloads/point/last-month/${repository.package}`,
         opts
       )
-      data = isJSON(response) ? await response.json() : null
 
-      r.node = pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
-      r.license = r.license || {}
-      r.license.key =
-        r.license && r.license.spdx_id != 'NOASSERTION'
-          ? r.license.spdx_id
-          : null
-      r.version = pkg ? pkg.version : null
-      r.downloads = data && data.downloads ? data.downloads : 0
-    } catch (e) {
-      console.error(e)
+      let downloads = null
+      try {
+        downloads = await downloadResponse.json()
+      } catch (error) {
+        if (error.type === 'invalid-json') {
+          console.warn(
+            'No download data:',
+            `https://api.npmjs.org/downloads/point/last-month/${repository.package}`
+          )
+        } else {
+          console.error(error)
+        }
+      }
+
+      const data = {
+        ...repoData,
+        owner,
+        name,
+        package: repository.package,
+        prs_count: prCount >= 100 ? '100+' : prCount,
+        issues_count: repoData.open_issues_count,
+        pushed_at_diff: dateFns.formatDistanceToNow(
+          new Date(repoData.pushed_at),
+          { addSuffix: false, includeSeconds: false }
+        ),
+        coverage,
+        coverageLevel: coverage
+          ? coverage === 100
+            ? 'high'
+            : coverage > 80
+              ? 'medium'
+              : 'low'
+          : '',
+        node: nodeVersion,
+        license: repoData.license
+          ? {
+              ...repoData.license,
+              key:
+                repoData.license.spdx_id !== 'NOASSERTION'
+                  ? repoData.license.spdx_id
+                  : null
+            }
+          : {},
+        version: pkg ? pkg.version : null,
+        downloads: downloads && downloads.downloads ? downloads.downloads : 0,
+        sparklines: {
+          sevenDay: sparkline([1, 2, 3, 4, 5, 6, 7])
+        }
+      }
+      return data
+    } catch (error) {
+      console.error(error)
     }
-    temp.push(r)
-    sleep(600)
-  }
-  writeFile(temp)
+  })
+
+  const fileContents = await Promise.all(repoPromises)
+  writeFile(fileContents)
 })()
