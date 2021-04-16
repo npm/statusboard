@@ -35,12 +35,12 @@
     }
   })
 
-  const repositories = require('../data/maintained.json')
-  const latestJSON = '../data/latest.json'
+  const repositories = require('../public/data/maintained.json')
+  const latestJSON = '../public/data/latest.json'
 
   const now = new Date()
   const month = String('00' + (now.getUTCMonth() + 1)).slice(-2)
-  const dest = `../data/${now.getUTCFullYear()}/${month}/${now.getUTCDate()}.json`
+  const dest = `../public/data/${now.getUTCFullYear()}/${month}/${now.getUTCDate()}.json`
   const dir = dest.split('/').slice(0, -1).join('/')
   const opts = {
     redirect: 'follow',
@@ -65,7 +65,7 @@
       .then(() => {
         fs.writeFileSync(
           path.resolve(__dirname, dest),
-          JSON.stringify(data),
+          JSON.stringify(data.data),
           'utf8'
         )
         fs.writeFileSync(
@@ -208,6 +208,10 @@
     }
   })
 
-  const fileContents = await Promise.all(repoPromises)
+  const repoResult = await Promise.all(repoPromises)
+  const fileContents = {
+    data: repoResult,
+    created_at: new Date().toISOString()
+  }
   writeFile(fileContents)
 })()

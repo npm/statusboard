@@ -28,6 +28,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
     "@actions/github": "^4.0.0",
+    "@fnando/sparkline": "^0.3.10",
     "@octokit/graphql": "^4.5.1",
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",

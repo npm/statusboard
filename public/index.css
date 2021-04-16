@@ -1,0 +1,266 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Lucida Grande", sans-serif;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  color: rgb(65, 56, 68);
+  background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+}
+
+main {
+  padding: 30px 40px 50px;
+}
+
+.built {
+  display: block;
+  margin: 0 0 20px 0;
+}
+
+.columns {
+  margin: 0 0 0 1rem 0;
+  padding: 0;
+  display: flex;
+}
+
+.columns li {
+  margin: 0 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.columns li button {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  padding: 5px 10px 5px 25px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.columns li button:before {
+  content: "";
+  display: block;
+  background: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+
+.columns li button.hidden:before {
+  background: none;
+}
+
+.columns li button:hover {
+  cursor: pointer;
+  color: #333;
+  background: #dee2e6;
+}
+
+.columns li button.hidden:hover:before {
+  background: #333;
+}
+
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_filter label {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.dataTables_wrapper .dataTables_filter label input[type="search"] {
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+h6 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header {
+  padding: 25px 40px 15px;
+  border-bottom: 1px solid rgba(134, 131, 131, 0.2);
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 100%;
+  color: rgb(65, 56, 68);
+}
+
+header a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  display: block;
+}
+
+header a span {
+  margin: 0 15px 0 0;
+}
+
+table,
+table a {
+  font-size: 14px;
+}
+
+table tr th:not(:nth-of-type(1)),
+table tr td:not(:nth-of-type(1)) {
+  text-align: center;
+}
+
+table tr td span {
+  /* background: #333; */
+  color: white;
+  padding: 8px 0;
+  border-radius: 3px;
+  width: 100%;
+  display: block;
+  line-height: 100%;
+}
+
+table tr td {
+  vertical-align: middle !important;
+}
+
+table tr td span.error,
+table tr td span.failure,
+table tr td span.low {
+  background: red;
+}
+
+table tr td span.medium {
+  background: orange;
+}
+
+table tr td span.na {
+  background: red;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+table tr td span.pending {
+  background: blue;
+}
+
+table tr td span.success,
+table tr td span.high {
+  background: green;
+}
+
+.license {
+  font-weight: bold;
+}
+
+.status {
+  text-transform: capitalize;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc {
+  background-image: none;
+}
+
+table.dataTable thead th {
+  position: relative;
+  padding-right: 25px;
+}
+
+table.dataTable thead th:before {
+  content: "▿";
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_desc:before {
+  transform: rotate(180deg);
+}
+
+table.dataTable thead .sorting_asc:before {
+  top: 10px;
+}
+
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc:before {
+  content: "▾";
+}
+
+/* just the line */
+.sparkline {
+  stroke: #FF0000;
+  fill: none;
+}
+
+/* line with highlight area */
+.sparkline {
+  stroke: #FF0000;
+  fill: rgba(255, 0, 0, 0.3);
+}
+
+/* change the spot color */
+.sparkline--spot {
+  stroke: #FF0000;
+  fill: #ff0000;
+}
+
+/* change the cursor color */
+.sparkline--cursor {
+  stroke: #FF0000;
+}
+
+/* style fill area and line colors using specific class name */
+.sparkline--fill {
+  fill: rgba(255, 0, 0, 0.3);
+}
+
+.sparkline--line {
+  stroke: #FF0000;
+}

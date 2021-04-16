@@ -31,14 +31,10 @@ jobs:
           git add .
           git commit -m "chore: store fetched data"
           git push origin latest
-      - name: Build Template & Publish data folder
-        run: |
-          npm run build
-          cp -r data dist/data
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: public
           CLEAN: true
