@@ -7,13 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.css"
+      href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.bootstrap4.min.css"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro&:300,400,600,700Sour&display=swap"
@@ -46,166 +52,28 @@
         <li><button data-column="13">Version</button></li>
         <li><button data-column="14">Branch</button></li>
       </ul>
-      <div id="template"></div>
-      <table class="table table-striped table-bordered" data-sortable>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Package</th>
-            <th>Stars</th>
-            <th>Issues</th>
-            <th>Issue Trend</th>
-            <th>Pull&nbsp;Requests</th>
-            <th>License</th>
-            <th>Last Commit</th>
-            <th>Build&nbsp;Status</th>
-            <th>Node</th>
-            <th>Downloads&nbsp;(/m)</th>
-            <th>Coverage</th>
-            <th>Size&nbsp;(KB)</th>
-            <th>Version</th>
-            <th>Branch</th>
-          </tr>
-        </thead>
-      </table>
-      <!-- <table class="table table-striped table-bordered" data-sortable>
-            <thead>
-                <tr>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Package
-                    </th>
-                    <th>
-                        Stars
-                    </th>
-                    <th>
-                        Issues
-                    </th>
-                    <th>
-                        Issue Trend
-                    </th>
-                    <th>
-                        Pull&nbsp;Requests
-                    </th>
-                    <th>
-                        License
-                    </th>
-                    <th>
-                        Last Commit
-                    </th>
-                    <th>
-                        Build&nbsp;Status
-                    </th>
-                    <th>
-                        Node
-                    </th>
-                    <th>
-                        Downloads&nbsp;(/m)
-                    </th>
-                    <th>
-                        Coverage
-                    </th>
-                    <th>
-                        Size&nbsp;(KB)
-                    </th>
-                    <th>
-                        Version
-                    </th>
-                    <th>
-                        Branch
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each repos}}
-                <tr>
-                    <td>
-                        <a href="{{url}}" target="_blank">{{name}}</a>
-                    </td>
-                    <td>
-                        <a href="https://www.npmjs.com/package/{{package}}" target="_blank">{{package}}</a>
-                    </td>
-                    <td>
-                        <a href="{{url}}/stargazers" target="_blank">{{stargazers_count}}</a>
-                    </td>
-                    <td>
-                        <a href="{{url}}/issues" target="_blank">{{issues_count}}</a>
-                    </td>
-                    <td>
-
-                    </td>
-                    <td>
-                        <a href="{{url}}/pulls" target="_blank">{{prs_count}}</a>
-                    </td>
-                    <td class="license">
-                        {{#if license}}
-                        {{license.key}}
-                        {{else}}
-                        <span class="na">n/a</span>
-                        {{/if}}
-                    </td>
-                    <td data-order="{{pushed_at}}">
-                        {{pushed_at_diff}}
-                    </td>
-                    <td class="status">
-                        {{#if build_status}}
-                        <span class="{{build_status}}">{{build_status}}</span>
-                        {{/if}}
-                    </td>
-                    <td data-order="{{node}}">
-                        {{#if version}}
-                        {{#if node}}
-                        {{node}}
-                        {{ else }}
-                        <span class="na">n/a</span>
-                        {{/if}}
-                        {{/if}}
-                    </td>
-                    <td>
-                        {{downloads}}
-                    </td>
-                    <td class="coverage" data-order="{{coverage}}">
-                        {{#if coverage}}
-                        <a href="https://coveralls.io/github/{{owner}}/{{name}}" target="_blank"><span
-                                class="{{coverageLevel}}">{{coverage}}</span></a>
-                        {{else}}
-                        <span class="na">n/a</span>
-                        {{/if}}
-                    </td>
-                    <td data-order="{{size}}">
-                        {{size}}
-                    </td>
-                    <td data-order="{{version}}">
-                        {{version}}
-                    </td>
-                    <td>
-                        {{default_branch}}
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table> -->
+      <table class="table table-striped table-bordered"></table>
     </main>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"
-      integrity="sha512-3PRVLmoBYuBDbCEojg5qdmd9UhkPiyoczSFYjnLhFb2KAFsWWEMlAPt0olX1Nv7zGhDfhGEVkXsu51a55nlYmw=="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fnando/sparkline@0.3.10/dist/sparkline.min.js"></script>
     <script
       type="text/javascript"
-      src="https://cdn.datatables.net/v/dt/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-print-1.6.1/cr-1.5.2/fh-3.1.6/datatables.min.js"
+      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"
     ></script>
     <script>
       const DAY = 24 * 60 * 60 * 1000;
+
+      const issuesTrendlineByRepositoryMap = {};
+      const highPriorityIssuesTrendlineMap = {};
+      const needsTriageIssuesTrendlineMap = {};
 
       const getDateRangeList = (days, start = new Date()) => {
         const range = [start];
@@ -257,7 +125,33 @@
             if (!current.issue_list_by_date)
               current.issue_list_by_date = new Array(30).fill(0);
 
-            current.issue_list_by_date[dateIdx] = repo.issues_count;
+            if (!current.high_priority_issues_by_date)
+              current.high_priority_issues_by_date = new Array(30).fill(0);
+
+            if (!current.needs_triage_issues_by_date)
+              current.needs_triage_issues_by_date = new Array(30).fill(0);
+
+            current.issue_list_by_date[dateIdx] = repo.issues_count || 0;
+            current.high_priority_issues_by_date[dateIdx] =
+              repo.high_priority_issues_count || 0;
+            current.needs_triage_issues_by_date[dateIdx] =
+              repo.needs_triage_issues_count || 0;
+
+            if (repo.high_priority_issues_count) {
+              console.log(JSON.stringify(current.high_priority_issues_by_date));
+            }
+
+            issuesTrendlineByRepositoryMap[
+              repo.id
+            ] = current.issue_list_by_date.slice(0, 7);
+
+            highPriorityIssuesTrendlineMap[
+              repo.id
+            ] = current.high_priority_issues_by_date.slice(0, 7);
+
+            needsTriageIssuesTrendlineMap[
+              repo.id
+            ] = current.needs_triage_issues_by_date.slice(0, 7);
           });
         });
 
@@ -270,30 +164,62 @@
           columns: [
             {
               data: "name",
+              title: "Name",
             },
-            { data: "package" },
-            { data: "stargazers_count" },
-            { data: "issues_count" },
+            { data: "package", title: "Package" },
+            { data: "stargazers_count", title: "Stars" },
+            { data: "issues_count", title: "Issues" },
             {
               data: "issue_list_by_date",
+              title: "Issues Trend",
               defaultContent: "",
               render: function (data, type, row) {
-                const isZeroRange = data.every((value) => value === 0);
-                let someOption = 7;
-                const issuesByDate = data.slice(0, someOption);
-                if (issuesByDate && !isZeroRange) {
-                  return `<svg id=${row.id} class="sparkline sparkline-${
-                    row.name.charAt(0) === "."
-                      ? row.name.split("").slice(1).join("")
-                      : row.name
-                  }" width="100" height="40" stroke-width="3"></svg>`;
+                const isZeroRange = issuesTrendlineByRepositoryMap[
+                  row.id
+                ].every((value) => value === 0);
+                if (!isZeroRange) {
+                  return `<svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
                 }
                 return '<span class="na">n/a</span>';
               },
             },
-            { data: "prs_count" },
+            {
+              data: "high_priority_issues_count",
+              title: "High Priority Issues",
+            },
+            {
+              data: "high_priority_issues_by_date",
+              title: "High Priority Issues Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                const isZeroRange = highPriorityIssuesTrendlineMap[
+                  row.id
+                ].every((value) => value === 0);
+                if (!isZeroRange) {
+                  return `<svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                }
+                return '<span class="na">n/a</span>';
+              },
+            },
+            { data: "needs_triage_issues_count", title: "Needs Triage Issues" },
+            {
+              data: "needs_triage_issues_by_date",
+              title: "Needs Triage Issues Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                const isZeroRange = needsTriageIssuesTrendlineMap[
+                  row.id
+                ].every((value) => value === 0);
+                if (!isZeroRange) {
+                  return `<svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                }
+                return '<span class="na">n/a</span>';
+              },
+            },
+            { data: "prs_count", title: "Pull Requests" },
             {
               data: "license.key",
+              title: "License",
               defaultContent: "",
               render: function (data, type, row) {
                 if (!data) {
@@ -302,10 +228,11 @@
                 return data;
               },
             },
-            { data: "pushed_at_diff" },
-            { data: "build_status", defaultContent: "" },
+            { data: "pushed_at_diff", title: "Last Commit" },
+            { data: "build_status", defaultContent: "", title: "Build Status" },
             {
               data: "node",
+              title: "Node Version",
               defaultContent: "",
               render: function (data, type, row) {
                 if (data && row.version) {
@@ -316,6 +243,7 @@
             },
             {
               data: "downloads",
+              title: "Downloads (/m)",
               defaultContent: 0,
               render: function (data) {
                 return Intl.NumberFormat("en-US").format(data);
@@ -323,6 +251,7 @@
             },
             {
               data: "coverage",
+              title: "Coverage",
               defaultContent: "",
               render: function (data, type, row) {
                 if (data) {
@@ -331,9 +260,9 @@
                 return '<span class="na">n/a</span>';
               },
             },
-            { data: "size" },
-            { data: "version" },
-            { data: "default_branch" },
+            { data: "size", title: "Size (KB)" },
+            { data: "version", title: "Version" },
+            { data: "default_branch", title: "Branch" },
           ],
           paging: false,
           colReorder: true,
@@ -351,15 +280,36 @@
           },
           fnDrawCallback: function (oSettings) {
             datasource.forEach((repo) => {
-              const repoName =
-                repo.name.charAt(0) === "."
-                  ? repo.name.split("").slice(1).join("")
-                  : repo.name;
-              const el = document.querySelector(`.sparkline-${repoName}`);
-              if (el) {
+              const issuesTrendEl = document.querySelector(
+                `#issuesTrendline${repo.id}`
+              );
+              const highPrioTrendEl = document.querySelector(
+                `#highPrioIssues${repo.id}`
+              );
+              const needsTriageTrendEl = document.querySelector(
+                `#needsTriageIssues${repo.id}`
+              );
+
+              if (issuesTrendEl) {
                 sparkline.sparkline(
-                  document.querySelector(`.sparkline-${repoName}`),
-                  repo.issue_list_by_date,
+                  issuesTrendEl,
+                  issuesTrendlineByRepositoryMap[repo.id],
+                  { interactive: true }
+                );
+              }
+
+              if (highPrioTrendEl) {
+                sparkline.sparkline(
+                  highPrioTrendEl,
+                  highPriorityIssuesTrendlineMap[repo.id],
+                  { interactive: true }
+                );
+              }
+
+              if (needsTriageTrendEl) {
+                sparkline.sparkline(
+                  needsTriageTrendEl,
+                  needsTriageIssuesTrendlineMap[repo.id],
                   { interactive: true }
                 );
               }
@@ -372,7 +322,7 @@
           $(this).toggleClass("hidden");
           var column = $table.column($(this).attr("data-column"));
           column.visible(!column.visible());
-          $table.columns.adjust().draw();
+          $table.columns.adjust().draw(false);
         });
       });
     </script>

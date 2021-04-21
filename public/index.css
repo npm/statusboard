@@ -170,7 +170,7 @@ table tr td {
 table tr td span.error,
 table tr td span.failure,
 table tr td span.low {
-  background: red;
+  background: #FF0000;
 }
 
 table tr td span.medium {
@@ -178,7 +178,7 @@ table tr td span.medium {
 }
 
 table tr td span.na {
-  background: red;
+  background: #FF0000;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -198,39 +198,6 @@ table tr td span.high {
 
 .status {
   text-transform: capitalize;
-}
-
-table.dataTable thead .sorting,
-table.dataTable thead .sorting_desc,
-table.dataTable thead .sorting_asc {
-  background-image: none;
-}
-
-table.dataTable thead th {
-  position: relative;
-  padding-right: 25px;
-}
-
-table.dataTable thead th:before {
-  content: "▿";
-  display: block;
-  position: absolute;
-  top: 12px;
-  right: 10px;
-}
-
-table.dataTable thead .sorting:before,
-table.dataTable thead .sorting_desc:before {
-  transform: rotate(180deg);
-}
-
-table.dataTable thead .sorting_asc:before {
-  top: 10px;
-}
-
-table.dataTable thead .sorting_desc:before,
-table.dataTable thead .sorting_asc:before {
-  content: "▾";
 }
 
 /* just the line */

@@ -77,6 +77,15 @@
       .catch((err) => console.error(err))
   }
 
+  async function getRepoIssues (owner, repo, labels = '') {
+    try {
+      return octokit.issues.listForRepo({ owner, repo, state: 'open', labels }).then(issues => issues.data)
+    } catch (error) {
+      console.log(error)
+      return {}
+    }
+  }
+
   const repoPromises = repositories.map(async (repository) => {
     try {
       const repoString = repository.repository.split('/').slice(-2)
@@ -94,6 +103,12 @@
         owner,
         repo: name
       })
+
+      const highPrioIssues = await getRepoIssues(owner, name, 'Priority 1')
+      const highPrioIssuesCount = highPrioIssues.length
+
+      const needsTriageIssues = await getRepoIssues(owner, name, 'Needs Triage')
+      const needsTriageCount = needsTriageIssues.length
 
       console.log(
         'Fetching coverage:',
@@ -200,7 +215,9 @@
             }
           : {},
         version: pkg ? pkg.version : null,
-        downloads: downloads && downloads.downloads ? downloads.downloads : 0
+        downloads: downloads && downloads.downloads ? downloads.downloads : 0,
+        high_priority_issues_count: highPrioIssuesCount,
+        needs_triage_issues_count: needsTriageCount
       }
       return data
     } catch (error) {
