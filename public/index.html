@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
@@ -22,6 +28,11 @@
       href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.bootstrap4.min.css"
     />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.bootstrap4.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Source+Sans+Pro&:300,400,600,700Sour&display=swap"
       rel="stylesheet"
     />
@@ -34,24 +45,7 @@
     </header>
     <main>
       <h2><strong>npm</strong> project statusboard</h2>
-      <small class="built"><strong>Last built: {{built}}</strong></small>
-      <h6>Toggle Columns:</h6>
-      <ul class="columns">
-        <li><button data-column="1">Package</button></li>
-        <li><button data-column="2">Stars</button></li>
-        <li><button data-column="3">Issues</button></li>
-        <li><button data-column="4">Issue Trendline</button></li>
-        <li><button data-column="5">Pull Requests</button></li>
-        <li><button data-column="6">License</button></li>
-        <li><button data-column="7">Last Commit</button></li>
-        <li><button data-column="8">Build Status</button></li>
-        <li><button data-column="9">Node</button></li>
-        <li><button data-column="10">Downloads (/m)</button></li>
-        <li><button data-column="11">Coverage</button></li>
-        <li><button data-column="12">Size</button></li>
-        <li><button data-column="13">Version</button></li>
-        <li><button data-column="14">Branch</button></li>
-      </ul>
+      <small class="built"></small>
       <table class="table table-striped table-bordered"></table>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -68,12 +62,26 @@
       type="text/javascript"
       src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"
+    ></script>
     <script>
       const DAY = 24 * 60 * 60 * 1000;
 
       const issuesTrendlineByRepositoryMap = {};
       const highPriorityIssuesTrendlineMap = {};
       const needsTriageIssuesTrendlineMap = {};
+
+      const noDataHTML = `<div class="badge badge-dark badge-dt">No data</div>`;
 
       const getDateRangeList = (days, start = new Date()) => {
         const range = [start];
@@ -90,6 +98,42 @@
 
       const zeroPad = (n) => (n >= 10 ? n : `0${n}`);
 
+      const drawTrendline = (repoId) => {
+        const issuesTrendEl = document.querySelector(
+          `#issuesTrendline${repoId}`
+        );
+        const highPrioTrendEl = document.querySelector(
+          `#highPrioIssues${repoId}`
+        );
+        const needsTriageTrendEl = document.querySelector(
+          `#needsTriageIssues${repoId}`
+        );
+
+        if (issuesTrendEl) {
+          sparkline.sparkline(
+            issuesTrendEl,
+            issuesTrendlineByRepositoryMap[repoId],
+            { interactive: true }
+          );
+        }
+
+        if (highPrioTrendEl) {
+          sparkline.sparkline(
+            highPrioTrendEl,
+            highPriorityIssuesTrendlineMap[repoId],
+            { interactive: true }
+          );
+        }
+
+        if (needsTriageTrendEl) {
+          sparkline.sparkline(
+            needsTriageTrendEl,
+            needsTriageIssuesTrendlineMap[repoId],
+            { interactive: true }
+          );
+        }
+      };
+
       let $table;
 
       $(document).ready(async function () {
@@ -98,6 +142,14 @@
           data: latestData,
           created_at: latestDate,
         } = await response.json();
+
+        console.log(latestDate);
+
+        $(".built").html(
+          `<strong>Last Built: ${new Intl.DateTimeFormat("en").format(
+            new Date(latestDate)
+          )}</strong>`
+        );
 
         latestData = latestData.reduce((accum, repo) => {
           accum[repo.id] = repo;
@@ -137,21 +189,17 @@
             current.needs_triage_issues_by_date[dateIdx] =
               repo.needs_triage_issues_count || 0;
 
-            if (repo.high_priority_issues_count) {
-              console.log(JSON.stringify(current.high_priority_issues_by_date));
-            }
-
             issuesTrendlineByRepositoryMap[
               repo.id
-            ] = current.issue_list_by_date.slice(0, 7);
+            ] = current.issue_list_by_date.slice(0, 7).reverse();
 
             highPriorityIssuesTrendlineMap[
               repo.id
-            ] = current.high_priority_issues_by_date.slice(0, 7);
+            ] = current.high_priority_issues_by_date.slice(0, 7).reverse();
 
             needsTriageIssuesTrendlineMap[
               repo.id
-            ] = current.needs_triage_issues_by_date.slice(0, 7);
+            ] = current.needs_triage_issues_by_date.slice(0, 7).reverse();
           });
         });
 
@@ -164,9 +212,18 @@
           columns: [
             {
               data: "name",
-              title: "Name",
+              title: "Repository",
+              render: function (data, type, row) {
+                return `<a class="text-primary" href="https://github.com/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+              },
             },
-            { data: "package", title: "Package" },
+            {
+              data: "package",
+              title: "Package",
+              render: function (data, type, row) {
+                return `<a class="text-primary" href="https://www.npmjs.com/package/${data}" target="_blank">${data}</a>`;
+              },
+            },
             { data: "stargazers_count", title: "Stars" },
             { data: "issues_count", title: "Issues" },
             {
@@ -180,7 +237,7 @@
                 if (!isZeroRange) {
                   return `<svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
                 }
-                return '<span class="na">n/a</span>';
+                return noDataHTML;
               },
             },
             {
@@ -198,7 +255,7 @@
                 if (!isZeroRange) {
                   return `<svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
                 }
-                return '<span class="na">n/a</span>';
+                return noDataHTML;
               },
             },
             { data: "needs_triage_issues_count", title: "Needs Triage Issues" },
@@ -207,13 +264,13 @@
               title: "Needs Triage Issues Trend",
               defaultContent: "",
               render: function (data, type, row) {
-                const isZeroRange = needsTriageIssuesTrendlineMap[
-                  row.id
-                ].every((value) => value === 0);
+                const isZeroRange = needsTriageIssuesTrendlineMap[row.id].every(
+                  (value) => value === 0
+                );
                 if (!isZeroRange) {
                   return `<svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
                 }
-                return '<span class="na">n/a</span>';
+                return noDataHTML;
               },
             },
             { data: "prs_count", title: "Pull Requests" },
@@ -223,7 +280,7 @@
               defaultContent: "",
               render: function (data, type, row) {
                 if (!data) {
-                  return '<span class="na">n/a</span>';
+                  return noDataHTML;
                 }
                 return data;
               },
@@ -235,10 +292,17 @@
               title: "Node Version",
               defaultContent: "",
               render: function (data, type, row) {
-                if (data && row.version) {
-                  return data;
+                if (!data) {
+                  return "";
                 }
-                return '<span class="na">n/a</span>';
+                const cleanData = data.replace(/\s/g, "");
+                let className = "";
+                if (cleanData === ">=10") {
+                  className = "success";
+                } else if (cleanData) {
+                  className = "danger";
+                }
+                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
               },
             },
             {
@@ -253,76 +317,84 @@
               data: "coverage",
               title: "Coverage",
               defaultContent: "",
+              type: "html",
               render: function (data, type, row) {
                 if (data) {
-                  return `<a href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank"><span class="${row.coverageLevel}">${data}</span></a>`;
+                  let className = "";
+                  if (data === 100) {
+                    className = "success";
+                  } else if (data > 80) {
+                    className = "warning";
+                  } else {
+                    className = "danger";
+                  }
+                  return `<div class="badge badge-${className} badge-dt"><a class="text-white" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a></div>`;
                 }
-                return '<span class="na">n/a</span>';
+                return noDataHTML;
               },
             },
             { data: "size", title: "Size (KB)" },
-            { data: "version", title: "Version" },
-            { data: "default_branch", title: "Branch" },
+            {
+              data: "version",
+              title: "Version",
+              defaultContent: "",
+              render: function (data) {
+                if (!data) {
+                  return;
+                }
+                const major = data.split(".")[0];
+                return `<div class="badge badge-${
+                  major >= 1 ? "success" : "danger"
+                } badge-dt">${data}</div>`;
+              },
+            },
+            {
+              data: "default_branch",
+              title: "Branch",
+              render: function (data) {
+                let className = "";
+                if (data === "master") {
+                  className = "danger";
+                } else if (data === "latest") {
+                  className = "success";
+                } else if (data === "main") {
+                  className = "warning";
+                } else {
+                  className = "dark";
+                }
+                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+              },
+            },
           ],
           paging: false,
           colReorder: true,
           stateSave: true,
           autoWidth: false,
+          deferRender: true,
+          scrollX: true,
+          dom: "Bfrtip",
+          responsive: true,
           language: {
             search: "Filter Projects:",
             searchPlaceholder: "Search...",
           },
           buttons: ["colvis"],
-          stateLoaded: function (settings, data) {
-            data.columns.forEach(
-              (c, i) => !c.visible && $(`[data-column=${i}]`).addClass("hidden")
-            );
-          },
+          //   stateLoaded: function (settings, data) {
+          //     data.columns.forEach(
+          //       (c, i) => !c.visible && $(`[data-column=${i}]`).addClass("hidden")
+          //     );
+          //   },
           fnDrawCallback: function (oSettings) {
             datasource.forEach((repo) => {
-              const issuesTrendEl = document.querySelector(
-                `#issuesTrendline${repo.id}`
-              );
-              const highPrioTrendEl = document.querySelector(
-                `#highPrioIssues${repo.id}`
-              );
-              const needsTriageTrendEl = document.querySelector(
-                `#needsTriageIssues${repo.id}`
-              );
-
-              if (issuesTrendEl) {
-                sparkline.sparkline(
-                  issuesTrendEl,
-                  issuesTrendlineByRepositoryMap[repo.id],
-                  { interactive: true }
-                );
-              }
-
-              if (highPrioTrendEl) {
-                sparkline.sparkline(
-                  highPrioTrendEl,
-                  highPriorityIssuesTrendlineMap[repo.id],
-                  { interactive: true }
-                );
-              }
-
-              if (needsTriageTrendEl) {
-                sparkline.sparkline(
-                  needsTriageTrendEl,
-                  needsTriageIssuesTrendlineMap[repo.id],
-                  { interactive: true }
-                );
-              }
+              drawTrendline(repo.id);
             });
           },
         });
 
-        $(".columns button").on("click", function (e) {
-          e.preventDefault();
-          $(this).toggleClass("hidden");
-          var column = $table.column($(this).attr("data-column"));
-          column.visible(!column.visible());
-          $table.columns.adjust().draw(false);
+        $table.on("column-reorder", function () {
+          datasource.forEach((repo) => {
+            drawTrendline(repo.id);
+          });
         });
       });
     </script>

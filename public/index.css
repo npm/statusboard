@@ -4,6 +4,10 @@
   box-sizing: inherit;
 }
 
+html {
+  font-size: 12px;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -81,26 +85,6 @@ main {
   background: #333;
 }
 
-.dataTables_wrapper .dataTables_filter,
-.dataTables_wrapper .dataTables_filter label {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.dataTables_wrapper .dataTables_filter {
-  text-align: left;
-  margin: 10px 0;
-}
-
-.dataTables_wrapper .dataTables_filter label input[type="search"] {
-  padding: 10px;
-  width: 100%;
-  margin: 0;
-}
-
 .table {
   width: 100%;
 }
@@ -143,13 +127,12 @@ header a span {
   margin: 0 15px 0 0;
 }
 
-table,
-table a {
-  font-size: 14px;
+table {
+  font-size: inherit;
 }
 
-table tr th:not(:nth-of-type(1)),
-table tr td:not(:nth-of-type(1)) {
+table tr th,
+table tr td {
   text-align: center;
 }
 
@@ -167,31 +150,6 @@ table tr td {
   vertical-align: middle !important;
 }
 
-table tr td span.error,
-table tr td span.failure,
-table tr td span.low {
-  background: #FF0000;
-}
-
-table tr td span.medium {
-  background: orange;
-}
-
-table tr td span.na {
-  background: #FF0000;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-table tr td span.pending {
-  background: blue;
-}
-
-table tr td span.success,
-table tr td span.high {
-  background: green;
-}
-
 .license {
   font-weight: bold;
 }
@@ -200,34 +158,43 @@ table tr td span.high {
   text-transform: capitalize;
 }
 
-/* just the line */
-.sparkline {
-  stroke: #FF0000;
-  fill: none;
-}
-
 /* line with highlight area */
 .sparkline {
-  stroke: #FF0000;
-  fill: rgba(255, 0, 0, 0.3);
+  stroke: #333;
+  fill: #333;
 }
 
 /* change the spot color */
 .sparkline--spot {
-  stroke: #FF0000;
+  stroke: #ff0000;
   fill: #ff0000;
 }
 
 /* change the cursor color */
 .sparkline--cursor {
-  stroke: #FF0000;
+  stroke: #ff0000;
 }
 
 /* style fill area and line colors using specific class name */
 .sparkline--fill {
-  fill: rgba(255, 0, 0, 0.3);
+  fill: #dee2e6;
 }
 
 .sparkline--line {
-  stroke: #FF0000;
+  stroke: #333;
+}
+
+table.table-bordered.dataTable th {
+  white-space: pre;
+}
+
+.badge-dt {
+    display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 6px 12px;
+}
+
+.badge-warning {
+    color: white;
 }
