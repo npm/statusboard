@@ -79,7 +79,9 @@
 
   async function getRepoIssues (owner, repo, labels = '') {
     try {
-      return octokit.issues.listForRepo({ owner, repo, state: 'open', labels }).then(issues => issues.data)
+      return octokit.issues
+        .listForRepo({ owner, repo, state: 'open', labels })
+        .then((issues) => issues.data)
     } catch (error) {
       console.log(error)
       return {}
@@ -104,10 +106,20 @@
         repo: name
       })
 
+      const deployments = await octokit.request(
+        'GET /repos/:owner/:repo/commits/:ref/status',
+        { owner, repo: name, ref: repoData.default_branch }
+      )
+      const deploymentStatus = deployments.data.state
+
       const highPrioIssues = await getRepoIssues(owner, name, 'Priority 1')
       const highPrioIssuesCount = highPrioIssues.length
 
-      const needsTriageIssues = await getRepoIssues(owner, name, 'Needs Triage')
+      const needsTriageIssues = await getRepoIssues(
+        owner,
+        name,
+        'Needs Triage'
+      )
       const needsTriageCount = needsTriageIssues.length
 
       console.log(
@@ -217,7 +229,8 @@
         version: pkg ? pkg.version : null,
         downloads: downloads && downloads.downloads ? downloads.downloads : 0,
         high_priority_issues_count: highPrioIssuesCount,
-        needs_triage_issues_count: needsTriageCount
+        needs_triage_issues_count: needsTriageCount,
+        deployment_status: deploymentStatus
       }
       return data
     } catch (error) {

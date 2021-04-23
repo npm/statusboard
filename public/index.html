@@ -13,6 +13,10 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
@@ -143,8 +147,6 @@
           created_at: latestDate,
         } = await response.json();
 
-        console.log(latestDate);
-
         $(".built").html(
           `<strong>Last Built: ${new Intl.DateTimeFormat("en").format(
             new Date(latestDate)
@@ -258,7 +260,10 @@
                 return noDataHTML;
               },
             },
-            { data: "needs_triage_issues_count", title: "Needs Triage Issues" },
+            {
+              data: "needs_triage_issues_count",
+              title: "Needs Triage Issues",
+            },
             {
               data: "needs_triage_issues_by_date",
               title: "Needs Triage Issues Trend",
@@ -286,7 +291,11 @@
               },
             },
             { data: "pushed_at_diff", title: "Last Commit" },
-            { data: "build_status", defaultContent: "", title: "Build Status" },
+            {
+              data: "build_status",
+              defaultContent: "",
+              title: "Build Status",
+            },
             {
               data: "node",
               title: "Node Version",
@@ -328,7 +337,7 @@
                   } else {
                     className = "danger";
                   }
-                  return `<div class="badge badge-${className} badge-dt"><a class="text-white" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a></div>`;
+                  return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
                 }
                 return noDataHTML;
               },
@@ -349,6 +358,25 @@
               },
             },
             {
+              data: "deployment_status",
+              title: "Deployment Status",
+              defaultContent: "",
+              render: function (data) {
+                if (!data) {
+                  return "";
+                }
+                let className = "";
+                if (data === "success") {
+                  className = "success";
+                } else if (data === "pending") {
+                  className = "info";
+                } else if (data === "failure") {
+                  className = "danger";
+                }
+                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+              },
+            },
+            {
               data: "default_branch",
               title: "Branch",
               render: function (data) {
@@ -356,9 +384,9 @@
                 if (data === "master") {
                   className = "danger";
                 } else if (data === "latest") {
-                  className = "success";
-                } else if (data === "main") {
                   className = "warning";
+                } else if (data === "main") {
+                  className = "success";
                 } else {
                   className = "dark";
                 }
@@ -378,18 +406,29 @@
             search: "Filter Projects:",
             searchPlaceholder: "Search...",
           },
-          buttons: ["colvis"],
-          //   stateLoaded: function (settings, data) {
-          //     data.columns.forEach(
-          //       (c, i) => !c.visible && $(`[data-column=${i}]`).addClass("hidden")
-          //     );
-          //   },
-          fnDrawCallback: function (oSettings) {
+          buttons: [
+            {
+              extend: "colvis",
+              columnText: function (dt, idx, title) {
+                return `<i class="bi bi-check"></i> ${title}`;
+              },
+            },
+          ]
+        });
+
+        $table.column(4).visible(false);
+        $table.column(6).visible(false);
+        $table.column(8).visible(false);
+
+        $table.on(
+          "column-visibility.dt",
+          function (e, settings, column, state) {
+            const rows = [4, 6, 8];
             datasource.forEach((repo) => {
               drawTrendline(repo.id);
             });
-          },
-        });
+          }
+        );
 
         $table.on("column-reorder", function () {
           datasource.forEach((repo) => {

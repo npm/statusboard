@@ -189,12 +189,30 @@ table.table-bordered.dataTable th {
 }
 
 .badge-dt {
-    display: inline-block;
+  display: inline-block;
   font-size: 12px;
   font-weight: 300;
   padding: 6px 12px;
 }
 
 .badge-warning {
-    color: white;
+  color: white;
+}
+
+div.dt-button-collection .dt-button {
+  color: #333;
+  padding: 6px 12px;
+}
+
+div.dt-button-collection .dt-button i {
+  color: transparent;
+}
+
+div.dt-button-collection .dt-button.active i {
+  color: inherit;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: inherit;
 }
