@@ -13,7 +13,7 @@
     "contributions": "node ./scripts/contributions.js",
     "stats": "node ./scripts/stats.js",
     "roadmap": "node ./scripts/roadmap.js",
-    "test": "npm run lint"
+    "test": "tap"
   },
   "repository": {
     "type": "git",
@@ -54,6 +54,7 @@
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1"
+    "eslint-plugin-promise": "^4.3.1",
+    "tap": "^15.0.5"
   }
 }

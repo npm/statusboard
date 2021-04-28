@@ -285,17 +285,12 @@
               defaultContent: "",
               render: function (data, type, row) {
                 if (!data) {
-                  return noDataHTML;
+                  return `<div class="badge badge-danger badge-dt">No data</div>`;
                 }
                 return data;
               },
             },
             { data: "pushed_at_diff", title: "Last Commit" },
-            {
-              data: "build_status",
-              defaultContent: "",
-              title: "Build Status",
-            },
             {
               data: "node",
               title: "Node Version",
@@ -359,7 +354,7 @@
             },
             {
               data: "deployment_status",
-              title: "Deployment Status",
+              title: "Build Status",
               defaultContent: "",
               render: function (data) {
                 if (!data) {
