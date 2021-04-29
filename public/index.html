@@ -44,14 +44,19 @@
   </head>
 
   <body>
-    <header>
-      <a href="https://npmjs.com/"><span>❤</span>npmjs.com</a>
-    </header>
-    <main>
-      <h2><strong>npm</strong> project statusboard</h2>
-      <small class="built"></small>
-      <table class="table table-striped table-bordered"></table>
-    </main>
+    <div class="container-fluid">
+      <header>
+        <a href="https://npmjs.com/"><span>❤</span>npmjs.com</a>
+      </header>
+      <main>
+        <h2><strong>npm</strong> project statusboard</h2>
+        <small class="built"></small>
+        <table
+          style="width: 100%"
+          class="table table-striped table-bordered"
+        ></table>
+      </main>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fnando/sparkline@0.3.10/dist/sparkline.min.js"></script>
     <script
@@ -101,6 +106,9 @@
         )}/${d.getUTCDate()}.json`;
 
       const zeroPad = (n) => (n >= 10 ? n : `0${n}`);
+
+      const shouldUseDisplayData = (type) =>
+        type === "display" || type === "filter";
 
       const drawTrendline = (repoId) => {
         const issuesTrendEl = document.querySelector(
@@ -216,30 +224,59 @@
               data: "name",
               title: "Repository",
               render: function (data, type, row) {
-                return `<a class="text-primary" href="https://github.com/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+                if (shouldUseDisplayData(type)) {
+                  return `<a class="text-primary" href="https://github.com/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+                }
+                return data;
               },
+              className: "text-left",
             },
             {
               data: "package",
               title: "Package",
               render: function (data, type, row) {
-                return `<a class="text-primary" href="https://www.npmjs.com/package/${data}" target="_blank">${data}</a>`;
+                if (shouldUseDisplayData(type)) {
+                  return `<a class="text-primary" href="https://www.npmjs.com/package/${data}" target="_blank">${data}</a>`;
+                }
+                return data;
+              },
+              className: "text-left",
+            },
+            {
+              data: "stargazers_count",
+              title: "Stars",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  return Intl.NumberFormat("en-US").format(data);
+                }
+                return data;
               },
             },
-            { data: "stargazers_count", title: "Stars" },
-            { data: "issues_count", title: "Issues" },
+            {
+              data: "issues_count",
+              title: "Issues",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  return Intl.NumberFormat("en-US").format(data);
+                }
+                return data;
+              },
+            },
             {
               data: "issue_list_by_date",
               title: "Issues Trend",
               defaultContent: "",
               render: function (data, type, row) {
-                const isZeroRange = issuesTrendlineByRepositoryMap[
-                  row.id
-                ].every((value) => value === 0);
-                if (!isZeroRange) {
-                  return `<svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = issuesTrendlineByRepositoryMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                  }
+                  return noDataHTML;
                 }
-                return noDataHTML;
+                return data;
               },
             },
             {
@@ -251,13 +288,16 @@
               title: "High Priority Issues Trend",
               defaultContent: "",
               render: function (data, type, row) {
-                const isZeroRange = highPriorityIssuesTrendlineMap[
-                  row.id
-                ].every((value) => value === 0);
-                if (!isZeroRange) {
-                  return `<svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = highPriorityIssuesTrendlineMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                  }
+                  return noDataHTML;
                 }
-                return noDataHTML;
+                return data;
               },
             },
             {
@@ -269,13 +309,16 @@
               title: "Needs Triage Issues Trend",
               defaultContent: "",
               render: function (data, type, row) {
-                const isZeroRange = needsTriageIssuesTrendlineMap[row.id].every(
-                  (value) => value === 0
-                );
-                if (!isZeroRange) {
-                  return `<svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = needsTriageIssuesTrendlineMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                  }
+                  return noDataHTML;
                 }
-                return noDataHTML;
+                return data;
               },
             },
             { data: "prs_count", title: "Pull Requests" },
@@ -284,8 +327,10 @@
               title: "License",
               defaultContent: "",
               render: function (data, type, row) {
-                if (!data) {
-                  return `<div class="badge badge-danger badge-dt">No data</div>`;
+                if (shouldUseDisplayData(type)) {
+                  if (!data) {
+                    return `<div class="badge badge-danger badge-dt">No data</div>`;
+                  }
                 }
                 return data;
               },
@@ -296,34 +341,36 @@
               title: "Node Version",
               defaultContent: "",
               render: function (data, type, row) {
-                if (!data) {
-                  return "";
+                if (data && shouldUseDisplayData(type)) {
+                  const cleanData = data.replace(/\s/g, "");
+                  let className = "";
+                  if (cleanData === ">=10") {
+                    className = "success";
+                  } else if (cleanData) {
+                    className = "danger";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
                 }
-                const cleanData = data.replace(/\s/g, "");
-                let className = "";
-                if (cleanData === ">=10") {
-                  className = "success";
-                } else if (cleanData) {
-                  className = "danger";
-                }
-                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                return data;
               },
             },
             {
               data: "downloads",
               title: "Downloads (/m)",
               defaultContent: 0,
-              render: function (data) {
-                return Intl.NumberFormat("en-US").format(data);
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  return Intl.NumberFormat("en-US").format(data);
+                }
+                return data;
               },
             },
             {
               data: "coverage",
               title: "Coverage",
-              defaultContent: "",
-              type: "html",
+              defaultContent: 0,
               render: function (data, type, row) {
-                if (data) {
+                if (shouldUseDisplayData(type)) {
                   let className = "";
                   if (data === 100) {
                     className = "success";
@@ -334,65 +381,94 @@
                   }
                   return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
                 }
-                return ""
+                return data;
               },
             },
-            { data: "size", title: "Size (KB)" },
+            {
+              data: "size",
+              title: "Size (KB)",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  return Intl.NumberFormat("en-US").format(data);
+                }
+                return data;
+              },
+            },
             {
               data: "version",
               title: "Version",
               defaultContent: "",
-              render: function (data) {
-                if (!data) {
-                  return;
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  const major = data.split(".")[0];
+                  return `<div class="badge badge-${
+                    major >= 1 ? "success" : "danger"
+                  } badge-dt">${data}</div>`;
                 }
-                const major = data.split(".")[0];
-                return `<div class="badge badge-${
-                  major >= 1 ? "success" : "danger"
-                } badge-dt">${data}</div>`;
+                return data;
               },
             },
             {
               data: "deployment_status",
               title: "Build Status",
               defaultContent: "",
-              render: function (data) {
-                if (!data) {
-                  return "";
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === "success") {
+                    className = "success";
+                  } else if (data === "pending") {
+                    className = "info";
+                  } else if (data === "failure") {
+                    className = "danger";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
                 }
-                let className = "";
                 if (data === "success") {
-                  className = "success";
-                } else if (data === "pending") {
-                  className = "info";
+                  return 0;
                 } else if (data === "failure") {
-                  className = "danger";
+                  return 1;
+                } else if (data === "pending") {
+                  return 2;
+                } else {
+                  return 3;
                 }
-                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                return data;
               },
             },
             {
               data: "default_branch",
               title: "Branch",
-              render: function (data) {
-                let className = "";
-                if (data === "master") {
-                  className = "danger";
-                } else if (data === "latest") {
-                  className = "warning";
-                } else if (data === "main") {
-                  className = "success";
-                } else {
-                  className = "dark";
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === "master") {
+                    className = "danger";
+                  } else if (data === "latest") {
+                    className = "warning";
+                  } else if (data === "main") {
+                    className = "success";
+                  } else {
+                    className = "dark";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
                 }
-                return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                if (data === "main") {
+                  return 0;
+                } else if (data === "latest") {
+                  return 1;
+                } else if (data === "master") {
+                  return 2;
+                } else {
+                  return 3;
+                }
+                return data;
               },
             },
           ],
           paging: false,
           colReorder: true,
           stateSave: true,
-          autoWidth: true,
           deferRender: true,
           scrollX: true,
           dom: "Bfrtip",
@@ -408,7 +484,7 @@
                 return `<i class="bi bi-check"></i> ${title}`;
               },
             },
-          ]
+          ],
         });
 
         $table.column(4).visible(false);

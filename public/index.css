@@ -136,6 +136,10 @@ table tr td {
   text-align: center;
 }
 
+.table td, .table th {
+    padding: .5rem;
+}
+
 table tr td span {
   /* background: #333; */
   color: white;
