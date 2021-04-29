@@ -21,6 +21,11 @@ const {
 const { mapToResponse, writeFile } = require('../lib/fetch')
 
 const exec = async () => {
+  const latestJSON = '../public/data/latest.json'
+  const now = new Date()
+  const month = String('00' + (now.getUTCMonth() + 1)).slice(-2)
+  const dest = `../public/data/${now.getUTCFullYear()}/${month}/${now.getUTCDate()}.json`
+  const dir = dest.split('/').slice(0, -1).join('/')
   try {
     const promises = repositories.map(async (repo) => {
       try {
@@ -103,7 +108,7 @@ const exec = async () => {
       created_at: new Date().toISOString()
     }
 
-    writeFile(result)
+    writeFile(result, { dir, dest, latestJSON })
   } catch (error) {
     console.log(error)
   }
