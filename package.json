@@ -4,15 +4,8 @@
   "description": "Community &amp; Open Source Statusboard",
   "main": "index.js",
   "scripts": {
-    "build": "node ./scripts/build.js",
     "serve": "http-server ./dist/",
-    "watch": "watch 'npm run build' ./scripts/",
     "fetch": "node ./scripts/fetch.js",
-    "agenda": "node ./scripts/agenda.js",
-    "epic": "node ./scripts/epic.js",
-    "contributions": "node ./scripts/contributions.js",
-    "stats": "node ./scripts/stats.js",
-    "roadmap": "node ./scripts/roadmap.js",
     "test": "tap"
   },
   "repository": {
@@ -33,21 +26,13 @@
     "@octokit/plugin-retry": "^3.0.7",
     "@octokit/plugin-throttling": "^3.4.1",
     "@octokit/rest": "^18.0.1",
-    "copyfiles": "^2.3.0",
     "date-fns": "^2.21.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "fetch-retry": "^4.1.1",
-    "handlebars": "^4.7.6",
     "http-server": "^0.12.3",
-    "minimist": "^1.2.5",
     "mkdirp": "^1.0.4",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.1",
-    "sleepover": "^1.1.4",
-    "sparkline": "^0.2.0",
-    "watch": "^1.0.2",
-    "zenhub-api": "^0.2.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "^7.24.0",
