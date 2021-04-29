@@ -253,6 +253,127 @@
               },
             },
             {
+              data: "license.key",
+              title: "License",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  if (!data) {
+                    return `<div class="badge badge-danger badge-dt">No data</div>`;
+                  }
+                }
+                return data;
+              },
+            },
+            {
+              data: "version",
+              title: "Version",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  const major = data.split(".")[0];
+                  return `<div class="badge badge-${
+                    major >= 1 ? "success" : "danger"
+                  } badge-dt">${data}</div>`;
+                }
+                return data;
+              },
+            },
+            {
+              data: "default_branch",
+              title: "Branch",
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === "master") {
+                    className = "danger";
+                  } else if (data === "latest") {
+                    className = "warning";
+                  } else if (data === "main") {
+                    className = "success";
+                  } else {
+                    className = "dark";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                }
+                if (data === "main") {
+                  return 0;
+                } else if (data === "latest") {
+                  return 1;
+                } else if (data === "master") {
+                  return 2;
+                } else {
+                  return 3;
+                }
+                return data;
+              },
+            },
+            {
+              data: "coverage",
+              title: "Coverage",
+              defaultContent: 0,
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === 100) {
+                    className = "success";
+                  } else if (data > 80) {
+                    className = "warning";
+                  } else {
+                    className = "danger";
+                  }
+                  return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+                }
+                return data;
+              },
+            },
+            {
+              data: "deployment_status",
+              title: "Build Status",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === "success") {
+                    className = "success";
+                  } else if (data === "pending") {
+                    className = "info";
+                  } else if (data === "failure") {
+                    className = "danger";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                }
+                if (data === "success") {
+                  return 0;
+                } else if (data === "failure") {
+                  return 1;
+                } else if (data === "pending") {
+                  return 2;
+                } else {
+                  return 3;
+                }
+                return data;
+              },
+            },
+            {
+              data: "node",
+              title: "Node Version",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  const cleanData = data.replace(/\s/g, "");
+                  let className = "";
+                  if (cleanData === ">=10") {
+                    className = "success";
+                  } else if (cleanData) {
+                    className = "danger";
+                  }
+                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                }
+                return data;
+              },
+            },
+            {
               data: "issues_count",
               title: "Issues",
               render: function (data, type, row) {
@@ -322,38 +443,7 @@
               },
             },
             { data: "prs_count", title: "Pull Requests" },
-            {
-              data: "license.key",
-              title: "License",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  if (!data) {
-                    return `<div class="badge badge-danger badge-dt">No data</div>`;
-                  }
-                }
-                return data;
-              },
-            },
             { data: "pushed_at_diff", title: "Last Commit" },
-            {
-              data: "node",
-              title: "Node Version",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  const cleanData = data.replace(/\s/g, "");
-                  let className = "";
-                  if (cleanData === ">=10") {
-                    className = "success";
-                  } else if (cleanData) {
-                    className = "danger";
-                  }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
-                }
-                return data;
-              },
-            },
             {
               data: "downloads",
               title: "Downloads (/m)",
@@ -366,101 +456,11 @@
               },
             },
             {
-              data: "coverage",
-              title: "Coverage",
-              defaultContent: 0,
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  let className = "";
-                  if (data === 100) {
-                    className = "success";
-                  } else if (data > 80) {
-                    className = "warning";
-                  } else {
-                    className = "danger";
-                  }
-                  return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
-                }
-                return data;
-              },
-            },
-            {
               data: "size",
               title: "Size (KB)",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
                   return Intl.NumberFormat("en-US").format(data);
-                }
-                return data;
-              },
-            },
-            {
-              data: "version",
-              title: "Version",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  const major = data.split(".")[0];
-                  return `<div class="badge badge-${
-                    major >= 1 ? "success" : "danger"
-                  } badge-dt">${data}</div>`;
-                }
-                return data;
-              },
-            },
-            {
-              data: "deployment_status",
-              title: "Build Status",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  let className = "";
-                  if (data === "success") {
-                    className = "success";
-                  } else if (data === "pending") {
-                    className = "info";
-                  } else if (data === "failure") {
-                    className = "danger";
-                  }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
-                }
-                if (data === "success") {
-                  return 0;
-                } else if (data === "failure") {
-                  return 1;
-                } else if (data === "pending") {
-                  return 2;
-                } else {
-                  return 3;
-                }
-                return data;
-              },
-            },
-            {
-              data: "default_branch",
-              title: "Branch",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  let className = "";
-                  if (data === "master") {
-                    className = "danger";
-                  } else if (data === "latest") {
-                    className = "warning";
-                  } else if (data === "main") {
-                    className = "success";
-                  } else {
-                    className = "dark";
-                  }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
-                }
-                if (data === "main") {
-                  return 0;
-                } else if (data === "latest") {
-                  return 1;
-                } else if (data === "master") {
-                  return 2;
-                } else {
-                  return 3;
                 }
                 return data;
               },
@@ -479,6 +479,16 @@
           },
           buttons: [
             {
+              text: "Toggle Trendlines",
+              action: function (e, dt, node, config) {
+                const trendlineCols = [10, 12, 14];
+                trendlineCols.forEach((colIdx) => {
+                  const current = dt.column(colIdx);
+                  current.visible(!current.visible());
+                });
+              },
+            },
+            {
               extend: "colvis",
               columnText: function (dt, idx, title) {
                 return `<i class="bi bi-check"></i> ${title}`;
@@ -487,9 +497,9 @@
           ],
         });
 
-        $table.column(4).visible(false);
-        $table.column(6).visible(false);
-        $table.column(8).visible(false);
+        $table.column(10).visible(false);
+        $table.column(12).visible(false);
+        $table.column(14).visible(false);
 
         $table.on(
           "column-visibility.dt",
