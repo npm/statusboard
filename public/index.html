@@ -170,12 +170,16 @@
               current.issue_list_by_date.length - days
             );
             console.log(issuesTrendlineByRepositoryMap);
-            highPriorityIssuesTrendlineMap[id] = [
-              ...current.high_priority_issues_by_date,
-            ].slice(0, days);
-            needsTriageIssuesTrendlineMap[id] = [
-              ...current.needs_triage_issues_by_date,
-            ].slice(0, days);
+            highPriorityIssuesTrendlineMap[
+              id
+            ] = current.high_priority_issues_by_date.slice(
+              current.high_priority_issues_by_date.length - days
+            );
+            needsTriageIssuesTrendlineMap[
+              id
+            ] = current.needs_triage_issues_by_date.slice(
+              current.needs_triage_issues_by_date.length - days
+            );
             drawTrendline(id);
           });
         };
@@ -221,20 +225,17 @@
         repoIds.forEach((id) => {
           const current = latestData[id];
           issuesTrendlineByRepositoryMap[id] = current.issue_list_by_date.slice(
-            0,
-            DEFAULT_TRENDLINE_DAYS
+            current.issue_list_by_date.length - DEFAULT_TRENDLINE_DAYS
           );
           highPriorityIssuesTrendlineMap[
             id
           ] = current.high_priority_issues_by_date.slice(
-            0,
-            DEFAULT_TRENDLINE_DAYS
+            current.high_priority_issues_by_date.length - DEFAULT_TRENDLINE_DAYS
           );
           needsTriageIssuesTrendlineMap[
             id
           ] = current.needs_triage_issues_by_date.slice(
-            0,
-            DEFAULT_TRENDLINE_DAYS
+            current.needs_triage_issues_by_date.length - DEFAULT_TRENDLINE_DAYS
           );
           //   noLabelIssuesTrendlineMap[id] = current.no_label_issues_by_date
           //     .slice(0, DEFAULT_TRENDLINE_DAYS)
@@ -491,7 +492,13 @@
                     row.id
                   ].every((value) => value === 0);
                   if (!isZeroRange) {
-                    return `<svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                    return `<div id="highPrioTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
                   }
                   return noDataHTML;
                 }
@@ -512,7 +519,13 @@
                     row.id
                   ].every((value) => value === 0);
                   if (!isZeroRange) {
-                    return `<svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                    return `<div id="triageTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
                   }
                   return noDataHTML;
                 }
@@ -702,7 +715,31 @@
             sparkline.sparkline(
               highPrioTrendEl,
               highPriorityIssuesTrendlineMap[repoId],
-              { interactive: true }
+              {
+                onmousemove: function (event, datapoint) {
+                  const elId = `highPrioTrendline${repoId}`;
+                  let $el = $(document.querySelector(`#${elId}`));
+                  $(document.querySelector(".dataTables_scrollBody")).addClass(
+                    "with-tooltip"
+                  );
+                  $el = $el.find(".trendline-data");
+                  $el.addClass("active");
+                  $el
+                    .find(`#trendlineDate${repoId}`)
+                    .html(currentTrendlineDates[datapoint.index]);
+                  $el
+                    .find(`#trendlineValue${repoId}`)
+                    .html(`${datapoint.value} Issues`);
+                },
+                onmouseout: function () {
+                  const elId = `highPrioTrendline${repoId}`;
+                  const $el = $(document.querySelector(`#${elId}`));
+                  $(
+                    document.querySelector(".dataTables_scrollBody")
+                  ).removeClass("with-tooltip");
+                  $el.find(".trendline-data").removeClass("active");
+                },
+              }
             );
           }
 
@@ -710,7 +747,31 @@
             sparkline.sparkline(
               needsTriageTrendEl,
               needsTriageIssuesTrendlineMap[repoId],
-              { interactive: true }
+              {
+                onmousemove: function (event, datapoint) {
+                  const elId = `triageTrendline${repoId}`;
+                  let $el = $(document.querySelector(`#${elId}`));
+                  $(document.querySelector(".dataTables_scrollBody")).addClass(
+                    "with-tooltip"
+                  );
+                  $el = $el.find(".trendline-data");
+                  $el.addClass("active");
+                  $el
+                    .find(`#trendlineDate${repoId}`)
+                    .html(currentTrendlineDates[datapoint.index]);
+                  $el
+                    .find(`#trendlineValue${repoId}`)
+                    .html(`${datapoint.value} Issues`);
+                },
+                onmouseout: function () {
+                  const elId = `triageTrendline${repoId}`;
+                  const $el = $(document.querySelector(`#${elId}`));
+                  $(
+                    document.querySelector(".dataTables_scrollBody")
+                  ).removeClass("with-tooltip");
+                  $el.find(".trendline-data").removeClass("active");
+                },
+              }
             );
           }
         };

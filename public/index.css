@@ -252,6 +252,7 @@ div.dt-button-collection .dt-button.active i {
   visibility: hidden;
   left: 0;
   right: 0;
+  width: 100px;
   height: 52px;
   border: 1px solid transparent;
   padding: 8px 10px;
