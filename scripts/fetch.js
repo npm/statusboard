@@ -1,13 +1,15 @@
 require('dotenv').config()
 
-// const repositories = require('../public/data/maintained.json')
+const repositories = require('../public/data/maintained.json')
 
-const repositories = [{
-  name: 'joi-env',
-  description: 'A joi extension to allow reading values from environment variables',
-  repository: 'https://github.com/npm/joi-env',
-  package: '@npmcorp/joi-env'
-}]
+// const repositories = [
+//   {
+//     name: 'cli',
+//     description: 'the package manager for JavaScript',
+//     repository: 'https://github.com/npm/cli',
+//     package: 'npm'
+//   }
+// ]
 
 const {
   getPullRequests,
@@ -51,6 +53,9 @@ const exec = async () => {
           name,
           'Needs Triage'
         )
+
+        // const noLabelIssues = await getNoLabelIssues(owner, name)
+        // console.log(noLabelIssues)
 
         console.log(
           'Fetching coverage:',

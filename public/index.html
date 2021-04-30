@@ -89,6 +89,7 @@
       const issuesTrendlineByRepositoryMap = {};
       const highPriorityIssuesTrendlineMap = {};
       const needsTriageIssuesTrendlineMap = {};
+      //   const noLabelIssuesTrendlineMap = {};
 
       const noDataHTML = `<div class="badge badge-dark badge-dt">No data</div>`;
 
@@ -97,7 +98,7 @@
         for (let i = 1; i < days; i++) {
           range.push(new Date(start - i * DAY));
         }
-        return range;
+        return range.reverse();
       };
 
       const toDatePath = (d) =>
@@ -105,46 +106,15 @@
           d.getUTCMonth() + 1
         )}/${d.getUTCDate()}.json`;
 
+      const toDisplayDate = (d) =>
+        `${zeroPad(d.getUTCMonth() + 1)}/${d.getUTCDate()}/${zeroPad(
+          d.getUTCFullYear()
+        )}`;
+
       const zeroPad = (n) => (n >= 10 ? n : `0${n}`);
 
       const shouldUseDisplayData = (type) =>
         type === "display" || type === "filter";
-
-      const drawTrendline = (repoId) => {
-        const issuesTrendEl = document.querySelector(
-          `#issuesTrendline${repoId}`
-        );
-        const highPrioTrendEl = document.querySelector(
-          `#highPrioIssues${repoId}`
-        );
-        const needsTriageTrendEl = document.querySelector(
-          `#needsTriageIssues${repoId}`
-        );
-
-        if (issuesTrendEl) {
-          sparkline.sparkline(
-            issuesTrendEl,
-            issuesTrendlineByRepositoryMap[repoId],
-            { interactive: true }
-          );
-        }
-
-        if (highPrioTrendEl) {
-          sparkline.sparkline(
-            highPrioTrendEl,
-            highPriorityIssuesTrendlineMap[repoId],
-            { interactive: true }
-          );
-        }
-
-        if (needsTriageTrendEl) {
-          sparkline.sparkline(
-            needsTriageTrendEl,
-            needsTriageIssuesTrendlineMap[repoId],
-            { interactive: true }
-          );
-        }
-      };
 
       let $table;
 
@@ -152,6 +122,8 @@
         const MAX_TREND_DAYS = 90;
         const DEFAULT_TRENDLINE_DAYS = 7;
         const response = await fetch("data/latest.json");
+        let currentTrendlineDates = [];
+
         let {
           data: latestData,
           created_at: latestDate,
@@ -169,7 +141,14 @@
         }, {});
         latestDate = new Date(latestDate);
 
-        const datePaths = getDateRangeList(MAX_TREND_DAYS, latestDate).map(toDatePath);
+        const datePaths = getDateRangeList(MAX_TREND_DAYS, latestDate).map(
+          toDatePath
+        );
+
+        currentTrendlineDates = getDateRangeList(
+          DEFAULT_TRENDLINE_DAYS,
+          latestDate
+        ).map(toDisplayDate);
 
         const repoByDates = await Promise.all(
           datePaths.map(async (path) => {
@@ -180,6 +159,26 @@
             return [];
           })
         );
+
+        const setTrendlineData = (repoIds, days) => {
+          repoIds.forEach((id) => {
+            const current = latestData[id];
+            console.log(current.issue_list_by_date);
+            issuesTrendlineByRepositoryMap[
+              id
+            ] = current.issue_list_by_date.slice(
+              current.issue_list_by_date.length - days
+            );
+            console.log(issuesTrendlineByRepositoryMap);
+            highPriorityIssuesTrendlineMap[id] = [
+              ...current.high_priority_issues_by_date,
+            ].slice(0, days);
+            needsTriageIssuesTrendlineMap[id] = [
+              ...current.needs_triage_issues_by_date,
+            ].slice(0, days);
+            drawTrendline(id);
+          });
+        };
 
         // each row in repoByDates represents the date at datePaths[i]
         repoByDates.forEach((repoByDate, dateIdx) => {
@@ -193,32 +192,72 @@
               current.issue_list_by_date = new Array(MAX_TREND_DAYS).fill(0);
 
             if (!current.high_priority_issues_by_date)
-              current.high_priority_issues_by_date = new Array(MAX_TREND_DAYS).fill(0);
+              current.high_priority_issues_by_date = new Array(
+                MAX_TREND_DAYS
+              ).fill(0);
 
             if (!current.needs_triage_issues_by_date)
-              current.needs_triage_issues_by_date = new Array(MAX_TREND_DAYS).fill(0);
+              current.needs_triage_issues_by_date = new Array(
+                MAX_TREND_DAYS
+              ).fill(0);
+
+            // if (!current.no_label_issues_by_date)
+            //   current.no_label_issues_by_date = new Array(MAX_TREND_DAYS).fill(
+            //     0
+            //   );
 
             current.issue_list_by_date[dateIdx] = repo.issues_count || 0;
             current.high_priority_issues_by_date[dateIdx] =
               repo.high_priority_issues_count || 0;
             current.needs_triage_issues_by_date[dateIdx] =
               repo.needs_triage_issues_count || 0;
-
-            issuesTrendlineByRepositoryMap[
-              repo.id
-            ] = current.issue_list_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
-
-            highPriorityIssuesTrendlineMap[
-              repo.id
-            ] = current.high_priority_issues_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
-
-            needsTriageIssuesTrendlineMap[
-              repo.id
-            ] = current.needs_triage_issues_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
+            // current.no_label_issues_by_date[dateIdx] =
+            //   repo.no_label_issues_count || 0;
           });
         });
 
         const repoIds = Object.keys(latestData);
+
+        repoIds.forEach((id) => {
+          const current = latestData[id];
+          issuesTrendlineByRepositoryMap[id] = current.issue_list_by_date.slice(
+            0,
+            DEFAULT_TRENDLINE_DAYS
+          );
+          highPriorityIssuesTrendlineMap[
+            id
+          ] = current.high_priority_issues_by_date.slice(
+            0,
+            DEFAULT_TRENDLINE_DAYS
+          );
+          needsTriageIssuesTrendlineMap[
+            id
+          ] = current.needs_triage_issues_by_date.slice(
+            0,
+            DEFAULT_TRENDLINE_DAYS
+          );
+          //   noLabelIssuesTrendlineMap[id] = current.no_label_issues_by_date
+          //     .slice(0, DEFAULT_TRENDLINE_DAYS)
+          //     .reverse();
+        });
+
+        // issuesTrendlineByRepositoryMap[
+        //   repo.id
+        // ] = current.issue_list_by_date
+        //   .slice(0, DEFAULT_TRENDLINE_DAYS)
+        //   .reverse();
+
+        // highPriorityIssuesTrendlineMap[
+        //   repo.id
+        // ] = current.high_priority_issues_by_date
+        //   .slice(0, DEFAULT_TRENDLINE_DAYS)
+        //   .reverse();
+
+        // needsTriageIssuesTrendlineMap[
+        //   repo.id
+        // ] = current.needs_triage_issues_by_date
+        //   .slice(0, DEFAULT_TRENDLINE_DAYS)
+        //   ;
 
         const datasource = Object.values(latestData);
 
@@ -365,13 +404,19 @@
               title: "Node Version",
               defaultContent: "",
               render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  const cleanData = data.replace(/\s/g, "");
-                  let className = "";
-                  if (cleanData === ">=10") {
-                    className = "success";
-                  } else if (cleanData) {
+                let className = "";
+                let cleanData = "";
+                if (shouldUseDisplayData(type)) {
+                  if (!data) {
+                    data = "No Data";
                     className = "danger";
+                  } else {
+                    cleanData = data.replace(/\s/g, "");
+                    if (cleanData === ">=10") {
+                      className = "success";
+                    } else if (cleanData) {
+                      className = "danger";
+                    }
                   }
                   return `<div class="badge badge-${className} badge-dt">${data}</div>`;
                 }
@@ -398,13 +443,40 @@
                     row.id
                   ].every((value) => value === 0);
                   if (!isZeroRange) {
-                    return `<svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+                    return `<div id="trendlineContainer${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
                   }
                   return noDataHTML;
                 }
                 return data;
               },
             },
+            // {
+            //   data: "no_label_issues_count",
+            //   title: "Issues Missing Labels",
+            // },
+            // {
+            //   data: "no_label_issues_by_date",
+            //   title: "Issues Missing Labels Trend",
+            //   defaultContent: "",
+            //   render: function (data, type, row) {
+            //     if (shouldUseDisplayData(type)) {
+            //       const isZeroRange = noLabelIssuesTrendlineMap[row.id].every(
+            //         (value) => value === 0
+            //       );
+            //       if (!isZeroRange) {
+            //         return `<svg id="noLabelIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
+            //       }
+            //       return noDataHTML;
+            //     }
+            //     return data;
+            //   },
+            // },
             {
               data: "high_priority_issues_count",
               title: "High Priority Issues",
@@ -507,21 +579,48 @@
             {
               extend: "collection",
               text: "Trend Date Ranges",
+              className: "time-button-collection",
               buttons: [
                 {
                   text: `<span><i class="bi bi-check"></i> 7 Days</span>`,
                   action: function (e, dt, node, config) {
-                    console.log(e, dt, node);
+                    let $el = $(node);
+                    $el.siblings().removeClass("active");
+                    $el.addClass("active");
+                    setTrendlineData(repoIds, 7);
+                    currentTrendlineDates = getDateRangeList(7, latestDate).map(
+                      toDisplayDate
+                    );
                   },
                   className: "active",
                 },
                 {
                   text: `<span><i class="bi bi-check"></i> 30 Days</span>`,
-                  action: function () {},
+                  action: function (e, dt, node, config) {
+                    let $el = $(node);
+                    $el.siblings().removeClass("active");
+                    $el.addClass("active");
+                    setTrendlineData(repoIds, 30);
+                    currentTrendlineDates = getDateRangeList(
+                      30,
+                      latestDate
+                    ).map(toDisplayDate);
+                    console.log(currentTrendlineDates);
+                  },
                 },
                 {
                   text: `<span><i class="bi bi-check"></i> 90 Days</span>`,
-                  action: function () {},
+                  action: function (e, dt, node, config) {
+                    let $el = $(node);
+                    $el.siblings().removeClass("active");
+                    $el.addClass("active");
+                    setTrendlineData(repoIds, 90);
+                    currentTrendlineDates = getDateRangeList(
+                      90,
+                      latestDate
+                    ).map(toDisplayDate);
+                    console.log(currentTrendlineDates);
+                  },
                 },
               ],
             },
@@ -538,6 +637,7 @@
         $table.column(10).visible(false);
         $table.column(12).visible(false);
         $table.column(14).visible(false);
+        // $table.column(16).visible(false);
 
         $table.on(
           "column-visibility.dt",
@@ -554,6 +654,66 @@
             drawTrendline(repo.id);
           });
         });
+
+        const drawTrendline = (repoId, data = { value: 0 }) => {
+          const issuesTrendEl = document.querySelector(
+            `#issuesTrendline${repoId}`
+          );
+          const highPrioTrendEl = document.querySelector(
+            `#highPrioIssues${repoId}`
+          );
+          const needsTriageTrendEl = document.querySelector(
+            `#needsTriageIssues${repoId}`
+          );
+
+          if (issuesTrendEl) {
+            sparkline.sparkline(
+              issuesTrendEl,
+              issuesTrendlineByRepositoryMap[repoId],
+              {
+                onmousemove: function (event, datapoint) {
+                  const elId = `trendlineContainer${repoId}`;
+                  let $el = $(document.querySelector(`#${elId}`));
+                  $(document.querySelector(".dataTables_scrollBody")).addClass(
+                    "with-tooltip"
+                  );
+                  $el = $el.find(".trendline-data");
+                  $el.addClass("active");
+                  $el
+                    .find(`#trendlineDate${repoId}`)
+                    .html(currentTrendlineDates[datapoint.index]);
+                  $el
+                    .find(`#trendlineValue${repoId}`)
+                    .html(`${datapoint.value} Issues`);
+                },
+                onmouseout: function () {
+                  const elId = `trendlineContainer${repoId}`;
+                  const $el = $(document.querySelector(`#${elId}`));
+                  $(
+                    document.querySelector(".dataTables_scrollBody")
+                  ).removeClass("with-tooltip");
+                  $el.find(".trendline-data").removeClass("active");
+                },
+              }
+            );
+          }
+
+          if (highPrioTrendEl) {
+            sparkline.sparkline(
+              highPrioTrendEl,
+              highPriorityIssuesTrendlineMap[repoId],
+              { interactive: true }
+            );
+          }
+
+          if (needsTriageTrendEl) {
+            sparkline.sparkline(
+              needsTriageTrendEl,
+              needsTriageIssuesTrendlineMap[repoId],
+              { interactive: true }
+            );
+          }
+        };
       });
     </script>
   </body>

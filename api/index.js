@@ -68,14 +68,34 @@ async function getRepo (owner, repo) {
 
 async function getRepoIssues (owner, repo, labels = '') {
   try {
-    return octokit.issues
-      .listForRepo({ owner, repo, state: 'open', labels })
-      .then((issues) => issues.data)
+    return octokit.paginate('GET /repos/{owner}/{repo}/issues', {
+      owner,
+      repo,
+      state: 'open',
+      labels
+    })
   } catch (error) {
     console.log(error)
     return {}
   }
 }
+
+// TODO: implement
+// async function getNoLabelIssues (owner, repo) {
+//   try {
+//     return octokit.paginate('GET /repos/{owner}/{repo}/issues?q=is%3Aissue+is%3Aopen+no%3Alabel', {
+//       owner,
+//       repo,
+//       state: 'open',
+//       q: 'no:label',
+//       page: 1,
+//       per_page: 5
+//     })
+//   } catch (error) {
+//     console.log(error)
+//     return {}
+//   }
+// }
 
 async function getDeployments (owner, repo, ref) {
   try {
@@ -123,13 +143,13 @@ async function getPkgData (pkg) {
 
 async function getDownloads (pkg = '') {
   const response = await fetch(
-      `https://api.npmjs.org/downloads/point/last-month/${pkg}`
+    `https://api.npmjs.org/downloads/point/last-month/${pkg}`
   )
 
   if (!response.ok) {
     console.warn(
       'No download data:',
-        `https://api.npmjs.org/downloads/point/last-month/${pkg}`
+      `https://api.npmjs.org/downloads/point/last-month/${pkg}`
     )
     return
   }

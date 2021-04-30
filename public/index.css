@@ -6,10 +6,11 @@
 
 html {
   font-size: 12px;
+  box-sizing: border-box;
+  color: #333;
 }
 
 body {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
@@ -137,9 +138,15 @@ table tr td {
   text-align: center;
 }
 
+.table-bordered thead td,
+.table-bordered thead th {
+  border-bottom-width: 1px;
+  border-top: 0;
+}
+
 .table td,
 .table th {
-  padding: 0.5rem;
+  padding: 6px 12px;
 }
 
 .table .sorting::after,
@@ -229,7 +236,67 @@ div.dt-button-collection .dt-button.active i {
 }
 
 #DataTables_Table_0_filter {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.trendline-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.trendline-data {
+  position: absolute;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  height: 52px;
+  border: 1px solid transparent;
+  padding: 8px 10px;
+  top: -54px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.trendline-data span {
+  padding: 0;
+  text-align: left;
+}
+
+.trendline-data.active {
+  visibility: visible;
+  border-color: #c6cbd1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.dataTables_scrollBody.with-tooltip {
+  overflow: visible !important;
+}
+
+.trendline-data.active span {
+  color: inherit;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f6f8fa;
+}
+
+.trendline-date {
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.trendline-value {
+  font-weight: bold;
+  font-size: 10px;
 }
