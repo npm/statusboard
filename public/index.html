@@ -149,6 +149,8 @@
       let $table;
 
       $(document).ready(async function () {
+        const MAX_TREND_DAYS = 90;
+        const DEFAULT_TRENDLINE_DAYS = 7;
         const response = await fetch("data/latest.json");
         let {
           data: latestData,
@@ -167,12 +169,15 @@
         }, {});
         latestDate = new Date(latestDate);
 
-        const datePaths = getDateRangeList(30, latestDate).map(toDatePath);
+        const datePaths = getDateRangeList(MAX_TREND_DAYS, latestDate).map(toDatePath);
 
         const repoByDates = await Promise.all(
           datePaths.map(async (path) => {
             const r = await fetch(`data/${path}`);
-            return r.json();
+            if (r.ok) {
+              return r.json();
+            }
+            return [];
           })
         );
 
@@ -185,13 +190,13 @@
             if (!current) return;
 
             if (!current.issue_list_by_date)
-              current.issue_list_by_date = new Array(30).fill(0);
+              current.issue_list_by_date = new Array(MAX_TREND_DAYS).fill(0);
 
             if (!current.high_priority_issues_by_date)
-              current.high_priority_issues_by_date = new Array(30).fill(0);
+              current.high_priority_issues_by_date = new Array(MAX_TREND_DAYS).fill(0);
 
             if (!current.needs_triage_issues_by_date)
-              current.needs_triage_issues_by_date = new Array(30).fill(0);
+              current.needs_triage_issues_by_date = new Array(MAX_TREND_DAYS).fill(0);
 
             current.issue_list_by_date[dateIdx] = repo.issues_count || 0;
             current.high_priority_issues_by_date[dateIdx] =
@@ -201,15 +206,15 @@
 
             issuesTrendlineByRepositoryMap[
               repo.id
-            ] = current.issue_list_by_date.slice(0, 7).reverse();
+            ] = current.issue_list_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
 
             highPriorityIssuesTrendlineMap[
               repo.id
-            ] = current.high_priority_issues_by_date.slice(0, 7).reverse();
+            ] = current.high_priority_issues_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
 
             needsTriageIssuesTrendlineMap[
               repo.id
-            ] = current.needs_triage_issues_by_date.slice(0, 7).reverse();
+            ] = current.needs_triage_issues_by_date.slice(0, DEFAULT_TRENDLINE_DAYS).reverse();
           });
         });
 
@@ -479,7 +484,18 @@
           },
           buttons: [
             {
-              text: "Toggle Trendlines",
+              extend: "colvis",
+              columnText: function (dt, idx, title) {
+                return `<i class="bi bi-check"></i> ${title}`;
+              },
+            },
+          ],
+        });
+
+        new $.fn.dataTable.Buttons($table, {
+          buttons: [
+            {
+              text: "Show/Hide All Trendlines",
               action: function (e, dt, node, config) {
                 const trendlineCols = [10, 12, 14];
                 trendlineCols.forEach((colIdx) => {
@@ -489,13 +505,35 @@
               },
             },
             {
-              extend: "colvis",
-              columnText: function (dt, idx, title) {
-                return `<i class="bi bi-check"></i> ${title}`;
-              },
+              extend: "collection",
+              text: "Trend Date Ranges",
+              buttons: [
+                {
+                  text: `<span><i class="bi bi-check"></i> 7 Days</span>`,
+                  action: function (e, dt, node, config) {
+                    console.log(e, dt, node);
+                  },
+                  className: "active",
+                },
+                {
+                  text: `<span><i class="bi bi-check"></i> 30 Days</span>`,
+                  action: function () {},
+                },
+                {
+                  text: `<span><i class="bi bi-check"></i> 90 Days</span>`,
+                  action: function () {},
+                },
+              ],
             },
           ],
         });
+
+        $table
+          .buttons(1, null)
+          .container()
+          .prependTo(
+            $("#DataTables_Table_0_filter", $table.table().container())
+          );
 
         $table.column(10).visible(false);
         $table.column(12).visible(false);

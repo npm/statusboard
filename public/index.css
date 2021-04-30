@@ -12,7 +12,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* font-family: "Lucida Grande", sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 body:before {
@@ -28,7 +29,7 @@ body:before {
 }
 
 main {
-  padding: 30px 40px 50px;
+  padding: 1rem;
 }
 
 .built {
@@ -225,4 +226,10 @@ div.dt-button-collection .dt-button.active i {
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: inherit;
+}
+
+#DataTables_Table_0_filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
 }
