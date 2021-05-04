@@ -163,13 +163,11 @@
         const setTrendlineData = (repoIds, days) => {
           repoIds.forEach((id) => {
             const current = latestData[id];
-            console.log(current.issue_list_by_date);
             issuesTrendlineByRepositoryMap[
               id
             ] = current.issue_list_by_date.slice(
               current.issue_list_by_date.length - days
             );
-            console.log(issuesTrendlineByRepositoryMap);
             highPriorityIssuesTrendlineMap[
               id
             ] = current.high_priority_issues_by_date.slice(
@@ -226,8 +224,6 @@
           });
         });
 
-        console.log(noLabelIssuesTrendlineMap);
-
         const repoIds = Object.keys(latestData);
 
         repoIds.forEach((id) => {
@@ -248,7 +244,6 @@
           noLabelIssuesTrendlineMap[id] = current.no_label_issues_by_date.slice(
             current.no_label_issues_by_date.length - DEFAULT_TRENDLINE_DAYS
           );
-          console.log(noLabelIssuesTrendlineMap[id]);
         });
 
         // issuesTrendlineByRepositoryMap[
@@ -633,7 +628,6 @@
                       30,
                       latestDate
                     ).map(toDisplayDate);
-                    console.log(currentTrendlineDates);
                   },
                 },
                 {
@@ -647,7 +641,6 @@
                       90,
                       latestDate
                     ).map(toDisplayDate);
-                    console.log(currentTrendlineDates);
                   },
                 },
               ],

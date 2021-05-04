@@ -1,15 +1,15 @@
 require('dotenv').config()
 
-const repositories = require('../public/data/maintained.json')
+// const repositories = require('../public/data/maintained.json')
 
-// const repositories = [
-//   {
-//     name: 'cli',
-//     description: 'the package manager for JavaScript',
-//     repository: 'https://github.com/npm/cli',
-//     package: 'npm'
-//   }
-// ]
+const repositories = [
+  {
+    name: 'cli',
+    description: 'the package manager for JavaScript',
+    repository: 'https://github.com/npm/cli',
+    package: 'npm'
+  }
+]
 
 const {
   getPullRequests,
