@@ -47,7 +47,9 @@ const octokit = new Octokit({
 
 async function getPullRequests (owner, repo) {
   try {
-    return octokit.pulls.list({ owner, repo, per_page: 100 })
+    return octokit.paginate(octokit.pulls.list, {
+      owner, repo
+    })
   } catch (error) {
     console.log(error)
     return []
@@ -80,22 +82,19 @@ async function getRepoIssues (owner, repo, labels = '') {
   }
 }
 
-// TODO: implement
-// async function getNoLabelIssues (owner, repo) {
-//   try {
-//     return octokit.paginate('GET /repos/{owner}/{repo}/issues?q=is%3Aissue+is%3Aopen+no%3Alabel', {
-//       owner,
-//       repo,
-//       state: 'open',
-//       q: 'no:label',
-//       page: 1,
-//       per_page: 5
-//     })
-//   } catch (error) {
-//     console.log(error)
-//     return {}
-//   }
-// }
+async function getNoLabelIssues (owner, repo) {
+  const repoName = `${owner}/${repo}`
+  try {
+    return octokit
+      .paginate(octokit.search.issuesAndPullRequests, {
+        q: `repo:${repoName}+is:issue+is:open+no:label`
+      })
+      .then((issues) => issues)
+  } catch (error) {
+    console.log(error)
+    return {}
+  }
+}
 
 async function getDeployments (owner, repo, ref) {
   try {
@@ -164,5 +163,6 @@ module.exports = {
   getCoveralls,
   getPullRequests,
   getRepo,
-  getDownloads
+  getDownloads,
+  getNoLabelIssues
 }

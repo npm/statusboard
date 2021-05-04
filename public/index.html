@@ -89,7 +89,7 @@
       const issuesTrendlineByRepositoryMap = {};
       const highPriorityIssuesTrendlineMap = {};
       const needsTriageIssuesTrendlineMap = {};
-      //   const noLabelIssuesTrendlineMap = {};
+      const noLabelIssuesTrendlineMap = {};
 
       const noDataHTML = `<div class="badge badge-dark badge-dt">No data</div>`;
 
@@ -180,6 +180,12 @@
             ] = current.needs_triage_issues_by_date.slice(
               current.needs_triage_issues_by_date.length - days
             );
+            noLabelIssuesTrendlineMap[
+              id
+            ] = current.no_label_issues_by_date.slice(
+              current.no_label_issues_by_date.length - days
+            );
+            console.log(noLabelIssuesTrendlineMap[id]);
             drawTrendline(id);
           });
         };
@@ -205,20 +211,22 @@
                 MAX_TREND_DAYS
               ).fill(0);
 
-            // if (!current.no_label_issues_by_date)
-            //   current.no_label_issues_by_date = new Array(MAX_TREND_DAYS).fill(
-            //     0
-            //   );
+            if (!current.no_label_issues_by_date)
+              current.no_label_issues_by_date = new Array(MAX_TREND_DAYS).fill(
+                0
+              );
 
             current.issue_list_by_date[dateIdx] = repo.issues_count || 0;
             current.high_priority_issues_by_date[dateIdx] =
               repo.high_priority_issues_count || 0;
             current.needs_triage_issues_by_date[dateIdx] =
               repo.needs_triage_issues_count || 0;
-            // current.no_label_issues_by_date[dateIdx] =
-            //   repo.no_label_issues_count || 0;
+            current.no_label_issues_by_date[dateIdx] =
+              repo.no_label_issues_count || 0;
           });
         });
+
+        console.log(noLabelIssuesTrendlineMap);
 
         const repoIds = Object.keys(latestData);
 
@@ -237,9 +245,10 @@
           ] = current.needs_triage_issues_by_date.slice(
             current.needs_triage_issues_by_date.length - DEFAULT_TRENDLINE_DAYS
           );
-          //   noLabelIssuesTrendlineMap[id] = current.no_label_issues_by_date
-          //     .slice(0, DEFAULT_TRENDLINE_DAYS)
-          //     .reverse();
+          noLabelIssuesTrendlineMap[id] = current.no_label_issues_by_date.slice(
+            current.no_label_issues_by_date.length - DEFAULT_TRENDLINE_DAYS
+          );
+          console.log(noLabelIssuesTrendlineMap[id]);
         });
 
         // issuesTrendlineByRepositoryMap[
@@ -457,27 +466,33 @@
                 return data;
               },
             },
-            // {
-            //   data: "no_label_issues_count",
-            //   title: "Issues Missing Labels",
-            // },
-            // {
-            //   data: "no_label_issues_by_date",
-            //   title: "Issues Missing Labels Trend",
-            //   defaultContent: "",
-            //   render: function (data, type, row) {
-            //     if (shouldUseDisplayData(type)) {
-            //       const isZeroRange = noLabelIssuesTrendlineMap[row.id].every(
-            //         (value) => value === 0
-            //       );
-            //       if (!isZeroRange) {
-            //         return `<svg id="noLabelIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>`;
-            //       }
-            //       return noDataHTML;
-            //     }
-            //     return data;
-            //   },
-            // },
+            {
+              data: "no_label_issues_count",
+              title: "Issues Missing Labels",
+            },
+            {
+              data: "no_label_issues_by_date",
+              title: "Issues Missing Labels Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = noLabelIssuesTrendlineMap[row.id].every(
+                    (value) => value === 0
+                  );
+                  if (!isZeroRange) {
+                    return `<div id="noLabelTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="noLabelIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
+                  }
+                  return noDataHTML;
+                }
+                return data;
+              },
+            },
             {
               data: "high_priority_issues_count",
               title: "High Priority Issues",
@@ -650,7 +665,7 @@
         $table.column(10).visible(false);
         $table.column(12).visible(false);
         $table.column(14).visible(false);
-        // $table.column(16).visible(false);
+        $table.column(16).visible(false);
 
         $table.on(
           "column-visibility.dt",
@@ -677,6 +692,9 @@
           );
           const needsTriageTrendEl = document.querySelector(
             `#needsTriageIssues${repoId}`
+          );
+          const noLabelsTrendEl = document.querySelector(
+            `#noLabelIssues${repoId}`
           );
 
           if (issuesTrendEl) {
@@ -765,6 +783,38 @@
                 },
                 onmouseout: function () {
                   const elId = `triageTrendline${repoId}`;
+                  const $el = $(document.querySelector(`#${elId}`));
+                  $(
+                    document.querySelector(".dataTables_scrollBody")
+                  ).removeClass("with-tooltip");
+                  $el.find(".trendline-data").removeClass("active");
+                },
+              }
+            );
+          }
+
+          if (noLabelsTrendEl) {
+            sparkline.sparkline(
+              noLabelsTrendEl,
+              noLabelIssuesTrendlineMap[repoId],
+              {
+                onmousemove: function (event, datapoint) {
+                  const elId = `noLabelTrendline${repoId}`;
+                  let $el = $(document.querySelector(`#${elId}`));
+                  $(document.querySelector(".dataTables_scrollBody")).addClass(
+                    "with-tooltip"
+                  );
+                  $el = $el.find(".trendline-data");
+                  $el.addClass("active");
+                  $el
+                    .find(`#trendlineDate${repoId}`)
+                    .html(currentTrendlineDates[datapoint.index]);
+                  $el
+                    .find(`#trendlineValue${repoId}`)
+                    .html(`${datapoint.value} Issues`);
+                },
+                onmouseout: function () {
+                  const elId = `noLabelTrendline${repoId}`;
                   const $el = $(document.querySelector(`#${elId}`));
                   $(
                     document.querySelector(".dataTables_scrollBody")

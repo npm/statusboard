@@ -18,7 +18,8 @@ const {
   getRepoIssues,
   getCoveralls,
   getPkgData,
-  getDownloads
+  getDownloads,
+  getNoLabelIssues
 } = require('../api')
 const { mapToResponse, writeFile } = require('../lib/fetch')
 
@@ -54,8 +55,8 @@ const exec = async () => {
           'Needs Triage'
         )
 
-        // const noLabelIssues = await getNoLabelIssues(owner, name)
-        // console.log(noLabelIssues)
+        let noLabelIssuesCount = await getNoLabelIssues(owner, name)
+        noLabelIssuesCount = noLabelIssuesCount.length
 
         console.log(
           'Fetching coverage:',
@@ -98,6 +99,7 @@ const exec = async () => {
           pkg,
           highPrioIssues,
           needsTriageIssues,
+          noLabelIssuesCount,
           deployments,
           downloads
         }

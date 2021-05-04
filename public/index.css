@@ -245,18 +245,19 @@ div.dt-button-collection .dt-button.active i {
   position: relative;
   height: 100%;
   width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
 }
 
 .trendline-data {
   position: absolute;
   visibility: hidden;
-  left: 0;
-  right: 0;
+  left: -100px;
+  top: -6px;
   width: 100px;
   height: 52px;
   border: 1px solid transparent;
   padding: 8px 10px;
-  top: -54px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -277,10 +278,6 @@ div.dt-button-collection .dt-button.active i {
   justify-content: center;
   align-items: center;
   background-color: white;
-}
-
-.dataTables_scrollBody.with-tooltip {
-  overflow: visible !important;
 }
 
 .trendline-data.active span {
