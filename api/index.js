@@ -25,6 +25,10 @@ const octokit = new Octokit({
   retry: {
     doNotRetry: [404]
   },
+  request: {
+    retries: 3,
+    retryAfter: 35
+  },
   throttle: {
     onRateLimit: (retryAfter, options, octokit) => {
       octokit.log.warn(

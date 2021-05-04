@@ -111,7 +111,7 @@ const exec = async () => {
 
     let result = await Promise.all(promises)
     result = {
-      data: result,
+      data: result.filter(r => !!r),
       created_at: new Date().toISOString()
     }
 
