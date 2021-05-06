@@ -32,7 +32,8 @@
     "http-server": "^0.12.3",
     "mkdirp": "^1.0.4",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "sleepover": "^1.1.4"
   },
   "devDependencies": {
     "eslint": "^7.24.0",

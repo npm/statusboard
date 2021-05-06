@@ -2,8 +2,7 @@ require('dotenv').config()
 const fetch = require('node-fetch')
 const Rest = require('@octokit/rest')
 const { throttling } = require('@octokit/plugin-throttling')
-const { retry } = require('@octokit/plugin-retry')
-const Octokit = Rest.Octokit.plugin(throttling, retry)
+const Octokit = Rest.Octokit.plugin(throttling)
 
 const FETCH_OPTIONS = {
   redirect: 'follow',
@@ -23,11 +22,12 @@ const FETCH_OPTIONS = {
 const octokit = new Octokit({
   auth: process.env.AUTH_TOKEN,
   retry: {
-    doNotRetry: [404]
+    doNotRetry: [404, 422]
   },
+  //   log: console,
   request: {
-    retries: 3,
-    retryAfter: 35
+    retries: 1,
+    retryAfter: 5
   },
   throttle: {
     onRateLimit: (retryAfter, options, octokit) => {
@@ -42,6 +42,7 @@ const octokit = new Octokit({
       }
     },
     onAbuseLimit: (retryAfter, options, octokit) => {
+      // does not retry, only logs a warning
       octokit.log.warn(
         `Abuse detected for request ${options.method} ${options.url}`
       )
@@ -52,7 +53,10 @@ const octokit = new Octokit({
 async function getPullRequests (owner, repo) {
   try {
     return octokit.paginate(octokit.pulls.list, {
-      owner, repo
+      owner,
+      repo,
+      per_page: 100,
+      state: 'open'
     })
   } catch (error) {
     console.log(error)
@@ -78,25 +82,32 @@ async function getRepoIssues (owner, repo, labels = '') {
       owner,
       repo,
       state: 'open',
-      labels
+      labels,
+      per_page: 100
     })
   } catch (error) {
     console.log(error)
-    return {}
+    return []
   }
 }
 
 async function getNoLabelIssues (owner, repo) {
   const repoName = `${owner}/${repo}`
   try {
-    return octokit
-      .paginate(octokit.search.issuesAndPullRequests, {
-        q: `repo:${repoName}+is:issue+is:open+no:label`
-      })
-      .then((issues) => issues)
+    const results = []
+    for await (const response of octokit.paginate.iterator(
+      octokit.search.issuesAndPullRequests,
+      {
+        q: `repo:${repoName}+is:issue+is:open+no:label`,
+        per_page: 100
+      }
+    )) {
+      response.data.forEach((d) => results.push(d))
+    }
+    return results
   } catch (error) {
     console.log(error)
-    return {}
+    return []
   }
 }
 
