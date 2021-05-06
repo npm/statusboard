@@ -592,7 +592,7 @@
             {
               text: "Show/Hide All Trendlines",
               action: function (e, dt, node, config) {
-                const trendlineCols = [10, 12, 14];
+                const trendlineCols = [10, 12, 14, 16];
                 trendlineCols.forEach((colIdx) => {
                   const current = dt.column(colIdx);
                   current.visible(!current.visible());
