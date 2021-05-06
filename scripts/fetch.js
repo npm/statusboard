@@ -72,7 +72,7 @@ const exec = async () => {
         const owner = repoString[0]
         const name = repoString[1]
 
-        const prs = getPullRequests(owner, name)
+        const prs = await getPullRequests(owner, name)
         const prCount = prs.length || 0
 
         const { data: repoData } = await getRepo(owner, name)
@@ -113,7 +113,11 @@ const exec = async () => {
           downloads = await getDownloads(repo.package)
         }
 
-        const { highPrioIssuesCount, needsTriageIssuesCount, noLabelIssuesCount } = repoIssuesMap[`${owner}/${name}`]
+        const {
+          highPrioIssuesCount,
+          needsTriageIssuesCount,
+          noLabelIssuesCount
+        } = repoIssuesMap[`${owner}/${name}`]
 
         const responseData = {
           repoData,
