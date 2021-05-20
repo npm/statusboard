@@ -1,0 +1,32 @@
+name: Sync repository labels
+on:
+  # schedule:
+  #   - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, fetch & build
+        env:
+          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm ci
+          npm run sync-labels
+      - name: Fetch & Store Data
+        run: |
+          # Git Commands
+          git config --local user.email "ops+robot@npmjs.com"
+          git config --local user.name "npm-robot"
+          git add .
+          git commit -m "chore: store fetched data"
+          git push origin latest

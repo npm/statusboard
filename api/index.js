@@ -31,9 +31,7 @@ const octokit = new Octokit({
   },
   throttle: {
     onRateLimit: (retryAfter, options, octokit) => {
-      octokit.log.warn(
-        `Request quota exhausted for request ${options.method} ${options.url}`
-      )
+      octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`)
 
       if (options.request.retryCount === 0) {
         // only retries once
@@ -43,12 +41,28 @@ const octokit = new Octokit({
     },
     onAbuseLimit: (retryAfter, options, octokit) => {
       // does not retry, only logs a warning
-      octokit.log.warn(
-        `Abuse detected for request ${options.method} ${options.url}`
-      )
+      octokit.log.warn(`Abuse detected for request ${options.method} ${options.url}`)
     }
   }
 })
+
+async function createRepoLabel (owner, repo, label) {
+  return octokit.issues.createLabel({
+    owner,
+    repo,
+    name: label.name,
+    description: label.description || '',
+    color: label.color || ''
+  })
+}
+
+async function getRepoLabels (owner, repo) {
+  return octokit.paginate(octokit.issues.listLabelsForRepo, {
+    owner,
+    repo,
+    per_page: 100
+  })
+}
 
 async function getPullRequests (owner, repo) {
   try {
@@ -95,13 +109,10 @@ async function getNoLabelIssues (owner, repo) {
   const repoName = `${owner}/${repo}`
   try {
     const results = []
-    for await (const response of octokit.paginate.iterator(
-      octokit.search.issuesAndPullRequests,
-      {
-        q: `repo:${repoName}+is:issue+is:open+no:label`,
-        per_page: 100
-      }
-    )) {
+    for await (const response of octokit.paginate.iterator(octokit.search.issuesAndPullRequests, {
+      q: `repo:${repoName}+is:issue+is:open+no:label`,
+      per_page: 100
+    })) {
       response.data.forEach((d) => results.push(d))
     }
     return results
@@ -125,16 +136,10 @@ async function getDeployments (owner, repo, ref) {
 }
 
 async function getCoveralls (owner, repo) {
-  const response = await fetch(
-    `https://coveralls.io/github/${owner}/${repo}.json`,
-    FETCH_OPTIONS
-  )
+  const response = await fetch(`https://coveralls.io/github/${owner}/${repo}.json`, FETCH_OPTIONS)
 
   if (!response.ok) {
-    console.warn(
-      'No coverage data:',
-      `https://coveralls.io/github/${owner}/${repo}.json`
-    )
+    console.warn('No coverage data:', `https://coveralls.io/github/${owner}/${repo}.json`)
     return
   }
 
@@ -142,10 +147,7 @@ async function getCoveralls (owner, repo) {
 }
 
 async function getPkgData (pkg) {
-  const response = await fetch(
-    `https://unpkg.com/${pkg}/package.json`,
-    FETCH_OPTIONS
-  )
+  const response = await fetch(`https://unpkg.com/${pkg}/package.json`, FETCH_OPTIONS)
 
   if (!response.ok) {
     console.warn('No package data:', `https://unpkg.com/${pkg}/package.json`)
@@ -156,15 +158,10 @@ async function getPkgData (pkg) {
 }
 
 async function getDownloads (pkg = '') {
-  const response = await fetch(
-    `https://api.npmjs.org/downloads/point/last-month/${pkg}`
-  )
+  const response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`)
 
   if (!response.ok) {
-    console.warn(
-      'No download data:',
-      `https://api.npmjs.org/downloads/point/last-month/${pkg}`
-    )
+    console.warn('No download data:', `https://api.npmjs.org/downloads/point/last-month/${pkg}`)
     return
   }
 
@@ -179,5 +176,7 @@ module.exports = {
   getPullRequests,
   getRepo,
   getDownloads,
-  getNoLabelIssues
+  getNoLabelIssues,
+  getRepoLabels,
+  createRepoLabel
 }

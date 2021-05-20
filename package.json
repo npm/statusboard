@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "http-server ./dist/",
     "fetch": "node ./scripts/fetch.js",
+    "sync-labels": "node ./scripts/sync-labels.js",
     "test": "tap"
   },
   "repository": {
