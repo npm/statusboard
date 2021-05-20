@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  run-sync-script:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,17 +16,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, fetch & build
+      - name: Install node deps and run `sync-labels`
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm ci
           npm run sync-labels
-      - name: Fetch & Store Data
+      - name: Commit and push unique labels
         run: |
           # Git Commands
           git config --local user.email "ops+robot@npmjs.com"
           git config --local user.name "npm-robot"
           git add .
-          git commit -m "chore: store fetched data"
+          git commit -m "chore: commit unique label set"
           git push origin latest
