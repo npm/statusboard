@@ -1,32 +1,32 @@
-name: Sync repository labels
+# This is a basic workflow to help you get started with Actions
+
+name: Sync labels
+
+# Controls when the action will run. 
 on:
-  schedule:
-    - cron: "0 1 * * *"
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  run-sync-script:
+  # This workflow contains a single job called "build"
+  run:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2.3.1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      # Run the action
+      - name: Repository set labels sync
+        # You may pin to the exact commit or the version.
+        # uses: gimli01/repository-set-labels-sync@4cfec491376f341b444c826b8bfad5da61265713
+        uses: gimli01/repository-set-labels-sync@v1.3.5
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install node deps and run `sync-labels`
-        env:
-          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm ci
-          npm run sync-labels
-      - name: Commit and push unique labels
-        run: |
-          # Git Commands
-          git config --local user.email "ops+robot@npmjs.com"
-          git config --local user.name "npm-robot"
-          git add .
-          git commit -m "chore: commit unique label set"
-          git push origin latest
+          # Where to store labels for repositories
+          data-directory: "public/data/"
+          repositories-filename: "maintained.json"
+          labels-filename: "labels.json"
+          token: ${{ secrets.SYNC_LABELS_PAT }}
