@@ -621,9 +621,11 @@
               title: "Downloads (/m)",
               defaultContent: 0,
               render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  return Intl.NumberFormat("en-US").format(data);
+                if (data && shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  return `<a href="https://npmjs.com/package/${row.package}">${num}</a>`;
                 }
+                if (!data) return 'N/A';
                 return data;
               },
             },

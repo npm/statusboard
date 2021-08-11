@@ -216,10 +216,6 @@ table.table-bordered.dataTable th {
   border-radius: 3px;
 }
 
-.badge-warning {
-  color: white;
-}
-
 div.dt-button-collection .dt-button {
   color: #333;
   padding: 6px 12px;
