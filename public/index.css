@@ -210,7 +210,10 @@ table.table-bordered.dataTable th {
   display: inline-block;
   font-size: 12px;
   font-weight: 300;
-  padding: 6px 12px;
+  padding: 8px 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
 
 .badge-warning {
@@ -297,4 +300,35 @@ div.dt-button-collection .dt-button.active i {
 .trendline-value {
   font-weight: bold;
   font-size: 10px;
+}
+
+.project {
+  white-space: nowrap;
+}
+
+.text-primary {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.icon-npm,
+.icon-github {
+  display: inline-block;
+  float: right;
+  margin: 0 3px 0 3px;
+}
+
+.icon-npm svg,
+.icon-github svg {
+  width: 16px;
+  fill: #333;
+}
+
+.btn-secondary {
+  background: #efefef;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
 }

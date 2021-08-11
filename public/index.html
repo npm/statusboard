@@ -54,7 +54,32 @@
         <table
           style="width: 100%"
           class="table table-striped table-bordered"
-        ></table>
+        >
+          <tfoot>
+            <tr>
+              <th data-value="project" class="text-right"><strong>Totals:</strong></th>
+              <th data-value="stars"></th>
+              <th data-value="license"></th>
+              <th data-value="version"></th>
+              <th data-value="branch"></th>
+              <th data-value="coverage"></th>
+              <th data-value="status"></th>
+              <th data-value="node"></th>
+              <th data-value="issues"></th>
+              <th data-value="issues-trend"></th>
+              <th data-value="missing-labels"></th>
+              <th data-value="missing-trend"></th>
+              <th data-value="high-priority"></th>
+              <th data-value="high-priority-trend"></th>
+              <th data-value="needs-triage"></th>
+              <th data-value="needs-triage-trend"></th>
+              <th data-value="pull-requests"></th>
+              <th data-value="commit"></th>
+              <th data-value="downloads"></th>
+              <th data-value="size"></th>
+            </tr>
+          </tfoot>
+        </table>
       </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -83,7 +108,14 @@
       type="text/javascript"
       src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.colVis.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/plug-ins/1.10.25/api/sum().js"
+    ></script>
     <script>
+      const githubIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>`
+      const npmIcon = `<svg viewBox="0 0 27.23 27.23"><rect width="27.23" height="27.23" rx="2"></rect><polygon fill="#fff" points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon></svg>`
+
       const DAY = 24 * 60 * 60 * 1000;
 
       const issuesTrendlineByRepositoryMap = {};
@@ -91,7 +123,7 @@
       const needsTriageIssuesTrendlineMap = {};
       const noLabelIssuesTrendlineMap = {};
 
-      const noDataHTML = `<div class="badge badge-dark badge-dt">No data</div>`;
+      const noDataHTML = `<div class="badge badge-light badge-dt">N/A</div>`;
 
       const getDateRangeList = (days, start = new Date()) => {
         const range = [start];
@@ -268,28 +300,24 @@
 
         $table = $("table").DataTable({
           data: datasource,
+          footerCallback: function (row, data, start, end, display) {
+            const api = this.api();
+            [1, 8, 10, 12, 14, 16, 18].map(i => {
+              let num = Number(api.column(i, {page:'current'} ).data().sum()).toLocaleString()
+              $(api.column(i).footer() ).html(`${num}`)
+            })
+          },
           columns: [
             {
               data: "name",
-              title: "Repository",
+              title: "Project",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
-                  return `<a class="text-primary" href="https://github.com/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+                  return `<a class="text-primary" href="https://github.com/${row.owner}/${row.name}" target="_blank">${data}</a><a class="icon-github" href="https://github.com/${row.owner}/${row.name}" target="_blank">${githubIcon}</>${row.package ? `<a class="icon-npm" href="https://www.npmjs.com/package/${row.package}" target="_blank">${npmIcon}</a>` : ''}`;
                 }
                 return data;
               },
-              className: "text-left",
-            },
-            {
-              data: "package",
-              title: "Package",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  return `<a class="text-primary" href="https://www.npmjs.com/package/${data}" target="_blank">${data}</a>`;
-                }
-                return data;
-              },
-              className: "text-left",
+              className: "text-left project",
             },
             {
               data: "stargazers_count",
@@ -298,7 +326,7 @@
                 if (shouldUseDisplayData(type)) {
                   return Intl.NumberFormat("en-US").format(data);
                 }
-                return data;
+                return `<a href='https://github.com/${row.owner}/${row.name}/stargazers">${data}</a>`;
               },
             },
             {
@@ -308,7 +336,7 @@
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
                   if (!data) {
-                    return `<div class="badge badge-danger badge-dt">No data</div>`;
+                    return `<a href='https://github.com/${row.owner}/${row.name}/blob/${row.default_branch}/LICENSE" class="badge badge-danger badge-dt">N/A</a>`;
                   }
                 }
                 return data;
@@ -321,9 +349,9 @@
               render: function (data, type, row) {
                 if (data && shouldUseDisplayData(type)) {
                   const major = data.split(".")[0];
-                  return `<div class="badge badge-${
+                  return `<a href="https://npmjs.com/package/${row.package}/v/${data}" class="badge badge-${
                     major >= 1 ? "success" : "danger"
-                  } badge-dt">${data}</div>`;
+                  } badge-dt">${data}</a>`;
                 }
                 return data;
               },
@@ -341,9 +369,9 @@
                   } else if (data === "main") {
                     className = "success";
                   } else {
-                    className = "dark";
+                    className = "info";
                   }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                  return `<a href='https://github.com/${row.owner}/${row.name}/settings/branches' class="badge badge-${className} badge-dt">${data}</a>`;
                 }
                 if (data === "main") {
                   return 0;
@@ -383,20 +411,24 @@
               render: function (data, type, row) {
                 if (data && shouldUseDisplayData(type)) {
                   let className = "";
+                  if (!row.package) return;
                   if (data === "success") {
+                    data = "Passing"
                     className = "success";
                   } else if (data === "pending") {
+                    data = "N/A"
                     className = "info";
                   } else if (data === "failure") {
+                    data = "Failing"
                     className = "danger";
                   }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                  return `<a href='https://github.com/${row.owner}/${row.name}/' class="badge badge-${className} badge-dt">${data}</a>`;
                 }
-                if (data === "success") {
+                if (data === "Passing") {
                   return 0;
-                } else if (data === "failure") {
+                } else if (data === "Failing") {
                   return 1;
-                } else if (data === "pending") {
+                } else if (data === "N/A") {
                   return 2;
                 } else {
                   return 3;
@@ -413,17 +445,20 @@
                 let cleanData = "";
                 if (shouldUseDisplayData(type)) {
                   if (!data) {
-                    data = "No Data";
+                    data = "N/A";
                     className = "danger";
                   } else {
                     cleanData = data.replace(/\s/g, "");
-                    if (cleanData === ">=10") {
+                    if (cleanData === ">=12") {
                       className = "success";
+                    } else if (cleanData === ">=10") {
+                      className = "warning";
                     } else if (cleanData) {
                       className = "danger";
                     }
                   }
-                  return `<div class="badge badge-${className} badge-dt">${data}</div>`;
+                  if (!row.package) return;
+                  return `<a href="https://github.com/${row.owner}/${row.name}/blob/${row.default_branch}/package.json" class="badge badge-${className} badge-dt">${data}</a>`;
                 }
                 return data;
               },
@@ -433,7 +468,9 @@
               title: "Issues",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
-                  return Intl.NumberFormat("en-US").format(data);
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/issues" class="badge badge-${className} badge-dt">${num}</a>`
                 }
                 return data;
               },
@@ -463,11 +500,19 @@
             },
             {
               data: "no_label_issues_count",
-              title: "Issues Missing Labels",
+              title: "Missing Labels",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+no%3Alabel" class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
             },
             {
               data: "no_label_issues_by_date",
-              title: "Issues Missing Labels Trend",
+              title: "Missing Labels Trend",
               defaultContent: "",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
@@ -490,11 +535,19 @@
             },
             {
               data: "high_priority_issues_count",
-              title: "High Priority Issues",
+              title: "High Priority",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Priority+1"%2C"Priority+0"' class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
             },
             {
               data: "high_priority_issues_by_date",
-              title: "High Priority Issues Trend",
+              title: "High Priority Trend",
               defaultContent: "",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
@@ -517,11 +570,19 @@
             },
             {
               data: "needs_triage_issues_count",
-              title: "Needs Triage Issues",
+              title: "Needs Triage",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Needs+Triage"' class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
             },
             {
               data: "needs_triage_issues_by_date",
-              title: "Needs Triage Issues Trend",
+              title: "Needs Triage Trend",
               defaultContent: "",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
@@ -542,7 +603,18 @@
                 return data;
               },
             },
-            { data: "prs_count", title: "Pull Requests" },
+            {
+              data: "prs_count",
+              title: "Pull Requests",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/pulls" class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
+            },
             { data: "pushed_at_diff", title: "Last Commit" },
             {
               data: "downloads",
@@ -592,7 +664,7 @@
             {
               text: "Show/Hide All Trendlines",
               action: function (e, dt, node, config) {
-                const trendlineCols = [10, 12, 14, 16];
+                const trendlineCols = [9, 11, 13, 15];
                 trendlineCols.forEach((colIdx) => {
                   const current = dt.column(colIdx);
                   current.visible(!current.visible());
@@ -655,15 +727,15 @@
             $("#DataTables_Table_0_filter", $table.table().container())
           );
 
-        $table.column(10).visible(false);
-        $table.column(12).visible(false);
-        $table.column(14).visible(false);
-        $table.column(16).visible(false);
+        $table.column(9).visible(false);
+        $table.column(11).visible(false);
+        $table.column(13).visible(false);
+        $table.column(15).visible(false);
 
         $table.on(
           "column-visibility.dt",
           function (e, settings, column, state) {
-            const rows = [4, 6, 8];
+            const rows = [3, 5, 7];
             datasource.forEach((repo) => {
               drawTrendline(repo.id);
             });

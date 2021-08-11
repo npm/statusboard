@@ -4,7 +4,7 @@
   "description": "Community &amp; Open Source Statusboard",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server ./dist/",
+    "serve": "http-server ./public/",
     "fetch": "node ./scripts/fetch.js",
     "sync-labels": "node ./scripts/sync-labels.js",
     "test": "tap"

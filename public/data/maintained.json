@@ -1,39 +1,39 @@
 [
   {
+    "name": "readdir-scoped-modules",
+    "description": "Like `fs.readdir` but handling `@org/module` dirs as if they were a single entry.",
+    "repository": "https://github.com/npm/readdir-scoped-modules",
+    "package": "readdir-scoped-modules"
+  },
+  {
+    "name": "documentation",
+    "description": "Documentation for the npm registry, website, and command-line interface.",
+    "repository": "https://github.com/npm/documentation",
+    "package": ""
+  },
+  {
+    "name": "metavuln-calculator",
+    "description": "Calculate meta-vulnerabilities from package security advisories",
+    "repository": "https://github.com/npm/metavuln-calculator",
+    "package": "@npmcli/metavuln-calculator"
+  },
+  {
+    "name": "node-gyp",
+    "description": "Tools for dealing with node-gyp packages",
+    "repository": "https://github.com/npm/node-gyp",
+    "package": "@npmcli/node-gyp"
+  },
+  {
     "name": "bin-links",
     "description": ".bin/ script linker.",
     "repository": "https://github.com/npm/bin-links",
     "package": "bin-links"
   },
   {
-    "name": "copy-concurrently",
-    "description": "Promises of copies of files, directories and symlinks, with concurrency controls and win32 junction fallback.",
-    "repository": "https://github.com/npm/copy-concurrently",
-    "package": "copy-concurrently"
-  },
-  {
     "name": "dezalgo",
     "description": "async insanity.",
     "repository": "https://github.com/npm/dezalgo",
     "package": "dezalgo"
-  },
-  {
-    "name": "find-npm-prefix",
-    "description": "Find the npm project directory associated with for a given directory.",
-    "repository": "https://github.com/npm/find-npm-prefix",
-    "package": "find-npm-prefix"
-  },
-  {
-    "name": "fs-vacuum",
-    "description": "Remove empty branches in a directory tree.",
-    "repository": "https://github.com/npm/fs-vacuum",
-    "package": "fs-vacuum"
-  },
-  {
-    "name": "fs-write-stream-atomic",
-    "description": "Like fs.createWriteStream(...), but atomic.",
-    "repository": "https://github.com/npm/fs-write-stream-atomic",
-    "package": "fs-write-stream-atomic"
   },
   {
     "name": "gauge",
@@ -50,7 +50,7 @@
   {
     "name": "ignore-walk",
     "description": "Nested/recursive .gitignore/.npmignore parsing and filtering.",
-    "repository": "https://github.com/isaacs/ignore-walk",
+    "repository": "https://github.com/npm/ignore-walk",
     "package": "ignore-walk"
   },
   {
@@ -66,12 +66,6 @@
     "package": "init-package-json"
   },
   {
-    "name": "lockfile",
-    "description": "A very polite lock file utility, which endeavors to not litter, and to wait patiently for others.",
-    "repository": "https://github.com/npm/lockfile",
-    "package": "lockfile"
-  },
-  {
     "name": "node-which",
     "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
     "repository": "https://github.com/npm/node-which",
@@ -82,12 +76,6 @@
     "description": "Node.js/npm Option Parsing.",
     "repository": "https://github.com/npm/nopt",
     "package": "nopt"
-  },
-  {
-    "name": "normalize-git-url",
-    "description": "turn a Git URL into its canonical form.",
-    "repository": "https://github.com/npm/normalize-git-url",
-    "package": "normalize-git-url"
   },
   {
     "name": "normalize-package-data",
@@ -102,22 +90,10 @@
     "package": "npm-bundled"
   },
   {
-    "name": "npm-cache-filename",
-    "description": "Given a cache folder and url, return the appropriate cache folder.",
-    "repository": "https://github.com/npm/npm-cache-filename",
-    "package": "npm-cache-filename"
-  },
-  {
     "name": "npm-install-checks",
     "description": "Contains checks that npm runs during the installation.",
     "repository": "https://github.com/npm/npm-install-checks",
     "package": "npm-install-checks"
-  },
-  {
-    "name": "npm-lifecycle",
-    "description": "npm lifecycle script runner",
-    "repository": "https://github.com/npm/lifecycle",
-    "package": "npm-lifecycle"
   },
   {
     "name": "npm-package-arg",
@@ -138,12 +114,6 @@
     "package": "npm-profile"
   },
   {
-    "name": "npm-registry-client",
-    "description": "handling all the caching and HTTP calls to the registry.",
-    "repository": "https://github.com/npm/npm-registry-client",
-    "package": "npm-registry-client"
-  },
-  {
     "name": "npm-user-validate",
     "description": "user validation.",
     "repository": "https://github.com/npm/npm-user-validate",
@@ -156,22 +126,10 @@
     "package": "npmlog"
   },
   {
-    "name": "osenv",
-    "description": "Look up environment settings specific to different operating systems.",
-    "repository": "https://github.com/npm/osenv",
-    "package": "osenv"
-  },
-  {
     "name": "read-cmd-shim",
     "description": "Read the path a cmd-shim is pointing at. Acts like fs.readlink but for cmd-shims.",
     "repository": "https://github.com/npm/read-cmd-shim",
     "package": "read-cmd-shim"
-  },
-  {
-    "name": "read-installed",
-    "description": "Read all the installed packages in a folder, and return a tree structure with all the data.",
-    "repository": "https://github.com/npm/read-installed",
-    "package": "read-installed"
   },
   {
     "name": "read-package-json",
@@ -180,34 +138,16 @@
     "package": "read-package-json"
   },
   {
-    "name": "read-package-tree",
-    "description": "Read the contents of node_modules.",
-    "repository": "https://github.com/npm/read-package-tree",
-    "package": "read-package-tree"
-  },
-  {
     "name": "semver",
     "description": "The semver parser for node.",
     "repository": "https://github.com/npm/node-semver",
     "package": "semver"
   },
   {
-    "name": "slide",
-    "description": "A flow control library that fits in a slideshow.",
-    "repository": "https://github.com/npm/slide-flow-control",
-    "package": "slide"
-  },
-  {
     "name": "tar",
     "description": "tar for node.",
     "repository": "https://github.com/npm/node-tar",
     "package": "tar"
-  },
-  {
-    "name": "uid-number",
-    "description": "Convert a username/group name to a uid/gid number.",
-    "repository": "https://github.com/npm/uid-number",
-    "package": "uid-number"
   },
   {
     "name": "unique-filename",
@@ -258,12 +198,6 @@
     "package": "make-fetch-happen"
   },
   {
-    "name": "npx",
-    "description": "Execute npm package binaries.",
-    "repository": "https://github.com/npm/npx",
-    "package": "npx"
-  },
-  {
     "name": "pacote",
     "description": "Programmatic npm package and metadata downloader.",
     "repository": "https://github.com/npm/pacote",
@@ -282,18 +216,6 @@
     "package": "ssri"
   },
   {
-    "name": "npm-registry-couchapp",
-    "description": "couchapp bits of the registry.",
-    "repository": "https://github.com/npm/npm-registry-couchapp",
-    "package": "npm-registry-couchapp"
-  },
-  {
-    "name": "npm-registry-mock",
-    "description": "Mock the npm registry.",
-    "repository": "https://github.com/npm/npm-registry-mock",
-    "package": "npm-registry-mock"
-  },
-  {
     "name": "cli",
     "description": "the package manager for JavaScript",
     "repository": "https://github.com/npm/cli",
@@ -306,64 +228,16 @@
     "package": "semver"
   },
   {
-    "name": "tink",
-    "description": "a dependency unwinder for javascript ",
-    "repository": "https://github.com/npm/tink",
-    "package": "tink"
-  },
-  {
-    "name": "npm-expansions",
-    "description": "Send us a pull request by editing expansions.txt",
-    "repository": "https://github.com/npm/npm-expansions",
-    "package": "npm-expansions"
-  },
-  {
-    "name": "marky-markdown",
-    "description": "npm's markdown parser",
-    "repository": "https://github.com/npm/marky-markdown",
-    "package": "marky-markdown"
-  },
-  {
     "name": "rfcs",
     "description": "Public change requests for the npm CLI & associated tooling",
     "repository": "https://github.com/npm/rfcs",
     "package": ""
   },
   {
-    "name": "fstream",
-    "description": "Advanced FS Streaming for Node",
-    "repository": "https://github.com/npm/fstream",
-    "package": "fstream"
-  },
-  {
-    "name": "npm-merge-driver",
-    "description": "git merge driver for resolving conflicts in npm-related files",
-    "repository": "https://github.com/npm/npm-merge-driver",
-    "package": "npm-merge-driver"
-  },
-  {
-    "name": "ndm",
-    "description": "ndm allows you to deploy OS-specific service-wrappers directly from npm-packages.",
-    "repository": "https://github.com/npm/ndm",
-    "package": "ndm"
-  },
-  {
-    "name": "registry",
-    "description": "npm registry documentation",
-    "repository": "https://github.com/npm/registry",
-    "package": "registry"
-  },
-  {
     "name": "arborist",
     "description": "npm's tree doctor",
     "repository": "https://github.com/npm/arborist",
     "package": "@npmcli/arborist"
-  },
-  {
-    "name": "slide-flow-control",
-    "description": "A flow control library that fits in a slideshow",
-    "repository": "https://github.com/npm/slide-flow-control",
-    "package": "slide"
   },
   {
     "name": "are-we-there-yet",
@@ -378,28 +252,10 @@
     "package": "treeverse"
   },
   {
-    "name": "libnpm",
-    "description": "programmatic npm API",
-    "repository": "https://github.com/npm/libnpm",
-    "package": "libnpm"
-  },
-  {
     "name": "promzard",
     "description": "A prompting json thingie",
     "repository": "https://github.com/npm/promzard",
     "package": "promzard"
-  },
-  {
-    "name": "npm-remote-ls",
-    "description": "Examine a package's dependency graph before you install it",
-    "repository": "https://github.com/npm/npm-remote-ls",
-    "package": "npm-remote-ls"
-  },
-  {
-    "name": "policies",
-    "description": "Privacy policy, code of conduct, license, and other npm legal stuff",
-    "repository": "https://github.com/npm/policies",
-    "package": "policies"
   },
   {
     "name": "cmd-shim",
@@ -414,28 +270,10 @@
     "package": "npm-registry-fetch"
   },
   {
-    "name": "logical-tree",
-    "description": "Calculates a nested logical tree using a package.json and a package lock.",
-    "repository": "https://github.com/npm/logical-tree",
-    "package": "npm-logical-tree"
-  },
-  {
     "name": "mute-stream",
     "description": "Bytes go in, but they don't come out (when muted). ",
     "repository": "https://github.com/npm/mute-stream",
     "package": "mute-stream"
-  },
-  {
-    "name": "ansible-nagios",
-    "description": "Ansible role for building Nagios 4.",
-    "repository": "https://github.com/npm/ansible-nagios",
-    "package": ""
-  },
-  {
-    "name": "lock-verify",
-    "description": "Report if your package.json is out of sync with your package-lock.json",
-    "repository": "https://github.com/npm/lock-verify",
-    "package": "lock-verify"
   },
   {
     "name": "git",
@@ -480,34 +318,10 @@
     "package": "libnpmsearch"
   },
   {
-    "name": "concurrent-couch-follower",
-    "description": "a couch follower wrapper that you can use to be sure you don't miss any documents even if you process them asynchronously.",
-    "repository": "https://github.com/npm/concurrent-couch-follower",
-    "package": "concurrent-couch-follower"
-  },
-  {
     "name": "unique-slug",
     "description": "Generate a unique character string suitible for use in files and URLs.",
     "repository": "https://github.com/npm/unique-slug",
     "package": "unique-slug"
-  },
-  {
-    "name": "npm-hook-slack",
-    "description": "Report on registry events to slack, tersely.",
-    "repository": "https://github.com/npm/npm-hook-slack",
-    "package": "npm-hook-slack"
-  },
-  {
-    "name": "do-you-even-lift",
-    "description": "Calculate package sizes in various configurations",
-    "repository": "https://github.com/npm/do-you-even-lift",
-    "package": "do-you-even-lift"
-  },
-  {
-    "name": "ansible-nagios-config",
-    "description": "Ansible role for configuring Nagios 4.",
-    "repository": "https://github.com/npm/ansible-nagios-config",
-    "package": ""
   },
   {
     "name": "read-package-json-fast",
@@ -516,28 +330,16 @@
     "package": "read-package-json-fast"
   },
   {
-    "name": "move-concurrently",
-    "description": "Promises of moves of files or directories with rename, falling back to recursive rename/copy on EXDEV errors, with configurable concurrency and win32 junction support.",
-    "repository": "https://github.com/npm/move-concurrently",
-    "package": "move-concurrently"
-  },
-  {
-    "name": "deprecate-holder",
-    "description": "An npm package that holds a spot.",
-    "repository": "https://github.com/npm/deprecate-holder",
-    "package": ""
-  },
-  {
     "name": "fs-minipass",
     "description": "fs read and write streams based on minipass",
     "repository": "https://github.com/npm/fs-minipass",
     "package": "fs-minipass"
   },
   {
-    "name": "ansible-pg-wale",
-    "description": "Configure WAL-E S3 backups for Postgres",
-    "repository": "https://github.com/npm/ansible-pg-wale",
-    "package": ""
+    "name": "config",
+    "description": "Configuration management for npm CLI",
+    "repository": "https://github.com/npm/config",
+    "package": "@npmcli/config"
   },
   {
     "name": "libnpmversion",
@@ -558,34 +360,10 @@
     "package": "minipass-fetch"
   },
   {
-    "name": "proxy-registry",
-    "description": null,
-    "repository": "https://github.com/npm/proxy-registry",
-    "package": "proxy-registry"
-  },
-  {
     "name": "statusboard",
     "description": "A single view to help monitor the status/health of npm's Open Source Projects",
     "repository": "https://github.com/npm/statusboard",
     "package": ""
-  },
-  {
-    "name": "libcipm",
-    "description": "npm ci lib",
-    "repository": "https://github.com/npm/libcipm",
-    "package": "libcipm"
-  },
-  {
-    "name": "dynector",
-    "description": "DynECT DNS command-line tool",
-    "repository": "https://github.com/npm/dynector",
-    "package": "dynector"
-  },
-  {
-    "name": "oauth2-server-pg",
-    "description": "PostgreSQL and Express powered OAuth 2.0 server",
-    "repository": "https://github.com/npm/oauth2-server-pg",
-    "package": "oauth2-server-pg"
   },
   {
     "name": "libnpmhook",
@@ -594,22 +372,10 @@
     "package": "libnpmhook"
   },
   {
-    "name": "micro-monitor",
-    "description": "add a monitoring endpoint to your node background services",
-    "repository": "https://github.com/npm/micro-monitor",
-    "package": "micro-monitor"
-  },
-  {
     "name": "stringify-package",
     "description": "stringifies npm-written json files",
     "repository": "https://github.com/npm/stringify-package",
     "package": "stringify-package"
-  },
-  {
-    "name": "mustache-mailer",
-    "description": "send emails using nodemailer and mustache templates",
-    "repository": "https://github.com/npm/mustache-mailer",
-    "package": "mustache-mailer"
   },
   {
     "name": "pull",
@@ -618,58 +384,16 @@
     "package": "@npmcli/pull"
   },
   {
-    "name": "pneumatic-tubes",
-    "description": "migrate packages between registries (using npm publish)",
-    "repository": "https://github.com/npm/pneumatic-tubes",
-    "package": "pneumatic-tubes"
-  },
-  {
-    "name": "pg-db-session",
-    "description": ":hocho: :skull: Associate PG connections with requests using domains :ghost: :crescent_moon:",
-    "repository": "https://github.com/npm/pg-db-session",
-    "package": "@npm/pg-db-session"
-  },
-  {
-    "name": "gh-issues",
-    "description": "Batch close github issues.",
-    "repository": "https://github.com/npm/gh-issues",
-    "package": ""
-  },
-  {
-    "name": "shelby",
-    "description": "a system agent in rust for the numbat metrics system",
-    "repository": "https://github.com/npm/shelby",
-    "package": "@npm/shelby"
-  },
-  {
     "name": "infer-owner",
     "description": "Infer the owner of a path based on the owner of its nearest existing parent",
     "repository": "https://github.com/npm/infer-owner",
     "package": "infer-owner"
   },
   {
-    "name": "types",
-    "description": "Typescript definitions for npm registry content",
-    "repository": "https://github.com/npm/types",
-    "package": "@npm/types"
-  },
-  {
-    "name": "gentle-fs",
-    "description": null,
-    "repository": "https://github.com/npm/gentle-fs",
-    "package": "gentle-fs"
-  },
-  {
-    "name": "fallback-fs",
-    "description": "undefined",
-    "repository": "https://github.com/npm/fallback-fs",
-    "package": "fallback-fs"
-  },
-  {
     "name": "create-oss",
-    "description": "Boilerplate project all OSS projects should be created from.",
+    "description": "init module used for OSS projects by the npm CLI team",
     "repository": "https://github.com/npm/create-oss",
-    "package": ""
+    "package": "@npmcli/create-oss"
   },
   {
     "name": "installed-package-contents",
@@ -678,106 +402,16 @@
     "package": "@npmcli/installed-package-contents"
   },
   {
-    "name": "couch-url-rewrite-proxy",
-    "description": "a proxy that rewrites registry URLs on their way out of CouchDB, making it easier to migrate data.",
-    "repository": "https://github.com/npm/couch-url-rewrite-proxy",
-    "package": ""
-  },
-  {
-    "name": "realize-package-specifier",
-    "description": "Like npm-package-arg, but more so, producing full file paths and differentiating local tar and directory sources.",
-    "repository": "https://github.com/npm/realize-package-specifier",
-    "package": "realize-package-specifier"
-  },
-  {
-    "name": "seq-save",
-    "description": "save a sequence # to a configurable backend (etcd, files, etc.)",
-    "repository": "https://github.com/npm/seq-save",
-    "package": "seq-save"
-  },
-  {
-    "name": "annotation-poller",
-    "description": "poll for third-party annotations for entities, such as packages, and display them",
-    "repository": "https://github.com/npm/annotation-poller",
-    "package": "annotation-poller"
-  },
-  {
     "name": "name-from-folder",
     "description": "Get the package name from a folder path",
     "repository": "https://github.com/npm/name-from-folder",
     "package": "@npmcli/name-from-folder"
   },
   {
-    "name": "notify-by-ses",
-    "description": "A script for sending Nagios notifications using SES.",
-    "repository": "https://github.com/npm/notify-by-ses",
-    "package": "notify-by-ses"
-  },
-  {
-    "name": "my-first-publish-bot",
-    "description": "a twitter bot that congratulates people for their first npm publication",
-    "repository": "https://github.com/npm/my-first-publish-bot",
-    "package": ""
-  },
-  {
-    "name": ".github",
-    "description": "GitHub Automation > actions / templates / probot configurations > automated with GitHub actions",
-    "repository": "https://github.com/npm/.github",
-    "package": "@npmcorp/.github"
-  },
-  {
-    "name": "decorate",
-    "description": "decorate a function transparently",
-    "repository": "https://github.com/npm/decorate",
-    "package": "@npm/decorate"
-  },
-  {
-    "name": "nm",
-    "description": "Manage your `node_modules` as a set of directories on disk.",
-    "repository": "https://github.com/npm/nm",
-    "package": "nm"
-  },
-  {
-    "name": "s3-time-stream",
-    "description": "binary search to and stream an exact time range from logs stored in s3.",
-    "repository": "https://github.com/npm/s3-time-stream",
-    "package": "s3-time-stream"
-  },
-  {
-    "name": "libpickupdates",
-    "description": null,
-    "repository": "https://github.com/npm/libpickupdates",
-    "package": ""
-  },
-  {
     "name": "libnpmpack",
     "description": "Programmatic API for the bits behind npm pack",
     "repository": "https://github.com/npm/libnpmpack",
     "package": "libnpmpack"
-  },
-  {
-    "name": "libnpm-resolve-module-tree",
-    "description": "Given a set of dependencies return a fully realized logical tree using only the most recent package versions.",
-    "repository": "https://github.com/npm/libnpm-resolve-module-tree",
-    "package": ""
-  },
-  {
-    "name": "libnpmconfig",
-    "description": "Standalone library for reading/writing/managing npm configurations",
-    "repository": "https://github.com/npm/libnpmconfig",
-    "package": "libnpmconfig"
-  },
-  {
-    "name": "docker-ops-tools",
-    "description": "Docker image for the @buzuli/ops-tools utilities",
-    "repository": "https://github.com/npm/docker-ops-tools",
-    "package": ""
-  },
-  {
-    "name": "npmepm",
-    "description": "npm Enterprise Post Mortem utils",
-    "repository": "https://github.com/npm/npmepm",
-    "package": "npmepm"
   },
   {
     "name": "npm-normalize-package-bin",
@@ -792,12 +426,6 @@
     "package": "@npmcli/promise-spawn"
   },
   {
-    "name": "action-deploy",
-    "description": "Action to manage GitHub deployments",
-    "repository": "https://github.com/npm/action-deploy",
-    "package": ""
-  },
-  {
     "name": "libnpmfund",
     "description": "Programmatic API for npm fund",
     "repository": "https://github.com/npm/libnpmfund",
@@ -805,33 +433,15 @@
   },
   {
     "name": "benchmarks",
-    "description": null,
+    "description": "The npm CLI's benchmark suite",
     "repository": "https://github.com/npm/benchmarks",
     "package": ""
-  },
-  {
-    "name": "joi-env",
-    "description": "A joi extension to allow reading values from environment variables",
-    "repository": "https://github.com/npm/joi-env",
-    "package": "@npmcorp/joi-env"
   },
   {
     "name": "libnpmteam",
     "description": "programmatic api for `npm team`",
     "repository": "https://github.com/npm/libnpmteam",
     "package": "libnpmteam"
-  },
-  {
-    "name": "libnpm-read-package-manifest",
-    "description": "Read package manifest data off disk",
-    "repository": "https://github.com/npm/libnpm-read-package-manifest",
-    "package": ""
-  },
-  {
-    "name": "fastify-monitor",
-    "description": "a small fastify plugin to provide some very basic monitoring endpoints",
-    "repository": "https://github.com/npm/fastify-monitor",
-    "package": "@npmcorp/fastify-monitor"
   },
   {
     "name": "disparity-colors",
@@ -852,27 +462,21 @@
     "package": "@npmcli/map-workspaces"
   },
   {
-    "name": "npm-docker-couchdb",
-    "description": "couchdb instance based on klaemo/couchdb, which installs registry-couchapp and npm's bespoke couchdb config",
-    "repository": "https://github.com/npm/npm-docker-couchdb",
-    "package": ""
+    "name": "exec",
+    "description": "",
+    "repository": "https://github.com/npm/exec",
+    "package": "@npmcli/exec"
   },
   {
-    "name": "npme-slug-validate",
-    "description": "Slug validator for npme",
-    "repository": "https://github.com/npm/npme-slug-validate",
-    "package": "npme-slug-validate"
+    "name": "move-file",
+    "description": "Move a file across devices with support for all node 10 versions (fork of https://github.com/sindresorhus/move-file)",
+    "repository": "https://github.com/npm/move-file",
+    "package": "@npmcli/move-file"
   },
   {
-    "name": "content-type-to-language-name",
-    "description": "Maps a list of content types to a list of language names",
-    "repository": "https://github.com/npm/content-type-to-language-name",
-    "package": "content-type-to-language-name"
-  },
-  {
-    "name": "rewrite-url-follower",
-    "description": "rewrite the tarball URLs in couchdb from one registry to another",
-    "repository": "https://github.com/npm/rewrite-url-follower",
-    "package": "rewrite-url-follower"
+    "name": "fs",
+    "description": " filesystem helper functions, wrappers, and promisification for the npm cli",
+    "repository": "https://github.com/npm/fs",
+    "package": "@npmcli/fs"
   }
 ]
