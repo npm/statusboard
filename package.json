@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Community &amp; Open Source Statusboard",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "serve": "http-server ./public/",
     "fetch": "node ./scripts/fetch.js",
