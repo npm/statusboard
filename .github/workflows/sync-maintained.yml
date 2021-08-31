@@ -1,14 +1,13 @@
-name: Build statusboard
+name: Sync maintained repo list
+
 on:
   schedule:
-    - cron: "0 1 * * *"
-  push:
-    branches:
-      - main
+    - cron: "0 23 * * *"
   workflow_dispatch:
 
 jobs:
-  build:
+  sync:
+    name: "Sync maintained repo list"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.1
@@ -17,24 +16,18 @@ jobs:
         with:
           node-version: "lts/*"
           cache: "npm"
-      - name: npm install, fetch & build
+      - name: npm install
+        run: |
+          npm ci
+      - name: update maintained list
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npm ci
-          npm run fetch
-      - name: Fetch & Store Data
+          npm run maintained
+      - name: Commit changes
         run: |
-          # Git Commands
           git config --local user.email "ops+npm-deploy-user@npmjs.com"
           git config --local user.name "npm cli ops bot"
           git add .
-          git commit -m "chore: store fetched data"
+          git commit -m "fix: update maintained list"
           git push origin main
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public
-          CLEAN: true
