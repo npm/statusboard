@@ -4,7 +4,7 @@ on:
     - cron: "0 1 * * *"
   push:
     branches:
-      - latest
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
           git config --local user.name "beep boop I am a robot"
           git add .
           git commit -m "chore: store fetched data"
-          git push origin latest
+          git push origin main
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
