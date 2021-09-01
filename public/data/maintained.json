@@ -408,8 +408,7 @@
  {
   "name": "rfcs",
   "description": "Public change requests/proposals & ideation",
-  "repository": "https://api.github.com/repos/npm/rfcs",
-  "package": "rfcs"
+  "repository": "https://api.github.com/repos/npm/rfcs"
  },
  {
   "name": "run-script",
@@ -425,7 +424,7 @@
  },
  {
   "name": "statusboard",
-  "description": "Public monitor of status/health of projects",
+  "description": "Public monitor/status/health board for @npm/cli-team's maintained projects",
   "repository": "https://api.github.com/repos/npm/statusboard"
  },
  {
