@@ -29,5 +29,4 @@ jobs:
           git config --local user.email "ops+npm-deploy-user@npmjs.com"
           git config --local user.name "npm cli ops bot"
           git add .
-          git commit -m "fix: update maintained list"
-          git push origin main
+          git commit -m "fix: update maintained list" && git push origin main || echo "nothing to commit"
