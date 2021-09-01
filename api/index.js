@@ -78,6 +78,19 @@ async function getPullRequests (owner, repo) {
   }
 }
 
+async function getMaintainedRepos (owner, topic) {
+  try {
+    return octokit.paginate('GET /search/repositories', {
+      q: `org:${owner} topic:${topic}`,
+      sort: 'name',
+      order: 'asc',
+    })
+  } catch (error) {
+    console.log(error)
+    return []
+  }
+}
+
 async function getRepo (owner, repo) {
   try {
     return octokit.repos.get({
@@ -169,14 +182,15 @@ async function getDownloads (pkg = '') {
 }
 
 module.exports = {
-  getRepoIssues,
-  getDeployments,
-  getPkgData,
+  createRepoLabel,
   getCoveralls,
+  getDeployments,
+  getDownloads,
+  getMaintainedRepos,
+  getNoLabelIssues,
+  getPkgData,
   getPullRequests,
   getRepo,
-  getDownloads,
-  getNoLabelIssues,
+  getRepoIssues,
   getRepoLabels,
-  createRepoLabel
 }

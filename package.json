@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "http-server ./public/",
     "fetch": "node ./scripts/fetch.js",
+    "maintained": " node ./scripts/sync-maintained.js",
     "sync-labels": "node ./scripts/sync-labels.js",
     "test": "tap"
   },
@@ -35,6 +36,7 @@
     "mkdirp": "^1.0.4",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.1",
+    "pacote": "^11.3.5",
     "sleepover": "^1.1.4"
   },
   "devDependencies": {
