@@ -405,35 +405,28 @@
               },
             },
             {
-              data: "deployment_status",
-              title: "Build Status",
+              data: "check_runs",
+              title: "Check Status",
               defaultContent: "",
               render: function (data, type, row) {
                 if (data && shouldUseDisplayData(type)) {
+                  if (!row.package) {
+                    return;
+                  }
                   let className = "";
-                  if (!row.package) return;
-                  if (data === "success") {
-                    data = "Passing"
-                    className = "success";
-                  } else if (data === "pending") {
+                  if (data.length === 0) {
                     data = "N/A"
                     className = "info";
-                  } else if (data === "failure") {
+                  } else if (data.includes('failure')) {
                     data = "Failing"
                     className = "danger";
+                  } else {
+                    data = "Passing"
+                    className = "success";
                   }
                   return `<a href='https://github.com/${row.owner}/${row.name}/' class="badge badge-${className} badge-dt">${data}</a>`;
                 }
-                if (data === "Passing") {
-                  return 0;
-                } else if (data === "Failing") {
-                  return 1;
-                } else if (data === "N/A") {
-                  return 2;
-                } else {
-                  return 3;
-                }
-                return data;
+                return data
               },
             },
             {

@@ -46,65 +46,45 @@ const octokit = new Octokit({
   }
 })
 
-async function createRepoLabel (owner, repo, label) {
-  return octokit.issues.createLabel({
-    owner,
-    repo,
-    name: label.name,
-    description: label.description || '',
-    color: label.color || ''
-  })
-}
-
-async function getRepoLabels (owner, repo) {
-  return octokit.paginate(octokit.issues.listLabelsForRepo, {
-    owner,
-    repo,
-    per_page: 100
-  })
-}
-
-async function getPullRequests (owner, repo) {
-  try {
+const api = {
+  createRepoLabel: async (owner, repo, label) => {
+    return octokit.issues.createLabel({
+      owner,
+      repo,
+      name: label.name,
+      description: label.description || '',
+      color: label.color || ''
+    })
+  },
+  getRepoLabels: async (owner, repo) => {
+    return octokit.paginate(octokit.issues.listLabelsForRepo, {
+      owner,
+      repo,
+      per_page: 100
+    })
+  },
+  getPullRequests: async (owner, repo) => {
     return octokit.paginate(octokit.pulls.list, {
       owner,
       repo,
       per_page: 100,
       state: 'open'
     })
-  } catch (error) {
-    console.log(error)
-    return []
-  }
-}
-
-async function getMaintainedRepos (owner, topic) {
-  try {
+  },
+  getMaintainedRepos: async (owner, topic) => {
     return octokit.paginate('GET /search/repositories', {
       q: `org:${owner} topic:${topic}`,
       sort: 'name',
       order: 'asc',
     })
-  } catch (error) {
-    console.log(error)
-    return []
-  }
-}
-
-async function getRepo (owner, repo) {
-  try {
+  },
+  getRepo: async (owner, repo) => {
     return octokit.repos.get({
       owner,
       repo
     })
-  } catch (error) {
-    console.log(error)
-    return []
-  }
-}
-
-async function getRepoIssues (owner, repo, labels = '') {
-  try {
+  },
+  getRepoIssues: async (owner, repo, labels = '') => {
     return octokit.paginate('GET /repos/{owner}/{repo}/issues', {
       owner,
       repo,
@@ -112,15 +92,9 @@ async function getRepoIssues (owner, repo, labels = '') {
       labels,
       per_page: 100
     })
-  } catch (error) {
-    console.log(error)
-    return []
-  }
-}
-
-async function getNoLabelIssues (owner, repo) {
-  const repoName = `${owner}/${repo}`
-  try {
+  },
+  getNoLabelIssues: async (owner, repo) => {
+    const repoName = `${owner}/${repo}`
     const results = []
     for await (const response of octokit.paginate.iterator(octokit.search.issuesAndPullRequests, {
       q: `repo:${repoName}+is:issue+is:open+no:label`,
@@ -129,68 +103,44 @@ async function getNoLabelIssues (owner, repo) {
       response.data.forEach((d) => results.push(d))
     }
     return results
-  } catch (error) {
-    console.log(error)
-    return []
-  }
-}
-
-async function getDeployments (owner, repo, ref) {
-  try {
-    return octokit.request('GET /repos/:owner/:repo/commits/:ref/status', {
+  },
+  getCheckRuns: async (owner, repo, ref) => {
+    return octokit.paginate('GET /repos/{owner}/{repo}/commits/{ref}/check-runs', {
       owner,
       repo,
       ref
     })
-  } catch (error) {
-    console.log(error)
-    return {}
+  },
+  getCoveralls: async (owner, repo) => {
+    const response = await fetch(`https://coveralls.io/github/${owner}/${repo}.json`, FETCH_OPTIONS)
+
+    if (!response.ok) {
+      console.warn('No coverage data:', `https://coveralls.io/github/${owner}/${repo}.json`)
+      return
+    }
+
+    return response.json()
+  },
+  getPkgData: async (pkg) => {
+    const response = await fetch(`https://unpkg.com/${pkg}/package.json`, FETCH_OPTIONS)
+
+    if (!response.ok) {
+      console.warn('No package data:', `https://unpkg.com/${pkg}/package.json`)
+      return
+    }
+
+    return response.json()
+  },
+  getDownloads: async (pkg = '') => {
+    const response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`)
+
+    if (!response.ok) {
+      console.warn('No download data:', `https://api.npmjs.org/downloads/point/last-month/${pkg}`)
+      return
+    }
+
+    return response.json()
   }
 }
 
-async function getCoveralls (owner, repo) {
-  const response = await fetch(`https://coveralls.io/github/${owner}/${repo}.json`, FETCH_OPTIONS)
-
-  if (!response.ok) {
-    console.warn('No coverage data:', `https://coveralls.io/github/${owner}/${repo}.json`)
-    return
-  }
-
-  return response.json()
-}
-
-async function getPkgData (pkg) {
-  const response = await fetch(`https://unpkg.com/${pkg}/package.json`, FETCH_OPTIONS)
-
-  if (!response.ok) {
-    console.warn('No package data:', `https://unpkg.com/${pkg}/package.json`)
-    return
-  }
-
-  return response.json()
-}
-
-async function getDownloads (pkg = '') {
-  const response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`)
-
-  if (!response.ok) {
-    console.warn('No download data:', `https://api.npmjs.org/downloads/point/last-month/${pkg}`)
-    return
-  }
-
-  return response.json()
-}
-
-module.exports = {
-  createRepoLabel,
-  getCoveralls,
-  getDeployments,
-  getDownloads,
-  getMaintainedRepos,
-  getNoLabelIssues,
-  getPkgData,
-  getPullRequests,
-  getRepo,
-  getRepoIssues,
-  getRepoLabels,
-}
+module.exports = api
