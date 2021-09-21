@@ -11,19 +11,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js lts
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup node
         uses: actions/setup-node@v2
         with:
           node-version: "lts/*"
           cache: "npm"
-      - name: npm install, fetch & build
+      - name: Install deps
+        run: npm ci
+      - name: Fetch data
+        run: npm run fetch
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm ci
-          npm run fetch
-      - name: Fetch & Store Data
+      - name: Store data
         run: |
           # Git Commands
           git config --local user.email "ops+npm-deploy-user@npmjs.com"
@@ -32,7 +33,7 @@ jobs:
           git commit -m "chore: store fetched data"
           git push origin main
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
