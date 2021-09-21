@@ -358,6 +358,18 @@
   "package": "parse-conflict-json"
  },
  {
+  "name": "proc-log",
+  "description": "just emit 'log' events on the process object",
+  "repository": "https://api.github.com/repos/npm/proc-log",
+  "package": "proc-log"
+ },
+ {
+  "name": "proggy",
+  "description": "Progress bar updates at a distance",
+  "repository": "https://api.github.com/repos/npm/proggy",
+  "package": "proggy"
+ },
+ {
   "name": "promise-spawn",
   "description": "spawn processes the way the npm cli likes to do",
   "repository": "https://api.github.com/repos/npm/promise-spawn",
