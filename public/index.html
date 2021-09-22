@@ -298,14 +298,42 @@
 
         const datasource = Object.values(latestData);
 
+        // Columns with trend lines
+        const trendColumns = [
+          'issues_trend',
+          'no_labels_trend',
+          'high_priority_trend',
+          'needs_triage_trend'
+        ]
+
+        // Columns with a total in the footer
+        const totalsColumns = [
+          'issues_count',
+          'no_labels',
+          'high_priority',
+          'needs_triage',
+          'pull_requests',
+          'downloads'
+          ]
+
+        // Columns that are the "main" columns for day to day rtb
+        const mainColumns = [
+          'check_status',
+          'pull_requests',
+          'issues_count',
+          'no_labels',
+          'high_priority',
+          'needs_triage',
+        ]
+
         $table = $("table").DataTable({
           data: datasource,
           footerCallback: function (row, data, start, end, display) {
             const api = this.api();
-            [1, 8, 10, 12, 14, 16, 18].map(i => {
-              let num = Number(api.column(i, {page:'current'} ).data().sum()).toLocaleString()
-              $(api.column(i).footer() ).html(`${num}`)
-            })
+            for (const name of totalsColumns) {
+              let num = Number(api.column(`${name}:name`, {page:'current'} ).data().sum()).toLocaleString()
+              $(api.column(`${name}:name`).footer() ).html(`${num}`)
+            }
           },
           columns: [
             {
@@ -320,93 +348,9 @@
               className: "text-left project",
             },
             {
-              data: "stargazers_count",
-              title: "Stars",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  return Intl.NumberFormat("en-US").format(data);
-                }
-                return `<a href='https://github.com/${row.owner}/${row.name}/stargazers">${data}</a>`;
-              },
-            },
-            {
-              data: "license.key",
-              title: "License",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  if (!data) {
-                    return `<a href='https://github.com/${row.owner}/${row.name}/blob/${row.default_branch}/LICENSE" class="badge badge-danger badge-dt">N/A</a>`;
-                  }
-                }
-                return data;
-              },
-            },
-            {
-              data: "version",
-              title: "Version",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  const major = data.split(".")[0];
-                  return `<a href="https://npmjs.com/package/${row.package}/v/${data}" class="badge badge-${
-                    major >= 1 ? "success" : "danger"
-                  } badge-dt">${data}</a>`;
-                }
-                return data;
-              },
-            },
-            {
-              data: "default_branch",
-              title: "Branch",
-              render: function (data, type, row) {
-                if (data && shouldUseDisplayData(type)) {
-                  let className = "";
-                  if (data === "master") {
-                    className = "danger";
-                  } else if (data === "latest") {
-                    className = "warning";
-                  } else if (data === "main") {
-                    className = "success";
-                  } else {
-                    className = "info";
-                  }
-                  return `<a href='https://github.com/${row.owner}/${row.name}/settings/branches' class="badge badge-${className} badge-dt">${data}</a>`;
-                }
-                if (data === "main") {
-                  return 0;
-                } else if (data === "latest") {
-                  return 1;
-                } else if (data === "master") {
-                  return 2;
-                } else {
-                  return 3;
-                }
-                return data;
-              },
-            },
-            {
-              data: "coverage",
-              title: "Coverage",
-              defaultContent: 0,
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  let className = "";
-                  if (data === 100) {
-                    className = "success";
-                  } else if (data > 80) {
-                    className = "warning";
-                  } else {
-                    className = "danger";
-                  }
-                  return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
-                }
-                return data;
-              },
-            },
-            {
               data: "check_runs",
               title: "Check Status",
+              name: 'check_status',
               defaultContent: "",
               render: function (data, type, row) {
                 if (data && shouldUseDisplayData(type)) {
@@ -427,6 +371,187 @@
                   return `<a href='https://github.com/${row.owner}/${row.name}/' class="badge badge-${className} badge-dt">${data}</a>`;
                 }
                 return data
+              },
+            },
+            {
+              data: "prs_count",
+              title: "Pull Requests",
+              name: 'pull_requests',
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/pulls" class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
+            },
+            {
+              data: "issues_count",
+              name: 'issues_count',
+              title: "Issues",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/issues" class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              },
+            },
+            {
+              data: "issue_list_by_date",
+              name: "issues_trend",
+              title: "Issues Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = issuesTrendlineByRepositoryMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<div id="trendlineContainer${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
+                  }
+                  return noDataHTML;
+                }
+                return data;
+              },
+            },
+            {
+              data: "no_label_issues_count",
+              name: 'no_labels',
+              title: "No Labels",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href="https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+no%3Alabel" class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
+            },
+            {
+              data: "no_label_issues_by_date",
+              name: "no_labels_trend",
+              title: "No Labels Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = noLabelIssuesTrendlineMap[row.id].every(
+                    (value) => value === 0
+                  );
+                  if (!isZeroRange) {
+                    return `<div id="noLabelTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="noLabelIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
+                  }
+                  return noDataHTML;
+                }
+                return data;
+              },
+            },
+            {
+              data: "high_priority_issues_count",
+              title: "High Priority",
+              name: 'high_priority',
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Priority+1"%2C"Priority+0"' class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
+            },
+            {
+              data: "high_priority_issues_by_date",
+              name: "high_priority_trend",
+              title: "High Priority Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = highPriorityIssuesTrendlineMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<div id="highPrioTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
+                  }
+                  return noDataHTML;
+                }
+                return data;
+              },
+            },
+            {
+              data: "needs_triage_issues_count",
+              title: "Needs Triage",
+              name: 'needs_triage',
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const num = Intl.NumberFormat("en-US").format(data);
+                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
+                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Needs+Triage"' class="badge badge-${className} badge-dt">${num}</a>`
+                }
+                return data;
+              }
+            },
+            {
+              data: "needs_triage_issues_by_date",
+              name: "needs_triage_trend",
+              title: "Needs Triage Trend",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  const isZeroRange = needsTriageIssuesTrendlineMap[
+                    row.id
+                  ].every((value) => value === 0);
+                  if (!isZeroRange) {
+                    return `<div id="triageTrendline${row.id}" class="trendline-container">
+                        <div class="trendline-data">
+                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
+                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
+                        </div>
+                            <svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
+                        </div>`;
+                  }
+                  return noDataHTML;
+                }
+                return data;
+              },
+            },
+            {
+              data: "coverage",
+              title: "Coverage",
+              name: 'coverage',
+              defaultContent: 0,
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === 100) {
+                    className = "success";
+                  } else if (data > 80) {
+                    className = "warning";
+                  } else {
+                    className = "danger";
+                  }
+                  return `<a class="badge badge-${className} badge-dt" href="https://coveralls.io/github/${row.owner}/${row.name}" target="_blank">${data}</a>`;
+                }
+                return data;
               },
             },
             {
@@ -457,160 +582,78 @@
               },
             },
             {
-              data: "issues_count",
-              title: "Issues",
+              data: "default_branch",
+              title: "Branch",
               render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const num = Intl.NumberFormat("en-US").format(data);
-                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
-                  return `<a href="https://github.com/${row.owner}/${row.name}/issues" class="badge badge-${className} badge-dt">${num}</a>`
+                if (data && shouldUseDisplayData(type)) {
+                  let className = "";
+                  if (data === "master") {
+                    className = "danger";
+                  } else if (data === "latest") {
+                    className = "warning";
+                  } else if (data === "main") {
+                    className = "success";
+                  } else {
+                    className = "info";
+                  }
+                  return `<a href='https://github.com/${row.owner}/${row.name}/settings/branches' class="badge badge-${className} badge-dt">${data}</a>`;
+                }
+                if (type === 'sort') {
+                  if (data === "main") {
+                    return 0;
+                  } else if (data === "latest") {
+                    return 1;
+                  } else if (data === "master") {
+                    return 2;
+                  } else {
+                    return 3;
+                  }
                 }
                 return data;
               },
             },
             {
-              data: "issue_list_by_date",
-              title: "Issues Trend",
+              data: "version",
+              title: "Version",
+              defaultContent: "",
+              render: function (data, type, row) {
+                if (data && shouldUseDisplayData(type)) {
+                  const major = data.split(".")[0];
+                  return `<a href="https://npmjs.com/package/${row.package}/v/${data}" class="badge badge-${
+                    major >= 1 ? "success" : "danger"
+                  } badge-dt">${data}</a>`;
+                }
+                return data;
+              },
+            },
+            {
+              data: "license.key",
+              title: "License",
               defaultContent: "",
               render: function (data, type, row) {
                 if (shouldUseDisplayData(type)) {
-                  const isZeroRange = issuesTrendlineByRepositoryMap[
-                    row.id
-                  ].every((value) => value === 0);
-                  if (!isZeroRange) {
-                    return `<div id="trendlineContainer${row.id}" class="trendline-container">
-                        <div class="trendline-data">
-                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
-                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
-                        </div>
-                            <svg id="issuesTrendline${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
-                        </div>`;
+                  if (!data) {
+                    return `<a href='https://github.com/${row.owner}/${row.name}/blob/${row.default_branch}/LICENSE" class="badge badge-danger badge-dt">N/A</a>`;
                   }
-                  return noDataHTML;
                 }
                 return data;
               },
             },
-            {
-              data: "no_label_issues_count",
-              title: "Missing Labels",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const num = Intl.NumberFormat("en-US").format(data);
-                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
-                  return `<a href="https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+no%3Alabel" class="badge badge-${className} badge-dt">${num}</a>`
-                }
-                return data;
-              }
-            },
-            {
-              data: "no_label_issues_by_date",
-              title: "Missing Labels Trend",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const isZeroRange = noLabelIssuesTrendlineMap[row.id].every(
-                    (value) => value === 0
-                  );
-                  if (!isZeroRange) {
-                    return `<div id="noLabelTrendline${row.id}" class="trendline-container">
-                        <div class="trendline-data">
-                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
-                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
-                        </div>
-                            <svg id="noLabelIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
-                        </div>`;
-                  }
-                  return noDataHTML;
-                }
-                return data;
-              },
-            },
-            {
-              data: "high_priority_issues_count",
-              title: "High Priority",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const num = Intl.NumberFormat("en-US").format(data);
-                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
-                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Priority+1"%2C"Priority+0"' class="badge badge-${className} badge-dt">${num}</a>`
-                }
-                return data;
-              }
-            },
-            {
-              data: "high_priority_issues_by_date",
-              title: "High Priority Trend",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const isZeroRange = highPriorityIssuesTrendlineMap[
-                    row.id
-                  ].every((value) => value === 0);
-                  if (!isZeroRange) {
-                    return `<div id="highPrioTrendline${row.id}" class="trendline-container">
-                        <div class="trendline-data">
-                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
-                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
-                        </div>
-                            <svg id="highPrioIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
-                        </div>`;
-                  }
-                  return noDataHTML;
-                }
-                return data;
-              },
-            },
-            {
-              data: "needs_triage_issues_count",
-              title: "Needs Triage",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const num = Intl.NumberFormat("en-US").format(data);
-                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
-                  return `<a href='https://github.com/${row.owner}/${row.name}/issues?q=is%3Aissue+is%3Aopen+label%3A"Needs+Triage"' class="badge badge-${className} badge-dt">${num}</a>`
-                }
-                return data;
-              }
-            },
-            {
-              data: "needs_triage_issues_by_date",
-              title: "Needs Triage Trend",
-              defaultContent: "",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const isZeroRange = needsTriageIssuesTrendlineMap[
-                    row.id
-                  ].every((value) => value === 0);
-                  if (!isZeroRange) {
-                    return `<div id="triageTrendline${row.id}" class="trendline-container">
-                        <div class="trendline-data">
-                            <span id="trendlineDate${row.id}" class="trendline-date"></span>
-                            <span id="trendlineValue${row.id}" class="trendline-value"></span>
-                        </div>
-                            <svg id="needsTriageIssues${row.id}" class="sparkline" width="100" height="40" stroke-width="3"></svg>
-                        </div>`;
-                  }
-                  return noDataHTML;
-                }
-                return data;
-              },
-            },
-            {
-              data: "prs_count",
-              title: "Pull Requests",
-              render: function (data, type, row) {
-                if (shouldUseDisplayData(type)) {
-                  const num = Intl.NumberFormat("en-US").format(data);
-                  const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success';
-                  return `<a href="https://github.com/${row.owner}/${row.name}/pulls" class="badge badge-${className} badge-dt">${num}</a>`
-                }
-                return data;
-              }
-            },
+            { data: "last_publish", title: "Last Publish" },
             { data: "pushed_at_diff", title: "Last Commit" },
             {
+              data: "stargazers_count",
+              title: "Stars",
+              render: function (data, type, row) {
+                if (shouldUseDisplayData(type)) {
+                  return Intl.NumberFormat("en-US").format(data);
+                }
+                return `<a href='https://github.com/${row.owner}/${row.name}/stargazers">${data}</a>`;
+              },
+            },
+            {
               data: "downloads",
+              name: 'downloads',
               title: "Downloads (/m)",
               defaultContent: 0,
               render: function (data, type, row) {
@@ -657,13 +700,29 @@
         new $.fn.dataTable.Buttons($table, {
           buttons: [
             {
-              text: "Show/Hide All Trendlines",
-              action: function (e, dt, node, config) {
-                const trendlineCols = [9, 11, 13, 15];
-                trendlineCols.forEach((colIdx) => {
-                  const current = dt.column(colIdx);
-                  current.visible(!current.visible());
-                });
+              text: 'Toggle Main',
+              action: function (e, dt) {
+                const visibility = dt.column(`${mainColumns[0]}:name`).visible()
+                for (const name of mainColumns) {
+                  const current = dt.column(`${name}:name`);
+                  current.visible(!visibility);
+                }
+                if (visibility) {
+                  for (const name of trendColumns) {
+                    const current = dt.column(`${name}:name`);
+                    current.visible(false);
+                  }
+                }
+              }
+            },
+            {
+              text: "Toggle Trendlines",
+              action: function (e, dt) {
+                const visibility = dt.column(`${trendColumns[0]}:name`).visible()
+                for (const name of trendColumns) {
+                  const current = dt.column(`${name}:name`);
+                  current.visible(!visibility);
+                }
               },
             },
             {
@@ -722,15 +781,14 @@
             $("#DataTables_Table_0_filter", $table.table().container())
           );
 
-        $table.column(9).visible(false);
-        $table.column(11).visible(false);
-        $table.column(13).visible(false);
-        $table.column(15).visible(false);
+        //$table.column(9).visible(false);
+        //$table.column(11).visible(false);
+        //$table.column(13).visible(false);
+        //$table.column(15).visible(false);
 
         $table.on(
           "column-visibility.dt",
           function (e, settings, column, state) {
-            const rows = [3, 5, 7];
             datasource.forEach((repo) => {
               drawTrendline(repo.id);
             });
