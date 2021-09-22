@@ -76,18 +76,20 @@ const exec = async () => {
         const coverage = coveralls ? Math.round(coveralls.covered_percent) : ''
 
         let pkg = {}
+        let packument = {}
         let downloads = {}
         let nodeVersion = ''
+        let lastPublish = null
 
         if (repo.package) {
-          console.log(
-            'Fetching package data:',
-            `https://unpkg.com/${repo.package}/package.json`
-          )
-          pkg = await api.getPkgData(repo.package)
+          console.log(`Fetching packument and manifest for ${repo.package}`)
+          pkg = await api.getManifest(repo.package)
+          packument = await api.getPackument(repo.package)
 
           nodeVersion =
-            pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
+            pkg && pkg.engines && pkg.engines.node || null
+
+          lastPublish = packument && packument.modified || null
 
           console.log(
             'Fetching downloads:',
@@ -110,6 +112,7 @@ const exec = async () => {
           coverage,
           name,
           nodeVersion,
+          lastPublish,
           pkg,
           highPrioIssues: highPrioIssuesCount,
           needsTriageIssues: needsTriageIssuesCount,

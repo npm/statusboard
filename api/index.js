@@ -1,5 +1,6 @@
 require('dotenv').config()
 const fetch = require('node-fetch')
+const pacote = require('pacote')
 const Rest = require('@octokit/rest')
 const { throttling } = require('@octokit/plugin-throttling')
 const Octokit = Rest.Octokit.plugin(throttling)
@@ -121,15 +122,21 @@ const api = {
 
     return response.json()
   },
-  getPkgData: async (pkg) => {
-    const response = await fetch(`https://unpkg.com/${pkg}/package.json`, FETCH_OPTIONS)
-
-    if (!response.ok) {
-      console.warn('No package data:', `https://unpkg.com/${pkg}/package.json`)
-      return
+  getManifest: async (pkg) => {
+    try {
+      const manifest = await pacote.manifest(pkg, { fullMetadata: true })
+      return manifest
+    } catch (_) {
+      return {}
     }
-
-    return response.json()
+  },
+  getPackument: async (pkg) => {
+    try {
+      const packument = await pacote.packument(pkg)
+      return packument
+    } catch (_) {
+      return {}
+    }
   },
   getDownloads: async (pkg = '') => {
     const response = await fetch(`https://api.npmjs.org/downloads/point/last-month/${pkg}`)
