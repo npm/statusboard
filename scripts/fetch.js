@@ -2,25 +2,8 @@ require('dotenv').config()
 
 const repositories = require('../public/data/maintained.json')
 
-// const repositories = [
-//   {
-//     name: 'cli',
-//     description: 'the package manager for JavaScript',
-//     repository: 'https://github.com/npm/cli',
-//     package: 'npm'
-//   }
-// ]
+const api = require('../api')
 
-const {
-  getPullRequests,
-  getRepo,
-  getDeployments,
-  getRepoIssues,
-  getCoveralls,
-  getPkgData,
-  getDownloads,
-  getNoLabelIssues
-} = require('../api')
 const { mapToResponse, writeFile } = require('../lib/fetch')
 const { sleep } = require('sleepover')
 
@@ -44,11 +27,11 @@ const exec = async () => {
       const repoString = r.repository.split('/').slice(-2)
       const owner = repoString[0]
       const name = repoString[1]
-      const noLabelIssues = await getNoLabelIssues(owner, name)
+      const noLabelIssues = await api.getNoLabelIssues(owner, name)
       await sleep(500)
-      const highPrioIssues = await getRepoIssues(owner, name, 'Priority 1')
+      const highPrioIssues = await api.getRepoIssues(owner, name, 'Priority 1')
       await sleep(250)
-      const needsTriageIssues = await getRepoIssues(
+      const needsTriageIssues = await api.getRepoIssues(
         owner,
         name,
         'Needs Triage'
@@ -72,12 +55,12 @@ const exec = async () => {
         const owner = repoString[0]
         const name = repoString[1]
 
-        const prs = await getPullRequests(owner, name)
+        const prs = await api.getPullRequests(owner, name)
         const prCount = prs.length || 0
 
-        const { data: repoData } = await getRepo(owner, name)
+        const { data: repoData } = await api.getRepo(owner, name)
 
-        const deployments = await getDeployments(
+        const checkRuns = await api.getCheckRuns(
           owner,
           name,
           repoData.default_branch
@@ -88,7 +71,7 @@ const exec = async () => {
           `https://coveralls.io/github/${owner}/${name}.json`
         )
 
-        const coveralls = await getCoveralls(owner, name)
+        const coveralls = await api.getCoveralls(owner, name)
 
         const coverage = coveralls ? Math.round(coveralls.covered_percent) : ''
 
@@ -101,7 +84,7 @@ const exec = async () => {
             'Fetching package data:',
             `https://unpkg.com/${repo.package}/package.json`
           )
-          pkg = await getPkgData(repo.package)
+          pkg = await api.getPkgData(repo.package)
 
           nodeVersion =
             pkg && pkg.engines && pkg.engines.node ? pkg.engines.node : null
@@ -110,7 +93,7 @@ const exec = async () => {
             'Fetching downloads:',
             `https://api.npmjs.org/downloads/point/last-month/${repo.package}`
           )
-          downloads = await getDownloads(repo.package)
+          downloads = await api.getDownloads(repo.package)
         }
 
         const {
@@ -131,8 +114,7 @@ const exec = async () => {
           highPrioIssues: highPrioIssuesCount,
           needsTriageIssues: needsTriageIssuesCount,
           noLabelIssuesCount: noLabelIssuesCount,
-          deployments,
-          downloads
+          checkRuns,
         }
 
         return mapToResponse(repo.package, responseData)
