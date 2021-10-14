@@ -60,6 +60,7 @@ const exec = async () => {
 
         const { data: repoData } = await api.getRepo(owner, name)
 
+        const issueCount = repoData.open_issues_count - prCount
         const checkRuns = await api.getCheckRuns(
           owner,
           name,
@@ -109,6 +110,7 @@ const exec = async () => {
           owner,
           repo,
           prCount,
+          issueCount,
           coverage,
           name,
           nodeVersion,

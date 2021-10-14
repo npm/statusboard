@@ -567,7 +567,7 @@
                     className = "danger";
                   } else {
                     cleanData = data.replace(/\s/g, "");
-                    if (cleanData === ">=12") {
+                    if (cleanData === "^12.13.0 || ^14.15.0 || >=16") {
                       className = "success";
                     } else if (cleanData === ">=10") {
                       className = "warning";
@@ -781,10 +781,9 @@
             $("#DataTables_Table_0_filter", $table.table().container())
           );
 
-        //$table.column(9).visible(false);
-        //$table.column(11).visible(false);
-        //$table.column(13).visible(false);
-        //$table.column(15).visible(false);
+        for (const name of trendColumns) {
+          dt.column(`${name}:name`).visible(false);
+        }
 
         $table.on(
           "column-visibility.dt",
