@@ -215,7 +215,6 @@
             ] = current.no_label_issues_by_date.slice(
               current.no_label_issues_by_date.length - days
             );
-            console.log(noLabelIssuesTrendlineMap[id]);
             drawTrendline(id);
           });
         };
@@ -567,7 +566,7 @@
                     className = "danger";
                   } else {
                     cleanData = data.replace(/\s/g, "");
-                    if (cleanData === "^12.13.0 || ^14.15.0 || >=16") {
+                    if (cleanData === "^12.13.0||^14.15.0||>=16") {
                       className = "success";
                     } else if (cleanData === ">=10") {
                       className = "warning";
@@ -782,7 +781,7 @@
           );
 
         for (const name of trendColumns) {
-          dt.column(`${name}:name`).visible(false);
+          $table.column(`${name}:name`).visible(false);
         }
 
         $table.on(
