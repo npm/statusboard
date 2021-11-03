@@ -208,6 +208,12 @@
   "package": "libnpmversion"
  },
  {
+  "name": "lint",
+  "description": "lint the npmcli way",
+  "repository": "https://api.github.com/repos/npm/lint",
+  "package": "@npmcli/lint"
+ },
+ {
   "name": "make-fetch-happen",
   "description": "making fetch happen for npm",
   "repository": "https://api.github.com/repos/npm/make-fetch-happen",
