@@ -178,18 +178,6 @@
   "package": "libnpmorg"
  },
  {
-  "name": "libnpmpack",
-  "description": "Programmatic API for the bits behind npm pack",
-  "repository": "https://api.github.com/repos/npm/libnpmpack",
-  "package": "libnpmpack"
- },
- {
-  "name": "libnpmpublish",
-  "description": "programmatically publish and unpublish npm packages",
-  "repository": "https://api.github.com/repos/npm/libnpmpublish",
-  "package": "libnpmpublish"
- },
- {
   "name": "libnpmsearch",
   "description": "programmatic API for the shiny new npm search endpoint",
   "repository": "https://api.github.com/repos/npm/libnpmsearch",
@@ -200,12 +188,6 @@
   "description": "programmatic api for `npm team`",
   "repository": "https://api.github.com/repos/npm/libnpmteam",
   "package": "libnpmteam"
- },
- {
-  "name": "libnpmversion",
-  "description": "library to do the things that 'npm version' does",
-  "repository": "https://api.github.com/repos/npm/libnpmversion",
-  "package": "libnpmversion"
  },
  {
   "name": "make-fetch-happen",
@@ -220,22 +202,10 @@
   "package": "@npmcli/map-workspaces"
  },
  {
-  "name": "metavuln-calculator",
-  "description": "Calculate meta-vulnerabilities from package security advisories",
-  "repository": "https://api.github.com/repos/npm/metavuln-calculator",
-  "package": "@npmcli/metavuln-calculator"
- },
- {
   "name": "minipass-fetch",
   "description": "An implementation of window.fetch in Node.js using Minipass streams",
   "repository": "https://api.github.com/repos/npm/minipass-fetch",
   "package": "minipass-fetch"
- },
- {
-  "name": "move-file",
-  "description": "Move a file across devices with support for all node 10 versions (fork of https://github.com/sindresorhus/move-file)",
-  "repository": "https://api.github.com/repos/npm/move-file",
-  "package": "@npmcli/move-file"
  },
  {
   "name": "mute-stream",
@@ -328,12 +298,6 @@
   "package": "npm-profile"
  },
  {
-  "name": "npm-registry-fetch",
-  "description": "like fetch() but for the npm registry",
-  "repository": "https://api.github.com/repos/npm/npm-registry-fetch",
-  "package": "npm-registry-fetch"
- },
- {
   "name": "npm-user-validate",
   "description": "user validation",
   "repository": "https://api.github.com/repos/npm/npm-user-validate",
@@ -356,6 +320,42 @@
   "description": "Parse a JSON string that has git merge conflicts, resolving if possible",
   "repository": "https://api.github.com/repos/npm/parse-conflict-json",
   "package": "parse-conflict-json"
+ },
+ {
+  "name": "proggy",
+  "description": "Progress bar updates at a distance",
+  "repository": "https://api.github.com/repos/npm/proggy",
+  "package": "proggy"
+ },
+ {
+  "name": "promise-spawn",
+  "description": "spawn processes the way the npm cli likes to do",
+  "repository": "https://api.github.com/repos/npm/promise-spawn",
+  "package": "@npmcli/promise-spawn"
+ },
+ {
+  "name": "promzard",
+  "description": "A prompting json thingie",
+  "repository": "https://api.github.com/repos/npm/promzard",
+  "package": "promzard"
+ },
+ {
+  "name": "read",
+  "description": "read(1) for node.",
+  "repository": "https://api.github.com/repos/npm/read",
+  "package": "read"
+ },
+ {
+  "name": "read-cmd-shim",
+  "description": "Read the path a cmd-shim is pointing at. Acts like fs.readlink but for cmd-shims.",
+  "repository": "https://api.github.com/repos/npm/read-cmd-shim",
+  "package": "read-cmd-shim"
+ },
+ {
+  "name": "readdir-scoped-modules",
+  "description": "Like `fs.readdir` but handling `@org/module` dirs as if they were a single entry.",
+  "repository": "https://api.github.com/repos/npm/readdir-scoped-modules",
+  "package": "readdir-scoped-modules"
  },
  {
   "name": "proc-log",
