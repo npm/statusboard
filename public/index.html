@@ -51,20 +51,12 @@
       <main>
         <h2><strong>npm</strong> project statusboard</h2>
         <small class="built"></small>
-        <table
-          style="width: 100%"
-          class="table table-striped table-bordered"
-        >
+        <table style="width: 100%" class="table table-striped table-bordered">
           <tfoot>
             <tr>
               <th data-value="project" class="text-right"><strong>Totals:</strong></th>
-              <th data-value="stars"></th>
-              <th data-value="license"></th>
-              <th data-value="version"></th>
-              <th data-value="branch"></th>
-              <th data-value="coverage"></th>
-              <th data-value="status"></th>
-              <th data-value="node"></th>
+              <th data-value="check-status"></th>
+              <th data-value="pull-requests"></th>
               <th data-value="issues"></th>
               <th data-value="issues-trend"></th>
               <th data-value="missing-labels"></th>
@@ -73,8 +65,15 @@
               <th data-value="high-priority-trend"></th>
               <th data-value="needs-triage"></th>
               <th data-value="needs-triage-trend"></th>
-              <th data-value="pull-requests"></th>
-              <th data-value="commit"></th>
+              <th data-value="template-version"></th>
+              <th data-value="coverage"></th>
+              <th data-value="node-version"></th>
+              <th data-value="branch"></th>
+              <th data-value="version"></th>
+              <th data-value="license"></th>
+              <th data-value="last-publish"></th>
+              <th data-value="last-commit"></th>
+              <th data-value="stars"></th>
               <th data-value="downloads"></th>
               <th data-value="size"></th>
             </tr>
@@ -533,6 +532,7 @@
                 return data;
               },
             },
+            { data: "template_version", title: "Template Version" },
             {
               data: "coverage",
               title: "Coverage",
