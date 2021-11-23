@@ -56,7 +56,10 @@ const exec = async () => {
           last_publish: null,
           downloads: 0,
           node: null,
-          template_version: null
+          template_version: null,
+          high_priority_issues_count: NaN,
+          needs_triage_issues_count: NaN,
+          no_label_issues_count: NaN,
         }
 
         const prs = await api.getPullRequests(owner, name)
