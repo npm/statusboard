@@ -292,6 +292,12 @@
   "package": "npm-audit-report"
  },
  {
+  "name": "npm-birthday",
+  "description": "Implementation of the \"npm birthday\" command",
+  "repository": "https://api.github.com/repos/npm/npm-birthday",
+  "package": "@npmcli/npm-birthday"
+ },
+ {
   "name": "npm-bundled",
   "description": "Run this in a node package, and it'll tell you which things in node_modules are bundledDependencies, or transitive dependencies of bundled dependencies.",
   "repository": "https://api.github.com/repos/npm/npm-bundled",
