@@ -112,6 +112,12 @@
   "package": "@npmcli/git"
  },
  {
+  "name": "hosted-git-info",
+  "description": "Provides metadata and conversions from repository urls for Github, Bitbucket and Gitlab",
+  "repository": "https://api.github.com/repos/npm/hosted-git-info",
+  "package": "hosted-git-info"
+ },
+ {
   "name": "ignore-walk",
   "description": "Nested/recursive `.gitignore`/`.npmignore` parsing and filtering.",
   "repository": "https://api.github.com/repos/npm/ignore-walk",
@@ -170,12 +176,6 @@
   "description": "programmatic api for `npm org`",
   "repository": "https://api.github.com/repos/npm/libnpmorg",
   "package": "libnpmorg"
- },
- {
-  "name": "libnpmpack",
-  "description": "Programmatic API for the bits behind npm pack",
-  "repository": "https://api.github.com/repos/npm/libnpmpack",
-  "package": "libnpmpack"
  },
  {
   "name": "libnpmpack",
