@@ -35,7 +35,7 @@
     "http-server": "^0.12.3",
     "mkdirp": "^1.0.4",
     "moment": "^2.27.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "pacote": "^11.3.5",
     "sleepover": "^1.1.4"
   },
