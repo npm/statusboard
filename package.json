@@ -34,7 +34,7 @@
     "fetch-retry": "^4.1.1",
     "http-server": "^0.12.3",
     "mkdirp": "^1.0.4",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "node-fetch": "^2.6.7",
     "pacote": "^11.3.5",
     "sleepover": "^1.1.4"
