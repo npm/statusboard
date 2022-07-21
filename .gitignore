@@ -1,4 +1,27 @@
-.DS_Store
-node_modules/
-.env
-dist/
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+# ignore everything in the root
+/*
+
+# keep these
+!/.eslintrc.local.*
+!**/.gitignore
+!/docs/
+!/tap-snapshots/
+!/test/
+!/map.js
+!/scripts/
+!/README*
+!/LICENSE*
+!/CHANGELOG*
+!/.commitlintrc.js
+!/.eslintrc.js
+!/.github/
+!/.gitignore
+!/.npmrc
+!/CODE_OF_CONDUCT.md
+!/SECURITY.md
+!/lib/
+!/package.json
+!/public/
+!/package-lock.json

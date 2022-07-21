@@ -1,27 +1,25 @@
-require('dotenv').config()
-
-// Repos that live outside the npm org
-const manual = require('../public/data/manual.json')
 const pacote = require('pacote')
 const fs = require('fs')
+
+const api = require('../lib/api.js')
 
 const org = 'npm'
 const topic = 'npm-cli'
 
-const {
-  getMaintainedRepos,
-} = require('../api')
-
 const exec = async () => {
-  const maintained = []
+  const data = []
+
   console.log(`Getting repos in ${org} org with topic ${topic}`)
-  const repos = await getMaintainedRepos(org, topic)
+  const repos = await api.getRepos(org, topic)
+
   console.group()
   console.log(`Found ${repos.length} repos`)
   console.groupEnd()
+
   if (repos.length === 0) {
     return // error state, logged in api already
   }
+
   console.log('Fetching manifests:')
   console.group()
   for (const repo of repos) {
@@ -29,7 +27,7 @@ const exec = async () => {
     const entry = {
       name: repo.name,
       description: repo.description,
-      repository: repo.url
+      repository: repo.url,
     }
     try {
       const manifest = await pacote.manifest(`${org}/${repo.name}`)
@@ -41,15 +39,14 @@ const exec = async () => {
       }
     } catch (err) {
       console.error(`could not fetch manifest for ${org}/${repo.name}`)
-      console.stack(err)
+      console.error(err)
     }
-    maintained.push(entry)
+    data.push(entry)
   }
   console.groupEnd()
-  console.log(`Adding ${manual.length} manual entries`)
-  const data = [...maintained, ...manual]
-  console.log(`Writing ${data.length} entries to maintained.json`)
-  fs.writeFileSync('./public/data/maintained.json', JSON.stringify(data, null, ' '))
+
+  console.log(`Writing ${data.length} entries to repos.json`)
+  fs.writeFileSync('./public/data/repos.json', JSON.stringify(data, null, ' '))
 }
 
 exec()

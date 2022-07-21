@@ -1,8 +1,0 @@
-[
-  {
-    "name": "abbrev",
-    "description": "Like ruby's Abbrev module.",
-    "repository": "https://github.com/isaacs/abbrev-js",
-    "package": "abbrev"
-  }
-]

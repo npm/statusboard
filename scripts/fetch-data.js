@@ -1,18 +1,13 @@
-require('dotenv').config()
-
-const repositories = require('../public/data/maintained.json')
-
 const fs = require('fs')
 const path = require('path')
 const mkdirp = require('mkdirp')
 const dateFns = require('date-fns')
-
-const api = require('../api')
-
 const { sleep } = require('sleepover')
 
-const exec = async () => {
+const api = require('../lib/api.js')
+const repositories = require('../public/data/repos.json')
 
+const exec = async () => {
   /**
    * We split up the iteration twice in order to compensate for having to use the `sleep` library.
    * The throttling plugin does not work for paginated calls that use the search api.
@@ -32,7 +27,7 @@ const exec = async () => {
       repoIssuesMap[`${owner}/${name}`] = {
         noLabel: noLabel.length,
         highPriority: highPriority.length,
-        needsTriage: needsTriage.length
+        needsTriage: needsTriage.length,
       }
       completed++
       console.log(`completed: ${completed} / ${total}`)
@@ -64,39 +59,20 @@ const exec = async () => {
 
         const prs = await api.getPullRequests(owner, name)
         result.prs_count = prs.length
-        result.issues_count = repoData.open_issues_count - prs.length,
+        result.issues_count = repoData.open_issues_count - prs.length
         result.pushed_at_diff = dateFns.formatDistanceToNow(new Date(repoData.pushed_at), {
           addSuffix: false,
-          includeSeconds: false
+          includeSeconds: false,
         })
 
-        const checkRuns = await api.getCheckRuns(
-          owner,
-          name,
-          repoData.default_branch
-        )
-        result.check_runs = checkRuns.map(run => run.conclusion)
-
-        console.log(`Fetching coverage: https://coveralls.io/github/${owner}/${name}.json`)
-
-        const coveralls = await api.getCoveralls(owner, name)
-
-        if (coveralls) {
-          result.coverage = Math.round(coveralls.covered_percent)
-          if (result.coverage === 100) {
-            result.coverageLevel = 'high'
-          } else if (result.coverage > 80) {
-            result.coverageLevel = 'medium'
-          } else {
-            result.coverageLevel = 'low'
-          }
-        }
+        const checkRuns = await api.getCheckRuns(owner, name, repoData.default_branch)
+        result.check_runs = checkRuns.map((run) => run.conclusion)
 
         if (repo.package) {
           result.package = repo.package
           console.log(`Fetching packument and manifest for ${repo.package}`)
           result.pkg = await api.getManifest(repo.package)
-          result.node = result.pkg.engines && result.pkg.engines.node || null
+          result.node = (result.pkg.engines && result.pkg.engines.node) || null
           result.version = result.pkg.version || null
           result.template_version = result.pkg.templateVersion || null
 
@@ -105,7 +81,7 @@ const exec = async () => {
           if (packument.modified) {
             result.last_publish = dateFns.formatDistanceToNow(new Date(packument.modified), {
               addSuffix: false,
-              includeSeconds: false
+              includeSeconds: false,
             })
           }
 
@@ -119,8 +95,7 @@ const exec = async () => {
           }
         }
 
-
-        result.license = { key: ''}
+        result.license = { key: '' }
         if (result.pkg.license) {
           result.license.key = result.pkg.license
         } else if (repo.license) {
@@ -144,7 +119,7 @@ const exec = async () => {
     let result = await Promise.all(promises)
     result = {
       data: result.filter((r) => !!r),
-      created_at: new Date().toISOString()
+      created_at: new Date().toISOString(),
     }
 
     const now = new Date()
