@@ -110,11 +110,14 @@ header {
   border-bottom: 1px solid rgba(134, 131, 131, 0.2);
 }
 
+a.text-primary {
+  font-weight: bold;
+}
+
 a,
 a:active,
 a:hover {
   text-decoration: none;
-  font-weight: bold;
   line-height: 100%;
   color: rgb(65, 56, 68);
 }
@@ -234,8 +237,13 @@ div.dt-button-collection .dt-button.active i {
   background-color: inherit;
 }
 
-#DataTables_Table_0_filter {
+.controls {
   display: flex;
+  justify-content: space-between;
+}
+
+#DataTables_Table_0_filter {
+  display: inline-flex;
   justify-content: space-between;
   margin-top: 6px;
 }

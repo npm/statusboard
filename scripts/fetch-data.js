@@ -3,8 +3,10 @@ const path = require('path')
 const mkdirp = require('mkdirp')
 const dateFns = require('date-fns')
 const { sleep } = require('sleepover')
+const semver = require('semver')
 
 const api = require('../lib/api.js')
+const getCoverage = require('../lib/coverage.js')
 const repositories = require('../public/data/repos.json')
 
 const exec = async () => {
@@ -46,9 +48,9 @@ const exec = async () => {
           owner,
           name,
           coverage: '',
-          coverageLevel: '',
-          pkg: {},
+          pkg: null,
           last_publish: null,
+          pending_release: null,
           downloads: 0,
           node: null,
           template_version: null,
@@ -65,19 +67,24 @@ const exec = async () => {
           includeSeconds: false,
         })
 
+        const releasePr = prs.find(pr => pr.labels.some((l) => l.name === 'autorelease: pending'))
+        result.pending_release = releasePr ? {
+          url: releasePr.url,
+          title: releasePr.title.match(semver.re[semver.tokens.FULLPLAIN])?.[0] ||
+            releasePr.title,
+        } : null
+
         const checkRuns = await api.getCheckRuns(owner, name, repoData.default_branch)
         result.check_runs = checkRuns.map((run) => run.conclusion)
 
         if (repo.package) {
+          // the repo is a published npm package
+          console.log('Fetching packument and manifest:', repo.package)
+
           result.package = repo.package
-          console.log(`Fetching packument and manifest for ${repo.package}`)
           result.pkg = await api.getManifest(repo.package)
-          result.node = (result.pkg.engines && result.pkg.engines.node) || null
-          result.version = result.pkg.version || null
-          result.template_version = result.pkg.templateVersion || null
 
           const packument = await api.getPackument(repo.package)
-
           if (packument.modified) {
             result.last_publish = dateFns.formatDistanceToNow(new Date(packument.modified), {
               addSuffix: false,
@@ -85,25 +92,34 @@ const exec = async () => {
             })
           }
 
-          console.log(
-            'Fetching downloads:',
-            `https://api.npmjs.org/downloads/point/last-month/${repo.package}`
-          )
+          console.log('Fetching downloads:', repo.package)
           const downloads = await api.getDownloads(repo.package)
           if (downloads) {
             result.downloads = downloads.downloads || 0
           }
+        } else {
+          // the repo is not published but might still have a package.json
+          // with some info about the package
+          console.log('Fetching package.json from repo:', repo.repository)
+          try {
+            const resp = await api.getRepoFile(owner, name, 'package.json')
+            result.pkg = JSON.parse(Buffer.from(resp.content, resp.encoding).toString('utf-8'))
+          } catch {
+            console.log('No valid package.json found in repo:', repo.repository)
+          }
         }
 
-        result.license = { key: '' }
-        if (result.pkg.license) {
-          result.license.key = result.pkg.license
-        } else if (repo.license) {
-          result.license.key = repo.license.spdx_id
-        }
+        result.license = result.pkg?.license || repoData.license?.spdx_id || ''
+        result.coverage = getCoverage(result.pkg) ?? ''
+        result.isPrivate = result.pkg ? result.pkg.private === true : true
+        result.node = result.pkg?.engines?.node || null
+        result.version = result.pkg?.version || null
+        result.template_version =
+          result.pkg?.templateVersion ||
+          result.pkg?.templateOSS?.version ||
+          null
 
         const issues = repoIssuesMap[`${owner}/${name}`]
-
         if (issues) {
           result.high_priority_issues_count = issues.highPriority
           result.needs_triage_issues_count = issues.needsTriage

@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "serve": "http-server ./public/",
+    "dev": "http-server -c-1 -p 8080 -o -s",
     "fetch:data": "node ./scripts/fetch-data.js",
     "fetch:repos": " node ./scripts/fetch-repos.js",
     "test": "tap",
@@ -37,6 +37,7 @@
     "http-server": "^14.1.1",
     "mkdirp": "^1.0.4",
     "pacote": "^13.6.1",
+    "semver": "^7.3.7",
     "sleepover": "^1.2.1"
   },
   "devDependencies": {
