@@ -36,7 +36,6 @@
     "date-fns": "^2.28.0",
     "http-server": "^14.1.1",
     "mkdirp": "^1.0.4",
-    "node-fetch": "^3.2.9",
     "pacote": "^13.6.1",
     "sleepover": "^1.2.1"
   },

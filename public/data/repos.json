@@ -1,5 +1,11 @@
 [
  {
+  "name": "abbrev-js",
+  "description": "Like ruby's Abbrev module",
+  "repository": "https://api.github.com/repos/npm/abbrev-js",
+  "package": "abbrev"
+ },
+ {
   "name": "arborist",
   "description": "npm's tree doctor",
   "repository": "https://api.github.com/repos/npm/arborist",
@@ -69,6 +75,11 @@
   "description": "Colorizes unified diff output",
   "repository": "https://api.github.com/repos/npm/disparity-colors",
   "package": "@npmcli/disparity-colors"
+ },
+ {
+  "name": "doctornpm",
+  "description": "A Gatsby theme for npm's documentation (a fork of doctocat)",
+  "repository": "https://api.github.com/repos/npm/doctornpm"
  },
  {
   "name": "documentation",
@@ -208,6 +219,12 @@
   "package": "libnpmversion"
  },
  {
+  "name": "lint",
+  "description": "lint the npmcli way",
+  "repository": "https://api.github.com/repos/npm/lint",
+  "package": "@npmcli/lint"
+ },
+ {
   "name": "make-fetch-happen",
   "description": "making fetch happen for npm",
   "repository": "https://api.github.com/repos/npm/make-fetch-happen",
@@ -248,6 +265,12 @@
   "description": "Get the package name from a folder path",
   "repository": "https://api.github.com/repos/npm/name-from-folder",
   "package": "@npmcli/name-from-folder"
+ },
+ {
+  "name": "nock-registry",
+  "description": "Mocking the registry for CLI testing in Nock.",
+  "repository": "https://api.github.com/repos/npm/nock-registry",
+  "package": "@npmcli/nock-registry"
  },
  {
   "name": "node-gyp",
@@ -310,6 +333,11 @@
   "package": "npm-install-checks"
  },
  {
+  "name": "npm-install-script",
+  "description": "the install.sh script for npm",
+  "repository": "https://api.github.com/repos/npm/npm-install-script"
+ },
+ {
   "name": "npm-normalize-package-bin",
   "description": "Turn any flavor of allowable package.json bin into a normalized object",
   "repository": "https://api.github.com/repos/npm/npm-normalize-package-bin",
@@ -340,6 +368,12 @@
   "package": "npm-registry-fetch"
  },
  {
+  "name": "npm-registry-mock",
+  "description": "mock the npm registry",
+  "repository": "https://api.github.com/repos/npm/npm-registry-mock",
+  "package": "npm-registry-mock"
+ },
+ {
   "name": "npm-user-validate",
   "description": "user validation",
   "repository": "https://api.github.com/repos/npm/npm-user-validate",
@@ -350,6 +384,12 @@
   "description": "The logger that npm uses",
   "repository": "https://api.github.com/repos/npm/npmlog",
   "package": "npmlog"
+ },
+ {
+  "name": "package-json",
+  "description": "Programmatic API to update package.json",
+  "repository": "https://api.github.com/repos/npm/package-json",
+  "package": "@npmcli/package-json"
  },
  {
   "name": "pacote",
@@ -386,12 +426,6 @@
   "description": "A prompting json thingie",
   "repository": "https://api.github.com/repos/npm/promzard",
   "package": "promzard"
- },
- {
-  "name": "pull",
-  "description": "A bash script for landing pull requests",
-  "repository": "https://api.github.com/repos/npm/pull",
-  "package": "@npmcli/pull"
  },
  {
   "name": "read",
@@ -441,6 +475,12 @@
   "package": "ssri"
  },
  {
+  "name": "stafftools",
+  "description": "npm CLI Team's Internal Tools",
+  "repository": "https://api.github.com/repos/npm/stafftools",
+  "package": "@npmcli/stafftools"
+ },
+ {
   "name": "statusboard",
   "description": "Public monitor/status/health board for @npm/cli-team's maintained projects",
   "repository": "https://api.github.com/repos/npm/statusboard"
@@ -450,6 +490,12 @@
   "description": "stringifies npm-written json files",
   "repository": "https://api.github.com/repos/npm/stringify-package",
   "package": "stringify-package"
+ },
+ {
+  "name": "tap-nock",
+  "description": "a tap extension providing nock integration",
+  "repository": "https://api.github.com/repos/npm/tap-nock",
+  "package": "@npmcli/tap-nock"
  },
  {
   "name": "template-oss",
@@ -492,11 +538,5 @@
   "description": "Write files in an atomic fashion w/configurable ownership",
   "repository": "https://api.github.com/repos/npm/write-file-atomic",
   "package": "write-file-atomic"
- },
- {
-  "name": "abbrev",
-  "description": "Like ruby's Abbrev module.",
-  "repository": "https://github.com/isaacs/abbrev-js",
-  "package": "abbrev"
  }
 ]
