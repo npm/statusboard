@@ -1,42 +1,16 @@
 const pacote = require('pacote')
 const path = require('path')
 const { Octokit } = require('@octokit/rest')
-const { throttling } = require('@octokit/plugin-throttling')
-const { retry } = require('@octokit/plugin-retry')
 const { graphql: Graphql } = require('@octokit/graphql')
 const glob = require('glob')
 const { merge } = require('lodash')
 const log = require('proc-log')
 
-const Rest = Octokit.plugin(throttling, retry)
 const graphqlKey = (k) => `_${k.replace(/[^_0-9A-Za-z]/g, '')}`
 
 module.exports = ({ auth }) => {
-  const REST = new Rest({
+  const REST = new Octokit({
     auth,
-    retry: {
-      doNotRetry: [404, 422],
-    },
-    request: {
-      retries: 1,
-      retryAfter: 5,
-    },
-    throttle: {
-      onRateLimit: (retryAfter, options) => {
-        log.warn(`Request quota exhausted for request ${options.method} ${options.url}`)
-
-        if (options.request.retryCount === 0) {
-        // only retries once
-          log.info(`Retrying after ${retryAfter} seconds!`)
-          return true
-        }
-      },
-      onSecondaryRateLimit: (retryAfter, options) => {
-        // Seems like there is no coming back from this while we are trying to gather all the data
-        // If this does happen we should just throw otherwise we will end up with incomplete data
-        throw new Error(`SecondaryRateLimit detected for request ${options.method} ${options.url}`)
-      },
-    },
   })
 
   const GRAPHQL = Graphql.defaults({

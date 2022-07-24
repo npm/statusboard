@@ -1,13 +1,11 @@
-const fs = require('fs/promises')
 const path = require('path')
-const mkdirp = require('mkdirp')
-
+const { parseArgs } = require('util')
+const writeJson = require('../lib/write-json.js')
 const Api = require('../lib/api.js')
-const fetchData = require('../lib/data.js')
+const fetchData = require('../lib/project-data.js')
 const logger = require('../lib/logger.js')
-const allProjects = require('../../www/lib/data/maintained.json')
-
-const { AUTH_TOKEN, FILTER } = process.env
+const getProjectsHistory = require('../lib/projects-history.js')
+const { chunk } = require('lodash')
 
 const getDate = (d) => ({
   month: (d.getUTCMonth() + 1).toString().padStart(2, '0'),
@@ -28,42 +26,69 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, destDir, projects }) => {
+const exec = async ({ auth, filter, date, projects: projectsFile }) => {
   logger()
 
+  // Make it easier to test by only fetching a subset of the repos
+  const rawProjects = require(projectsFile)
+  const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
+
   const api = Api({ auth })
+  const isOld = !!date
+  const { year, month, day, iso } = getDate(date ? new Date(Date.parse(date)) : new Date())
 
-  const data = []
-  for (const project of projects) {
-    data.push(await fetchData({ api, project }))
+  const dataDir = path.dirname(projectsFile)
+  const dailyDir = path.join(dataDir, 'daily')
+
+  const projectsData = []
+  const projectsHistory = isOld ? {} : await getProjectsHistory({
+    projects,
+    dir: dailyDir,
+    filter: (f) => !f.endsWith('.min.json'),
+  })
+
+  for (const projectsChunk of chunk(projects, 1)) {
+    const resultsChunk = projectsChunk.map((project) => fetchData({
+      api,
+      project,
+      history: projectsHistory[project.id],
+    }))
+    projectsData.push(...await Promise.all(resultsChunk))
   }
-
-  if (!destDir) {
-    return JSON.stringify(data, null, 2)
-  }
-
-  const { year, month, day, iso } = getDate(new Date())
-  const contents = { data, created_at: iso }
 
   const files = [
-    path.join(destDir, year, month, `${day}.json`),
-    path.join(destDir, 'latest.json'),
-    path.join(destDir, 'debug.json'),
-  ]
+    path.join(dailyDir, `${year}-${month}-${day}.min.json`),
+    { path: path.join(dailyDir, `${year}-${month}-${day}.json`), indent: 2 },
+    // Pass in date to create old (mostly dummy) data for testing
+    // if so then don't overwrite latest
+    !isOld && path.join(dataDir, 'latest.min.json'),
+    !isOld && { path: path.join(dataDir, 'latest.json'), indent: 2 },
+  ].filter(Boolean)
 
-  const res = await Promise.all(files.map(async (f) => {
-    const indent = f.endsWith('debug.json') ? 2 : 0
-    await mkdirp(path.dirname(f))
-    await fs.writeFile(f, JSON.stringify(contents, null, indent), 'utf-8')
-    return path.relative(process.cwd(), f)
-  }))
-
-  return res.map((f) => `Wrote to ${data.length} entries to ${f}`).join('\n')
+  const results = await writeJson(files, { data: projectsData, created_at: iso })
+  return results.map((f) => f.message).join('\n')
 }
 
+const { values } = parseArgs({
+  args: process.argv.slice(2),
+  options: {
+    filter: {
+      type: 'string',
+    },
+    projects: {
+      type: 'string',
+    },
+    date: {
+      type: 'string',
+    },
+  },
+})
+
 exec({
-  auth: AUTH_TOKEN,
-  // Make it easier to test by only fetching a subset of the repos
-  destDir: path.resolve(__dirname, '..', '..', 'www', 'lib', 'data'),
-  projects: FILTER ? allProjects.filter(getFilter(FILTER)) : allProjects,
-}).then(console.log).catch(console.error)
+  auth: process.env.AUTH_TOKEN,
+  filter: values.filter,
+  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
+  date: values.date,
+})
+  .then(console.log)
+  .catch(console.error)

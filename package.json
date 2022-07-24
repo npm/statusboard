@@ -24,7 +24,7 @@
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "3.5.0",
     "ciVersions": [
-      "18"
+      "18.3.0"
     ],
     "lockfile": true
   },

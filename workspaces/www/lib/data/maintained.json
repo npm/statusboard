@@ -1,478 +1,567 @@
 [
   {
+    "id": "npm/abbrev-js/root",
     "name": "abbrev-js",
     "owner": "npm",
     "pkg": "abbrev"
   },
   {
+    "id": "npm/agent/root",
     "name": "agent",
     "owner": "npm"
   },
   {
+    "id": "npm/cli/workspaces/arborist",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/arborist",
     "pkg": "@npmcli/arborist"
   },
   {
+    "id": "npm/are-we-there-yet/root",
     "name": "are-we-there-yet",
     "owner": "npm",
     "pkg": "are-we-there-yet"
   },
   {
+    "id": "npm/benchmarks/root",
     "name": "benchmarks",
-    "owner": "npm",
-    "private": true
+    "owner": "npm"
   },
   {
+    "id": "npm/bin-links/root",
     "name": "bin-links",
     "owner": "npm",
     "pkg": "bin-links"
   },
   {
+    "id": "npm/cacache/root",
     "name": "cacache",
     "owner": "npm",
     "pkg": "cacache"
   },
   {
+    "id": "npm/ci-detect/root",
     "name": "ci-detect",
     "owner": "npm",
     "pkg": "@npmcli/ci-detect"
   },
   {
+    "id": "npm/cmd-shim/root",
     "name": "cmd-shim",
     "owner": "npm",
     "pkg": "cmd-shim"
   },
   {
+    "id": "npm/config/root",
     "name": "config",
     "owner": "npm",
     "pkg": "@npmcli/config"
   },
   {
+    "id": "npm/create-oss/root",
     "name": "create-oss",
     "owner": "npm",
     "pkg": "@npmcli/create-oss"
   },
   {
+    "id": "npm/dezalgo/root",
     "name": "dezalgo",
     "owner": "npm",
     "pkg": "dezalgo"
   },
   {
+    "id": "npm/disparity-colors/root",
     "name": "disparity-colors",
     "owner": "npm",
     "pkg": "@npmcli/disparity-colors"
   },
   {
+    "id": "npm/doctornpm/root",
     "name": "doctornpm",
-    "owner": "npm",
-    "private": true
+    "owner": "npm"
   },
   {
+    "id": "npm/documentation/root",
     "name": "documentation",
-    "owner": "npm",
-    "private": true
+    "owner": "npm"
   },
   {
+    "id": "npm/eslint-config/root",
     "name": "eslint-config",
     "owner": "npm",
     "pkg": "@npmcli/eslint-config"
   },
   {
+    "id": "npm/exec/root",
     "name": "exec",
     "owner": "npm"
   },
   {
+    "id": "npm/fs/root",
     "name": "fs",
     "owner": "npm",
     "pkg": "@npmcli/fs"
   },
   {
+    "id": "npm/fs-minipass/root",
     "name": "fs-minipass",
     "owner": "npm",
     "pkg": "fs-minipass"
   },
   {
+    "id": "npm/gauge/root",
     "name": "gauge",
     "owner": "npm",
     "pkg": "gauge"
   },
   {
+    "id": "npm/git/root",
     "name": "git",
     "owner": "npm",
     "pkg": "@npmcli/git"
   },
   {
+    "id": "npm/hosted-git-info/root",
     "name": "hosted-git-info",
     "owner": "npm",
     "pkg": "hosted-git-info"
   },
   {
+    "id": "npm/ignore-walk/root",
     "name": "ignore-walk",
     "owner": "npm",
     "pkg": "ignore-walk"
   },
   {
+    "id": "npm/infer-owner/root",
     "name": "infer-owner",
     "owner": "npm",
     "pkg": "infer-owner"
   },
   {
+    "id": "npm/inflight/root",
     "name": "inflight",
     "owner": "npm",
     "pkg": "inflight"
   },
   {
+    "id": "npm/ini/root",
     "name": "ini",
     "owner": "npm",
     "pkg": "ini"
   },
   {
+    "id": "npm/init-package-json/root",
     "name": "init-package-json",
     "owner": "npm",
     "pkg": "init-package-json"
   },
   {
+    "id": "npm/installed-package-contents/root",
     "name": "installed-package-contents",
     "owner": "npm",
     "pkg": "@npmcli/installed-package-contents"
   },
   {
+    "id": "npm/cli/workspaces/libnpmaccess",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmaccess",
     "pkg": "libnpmaccess"
   },
   {
+    "id": "npm/cli/workspaces/libnpmdiff",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmdiff",
     "pkg": "libnpmdiff"
   },
   {
+    "id": "npm/cli/workspaces/libnpmexec",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmexec",
     "pkg": "libnpmexec"
   },
   {
+    "id": "npm/cli/workspaces/libnpmfund",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmfund",
     "pkg": "libnpmfund"
   },
   {
+    "id": "npm/cli/workspaces/libnpmhook",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmhook",
     "pkg": "libnpmhook"
   },
   {
+    "id": "npm/cli/workspaces/libnpmorg",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmorg",
     "pkg": "libnpmorg"
   },
   {
+    "id": "npm/cli/workspaces/libnpmpack",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmpack",
     "pkg": "libnpmpack"
   },
   {
+    "id": "npm/cli/workspaces/libnpmpublish",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmpublish",
     "pkg": "libnpmpublish"
   },
   {
+    "id": "npm/cli/workspaces/libnpmsearch",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmsearch",
     "pkg": "libnpmsearch"
   },
   {
+    "id": "npm/cli/workspaces/libnpmteam",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmteam",
     "pkg": "libnpmteam"
   },
   {
+    "id": "npm/cli/workspaces/libnpmversion",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmversion",
     "pkg": "libnpmversion"
   },
   {
+    "id": "npm/lint/root",
     "name": "lint",
     "owner": "npm",
     "pkg": "@npmcli/lint"
   },
   {
+    "id": "npm/make-fetch-happen/root",
     "name": "make-fetch-happen",
     "owner": "npm",
     "pkg": "make-fetch-happen"
   },
   {
+    "id": "npm/map-workspaces/root",
     "name": "map-workspaces",
     "owner": "npm",
     "pkg": "@npmcli/map-workspaces"
   },
   {
+    "id": "npm/metavuln-calculator/root",
     "name": "metavuln-calculator",
     "owner": "npm",
     "pkg": "@npmcli/metavuln-calculator"
   },
   {
+    "id": "npm/minipass-fetch/root",
     "name": "minipass-fetch",
     "owner": "npm",
     "pkg": "minipass-fetch"
   },
   {
+    "id": "npm/move-file/root",
     "name": "move-file",
     "owner": "npm",
     "pkg": "@npmcli/move-file"
   },
   {
+    "id": "npm/mute-stream/root",
     "name": "mute-stream",
     "owner": "npm",
     "pkg": "mute-stream"
   },
   {
+    "id": "npm/name-from-folder/root",
     "name": "name-from-folder",
     "owner": "npm",
     "pkg": "@npmcli/name-from-folder"
   },
   {
+    "id": "npm/nock-registry/root",
     "name": "nock-registry",
     "owner": "npm"
   },
   {
+    "id": "npm/node-gyp/root",
     "name": "node-gyp",
     "owner": "npm",
     "pkg": "@npmcli/node-gyp"
   },
   {
+    "id": "npm/nopt/root",
     "name": "nopt",
     "owner": "npm",
     "pkg": "nopt"
   },
   {
+    "id": "npm/normalize-package-data/root",
     "name": "normalize-package-data",
     "owner": "npm",
     "pkg": "normalize-package-data"
   },
   {
+    "id": "npm/cli/root",
     "name": "cli",
     "owner": "npm",
     "pkg": "npm"
   },
   {
+    "id": "npm/npm-audit-report/root",
     "name": "npm-audit-report",
     "owner": "npm",
     "pkg": "npm-audit-report"
   },
   {
+    "id": "npm/npm-birthday/root",
     "name": "npm-birthday",
     "owner": "npm",
     "pkg": "@npmcli/npm-birthday"
   },
   {
+    "id": "npm/npm-bundled/root",
     "name": "npm-bundled",
     "owner": "npm",
     "pkg": "npm-bundled"
   },
   {
+    "id": "npm/npm-install-checks/root",
     "name": "npm-install-checks",
     "owner": "npm",
     "pkg": "npm-install-checks"
   },
   {
+    "id": "npm/npm-install-script/root",
     "name": "npm-install-script",
     "owner": "npm"
   },
   {
+    "id": "npm/npm-normalize-package-bin/root",
     "name": "npm-normalize-package-bin",
     "owner": "npm",
     "pkg": "npm-normalize-package-bin"
   },
   {
+    "id": "npm/npm-package-arg/root",
     "name": "npm-package-arg",
     "owner": "npm",
     "pkg": "npm-package-arg"
   },
   {
+    "id": "npm/npm-packlist/root",
     "name": "npm-packlist",
     "owner": "npm",
     "pkg": "npm-packlist"
   },
   {
+    "id": "npm/npm-profile/root",
     "name": "npm-profile",
     "owner": "npm",
     "pkg": "npm-profile"
   },
   {
+    "id": "npm/npm-registry-fetch/root",
     "name": "npm-registry-fetch",
     "owner": "npm",
     "pkg": "npm-registry-fetch"
   },
   {
+    "id": "npm/npm-registry-mock/root",
     "name": "npm-registry-mock",
     "owner": "npm",
     "pkg": "npm-registry-mock"
   },
   {
+    "id": "npm/npm-user-validate/root",
     "name": "npm-user-validate",
     "owner": "npm",
     "pkg": "npm-user-validate"
   },
   {
+    "id": "npm/npmlog/root",
     "name": "npmlog",
     "owner": "npm",
     "pkg": "npmlog"
   },
   {
+    "id": "npm/package-json/root",
     "name": "package-json",
     "owner": "npm",
     "pkg": "@npmcli/package-json"
   },
   {
+    "id": "npm/pacote/root",
     "name": "pacote",
     "owner": "npm",
     "pkg": "pacote"
   },
   {
+    "id": "npm/parse-conflict-json/root",
     "name": "parse-conflict-json",
     "owner": "npm",
     "pkg": "parse-conflict-json"
   },
   {
+    "id": "npm/proc-log/root",
     "name": "proc-log",
     "owner": "npm",
     "pkg": "proc-log"
   },
   {
+    "id": "npm/proggy/root",
     "name": "proggy",
     "owner": "npm",
     "pkg": "proggy"
   },
   {
+    "id": "npm/promise-spawn/root",
     "name": "promise-spawn",
     "owner": "npm",
     "pkg": "@npmcli/promise-spawn"
   },
   {
+    "id": "npm/promzard/root",
     "name": "promzard",
     "owner": "npm",
     "pkg": "promzard"
   },
   {
+    "id": "npm/read/root",
     "name": "read",
     "owner": "npm",
     "pkg": "read"
   },
   {
+    "id": "npm/read-cmd-shim/root",
     "name": "read-cmd-shim",
     "owner": "npm",
     "pkg": "read-cmd-shim"
   },
   {
+    "id": "npm/read-package-json/root",
     "name": "read-package-json",
     "owner": "npm",
     "pkg": "read-package-json"
   },
   {
+    "id": "npm/read-package-json-fast/root",
     "name": "read-package-json-fast",
     "owner": "npm",
     "pkg": "read-package-json-fast"
   },
   {
+    "id": "npm/readdir-scoped-modules/root",
     "name": "readdir-scoped-modules",
     "owner": "npm",
     "pkg": "readdir-scoped-modules"
   },
   {
+    "id": "npm/rfcs/root",
     "name": "rfcs",
-    "owner": "npm",
-    "private": true
+    "owner": "npm"
   },
   {
+    "id": "npm/run-script/root",
     "name": "run-script",
     "owner": "npm",
     "pkg": "@npmcli/run-script"
   },
   {
+    "id": "npm/node-semver/root",
     "name": "node-semver",
     "owner": "npm",
     "pkg": "semver"
   },
   {
+    "id": "npm/ssri/root",
     "name": "ssri",
     "owner": "npm",
     "pkg": "ssri"
   },
   {
+    "id": "npm/stafftools/root",
     "name": "stafftools",
     "owner": "npm",
     "pkg": "@npmcli/stafftools"
   },
   {
+    "id": "npm/statusboard/root",
     "name": "statusboard",
-    "owner": "npm",
-    "private": true
+    "owner": "npm"
   },
   {
+    "id": "npm/stringify-package/root",
     "name": "stringify-package",
     "owner": "npm",
     "pkg": "stringify-package"
   },
   {
+    "id": "npm/tap-nock/root",
     "name": "tap-nock",
     "owner": "npm",
     "pkg": "@npmcli/tap-nock"
   },
   {
+    "id": "npm/node-tar/root",
     "name": "node-tar",
     "owner": "npm",
     "pkg": "tar"
   },
   {
+    "id": "npm/template-oss/root",
     "name": "template-oss",
     "owner": "npm",
     "pkg": "@npmcli/template-oss"
   },
   {
+    "id": "npm/treeverse/root",
     "name": "treeverse",
     "owner": "npm",
     "pkg": "treeverse"
   },
   {
+    "id": "npm/unique-filename/root",
     "name": "unique-filename",
     "owner": "npm",
     "pkg": "unique-filename"
   },
   {
+    "id": "npm/unique-slug/root",
     "name": "unique-slug",
     "owner": "npm",
     "pkg": "unique-slug"
   },
   {
+    "id": "npm/validate-npm-package-name/root",
     "name": "validate-npm-package-name",
     "owner": "npm",
     "pkg": "validate-npm-package-name"
   },
   {
+    "id": "npm/node-which/root",
     "name": "node-which",
     "owner": "npm",
     "pkg": "which"
   },
   {
+    "id": "npm/wrappy/root",
     "name": "wrappy",
     "owner": "npm",
     "pkg": "wrappy"
   },
   {
+    "id": "npm/write-file-atomic/root",
     "name": "write-file-atomic",
     "owner": "npm",
     "pkg": "write-file-atomic"

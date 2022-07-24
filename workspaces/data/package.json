@@ -29,14 +29,9 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
     "@octokit/graphql": "^5.0.0",
-    "@octokit/plugin-retry": "^3.0.9",
-    "@octokit/plugin-throttling": "^4.1.0",
     "@octokit/rest": "^19.0.3",
-    "date-fns": "^2.28.0",
     "glob": "^8.0.3",
     "lodash": "^4.17.21",
-    "mkdirp": "^1.0.4",
-    "p-limit": "^3.1.0",
     "pacote": "^13.6.1",
     "proc-log": "^2.0.1",
     "semver": "^7.3.7"

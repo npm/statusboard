@@ -1,23 +1,21 @@
-const fs = require('fs')
 const path = require('path')
-
+const { parseArgs } = require('util')
 const Api = require('../lib/api.js')
 const logger = require('../lib/logger.js')
-
-const { AUTH_TOKEN } = process.env
+const writeJson = require('../lib/write-json.js')
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
   return name.split('/')[1] ?? name
 }
 
-const exec = async ({ auth, destDir, query }) => {
+const exec = async ({ auth, query, projects: projectsFile }) => {
   logger()
 
   const api = Api({ auth })
   const allProjects = await api.projects.searchWithManifests(query)
 
-  const maintained = allProjects.filter((project, __, list) => {
+  const maintainedProjects = allProjects.filter((project, __, list) => {
     if (project.repo.isWorkspace && !project.manifest && project.pkg?.private) {
       // These are workspaces within a repo that are not published
       // to the registry. There might be something to track here
@@ -40,26 +38,41 @@ const exec = async ({ auth, destDir, query }) => {
     }
 
     return true
-  }).map(({ repo, pkg, manifest }) => ({
+  })
+
+  // This should not have any ephemeral data in it
+  // since it is only used to store a list of all projects that
+  // we maintain and all the data is fetched as part of another script
+  const maintained = maintainedProjects.map(({ repo, manifest }) => ({
+    id: `${repo.owner}/${repo.name}/${repo.path ?? 'root'}`,
     name: repo.name,
     owner: repo.owner,
     ...(repo.isWorkspace ? { path: repo.path } : {}),
-    ...(pkg?.private ? { private: true } : {}),
     ...(manifest ? { pkg: manifest.name } : {}),
-  })).sort((a, b) => sortKey(a).localeCompare(sortKey(b)))
+  }))
 
-  if (!destDir) {
-    return JSON.stringify(maintained, null, 2)
-  }
+  maintained.sort((a, b) => sortKey(a).localeCompare(sortKey(b)))
 
-  const dest = path.join(destDir, 'maintained.json')
-  fs.writeFileSync(dest, JSON.stringify(maintained, null, 2))
-
-  return `Wrote ${maintained.length} entries to ${path.relative(process.cwd(), dest)}`
+  const results = await writeJson([{ path: projectsFile, indent: 2 }], maintained)
+  return results.map((f) => f.message).join('\n')
 }
 
+const { values } = parseArgs({
+  args: process.argv.slice(2),
+  options: {
+    projects: {
+      type: 'string',
+    },
+    query: {
+      type: 'string',
+    },
+  },
+})
+
 exec({
-  auth: AUTH_TOKEN,
-  destDir: path.resolve(__dirname, '..', '..', 'www', 'lib', 'data'),
-  query: 'org:npm topic:npm-cli',
-}).then(console.log).catch(console.error)
+  auth: process.env.AUTH_TOKEN,
+  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
+  query: values.query ?? 'org:npm topic:npm-cli',
+})
+  .then(console.log)
+  .catch(console.error)

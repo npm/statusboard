@@ -29,60 +29,25 @@
       "pendingRelease": null,
       "prs": {
         "count": 18,
-        "url": "https://github.com/npm/cli/pulls",
-        "history": [
-          18,
-          18,
-          18,
-          18,
-          18
-        ]
+        "url": "https://github.com/npm/cli/pulls"
       },
       "issues": {
         "count": 407,
         "url": "https://github.com/npm/cli/issues",
         "priority": {
           "count": 35,
-          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
-          "history": [
-            35,
-            35,
-            35,
-            35,
-            35
-          ]
+          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0"
         },
         "triage": {
           "count": 122,
-          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+label%3A%22Needs+Triage%22",
-          "history": [
-            122,
-            122,
-            122,
-            122,
-            122
-          ]
+          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+label%3A%22Needs+Triage%22"
         },
         "noLabel": {
           "count": 6,
-          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
-          "history": [
-            6,
-            6,
-            6,
-            6,
-            6
-          ]
-        },
-        "history": [
-          407,
-          407,
-          407,
-          407,
-          407
-        ]
+          "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+no%3Alabel"
+        }
       }
     }
   ],
-  "created_at": "2022-07-24T21:11:04.308Z"
+  "created_at": "2022-07-21T00:00:00.000Z"
 }
