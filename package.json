@@ -2,22 +2,7 @@
   "name": "statusboard",
   "version": "1.0.0",
   "description": "Community &amp; Open Source Statusboard",
-  "main": "index.js",
   "private": true,
-  "scripts": {
-    "dev": "http-server -c-1 -p 8080 -o -s",
-    "fetch:data": "node ./scripts/fetch-data.js",
-    "fetch:repos": " node ./scripts/fetch-repos.js",
-    "test": "tap",
-    "lint": "eslint \"**/*.js\"",
-    "postlint": "template-oss-check",
-    "template-oss-apply": "template-oss-apply --force",
-    "lintfix": "npm run lint -- --fix",
-    "preversion": "npm test",
-    "postversion": "git push origin --follow-tags",
-    "snap": "tap",
-    "posttest": "npm run lint"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/npm/statusboard.git"
@@ -29,39 +14,36 @@
     "url": "https://github.com/npm/statusboard/issues"
   },
   "homepage": "https://github.com/npm/statusboard#readme",
-  "dependencies": {
-    "@octokit/plugin-retry": "^3.0.9",
-    "@octokit/plugin-throttling": "^4.1.0",
-    "@octokit/rest": "^19.0.3",
-    "date-fns": "^2.28.0",
-    "http-server": "^14.1.1",
-    "mkdirp": "^1.0.4",
-    "pacote": "^13.6.1",
-    "semver": "^7.3.7",
-    "sleepover": "^1.2.1"
-  },
-  "devDependencies": {
-    "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "3.5.0",
-    "tap": "^16.3.0"
-  },
-  "files": [
-    "lib/",
-    "public/"
+  "workspaces": [
+    "workspaces/*"
   ],
-  "engines": {
-    "node": ">=18.0.0"
+  "devDependencies": {
+    "@npmcli/template-oss": "3.5.0"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "3.5.0",
-    "lockfile": true,
-    "distPaths": [
-      "lib/",
-      "public/"
-    ],
     "ciVersions": [
       "18"
-    ]
+    ],
+    "lockfile": true
+  },
+  "scripts": {
+    "template-oss-apply": "template-oss-apply --force",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "lintfix": "npm run lint -- --fix",
+    "preversion": "npm test",
+    "postversion": "git push origin --follow-tags",
+    "snap": "tap",
+    "test": "tap",
+    "posttest": "npm run lint"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

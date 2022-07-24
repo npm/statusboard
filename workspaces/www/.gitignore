@@ -14,15 +14,9 @@
 !/README*
 !/LICENSE*
 !/CHANGELOG*
-!/.commitlintrc.js
 !/.eslintrc.js
-!/.github/
 !/.gitignore
-!/.npmrc
-!/CODE_OF_CONDUCT.md
-!/SECURITY.md
 !/bin/
 !/lib/
 !/package.json
-!/workspaces/
 !/package-lock.json

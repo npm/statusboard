@@ -1,0 +1,60 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "fetch:data": "node ./bin/fetch-data.js",
+    "fetch:maintained": " node ./bin/fetch-maintained.js",
+    "test": "tap",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "lintfix": "npm run lint -- --fix",
+    "preversion": "npm test",
+    "postversion": "git push origin --follow-tags",
+    "snap": "tap",
+    "posttest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/statusboard.git",
+    "directory": "workspaces/data"
+  },
+  "keywords": [],
+  "author": "GitHub Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/statusboard/issues"
+  },
+  "homepage": "https://github.com/npm/statusboard#readme",
+  "dependencies": {
+    "@octokit/graphql": "^5.0.0",
+    "@octokit/plugin-retry": "^3.0.9",
+    "@octokit/plugin-throttling": "^4.1.0",
+    "@octokit/rest": "^19.0.3",
+    "date-fns": "^2.28.0",
+    "glob": "^8.0.3",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
+    "p-limit": "^3.1.0",
+    "pacote": "^13.6.1",
+    "proc-log": "^2.0.1",
+    "semver": "^7.3.7"
+  },
+  "devDependencies": {
+    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/template-oss": "3.5.0",
+    "tap": "^16.3.0"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "3.5.0"
+  }
+}
