@@ -89,6 +89,7 @@ module.exports = async ({ api, project, history }) => {
     size: pkg?.dist?.unpackedSize ?? null,
     downloads: downloads ?? null,
     lastPublished: packument?.time?.[packument?.['dist-tags'].latest] ?? null,
+    pkgUrl: pkg?.name ? `https://www.npmjs.com/package/${pkg.name}` : null,
     // issues and prs
     pendingRelease: pendingRelease ?? null,
     prs: getPrs({ prs, repo, history: history?.map((p) => p.prs) }) ?? null,

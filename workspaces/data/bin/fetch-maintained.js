@@ -44,7 +44,7 @@ const exec = async ({ auth, query, projects: projectsFile }) => {
   // since it is only used to store a list of all projects that
   // we maintain and all the data is fetched as part of another script
   const maintained = maintainedProjects.map(({ repo, manifest }) => ({
-    id: `${repo.owner}/${repo.name}/${repo.path ?? 'root'}`,
+    id: `${repo.owner}/${repo.name}${repo.path ? `/${repo.path}` : ''}`,
     name: repo.name,
     owner: repo.owner,
     ...(repo.isWorkspace ? { path: repo.path } : {}),

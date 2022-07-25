@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "http-server -c-1 -p 8080 -o -s",
+    "dev": "http-server ./lib -c-1 -p 8080 -o -s",
     "test": "tap",
     "lint": "eslint \"**/*.js\"",
     "postlint": "template-oss-check",
