@@ -33,7 +33,7 @@ const fetchAllRepoData = async ({ api, project: p }) => {
 
   return {
     ...result,
-    status: await api.repo.status(p.owner, p.name, result.commit?.sha ?? 'HEAD'),
+    status: await api.repo.status(p.owner, p.name, result.commit.sha),
   }
 }
 
@@ -52,9 +52,10 @@ module.exports = async ({ api, project, history }) => {
   const license = [pkg?.license, repo?.license?.spdx_id]
     .filter((l) => l && l !== 'NOASSERTION')
 
-  const url = new URL(`/${project.owner}/${project.name}`, 'https://github.com')
+  const repoUrl = new URL(`/${project.owner}/${project.name}`, 'https://github.com')
+  const fullUrl = new URL(repoUrl)
   if (project.path) {
-    url.pathname += `/tree/${repo.default_branch}/${project.path}`
+    fullUrl.pathname += `/tree/${repo.default_branch}/${project.path}`
   }
 
   const releasePr = prs?.find((pr) => pr.labels.find((l) => l.name === 'autorelease: pending'))
@@ -63,6 +64,16 @@ module.exports = async ({ api, project, history }) => {
     title: releasePr.title.match(semverRe)?.[0] || releasePr.title,
   }
 
+  const stars = typeof repo?.stargazers_count === 'number' ? {
+    count: repo.stargazers_count,
+    url: `${repoUrl}/stargazers`,
+  } : null
+
+  const fullStatus = status ? {
+    url: status.url ?? `${repoUrl}/actions`,
+    conclusion: status.conclusion,
+  } : null
+
   return {
     // repo
     id: project.id,
@@ -70,10 +81,10 @@ module.exports = async ({ api, project, history }) => {
     owner: project.owner,
     path: project.path ?? null,
     defaultBranch: repo.default_branch,
-    url: url.toString(),
-    lastPush: commit ? { date: commit.commit.author.date, url: commit.html_url } : null,
-    status: status ? { url: status.html_url, conclusion: status.conclusion } : null,
-    stars: repo?.stargazers_count ?? null,
+    url: fullUrl.toString(),
+    lastPush: { date: commit.commit.author.date, url: commit.html_url },
+    status: fullStatus,
+    stars,
     // package.json
     pkgPrivate: pkg?.private ?? false,
     pkgName: pkg?.name ?? null,

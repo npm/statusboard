@@ -26,7 +26,7 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, filter, date, projects: projectsFile }) => {
+const exec = async ({ auth, filter, projects: projectsFile }) => {
   logger()
 
   // Make it easier to test by only fetching a subset of the repos
@@ -34,14 +34,13 @@ const exec = async ({ auth, filter, date, projects: projectsFile }) => {
   const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
 
   const api = Api({ auth })
-  const isOld = !!date
-  const { year, month, day, iso } = getDate(date ? new Date(Date.parse(date)) : new Date())
+  const { year, month, day, iso } = getDate(new Date())
 
   const dataDir = path.dirname(projectsFile)
   const dailyDir = path.join(dataDir, 'daily')
 
   const projectsData = []
-  const projectsHistory = isOld ? {} : await getProjectsHistory({
+  const projectsHistory = await getProjectsHistory({
     projects,
     dir: dailyDir,
     filter: (f) => !f.endsWith('.min.json'),
@@ -59,10 +58,8 @@ const exec = async ({ auth, filter, date, projects: projectsFile }) => {
   const files = [
     path.join(dailyDir, `${year}-${month}-${day}.min.json`),
     { path: path.join(dailyDir, `${year}-${month}-${day}.json`), indent: 2 },
-    // Pass in date to create old (mostly dummy) data for testing
-    // if so then don't overwrite latest
-    !isOld && path.join(dataDir, 'latest.min.json'),
-    !isOld && { path: path.join(dataDir, 'latest.json'), indent: 2 },
+    path.join(dataDir, 'latest.min.json'),
+    { path: path.join(dataDir, 'latest.json'), indent: 2 },
   ].filter(Boolean)
 
   const results = await writeJson(files, { data: projectsData, created_at: iso })
@@ -78,9 +75,6 @@ const { values } = parseArgs({
     projects: {
       type: 'string',
     },
-    date: {
-      type: 'string',
-    },
   },
 })
 
@@ -88,7 +82,6 @@ exec({
   auth: process.env.AUTH_TOKEN,
   filter: values.filter,
   projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
-  date: values.date,
 })
   .then(console.log)
   .catch(console.error)

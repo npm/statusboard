@@ -4,7 +4,7 @@
 const EL = {
   githubIcon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>`,
   npmIcon: `<svg viewBox="0 0 27.23 27.23"><rect width="27.23" height="27.23" rx="2"></rect><polygon fill="#fff" points="5.8 21.75 13.66 21.75 13.67 9.98 17.59 9.98 17.58 21.76 21.51 21.76 21.52 6.06 5.82 6.04 5.8 21.75"></polygon></svg>`,
-  noData: `<div class="badge badge-light badge-dt">N/A</div>`,
+  noData: () => EL.badge({ type: 'light', text: 'N/A' }),
   link: ({ class: className = 'text-primary', href, text }) => `<a href="${href}" target="_blank" class="${className}">${text}</a>`,
   badge: ({ type, href, text }) => {
     const classes = `badge badge-dt badge-${type}`
@@ -21,33 +21,16 @@ const EL = {
   `,
 }
 
-const getDateRangeList = (days, start = new Date()) => {
-  const DAY = 24 * 60 * 60 * 1000
-  const range = [start]
-  for (let i = 1; i < days; i++) {
-    range.push(new Date(start - i * DAY))
-  }
-  return range.reverse()
-}
-
-const toDisplayDate = (d) =>
-  `${zeroPad(d.getUTCMonth() + 1)}/${d.getUTCDate()}/${zeroPad(
-    d.getUTCFullYear()
-  )}`
-
-const zeroPad = (n) => (n >= 10 ? n : `0${n}`)
 const cleanSemver = (d) => d.replace(/\s/g, '').replace(/(\d)\.0\.0/g, '$1')
 
 $(document).ready(async function () {
+  let TRENDLINE_DAYS = 7
+
   const API_DATA = await fetch('data/latest.min.json').then(r => r.json())
 
   const latestDate = new Date(API_DATA.created_at)
   const datasource = Object.values(API_DATA.data)
   const dataById = API_DATA.data.reduce((acc, repo) => (acc[repo.id] = repo, acc), {})
-
-  console.log(dataById)
-
-  const TRENDLINE_DAYS = 7
 
   $('#built').html(
     `<strong>Last Built: ${new Intl.DateTimeFormat('en').format(latestDate)}</strong>`
@@ -57,13 +40,14 @@ $(document).ready(async function () {
   // which gets copies to the `name` property used by
   // the datatables plugin.
 
-  // // Columns with trend lines
-  // const trendColumns = [
-  //   'issue_list_by_date',
-  //   'no_label_issues_by_date',
-  //   'high_priority_issues_by_date',
-  //   'needs_triage_issues_by_date',
-  // ]
+  // Columns with trend lines
+  const trendColumns = [
+    'issues.history',
+    'prs.history',
+    'issues.noLabel.history',
+    'issues.priority.history',
+    'issues.triage.history',
+  ]
 
   // Columns with a total in the footer
   const totalsColumns = [
@@ -113,7 +97,7 @@ $(document).ready(async function () {
         title: 'Check Status',
         renderData: (data) => {
           if (!data) {
-            return EL.noData
+            return EL.noData()
           }
           const opts = {}
           if (data.conclusion === 'success') {
@@ -135,7 +119,7 @@ $(document).ready(async function () {
         defaultContent: EL.noData,
         renderData: (data, row) => {
           if (!row.prs) {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
           const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success'
@@ -148,96 +132,84 @@ $(document).ready(async function () {
         defaultContent: EL.noData,
         renderData: (data, row) => {
           if (!row.issues) {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
           const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success'
           return EL.badge({ text: num, type: className, href: row.issues.url })
         },
       },
-      // {
-      //   data: 'issue_list_by_date',
-      //   title: 'Issues Trend',
-      //   defaultContent: '',
-      //   renderData: (data, row) => {
-      //     \n
-      //       return EL.trendline(row)
-      //     }
-      //     return data
-      //   },
-      // },
+      {
+        data: 'issues.history',
+        title: 'Issues Trend',
+        defaultContent: EL.noData,
+        renderData: (data, row) => {
+          return EL.trendline(row)
+        },
+      },
       {
         data: 'issues.noLabel.count',
         title: 'No Labels',
         defaultContent: EL.noData,
         renderData: (data, row) => {
           if (!row.issues) {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
           const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success'
           return EL.badge({ text: num, type: className, href: row.issues.noLabel.url })
         },
       },
-      // {
-      //   data: 'no_label_issues_by_date',
-      //   title: 'No Labels Trend',
-      //   defaultContent: '',
-      //   renderData: (data, row) => {
-      //
-      //       return EL.trendline(row)
-      //     }
-      //     return data
-      //   },
-      // },
+      {
+        data: 'issues.noLabel.history',
+        title: 'No Labels Trend',
+        defaultContent: EL.noData,
+        renderData: (data, row) => {
+          return EL.trendline(row)
+        },
+      },
       {
         data: 'issues.priority.count',
         title: 'High Priority',
         defaultContent: EL.noData,
         renderData: (data, row) => {
           if (!row.issues) {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
           const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success'
           return EL.badge({ text: num, type: className, href: row.issues.priority.url })
         },
       },
-      // {
-      //   data: 'high_priority_issues_by_date',
-      //   title: 'High Priority Trend',
-      //   defaultContent: '',
-      //   renderData: (data, row) => {
-      //
-      //       return EL.trendline(row)
-      //     }
-      //     return data
-      //   },
-      // },
+      {
+        data: 'issues.priority.history',
+        title: 'High Priority Trend',
+        defaultContent: EL.noData,
+        renderData: (data, row) => {
+          return EL.trendline(row)
+        },
+      },
       {
         data: 'issues.triage.count',
         title: 'Needs Triage',
         defaultContent: EL.noData,
         renderData: (data, row) => {
           if (!row.issues) {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
           const className = (data >= 20) ? 'danger' : (data >= 1) ? 'warning' : 'success'
           return EL.badge({ text: num, type: className, href: row.issues.triage.url })
         },
       },
-      // {
-      //   data: 'needs_triage_issues_by_date',
-      //   title: 'Needs Triage Trend',
-      //   defaultContent: '',
-      //   renderData: (data, row) => {
-      //
-      //       return EL.trendline(row)
-      //     }
-      //     return data
-      //   },
-      // },
+      {
+        data: 'issues.triage.history',
+        title: 'Needs Triage Trend',
+        defaultContent: EL.noData,
+        renderData: (data, row) => {
+          return EL.trendline(row)
+        },
+      },
       {
         data: 'templateVersion',
         title: 'Template Version',
@@ -320,7 +292,7 @@ $(document).ready(async function () {
         title: 'Version',
         renderData: (data, row) => {
           if (row.pkgPrivate) {
-            return EL.noData
+            return EL.noData()
           }
           let className = ''
           if (!data) {
@@ -345,7 +317,7 @@ $(document).ready(async function () {
         title: 'Pending Release',
         renderData: (data, row) => {
           if (row.isPrivate) {
-            return EL.noData
+            return EL.noData()
           }
           const opts = {}
           if (data) {
@@ -365,7 +337,7 @@ $(document).ready(async function () {
         title: 'Last Publish',
         renderData: (data, row) => {
           if (row.pkgPrivate) {
-            return EL.noData
+            return EL.noData()
           }
           if (!data) {
             return EL.badge({ text: 'Unpublished', type: 'danger' })
@@ -384,11 +356,13 @@ $(document).ready(async function () {
         data: 'stars',
         title: 'Stars',
         renderData: (data, row) => {
-          if (typeof data !== 'number') {
-            return EL.noData
+          if (!data) {
+            return EL.noData()
           }
-          const num = Intl.NumberFormat('en-US').format(data)
-          return EL.link({ text: num, href: `${row.url}/stargazers` })
+          return EL.link({
+            text: Intl.NumberFormat('en-US').format(data.count),
+            href: data.url,
+          })
         },
       },
       {
@@ -396,16 +370,19 @@ $(document).ready(async function () {
         title: 'Downloads (/m)',
         renderData: (data, row) => {
           if (typeof data !== 'number') {
-            return EL.noData
+            return EL.noData()
           }
           const num = Intl.NumberFormat('en-US').format(data)
-          return EL.link({ text: num, href: row.pkgUrl })
+          return EL.badge({ text: num })
         },
       },
       {
         data: 'size',
         title: 'Size (KB)',
         renderData: (data, row) => {
+          if (typeof data !== 'number') {
+            return EL.noData()
+          }
           return Intl.NumberFormat('en-US').format(data)
         },
       },
@@ -446,117 +423,115 @@ $(document).ready(async function () {
             const current = dt.column(`${name}:name`)
             current.visible(!visibility)
           }
-          // if (visibility) {
-          //   for (const name of trendColumns) {
-          //     const current = dt.column(`${name}:name`)
-          //     current.visible(false)
-          //   }
-          // }
+          if (visibility) {
+            for (const name of trendColumns) {
+              const current = dt.column(`${name}:name`)
+              current.visible(false)
+            }
+          }
         },
       },
-      // {
-      //   text: 'Toggle Trendlines',
-      //   action: function (e, dt) {
-      //     const visibility = dt.column(`${trendColumns[0]}:name`).visible()
-      //     for (const name of trendColumns) {
-      //       const current = dt.column(`${name}:name`)
-      //       current.visible(!visibility)
-      //     }
-      //   },
-      // },
-      // {
-      //   extend: 'collection',
-      //   text: 'Trend Date Ranges',
-      //   className: 'time-button-collection',
-      //   buttons: [
-      //     {
-      //       text: `<span><i class="bi bi-check"></i> 7 Days</span>`,
-      //       action: function (e, dt, node, config) {
-      //         const $el = $(node)
-      //         $el.siblings().removeClass('active')
-      //         $el.addClass('active')
-      //         TRENDLINE_DAYS = 7
-      //       },
-      //       className: 'active',
-      //     },
-      //     {
-      //       text: `<span><i class="bi bi-check"></i> 30 Days</span>`,
-      //       action: function (e, dt, node, config) {
-      //         const $el = $(node)
-      //         $el.siblings().removeClass('active')
-      //         $el.addClass('active')
-      //         TRENDLINE_DAYS = 30
-      //       },
-      //     },
-      //     {
-      //       text: `<span><i class="bi bi-check"></i> 90 Days</span>`,
-      //       action: function (e, dt, node, config) {
-      //         const $el = $(node)
-      //         $el.siblings().removeClass('active')
-      //         $el.addClass('active')
-      //         TRENDLINE_DAYS = 90
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        text: 'Toggle Trendlines',
+        action: function (e, dt) {
+          const visibility = dt.column(`${trendColumns[0]}:name`).visible()
+          for (const name of trendColumns) {
+            const current = dt.column(`${name}:name`)
+            current.visible(!visibility)
+          }
+        },
+      },
+      {
+        extend: 'collection',
+        text: 'Trend Date Ranges',
+        className: 'time-button-collection',
+        buttons: [7, 30, 90].map((d) => {
+          return {
+            text: `<span><i class="bi bi-check"></i> ${d} Days</span>`,
+            action: function (e, dt, node) {
+              const $el = $(node)
+              $el.siblings().removeClass('active')
+              $el.addClass('active')
+              TRENDLINE_DAYS = d
+            },
+            className: d === TRENDLINE_DAYS ? 'active' : '',
+          }
+        }),
+      },
     ],
   })
 
-  // for (const name of trendColumns) {
-  //   $table.column(`${name}:name`).visible(false)
-  // }
+  for (const name of trendColumns) {
+    $table.column(`${name}:name`).visible(false)
+  }
 
-  // $table.on(
-  //   'column-visibility.dt',
-  //   () => datasource.forEach((repo) => drawTrendline(repo))
-  // ).on(
-  //   'column-reorder',
-  //   () => datasource.forEach((repo) => drawTrendline(repo))
-  // )
+  $table.on(
+    'column-visibility.dt',
+    () => datasource.forEach((repo) => drawTrendline(repo))
+  ).on(
+    'column-reorder',
+    () => datasource.forEach((repo) => drawTrendline(repo))
+  )
 
-  // const drawTrendline = (repo) => {
-  //   const trendlineDates = getDateRangeList(TRENDLINE_DAYS).map(toDisplayDate)
+  const drawTrendline = (repo) => {
+    const getDateRangeList = (days, start = new Date()) => {
+      const DAY = 24 * 60 * 60 * 1000
+      const range = [start]
+      for (let i = 1; i < days; i++) {
+        range.push(new Date(start - i * DAY))
+      }
+      return range.reverse()
+    }
 
-  //   const elements = [
-  //     { id: '#issuesTrendline', data: repo.issues.history },
-  //     { id: '#highPrioIssues', data: repo.issues.priority.history },
-  //     { id: '#needsTriageIssues', data: repo.issues.triage.history },
-  //     { id: '#noLabelIssues', data: repo.issues.noLabel.history },
-  //   ]
+    const zeroPad = (n) => (n >= 10 ? n : `0${n}`)
+    const toDisplayDate = (d) => [
+      zeroPad(d.getUTCMonth() + 1),
+      d.getUTCDate(),
+      d.getUTCFullYear(),
+    ].join('/')
 
-  //   elements.forEach(({ id, data }) => {
-  //     const el = document.querySelector(id + repo.id)
-  //     if (el) {
-  //       sparkline.sparkline(
-  //         el,
-  //         data.slice(TRENDLINE_DAYS * -1),
-  //         {
-  //           onmousemove: function (e, datapoint) {
-  //             const elId = `trendlineContainer${repo.id}`
-  //             let $el = $(document.querySelector(`#${elId}`))
-  //             $(document.querySelector('.dataTables_scrollBody')).addClass(
-  //               'with-tooltip'
-  //             )
-  //             $el = $el.find('.trendline-data')
-  //             $el.addClass('active')
-  //             $el
-  //               .find(`#trendlineDate${repo.id}`)
-  //               .html(trendlineDates[datapoint.index])
-  //             $el
-  //               .find(`#trendlineValue${repo.id}`)
-  //               .html(`${datapoint.value} Issues`)
-  //           },
-  //           onmouseout: function () {
-  //             const elId = `trendlineContainer${repo.id}`
-  //             const $el = $(document.querySelector(`#${elId}`))
-  //             $(
-  //               document.querySelector('.dataTables_scrollBody')
-  //             ).removeClass('with-tooltip')
-  //             $el.find('.trendline-data').removeClass('active')
-  //           },
-  //         }
-  //       )
-  //     }
-  //   })
-  // }
+    const trendlineDates = getDateRangeList(TRENDLINE_DAYS).map(toDisplayDate)
+
+    const elements = [
+      { id: '#issuesTrendline', data: repo.issues.history },
+      { id: '#highPrioIssues', data: repo.issues.priority.history },
+      { id: '#needsTriageIssues', data: repo.issues.triage.history },
+      { id: '#noLabelIssues', data: repo.issues.noLabel.history },
+    ]
+
+    elements.forEach(({ id, data }) => {
+      const el = document.querySelector(id + repo.id)
+      if (el) {
+        sparkline.sparkline(
+          el,
+          data.slice(TRENDLINE_DAYS * -1),
+          {
+            onmousemove: function (e, datapoint) {
+              const elId = `trendlineContainer${repo.id}`
+              let $el = $(document.querySelector(`#${elId}`))
+              $(document.querySelector('.dataTables_scrollBody')).addClass(
+                'with-tooltip'
+              )
+              $el = $el.find('.trendline-data')
+              $el.addClass('active')
+              $el
+                .find(`#trendlineDate${repo.id}`)
+                .html(trendlineDates[datapoint.index])
+              $el
+                .find(`#trendlineValue${repo.id}`)
+                .html(`${datapoint.value} Issues`)
+            },
+            onmouseout: function () {
+              const elId = `trendlineContainer${repo.id}`
+              const $el = $(document.querySelector(`#${elId}`))
+              $(
+                document.querySelector('.dataTables_scrollBody')
+              ).removeClass('with-tooltip')
+              $el.find('.trendline-data').removeClass('active')
+            },
+          }
+        )
+      }
+    })
+  }
 })

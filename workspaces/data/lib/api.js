@@ -8,6 +8,20 @@ const log = require('proc-log')
 
 const graphqlKey = (k) => `_${k.replace(/[^_0-9A-Za-z]/g, '')}`
 
+const CACHE = new Map()
+const cacheMethod = (fn) => {
+  CACHE.set(fn, new Map())
+  return async (...args) => {
+    const key = args.map(JSON.stringify).join()
+    if (CACHE.get(fn).has(key)) {
+      return CACHE.get(fn).get(key)
+    }
+    const res = await fn(...args)
+    CACHE.get(fn).set(key, res)
+    return res
+  }
+}
+
 module.exports = ({ auth }) => {
   const REST = new Octokit({
     auth,
@@ -139,7 +153,7 @@ module.exports = ({ auth }) => {
         pkg: wsPkg,
       })))
     },
-    commit: async (owner, name, p) => {
+    commit: cacheMethod(async (owner, name, p) => {
       log.verbose(`api:repo:commit`, `${owner}/${name}${p ? `/${p}` : ''}`)
 
       return REST.repos.listCommits({
@@ -148,19 +162,37 @@ module.exports = ({ auth }) => {
         path: p,
         per_page: 1,
       }).then((r) => r.data[0])
-    },
-    status: async (owner, name, ref = 'HEAD') => {
+    }),
+    status: cacheMethod(async (owner, name, ref) => {
       log.verbose(`api:repo:status`, `${owner}/${name}#${ref}`)
 
-      const checkRun = await REST.checks.listForRef({
+      const checkRuns = await REST.paginate(REST.checks.listForRef, {
         owner,
         repo: name,
         ref,
-        per_page: 1,
-      }).then((r) => r.data.check_runs[0])
+        per_page: 100,
+      })
 
-      return checkRun
-    },
+      const failures = ['action_required', 'cancelled', 'failure', 'stale', 'timed_out']
+      const statuses = { neutral: false, success: false, skipped: false }
+
+      for (const checkRun of checkRuns) {
+        // return early for any failures
+        if (failures.includes(checkRun.conclusion)) {
+          return { url: checkRun.html_url, conclusion: 'failure' }
+        }
+        statuses[checkRun.conclusion] = true
+      }
+
+      // Skipped or neutral and no successes is neutral
+      if ((statuses.neutral || statuses.skipped) && !statuses.success) {
+        return { conclusion: 'neutral' }
+      }
+
+      // otherwise allow some neutral/skipped as long as there
+      // are other successful runs
+      return { conclusion: 'success' }
+    }),
   }
 
   const REPOS = {
