@@ -27,6 +27,10 @@ const getFilter = (rawFilter) => {
 }
 
 const exec = async ({ auth, filter, concurrency, projects: projectsFile }) => {
+  if (!auth) {
+    throw new Error(`AUTH_TOKEN is required`)
+  }
+
   logger()
 
   // Make it easier to test by only fetching a subset of the repos

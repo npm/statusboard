@@ -14,6 +14,10 @@ const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
 const exec = async ({ auth, query, projects: projectsFile }) => {
+  if (!auth) {
+    throw new Error(`AUTH_TOKEN is required`)
+  }
+
   logger()
 
   const api = Api({ auth })
