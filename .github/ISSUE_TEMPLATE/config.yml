@@ -1,5 +1,3 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
 blank_issues_enabled: true
-contact_links:
-  - name: 🤔 Ask a question?
-    url: https://github.com/npm/cli/discussions/new
-    about: We use Discussions for asking questions

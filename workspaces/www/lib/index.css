@@ -1,0 +1,298 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #333;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  color: rgb(65, 56, 68);
+  background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+}
+
+main {
+  padding: 1rem 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 10px 0 1rem;
+  display: flex;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(134, 131, 131, 0.2);
+}
+
+header a,
+header a:hover,
+header a:active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 100%;
+  color: rgb(65, 56, 68);
+}
+
+header h2 {
+  margin: 0;
+}
+
+header a span {
+  margin: 0 8px 0 0;
+}
+
+#built {
+  display: block;
+  margin-left: 10px;
+  align-self: center;
+}
+
+/*
+ * ===================
+ * Cell Data
+ * ===================
+ *
+ */
+
+.icon-npm,
+.icon-github {
+  width: 16px;
+}
+
+.icon-npm svg,
+.icon-github svg {
+  width: 16px;
+  fill: #333;
+}
+
+.badge-dt {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 8px 12px;
+  min-width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.project-cell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-cell .name {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.project-cell .icons {
+  display: inline-flex;
+}
+
+.project-cell .icons .icon {
+  margin-left: 3px;
+}
+
+/*
+ * ===================
+ * Controls
+ * ===================
+ *
+ */
+
+.btn-secondary {
+  background: #efefef;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+div.dt-button-collection .dt-button {
+  color: #333;
+  padding: 6px 12px;
+}
+
+div.dt-button-collection .dt-button i {
+  color: transparent;
+}
+
+div.dt-button-collection .dt-button.active i {
+  color: inherit;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: inherit;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dataTables_filter label {
+  margin: 0;
+}
+
+.dataTables_filter input {
+  height: 30px;
+  width: 200px;
+}
+
+/*
+ * ===================
+ * Tables
+ * ===================
+ * I can't know how to hear any more about tables!
+ *
+ */
+
+table {
+  font-size: inherit;
+}
+
+table tr th,
+table tr td {
+  text-align: center;
+}
+
+table tr td {
+  vertical-align: middle !important;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-bordered thead td,
+.table-bordered thead th {
+  border-bottom-width: 1px;
+  border-top: 0;
+}
+
+table.table-bordered.dataTable th {
+  white-space: pre;
+}
+
+.table td,
+.table th {
+  padding: 3px;
+}
+
+.table .sorting::after,
+.table .sorting::before {
+  line-height: 10px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f6f8fa;
+}
+
+/*
+ * ===================
+ * Sparklines
+ * ===================
+ * 
+ */
+
+.sparkline {
+  stroke: #333;
+  fill: #333;
+}
+
+.sparkline--spot {
+  stroke: #ff0000;
+  fill: #ff0000;
+}
+
+.sparkline--cursor {
+  stroke: #ff0000;
+}
+
+.sparkline--fill {
+  fill: #dee2e6;
+}
+
+.sparkline--line {
+  stroke: #333;
+}
+
+.trendline-container {
+  position: relative;
+  /* height: 100%;
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto; */
+  display: flex;
+}
+
+.trendline-data {
+  position: absolute;
+  visibility: hidden;
+  left: 0px;
+  top: 30px;
+  width: calc(100% - 8px);
+  border: 1px solid transparent;
+  padding: 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 1000;
+  transform: translateX(-50%);
+  margin: 0 50%;
+}
+
+.trendline-data span {
+  padding: 0;
+  text-align: left;
+}
+
+.trendline-data.active {
+  visibility: visible;
+  border-color: #c6cbd1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.trendline-data.active span {
+  color: inherit;
+}
+
+.trendline-date {
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.trendline-value {
+  font-weight: bold;
+  font-size: 10px;
+}

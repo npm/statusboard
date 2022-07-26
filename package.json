@@ -2,50 +2,51 @@
   "name": "statusboard",
   "version": "1.0.0",
   "description": "Community &amp; Open Source Statusboard",
-  "main": "index.js",
   "private": true,
-  "scripts": {
-    "serve": "http-server ./public/",
-    "fetch": "node ./scripts/fetch.js",
-    "maintained": " node ./scripts/sync-maintained.js",
-    "sync-labels": "node ./scripts/sync-labels.js",
-    "test": "tap"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/npm/statusboard.git"
+    "url": "https://github.com/npm/statusboard.git"
   },
   "keywords": [],
-  "author": "npm Inc. <support@npmjs.com>",
+  "author": "GitHub Inc.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/statusboard/issues"
   },
   "homepage": "https://github.com/npm/statusboard#readme",
-  "dependencies": {
-    "@actions/github": "^4.0.0",
-    "@fnando/sparkline": "^0.3.10",
-    "@octokit/graphql": "^4.5.1",
-    "@octokit/plugin-retry": "^3.0.7",
-    "@octokit/plugin-throttling": "^3.4.1",
-    "@octokit/rest": "^18.0.1",
-    "date-fns": "^2.21.0",
-    "dotenv": "^8.2.0",
-    "fetch-retry": "^4.1.1",
-    "http-server": "^0.12.3",
-    "mkdirp": "^1.0.4",
-    "moment": "^2.29.2",
-    "node-fetch": "^2.6.7",
-    "pacote": "^11.3.5",
-    "sleepover": "^1.1.4"
-  },
+  "workspaces": [
+    "workspaces/*"
+  ],
   "devDependencies": {
-    "eslint": "^7.24.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "require-inject": "^1.4.4",
-    "tap": "^15.0.5"
+    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/template-oss": "3.5.0",
+    "tap": "^16.3.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "3.5.0",
+    "ciVersions": [
+      "18.3.0"
+    ],
+    "windowsCI": false,
+    "lockfile": true
+  },
+  "scripts": {
+    "template-oss-apply": "template-oss-apply --force",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "lintfix": "npm run lint -- --fix",
+    "preversion": "npm test",
+    "postversion": "git push origin --follow-tags",
+    "snap": "tap",
+    "test": "tap",
+    "posttest": "npm run lint"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=18.3.0"
   }
 }

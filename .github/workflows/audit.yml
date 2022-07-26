@@ -1,15 +1,15 @@
-name: Build statusboard
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: Audit
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * *"
-  push:
-    branches:
-      - main
+    # "At 01:00 on Monday" https://crontab.guru/#0_1_*_*_1
+    - cron: "0 1 * * 1"
 
 jobs:
-  build:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,23 +19,10 @@ jobs:
           git config --global user.name "npm CLI robot"
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 18.3.0
           cache: npm
       - name: Update npm to latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
-      - run: npm run fetch:data
-        env:
-          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Commit data
-        run: |
-          git add .
-          git commit -m "chore: update data"
-          git push origin main
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: public
-          clean: true
+      - run: npm audit

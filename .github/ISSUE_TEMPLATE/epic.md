@@ -1,10 +1,9 @@
 ---
 name: Epic
-about: Create a new Epic ticklet
-title: ''
-labels: 'Epic'
-assignees: ''
-
+about: Create a new Epic ticket
+title: ""
+labels: "Epic"
+assignees: ""
 ---
 
 ### Epic
