@@ -4,11 +4,23 @@ A single view to help monitor the status/health of [npm](https://github.com/npm)
 
 [View statusboard here: **npm.github.io/statusboard**](https://npm.github.io/statusboard/)
 
+### Data
+
+To be included here a repo must have the `npm-cli` topic added to it. The data is rebuilt daily so it should appear by the next day.
+
+Projects are removed from the list if they are archived on GitHub and deprecated on the npm registry. The topic `npm-cli` does not need to be removed and should be kept on GitHub repos for historical reference.
+
 ### Developing:
 
-1. Install `npm i` (if it is already installed then skip this)
-2. `npm run` (lists the available commands to run)
+#### To update maintained projects:
 
-### Preview:
+`npm run fetch:maintained -w data`
 
-[![](https://user-images.githubusercontent.com/459713/73183520-ec57f880-40e8-11ea-9aad-5b3912b1ceda.png)](https://npm.github.io/statusboard/)
+#### To update daily data:
+
+`npm run fetch:data -w data`
+
+#### To serve site locally
+
+`npm run dev -w www`
+
