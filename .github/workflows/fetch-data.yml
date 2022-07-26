@@ -1,15 +1,12 @@
-name: Build statusboard
+name: Fetch daily data
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 9 * * *"
-  push:
-    branches:
-      - main
 
 jobs:
-  build:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,14 +25,8 @@ jobs:
       - run: npm run fetch:data -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Commit data
+      - name: Commit changes
         run: |
           git add .
           git commit -m "chore: update data" || true
           git push origin main
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: www/lib
-          clean: true

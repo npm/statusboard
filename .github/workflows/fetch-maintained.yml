@@ -1,4 +1,4 @@
-name: Fetch repos
+name: Fetch maintained projects
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: "0 8 * * *"
 
 jobs:
-  sync:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
