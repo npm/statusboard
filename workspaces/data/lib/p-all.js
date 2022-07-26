@@ -1,10 +1,11 @@
 module.exports = async (promises) => {
-  const entries = Object.entries(promises)
-  const res = await Promise.all(entries.map(([key, value]) => {
+  const result = []
+  for (const [key, value] of Object.entries(promises)) {
     if (typeof value === 'function') {
-      return value().then(v => [key, v])
+      result.push(await value().then(v => [key, v]))
+    } else {
+      result.push([key, null])
     }
-    return [key, null]
-  }))
-  return Object.fromEntries(res)
+  }
+  return Object.fromEntries(result)
 }

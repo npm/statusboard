@@ -92,8 +92,11 @@ const { values } = parseArgs({
 
 exec({
   auth: process.env.AUTH_TOKEN,
-  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
   query: values.query ?? 'org:npm topic:npm-cli',
+  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
 })
   .then(console.log)
-  .catch(console.error)
+  .catch((err) => {
+    process.exitCode = 1
+    console.error(err)
+  })
