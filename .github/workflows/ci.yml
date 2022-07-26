@@ -45,8 +45,6 @@ jobs:
             shell: bash
           - os: macos-latest
             shell: bash
-          - os: windows-latest
-            shell: cmd
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:

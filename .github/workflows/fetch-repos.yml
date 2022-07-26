@@ -3,7 +3,7 @@ name: Fetch repos
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 13 * * *"
+    - cron: "0 8 * * *"
 
 jobs:
   sync:
@@ -22,10 +22,11 @@ jobs:
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
-      - run: npm run fetch:repos
+      - run: npm run fetch:maintained
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
         run: |
           git add .
-          git commit -m "fix: update repos" && git push origin main || echo "nothing to commit"
+          git commit -m "chore: update repos"
+          git push origin main

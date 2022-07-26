@@ -26,6 +26,7 @@
     "ciVersions": [
       "18.3.0"
     ],
+    "windowsCI": false,
     "lockfile": true
   },
   "scripts": {
