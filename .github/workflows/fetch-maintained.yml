@@ -1,4 +1,4 @@
-name: Fetch maintained projects
+name: Fetch Maintained Projects
 
 on:
   workflow_dispatch:
@@ -28,5 +28,5 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "chore: update repos" || true
+          git commit -m "chore: update maintained projects" || true
           git push origin main

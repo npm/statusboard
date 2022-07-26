@@ -1,4 +1,4 @@
-name: Fetch daily data
+name: Fetch Daily Data
 
 on:
   workflow_dispatch:

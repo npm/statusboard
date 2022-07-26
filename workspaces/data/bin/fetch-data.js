@@ -33,7 +33,7 @@ const exec = async ({ auth, filter, projects: projectsFile }) => {
 
   logger()
 
-  // Make it easier to test by only fetching a subset of the repos
+  // Make it easier to test by only fetching a subset of the projects
   const rawProjects = require(projectsFile)
   const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
 
