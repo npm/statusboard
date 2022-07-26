@@ -34,9 +34,10 @@ const renderNumber = (getOpts = () => {}) => ({
   renderDisplay: (data, row) => EL.cell({ text: numFormat(data), ...getOpts(data, row) }),
 })
 
+let TREND_DAYS = 7
+
 const validTrendline = (data) => data && !data.every(d => d === 0)
 
-let TREND_DAYS = 7
 const renderTrendline = (days = TREND_DAYS) => ({
   allowNull: true,
   visible: false,
@@ -91,18 +92,6 @@ $(document).ready(async () => {
   const API_DATA = await fetch('data/latest.min.json').then(r => r.json())
   const DATA = Object.values(API_DATA.data)
   const templateOSS = DATA.find((p) => p.name === 'template-oss')
-
-  // TODO: remove this, its just for testing with historical data
-  // DATA.forEach((project) => {
-  //   const fill = () => new Array(500).fill(0).map(() => Math.floor(Math.random() * 100))
-  //   if (project.issues) {
-  //     project.issues.history.unshift(...fill())
-  //     project.issues.noLabel.history.unshift(...fill())
-  //     project.issues.triage.history.unshift(...fill())
-  //     project.issues.priority.history.unshift(...fill())
-  //     project.prs.history.unshift(...fill())
-  //   }
-  // })
 
   document.querySelector('#built').innerHTML =
     `<strong>Last Built: ${dateFormat(new Date(API_DATA.created_at))}</strong>`
