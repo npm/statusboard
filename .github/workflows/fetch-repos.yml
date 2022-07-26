@@ -22,7 +22,7 @@ jobs:
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
-      - run: npm run fetch:maintained
+      - run: npm run fetch:maintained -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit changes
