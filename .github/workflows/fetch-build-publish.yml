@@ -25,7 +25,7 @@ jobs:
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
-      - run: npm run fetch:data
+      - run: npm run fetch:data -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit data
