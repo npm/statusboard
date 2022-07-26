@@ -5,7 +5,7 @@ const Api = require('../lib/api/rest.js')
 const fetchData = require('../lib/project-data.js')
 const logger = require('../lib/logger.js')
 const getProjectsHistory = require('../lib/projects-history.js')
-const { chunk } = require('lodash')
+const pAll = require('../lib/p-all.js')
 
 const getDate = (d) => ({
   month: (d.getUTCMonth() + 1).toString().padStart(2, '0'),
@@ -26,7 +26,7 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, filter, concurrency, projects: projectsFile }) => {
+const exec = async ({ auth, filter, projects: projectsFile }) => {
   if (!auth) {
     throw new Error(`AUTH_TOKEN is required`)
   }
@@ -44,21 +44,19 @@ const exec = async ({ auth, filter, concurrency, projects: projectsFile }) => {
   const dataDir = path.dirname(projectsFile)
   const dailyDir = path.join(dataDir, 'daily')
 
-  const projectsData = []
   const projectsHistory = await getProjectsHistory({
     projects,
     dir: dailyDir,
     filter: (f) => !f.endsWith('.min.json') && !f.startsWith(dayId),
   })
 
-  for (const projectsChunk of chunk(projects, concurrency)) {
-    const resultsChunk = projectsChunk.map((project) => fetchData({
+  const projectsData = await pAll(projects.map((project) => () => {
+    return fetchData({
       api,
       project,
       history: projectsHistory[project.id],
-    }))
-    projectsData.push(...await Promise.all(resultsChunk))
-  }
+    })
+  }))
 
   const files = [
     path.join(dailyDir, `${dayId}.min.json`),
@@ -85,7 +83,6 @@ const { values } = parseArgs({
 
 exec({
   auth: process.env.AUTH_TOKEN,
-  concurrency: 1,
   filter: values.filter,
   projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
 })
