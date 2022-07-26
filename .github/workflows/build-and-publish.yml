@@ -1,6 +1,7 @@
 name: Build and publish
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - workspaces/www/lib/**
