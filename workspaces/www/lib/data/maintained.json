@@ -1,567 +1,573 @@
 [
   {
-    "id": "npm/abbrev-js",
+    "id": "npm_abbrev-js",
     "name": "abbrev-js",
     "owner": "npm",
     "pkg": "abbrev"
   },
   {
-    "id": "npm/agent",
+    "id": "npm_agent",
     "name": "agent",
     "owner": "npm"
   },
   {
-    "id": "npm/cli/workspaces/arborist",
+    "id": "npm_cli_workspaces_arborist",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/arborist",
     "pkg": "@npmcli/arborist"
   },
   {
-    "id": "npm/are-we-there-yet",
+    "id": "npm_are-we-there-yet",
     "name": "are-we-there-yet",
     "owner": "npm",
     "pkg": "are-we-there-yet"
   },
   {
-    "id": "npm/benchmarks",
+    "id": "npm_benchmarks",
     "name": "benchmarks",
     "owner": "npm"
   },
   {
-    "id": "npm/bin-links",
+    "id": "npm_bin-links",
     "name": "bin-links",
     "owner": "npm",
     "pkg": "bin-links"
   },
   {
-    "id": "npm/cacache",
+    "id": "npm_cacache",
     "name": "cacache",
     "owner": "npm",
     "pkg": "cacache"
   },
   {
-    "id": "npm/ci-detect",
+    "id": "npm_ci-detect",
     "name": "ci-detect",
     "owner": "npm",
     "pkg": "@npmcli/ci-detect"
   },
   {
-    "id": "npm/cmd-shim",
+    "id": "npm_cmd-shim",
     "name": "cmd-shim",
     "owner": "npm",
     "pkg": "cmd-shim"
   },
   {
-    "id": "npm/config",
+    "id": "npm_config",
     "name": "config",
     "owner": "npm",
     "pkg": "@npmcli/config"
   },
   {
-    "id": "npm/create-oss",
+    "id": "npm_create-oss",
     "name": "create-oss",
     "owner": "npm",
     "pkg": "@npmcli/create-oss"
   },
   {
-    "id": "npm/dezalgo",
+    "id": "npm_dezalgo",
     "name": "dezalgo",
     "owner": "npm",
     "pkg": "dezalgo"
   },
   {
-    "id": "npm/disparity-colors",
+    "id": "npm_disparity-colors",
     "name": "disparity-colors",
     "owner": "npm",
     "pkg": "@npmcli/disparity-colors"
   },
   {
-    "id": "npm/doctornpm",
+    "id": "npm_doctornpm",
     "name": "doctornpm",
     "owner": "npm"
   },
   {
-    "id": "npm/documentation",
+    "id": "npm_documentation",
     "name": "documentation",
     "owner": "npm"
   },
   {
-    "id": "npm/eslint-config",
+    "id": "npm_eslint-config",
     "name": "eslint-config",
     "owner": "npm",
     "pkg": "@npmcli/eslint-config"
   },
   {
-    "id": "npm/exec",
+    "id": "npm_exec",
     "name": "exec",
     "owner": "npm"
   },
   {
-    "id": "npm/fs",
+    "id": "npm_fs",
     "name": "fs",
     "owner": "npm",
     "pkg": "@npmcli/fs"
   },
   {
-    "id": "npm/fs-minipass",
+    "id": "npm_fs-minipass",
     "name": "fs-minipass",
     "owner": "npm",
     "pkg": "fs-minipass"
   },
   {
-    "id": "npm/gauge",
+    "id": "npm_gauge",
     "name": "gauge",
     "owner": "npm",
     "pkg": "gauge"
   },
   {
-    "id": "npm/git",
+    "id": "npm_git",
     "name": "git",
     "owner": "npm",
     "pkg": "@npmcli/git"
   },
   {
-    "id": "npm/hosted-git-info",
+    "id": "npm_hosted-git-info",
     "name": "hosted-git-info",
     "owner": "npm",
     "pkg": "hosted-git-info"
   },
   {
-    "id": "npm/ignore-walk",
+    "id": "npm_ignore-walk",
     "name": "ignore-walk",
     "owner": "npm",
     "pkg": "ignore-walk"
   },
   {
-    "id": "npm/infer-owner",
+    "id": "npm_infer-owner",
     "name": "infer-owner",
     "owner": "npm",
     "pkg": "infer-owner"
   },
   {
-    "id": "npm/inflight",
+    "id": "npm_inflight",
     "name": "inflight",
     "owner": "npm",
     "pkg": "inflight"
   },
   {
-    "id": "npm/ini",
+    "id": "npm_ini",
     "name": "ini",
     "owner": "npm",
     "pkg": "ini"
   },
   {
-    "id": "npm/init-package-json",
+    "id": "npm_init-package-json",
     "name": "init-package-json",
     "owner": "npm",
     "pkg": "init-package-json"
   },
   {
-    "id": "npm/installed-package-contents",
+    "id": "npm_installed-package-contents",
     "name": "installed-package-contents",
     "owner": "npm",
     "pkg": "@npmcli/installed-package-contents"
   },
   {
-    "id": "npm/cli/workspaces/libnpmaccess",
+    "id": "npm_cli_workspaces_libnpmaccess",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmaccess",
     "pkg": "libnpmaccess"
   },
   {
-    "id": "npm/cli/workspaces/libnpmdiff",
+    "id": "npm_cli_workspaces_libnpmdiff",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmdiff",
     "pkg": "libnpmdiff"
   },
   {
-    "id": "npm/cli/workspaces/libnpmexec",
+    "id": "npm_cli_workspaces_libnpmexec",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmexec",
     "pkg": "libnpmexec"
   },
   {
-    "id": "npm/cli/workspaces/libnpmfund",
+    "id": "npm_cli_workspaces_libnpmfund",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmfund",
     "pkg": "libnpmfund"
   },
   {
-    "id": "npm/cli/workspaces/libnpmhook",
+    "id": "npm_cli_workspaces_libnpmhook",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmhook",
     "pkg": "libnpmhook"
   },
   {
-    "id": "npm/cli/workspaces/libnpmorg",
+    "id": "npm_cli_workspaces_libnpmorg",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmorg",
     "pkg": "libnpmorg"
   },
   {
-    "id": "npm/cli/workspaces/libnpmpack",
+    "id": "npm_cli_workspaces_libnpmpack",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmpack",
     "pkg": "libnpmpack"
   },
   {
-    "id": "npm/cli/workspaces/libnpmpublish",
+    "id": "npm_cli_workspaces_libnpmpublish",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmpublish",
     "pkg": "libnpmpublish"
   },
   {
-    "id": "npm/cli/workspaces/libnpmsearch",
+    "id": "npm_cli_workspaces_libnpmsearch",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmsearch",
     "pkg": "libnpmsearch"
   },
   {
-    "id": "npm/cli/workspaces/libnpmteam",
+    "id": "npm_cli_workspaces_libnpmteam",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmteam",
     "pkg": "libnpmteam"
   },
   {
-    "id": "npm/cli/workspaces/libnpmversion",
+    "id": "npm_cli_workspaces_libnpmversion",
     "name": "cli",
     "owner": "npm",
     "path": "workspaces/libnpmversion",
     "pkg": "libnpmversion"
   },
   {
-    "id": "npm/lint",
+    "id": "npm_lint",
     "name": "lint",
     "owner": "npm",
     "pkg": "@npmcli/lint"
   },
   {
-    "id": "npm/make-fetch-happen",
+    "id": "npm_make-fetch-happen",
     "name": "make-fetch-happen",
     "owner": "npm",
     "pkg": "make-fetch-happen"
   },
   {
-    "id": "npm/map-workspaces",
+    "id": "npm_map-workspaces",
     "name": "map-workspaces",
     "owner": "npm",
     "pkg": "@npmcli/map-workspaces"
   },
   {
-    "id": "npm/metavuln-calculator",
+    "id": "npm_metavuln-calculator",
     "name": "metavuln-calculator",
     "owner": "npm",
     "pkg": "@npmcli/metavuln-calculator"
   },
   {
-    "id": "npm/minipass-fetch",
+    "id": "npm_minipass-fetch",
     "name": "minipass-fetch",
     "owner": "npm",
     "pkg": "minipass-fetch"
   },
   {
-    "id": "npm/move-file",
+    "id": "npm_move-file",
     "name": "move-file",
     "owner": "npm",
     "pkg": "@npmcli/move-file"
   },
   {
-    "id": "npm/mute-stream",
+    "id": "npm_mute-stream",
     "name": "mute-stream",
     "owner": "npm",
     "pkg": "mute-stream"
   },
   {
-    "id": "npm/name-from-folder",
+    "id": "npm_name-from-folder",
     "name": "name-from-folder",
     "owner": "npm",
     "pkg": "@npmcli/name-from-folder"
   },
   {
-    "id": "npm/nock-registry",
+    "id": "npm_nock-registry",
     "name": "nock-registry",
     "owner": "npm"
   },
   {
-    "id": "npm/node-gyp",
+    "id": "npm_node-gyp",
     "name": "node-gyp",
     "owner": "npm",
     "pkg": "@npmcli/node-gyp"
   },
   {
-    "id": "npm/nopt",
+    "id": "npm_nopt",
     "name": "nopt",
     "owner": "npm",
     "pkg": "nopt"
   },
   {
-    "id": "npm/normalize-package-data",
+    "id": "npm_normalize-package-data",
     "name": "normalize-package-data",
     "owner": "npm",
     "pkg": "normalize-package-data"
   },
   {
-    "id": "npm/cli",
+    "id": "npm_cli",
     "name": "cli",
     "owner": "npm",
     "pkg": "npm"
   },
   {
-    "id": "npm/npm-audit-report",
+    "id": "npm_npm-audit-report",
     "name": "npm-audit-report",
     "owner": "npm",
     "pkg": "npm-audit-report"
   },
   {
-    "id": "npm/npm-birthday",
+    "id": "npm_npm-birthday",
     "name": "npm-birthday",
     "owner": "npm",
     "pkg": "@npmcli/npm-birthday"
   },
   {
-    "id": "npm/npm-bundled",
+    "id": "npm_npm-bundled",
     "name": "npm-bundled",
     "owner": "npm",
     "pkg": "npm-bundled"
   },
   {
-    "id": "npm/npm-install-checks",
+    "id": "npm_npm-install-checks",
     "name": "npm-install-checks",
     "owner": "npm",
     "pkg": "npm-install-checks"
   },
   {
-    "id": "npm/npm-install-script",
+    "id": "npm_npm-install-script",
     "name": "npm-install-script",
     "owner": "npm"
   },
   {
-    "id": "npm/npm-normalize-package-bin",
+    "id": "npm_npm-normalize-package-bin",
     "name": "npm-normalize-package-bin",
     "owner": "npm",
     "pkg": "npm-normalize-package-bin"
   },
   {
-    "id": "npm/npm-package-arg",
+    "id": "npm_npm-package-arg",
     "name": "npm-package-arg",
     "owner": "npm",
     "pkg": "npm-package-arg"
   },
   {
-    "id": "npm/npm-packlist",
+    "id": "npm_npm-packlist",
     "name": "npm-packlist",
     "owner": "npm",
     "pkg": "npm-packlist"
   },
   {
-    "id": "npm/npm-profile",
+    "id": "npm_npm-profile",
     "name": "npm-profile",
     "owner": "npm",
     "pkg": "npm-profile"
   },
   {
-    "id": "npm/npm-registry-fetch",
+    "id": "npm_npm-registry-fetch",
     "name": "npm-registry-fetch",
     "owner": "npm",
     "pkg": "npm-registry-fetch"
   },
   {
-    "id": "npm/npm-registry-mock",
+    "id": "npm_npm-registry-mock",
     "name": "npm-registry-mock",
     "owner": "npm",
     "pkg": "npm-registry-mock"
   },
   {
-    "id": "npm/npm-user-validate",
+    "id": "npm_npm-user-validate",
     "name": "npm-user-validate",
     "owner": "npm",
     "pkg": "npm-user-validate"
   },
   {
-    "id": "npm/npmlog",
+    "id": "npm_npmlog",
     "name": "npmlog",
     "owner": "npm",
     "pkg": "npmlog"
   },
   {
-    "id": "npm/package-json",
+    "id": "npm_package-json",
     "name": "package-json",
     "owner": "npm",
     "pkg": "@npmcli/package-json"
   },
   {
-    "id": "npm/pacote",
+    "id": "npm_pacote",
     "name": "pacote",
     "owner": "npm",
     "pkg": "pacote"
   },
   {
-    "id": "npm/parse-conflict-json",
+    "id": "npm_parse-conflict-json",
     "name": "parse-conflict-json",
     "owner": "npm",
     "pkg": "parse-conflict-json"
   },
   {
-    "id": "npm/proc-log",
+    "id": "npm_proc-log",
     "name": "proc-log",
     "owner": "npm",
     "pkg": "proc-log"
   },
   {
-    "id": "npm/proggy",
+    "id": "npm_proggy",
     "name": "proggy",
     "owner": "npm",
     "pkg": "proggy"
   },
   {
-    "id": "npm/promise-spawn",
+    "id": "npm_promise-spawn",
     "name": "promise-spawn",
     "owner": "npm",
     "pkg": "@npmcli/promise-spawn"
   },
   {
-    "id": "npm/promzard",
+    "id": "npm_promzard",
     "name": "promzard",
     "owner": "npm",
     "pkg": "promzard"
   },
   {
-    "id": "npm/read",
+    "id": "npm_pull",
+    "name": "pull",
+    "owner": "npm",
+    "pkg": "@npmcli/pull"
+  },
+  {
+    "id": "npm_read",
     "name": "read",
     "owner": "npm",
     "pkg": "read"
   },
   {
-    "id": "npm/read-cmd-shim",
+    "id": "npm_read-cmd-shim",
     "name": "read-cmd-shim",
     "owner": "npm",
     "pkg": "read-cmd-shim"
   },
   {
-    "id": "npm/read-package-json",
+    "id": "npm_read-package-json",
     "name": "read-package-json",
     "owner": "npm",
     "pkg": "read-package-json"
   },
   {
-    "id": "npm/read-package-json-fast",
+    "id": "npm_read-package-json-fast",
     "name": "read-package-json-fast",
     "owner": "npm",
     "pkg": "read-package-json-fast"
   },
   {
-    "id": "npm/readdir-scoped-modules",
+    "id": "npm_readdir-scoped-modules",
     "name": "readdir-scoped-modules",
     "owner": "npm",
     "pkg": "readdir-scoped-modules"
   },
   {
-    "id": "npm/rfcs",
+    "id": "npm_rfcs",
     "name": "rfcs",
     "owner": "npm"
   },
   {
-    "id": "npm/run-script",
+    "id": "npm_run-script",
     "name": "run-script",
     "owner": "npm",
     "pkg": "@npmcli/run-script"
   },
   {
-    "id": "npm/node-semver",
+    "id": "npm_node-semver",
     "name": "node-semver",
     "owner": "npm",
     "pkg": "semver"
   },
   {
-    "id": "npm/ssri",
+    "id": "npm_ssri",
     "name": "ssri",
     "owner": "npm",
     "pkg": "ssri"
   },
   {
-    "id": "npm/stafftools",
+    "id": "npm_stafftools",
     "name": "stafftools",
     "owner": "npm",
     "pkg": "@npmcli/stafftools"
   },
   {
-    "id": "npm/statusboard",
+    "id": "npm_statusboard",
     "name": "statusboard",
     "owner": "npm"
   },
   {
-    "id": "npm/stringify-package",
+    "id": "npm_stringify-package",
     "name": "stringify-package",
     "owner": "npm",
     "pkg": "stringify-package"
   },
   {
-    "id": "npm/tap-nock",
+    "id": "npm_tap-nock",
     "name": "tap-nock",
     "owner": "npm",
     "pkg": "@npmcli/tap-nock"
   },
   {
-    "id": "npm/node-tar",
+    "id": "npm_node-tar",
     "name": "node-tar",
     "owner": "npm",
     "pkg": "tar"
   },
   {
-    "id": "npm/template-oss",
+    "id": "npm_template-oss",
     "name": "template-oss",
     "owner": "npm",
     "pkg": "@npmcli/template-oss"
   },
   {
-    "id": "npm/treeverse",
+    "id": "npm_treeverse",
     "name": "treeverse",
     "owner": "npm",
     "pkg": "treeverse"
   },
   {
-    "id": "npm/unique-filename",
+    "id": "npm_unique-filename",
     "name": "unique-filename",
     "owner": "npm",
     "pkg": "unique-filename"
   },
   {
-    "id": "npm/unique-slug",
+    "id": "npm_unique-slug",
     "name": "unique-slug",
     "owner": "npm",
     "pkg": "unique-slug"
   },
   {
-    "id": "npm/validate-npm-package-name",
+    "id": "npm_validate-npm-package-name",
     "name": "validate-npm-package-name",
     "owner": "npm",
     "pkg": "validate-npm-package-name"
   },
   {
-    "id": "npm/node-which",
+    "id": "npm_node-which",
     "name": "node-which",
     "owner": "npm",
     "pkg": "which"
   },
   {
-    "id": "npm/wrappy",
+    "id": "npm_wrappy",
     "name": "wrappy",
     "owner": "npm",
     "pkg": "wrappy"
   },
   {
-    "id": "npm/write-file-atomic",
+    "id": "npm_write-file-atomic",
     "name": "write-file-atomic",
     "owner": "npm",
     "pkg": "write-file-atomic"

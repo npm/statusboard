@@ -3,7 +3,7 @@ name: Fetch repos
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 13 * * *"
 
 jobs:
   sync:

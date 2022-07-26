@@ -30,183 +30,60 @@ body:before {
 }
 
 main {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.built {
-  display: block;
-  margin: 0 0 20px 0;
-}
-
-.columns {
-  margin: 0 0 0 1rem 0;
-  padding: 0;
-  display: flex;
-}
-
-.columns li {
-  margin: 0 10px 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-.columns li button {
-  background: transparent;
-  border: 1px solid #dee2e6;
-  border-radius: 3px;
-  padding: 5px 10px 5px 25px;
-  white-space: nowrap;
-  position: relative;
-}
-
-.columns li button:before {
-  content: "";
-  display: block;
-  background: #333;
-  border-radius: 50%;
-  border: 1px solid #333;
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  top: 13px;
-  left: 10px;
-}
-
-.columns li button.hidden:before {
-  background: none;
-}
-
-.columns li button:hover {
-  cursor: pointer;
-  color: #333;
-  background: #dee2e6;
-}
-
-.columns li button.hidden:hover:before {
-  background: #333;
-}
-
-.table {
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
   font-family: "Poppins", sans-serif;
 }
 
-h6 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 header {
-  padding: 25px 40px 15px;
+  padding: 10px 0 1rem;
+  display: flex;
+  margin-top: 1rem;
   border-bottom: 1px solid rgba(134, 131, 131, 0.2);
 }
 
-a.text-primary {
-  font-weight: bold;
-}
-
-a,
-a:active,
-a:hover {
+header a,
+header a:hover,
+header a:active {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   line-height: 100%;
   color: rgb(65, 56, 68);
 }
 
-header a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  display: block;
+header h2 {
+  margin: 0;
 }
 
 header a span {
-  margin: 0 15px 0 0;
+  margin: 0 8px 0 0;
 }
 
-table {
-  font-size: inherit;
-}
-
-table tr th,
-table tr td {
-  text-align: center;
-}
-
-.table-bordered thead td,
-.table-bordered thead th {
-  border-bottom-width: 1px;
-  border-top: 0;
-}
-
-.table td,
-.table th {
-  padding: 6px 12px;
-}
-
-.table .sorting::after,
-.table .sorting::before {
-  line-height: 10px;
-}
-
-table tr td span {
-  /* background: #333; */
-  color: white;
-  padding: 8px 0;
-  border-radius: 3px;
-  width: 100%;
+#built {
   display: block;
-  line-height: 100%;
+  margin-left: 10px;
+  align-self: center;
 }
 
-table tr td {
-  vertical-align: middle !important;
+/*
+ * ===================
+ * Cell Data
+ * ===================
+ *
+ */
+
+.icon-npm,
+.icon-github {
+  width: 16px;
 }
 
-.license {
-  font-weight: bold;
-}
-
-.status {
-  text-transform: capitalize;
-}
-
-/* line with highlight area */
-.sparkline {
-  stroke: #333;
+.icon-npm svg,
+.icon-github svg {
+  width: 16px;
   fill: #333;
-}
-
-/* change the spot color */
-.sparkline--spot {
-  stroke: #ff0000;
-  fill: #ff0000;
-}
-
-/* change the cursor color */
-.sparkline--cursor {
-  stroke: #ff0000;
-}
-
-/* style fill area and line colors using specific class name */
-.sparkline--fill {
-  fill: #dee2e6;
-}
-
-.sparkline--line {
-  stroke: #333;
-}
-
-table.table-bordered.dataTable th {
-  white-space: pre;
 }
 
 .badge-dt {
@@ -217,6 +94,40 @@ table.table-bordered.dataTable th {
   min-width: 100%;
   box-sizing: border-box;
   border-radius: 3px;
+}
+
+.project-cell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-cell .name {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.project-cell .icons {
+  display: inline-flex;
+}
+
+.project-cell .icons .icon {
+  margin-left: 3px;
+}
+
+/*
+ * ===================
+ * Controls
+ * ===================
+ *
+ */
+
+.btn-secondary {
+  background: #efefef;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
 }
 
 div.dt-button-collection .dt-button {
@@ -242,34 +153,118 @@ div.dt-button-collection .dt-button.active i {
   justify-content: space-between;
 }
 
-#DataTables_Table_0_filter {
-  display: inline-flex;
-  justify-content: space-between;
-  margin-top: 6px;
+.dataTables_filter label {
+  margin: 0;
+}
+
+.dataTables_filter input {
+  height: 30px;
+  width: 200px;
+}
+
+/*
+ * ===================
+ * Tables
+ * ===================
+ * I can't know how to hear any more about tables!
+ *
+ */
+
+table {
+  font-size: inherit;
+}
+
+table tr th,
+table tr td {
+  text-align: center;
+}
+
+table tr td {
+  vertical-align: middle !important;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-bordered thead td,
+.table-bordered thead th {
+  border-bottom-width: 1px;
+  border-top: 0;
+}
+
+table.table-bordered.dataTable th {
+  white-space: pre;
+}
+
+.table td,
+.table th {
+  padding: 3px;
+}
+
+.table .sorting::after,
+.table .sorting::before {
+  line-height: 10px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f6f8fa;
+}
+
+/*
+ * ===================
+ * Sparklines
+ * ===================
+ * 
+ */
+
+.sparkline {
+  stroke: #333;
+  fill: #333;
+}
+
+.sparkline--spot {
+  stroke: #ff0000;
+  fill: #ff0000;
+}
+
+.sparkline--cursor {
+  stroke: #ff0000;
+}
+
+.sparkline--fill {
+  fill: #dee2e6;
+}
+
+.sparkline--line {
+  stroke: #333;
 }
 
 .trendline-container {
   position: relative;
-  height: 100%;
+  /* height: 100%;
   width: 100%;
   max-width: 100px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  display: flex;
 }
 
 .trendline-data {
   position: absolute;
   visibility: hidden;
-  left: -100px;
-  top: -6px;
-  width: 100px;
-  height: 52px;
+  left: 0px;
+  top: 30px;
+  width: calc(100% - 8px);
   border: 1px solid transparent;
-  padding: 8px 10px;
+  padding: 4px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  z-index: 1000;
+  transform: translateX(-50%);
+  margin: 0 50%;
 }
 
 .trendline-data span {
@@ -291,10 +286,6 @@ div.dt-button-collection .dt-button.active i {
   color: inherit;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f6f8fa;
-}
-
 .trendline-date {
   font-weight: bold;
   font-size: 10px;
@@ -304,35 +295,4 @@ div.dt-button-collection .dt-button.active i {
 .trendline-value {
   font-weight: bold;
   font-size: 10px;
-}
-
-.project {
-  white-space: nowrap;
-}
-
-.text-primary {
-  display: inline-block;
-  margin: 0 10px 0 0;
-}
-
-.icon-npm,
-.icon-github {
-  display: inline-block;
-  float: right;
-  margin: 0 3px 0 3px;
-}
-
-.icon-npm svg,
-.icon-github svg {
-  width: 16px;
-  fill: #333;
-}
-
-.btn-secondary {
-  background: #efefef;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: bold;
 }

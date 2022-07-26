@@ -29,6 +29,8 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
     "@octokit/graphql": "^5.0.0",
+    "@octokit/plugin-retry": "^3.0.9",
+    "@octokit/plugin-throttling": "^4.1.0",
     "@octokit/rest": "^19.0.3",
     "glob": "^8.0.3",
     "lodash": "^4.17.21",
@@ -46,7 +48,7 @@
     "lib/"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.3.0"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",

@@ -1,11 +1,11 @@
-module.exports = ({ prs, repo, history }) => {
-  if (!prs || !repo) {
+module.exports = ({ prs, url, history }) => {
+  if (!prs || !url) {
     return null
   }
 
   const result = {
     count: prs.length,
-    url: repo.html_url + '/pulls',
+    url: url + '/pulls',
   }
 
   if (history) {

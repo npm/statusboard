@@ -29,11 +29,6 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.bootstrap4.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
       href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.bootstrap4.min.css"
     />
     <link
@@ -45,12 +40,13 @@
   <body>
     <div class="container-fluid">
       <header>
-        <a href="https://npmjs.com/"><span>❤</span>npmjs.com</a>
+        <h2>
+          <a href="https://npmjs.com/"><span>❤</span><strong>npm</strong></a> project statusboard
+        </h2>
+        <small id="built" class="built">Loading...</small>
       </header>
       <main>
-        <h2><strong>npm</strong> project statusboard</h2>
-        <small id="built" class="built">Loading...</small>
-        <table style="width: 100%" class="table table-striped table-bordered"></table>
+        <table id="statusboard" class="table table-striped table-bordered"></table>
       </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -62,10 +58,6 @@
     <script
       type="text/javascript"
       src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"
     ></script>
     <script
       type="text/javascript"

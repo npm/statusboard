@@ -1,17 +1,17 @@
-module.exports = ({ issues, repo, history }) => {
-  if (!issues || !repo) {
+module.exports = ({ issues, url, history }) => {
+  if (!issues || !url) {
     return null
   }
 
   const getUrl = (q) => {
-    const url = new URL(repo.html_url + '/issues')
+    const u = new URL(url + '/issues')
     if (q) {
       const params = new URLSearchParams({
         q: `is:issue is:open ${q}`,
       })
-      url.search = params.toString()
+      u.search = params.toString()
     }
-    return url.toString()
+    return u.toString()
   }
 
   const data = {

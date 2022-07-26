@@ -1,7 +1,7 @@
 const path = require('path')
 const { parseArgs } = require('util')
 const writeJson = require('../lib/write-json.js')
-const Api = require('../lib/api.js')
+const Api = require('../lib/api/rest.js')
 const fetchData = require('../lib/project-data.js')
 const logger = require('../lib/logger.js')
 const getProjectsHistory = require('../lib/projects-history.js')
@@ -26,7 +26,7 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, filter, projects: projectsFile }) => {
+const exec = async ({ auth, filter, concurrency, projects: projectsFile }) => {
   logger()
 
   // Make it easier to test by only fetching a subset of the repos
@@ -35,6 +35,7 @@ const exec = async ({ auth, filter, projects: projectsFile }) => {
 
   const api = Api({ auth })
   const { year, month, day, iso } = getDate(new Date())
+  const dayId = `${year}-${month}-${day}`
 
   const dataDir = path.dirname(projectsFile)
   const dailyDir = path.join(dataDir, 'daily')
@@ -43,10 +44,10 @@ const exec = async ({ auth, filter, projects: projectsFile }) => {
   const projectsHistory = await getProjectsHistory({
     projects,
     dir: dailyDir,
-    filter: (f) => !f.endsWith('.min.json'),
+    filter: (f) => !f.endsWith('.min.json') && !f.startsWith(dayId),
   })
 
-  for (const projectsChunk of chunk(projects, 1)) {
+  for (const projectsChunk of chunk(projects, concurrency)) {
     const resultsChunk = projectsChunk.map((project) => fetchData({
       api,
       project,
@@ -56,8 +57,8 @@ const exec = async ({ auth, filter, projects: projectsFile }) => {
   }
 
   const files = [
-    path.join(dailyDir, `${year}-${month}-${day}.min.json`),
-    { path: path.join(dailyDir, `${year}-${month}-${day}.json`), indent: 2 },
+    path.join(dailyDir, `${dayId}.min.json`),
+    { path: path.join(dailyDir, `${dayId}.json`), indent: 2 },
     path.join(dataDir, 'latest.min.json'),
     { path: path.join(dataDir, 'latest.json'), indent: 2 },
   ].filter(Boolean)
@@ -81,6 +82,7 @@ const { values } = parseArgs({
 exec({
   auth: process.env.AUTH_TOKEN,
   filter: values.filter,
+  concurrency: 1,
   projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
 })
   .then(console.log)
