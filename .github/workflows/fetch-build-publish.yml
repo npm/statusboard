@@ -31,7 +31,7 @@ jobs:
       - name: Commit data
         run: |
           git add .
-          git commit -m "chore: update data"
+          git commit -m "chore: update data" || true
           git push origin main
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5

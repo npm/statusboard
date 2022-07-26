@@ -28,5 +28,5 @@ jobs:
       - name: Commit changes
         run: |
           git add .
-          git commit -m "chore: update repos"
+          git commit -m "chore: update repos" || true
           git push origin main
