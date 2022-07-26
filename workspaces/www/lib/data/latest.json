@@ -5318,13 +5318,13 @@
       "defaultBranch": "main",
       "url": "https://github.com/npm/statusboard",
       "lastPush": {
-        "date": "2022-07-26T06:58:05Z",
-        "url": "https://github.com/npm/statusboard/commit/306f93a129a0fa9279d3c380c0f00cc37ea17e47"
+        "date": "2022-07-26T07:43:40Z",
+        "url": "https://github.com/npm/statusboard/commit/a0f0d71f2a88f52229a0353b1d6b5ee818c046f5"
       },
       "archived": false,
       "status": {
-        "url": "https://github.com/npm/statusboard/runs/7514931751?check_suite_focus=true",
-        "conclusion": "failure"
+        "url": "https://github.com/npm/statusboard/actions",
+        "conclusion": "success"
       },
       "stars": {
         "count": 89,
@@ -6139,5 +6139,5 @@
       }
     }
   ],
-  "created_at": "2022-07-26T07:05:54.883Z"
+  "created_at": "2022-07-26T07:44:15.922Z"
 }
