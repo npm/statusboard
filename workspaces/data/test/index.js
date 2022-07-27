@@ -1,3 +1,9 @@
 const t = require('tap')
+const wwwPaths = require('www')
 
-t.ok(true)
+const latest = require(wwwPaths.latest)
+const maintained = require(wwwPaths.maintained)
+
+t.test('no missing data', async () => {
+  t.equal(latest.data.length, maintained.length)
+})

@@ -1,3 +1,9 @@
+@import 'normalize.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'datatables.net-bs4/css/dataTables.bootstrap4.css';
+@import 'datatables.net-buttons-bs4/css/buttons.bootstrap4.css';
+
 *,
 *:before,
 *:after {
@@ -126,9 +132,13 @@ header a span {
   font-weight: bold;
 }
 
+div.dt-button-collection {
+  width: auto;
+}
+
 div.dt-button-collection .dt-button {
   color: #333;
-  padding: 6px 12px;
+  min-width: 0px !important;
 }
 
 div.dt-button-collection .dt-button i {
@@ -139,9 +149,14 @@ div.dt-button-collection .dt-button.active i {
   color: inherit;
 }
 
-.dropdown-item.active,
-.dropdown-item:active {
+.dropdown-item:focus,
+.dropdown-item.active {
   background-color: inherit;
+}
+
+.dropdown-item.active:hover,
+.dropdown-item:hover {
+  background-color: #e9ecef;
 }
 
 .dataTables_wrapper .controls {

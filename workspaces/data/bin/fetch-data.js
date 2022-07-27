@@ -6,13 +6,7 @@ const fetchData = require('../lib/project-data.js')
 const logger = require('../lib/logger.js')
 const getProjectsHistory = require('../lib/projects-history.js')
 const pAll = require('../lib/p-all.js')
-
-const getDate = (d) => ({
-  month: (d.getUTCMonth() + 1).toString().padStart(2, '0'),
-  year: d.getUTCFullYear().toString(),
-  day: d.getUTCDate().toString().padStart(2, '0'),
-  iso: d.toISOString(),
-})
+const wwwPaths = require('www')
 
 const getFilter = (rawFilter) => {
   if (!isNaN(rawFilter) && !isNaN(parseFloat(rawFilter))) {
@@ -26,28 +20,21 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, filter, projects: projectsFile }) => {
-  if (!auth) {
-    throw new Error(`AUTH_TOKEN is required`)
-  }
-
+const exec = async ({ auth, filter }) => {
   logger()
 
+  const rawProjects = require(wwwPaths.maintained)
   // Make it easier to test by only fetching a subset of the projects
-  const rawProjects = require(projectsFile)
   const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
 
   const api = Api({ auth })
-  const { year, month, day, iso } = getDate(new Date())
-  const dayId = `${year}-${month}-${day}`
-
-  const dataDir = path.dirname(projectsFile)
-  const dailyDir = path.join(dataDir, 'daily')
+  const now = new Date()
+  const dailyFile = wwwPaths.daily(now)
 
   const projectsHistory = await getProjectsHistory({
     projects,
-    dir: dailyDir,
-    filter: (f) => !f.endsWith('.min.json') && !f.startsWith(dayId),
+    dir: wwwPaths.dailyDir,
+    filter: (f) => f !== path.basename(dailyFile),
   })
 
   const projectsData = await pAll(projects.map((project) => () => {
@@ -58,14 +45,14 @@ const exec = async ({ auth, filter, projects: projectsFile }) => {
     })
   }))
 
-  const files = [
-    path.join(dailyDir, `${dayId}.min.json`),
-    { path: path.join(dailyDir, `${dayId}.json`), indent: 2 },
-    path.join(dataDir, 'latest.min.json'),
-    { path: path.join(dataDir, 'latest.json'), indent: 2 },
-  ].filter(Boolean)
+  const results = await writeJson([
+    { path: dailyFile, indent: 2 },
+    { path: wwwPaths.latest, indent: 2 },
+  ], {
+    data: projectsData,
+    created_at: now.toISOString(),
+  })
 
-  const results = await writeJson(files, { data: projectsData, created_at: iso })
   return results.map((f) => f.message).join('\n')
 }
 
@@ -75,16 +62,12 @@ const { values } = parseArgs({
     filter: {
       type: 'string',
     },
-    projects: {
-      type: 'string',
-    },
   },
 })
 
 exec({
   auth: process.env.AUTH_TOKEN,
   filter: values.filter,
-  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
 })
   .then(console.log)
   .catch((err) => {
