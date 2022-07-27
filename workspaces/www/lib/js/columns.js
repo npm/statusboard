@@ -1,0 +1,383 @@
+import * as $$ from './selectors.js'
+import * as EL from './html.js'
+import * as util from './util.js'
+import * as trends from './trends.js'
+
+const issuesColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
+  [key + $$.keys.count]: {
+    title,
+    defaultContent: 0,
+    render: (data, row) => {
+      if ($$.isWorkspace(row) && data == null) {
+        return {
+          sort: -1,
+          display: EL.noData({ type: 'info' }),
+        }
+      }
+      const type = data >= danger ? 'danger' : data >= warning ? 'warning' : 'success'
+      const rowIssues = key.split('.').reduce((acc, k) => acc[k], row)
+      return {
+        sort: data,
+        display: EL.cell({ text: util.num.format(data), type, href: rowIssues.href }),
+      }
+    },
+  },
+  [key + $$.keys.trend]: {
+    title,
+    visible: false,
+    type: 'num',
+    defaultContent: 0,
+    render: (data, row) => {
+      if ($$.isWorkspace(row) && data == null) {
+        return {
+          sort: -1,
+          display: EL.noData({ type: 'info' }),
+        }
+      }
+      if ((data && data.length) <= 1 || data.every(d => d === 0)) {
+        // sparkline can't do all 0s and needs more than one data point
+        return {
+          sort: 0,
+          display: EL.noData({ text: 'No Data' }),
+        }
+      }
+      return {
+        sort: util.avg(data),
+        display: trends.cell.html,
+      }
+    },
+  },
+})
+
+const getColumns = (rows) => {
+  const templateOSS = $$.templateOSS(rows)
+  return {
+    name: {
+      title: 'Project',
+      className: 'text-left',
+      orderSequence: ['asc', 'desc'],
+      render: (data, row) => {
+        const names = $$.names(row)
+        const icons = [
+          row.pkgUrl && EL.link({ class: 'icon icon-npm', href: row.pkgUrl, text: EL.npmIcon }),
+          EL.link({ class: 'icon icon-github', href: row.url, text: EL.githubIcon }),
+        ].filter(Boolean).join('')
+        return {
+          sort: names.sort,
+          filter: names.filter,
+          display: `<div class="project-cell">
+          ${EL.link({ class: 'name', href: row.url, text: names.display })}
+          <span class="icons">${icons}</span>
+        </div>`,
+        }
+      },
+    },
+    'status.conclusion': {
+      title: 'Status',
+      render: (data, row) => {
+        const opts = {
+          success: {
+            text: EL.icon('check-circle'),
+            type: 'success',
+            sort: 0,
+          },
+          failure: {
+            text: EL.icon('x-circle'),
+            type: 'danger',
+            sort: 2,
+          },
+          neutral: {
+            text: EL.icon('pause-circle'),
+            type: 'info',
+            sort: 1,
+          },
+        }[data] || {
+          text: 'None',
+          type: 'warning',
+          sort: 3,
+        }
+        return {
+          sort: opts.sort,
+          display: EL.cell({ ...opts, href: row.status.url }),
+        }
+      },
+    },
+    ...issuesColumns({ data: 'prs', title: 'PRs' }),
+    ...issuesColumns({ data: 'issues', title: 'Issues' }),
+    ...issuesColumns({ data: 'issues.noLabel', title: 'Unlabeled' }),
+    ...issuesColumns({ data: 'issues.priority', title: 'Priority' }),
+    ...issuesColumns({ data: 'issues.triage', title: 'Triage' }),
+    version: {
+      title: 'Version',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData({ type: 'info' }),
+          }
+        }
+        const type = !data ? 'danger' : util.semver.parse(data)[0] < 1 ? 'warning' : 'success'
+        const text = data || EL.notPublished
+        return {
+          sort: data ? util.semver.score(data) : 0,
+          filter: text,
+          display: EL.cell({
+            text,
+            type,
+            href: data && `${row.pkgUrl}/v/${data}`,
+          }),
+        }
+      },
+    },
+    'pendingRelease.version': {
+      title: 'Release',
+      type: 'num',
+      defaultContent: 0,
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData({ type: 'info' }),
+          }
+        }
+        const opts = data ? {
+          text: data,
+          href: row.pendingRelease.url,
+          type: 'warning',
+        } : {
+          text: 'None',
+          type: 'success',
+        }
+        return {
+          sort: data ? util.semver.score(data) : 0,
+          filter: opts.text,
+          display: EL.cell(opts),
+        }
+      },
+    },
+    templateVersion: {
+      title: 'Template',
+      type: 'num',
+      render: (data) => {
+        const type = !data ? 'danger' : data !== templateOSS.version ? 'warning' : 'success'
+        const text = data || 'None'
+        return {
+          sort: data ? util.semver.score(data) : 0,
+          filter: text,
+          display: EL.cell({ text, type }),
+        }
+      },
+    },
+    coverage: {
+      title: 'Coverage',
+      type: 'num',
+      render: (data) => {
+        const type = !data ? 'danger' : data === 100 ? 'success' : 'warning'
+        const text = data == null ? 'None' : data
+        const sort = data == null ? -1 : data
+        return {
+          sort,
+          filter: text,
+          display: EL.cell({ text, type }),
+        }
+      },
+    },
+    node: {
+      title: 'Node',
+      type: 'num',
+      render: (data) => {
+        const text = data || 'None'
+
+        const type = !data ? 'danger'
+          : util.semver.subset(data, templateOSS.node) ? 'success'
+          : util.semver.subset(data, '>=10') ? 'warning'
+          : 'danger'
+
+        return {
+          sort: util.semver.rangeScore(data),
+          filter: text,
+          display: EL.cell({ text, type }),
+        }
+      },
+    },
+    defaultBranch: {
+      title: 'Branch',
+      render: (data, row) => {
+        const branches = {
+          master: 'danger',
+          latest: 'warning',
+          main: 'success',
+        }
+        const type = branches[data] || 'warning'
+        return {
+          sort: Object.keys(branches).indexOf(data),
+          filter: data,
+          display: EL.cell({ text: data, type, href: `${row.url}/settings/branches` }),
+        }
+      },
+    },
+    license: {
+      title: 'License',
+      render: (data) => {
+        return {
+          display: EL.cell({ text: data || 'None', type: data ? 'success' : 'danger' }),
+        }
+      },
+    },
+    archived: {
+    // archived and deprecated are excluded so if something is here
+    // and it is archived then it needs to be deprecated
+      title: 'Deprecate',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData({ type: 'info' }),
+          }
+        }
+        const opts = data ? { type: 'danger', text: 'TODO' } : { type: 'success', text: 'No' }
+        return {
+          sort: data ? 0 : 1,
+          filter: opts.text,
+          display: EL.cell(opts),
+        }
+      },
+    },
+    lastPublished: {
+      title: 'Published',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData(),
+          }
+        }
+        const text = data ? util.date.format(data) : EL.notPublished
+        return {
+          sort: data ? Date.parse(data) : 0,
+          filter: text,
+          display: EL.cell({ text }),
+        }
+      },
+    },
+    'lastPush.date': {
+      title: 'Commit',
+      type: 'num',
+      render: (data, row) => {
+        const text = util.date.format(data)
+        return {
+          sort: Date.parse(data),
+          filter: text,
+          display: EL.cell({ text, href: row.lastPush.url }),
+        }
+      },
+    },
+    ['stars' + $$.keys.count]: {
+      title: 'Stars',
+      type: 'num',
+      defaultContent: 0,
+      render: (data, row) => {
+        if ($$.isWorkspace(row)) {
+          return {
+            sort: -1,
+            display: EL.noData(),
+          }
+        }
+        const text = util.num.format(data)
+        return {
+          sort: data,
+          filter: text,
+          display: EL.cell({ text, href: row.stars.url }),
+        }
+      },
+    },
+    downloads: {
+      title: 'Downloads(/mo)',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData(),
+          }
+        }
+        if (!$$.isPublished(row)) {
+          return {
+            sort: 0,
+            filter: EL.notPublished,
+            display: EL.cell({ text: EL.notPublished }),
+          }
+        }
+        return {
+          sort: data,
+          filter: data,
+          display: util.num.format(data),
+        }
+      },
+    },
+    size: {
+      title: 'Size(KB)',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData(),
+          }
+        }
+        if (!$$.isPublished(row) || data == null) {
+        // some old packages have no size
+          return {
+            sort: 0,
+            filter: EL.notPublished,
+            display: EL.cell({ text: EL.notPublished }),
+          }
+        }
+        return {
+          sort: data,
+          filter: data,
+          display: util.num.format(data),
+        }
+      },
+    },
+  }
+}
+
+export default (rows) => Object.entries(getColumns(rows))
+// Make the datatables api a little nicer for things that we want to do
+// to all the columns
+  .map(([key, {
+    render,
+    type: colType,
+    orderSequence = ['desc', 'asc'],
+    ...column
+  }]) => ({
+  // the data key is now the name of the column
+    data: key,
+    name: key,
+    type: colType,
+    orderSequence,
+    // use our special render function to avoid having to check
+    // the type everywhere
+    render: (data, type, ...args) => {
+      const res = render(data, ...args)
+      if (util.hasOwn(res, 'filter') && type === 'filter') {
+        return res.filter
+      }
+      if (util.hasOwn(res, 'sort') && (type === 'sort' || type === 'type')) {
+      // sort and type should always be the same. sort is the value
+      // to sort by and type is the type that gets applied to the sorted value
+      // if type is wrong then datatables gets very confused even if all
+      // our sorted values are numbers
+        return res.sort
+      }
+      if (util.hasOwn(res, 'display') && type === 'display') {
+        return res.display
+      }
+      return data
+    },
+    ...column,
+  }))

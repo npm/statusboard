@@ -36,7 +36,8 @@
     "lodash": "^4.17.21",
     "pacote": "^13.6.1",
     "proc-log": "^2.0.1",
-    "semver": "^7.3.7"
+    "semver": "^7.3.7",
+    "www": "^1.0.0"
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",

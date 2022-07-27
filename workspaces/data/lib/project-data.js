@@ -20,26 +20,18 @@ const fetchAllRepoData = async ({ api, project: p }) => {
       repo: () => api.repo.get(p.owner, p.name),
       issuesAndPrs: () => api.issues.getAllOpen(p.owner, p.name),
     }),
+    repoPkg: () => api.repo.pkg(p.owner, p.name, p.path),
     ...(p.pkg ? {
-      pkg: () => packageApi.manifest(p.pkg, { fullMetadata: true }),
+      manifest: () => packageApi.manifest(p.pkg, { fullMetadata: true }),
       packument: () => packageApi.packument(p.pkg, { fullMetadata: true }),
       downloads: () => packageApi.downloads(p.pkg).then((d) => d.downloads),
-    } : {
-      pkg: () => api.repo.pkg(p.owner, p.name, p.path),
-    }),
+    } : {}),
   })
 
   if (issuesAndPrs) {
     const [prs, issues] = partition(issuesAndPrs, (item) => Object.hasOwn(item, 'pull_request'))
     result.prs = prs
     result.issues = issues
-  }
-
-  if (p.pkg) {
-    // a pkg can come from a github repo's package.json or the registry
-    // if it did come from the registry assign it to the manifest so
-    // we know the difference when getting its properties
-    result.manifest = result.pkg
   }
 
   result.status = await api.repo.status(p.owner, p.name, result.commit.sha)
@@ -53,14 +45,14 @@ module.exports = async ({ api, project, history }) => {
     repo,
     issues,
     prs,
-    pkg,
+    repoPkg,
     manifest,
     packument,
     downloads,
     status,
   } = await fetchAllRepoData({ api, project })
 
-  const license = [pkg?.license, repo.license?.spdx_id]
+  const license = [repoPkg?.license, repo.license?.spdx_id]
     .filter((l) => l && l !== 'NOASSERTION')
 
   const repoUrl = new URL(`/${project.owner}/${project.name}`, 'https://github.com')
@@ -100,14 +92,15 @@ module.exports = async ({ api, project, history }) => {
     status: fullStatus,
     stars,
     // package.json
-    // these properties can come from the registry or the package.json
-    // on github if it is not published
-    pkgPrivate: pkg?.private ?? false,
-    pkgName: pkg?.name ?? null,
-    coverage: getCoverage(pkg) ?? null,
-    templateVersion: pkg?.templateOSS?.version ?? null,
+    // these properties come from the repo pkg json since that
+    // will usually be more up to date for things like templateVersion
+    // that doesn't always trigger a release
+    pkgPrivate: repoPkg?.private ?? false,
+    pkgName: repoPkg?.name ?? null,
+    coverage: getCoverage(repoPkg) ?? null,
+    templateVersion: repoPkg?.templateOSS?.version ?? null,
     license: license[0] ?? null,
-    node: pkg?.engines?.node ?? null,
+    node: repoPkg?.engines?.node ?? null,
     // registry
     // we get both the registry info and the package.json from the repo
     // but we use version as a signal of the published version so only

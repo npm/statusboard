@@ -1,9 +1,9 @@
-const path = require('path')
 const { parseArgs } = require('util')
 const log = require('proc-log')
 const Api = require('../lib/api/graphql.js')
 const logger = require('../lib/logger.js')
 const writeJson = require('../lib/write-json.js')
+const wwwPaths = require('www')
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
@@ -13,11 +13,7 @@ const sortKey = (p) => {
 const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
-const exec = async ({ auth, query, projects: projectsFile }) => {
-  if (!auth) {
-    throw new Error(`AUTH_TOKEN is required`)
-  }
-
+const exec = async ({ auth, query }) => {
   logger()
 
   const api = Api({ auth })
@@ -78,16 +74,13 @@ const exec = async ({ auth, query, projects: projectsFile }) => {
   maintained.sort((a, b) => sortKey(a).localeCompare(sortKey(b)))
 
   log.info('fetch:maintained', `Found ${maintained.length} maintained projects`)
-  const results = await writeJson([{ path: projectsFile, indent: 2 }], maintained)
+  const results = await writeJson([{ path: wwwPaths.maintained, indent: 2 }], maintained)
   return results.map((f) => f.message).join('\n')
 }
 
 const { values } = parseArgs({
   args: process.argv.slice(2),
   options: {
-    projects: {
-      type: 'string',
-    },
     query: {
       type: 'string',
     },
@@ -96,8 +89,7 @@ const { values } = parseArgs({
 
 exec({
   auth: process.env.AUTH_TOKEN,
-  query: values.query ?? 'org:npm topic:npm-cli',
-  projects: values.projects ?? path.resolve(__dirname, '../../www/lib/data/maintained.json'),
+  query: values.query ?? 'org:npm topic:npm-cli fork:true',
 })
   .then(console.log)
   .catch((err) => {
