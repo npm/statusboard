@@ -2,7 +2,7 @@
 
 [**npm.github.io/statusboard**](https://npm.github.io/statusboard/)
 
-A single view to help monitor the status/health of the [`@npm/cli`](https://github.com/orgs/npm/teams/cli)teams's Open Source Projects.
+A single view to help monitor the status/health of the [`@npm/cli`](https://github.com/orgs/npm/teams/cli) teams's Open Source Projects.
 
 ### Data
 
