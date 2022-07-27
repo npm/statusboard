@@ -29,10 +29,6 @@ body:before {
   background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
 }
 
-main {
-  padding: 1rem 0;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: "Poppins", sans-serif;
 }
@@ -148,16 +144,22 @@ div.dt-button-collection .dt-button.active i {
   background-color: inherit;
 }
 
-.controls {
+.dataTables_wrapper .controls {
   display: flex;
-  justify-content: space-between;
+  padding: 8px 0;
 }
 
-.dataTables_filter label {
+.dataTables_wrapper .controls .dataTables_info {
+  padding: 0;
+  align-self: center;
+  margin-left: 0.5em;
+}
+
+.dataTables_wrapper .controls .dataTables_filter label {
   margin: 0;
 }
 
-.dataTables_filter input {
+.dataTables_wrapper .controls .dataTables_filter input {
   height: 30px;
   width: 200px;
 }
@@ -170,17 +172,25 @@ div.dt-button-collection .dt-button.active i {
  *
  */
 
+.container-fluid {
+  padding: 0 15px 15px 15px;
+}
+
 table {
   font-size: inherit;
 }
 
 table tr th,
 table tr td {
-  text-align: center;
+  text-align: center !important;
 }
 
 table tr td {
   vertical-align: middle !important;
+}
+
+table.dataTable {
+  margin: 0 !important;
 }
 
 .table {
@@ -242,10 +252,6 @@ table.table-bordered.dataTable th {
 
 .trendline-container {
   position: relative;
-  /* height: 100%;
-  width: 100%;
-  max-width: 100px;
-  margin: 0 auto; */
   display: flex;
 }
 
