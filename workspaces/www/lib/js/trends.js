@@ -14,13 +14,15 @@ export const cell = {
   `,
   draw: (cellNode, data, drawDays) => {
     const container = cellNode.querySelector('.trendline-container')
+
     if (!container) {
       return
     }
 
     const trendlineDates = util.date.range(drawDays)
     const daysData = data.slice(drawDays * -1)
-    const fullData = [...new Array(daysData.length - daysData.length).fill(0), ...daysData]
+    const missingData = new Array(drawDays - daysData.length).fill(0)
+    const fullData = [...missingData, ...daysData]
 
     const scrollBody = document.querySelector('.dataTables_scrollBody')
     const trendlineData = container.querySelector('.trendline-data')
@@ -35,7 +37,7 @@ export const cell = {
           scrollBody.classList.add('with-tooltip')
           trendlineData.classList.add('active')
           trendlineDate.innerHTML = trendlineDates[index]
-          trendlineValue.innerHTML = value
+          trendlineValue.innerHTML = index < missingData.length ? 'No Data' : value
         },
         onmouseout: () => {
           scrollBody.classList.remove('with-tooltip')
