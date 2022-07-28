@@ -3,7 +3,9 @@ const { re, tokens } = require('semver')
 const getVersion = (str = '') => str.match(re[tokens.FULLPLAIN])?.[0]
 
 const {
-  delay = 1000,
+  // add a delay between requests in CI since the built in GH tokens
+  // on actions seem to be more susceptible to secondary rate limits
+  delay = process.env.CI ? 1000 : 0,
   repoQuery = 'org:npm topic:npm-cli fork:true',
   issueAndPrQuery = 'is:open',
   repoFilter = null,
@@ -29,8 +31,8 @@ module.exports = {
   auth: process.env.AUTH_TOKEN,
   delay: +delay,
   repoQuery,
-  repoFilter,
   issueAndPrQuery,
+  repoFilter,
   issueFilter: {
     unlabeled: {
       filter: (issue) => issue.labels.length === 0,
