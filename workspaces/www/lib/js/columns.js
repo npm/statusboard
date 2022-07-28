@@ -18,7 +18,7 @@ const issuesColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
       const rowIssues = key.split('.').reduce((acc, k) => acc[k], row)
       return {
         sort: data,
-        display: EL.cell({ text: util.num.format(data), type, href: rowIssues.href }),
+        display: EL.cell({ text: util.num.format(data), type, href: rowIssues.url }),
       }
     },
   },
@@ -130,7 +130,7 @@ const getColumns = (rows) => {
         }
       },
     },
-    'pendingRelease.version': {
+    'prs.release.version': {
       title: 'Release',
       type: 'num',
       defaultContent: 0,
@@ -143,7 +143,7 @@ const getColumns = (rows) => {
         }
         const opts = data ? {
           text: data,
-          href: row.pendingRelease.url,
+          href: row.prs.release.url,
           type: 'warning',
         } : {
           text: 'None',

@@ -1,13 +1,9 @@
 const { pick, partition } = require('lodash')
-const semver = require('semver')
 const getCoverage = require('./coverage.js')
 const pAll = require('./p-all.js')
-const getIssues = require('./issues.js')
-const getPrs = require('./prs.js')
+const parseIssuesAndPrs = require('./issuesAndPrs.js')
 
-const semverRe = semver.re[semver.tokens.FULLPLAIN]
-
-const fetchAllRepoData = async ({ api, delay, project: p }) => {
+const fetchAllRepoData = async ({ api, delay, project: p, issueAndPrQuery }) => {
   const { issuesAndPrs, ...result } = await pAll({
     commit: () => api.getCommit(p.owner, p.name, p.path),
     ...(p.path ? {
@@ -17,7 +13,7 @@ const fetchAllRepoData = async ({ api, delay, project: p }) => {
         .then(r => pick(r, 'default_branch', 'html_url', 'archived')),
     } : {
       repo: () => api.getRepo(p.owner, p.name),
-      issuesAndPrs: () => api.getAllOpen(p.owner, p.name),
+      issuesAndPrs: () => api.getAllIssuesAndPullRequests(p.owner, p.name, issueAndPrQuery),
     }),
     repoPkg: () => api.getPkg(p.owner, p.name, p.path),
     ...(p.pkg ? {
@@ -38,7 +34,15 @@ const fetchAllRepoData = async ({ api, delay, project: p }) => {
   return result
 }
 
-module.exports = async ({ api, project, history, delay }) => {
+module.exports = async ({
+  api,
+  project,
+  history,
+  delay,
+  issueFilter,
+  prFilter,
+  issueAndPrQuery,
+}) => {
   const {
     commit,
     repo,
@@ -49,7 +53,7 @@ module.exports = async ({ api, project, history, delay }) => {
     packument,
     downloads,
     status,
-  } = await fetchAllRepoData({ api, delay, project })
+  } = await fetchAllRepoData({ api, delay, project, issueAndPrQuery })
 
   const license = [repoPkg?.license, repo.license?.spdx_id]
     .filter((l) => l && l !== 'NOASSERTION')
@@ -58,12 +62,6 @@ module.exports = async ({ api, project, history, delay }) => {
   const fullUrl = new URL(repoUrl)
   if (project.path) {
     fullUrl.pathname += `/tree/${repo.default_branch}/${project.path}`
-  }
-
-  const releasePr = prs?.find((pr) => pr.labels.find((l) => l.name === 'autorelease: pending'))
-  const pendingRelease = releasePr && {
-    url: releasePr.url,
-    version: releasePr.title.match(semverRe)?.[0] || releasePr.title,
   }
 
   const stars = typeof repo.stargazers_count === 'number' ? {
@@ -111,16 +109,17 @@ module.exports = async ({ api, project, history, delay }) => {
     deprecated: manifest?.deprecated ?? false,
     downloads: downloads ?? null,
     // issues and prs
-    pendingRelease: pendingRelease ?? null,
-    prs: getPrs({
-      prs,
-      url: repo.html_url,
+    prs: parseIssuesAndPrs({
+      items: prs,
+      url: new URL(repo.html_url + `/pulls?q=${issueAndPrQuery}`),
       history: history?.map((p) => p.prs),
+      filters: prFilter,
     }) ?? null,
-    issues: getIssues({
-      issues,
-      url: repo.html_url,
+    issues: parseIssuesAndPrs({
+      items: issues,
+      url: new URL(repo.html_url + `/issues?q=${issueAndPrQuery}`),
       history: history?.map((p) => p.issues),
+      filters: issueFilter,
     }) ?? null,
   }
 }

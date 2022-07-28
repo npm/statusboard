@@ -32,7 +32,6 @@
       "pkgUrl": "https://www.npmjs.com/package/abbrev",
       "deprecated": false,
       "downloads": 65093477,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/abbrev-js/pulls",
@@ -40,7 +39,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -111,10 +111,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": {
-        "url": "https://api.github.com/repos/npm/agent/issues/1",
-        "version": "1.0.0"
-      },
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/agent/pulls",
@@ -122,7 +118,11 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": {
+          "url": "https://github.com/npm/agent/pull/1",
+          "version": "1.0.0"
+        }
       },
       "issues": {
         "count": 0,
@@ -190,7 +190,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/arborist",
       "deprecated": false,
       "downloads": 4442053,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -226,7 +225,6 @@
       "pkgUrl": "https://www.npmjs.com/package/are-we-there-yet",
       "deprecated": false,
       "downloads": 86471201,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/are-we-there-yet/pulls",
@@ -234,7 +232,8 @@
           3,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -305,7 +304,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/benchmarks/pulls",
@@ -313,7 +311,8 @@
           1,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -384,7 +383,6 @@
       "pkgUrl": "https://www.npmjs.com/package/bin-links",
       "deprecated": false,
       "downloads": 5245700,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/bin-links/pulls",
@@ -392,7 +390,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -463,7 +462,6 @@
       "pkgUrl": "https://www.npmjs.com/package/cacache",
       "deprecated": false,
       "downloads": 117694790,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/cacache/pulls",
@@ -471,7 +469,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 14,
@@ -542,7 +541,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/ci-detect",
       "deprecated": false,
       "downloads": 6359582,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/ci-detect/pulls",
@@ -550,7 +548,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -621,7 +620,6 @@
       "pkgUrl": "https://www.npmjs.com/package/cmd-shim",
       "deprecated": false,
       "downloads": 9430552,
-      "pendingRelease": null,
       "prs": {
         "count": 5,
         "url": "https://github.com/npm/cmd-shim/pulls",
@@ -629,7 +627,8 @@
           5,
           5,
           5
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 8,
@@ -700,10 +699,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/config",
       "deprecated": false,
       "downloads": 1678680,
-      "pendingRelease": {
-        "url": "https://api.github.com/repos/npm/config/issues/73",
-        "version": "4.2.1"
-      },
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/config/pulls",
@@ -711,7 +706,11 @@
           3,
           3,
           3
-        ]
+        ],
+        "release": {
+          "url": "https://github.com/npm/config/pull/73",
+          "version": "4.2.1"
+        }
       },
       "issues": {
         "count": 5,
@@ -782,7 +781,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/create-oss",
       "deprecated": false,
       "downloads": 7,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/create-oss/pulls",
@@ -790,7 +788,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -861,7 +860,6 @@
       "pkgUrl": "https://www.npmjs.com/package/dezalgo",
       "deprecated": false,
       "downloads": 22824016,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/dezalgo/pulls",
@@ -869,7 +867,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -940,7 +939,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/disparity-colors",
       "deprecated": false,
       "downloads": 1546304,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/disparity-colors/pulls",
@@ -948,7 +946,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -1019,7 +1018,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 5,
         "url": "https://github.com/npm/doctornpm/pulls",
@@ -1027,7 +1025,8 @@
           5,
           5,
           5
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -1098,7 +1097,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/documentation/pulls",
@@ -1106,7 +1104,8 @@
           2,
           2,
           3
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 10,
@@ -1177,7 +1176,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/eslint-config",
       "deprecated": false,
       "downloads": 40532,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/eslint-config/pulls",
@@ -1185,7 +1183,8 @@
           0,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -1256,10 +1255,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": {
-        "url": "https://api.github.com/repos/npm/exec/issues/19",
-        "version": "1.0.0"
-      },
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/exec/pulls",
@@ -1267,7 +1262,11 @@
           3,
           3,
           3
-        ]
+        ],
+        "release": {
+          "url": "https://github.com/npm/exec/pull/19",
+          "version": "1.0.0"
+        }
       },
       "issues": {
         "count": 5,
@@ -1338,7 +1337,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/fs",
       "deprecated": false,
       "downloads": 41504804,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/fs/pulls",
@@ -1346,7 +1344,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -1417,7 +1416,6 @@
       "pkgUrl": "https://www.npmjs.com/package/fs-minipass",
       "deprecated": false,
       "downloads": 79302510,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/fs-minipass/pulls",
@@ -1425,7 +1423,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -1496,7 +1495,6 @@
       "pkgUrl": "https://www.npmjs.com/package/gauge",
       "deprecated": false,
       "downloads": 89832078,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/gauge/pulls",
@@ -1504,7 +1502,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 6,
@@ -1575,7 +1574,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/git",
       "deprecated": false,
       "downloads": 14939318,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/git/pulls",
@@ -1583,7 +1581,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 2,
@@ -1654,7 +1653,6 @@
       "pkgUrl": "https://www.npmjs.com/package/hosted-git-info",
       "deprecated": false,
       "downloads": 142929155,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/hosted-git-info/pulls",
@@ -1662,7 +1660,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 7,
@@ -1733,7 +1732,6 @@
       "pkgUrl": "https://www.npmjs.com/package/ignore-walk",
       "deprecated": false,
       "downloads": 31134134,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/ignore-walk/pulls",
@@ -1741,7 +1739,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 6,
@@ -1812,7 +1811,6 @@
       "pkgUrl": "https://www.npmjs.com/package/infer-owner",
       "deprecated": false,
       "downloads": 53645859,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/infer-owner/pulls",
@@ -1820,7 +1818,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -1891,7 +1890,6 @@
       "pkgUrl": "https://www.npmjs.com/package/inflight",
       "deprecated": false,
       "downloads": 146551028,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/inflight/pulls",
@@ -1899,7 +1897,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 2,
@@ -1970,7 +1969,6 @@
       "pkgUrl": "https://www.npmjs.com/package/ini",
       "deprecated": false,
       "downloads": 141182072,
-      "pendingRelease": null,
       "prs": {
         "count": 25,
         "url": "https://github.com/npm/ini/pulls",
@@ -1978,7 +1976,8 @@
           25,
           25,
           25
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 32,
@@ -2049,7 +2048,6 @@
       "pkgUrl": "https://www.npmjs.com/package/init-package-json",
       "deprecated": false,
       "downloads": 8046305,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/init-package-json/pulls",
@@ -2057,7 +2055,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 21,
@@ -2128,7 +2127,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/installed-package-contents",
       "deprecated": false,
       "downloads": 13682026,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/installed-package-contents/pulls",
@@ -2136,7 +2134,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -2207,14 +2206,14 @@
       "pkgUrl": "https://www.npmjs.com/package/json-parse-even-better-errors",
       "deprecated": false,
       "downloads": 85412649,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/json-parse-even-better-errors/pulls",
         "history": [
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -2278,7 +2277,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmaccess",
       "deprecated": false,
       "downloads": 6115963,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2311,7 +2309,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmdiff",
       "deprecated": false,
       "downloads": 1568003,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2344,7 +2341,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmexec",
       "deprecated": false,
       "downloads": 1559501,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2377,7 +2373,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmfund",
       "deprecated": false,
       "downloads": 1587091,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2410,7 +2405,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmhook",
       "deprecated": false,
       "downloads": 2444242,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2443,7 +2437,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmorg",
       "deprecated": false,
       "downloads": 2416728,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2476,7 +2469,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmpack",
       "deprecated": false,
       "downloads": 1574699,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2509,7 +2501,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmpublish",
       "deprecated": false,
       "downloads": 6122405,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2542,7 +2533,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmsearch",
       "deprecated": false,
       "downloads": 2432794,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2575,7 +2565,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmteam",
       "deprecated": false,
       "downloads": 2417146,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2608,7 +2597,6 @@
       "pkgUrl": "https://www.npmjs.com/package/libnpmversion",
       "deprecated": false,
       "downloads": 1630808,
-      "pendingRelease": null,
       "prs": null,
       "issues": null
     },
@@ -2644,7 +2632,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/lint",
       "deprecated": false,
       "downloads": 21,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/lint/pulls",
@@ -2652,7 +2639,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -2723,7 +2711,6 @@
       "pkgUrl": "https://www.npmjs.com/package/make-fetch-happen",
       "deprecated": false,
       "downloads": 42757935,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/make-fetch-happen/pulls",
@@ -2731,7 +2718,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 8,
@@ -2802,7 +2790,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/map-workspaces",
       "deprecated": false,
       "downloads": 4289105,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/map-workspaces/pulls",
@@ -2810,7 +2797,8 @@
           1,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -2881,7 +2869,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/metavuln-calculator",
       "deprecated": false,
       "downloads": 4273728,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/metavuln-calculator/pulls",
@@ -2889,7 +2876,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -2960,14 +2948,14 @@
       "pkgUrl": "https://www.npmjs.com/package/minify-registry-metadata",
       "deprecated": false,
       "downloads": 24403,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/minify-registry-metadata/pulls",
         "history": [
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -3034,7 +3022,6 @@
       "pkgUrl": "https://www.npmjs.com/package/minipass-fetch",
       "deprecated": false,
       "downloads": 31219642,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/minipass-fetch/pulls",
@@ -3042,7 +3029,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 3,
@@ -3113,7 +3101,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/move-file",
       "deprecated": false,
       "downloads": 50084478,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/move-file/pulls",
@@ -3121,7 +3108,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3192,7 +3180,6 @@
       "pkgUrl": "https://www.npmjs.com/package/mute-stream",
       "deprecated": false,
       "downloads": 88364657,
-      "pendingRelease": null,
       "prs": {
         "count": 4,
         "url": "https://github.com/npm/mute-stream/pulls",
@@ -3200,7 +3187,8 @@
           4,
           4,
           4
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 3,
@@ -3271,7 +3259,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/name-from-folder",
       "deprecated": false,
       "downloads": 4074298,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/name-from-folder/pulls",
@@ -3279,7 +3266,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3350,7 +3338,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/nock-registry/pulls",
@@ -3358,7 +3345,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3429,14 +3417,14 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/node/pulls",
         "history": [
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3503,14 +3491,14 @@
       "pkgUrl": "https://www.npmjs.com/package/node-fetch-npm",
       "deprecated": false,
       "downloads": 5101668,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/node-fetch-npm/pulls",
         "history": [
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 2,
@@ -3577,7 +3565,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/node-gyp",
       "deprecated": false,
       "downloads": 14870561,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/node-gyp/pulls",
@@ -3585,7 +3572,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3656,7 +3644,6 @@
       "pkgUrl": "https://www.npmjs.com/package/nopt",
       "deprecated": false,
       "downloads": 96764532,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/nopt/pulls",
@@ -3664,7 +3651,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 14,
@@ -3735,7 +3723,6 @@
       "pkgUrl": "https://www.npmjs.com/package/normalize-package-data",
       "deprecated": false,
       "downloads": 124775995,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/normalize-package-data/pulls",
@@ -3743,7 +3730,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 20,
@@ -3814,7 +3802,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm",
       "deprecated": false,
       "downloads": 17377924,
-      "pendingRelease": null,
       "prs": {
         "count": 16,
         "url": "https://github.com/npm/cli/pulls",
@@ -3822,7 +3809,8 @@
           19,
           16,
           16
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 403,
@@ -3893,7 +3881,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-audit-report",
       "deprecated": false,
       "downloads": 2394032,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-audit-report/pulls",
@@ -3901,7 +3888,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -3972,7 +3960,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/npm-birthday",
       "deprecated": false,
       "downloads": 20,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-birthday/pulls",
@@ -3980,7 +3967,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4051,7 +4039,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-bundled",
       "deprecated": false,
       "downloads": 26646329,
-      "pendingRelease": null,
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/npm-bundled/pulls",
@@ -4059,7 +4046,8 @@
           3,
           3,
           3
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4130,7 +4118,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-install-checks",
       "deprecated": false,
       "downloads": 16620780,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-install-checks/pulls",
@@ -4138,7 +4125,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4209,7 +4197,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-install-script/pulls",
@@ -4217,7 +4204,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4288,7 +4276,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-normalize-package-bin",
       "deprecated": false,
       "downloads": 24717066,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/npm-normalize-package-bin/pulls",
@@ -4296,7 +4283,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -4367,7 +4355,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-package-arg",
       "deprecated": false,
       "downloads": 30167208,
-      "pendingRelease": null,
       "prs": {
         "count": 4,
         "url": "https://github.com/npm/npm-package-arg/pulls",
@@ -4375,7 +4362,8 @@
           4,
           4,
           4
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 2,
@@ -4446,7 +4434,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-packlist",
       "deprecated": false,
       "downloads": 31116807,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/npm-packlist/pulls",
@@ -4454,7 +4441,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 6,
@@ -4525,14 +4513,14 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-pick-manifest",
       "deprecated": false,
       "downloads": 22047311,
-      "pendingRelease": null,
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/npm-pick-manifest/pulls",
         "history": [
           3,
           3
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4599,7 +4587,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-profile",
       "deprecated": false,
       "downloads": 2527116,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/npm-profile/pulls",
@@ -4607,7 +4594,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -4678,7 +4666,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-registry-fetch",
       "deprecated": false,
       "downloads": 26403153,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/npm-registry-fetch/pulls",
@@ -4686,7 +4673,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 4,
@@ -4757,7 +4745,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-registry-mock",
       "deprecated": false,
       "downloads": 178317,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-registry-mock/pulls",
@@ -4765,7 +4752,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -4836,7 +4824,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npm-user-validate",
       "deprecated": false,
       "downloads": 2467875,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npm-user-validate/pulls",
@@ -4844,7 +4831,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 3,
@@ -4915,7 +4903,6 @@
       "pkgUrl": "https://www.npmjs.com/package/npmlog",
       "deprecated": false,
       "downloads": 88653242,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/npmlog/pulls",
@@ -4923,7 +4910,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -4994,7 +4982,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/package-json",
       "deprecated": false,
       "downloads": 4308159,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/package-json/pulls",
@@ -5002,7 +4989,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5073,7 +5061,6 @@
       "pkgUrl": "https://www.npmjs.com/package/pacote",
       "deprecated": false,
       "downloads": 19914197,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/pacote/pulls",
@@ -5081,7 +5068,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 11,
@@ -5152,7 +5140,6 @@
       "pkgUrl": "https://www.npmjs.com/package/parse-conflict-json",
       "deprecated": false,
       "downloads": 4189077,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/parse-conflict-json/pulls",
@@ -5160,7 +5147,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -5231,7 +5219,6 @@
       "pkgUrl": "https://www.npmjs.com/package/proc-log",
       "deprecated": false,
       "downloads": 6923326,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/proc-log/pulls",
@@ -5239,7 +5226,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5310,7 +5298,6 @@
       "pkgUrl": "https://www.npmjs.com/package/proggy",
       "deprecated": false,
       "downloads": 8,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/proggy/pulls",
@@ -5318,7 +5305,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5389,7 +5377,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/promise-spawn",
       "deprecated": false,
       "downloads": 14805735,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/promise-spawn/pulls",
@@ -5397,7 +5384,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5468,7 +5456,6 @@
       "pkgUrl": "https://www.npmjs.com/package/promzard",
       "deprecated": false,
       "downloads": 7686287,
-      "pendingRelease": null,
       "prs": {
         "count": 6,
         "url": "https://github.com/npm/promzard/pulls",
@@ -5476,7 +5463,8 @@
           6,
           6,
           6
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 6,
@@ -5547,7 +5535,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/pull",
       "deprecated": false,
       "downloads": 12,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/pull/pulls",
@@ -5555,7 +5542,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5626,7 +5614,6 @@
       "pkgUrl": "https://www.npmjs.com/package/read",
       "deprecated": false,
       "downloads": 17277168,
-      "pendingRelease": null,
       "prs": {
         "count": 4,
         "url": "https://github.com/npm/read/pulls",
@@ -5634,7 +5621,8 @@
           4,
           4,
           4
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 13,
@@ -5705,7 +5693,6 @@
       "pkgUrl": "https://www.npmjs.com/package/read-cmd-shim",
       "deprecated": false,
       "downloads": 10543619,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/read-cmd-shim/pulls",
@@ -5713,7 +5700,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -5784,7 +5772,6 @@
       "pkgUrl": "https://www.npmjs.com/package/read-package-json",
       "deprecated": false,
       "downloads": 22505346,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/read-package-json/pulls",
@@ -5792,7 +5779,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 5,
@@ -5863,7 +5851,6 @@
       "pkgUrl": "https://www.npmjs.com/package/read-package-json-fast",
       "deprecated": false,
       "downloads": 15193311,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/read-package-json-fast/pulls",
@@ -5871,7 +5858,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -5942,7 +5930,6 @@
       "pkgUrl": "https://www.npmjs.com/package/readdir-scoped-modules",
       "deprecated": false,
       "downloads": 12765365,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/readdir-scoped-modules/pulls",
@@ -5950,7 +5937,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -6021,7 +6009,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 51,
         "url": "https://github.com/npm/rfcs/pulls",
@@ -6029,7 +6016,8 @@
           51,
           51,
           51
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 84,
@@ -6100,7 +6088,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/run-script",
       "deprecated": false,
       "downloads": 16753113,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/run-script/pulls",
@@ -6108,7 +6095,8 @@
           0,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 3,
@@ -6179,7 +6167,6 @@
       "pkgUrl": "https://www.npmjs.com/package/semver",
       "deprecated": false,
       "downloads": 820377596,
-      "pendingRelease": null,
       "prs": {
         "count": 12,
         "url": "https://github.com/npm/node-semver/pulls",
@@ -6187,7 +6174,8 @@
           12,
           12,
           12
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 33,
@@ -6258,7 +6246,6 @@
       "pkgUrl": "https://www.npmjs.com/package/ssri",
       "deprecated": false,
       "downloads": 113007012,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/ssri/pulls",
@@ -6266,7 +6253,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -6337,7 +6325,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/stafftools",
       "deprecated": false,
       "downloads": 209,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/stafftools/pulls",
@@ -6345,7 +6332,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 1,
@@ -6416,7 +6404,6 @@
       "pkgUrl": null,
       "deprecated": false,
       "downloads": null,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/statusboard/pulls",
@@ -6424,7 +6411,8 @@
           0,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 117,
@@ -6495,7 +6483,6 @@
       "pkgUrl": "https://www.npmjs.com/package/stringify-package",
       "deprecated": false,
       "downloads": 3751858,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/stringify-package/pulls",
@@ -6503,7 +6490,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -6574,7 +6562,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/tap-nock",
       "deprecated": false,
       "downloads": 4,
-      "pendingRelease": null,
       "prs": {
         "count": 1,
         "url": "https://github.com/npm/tap-nock/pulls",
@@ -6582,7 +6569,8 @@
           1,
           1,
           1
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -6653,7 +6641,6 @@
       "pkgUrl": "https://www.npmjs.com/package/tar",
       "deprecated": false,
       "downloads": 91346931,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/node-tar/pulls",
@@ -6661,7 +6648,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 12,
@@ -6732,7 +6720,6 @@
       "pkgUrl": "https://www.npmjs.com/package/@npmcli/template-oss",
       "deprecated": false,
       "downloads": 40314,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/template-oss/pulls",
@@ -6740,7 +6727,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 15,
@@ -6811,7 +6799,6 @@
       "pkgUrl": "https://www.npmjs.com/package/treeverse",
       "deprecated": false,
       "downloads": 4191173,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/treeverse/pulls",
@@ -6819,7 +6806,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -6890,7 +6878,6 @@
       "pkgUrl": "https://www.npmjs.com/package/unique-filename",
       "deprecated": false,
       "downloads": 55651186,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/unique-filename/pulls",
@@ -6898,7 +6885,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 6,
@@ -6969,7 +6957,6 @@
       "pkgUrl": "https://www.npmjs.com/package/unique-slug",
       "deprecated": false,
       "downloads": 55885341,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/unique-slug/pulls",
@@ -6977,7 +6964,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -7048,7 +7036,6 @@
       "pkgUrl": "https://www.npmjs.com/package/validate-npm-package-name",
       "deprecated": false,
       "downloads": 28961465,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/validate-npm-package-name/pulls",
@@ -7056,7 +7043,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 0,
@@ -7127,7 +7115,6 @@
       "pkgUrl": "https://www.npmjs.com/package/which",
       "deprecated": false,
       "downloads": 226542527,
-      "pendingRelease": null,
       "prs": {
         "count": 3,
         "url": "https://github.com/npm/node-which/pulls",
@@ -7135,7 +7122,8 @@
           3,
           3,
           3
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 9,
@@ -7206,7 +7194,6 @@
       "pkgUrl": "https://www.npmjs.com/package/wrappy",
       "deprecated": false,
       "downloads": 155754926,
-      "pendingRelease": null,
       "prs": {
         "count": 2,
         "url": "https://github.com/npm/wrappy/pulls",
@@ -7214,7 +7201,8 @@
           2,
           2,
           2
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 2,
@@ -7285,7 +7273,6 @@
       "pkgUrl": "https://www.npmjs.com/package/write-file-atomic",
       "deprecated": false,
       "downloads": 132796054,
-      "pendingRelease": null,
       "prs": {
         "count": 0,
         "url": "https://github.com/npm/write-file-atomic/pulls",
@@ -7293,7 +7280,8 @@
           0,
           0,
           0
-        ]
+        ],
+        "release": null
       },
       "issues": {
         "count": 8,
