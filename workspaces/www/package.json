@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node ./bin/build.mjs --dev",
     "build": "node ./bin/build.mjs --prod",
+    "clean": "rm -rf lib/data/daily && rm -rf lib/data/latest.json",
     "test": "tap",
     "lint": "eslint \"**/*.js\"",
     "postlint": "template-oss-check",

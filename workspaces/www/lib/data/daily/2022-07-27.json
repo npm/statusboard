@@ -60,18 +60,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/abbrev-js/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -137,18 +137,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/agent/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -243,18 +243,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/are-we-there-yet/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -317,18 +317,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/benchmarks/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -391,18 +391,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/bin-links/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             1
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -465,18 +465,18 @@
             3
           ]
         },
-        "noLabel": {
+        "history": [
+          14,
+          14
+        ],
+        "unlabeled": {
           "count": 11,
           "url": "https://github.com/npm/cacache/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             11,
             11
           ]
-        },
-        "history": [
-          14,
-          14
-        ]
+        }
       }
     },
     {
@@ -539,18 +539,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/ci-detect/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -613,18 +613,18 @@
             3
           ]
         },
-        "noLabel": {
+        "history": [
+          8,
+          8
+        ],
+        "unlabeled": {
           "count": 5,
           "url": "https://github.com/npm/cmd-shim/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             5,
             5
           ]
-        },
-        "history": [
-          8,
-          8
-        ]
+        }
       }
     },
     {
@@ -690,18 +690,18 @@
             2
           ]
         },
-        "noLabel": {
+        "history": [
+          5,
+          5
+        ],
+        "unlabeled": {
           "count": 3,
           "url": "https://github.com/npm/config/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             3,
             3
           ]
-        },
-        "history": [
-          5,
-          5
-        ]
+        }
       }
     },
     {
@@ -764,18 +764,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/create-oss/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             1
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -838,18 +838,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/dezalgo/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -912,18 +912,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/disparity-colors/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -986,18 +986,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/doctornpm/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -1060,18 +1060,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          10,
+          10
+        ],
+        "unlabeled": {
           "count": 9,
           "url": "https://github.com/npm/documentation/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             9,
             9
           ]
-        },
-        "history": [
-          10,
-          10
-        ]
+        }
       }
     },
     {
@@ -1134,18 +1134,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/eslint-config/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -1211,18 +1211,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          5,
+          5
+        ],
+        "unlabeled": {
           "count": 5,
           "url": "https://github.com/npm/exec/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             5,
             5
           ]
-        },
-        "history": [
-          5,
-          5
-        ]
+        }
       }
     },
     {
@@ -1285,18 +1285,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/fs/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -1359,18 +1359,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/fs-minipass/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -1433,18 +1433,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          6,
+          6
+        ],
+        "unlabeled": {
           "count": 6,
           "url": "https://github.com/npm/gauge/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             6,
             6
           ]
-        },
-        "history": [
-          6,
-          6
-        ]
+        }
       }
     },
     {
@@ -1507,18 +1507,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          2
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/git/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             2
           ]
-        },
-        "history": [
-          1,
-          2
-        ]
+        }
       }
     },
     {
@@ -1581,18 +1581,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          9,
+          7
+        ],
+        "unlabeled": {
           "count": 5,
           "url": "https://github.com/npm/hosted-git-info/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             9,
             5
           ]
-        },
-        "history": [
-          9,
-          7
-        ]
+        }
       }
     },
     {
@@ -1655,18 +1655,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          6,
+          6
+        ],
+        "unlabeled": {
           "count": 6,
           "url": "https://github.com/npm/ignore-walk/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             6,
             6
           ]
-        },
-        "history": [
-          6,
-          6
-        ]
+        }
       }
     },
     {
@@ -1729,18 +1729,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/infer-owner/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -1803,18 +1803,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          2,
+          2
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/inflight/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             2,
             2
           ]
-        },
-        "history": [
-          2,
-          2
-        ]
+        }
       }
     },
     {
@@ -1877,18 +1877,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          35,
+          32
+        ],
+        "unlabeled": {
           "count": 31,
           "url": "https://github.com/npm/ini/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             34,
             31
           ]
-        },
-        "history": [
-          35,
-          32
-        ]
+        }
       }
     },
     {
@@ -1951,18 +1951,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          21,
+          21
+        ],
+        "unlabeled": {
           "count": 21,
           "url": "https://github.com/npm/init-package-json/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             21,
             21
           ]
-        },
-        "history": [
-          21,
-          21
-        ]
+        }
       }
     },
     {
@@ -2025,18 +2025,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/installed-package-contents/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -2096,16 +2096,16 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/json-parse-even-better-errors/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0
           ]
-        },
-        "history": [
-          0
-        ]
+        }
       }
     },
     {
@@ -2520,18 +2520,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/lint/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -2594,18 +2594,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          8,
+          8
+        ],
+        "unlabeled": {
           "count": 7,
           "url": "https://github.com/npm/make-fetch-happen/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             7,
             7
           ]
-        },
-        "history": [
-          8,
-          8
-        ]
+        }
       }
     },
     {
@@ -2668,18 +2668,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/map-workspaces/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -2742,18 +2742,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/metavuln-calculator/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -2813,16 +2813,16 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/minify-registry-metadata/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1
           ]
-        },
-        "history": [
-          1
-        ]
+        }
       }
     },
     {
@@ -2885,18 +2885,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          3,
+          3
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/minipass-fetch/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             2,
             2
           ]
-        },
-        "history": [
-          3,
-          3
-        ]
+        }
       }
     },
     {
@@ -2959,18 +2959,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/move-file/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3033,18 +3033,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          3,
+          3
+        ],
+        "unlabeled": {
           "count": 3,
           "url": "https://github.com/npm/mute-stream/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             3,
             3
           ]
-        },
-        "history": [
-          3,
-          3
-        ]
+        }
       }
     },
     {
@@ -3107,18 +3107,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/name-from-folder/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3181,18 +3181,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/nock-registry/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3252,16 +3252,16 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/node/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0
           ]
-        },
-        "history": [
-          0
-        ]
+        }
       }
     },
     {
@@ -3321,16 +3321,16 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          2
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/node-fetch-npm/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             2
           ]
-        },
-        "history": [
-          2
-        ]
+        }
       }
     },
     {
@@ -3393,18 +3393,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/node-gyp/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3467,18 +3467,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          14,
+          14
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/nopt/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             14,
             1
           ]
-        },
-        "history": [
-          14,
-          14
-        ]
+        }
       }
     },
     {
@@ -3541,18 +3541,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          20,
+          20
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/normalize-package-data/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             19,
             0
           ]
-        },
-        "history": [
-          20,
-          20
-        ]
+        }
       }
     },
     {
@@ -3615,18 +3615,18 @@
             120
           ]
         },
-        "noLabel": {
+        "history": [
+          410,
+          401
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/cli/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             7,
             1
           ]
-        },
-        "history": [
-          410,
-          401
-        ]
+        }
       }
     },
     {
@@ -3689,18 +3689,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-audit-report/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3763,18 +3763,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-birthday/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3837,18 +3837,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-bundled/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3911,18 +3911,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-install-checks/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -3985,18 +3985,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-install-script/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -4059,18 +4059,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-normalize-package-bin/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -4133,18 +4133,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          2
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-package-arg/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             0
           ]
-        },
-        "history": [
-          1,
-          2
-        ]
+        }
       }
     },
     {
@@ -4207,18 +4207,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          6,
+          6
+        ],
+        "unlabeled": {
           "count": 4,
           "url": "https://github.com/npm/npm-packlist/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             4,
             4
           ]
-        },
-        "history": [
-          6,
-          6
-        ]
+        }
       }
     },
     {
@@ -4278,16 +4278,16 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-pick-manifest/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0
           ]
-        },
-        "history": [
-          0
-        ]
+        }
       }
     },
     {
@@ -4350,18 +4350,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/npm-profile/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             1
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -4424,18 +4424,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          4,
+          4
+        ],
+        "unlabeled": {
           "count": 4,
           "url": "https://github.com/npm/npm-registry-fetch/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             4,
             4
           ]
-        },
-        "history": [
-          4,
-          4
-        ]
+        }
       }
     },
     {
@@ -4498,18 +4498,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npm-registry-mock/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -4572,18 +4572,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          3,
+          3
+        ],
+        "unlabeled": {
           "count": 3,
           "url": "https://github.com/npm/npm-user-validate/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             3,
             3
           ]
-        },
-        "history": [
-          3,
-          3
-        ]
+        }
       }
     },
     {
@@ -4646,18 +4646,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/npmlog/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -4720,18 +4720,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/package-json/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -4794,18 +4794,18 @@
             3
           ]
         },
-        "noLabel": {
+        "history": [
+          11,
+          11
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/pacote/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             7,
             2
           ]
-        },
-        "history": [
-          11,
-          11
-        ]
+        }
       }
     },
     {
@@ -4868,18 +4868,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/parse-conflict-json/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -4942,18 +4942,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/proc-log/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5016,18 +5016,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/proggy/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5090,18 +5090,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/promise-spawn/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5164,18 +5164,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          6,
+          6
+        ],
+        "unlabeled": {
           "count": 6,
           "url": "https://github.com/npm/promzard/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             6,
             6
           ]
-        },
-        "history": [
-          6,
-          6
-        ]
+        }
       }
     },
     {
@@ -5238,18 +5238,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/pull/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5312,18 +5312,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          13,
+          13
+        ],
+        "unlabeled": {
           "count": 13,
           "url": "https://github.com/npm/read/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             13,
             13
           ]
-        },
-        "history": [
-          13,
-          13
-        ]
+        }
       }
     },
     {
@@ -5386,18 +5386,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/read-cmd-shim/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             1,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -5460,18 +5460,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          5,
+          5
+        ],
+        "unlabeled": {
           "count": 5,
           "url": "https://github.com/npm/read-package-json/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             5,
             5
           ]
-        },
-        "history": [
-          5,
-          5
-        ]
+        }
       }
     },
     {
@@ -5534,18 +5534,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/read-package-json-fast/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5608,18 +5608,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/readdir-scoped-modules/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -5682,18 +5682,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          82,
+          84
+        ],
+        "unlabeled": {
           "count": 80,
           "url": "https://github.com/npm/rfcs/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             78,
             80
           ]
-        },
-        "history": [
-          82,
-          84
-        ]
+        }
       }
     },
     {
@@ -5756,18 +5756,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          3,
+          3
+        ],
+        "unlabeled": {
           "count": 3,
           "url": "https://github.com/npm/run-script/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             3,
             3
           ]
-        },
-        "history": [
-          3,
-          3
-        ]
+        }
       }
     },
     {
@@ -5830,18 +5830,18 @@
             2
           ]
         },
-        "noLabel": {
+        "history": [
+          33,
+          33
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/node-semver/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             19,
             2
           ]
-        },
-        "history": [
-          33,
-          33
-        ]
+        }
       }
     },
     {
@@ -5904,18 +5904,18 @@
             1
           ]
         },
-        "noLabel": {
+        "history": [
+          1,
+          1
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/ssri/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          1,
-          1
-        ]
+        }
       }
     },
     {
@@ -5978,18 +5978,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          1
+        ],
+        "unlabeled": {
           "count": 1,
           "url": "https://github.com/npm/stafftools/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             1
           ]
-        },
-        "history": [
-          0,
-          1
-        ]
+        }
       }
     },
     {
@@ -6052,18 +6052,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          117,
+          117
+        ],
+        "unlabeled": {
           "count": 36,
           "url": "https://github.com/npm/statusboard/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             36,
             36
           ]
-        },
-        "history": [
-          117,
-          117
-        ]
+        }
       }
     },
     {
@@ -6126,18 +6126,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/stringify-package/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -6200,18 +6200,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/tap-nock/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -6274,18 +6274,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          13,
+          12
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/node-tar/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             13,
             0
           ]
-        },
-        "history": [
-          13,
-          12
-        ]
+        }
       }
     },
     {
@@ -6348,18 +6348,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          13,
+          15
+        ],
+        "unlabeled": {
           "count": 15,
           "url": "https://github.com/npm/template-oss/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             13,
             15
           ]
-        },
-        "history": [
-          13,
-          15
-        ]
+        }
       }
     },
     {
@@ -6422,18 +6422,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/treeverse/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -6496,18 +6496,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          6,
+          6
+        ],
+        "unlabeled": {
           "count": 6,
           "url": "https://github.com/npm/unique-filename/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             6,
             6
           ]
-        },
-        "history": [
-          6,
-          6
-        ]
+        }
       }
     },
     {
@@ -6570,18 +6570,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/unique-slug/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -6644,18 +6644,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          0,
+          0
+        ],
+        "unlabeled": {
           "count": 0,
           "url": "https://github.com/npm/validate-npm-package-name/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             0,
             0
           ]
-        },
-        "history": [
-          0,
-          0
-        ]
+        }
       }
     },
     {
@@ -6718,18 +6718,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          9,
+          9
+        ],
+        "unlabeled": {
           "count": 7,
           "url": "https://github.com/npm/node-which/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             9,
             7
           ]
-        },
-        "history": [
-          9,
-          9
-        ]
+        }
       }
     },
     {
@@ -6792,18 +6792,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          2,
+          2
+        ],
+        "unlabeled": {
           "count": 2,
           "url": "https://github.com/npm/wrappy/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             2,
             2
           ]
-        },
-        "history": [
-          2,
-          2
-        ]
+        }
       }
     },
     {
@@ -6866,18 +6866,18 @@
             0
           ]
         },
-        "noLabel": {
+        "history": [
+          8,
+          8
+        ],
+        "unlabeled": {
           "count": 4,
           "url": "https://github.com/npm/write-file-atomic/issues?q=is%3Aissue+is%3Aopen+no%3Alabel",
           "history": [
             8,
             4
           ]
-        },
-        "history": [
-          8,
-          8
-        ]
+        }
       }
     }
   ],

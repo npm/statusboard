@@ -3,9 +3,13 @@ import * as EL from './html.js'
 import * as util from './util.js'
 import * as trends from './trends.js'
 
-const issuesColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
+const titleCase = (str) => str.replace(/\w\S*/g,
+  (t) => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()
+)
+
+const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
   [key + $$.keys.count]: {
-    title,
+    title: titleCase(title || key),
     defaultContent: 0,
     render: (data, row) => {
       if ($$.isWorkspace(row) && data == null) {
@@ -23,7 +27,7 @@ const issuesColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
     },
   },
   [key + $$.keys.trend]: {
-    title,
+    title: titleCase(title || key),
     visible: false,
     type: 'num',
     defaultContent: 0,
@@ -51,6 +55,21 @@ const issuesColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
 
 const getColumns = (rows) => {
   const templateOSS = $$.templateOSS(rows)
+  const rowWithIssues = rows.find((project) => project.issues && project.prs)
+
+  const issueColumns = Object.entries(rowWithIssues).reduce((acc, [rowKey, rowValue]) => {
+    if (rowKey === 'prs' || rowKey === 'issues') {
+      Object.assign(acc, makeIssueColumns({ data: rowKey }))
+
+      const countCols = Object.entries(rowValue).filter(([, v]) => v && Object.hasOwn(v, 'count'))
+      for (const [colName] of countCols) {
+        const countKey = `${rowKey}.${colName}`
+        Object.assign(acc, makeIssueColumns({ data: countKey, title: colName }))
+      }
+    }
+    return acc
+  }, {})
+
   return {
     name: {
       title: 'Project',
@@ -102,11 +121,7 @@ const getColumns = (rows) => {
         }
       },
     },
-    ...issuesColumns({ data: 'prs', title: 'PRs' }),
-    ...issuesColumns({ data: 'issues', title: 'Issues' }),
-    ...issuesColumns({ data: 'issues.noLabel', title: 'Unlabeled' }),
-    ...issuesColumns({ data: 'issues.priority', title: 'Priority' }),
-    ...issuesColumns({ data: 'issues.triage', title: 'Triage' }),
+    ...issueColumns,
     version: {
       title: 'Version',
       type: 'num',

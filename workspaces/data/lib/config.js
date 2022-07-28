@@ -32,7 +32,7 @@ module.exports = {
   repoFilter,
   issueAndPrQuery,
   issueFilter: {
-    noLabel: {
+    unlabeled: {
       filter: (issue) => issue.labels.length === 0,
       url: 'no:label',
     },

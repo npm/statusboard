@@ -26,7 +26,7 @@ const main = async ({ migrate }) => {
 
 // Write your one off migration here
 const migrations = {
-  '2022-07-28T18:34:09.267Z': (data) => {
+  '2022-07-28T18:34:09': (data) => {
     const { pendingRelease } = data
     delete data.pendingRelease
     if (data.prs) {
@@ -34,7 +34,7 @@ const migrations = {
     }
     return data
   },
-  '2022-07-28T18:48:54.186Z': (data) => {
+  '2022-07-28T18:48:54': (data) => {
     if (data.prs?.release) {
       // https://api.github.com/repos/npm/config/issues/73
       // ---> https://github.com/npm/config/pull/73
@@ -42,6 +42,13 @@ const migrations = {
       url.hostname = 'github.com'
       url.pathname = url.pathname.replace('/repos/', '').replace('/issues/', '/pull/')
       data.prs.release.url = url.toString()
+    }
+    return data
+  },
+  '2022-07-28T14:20:50': (data) => {
+    if (data.issues?.noLabel) {
+      data.issues.unlabeled = data.issues.noLabel
+      delete data.issues.noLabel
     }
     return data
   },
