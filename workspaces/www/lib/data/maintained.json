@@ -164,6 +164,12 @@
     "pkg": "@npmcli/installed-package-contents"
   },
   {
+    "id": "npm_json-parse-even-better-errors",
+    "name": "json-parse-even-better-errors",
+    "owner": "npm",
+    "pkg": "json-parse-even-better-errors"
+  },
+  {
     "id": "npm_cli_workspaces_libnpmaccess",
     "name": "cli",
     "owner": "npm",
@@ -265,6 +271,12 @@
     "pkg": "@npmcli/metavuln-calculator"
   },
   {
+    "id": "npm_minify-registry-metadata",
+    "name": "minify-registry-metadata",
+    "owner": "npm",
+    "pkg": "minify-registry-metadata"
+  },
+  {
     "id": "npm_minipass-fetch",
     "name": "minipass-fetch",
     "owner": "npm",
@@ -292,6 +304,17 @@
     "id": "npm_nock-registry",
     "name": "nock-registry",
     "owner": "npm"
+  },
+  {
+    "id": "npm_node",
+    "name": "node",
+    "owner": "npm"
+  },
+  {
+    "id": "npm_node-fetch-npm",
+    "name": "node-fetch-npm",
+    "owner": "npm",
+    "pkg": "node-fetch-npm"
   },
   {
     "id": "npm_node-gyp",
@@ -363,6 +386,12 @@
     "name": "npm-packlist",
     "owner": "npm",
     "pkg": "npm-packlist"
+  },
+  {
+    "id": "npm_npm-pick-manifest",
+    "name": "npm-pick-manifest",
+    "owner": "npm",
+    "pkg": "npm-pick-manifest"
   },
   {
     "id": "npm_npm-profile",

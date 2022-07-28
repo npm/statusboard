@@ -3,24 +3,11 @@ const { retry } = require('@octokit/plugin-retry')
 const { throttling } = require('@octokit/plugin-throttling')
 const log = require('proc-log')
 const GraphqlApi = require('./graphql.js')
-
-// A memory cache for expensive requests like check-runs
-const CACHE = new Map()
-const cacheMethod = (fn) => {
-  CACHE.set(fn, new Map())
-  return async (...args) => {
-    const key = args.map(JSON.stringify).join()
-    if (CACHE.get(fn).has(key)) {
-      return CACHE.get(fn).get(key)
-    }
-    const res = await fn(...args)
-    CACHE.get(fn).set(key, res)
-    return res
-  }
-}
+const cacheMethod = require('./cache.js')
 
 module.exports = ({ auth }) => {
   const { getPkg } = GraphqlApi({ auth })
+
   const REST = new (Octokit.plugin(retry, throttling))({
     auth,
     log,
@@ -100,14 +87,14 @@ module.exports = ({ auth }) => {
   }
 
   const ISSUES = {
-    getAllOpen: (owner, name) => {
+    getAllOpen: cacheMethod((owner, name) => {
       log.verbose('rest:issues:getAll', `${owner}/${name}`)
 
       return REST.paginate(REST.search.issuesAndPullRequests, {
         q: `repo:${owner}/${name}+is:open`,
         per_page: 100,
       })
-    },
+    }),
   }
 
   return {
