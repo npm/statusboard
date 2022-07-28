@@ -81,11 +81,11 @@ module.exports = ({ auth }) => {
     return { conclusion: 'success' }
   }
 
-  const getAllOpen = (owner, name) => {
+  const getAllIssuesAndPullRequests = (owner, name, query = '') => {
     log.verbose('rest:issues:getAll', `${owner}/${name}`)
 
     return REST.paginate(REST.search.issuesAndPullRequests, {
-      q: `repo:${owner}/${name}+is:open`,
+      q: `repo:${owner}/${name}+${query}`,
       per_page: 100,
     })
   }
@@ -94,6 +94,6 @@ module.exports = ({ auth }) => {
     getRepo,
     getCommit,
     getStatus,
-    getAllOpen,
+    getAllIssuesAndPullRequests,
   }
 }

@@ -10,8 +10,8 @@ const coverageKeys = ['check-coverage', 'coverage'].reduce((acc, k) => {
   return acc
 }, [])
 
+// Note: this only works for tap
 module.exports = (pkg) => {
-  // Note: this only works for tap
   const tapSpec = pkg?.devDependencies?.tap
 
   if (tapSpec) {

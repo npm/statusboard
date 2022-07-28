@@ -1,5 +1,6 @@
+require('dotenv').config()
+
 const path = require('path')
-const { parseArgs } = require('util')
 const timers = require('timers/promises')
 const log = require('proc-log')
 const writeJson = require('../lib/write-json.js')
@@ -25,10 +26,10 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ filter, delay }) => {
+const writeData = async ({ delay, repoFilter, issueFilter, prFilter, issueAndPrQuery }) => {
   const rawProjects = require(wwwPaths.maintained)
   // Make it easier to test by only fetching a subset of the projects
-  const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
+  const projects = repoFilter ? rawProjects.filter(getFilter(repoFilter)) : rawProjects
 
   const now = new Date()
   const dailyFile = wwwPaths.daily(now)
@@ -43,6 +44,9 @@ const exec = async ({ filter, delay }) => {
     api,
     project,
     delay,
+    issueAndPrQuery,
+    issueFilter,
+    prFilter,
     history: projectsHistory[project.id],
   })), { delay })
 
@@ -57,35 +61,22 @@ const exec = async ({ filter, delay }) => {
   return results.map((f) => f.message).join('\n')
 }
 
-const { values } = parseArgs({
-  args: process.argv.slice(2),
-  options: {
-    filter: {
-      type: 'string',
-    },
-    delay: {
-      type: 'string',
-    },
-  },
-})
-
-const delay = values.delay ? +values.delay : 1000
-
-const main = (retries = 1) => exec({
-  filter: values.filter,
-  delay,
-})
-  .then(console.log)
-  .catch((err) => {
+const main = async (retries = 1) => {
+  const config = require('../lib/config.js')
+  try {
+    console.log(await writeData(config))
+  } catch (err) {
     log.error(err)
 
     if (retries <= 2) {
-      const retryDelay = delay ? 1000 * 60 * 2 : 0
+      retries++
+      const retryDelay = config.delay ? 1000 * 60 * 2 : 0
       log.warn(`Retry number ${retries} fetch-data script in ${retryDelay}ms`)
-      return timers.setTimeout(retryDelay, retries++).then(main)
+      return timers.setTimeout(retryDelay).then(() => main(retries))
     }
 
     process.exitCode = 1
-  })
+  }
+}
 
 main()

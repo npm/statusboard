@@ -1,4 +1,5 @@
-const { parseArgs } = require('util')
+require('dotenv').config()
+
 const log = require('proc-log')
 const Api = require('../lib/api/index.js')
 const logger = require('../lib/logger.js')
@@ -16,8 +17,8 @@ const sortKey = (p) => {
 const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
-const exec = async ({ query }) => {
-  const allProjects = await api.searchReposWithManifests(query)
+const exec = async ({ repoQuery }) => {
+  const allProjects = await api.searchReposWithManifests(repoQuery)
 
   const maintainedProjects = allProjects.filter((project) => {
     const logReason = (reason) =>
@@ -78,18 +79,7 @@ const exec = async ({ query }) => {
   return results.map((f) => f.message).join('\n')
 }
 
-const { values } = parseArgs({
-  args: process.argv.slice(2),
-  options: {
-    query: {
-      type: 'string',
-    },
-  },
-})
-
-exec({
-  query: values.query ?? 'org:npm topic:npm-cli fork:true',
-})
+exec(require('../lib/config.js'))
   .then(console.log)
   .catch((err) => {
     process.exitCode = 1
