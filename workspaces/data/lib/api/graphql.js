@@ -4,7 +4,6 @@ const glob = require('glob')
 const { merge } = require('lodash')
 const log = require('proc-log')
 const packageApi = require('./package.js')
-const cacheMethod = require('./cache.js')
 
 const graphqlKey = (k) => `_${k.replace(/[^_0-9A-Za-z]/g, '')}`
 
@@ -18,7 +17,7 @@ module.exports = ({ auth }) => {
   /**
     * @returns {Promise<string[]>}
     */
-  const getSubTrees = cacheMethod(async (owner, name, paths) => {
+  const getSubTrees = async (owner, name, paths) => {
     log.verbose(`graphql:subTrees`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
@@ -44,12 +43,12 @@ module.exports = ({ auth }) => {
         .filter((d) => d.type === 'tree')
         .map((d) => path.join(paths[index], d.name))
     )
-  })
+  }
 
   /**
     * @returns {Promise<(Record<string, any> | null)[]>}
     */
-  const getPkg = cacheMethod(async (owner, name, pathsOrPath = '') => {
+  const getPkg = async (owner, name, pathsOrPath = '') => {
     const isArray = Array.isArray(pathsOrPath)
     const paths = isArray ? pathsOrPath : [pathsOrPath]
 
@@ -72,12 +71,12 @@ module.exports = ({ auth }) => {
 
     const pkgs = Object.values(repository).map((v) => v ? JSON.parse(v.text) : null)
     return isArray ? pkgs : pkgs[0]
-  })
+  }
 
   /**
     * @returns {Promise<({ repo: Record<string, any>, pkg: Record<string, any> })[]>}
     */
-  const getWorkspaces = cacheMethod(async (owner, name, workspaces) => {
+  const getWorkspaces = async (owner, name, workspaces) => {
     log.verbose(`graphql:workspaces`, `${owner}/${name}`)
 
     if (!Array.isArray(workspaces)) {
@@ -114,7 +113,7 @@ module.exports = ({ auth }) => {
       repo: { isWorkspace: true, path: wsDirs[i] },
       pkg: wsPkg,
     })))
-  })
+  }
 
   /**
     * @returns {Promise<({
@@ -122,7 +121,7 @@ module.exports = ({ auth }) => {
     *  pkg: Record<string, any> | null
     * })[]>}
     */
-  const searchRepos = cacheMethod(async (searchQuery, { pageInfo = {}, nodes = [] } = {}) => {
+  const searchRepos = async (searchQuery, { pageInfo = {}, nodes = [] } = {}) => {
     log.verbose('graphql:search', searchQuery)
 
     const { search: res } = await GRAPHQL(
@@ -175,7 +174,7 @@ module.exports = ({ auth }) => {
       },
       pkg: pkg ? JSON.parse(pkg.text) : null,
     }))
-  })
+  }
 
   /**
     * @returns {Promise<({
@@ -184,7 +183,7 @@ module.exports = ({ auth }) => {
     *  manifest: Record<string, any> | null,
     * })[]>}
     */
-  const searchReposWithWorkspaces = cacheMethod(async (searchQuery) => {
+  const searchReposWithWorkspaces = async (searchQuery) => {
     log.verbose('graphql:searchWithWorkspaces', searchQuery)
 
     const allRepos = await searchRepos(searchQuery)
@@ -195,7 +194,7 @@ module.exports = ({ auth }) => {
       )))
 
     return [...allRepos, ...allWorkspaces.flat()]
-  })
+  }
 
   /**
     * @returns {Promise<({
@@ -204,7 +203,7 @@ module.exports = ({ auth }) => {
     *  manifest: Record<string, any> | null,
     * })[]>}
     */
-  const searchReposWithManifests = cacheMethod(async (searchQuery) => {
+  const searchReposWithManifests = async (searchQuery) => {
     log.verbose('graphql:searchWithManifests', searchQuery)
 
     const allRepos = await searchReposWithWorkspaces(searchQuery)
@@ -216,7 +215,7 @@ module.exports = ({ auth }) => {
         manifest: pkgName ? await packageApi.manifest(pkgName) : null,
       }
     }))
-  })
+  }
 
   return {
     searchReposWithManifests,

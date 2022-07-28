@@ -4,27 +4,26 @@ const getCoverage = require('./coverage.js')
 const pAll = require('./p-all.js')
 const getIssues = require('./issues.js')
 const getPrs = require('./prs.js')
-const packageApi = require('./api/package.js')
 
 const semverRe = semver.re[semver.tokens.FULLPLAIN]
 
 const fetchAllRepoData = async ({ api, delay, project: p }) => {
   const { issuesAndPrs, ...result } = await pAll({
-    commit: () => api.repo.commit(p.owner, p.name, p.path),
+    commit: () => api.getCommit(p.owner, p.name, p.path),
     ...(p.path ? {
       // pick properties that we need for a workspace but exclude
       // others since we display workspaces differently
-      repo: () => api.repo.get(p.owner, p.name)
+      repo: () => api.getRepo(p.owner, p.name)
         .then(r => pick(r, 'default_branch', 'html_url', 'archived')),
     } : {
-      repo: () => api.repo.get(p.owner, p.name),
-      issuesAndPrs: () => api.issues.getAllOpen(p.owner, p.name),
+      repo: () => api.getRepo(p.owner, p.name),
+      issuesAndPrs: () => api.getAllOpen(p.owner, p.name),
     }),
-    repoPkg: () => api.repo.pkg(p.owner, p.name, p.path),
+    repoPkg: () => api.getPkg(p.owner, p.name, p.path),
     ...(p.pkg ? {
-      manifest: () => packageApi.manifest(p.pkg, { fullMetadata: true }),
-      packument: () => packageApi.packument(p.pkg, { fullMetadata: true }),
-      downloads: () => packageApi.downloads(p.pkg).then((d) => d.downloads),
+      manifest: () => api.manifest(p.pkg, { fullMetadata: true }),
+      packument: () => api.packument(p.pkg, { fullMetadata: true }),
+      downloads: () => api.downloads(p.pkg).then((d) => d.downloads),
     } : {}),
   }, { delay })
 
@@ -34,7 +33,7 @@ const fetchAllRepoData = async ({ api, delay, project: p }) => {
     result.issues = issues
   }
 
-  result.status = await api.repo.status(p.owner, p.name, result.commit.sha)
+  result.status = await api.getStatus(p.owner, p.name, result.commit.sha)
 
   return result
 }

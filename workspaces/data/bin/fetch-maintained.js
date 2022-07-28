@@ -1,9 +1,12 @@
 const { parseArgs } = require('util')
 const log = require('proc-log')
-const Api = require('../lib/api/graphql.js')
+const Api = require('../lib/api/index.js')
 const logger = require('../lib/logger.js')
 const writeJson = require('../lib/write-json.js')
 const wwwPaths = require('www')
+
+logger()
+const api = Api({ auth: process.env.AUTH_TOKEN })
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
@@ -13,10 +16,7 @@ const sortKey = (p) => {
 const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
-const exec = async ({ auth, query }) => {
-  logger()
-
-  const api = Api({ auth })
+const exec = async ({ query }) => {
   const allProjects = await api.searchReposWithManifests(query)
 
   const maintainedProjects = allProjects.filter((project) => {
@@ -88,11 +88,10 @@ const { values } = parseArgs({
 })
 
 exec({
-  auth: process.env.AUTH_TOKEN,
   query: values.query ?? 'org:npm topic:npm-cli fork:true',
 })
   .then(console.log)
   .catch((err) => {
     process.exitCode = 1
-    console.error(err)
+    log.error(err)
   })

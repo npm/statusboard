@@ -3,12 +3,15 @@ const { parseArgs } = require('util')
 const timers = require('timers/promises')
 const log = require('proc-log')
 const writeJson = require('../lib/write-json.js')
-const Api = require('../lib/api/rest.js')
+const Api = require('../lib/api/index.js')
 const fetchData = require('../lib/project-data.js')
 const logger = require('../lib/logger.js')
 const getProjectsHistory = require('../lib/projects-history.js')
 const pAll = require('../lib/p-all.js')
 const wwwPaths = require('www')
+
+logger()
+const api = Api({ auth: process.env.AUTH_TOKEN })
 
 const getFilter = (rawFilter) => {
   if (!isNaN(rawFilter) && !isNaN(parseFloat(rawFilter))) {
@@ -22,14 +25,11 @@ const getFilter = (rawFilter) => {
   }
 }
 
-const exec = async ({ auth, filter, delay }) => {
-  logger()
-
+const exec = async ({ filter, delay }) => {
   const rawProjects = require(wwwPaths.maintained)
   // Make it easier to test by only fetching a subset of the projects
   const projects = filter ? rawProjects.filter(getFilter(filter)) : rawProjects
 
-  const api = Api({ auth })
   const now = new Date()
   const dailyFile = wwwPaths.daily(now)
 
@@ -39,14 +39,12 @@ const exec = async ({ auth, filter, delay }) => {
     filter: (f) => f !== path.basename(dailyFile),
   })
 
-  const projectsData = await pAll(projects.map((project) => () => {
-    return fetchData({
-      api,
-      project,
-      delay,
-      history: projectsHistory[project.id],
-    })
-  }), { delay })
+  const projectsData = await pAll(projects.map((project) => () => fetchData({
+    api,
+    project,
+    delay,
+    history: projectsHistory[project.id],
+  })), { delay })
 
   const results = await writeJson([
     { path: dailyFile, indent: 2 },
@@ -74,17 +72,16 @@ const { values } = parseArgs({
 const delay = values.delay ? +values.delay : 1000
 
 const main = (retries = 1) => exec({
-  auth: process.env.AUTH_TOKEN,
   filter: values.filter,
   delay,
 })
   .then(console.log)
   .catch((err) => {
-    console.error(err)
+    log.error(err)
 
     if (retries <= 2) {
       const retryDelay = delay ? 1000 * 60 * 2 : 0
-      log.info(`Retry number ${retries} fetch-data script in ${retryDelay}ms`)
+      log.warn(`Retry number ${retries} fetch-data script in ${retryDelay}ms`)
       return timers.setTimeout(retryDelay, retries++).then(main)
     }
 
