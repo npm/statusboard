@@ -27,7 +27,7 @@ export const cell = {
     const trendlineDate = container.querySelector('.trendline-date')
     const trendlineValue = container.querySelector('.trendline-value')
 
-    sparkline.sparkline(
+    sparkline(
       container.querySelector('.sparkline'),
       fullData,
       {

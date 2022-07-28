@@ -24,10 +24,11 @@ const plugins = {
       root: buildDir,
       cache: -1,
     })
-    b.onStart(() => new Promise(res => s.listen(8080, () => {
+    const ready = new Promise(res => s.listen(8080, () => {
       console.log('Listening on http://localhost:8080')
       res()
-    })))
+    }))
+    b.onStart(() => ready)
   },
   clean: (b) => {
     b.onStart(async () => {
