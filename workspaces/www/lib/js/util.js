@@ -41,3 +41,7 @@ export const uniq = (arr) => arr.filter(v => v != null).filter((v, i, a) => a.in
 export const num = {
   format: (n) => new Intl.NumberFormat('en-US').format(n),
 }
+
+export const titleCase = (str) => str.replace(/\w\S*/g,
+  (t) => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()
+)

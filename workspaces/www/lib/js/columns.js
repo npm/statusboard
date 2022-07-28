@@ -3,13 +3,9 @@ import * as EL from './html.js'
 import * as util from './util.js'
 import * as trends from './trends.js'
 
-const titleCase = (str) => str.replace(/\w\S*/g,
-  (t) => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()
-)
-
 const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
   [key + $$.keys.count]: {
-    title: titleCase(title || key),
+    title: util.titleCase(title || key),
     defaultContent: 0,
     render: (data, row) => {
       if ($$.isWorkspace(row) && data == null) {
@@ -27,7 +23,7 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
     },
   },
   [key + $$.keys.trend]: {
-    title: titleCase(title || key),
+    title: util.titleCase(title || key),
     visible: false,
     type: 'num',
     defaultContent: 0,
@@ -54,8 +50,10 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
 })
 
 const getColumns = (rows) => {
-  const templateOSS = $$.templateOSS(rows)
-  const rowWithIssues = rows.find((project) => project.issues && project.prs)
+  const requiredTemplate = $$.templateVersion(rows)
+  const requiredNode = $$.nodeVersion(rows)
+
+  const rowWithIssues = rows.find((project) => project.issues && project.prs) || {}
 
   const issueColumns = Object.entries(rowWithIssues).reduce((acc, [rowKey, rowValue]) => {
     if (rowKey === 'prs' || rowKey === 'issues') {
@@ -175,7 +173,7 @@ const getColumns = (rows) => {
       title: 'Template',
       type: 'num',
       render: (data) => {
-        const type = !data ? 'danger' : data !== templateOSS.version ? 'warning' : 'success'
+        const type = !data ? 'danger' : data !== requiredTemplate ? 'warning' : 'success'
         const text = data || 'None'
         return {
           sort: data ? util.semver.score(data) : 0,
@@ -204,8 +202,8 @@ const getColumns = (rows) => {
       render: (data) => {
         const text = data || 'None'
 
-        const type = !data ? 'danger'
-          : util.semver.subset(data, templateOSS.node) ? 'success'
+        const type = !data || !requiredNode ? 'danger'
+          : util.semver.subset(data, requiredNode) ? 'success'
           : util.semver.subset(data, '>=10') ? 'warning'
           : 'danger'
 

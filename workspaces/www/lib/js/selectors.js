@@ -6,11 +6,16 @@ export const keys = {
   id: 'id',
 }
 
+// this assumes that the repo also maintains a copy of template-oss
+// this is not portable but for now the template/node version checks
+// can be changed here or removed in the columns.js file
+export const templateOSS = (projects) => projects.find((p) => p.name === 'template-oss')
+export const templateVersion = (projects) => templateOSS(projects)?.version
+export const nodeVersion = (projects) => templateOSS(projects)?.node
+
 export const colId = (col) => `${typeof col === 'string' ? col : col.name}:name`
 
 export const rowId = (row) => `#${typeof row === 'string' ? row : row.id}`
-
-export const templateOSS = (projects) => projects.find((p) => p.name === 'template-oss')
 
 export const noArchived = (projects) => projects.every((p) => !p.archived)
 
