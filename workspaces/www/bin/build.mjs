@@ -44,7 +44,10 @@ const plugins = {
 }
 
 const config = {
-  entryPoints: [join(libDir, 'index.js')],
+  entryPoints: [
+    join(libDir, 'index.css'),
+    join(libDir, 'index.js'),
+  ],
   outdir: buildDir,
   loader: {
     '.woff': 'file',
