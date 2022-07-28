@@ -15,7 +15,9 @@ $(async () => {
   const columns = getColumns(projects)
   const trends = getTrends(projects, columns, { default: TREND_OPTIONS[0] })
 
-  document.querySelector('#built a').innerHTML = util.date.format(createdAt)
+  const built = document.querySelector('#built a')
+  built.innerHTML = util.date.format(createdAt)
+  built.setAttribute('title', createdAt)
 
   $.fn.dataTableExt.classes.sFilterInput = 'form-control'
 
