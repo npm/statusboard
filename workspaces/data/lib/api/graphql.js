@@ -3,7 +3,8 @@ const { graphql: Graphql } = require('@octokit/graphql')
 const glob = require('glob')
 const { merge } = require('lodash')
 const log = require('proc-log')
-const packageApi = require('./package')
+const packageApi = require('./package.js')
+const cacheMethod = require('./cache.js')
 
 const graphqlKey = (k) => `_${k.replace(/[^_0-9A-Za-z]/g, '')}`
 
@@ -17,7 +18,7 @@ module.exports = ({ auth }) => {
   /**
     * @returns {Promise<string[]>}
     */
-  const getSubTrees = async (owner, name, paths) => {
+  const getSubTrees = cacheMethod(async (owner, name, paths) => {
     log.verbose(`graphql:subTrees`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
@@ -43,12 +44,12 @@ module.exports = ({ auth }) => {
         .filter((d) => d.type === 'tree')
         .map((d) => path.join(paths[index], d.name))
     )
-  }
+  })
 
   /**
     * @returns {Promise<(Record<string, any> | null)[]>}
     */
-  const getPkg = async (owner, name, pathsOrPath = '') => {
+  const getPkg = cacheMethod(async (owner, name, pathsOrPath = '') => {
     const isArray = Array.isArray(pathsOrPath)
     const paths = isArray ? pathsOrPath : [pathsOrPath]
 
@@ -71,19 +72,19 @@ module.exports = ({ auth }) => {
 
     const pkgs = Object.values(repository).map((v) => v ? JSON.parse(v.text) : null)
     return isArray ? pkgs : pkgs[0]
-  }
+  })
 
   /**
     * @returns {Promise<({ repo: Record<string, any>, pkg: Record<string, any> })[]>}
     */
-  const getWorkspaces = async (owner, name, pkg) => {
+  const getWorkspaces = cacheMethod(async (owner, name, workspaces) => {
     log.verbose(`graphql:workspaces`, `${owner}/${name}`)
 
-    if (!Array.isArray(pkg?.workspaces)) {
+    if (!Array.isArray(workspaces)) {
       return []
     }
 
-    const [wsDirs, wsGlobs] = pkg.workspaces.reduce((acc, w) => {
+    const [wsDirs, wsGlobs] = workspaces.reduce((acc, w) => {
       acc[glob.hasMagic(w) ? 1 : 0].push(w)
       return acc
     }, [[], []])
@@ -113,7 +114,7 @@ module.exports = ({ auth }) => {
       repo: { isWorkspace: true, path: wsDirs[i] },
       pkg: wsPkg,
     })))
-  }
+  })
 
   /**
     * @returns {Promise<({
@@ -121,7 +122,7 @@ module.exports = ({ auth }) => {
     *  pkg: Record<string, any> | null
     * })[]>}
     */
-  const searchRepos = async (searchQuery, { pageInfo = {}, nodes = [] } = {}) => {
+  const searchRepos = cacheMethod(async (searchQuery, { pageInfo = {}, nodes = [] } = {}) => {
     log.verbose('graphql:search', searchQuery)
 
     const { search: res } = await GRAPHQL(
@@ -174,7 +175,7 @@ module.exports = ({ auth }) => {
       },
       pkg: pkg ? JSON.parse(pkg.text) : null,
     }))
-  }
+  })
 
   /**
     * @returns {Promise<({
@@ -183,18 +184,18 @@ module.exports = ({ auth }) => {
     *  manifest: Record<string, any> | null,
     * })[]>}
     */
-  const searchReposWithWorkspaces = async (searchQuery) => {
+  const searchReposWithWorkspaces = cacheMethod(async (searchQuery) => {
     log.verbose('graphql:searchWithWorkspaces', searchQuery)
 
     const allRepos = await searchRepos(searchQuery)
 
     const allWorkspaces = await Promise.all(allRepos.map((r) =>
-      getWorkspaces(r.repo.owner, r.repo.name, r.pkg).then((wss) =>
+      getWorkspaces(r.repo.owner, r.repo.name, r.pkg?.workspaces).then((wss) =>
         wss.map((ws) => merge({}, r, ws))
       )))
 
     return [...allRepos, ...allWorkspaces.flat()]
-  }
+  })
 
   /**
     * @returns {Promise<({
@@ -203,7 +204,7 @@ module.exports = ({ auth }) => {
     *  manifest: Record<string, any> | null,
     * })[]>}
     */
-  const searchReposWithManifests = async (searchQuery) => {
+  const searchReposWithManifests = cacheMethod(async (searchQuery) => {
     log.verbose('graphql:searchWithManifests', searchQuery)
 
     const allRepos = await searchReposWithWorkspaces(searchQuery)
@@ -215,7 +216,7 @@ module.exports = ({ auth }) => {
         manifest: pkgName ? await packageApi.manifest(pkgName) : null,
       }
     }))
-  }
+  })
 
   return {
     searchReposWithManifests,

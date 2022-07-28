@@ -1,6 +1,8 @@
-const delay = (t = 1000) => new Promise(r => setTimeout(() => r(), t))
+const timers = require('timers/promises')
 
-module.exports = async (promises, t) => {
+module.exports = async (promises, { delay } = {}) => {
+  const wait = () => delay ? timers.setTimeout(delay) : Promise.resolve()
+
   const result = []
 
   const isObj = typeof promises === 'object' && !Array.isArray(promises)
@@ -11,13 +13,13 @@ module.exports = async (promises, t) => {
       const [key, value] = p
       if (typeof value === 'function') {
         result.push(await value().then(v => [key, v]))
-        await delay(t)
+        await wait()
       } else {
         result.push([key, null])
       }
     } else {
       result.push(await p())
-      await delay(t)
+      await wait()
     }
   }
 

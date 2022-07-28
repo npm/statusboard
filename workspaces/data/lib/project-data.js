@@ -8,7 +8,7 @@ const packageApi = require('./api/package.js')
 
 const semverRe = semver.re[semver.tokens.FULLPLAIN]
 
-const fetchAllRepoData = async ({ api, project: p }) => {
+const fetchAllRepoData = async ({ api, delay, project: p }) => {
   const { issuesAndPrs, ...result } = await pAll({
     commit: () => api.repo.commit(p.owner, p.name, p.path),
     ...(p.path ? {
@@ -26,7 +26,7 @@ const fetchAllRepoData = async ({ api, project: p }) => {
       packument: () => packageApi.packument(p.pkg, { fullMetadata: true }),
       downloads: () => packageApi.downloads(p.pkg).then((d) => d.downloads),
     } : {}),
-  })
+  }, { delay })
 
   if (issuesAndPrs) {
     const [prs, issues] = partition(issuesAndPrs, (item) => Object.hasOwn(item, 'pull_request'))
@@ -39,7 +39,7 @@ const fetchAllRepoData = async ({ api, project: p }) => {
   return result
 }
 
-module.exports = async ({ api, project, history }) => {
+module.exports = async ({ api, project, history, delay }) => {
   const {
     commit,
     repo,
@@ -50,7 +50,7 @@ module.exports = async ({ api, project, history }) => {
     packument,
     downloads,
     status,
-  } = await fetchAllRepoData({ api, project })
+  } = await fetchAllRepoData({ api, delay, project })
 
   const license = [repoPkg?.license, repo.license?.spdx_id]
     .filter((l) => l && l !== 'NOASSERTION')
