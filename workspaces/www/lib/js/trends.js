@@ -1,4 +1,4 @@
-import sparkline from '@fnando/sparkline'
+import sparkline from './sparkline.js'
 import * as util from './util.js'
 import * as $$ from './selectors.js'
 
@@ -21,7 +21,7 @@ export const cell = {
 
     const trendlineDates = util.date.range(drawDays)
     const daysData = data.slice(drawDays * -1)
-    const missingData = new Array(drawDays - daysData.length).fill(0)
+    const missingData = new Array(drawDays - daysData.length).fill(null)
     const fullData = [...missingData, ...daysData]
 
     const scrollBody = document.querySelector('.dataTables_scrollBody')

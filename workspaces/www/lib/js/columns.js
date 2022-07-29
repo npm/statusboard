@@ -34,8 +34,8 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
           display: EL.noData({ type: 'info' }),
         }
       }
-      if ((data && data.length) <= 1 || data.every(d => d === 0)) {
-        // sparkline can't do all 0s and needs more than one data point
+      if (!data || data.length <= 1) {
+        // sparkline needs more than one data point
         return {
           sort: 0,
           display: EL.noData({ text: 'No Data' }),

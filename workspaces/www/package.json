@@ -48,7 +48,6 @@
     "version": "3.5.0"
   },
   "dependencies": {
-    "@fnando/sparkline": "^0.3.10",
     "bootstrap": "^4.6.2",
     "bootstrap-icons": "^1.9.1",
     "datatables.net": "^1.12.1",
