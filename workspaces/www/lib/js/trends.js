@@ -16,6 +16,8 @@ export const cell = {
     const container = cellNode.querySelector('.trendline-container')
 
     if (!container) {
+      // no container element means that the cell doesn't have that type of data
+      // and it has already been rendered statically
       return
     }
 
