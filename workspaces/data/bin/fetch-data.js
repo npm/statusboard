@@ -1,4 +1,3 @@
-require('dotenv').config()
 
 const path = require('path')
 const timers = require('timers/promises')
@@ -10,9 +9,10 @@ const logger = require('../lib/logger.js')
 const getProjectsHistory = require('../lib/projects-history.js')
 const pAll = require('../lib/p-all.js')
 const wwwPaths = require('www')
+const config = require('../lib/config.js')
 
 logger()
-const api = Api({ auth: process.env.AUTH_TOKEN })
+const api = Api(config)
 
 const getFilter = (rawFilter) => {
   if (!isNaN(rawFilter) && !isNaN(parseFloat(rawFilter))) {
@@ -20,13 +20,13 @@ const getFilter = (rawFilter) => {
   }
 
   const names = rawFilter.split(',').map((name) => name.trim().toLowerCase())
-  return (project) => {
-    const name = project.pkg ?? project.name
-    return names.includes(name.toLowerCase())
-  }
+  return (project) => [project.pkg, project.name]
+    .filter(Boolean)
+    .map(t => t.toLowerCase())
+    .some((t) => names.includes(t))
 }
 
-const writeData = async ({ delay, repoFilter, issueFilter, prFilter, issueAndPrQuery }) => {
+const writeData = async ({ write, repoFilter, ...restConfig }) => {
   const rawProjects = require(wwwPaths.maintained)
   // Make it easier to test by only fetching a subset of the projects
   const projects = repoFilter ? rawProjects.filter(getFilter(repoFilter)) : rawProjects
@@ -43,26 +43,25 @@ const writeData = async ({ delay, repoFilter, issueFilter, prFilter, issueAndPrQ
   const projectsData = await pAll(projects.map((project) => () => fetchData({
     api,
     project,
-    delay,
-    issueAndPrQuery,
-    issueFilter,
-    prFilter,
     history: projectsHistory[project.id],
-  })), { delay })
+    ...restConfig,
+  })))
+
+  const contents = { data: projectsData, created_at: now.toISOString() }
+
+  if (!write) {
+    return JSON.stringify(contents, null, 2)
+  }
 
   const results = await writeJson([
     { path: dailyFile, indent: 2 },
     { path: wwwPaths.latest, indent: 2 },
-  ], {
-    data: projectsData,
-    created_at: now.toISOString(),
-  })
+  ], contents)
 
   return results.map((f) => f.message).join('\n')
 }
 
 const main = async (retries = 1) => {
-  const config = require('../lib/config.js')
   try {
     console.log(await writeData(config))
   } catch (err) {

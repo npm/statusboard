@@ -1,7 +1,7 @@
 const path = require('path')
 const { graphql: Graphql } = require('@octokit/graphql')
 const glob = require('glob')
-const { merge } = require('lodash')
+const { merge, get } = require('lodash')
 const log = require('proc-log')
 const packageApi = require('./package.js')
 
@@ -14,6 +14,54 @@ module.exports = ({ auth }) => {
     },
   })
 
+  const paginateQuery = (query, { query: queryName, ...variables }) => {
+    const paginatedQuery = async ({ pageInfo = {}, nodes = [] } = {}) => {
+      const res = await GRAPHQL(query, {
+        ...variables,
+        first: 100,
+        after: pageInfo.endCursor,
+      }).then(r => get(r, queryName))
+
+      console.log(res)
+
+      nodes.push(...res.nodes)
+
+      if (res.pageInfo.hasNextPage) {
+        log.verbose('graphql:paginate',
+          `nodes: ${res.nodes.length}, cursor:${res.pageInfo.endCursor}`)
+        return paginatedQuery({ pageInfo: res.pageInfo, nodes })
+      }
+
+      log.verbose('graphql:paginate', `total: ${nodes.length}`)
+
+      return nodes
+    }
+
+    return paginatedQuery()
+  }
+
+  const getDiscussions = async (owner, name, query = '') => {
+    log.verbose(`graphql:discussions`, `${owner}/${name} ${query}`)
+
+    return paginateQuery(
+      `query ($owner: String!, $name: String!, $first: Int!, $after: String) {
+        repository(owner: $owner, name: $name) {
+          discussions (first: $first, after: $after) {
+            pageInfo {
+              endCursor
+              hasNextPage
+            }
+            nodes {
+              id
+              ${query}
+            }
+          }
+        }
+      }`,
+      { owner, name, query: 'repository.discussions' }
+    )
+  }
+
   /**
     * @returns {Promise<string[]>}
     */
@@ -21,21 +69,21 @@ module.exports = ({ auth }) => {
     log.verbose(`graphql:subTrees`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
-        `query ($owner: String!, $name: String!) {
-          repository(owner: $owner, name: $name) {
-            ${paths.map((p) => `
-              ${graphqlKey(p)}: object(expression: "HEAD:${p}") {
-                ... on Tree {
-                  entries {
-                    name
-                    type
-                  }
+      `query ($owner: String!, $name: String!) {
+        repository(owner: $owner, name: $name) {
+          ${paths.map((p) => `
+            ${graphqlKey(p)}: object(expression: "HEAD:${p}") {
+              ... on Tree {
+                entries {
+                  name
+                  type
                 }
               }
-            `).join('\n')}
-          }
-        }`,
-        { owner, name }
+            }
+          `)}
+        }
+      }`,
+      { owner, name }
     )
 
     return Object.values(repository).flatMap((v, index) =>
@@ -55,18 +103,18 @@ module.exports = ({ auth }) => {
     log.verbose(`graphql:pkg`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
-        `query ($owner: String!, $name: String!) {
-          repository(owner: $owner, name: $name) {
-            ${paths.map((p) => `
-              ${graphqlKey(p)}: object(expression: "HEAD:${path.join(p, 'package.json')}") {
-                ... on Blob {
-                  text
-                }
+      `query ($owner: String!, $name: String!) {
+        repository(owner: $owner, name: $name) {
+          ${paths.map((p) => `
+            ${graphqlKey(p)}: object(expression: "HEAD:${path.join(p, 'package.json')}") {
+              ... on Blob {
+                text
               }
-            `).join('\n')}
-          }
-        }`,
-        { owner, name }
+            }
+          `)}
+        }
+      }`,
+      { owner, name }
     )
 
     const pkgs = Object.values(repository).map((v) => v ? JSON.parse(v.text) : null)
@@ -121,52 +169,46 @@ module.exports = ({ auth }) => {
     *  pkg: Record<string, any> | null
     * })[]>}
     */
-  const searchRepos = async (searchQuery, { pageInfo = {}, nodes = [] } = {}) => {
+  const searchRepos = async (searchQuery) => {
     log.verbose('graphql:search', searchQuery)
 
-    const { search: res } = await GRAPHQL(
-        `query ($searchQuery: String!, $first: Int!, $after: String) {
-          search(query: $searchQuery, first: $first, type: REPOSITORY, after: $after) {
-            pageInfo { endCursor hasNextPage }
-            nodes {
-              ... on Repository {
-                name
-                description
-                owner { login }
-                url
-                isArchived
-                isFork
-                repositoryTopics(first: 100) {
-                  nodes {
-                    ... on RepositoryTopic {
-                      topic {
-                        name
-                      }
+    const nodes = await paginateQuery(
+      `query ($searchQuery: String!, $first: Int!, $after: String) {
+        search(query: $searchQuery, type: REPOSITORY, first: $first, after: $after) {
+          pageInfo {
+            endCursor
+            hasNextPage
+          }
+          nodes {
+            ... on Repository {
+              name
+              description
+              owner { login }
+              url
+              isArchived
+              isFork
+              repositoryTopics(first: 100) {
+                nodes {
+                  ... on RepositoryTopic {
+                    topic {
+                      name
                     }
                   }
                 }
-                pkg: object(expression: "HEAD:package.json") {
-                  ... on Blob {
-                    text
-                  }
+              }
+              pkg: object(expression: "HEAD:package.json") {
+                ... on Blob {
+                  text
                 }
               }
             }
           }
-        }`,
-        { searchQuery, first: 100, after: pageInfo.endCursor }
+        }
+      }`,
+      { searchQuery, query: 'search' }
     )
 
-    nodes.push(...res.nodes)
-
-    if (res.pageInfo.hasNextPage) {
-      log.verbose('graphql:search', `${searchQuery} cursor:${res.pageInfo.endCursor}`)
-      return searchRepos(searchQuery, { pageInfo: res.pageInfo, nodes })
-    }
-
-    log.verbose('graphql:search', `Fetched ${res.nodes.length} nodes`)
-
-    return res.nodes.map(({ pkg, ...repo }) => ({
+    return nodes.map(({ pkg, ...repo }) => ({
       repo: {
         ...repo,
         owner: repo.owner.login,
@@ -220,5 +262,6 @@ module.exports = ({ auth }) => {
   return {
     searchReposWithManifests,
     getPkg,
+    getDiscussions,
   }
 }

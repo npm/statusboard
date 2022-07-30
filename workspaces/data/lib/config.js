@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const { parseArgs } = require('util')
 const { re, tokens } = require('semver')
 const getVersion = (str = '') => str.match(re[tokens.FULLPLAIN])?.[0]
@@ -9,8 +11,8 @@ const {
   repoQuery = 'org:npm topic:npm-cli fork:true',
   issueAndPrQuery = 'is:open',
   repoFilter = null,
+  noWrite = false,
 } = parseArgs({
-  args: process.argv.slice(2),
   options: {
     delay: {
       type: 'string',
@@ -24,15 +26,26 @@ const {
     issueAndPrQuery: {
       type: 'string',
     },
+    noWrite: {
+      type: 'boolean',
+    },
   },
 }).values
 
 module.exports = {
   auth: process.env.AUTH_TOKEN,
   delay: +delay,
+  write: !noWrite,
   repoQuery,
   issueAndPrQuery,
   repoFilter,
+  discussionQuery: 'answerChosenAt',
+  discussionFilter: {
+    unanswered: {
+      filter: (discussion) => !!discussion.answerChosenAt,
+      url: 'is:unanswered',
+    },
+  },
   issueFilter: {
     unlabeled: {
       filter: (issue) => issue.labels.length === 0,

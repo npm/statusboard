@@ -1,13 +1,13 @@
-require('dotenv').config()
 
 const log = require('proc-log')
 const Api = require('../lib/api/index.js')
 const logger = require('../lib/logger.js')
 const writeJson = require('../lib/write-json.js')
 const wwwPaths = require('www')
+const config = require('../lib/config.js')
 
 logger()
-const api = Api({ auth: process.env.AUTH_TOKEN })
+const api = Api(config)
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
@@ -17,7 +17,7 @@ const sortKey = (p) => {
 const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
-const exec = async ({ repoQuery }) => {
+const exec = async ({ write, repoQuery }) => {
   const allProjects = await api.searchReposWithManifests(repoQuery)
 
   const maintainedProjects = allProjects.filter((project) => {
@@ -75,11 +75,16 @@ const exec = async ({ repoQuery }) => {
   maintained.sort((a, b) => sortKey(a).localeCompare(sortKey(b)))
 
   log.info('fetch:maintained', `Found ${maintained.length} maintained projects`)
+
+  if (!write) {
+    return JSON.stringify(maintained, null, 2)
+  }
+
   const results = await writeJson([{ path: wwwPaths.maintained, indent: 2 }], maintained)
   return results.map((f) => f.message).join('\n')
 }
 
-exec(require('../lib/config.js'))
+exec(config)
   .then(console.log)
   .catch((err) => {
     process.exitCode = 1

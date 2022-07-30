@@ -1,9 +1,9 @@
 const { pick, partition } = require('lodash')
 const getCoverage = require('./coverage.js')
 const pAll = require('./p-all.js')
-const parseIssuesAndPrs = require('./issuesAndPrs.js')
+const filterCollection = require('./filter-collection.js')
 
-const fetchAllRepoData = async ({ api, delay, project: p, issueAndPrQuery }) => {
+const fetchAllRepoData = async ({ api, project: p, issueAndPrQuery, discussionQuery }) => {
   const { issuesAndPrs, ...result } = await pAll({
     commit: () => api.getCommit(p.owner, p.name, p.path),
     ...(p.path ? {
@@ -14,6 +14,7 @@ const fetchAllRepoData = async ({ api, delay, project: p, issueAndPrQuery }) => 
     } : {
       repo: () => api.getRepo(p.owner, p.name),
       issuesAndPrs: () => api.getAllIssuesAndPullRequests(p.owner, p.name, issueAndPrQuery),
+      discussions: () => api.getDiscussions(p.owner, p.name, discussionQuery),
     }),
     repoPkg: () => api.getPkg(p.owner, p.name, p.path),
     ...(p.pkg ? {
@@ -21,7 +22,7 @@ const fetchAllRepoData = async ({ api, delay, project: p, issueAndPrQuery }) => 
       packument: () => api.packument(p.pkg, { fullMetadata: true }),
       downloads: () => api.downloads(p.pkg).then((d) => d.downloads),
     } : {}),
-  }, { delay })
+  })
 
   if (issuesAndPrs) {
     const [prs, issues] = partition(issuesAndPrs, (item) => Object.hasOwn(item, 'pull_request'))
@@ -38,10 +39,11 @@ module.exports = async ({
   api,
   project,
   history,
-  delay,
   issueFilter,
   prFilter,
+  discussionFilter,
   issueAndPrQuery,
+  discussionQuery,
 }) => {
   const {
     commit,
@@ -53,15 +55,16 @@ module.exports = async ({
     packument,
     downloads,
     status,
-  } = await fetchAllRepoData({ api, delay, project, issueAndPrQuery })
+    discussions,
+  } = await fetchAllRepoData({ api, project, issueAndPrQuery, discussionQuery })
 
   const license = [repoPkg?.license, repo.license?.spdx_id]
     .filter((l) => l && l !== 'NOASSERTION')
 
   const repoUrl = new URL(`/${project.owner}/${project.name}`, 'https://github.com')
-  const fullUrl = new URL(repoUrl)
+  const pathUrl = new URL(repoUrl)
   if (project.path) {
-    fullUrl.pathname += `/tree/${repo.default_branch}/${project.path}`
+    pathUrl.pathname += `/tree/${repo.default_branch}/${project.path}`
   }
 
   const stars = typeof repo.stargazers_count === 'number' ? {
@@ -83,7 +86,7 @@ module.exports = async ({
     path: project.path ?? null,
     // repo data
     defaultBranch: repo.default_branch,
-    url: fullUrl.toString(),
+    url: pathUrl.toString(),
     lastPush: { date: commit.commit.author.date, url: commit.html_url },
     archived: repo.archived,
     status: fullStatus,
@@ -109,13 +112,19 @@ module.exports = async ({
     deprecated: manifest?.deprecated ?? false,
     downloads: downloads ?? null,
     // issues and prs
-    prs: parseIssuesAndPrs({
+    discussions: filterCollection({
+      items: discussions,
+      url: new URL(repo.html_url + `/discussions?discussions_q=`),
+      history: history?.map((p) => p.discussions),
+      filters: discussionFilter,
+    }) ?? null,
+    prs: filterCollection({
       items: prs,
       url: new URL(repo.html_url + `/pulls?q=${issueAndPrQuery}`),
       history: history?.map((p) => p.prs),
       filters: prFilter,
     }) ?? null,
-    issues: parseIssuesAndPrs({
+    issues: filterCollection({
       items: issues,
       url: new URL(repo.html_url + `/issues?q=${issueAndPrQuery}`),
       history: history?.map((p) => p.issues),

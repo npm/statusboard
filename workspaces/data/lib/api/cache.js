@@ -1,4 +1,5 @@
 const log = require('proc-log')
+const timers = require('timers/promises')
 
 // A memory cache for expensive requests like check-runs
 // which can get called for the same commit multiple times
@@ -11,8 +12,10 @@ const cacheKey = (args) => args
   .map((a) => JSON.stringify(a))
   .join('__')
 
-const cacheMethod = (fn) => {
-  CACHE.set(fn, new Map())
+const cacheMethod = (fn, { delay } = {}) => {
+  if (!CACHE.has(fn)) {
+    CACHE.set(fn, new Map())
+  }
 
   return async (...args) => {
     const key = cacheKey(args)
@@ -23,6 +26,8 @@ const cacheMethod = (fn) => {
     }
 
     const res = await fn(...args)
+    // only use delay when fetching from api, not cache
+    delay && await timers.setTimeout(delay)
     CACHE.get(fn).set(key, res)
 
     return res

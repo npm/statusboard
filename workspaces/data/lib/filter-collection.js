@@ -5,8 +5,9 @@ module.exports = ({ items, url, history, filters = {} }) => {
 
   const getUrl = (newQuery = '') => {
     const u = new URL(url.toString())
-    const currentQuery = u.searchParams.get('q') || ''
-    u.searchParams.set('q', `${currentQuery} ${newQuery}`.trim())
+    const [key] = [...u.searchParams.keys()]
+    const currentQuery = u.searchParams.get(key) || ''
+    u.searchParams.set(key, `${currentQuery} ${newQuery}`.trim())
     return u.toString()
   }
 
@@ -43,13 +44,13 @@ module.exports = ({ items, url, history, filters = {} }) => {
       if (!data.history) {
         data.history = []
       }
-      data.history.push(update.count)
+      data.history.push(update?.count ?? null)
       Object.entries(data).forEach(([k, v]) => {
         if (v && Object.hasOwn(v, 'count')) {
           if (!data[k].history) {
             data[k].history = []
           }
-          data[k].history.push(update[k].count)
+          data[k].history.push(update?.[k]?.count ?? null)
         }
       })
     }

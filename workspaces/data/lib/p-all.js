@@ -1,8 +1,4 @@
-const timers = require('timers/promises')
-
-module.exports = async (promises, { delay } = {}) => {
-  const wait = () => delay ? timers.setTimeout(delay) : Promise.resolve()
-
+module.exports = async (promises) => {
   const result = []
 
   const isObj = typeof promises === 'object' && !Array.isArray(promises)
@@ -13,13 +9,11 @@ module.exports = async (promises, { delay } = {}) => {
       const [key, value] = p
       if (typeof value === 'function') {
         result.push(await value().then(v => [key, v]))
-        await wait()
       } else {
         result.push([key, null])
       }
     } else {
       result.push(await p())
-      await wait()
     }
   }
 
