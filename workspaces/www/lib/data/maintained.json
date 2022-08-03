@@ -472,6 +472,12 @@
     "pkg": "@npmcli/pull"
   },
   {
+    "id": "npm_query",
+    "name": "query",
+    "owner": "npm",
+    "pkg": "@npmcli/query"
+  },
+  {
     "id": "npm_read",
     "name": "read",
     "owner": "npm",
