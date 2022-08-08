@@ -53,12 +53,6 @@
     "pkg": "cmd-shim"
   },
   {
-    "id": "npm_config",
-    "name": "config",
-    "owner": "npm",
-    "pkg": "@npmcli/config"
-  },
-  {
     "id": "npm_create-oss",
     "name": "create-oss",
     "owner": "npm",
@@ -126,12 +120,6 @@
     "name": "hosted-git-info",
     "owner": "npm",
     "pkg": "hosted-git-info"
-  },
-  {
-    "id": "npm_ignore-walk",
-    "name": "ignore-walk",
-    "owner": "npm",
-    "pkg": "ignore-walk"
   },
   {
     "id": "npm_infer-owner",
@@ -265,12 +253,6 @@
     "pkg": "@npmcli/map-workspaces"
   },
   {
-    "id": "npm_metavuln-calculator",
-    "name": "metavuln-calculator",
-    "owner": "npm",
-    "pkg": "@npmcli/metavuln-calculator"
-  },
-  {
     "id": "npm_minify-registry-metadata",
     "name": "minify-registry-metadata",
     "owner": "npm",
@@ -309,12 +291,6 @@
     "id": "npm_node",
     "name": "node",
     "owner": "npm"
-  },
-  {
-    "id": "npm_node-fetch-npm",
-    "name": "node-fetch-npm",
-    "owner": "npm",
-    "pkg": "node-fetch-npm"
   },
   {
     "id": "npm_node-gyp",
@@ -442,12 +418,6 @@
     "pkg": "parse-conflict-json"
   },
   {
-    "id": "npm_proc-log",
-    "name": "proc-log",
-    "owner": "npm",
-    "pkg": "proc-log"
-  },
-  {
     "id": "npm_proggy",
     "name": "proggy",
     "owner": "npm",
@@ -488,12 +458,6 @@
     "name": "read-cmd-shim",
     "owner": "npm",
     "pkg": "read-cmd-shim"
-  },
-  {
-    "id": "npm_read-package-json",
-    "name": "read-package-json",
-    "owner": "npm",
-    "pkg": "read-package-json"
   },
   {
     "id": "npm_read-package-json-fast",
@@ -600,11 +564,5 @@
     "name": "wrappy",
     "owner": "npm",
     "pkg": "wrappy"
-  },
-  {
-    "id": "npm_write-file-atomic",
-    "name": "write-file-atomic",
-    "owner": "npm",
-    "pkg": "write-file-atomic"
   }
 ]
