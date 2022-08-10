@@ -36,7 +36,7 @@ CI: `gh workflow run fetch-data.yml`
 
 Serve: `npm run dev -w www`
 
-Publish: The site is published on all pushes to `main` that touch files in `workspaces/www/lib`.
+Publish: The site is published to GitHub Pages on all pushes to `main`.
 
 ### Forking
 
