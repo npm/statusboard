@@ -1,8 +1,11 @@
 require('dotenv').config()
 
 const { parseArgs } = require('util')
-const { re, tokens } = require('semver')
+const { re, src, tokens } = require('semver')
 const getVersion = (str = '') => str.match(re[tokens.FULLPLAIN])?.[0]
+
+// workspace releases include a context between the word release and the version
+const isRootRelease = (str = '') => str.match(new RegExp(`: release ${src[tokens.FULLPLAIN]}$`))
 
 const {
   // add a delay between requests in CI since the built in GH tokens
@@ -63,7 +66,10 @@ module.exports = {
   prFilter: {
     release: {
       find: (issue) => {
-        const match = issue.labels.some(l => l.name === 'autorelease: pending')
+        const match = issue.labels.some(l => l.name === 'autorelease: pending') &&
+          // only include root releases for now
+          // TODO: workspace issue and pr management/filtering
+          isRootRelease(issue.title)
         return match && {
           url: issue.html_url,
           version: getVersion(issue.title) || issue.title,
