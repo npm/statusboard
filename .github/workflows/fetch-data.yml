@@ -25,8 +25,18 @@ jobs:
       - run: npm run fetch:data -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check for changes
+        id: status
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::set-output name=has_changes::1"
+          fi
       - name: Commit changes
+        if: steps.status.outputs.has_changes == '1'
         run: |
           git add .
-          git commit -m "chore: update data" || true
+          git commit -m "chore: update data"
           git push origin main
+      - name: Call publish workflow
+        if: steps.status.outputs.has_changes == '1'
+        uses: ./.github/workflows/publish.yml
