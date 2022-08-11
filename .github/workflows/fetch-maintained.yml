@@ -8,6 +8,8 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
       - uses: actions/checkout@v3
       - name: Setup git user
@@ -25,8 +27,15 @@ jobs:
       - run: npm run fetch:maintained -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check for changes
+        id: status
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::set-output name=has_changes::1"
+          fi
       - name: Commit changes
+        if: steps.status.outputs.has_changes == '1'
         run: |
           git add .
-          git commit -m "chore: update maintained projects" || true
+          git commit -m "chore: update maintained projects"
           git push origin main
