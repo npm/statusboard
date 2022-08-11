@@ -14,4 +14,4 @@ jobs:
           ls -lha .github || true
           ls -lha .github/workflows || true
       - name: Call publish workflow
-        uses: ./.github/workflows/publish.yml@main
+        uses: npm/statusboard/.github/workflows/publish.yml@main
