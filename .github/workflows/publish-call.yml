@@ -17,4 +17,4 @@ jobs:
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
       - name: Call publish workflow
-        uses: ./.github/workflows/publish.yml
+        uses: ./.github/workflows/publish.yml@main
