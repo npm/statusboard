@@ -1,0 +1,21 @@
+name: Test out publish call
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - name: Update npm to latest
+        run: npm i --prefer-online --no-fund --no-audit -g npm@latest
+      - run: npm -v
+      - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
+      - name: Call publish workflow
+        if: steps.status.outputs.has_changes == '1'
+        uses: ./.github/workflows/publish.yml

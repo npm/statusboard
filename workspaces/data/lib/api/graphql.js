@@ -22,8 +22,6 @@ module.exports = ({ auth }) => {
         after: pageInfo.endCursor,
       }).then(r => get(r, queryName))
 
-      console.log(res)
-
       nodes.push(...res.nodes)
 
       if (res.pageInfo.hasNextPage) {
