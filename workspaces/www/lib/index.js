@@ -17,8 +17,7 @@ $(async () => {
 
   const built = document.querySelector('#built')
   built.querySelector('a').innerHTML = util.date.format(createdAt)
-  built.setAttribute('title', createdAt)
-  built.setAttribute('data-sha', process.env.GITHUB_SHA)
+  built.setAttribute('title', `${createdAt} ${process.env.HEAD_SHA}`)
 
   $.fn.dataTableExt.classes.sFilterInput = 'form-control'
 

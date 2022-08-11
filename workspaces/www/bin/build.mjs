@@ -3,12 +3,15 @@ import fs from 'fs'
 import { dirname, join, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { createServer } from 'http-server'
+import { execSync } from 'child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const libDir = resolve(__dirname, '../lib')
 const buildDir = resolve(__dirname, '../build')
 
 const copy = (f) => fs.copyFileSync(join(libDir, f), join(buildDir, f))
+
+const sha = () => execSync('git rev-parse HEAD').toString().trim()
 
 const { dev, prod } = process.argv.slice(2).reduce((acc, k) => {
   acc[k.slice(2)] = true
@@ -64,7 +67,7 @@ const config = {
     },
   }),
   define: {
-    'process.env.GITHUB_SHA': JSON.stringify(process.env.GITHUB_SHA ?? null),
+    'process.env.HEAD_SHA': JSON.stringify(sha()),
   },
   plugins: Object.entries(plugins).map(([name, setup]) => ({ name, setup })),
 }
