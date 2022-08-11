@@ -64,7 +64,7 @@ const config = {
     },
   }),
   define: {
-    'process.env.GITHUB_SHA': process.env.GITHUB_SHA ?? null,
+    'process.env.GITHUB_SHA': JSON.stringify(process.env.GITHUB_SHA ?? null),
   },
   plugins: Object.entries(plugins).map(([name, setup]) => ({ name, setup })),
 }
