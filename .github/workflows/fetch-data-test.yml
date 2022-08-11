@@ -1,0 +1,42 @@
+name: Test Pushing a commit and publishing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.status.outputs.has_changes }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup git user
+        run: |
+          git config --global user.email "npm-cli+bot@github.com"
+          git config --global user.name "npm CLI robot"
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - name: Update npm to latest
+        run: npm i --prefer-online --no-fund --no-audit -g npm@latest
+      - run: npm -v
+      - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
+      - run: npm pkg set date=$(date +%s)
+      - name: Check for changes
+        id: status
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::set-output name=has_changes::1"
+          fi
+      - name: Commit changes
+        if: steps.status.outputs.has_changes == '1'
+        run: |
+          git add .
+          git commit -m "chore: update timestamp"
+          git push origin main
+
+  publish:
+    needs: fetch
+    if: needs.fetch.outputs.has_changes == '1'
+    uses: ./.github/workflows/publish.yml

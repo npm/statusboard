@@ -63,6 +63,9 @@ const config = {
       onRebuild: (err) => !err && console.log('Rebuilt'),
     },
   }),
+  define: {
+    'process.env.GITHUB_SHA': process.env.GITHUB_SHA ?? null,
+  },
   plugins: Object.entries(plugins).map(([name, setup]) => ({ name, setup })),
 }
 

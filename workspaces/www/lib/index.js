@@ -15,9 +15,10 @@ $(async () => {
   const columns = getColumns(projects)
   const trends = getTrends(projects, columns, { default: TREND_OPTIONS[0] })
 
-  const built = document.querySelector('#built a')
-  built.innerHTML = util.date.format(createdAt)
+  const built = document.querySelector('#built')
+  built.querySelector('a').innerHTML = util.date.format(createdAt)
   built.setAttribute('title', createdAt)
+  built.setAttribute('data-sha', process.env.GITHUB_SHA)
 
   $.fn.dataTableExt.classes.sFilterInput = 'form-control'
 
