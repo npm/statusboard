@@ -8,10 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          git status --verbose
-          ls -lha || true
-          ls -lha .github || true
-          ls -lha .github/workflows || true
-      - name: Call publish workflow
-        uses: npm/statusboard/.github/workflows/publish.yml@main
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: fetch
+    uses: npm/statusboard/.github/workflows/publish.yml@main
