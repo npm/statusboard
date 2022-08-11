@@ -7,8 +7,12 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+    - name: Check for changes
+      id: status
+      run: echo "::set-output name=has_changes::1"
 
   publish:
     needs: fetch
+    if: needs.fetch.outputs.has_changes == '1'
     uses: ./.github/workflows/publish.yml
