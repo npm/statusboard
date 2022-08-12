@@ -10,8 +10,8 @@ logger()
 const main = async ({ migrate }) => {
   const dir = wwwPaths.dailyDir
 
-  const migrateData = ({ data, ...rest }) =>
-    JSON.stringify({ data: data.map(migrate), ...rest }, null, 2)
+  const migrateData = (data) =>
+    JSON.stringify(data.map(migrate), null, 2)
 
   const allData = await getAllData({ dir })
 

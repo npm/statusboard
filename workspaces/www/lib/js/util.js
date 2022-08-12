@@ -2,6 +2,7 @@ import semverParse from 'semver/functions/parse'
 import semverSubset from 'semver/ranges/subset'
 import SemverRange from 'semver/classes/range'
 import semverSort from 'semver/functions/rsort'
+import { formatDistanceToNowStrict } from 'date-fns'
 
 export const semver = {
   parse: semverParse,
@@ -29,6 +30,13 @@ export const date = {
       range.push(new Date(range[0] - i * DAY))
     }
     return range.reverse().map((d) => date.format(d))
+  },
+  fromNow: (d) => {
+    try {
+      return formatDistanceToNowStrict(new Date(d)) + ' ago'
+    } catch {
+      return 'Unknown'
+    }
   },
 }
 

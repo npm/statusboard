@@ -44,16 +44,20 @@ header {
   display: flex;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(134, 131, 131, 0.2);
+  justify-content: space-between;
 }
 
 header a,
 header a:hover,
 header a:active {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
   text-decoration: none;
   line-height: 100%;
   color: rgb(65, 56, 68);
+}
+
+header a.badge {
+  display: inline;
 }
 
 header h2 {

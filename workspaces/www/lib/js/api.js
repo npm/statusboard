@@ -1,7 +1,11 @@
-import data from '../data/latest.json'
+import dataPath from '../data/latest.json'
+import metadataPath from '../data/metadata.json'
 
 export default async ({ fakeHistory } = {}) => {
-  const { data: projects, created_at: createdAt } = await fetch(data).then(r => r.json())
+  const [projects, metadata] = await Promise.all([
+    fetch(dataPath).then(r => r.json()),
+    fetch(metadataPath).then(r => r.json()),
+  ])
 
   if (fakeHistory) {
     // just for visual testing
@@ -17,8 +21,5 @@ export default async ({ fakeHistory } = {}) => {
     })
   }
 
-  return {
-    projects,
-    createdAt,
-  }
+  return { projects, metadata }
 }

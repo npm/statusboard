@@ -2,6 +2,7 @@
   "name": "data",
   "version": "1.0.0",
   "private": true,
+  "main": "lib/index.js",
   "scripts": {
     "fetch:data": "node ./bin/fetch-data.js",
     "fetch:maintained": " node ./bin/fetch-maintained.js",

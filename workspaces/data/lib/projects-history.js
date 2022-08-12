@@ -10,7 +10,7 @@ module.exports = async ({ projects, dir, filter }) => {
   }, {})
 
   for (const historicalProjects of historyData) {
-    for (const project of historicalProjects.data) {
+    for (const project of historicalProjects) {
       if (Object.hasOwn(projectResults, project.id)) {
         projectResults[project.id].push(project)
       }

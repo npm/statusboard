@@ -6,18 +6,17 @@ import getColumns from './js/columns.js'
 import getTrends from './js/trends.js'
 import getData from './js/api.js'
 import DataTable from './js/datatable.js'
+import updateMetadata from './js/metadata.js'
 
 DataTable($)
 const TREND_OPTIONS = [7, 30, 90]
 
 $(async () => {
-  const { projects, createdAt } = await getData()
+  const { projects, metadata } = await getData()
   const columns = getColumns(projects)
   const trends = getTrends(projects, columns, { default: TREND_OPTIONS[0] })
 
-  const built = document.querySelector('#built')
-  built.querySelector('a').innerHTML = util.date.format(createdAt)
-  built.setAttribute('title', `${createdAt} ${process.env.HEAD_SHA}`)
+  updateMetadata(document.querySelector('#built'), metadata)
 
   $.fn.dataTableExt.classes.sFilterInput = 'form-control'
 
