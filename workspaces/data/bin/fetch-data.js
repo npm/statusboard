@@ -61,17 +61,28 @@ const writeData = async ({ write, repoFilter, ...restConfig }) => {
   return results.map((f) => f.message).join('\n')
 }
 
-const main = async (retries = 1) => {
+const main = async (currentRun = 0) => {
+  currentRun++
+
+  log.info('='.repeat(80))
+  log.info('='.repeat(80))
+  log.info(`Starting: run number ${currentRun} at ${new Date().toISOString()}`)
+  log.info('='.repeat(80))
+  log.info('='.repeat(80))
+
   try {
     console.log(await writeData(config))
   } catch (err) {
     log.error(err)
 
-    if (retries <= 2) {
-      retries++
-      const retryDelay = config.delay ? 1000 * 60 * 2 : 0
-      log.warn(`Retry number ${retries} fetch-data script in ${retryDelay}ms`)
-      return timers.setTimeout(retryDelay).then(() => main(retries))
+    if (currentRun <= 5) {
+      const retryDelay = config.delay ? 1000 * 60 * 10 : 0
+      log.warn('='.repeat(80))
+      log.warn('='.repeat(80))
+      log.warn(`Retrying: run number ${currentRun} fetch-data script in ${retryDelay}ms`)
+      log.warn('='.repeat(80))
+      log.warn('='.repeat(80))
+      return timers.setTimeout(retryDelay).then(() => main(currentRun))
     }
 
     process.exitCode = 1
