@@ -15,5 +15,6 @@ module.exports = {
   dailyDir,
   latest: path.join(dir, 'latest.json'),
   maintained: path.join(dir, 'maintained.json'),
+  metadata: path.join(dir, 'metadata.json'),
   daily: (d) => path.join(dailyDir, getDate(d)),
 }

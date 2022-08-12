@@ -1,9 +1,11 @@
+import 'dotenv/config'
 import esbuild from 'esbuild'
 import fs from 'fs'
 import { dirname, join, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { createServer } from 'http-server'
 import { execSync } from 'child_process'
+import { getWorkflowId } from 'data'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const libDir = resolve(__dirname, '../lib')
@@ -67,7 +69,11 @@ const config = {
     },
   }),
   define: {
-    'process.env.HEAD_SHA': JSON.stringify(sha()),
+    'process.env.BUILD_CONTEXT': JSON.stringify({
+      sha: sha(),
+      date: new Date(),
+      id: getWorkflowId(),
+    }),
   },
   plugins: Object.entries(plugins).map(([name, setup]) => ({ name, setup })),
 }

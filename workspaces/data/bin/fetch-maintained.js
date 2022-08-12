@@ -5,9 +5,11 @@ const logger = require('../lib/logger.js')
 const writeJson = require('../lib/write-json.js')
 const wwwPaths = require('www')
 const config = require('../lib/config.js')
+const updateMetadata = require('../lib/update-metadata.js')
 
 logger()
 const api = Api(config)
+const metadata = updateMetadata(__filename)
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
@@ -17,7 +19,16 @@ const sortKey = (p) => {
 const projectId = ({ repo }) =>
   `${repo.owner}_${repo.name}${repo.path ? `_${repo.path.replace(/\//g, '_')}` : ''}`
 
+const getCurrentMaintained = () => {
+  try {
+    return require(wwwPaths.maintained).length
+  } catch {
+    return 0
+  }
+}
+
 const exec = async ({ write, repoQuery }) => {
+  const currentCount = getCurrentMaintained()
   const allProjects = await api.searchReposWithManifests(repoQuery)
 
   const maintainedProjects = allProjects.filter((project) => {
@@ -81,12 +92,19 @@ const exec = async ({ write, repoQuery }) => {
   }
 
   const results = await writeJson([{ path: wwwPaths.maintained, indent: 2 }], maintained)
-  return results.map((f) => f.message).join('\n')
+
+  return {
+    update: maintained.length - currentCount,
+    message: results.map((f) => f.message).join('\n'),
+  }
 }
 
 exec(config)
-  .then(console.log)
+  .then((res) => {
+    console.log(res.message)
+    return metadata.save({ status: 'success', update: res.update })
+  })
   .catch((err) => {
-    process.exitCode = 1
     log.error(err)
+    return metadata.save({ status: 'error' })
   })

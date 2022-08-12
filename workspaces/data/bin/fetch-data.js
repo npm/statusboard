@@ -10,8 +10,10 @@ const getProjectsHistory = require('../lib/projects-history.js')
 const pAll = require('../lib/p-all.js')
 const wwwPaths = require('www')
 const config = require('../lib/config.js')
+const updateMetadata = require('../lib/update-metadata.js')
 
 logger()
+const metadata = updateMetadata(__filename)
 const api = Api(config)
 
 const getFilter = (rawFilter) => {
@@ -31,8 +33,7 @@ const writeData = async ({ write, repoFilter, ...restConfig }) => {
   // Make it easier to test by only fetching a subset of the projects
   const projects = repoFilter ? rawProjects.filter(getFilter(repoFilter)) : rawProjects
 
-  const now = new Date()
-  const dailyFile = wwwPaths.daily(now)
+  const dailyFile = wwwPaths.daily(metadata.date)
 
   const projectsHistory = await getProjectsHistory({
     projects,
@@ -47,7 +48,7 @@ const writeData = async ({ write, repoFilter, ...restConfig }) => {
     ...restConfig,
   })))
 
-  const contents = { data: projectsData, created_at: now.toISOString() }
+  const contents = projectsData
 
   if (!write) {
     return JSON.stringify(contents, null, 2)
@@ -58,7 +59,9 @@ const writeData = async ({ write, repoFilter, ...restConfig }) => {
     { path: wwwPaths.latest, indent: 2 },
   ], contents)
 
-  return results.map((f) => f.message).join('\n')
+  return {
+    message: results.map((f) => f.message).join('\n'),
+  }
 }
 
 const main = async (currentRun = 0) => {
@@ -71,7 +74,7 @@ const main = async (currentRun = 0) => {
   log.info('='.repeat(80))
 
   try {
-    console.log(await writeData(config))
+    return await writeData(config)
   } catch (err) {
     log.error(err)
 
@@ -85,8 +88,15 @@ const main = async (currentRun = 0) => {
       return timers.setTimeout(retryDelay).then(() => main(currentRun))
     }
 
-    process.exitCode = 1
+    throw err
   }
 }
 
 main()
+  .then((res) => {
+    console.log(res.message)
+    return metadata.save({ status: 'success' })
+  })
+  .catch(() => {
+    return metadata.save({ status: 'error' })
+  })

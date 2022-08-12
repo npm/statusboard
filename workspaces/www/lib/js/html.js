@@ -13,11 +13,14 @@ export const na = 'N/A'
 
 export const icon = (name) => `<i class="bi-${name}"></i>`
 
-export const link = ({ class: c = '', href, text }) => `<a href="${href}" class="${c}">${text}</a>`
+export const link = ({ class: c = '', href, text, title }) =>
+  `<a href="${href}" class="${c}" ${title ? `title="${title}"` : ''}>${text}</a>`
 
-export const badge = ({ type, href, text }) => {
+export const badge = ({ type, href, text, title }) => {
   const classes = `badge badge-dt badge-${type}`
-  return href ? link({ class: classes, href, text }) : `<div class="${classes}">${text}</div>`
+  return href
+    ? link({ class: classes, href, text, title })
+    : `<div class="${classes}" ${title ? `title="${title}"` : ''}>${text}</div>`
 }
 
 export const cell = (opts) => opts.type ? badge(opts) : opts.href ? link(opts) : opts.text
