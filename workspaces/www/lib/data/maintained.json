@@ -247,12 +247,6 @@
     "pkg": "libnpmversion"
   },
   {
-    "id": "npm_lint",
-    "name": "lint",
-    "owner": "npm",
-    "pkg": "@npmcli/lint"
-  },
-  {
     "id": "npm_make-fetch-happen",
     "name": "make-fetch-happen",
     "owner": "npm",
