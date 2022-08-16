@@ -2,6 +2,7 @@ const { Octokit } = require('@octokit/rest')
 const { retry } = require('@octokit/plugin-retry')
 const { throttling } = require('@octokit/plugin-throttling')
 const log = require('proc-log')
+const { groupBy, orderBy } = require('lodash')
 
 module.exports = ({ auth }) => {
   const REST = new (Octokit.plugin(retry, throttling))({
@@ -53,14 +54,24 @@ module.exports = ({ auth }) => {
   const getStatus = async (owner, name, ref) => {
     log.verbose(`rest:repo:status`, `${owner}/${name}#${ref}`)
 
-    const checkRuns = await REST.paginate(REST.checks.listForRef, {
+    const allCheckRuns = await REST.paginate(REST.checks.listForRef, {
       owner,
       repo: name,
       ref,
       per_page: 100,
     })
 
-    const failures = ['action_required', 'cancelled', 'failure', 'stale', 'timed_out']
+    // For some of our repos that don't get very many commits, we still run
+    // a lot of scheduled actions against them. This reduces a status to the
+    // latest check for each run name (eg, 'test (12.13.0, windows-latest, cmd)')
+    const runsByName = groupBy(allCheckRuns, 'name')
+    const checkRuns = Object.values(runsByName).reduce((acc, runs) => {
+      const [latestRun] = orderBy(runs, 'completed_at', 'desc')
+      acc.push(latestRun)
+      return acc
+    }, [])
+
+    const failures = ['action_required', 'cancelled', 'failure', 'stale', 'timed_out', null]
     const statuses = { neutral: false, success: false, skipped: false }
 
     for (const checkRun of checkRuns) {
