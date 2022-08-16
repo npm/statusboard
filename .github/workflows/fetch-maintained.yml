@@ -3,7 +3,8 @@ name: Fetch Maintained Projects
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"
+    # "Everyday at 11:00 UTC (4:00 PT)" https://crontab.guru/#11*_*_*
+    - cron: "0 11 * * *"
 
 jobs:
   fetch:
