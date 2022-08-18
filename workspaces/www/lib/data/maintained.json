@@ -305,12 +305,6 @@
     "owner": "npm"
   },
   {
-    "id": "npm_node-fetch-npm",
-    "name": "node-fetch-npm",
-    "owner": "npm",
-    "pkg": "node-fetch-npm"
-  },
-  {
     "id": "npm_node-gyp",
     "name": "node-gyp",
     "owner": "npm",
