@@ -6,6 +6,25 @@ export const keys = {
   id: 'id',
 }
 
+export const overrides = {
+  'status.conclusion': (metadata, data, row, ...args) => {
+    if (row.name === 'statusboard') {
+      const fetchData = metadata['fetch-data']
+      const anyError = Object.values(metadata).find(d => d.error)
+
+      const status = anyError ? 'failure' : 'success'
+      const url = `${row.url}/actions/runs/${anyError?.id || fetchData?.id}`
+
+      // Return same shape as the render function in datatables is expecting
+      return [
+        status,
+        { ...row, status: { status, url } },
+        ...args,
+      ]
+    }
+  },
+}
+
 // this assumes that the repo also maintains a copy of template-oss
 // this is not portable but for now the template/node version checks
 // can be changed here or removed in the columns.js file

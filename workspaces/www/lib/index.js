@@ -13,7 +13,7 @@ const TREND_OPTIONS = [7, 30, 90]
 
 $(async () => {
   const { projects, metadata } = await getData()
-  const columns = getColumns(projects)
+  const columns = getColumns(projects, metadata)
   const trends = getTrends(projects, columns, { default: TREND_OPTIONS[0] })
 
   updateMetadata(document.querySelector('#built'), metadata)

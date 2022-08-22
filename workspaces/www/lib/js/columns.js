@@ -359,7 +359,7 @@ const getColumns = (rows) => {
   }
 }
 
-export default (rows) => Object.entries(getColumns(rows))
+export default (rows, meta) => Object.entries(getColumns(rows))
 // Make the datatables api a little nicer for things that we want to do
 // to all the columns
   .map(([key, {
@@ -376,7 +376,8 @@ export default (rows) => Object.entries(getColumns(rows))
     // use our special render function to avoid having to check
     // the type everywhere
     render: (data, type, ...args) => {
-      const res = render(data, ...args)
+      const renderData = util.hasOwn($$.overrides, key) && $$.overrides[key](meta, data, ...args)
+      const res = render(...(renderData || [data, ...args]))
       if (util.hasOwn(res, 'filter') && type === 'filter') {
         return res.filter
       }
