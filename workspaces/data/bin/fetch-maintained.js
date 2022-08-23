@@ -27,13 +27,21 @@ const getCurrentMaintained = () => {
   }
 }
 
-const exec = async ({ write, repoQuery }) => {
+const exec = async ({ write, repoQuery, repoFilter }) => {
   const currentCount = getCurrentMaintained()
   const allProjects = await api.searchReposWithManifests(repoQuery)
 
   const maintainedProjects = allProjects.filter((project) => {
-    const logReason = (reason) =>
-      log.info('fetch:maintained', `Not including ${projectId(project)} due to: ${reason}`)
+    const logReason = (reason, include) => log.info(
+      'fetch:maintained',
+      `${include ? '' : 'not'} including ${projectId(project)} due to: ${reason}`.trim()
+    )
+
+    const filterResult = repoFilter(project)
+    if (typeof filterResult === 'boolean') {
+      logReason('filter config', filterResult)
+      return filterResult
+    }
 
     if (project.repo.isWorkspace && !project.manifest && project.pkg?.private) {
       logReason('private workspace')

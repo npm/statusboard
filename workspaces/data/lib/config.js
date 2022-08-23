@@ -13,7 +13,6 @@ const {
   delay = process.env.CI ? 1000 : 0,
   repoQuery = 'org:npm topic:npm-cli fork:true',
   issueAndPrQuery = 'is:open',
-  repoFilter = null,
   noWrite = false,
 } = parseArgs({
   options: {
@@ -21,9 +20,6 @@ const {
       type: 'string',
     },
     repoQuery: {
-      type: 'string',
-    },
-    repoFilter: {
       type: 'string',
     },
     issueAndPrQuery: {
@@ -41,7 +37,8 @@ module.exports = {
   write: !noWrite,
   repoQuery,
   issueAndPrQuery,
-  repoFilter,
+  // Return null to fallback to other filters
+  repoFilter: (p) => p.repo.name === 'node' ? false : null,
   discussionQuery: 'answerChosenAt',
   discussionFilter: {
     unanswered: {

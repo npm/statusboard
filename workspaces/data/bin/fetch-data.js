@@ -16,22 +16,8 @@ logger()
 const metadata = updateMetadata(__filename)
 const api = Api(config)
 
-const getFilter = (rawFilter) => {
-  if (!isNaN(rawFilter) && !isNaN(parseFloat(rawFilter))) {
-    return (_, index) => index < +rawFilter
-  }
-
-  const names = rawFilter.split(',').map((name) => name.trim().toLowerCase())
-  return (project) => [project.pkg, project.name]
-    .filter(Boolean)
-    .map(t => t.toLowerCase())
-    .some((t) => names.includes(t))
-}
-
-const writeData = async ({ write, repoFilter, ...restConfig }) => {
-  const rawProjects = require(wwwPaths.maintained)
-  // Make it easier to test by only fetching a subset of the projects
-  const projects = repoFilter ? rawProjects.filter(getFilter(repoFilter)) : rawProjects
+const writeData = async ({ write, ...restConfig }) => {
+  const projects = require(wwwPaths.maintained)
 
   const dailyFile = wwwPaths.daily(metadata.date)
 
