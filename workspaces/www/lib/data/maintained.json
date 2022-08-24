@@ -300,11 +300,6 @@
     "owner": "npm"
   },
   {
-    "id": "npm_node",
-    "name": "node",
-    "owner": "npm"
-  },
-  {
     "id": "npm_node-gyp",
     "name": "node-gyp",
     "owner": "npm",
