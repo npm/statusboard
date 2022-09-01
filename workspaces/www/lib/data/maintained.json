@@ -491,6 +491,12 @@
     "pkg": "readdir-scoped-modules"
   },
   {
+    "id": "npm_release-please",
+    "name": "release-please",
+    "owner": "npm",
+    "pkg": "release-please"
+  },
+  {
     "id": "npm_rfcs",
     "name": "rfcs",
     "owner": "npm"
