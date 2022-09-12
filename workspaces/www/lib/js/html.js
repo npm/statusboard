@@ -26,3 +26,7 @@ export const badge = ({ type, href, text, title }) => {
 export const cell = (opts) => opts.type ? badge(opts) : opts.href ? link(opts) : opts.text
 
 export const noData = (opts) => cell({ text: na, ...opts })
+
+export const title = (text, url) => {
+  return `<h2>${url ? `<a href="${url}">${text}</a>` : text}</h2>`
+}

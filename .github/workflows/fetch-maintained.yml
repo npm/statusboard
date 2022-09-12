@@ -28,6 +28,8 @@ jobs:
       - run: npm run fetch:maintained -w data
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORIES_QUERY: "user:Eomm is:public"
+          ISSUES_QUERY: "is:open"
       - name: Check for changes
         id: status
         run: |

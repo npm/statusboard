@@ -8,8 +8,6 @@
     "fetch:maintained": " node ./bin/fetch-maintained.js",
     "test": "tap",
     "lint": "eslint \"**/*.js\"",
-    "postlint": "template-oss-check",
-    "template-oss-apply": "template-oss-apply --force",
     "lintfix": "npm run lint -- --fix",
     "preversion": "npm test",
     "postversion": "git push origin --follow-tags",
@@ -18,16 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/statusboard.git",
+    "url": "https://github.com/Eomm/statusboardify.git",
     "directory": "workspaces/data"
   },
   "keywords": [],
   "author": "GitHub Inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/npm/statusboard/issues"
+    "url": "https://github.com/Eomm/statusboardify/issues"
   },
-  "homepage": "https://github.com/npm/statusboard#readme",
+  "homepage": "https://github.com/Eomm/statusboardify#readme",
   "dependencies": {
     "@octokit/graphql": "^5.0.0",
     "@octokit/plugin-retry": "^3.0.9",

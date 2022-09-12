@@ -7,6 +7,7 @@ import getTrends from './js/trends.js'
 import getData from './js/api.js'
 import DataTable from './js/datatable.js'
 import updateMetadata from './js/metadata.js'
+import whiteLabel from './js/whitelabel.js'
 
 DataTable($)
 const TREND_OPTIONS = [7, 30, 90]
@@ -17,6 +18,7 @@ $(async () => {
   const trends = getTrends(projects, columns, { default: TREND_OPTIONS[0] })
 
   updateMetadata(document.querySelector('#built'), metadata)
+  whiteLabel(document.querySelector('#whitelabel'))
 
   $.fn.dataTableExt.classes.sFilterInput = 'form-control'
 

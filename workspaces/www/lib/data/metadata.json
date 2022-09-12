@@ -1,13 +1,11 @@
 {
-  "fetch-maintained": {
-    "update": 0,
-    "id": "2984142984",
-    "success": "2022-09-03T11:01:18.928Z",
-    "error": null
-  },
   "fetch-data": {
-    "id": "2984317402",
-    "success": "2022-09-03T12:06:04.519Z",
+    "error": null,
+    "success": "2022-09-12T19:30:41.812Z"
+  },
+  "fetch-maintained": {
+    "update": 2,
+    "success": "2022-09-12T19:29:31.861Z",
     "error": null
   }
 }

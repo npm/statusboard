@@ -20,3 +20,4 @@
 !/lib/
 !/package.json
 !/package-lock.json
+!/.env.sample

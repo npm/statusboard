@@ -4,7 +4,7 @@ import * as util from './util.js'
 
 const icon = (error) => error ? EL.icon('x-circle') : EL.icon('check-circle')
 
-const getUrl = (id) => id ? `https://github.com/npm/statusboard/actions/runs/${id}` : null
+const getUrl = (id) => id ? `${process.env.PROJECT_REPOSITORY}/actions/runs/${id}` : null
 
 const updateMetadata = (el, { 'fetch-data': fetchData, 'fetch-maintained': fetchMaintained }) => {
   const BUILD_CONTEXT = process.env.BUILD_CONTEXT

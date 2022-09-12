@@ -5,15 +5,15 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/statusboard.git"
+    "url": "https://github.com/Eomm/statusboardify.git"
   },
   "keywords": [],
   "author": "GitHub Inc.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/npm/statusboard/issues"
+    "url": "https://github.com/Eomm/statusboardify/issues"
   },
-  "homepage": "https://github.com/npm/statusboard#readme",
+  "homepage": "https://github.com/Eomm/statusboardify#readme",
   "workspaces": [
     "workspaces/*"
   ],
@@ -39,7 +39,6 @@
   "scripts": {
     "template-oss-apply": "template-oss-apply --force",
     "lint": "eslint \"**/*.js\"",
-    "postlint": "template-oss-check",
     "lintfix": "npm run lint -- --fix",
     "preversion": "npm test",
     "postversion": "git push origin --follow-tags",

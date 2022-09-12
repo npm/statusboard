@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import esbuild from 'esbuild'
+import envFilePlugin from 'esbuild-envfile-plugin'
 import fs from 'fs'
 import { dirname, join, resolve } from 'path'
 import { fileURLToPath } from 'url'
@@ -21,6 +22,7 @@ const { dev, prod } = process.argv.slice(2).reduce((acc, k) => {
 }, {})
 
 const plugins = {
+  env: envFilePlugin.setup,
   server: (b) => {
     if (!dev) {
       return
@@ -69,6 +71,9 @@ const config = {
     },
   }),
   define: {
+    'process.env.PROJECT_REPOSITORY': JSON.stringify(process.env.PROJECT_REPOSITORY),
+    'process.env.SITE_NAME': JSON.stringify(process.env.SITE_NAME),
+    'process.env.SITE_URL': JSON.stringify(process.env.SITE_URL),
     'process.env.BUILD_CONTEXT': JSON.stringify({
       sha: sha(),
       date: new Date(),
