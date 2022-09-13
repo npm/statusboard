@@ -124,6 +124,11 @@
     "pkg": "fastify-schema-constraint"
   },
   {
+    "id": "Eomm_fastify-sqlite",
+    "name": "fastify-sqlite",
+    "owner": "Eomm"
+  },
+  {
     "id": "Eomm_fastify-websocket-chat",
     "name": "fastify-websocket-chat",
     "owner": "Eomm"
