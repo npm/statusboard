@@ -126,7 +126,8 @@
   {
     "id": "Eomm_fastify-sqlite",
     "name": "fastify-sqlite",
-    "owner": "Eomm"
+    "owner": "Eomm",
+    "pkg": "fastify-sqlite"
   },
   {
     "id": "Eomm_fastify-websocket-chat",
