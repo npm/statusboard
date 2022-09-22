@@ -330,45 +330,10 @@
     "pkg": "npm-audit-report"
   },
   {
-    "id": "npm_npm-birthday",
-    "name": "npm-birthday",
-    "owner": "npm",
-    "pkg": "@npmcli/npm-birthday"
-  },
-  {
     "id": "npm_npm-bundled",
     "name": "npm-bundled",
     "owner": "npm",
     "pkg": "npm-bundled"
-  },
-  {
-    "id": "npm_npm-cli-release-please",
-    "name": "npm-cli-release-please",
-    "owner": "npm"
-  },
-  {
-    "id": "npm_npm-cli-release-please_pkg2",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "pkg2"
-  },
-  {
-    "id": "npm_npm-cli-release-please_pkg3",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "pkg3"
-  },
-  {
-    "id": "npm_npm-cli-release-please_workspaces_not-the-name",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "workspaces/not-the-name"
-  },
-  {
-    "id": "npm_npm-cli-release-please_workspaces_pkg6",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "workspaces/pkg6"
   },
   {
     "id": "npm_npm-install-checks",
@@ -452,20 +417,6 @@
     "name": "parse-conflict-json",
     "owner": "npm",
     "pkg": "parse-conflict-json"
-  },
-  {
-    "id": "npm_npm-cli-release-please_pkg1",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "pkg1",
-    "pkg": "pkg1"
-  },
-  {
-    "id": "npm_npm-cli-release-please_workspaces_arbitrary-name",
-    "name": "npm-cli-release-please",
-    "owner": "npm",
-    "path": "workspaces/arbitrary-name",
-    "pkg": "pkg5"
   },
   {
     "id": "npm_proc-log",
