@@ -11,8 +11,6 @@
     "postlint": "template-oss-check",
     "template-oss-apply": "template-oss-apply --force",
     "lintfix": "npm run lint -- --fix",
-    "preversion": "npm test",
-    "postversion": "git push origin --follow-tags",
     "snap": "tap",
     "posttest": "npm run lint"
   },
@@ -51,10 +49,17 @@
     "lib/"
   ],
   "engines": {
-    "node": ">=18.3.0"
+    "node": ">=18.0.0"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "3.5.0"
+    "version": "4.4.0",
+    "ciVersions": "latest"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
   }
 }
