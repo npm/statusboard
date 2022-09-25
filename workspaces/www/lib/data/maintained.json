@@ -141,11 +141,6 @@
     "pkg": "form-auto-content"
   },
   {
-    "id": "Eomm_github-lists",
-    "name": "github-lists",
-    "owner": "Eomm"
-  },
-  {
     "id": "Eomm_google-photo-album",
     "name": "google-photo-album",
     "owner": "Eomm"
@@ -217,11 +212,6 @@
     "name": "mercurius-logging",
     "owner": "Eomm",
     "pkg": "mercurius-logging"
-  },
-  {
-    "id": "Eomm_next-node-bot",
-    "name": "next-node-bot",
-    "owner": "Eomm"
   },
   {
     "id": "Eomm_on-idle",
