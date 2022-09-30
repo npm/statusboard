@@ -29,7 +29,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
     "@npmcli/eslint-config": "^3.1.0",
-    "@npmcli/template-oss": "4.4.2",
+    "@npmcli/template-oss": "4.4.4",
     "esbuild": "^0.15.0",
     "http-server": "^14.1.1",
     "tap": "^16.3.0"
