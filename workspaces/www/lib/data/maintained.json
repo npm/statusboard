@@ -208,6 +208,11 @@
     "pkg": "massive-wax"
   },
   {
+    "id": "Eomm_mercurius-heatmap",
+    "name": "mercurius-heatmap",
+    "owner": "Eomm"
+  },
+  {
     "id": "Eomm_mercurius-logging",
     "name": "mercurius-logging",
     "owner": "Eomm",
