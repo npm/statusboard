@@ -47,7 +47,7 @@
     "ciVersions": "latest"
   },
   "dependencies": {
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
     "data": "^1.0.0",
     "datatables.net": "^1.12.1",
