@@ -210,7 +210,8 @@
   {
     "id": "Eomm_mercurius-hit-map",
     "name": "mercurius-hit-map",
-    "owner": "Eomm"
+    "owner": "Eomm",
+    "pkg": "mercurius-hit-map"
   },
   {
     "id": "Eomm_mercurius-logging",
