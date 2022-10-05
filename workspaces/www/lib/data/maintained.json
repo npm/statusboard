@@ -228,7 +228,8 @@
   {
     "id": "Eomm_node-snippet",
     "name": "node-snippet",
-    "owner": "Eomm"
+    "owner": "Eomm",
+    "pkg": "node-snippet"
   },
   {
     "id": "Eomm_notification-remover",
@@ -276,11 +277,6 @@
   {
     "id": "Eomm_storie",
     "name": "storie",
-    "owner": "Eomm"
-  },
-  {
-    "id": "Eomm_telegrhub",
-    "name": "telegrhub",
     "owner": "Eomm"
   },
   {
