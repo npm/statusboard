@@ -29,6 +29,7 @@ jobs:
             os: ubuntu-latest
             shell: bash
         node-version:
+          - 18.0.0
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
@@ -92,9 +93,9 @@ jobs:
       - name: Install Dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Lint
-        run: npm run lint --ignore-scripts
+        run: npm run lint --ignore-scripts -w data
       - name: Post Lint
-        run: npm run postlint --ignore-scripts
+        run: npm run postlint --ignore-scripts -w data
 
   test:
     name: Test - ${{ matrix.platform.name }} - ${{ matrix.node-version }}

@@ -29,6 +29,7 @@ jobs:
             os: ubuntu-latest
             shell: bash
         node-version:
+          - 18.0.0
     runs-on: ${{ matrix.platform.os }}
     defaults:
       run:
@@ -150,4 +151,4 @@ jobs:
       - name: Add Problem Matcher
         run: echo "::add-matcher::.github/matchers/tap.json"
       - name: Test
-        run: npm test --ignore-scripts -iwr
+        run: npm test --ignore-scripts
