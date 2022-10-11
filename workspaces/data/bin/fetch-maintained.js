@@ -67,7 +67,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
       return false
     }
 
-    if (project.repo.isArchived && project.manifest?.deprecated) {
+    if (project.repo.isArchived && (project.manifest?.deprecated || project.pkg?.private)) {
       logReason('archived and deprecated')
       // Remove repos that are achived and the published package has been deprecated
       // This way we don't have to remove any topics on GH repos but we can safely

@@ -230,7 +230,7 @@ module.exports = ({ auth }) => {
 
     const allWorkspaces = await Promise.all(allRepos.map((r) =>
       getWorkspaces(r.repo.owner, r.repo.name, r.pkg?.workspaces).then((wss) =>
-        wss.map((ws) => merge({}, r, ws))
+        wss.map((ws) => merge({}, { repo: r.repo }, ws))
       )))
 
     return [...allRepos, ...allWorkspaces.flat()]
