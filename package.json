@@ -27,7 +27,12 @@
     "version": "4.5.1",
     "ciVersions": "latest",
     "windowsCI": false,
-    "lockfile": true
+    "lockfile": true,
+    "workspaceRepo": {
+      "add": {
+        ".github/dependabot.yml": false
+      }
+    }
   },
   "tap": {
     "test-ignore": "^(workspaces)/",

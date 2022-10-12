@@ -15,27 +15,3 @@ updates:
       prefix-development: chore
     labels:
       - "Dependencies"
-  - package-ecosystem: npm
-    directory: workspaces/data/
-    schedule:
-      interval: daily
-    allow:
-      - dependency-type: direct
-    versioning-strategy: increase-if-necessary
-    commit-message:
-      prefix: deps
-      prefix-development: chore
-    labels:
-      - "Dependencies"
-  - package-ecosystem: npm
-    directory: workspaces/www/
-    schedule:
-      interval: daily
-    allow:
-      - dependency-type: direct
-    versioning-strategy: increase-if-necessary
-    commit-message:
-      prefix: deps
-      prefix-development: chore
-    labels:
-      - "Dependencies"
