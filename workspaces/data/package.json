@@ -27,16 +27,16 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
-    "@octokit/graphql": "^5.0.0",
+    "@octokit/graphql": "^5.0.1",
     "@octokit/plugin-retry": "^3.0.9",
-    "@octokit/plugin-throttling": "^4.1.0",
-    "@octokit/rest": "^19.0.3",
-    "dotenv": "^16.0.1",
+    "@octokit/plugin-throttling": "^4.3.0",
+    "@octokit/rest": "^19.0.4",
+    "dotenv": "^16.0.3",
     "glob": "^8.0.3",
     "lodash": "^4.17.21",
-    "pacote": "^13.6.1",
+    "pacote": "^14.0.0",
     "proc-log": "^2.0.1",
-    "semver": "^7.3.7",
+    "semver": "^7.3.8",
     "www": "^1.0.0"
   },
   "devDependencies": {
