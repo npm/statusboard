@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
-    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/eslint-config": "^4.0.0",
     "@npmcli/template-oss": "4.5.1",
     "esbuild": "^0.15.10",
     "http-server": "^14.1.1",
