@@ -65,8 +65,7 @@
   {
     "id": "Eomm_euler",
     "name": "euler",
-    "owner": "Eomm",
-    "pkg": "euler"
+    "owner": "Eomm"
   },
   {
     "id": "Eomm_facebook-album-to-pdf",
@@ -108,7 +107,8 @@
   {
     "id": "Eomm_fastify-json5",
     "name": "fastify-json5",
-    "owner": "Eomm"
+    "owner": "Eomm",
+    "pkg": "fastify-json5"
   },
   {
     "id": "Eomm_fastify-overview",
