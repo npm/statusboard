@@ -107,9 +107,6 @@ jobs:
           - name: Linux
             os: ubuntu-latest
             shell: bash
-          - name: macOS
-            os: macos-latest
-            shell: bash
         node-version:
           - 18.x
     runs-on: ${{ matrix.platform.os }}

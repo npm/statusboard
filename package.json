@@ -27,6 +27,7 @@
     "version": "4.6.2",
     "ciVersions": "latest",
     "windowsCI": false,
+    "macCI": false,
     "lockfile": true,
     "workspaceRepo": {
       "add": {
