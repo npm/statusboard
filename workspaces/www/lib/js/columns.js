@@ -50,6 +50,7 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
 })
 
 const getColumns = (rows) => {
+  const templateOSS = $$.templateOSS(rows)
   const requiredTemplate = $$.templateVersion(rows)
   const requiredNode = $$.nodeVersion(rows)
 
@@ -172,11 +173,15 @@ const getColumns = (rows) => {
     templateVersion: {
       title: 'Template',
       type: 'num',
-      render: (data) => {
-        const type = !data ? 'danger' : data !== requiredTemplate ? 'warning' : 'success'
-        const text = data || 'None'
+      render: (data, row) => {
+        const isTemplateOSS = $$.rowId(row) === $$.rowId(templateOSS)
+        const type = isTemplateOSS || data === requiredTemplate ? 'success'
+          : data && data !== requiredTemplate ? 'warning'
+          : 'danger'
+        const version = isTemplateOSS ? requiredTemplate : data
+        const text = version || 'None'
         return {
-          sort: data ? util.semver.score(data) : 0,
+          sort: version ? util.semver.score(version) : 0,
           filter: text,
           display: EL.cell({ text, type }),
         }
