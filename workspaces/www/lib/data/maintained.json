@@ -59,6 +59,13 @@
     "pkg": "@npmcli/config"
   },
   {
+    "id": "npm_cli_workspaces_config",
+    "name": "cli",
+    "owner": "npm",
+    "path": "workspaces/config",
+    "pkg": "@npmcli/config"
+  },
+  {
     "id": "npm_create-oss",
     "name": "create-oss",
     "owner": "npm",
@@ -438,12 +445,6 @@
     "pkg": "promzard"
   },
   {
-    "id": "npm_pull",
-    "name": "pull",
-    "owner": "npm",
-    "pkg": "@npmcli/pull"
-  },
-  {
     "id": "npm_query",
     "name": "query",
     "owner": "npm",
@@ -518,12 +519,6 @@
     "id": "npm_statusboard",
     "name": "statusboard",
     "owner": "npm"
-  },
-  {
-    "id": "npm_stringify-package",
-    "name": "stringify-package",
-    "owner": "npm",
-    "pkg": "stringify-package"
   },
   {
     "id": "npm_tap-nock",
