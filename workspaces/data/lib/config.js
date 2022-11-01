@@ -16,7 +16,7 @@ const {
   // add a delay between requests in CI since the built in GH tokens
   // on actions seem to be more susceptible to secondary rate limits
   delay = process.env.CI ? 1000 : 0,
-  repoQuery = 'org:npm topic:npm-cli fork:true',
+  repoQuery = 'org:npm topic:npm-cli fork:true is:public',
   issueAndPrQuery = 'is:open',
   noWrite = false,
 } = parseArgs({

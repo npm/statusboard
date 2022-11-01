@@ -13,6 +13,8 @@ jobs:
       has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
       - name: Setup git user
         run: |
           git config --global user.email "npm-cli+bot@github.com"
@@ -39,4 +41,4 @@ jobs:
         run: |
           git add .
           git commit -m "chore: update maintained projects"
-          git push origin main
+          git push origin ${{ github.ref_name }}
