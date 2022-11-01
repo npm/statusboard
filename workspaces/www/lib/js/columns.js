@@ -131,15 +131,18 @@ const getColumns = (rows) => {
             display: EL.noData({ type: 'info' }),
           }
         }
-        const type = !data ? 'danger' : util.semver.parse(data)[0] < 1 ? 'warning' : 'success'
-        const text = data || EL.notPublished
+        const hasUnpublished = data !== row.repoVersion ? row.repoVersion : ''
+        const type = !data ? 'danger'
+          : util.semver.parse(data)[0] < 1 || hasUnpublished ? 'warning' : 'success'
+        const text = data
+          ? `${data}${hasUnpublished ? ` / ${hasUnpublished}` : ''}`
+          : EL.notPublished
         return {
           sort: data ? util.semver.score(data) : 0,
           filter: text,
           display: EL.cell({
             text,
             type,
-            href: data && `${row.pkgUrl}/v/${data}`,
           }),
         }
       },
@@ -174,6 +177,14 @@ const getColumns = (rows) => {
       title: 'Template',
       type: 'num',
       render: (data, row) => {
+        if (data === null) {
+          return {
+            sort: -1,
+            filter: 'N/A',
+            display: EL.cell({ text: 'N/A', type: 'info' }),
+          }
+        }
+
         const isTemplateOSS = $$.rowId(row) === $$.rowId(templateOSS)
         const type = isTemplateOSS || data === requiredTemplate ? 'success'
           : data && data !== requiredTemplate ? 'warning'
@@ -191,13 +202,19 @@ const getColumns = (rows) => {
       title: 'Coverage',
       type: 'num',
       render: (data) => {
+        if (data === null) {
+          return {
+            sort: -1,
+            filter: 'N/A',
+            display: EL.cell({ text: 'N/A', type: 'info' }),
+          }
+        }
+
         const type = !data ? 'danger' : data === 100 ? 'success' : 'warning'
-        const text = data == null ? 'None' : data
-        const sort = data == null ? -1 : data
         return {
-          sort,
-          filter: text,
-          display: EL.cell({ text, type }),
+          sort: data,
+          filter: data,
+          display: EL.cell({ text: data, type }),
         }
       },
     },
@@ -205,8 +222,15 @@ const getColumns = (rows) => {
       title: 'Node',
       type: 'num',
       render: (data) => {
-        const text = data || 'None'
+        if (data === null) {
+          return {
+            sort: util.semver.rangeScore(data),
+            filter: 'N/A',
+            display: EL.cell({ text: 'N/A', type: 'info' }),
+          }
+        }
 
+        const text = data || 'None'
         const type = !data || !requiredNode ? 'danger'
           : util.semver.subset(data, requiredNode) ? 'success'
           : util.semver.subset(data, '>=10') ? 'warning'
@@ -224,7 +248,7 @@ const getColumns = (rows) => {
       render: (data, row) => {
         const branches = {
           master: 'danger',
-          latest: 'warning',
+          latest: 'success',
           main: 'success',
         }
         const type = branches[data] || 'warning'

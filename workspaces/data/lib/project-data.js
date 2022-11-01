@@ -58,8 +58,8 @@ module.exports = async ({
     discussions,
   } = await fetchAllRepoData({ api, project, issueAndPrQuery, discussionQuery })
 
-  const license = [repoPkg?.license, repo.license?.spdx_id]
-    .filter((l) => l && l !== 'NOASSERTION')
+  const license = [{ key: repoPkg?.license }, repo.license]
+    .filter(l => l?.key).map((l) => l.key.toUpperCase())
 
   const repoUrl = new URL(`/${project.owner}/${project.name}`, 'https://github.com')
   const pathUrl = new URL(repoUrl)
@@ -95,17 +95,19 @@ module.exports = async ({
     // these properties come from the repo pkg json since that
     // will usually be more up to date for things like templateVersion
     // that doesn't always trigger a release
-    pkgPrivate: repoPkg?.private ?? false,
+    // no package.json means it is private since it wont get published
+    pkgPrivate: repoPkg ? repoPkg.private ?? false : true,
     pkgName: repoPkg?.name ?? null,
-    coverage: getCoverage(repoPkg) ?? null,
-    templateVersion: repoPkg?.templateOSS?.version ?? null,
+    coverage: repoPkg ? getCoverage(repoPkg) : null,
+    templateVersion: repoPkg ? repoPkg.templateOSS?.version ?? '' : null,
     license: license[0] ?? null,
-    node: repoPkg?.engines?.node ?? null,
+    node: repoPkg ? repoPkg.engines?.node ?? '' : null,
     // registry
     // we get both the registry info and the package.json from the repo
     // but we use version as a signal of the published version so only
     // get that data from the published manifest
     version: manifest?.version ?? null,
+    repoVersion: repoPkg?.version ?? null,
     lastPublished: packument?.time?.[manifest.version] ?? null,
     size: manifest?.dist?.unpackedSize ?? null,
     pkgUrl: manifest?.name ? `https://www.npmjs.com/package/${manifest.name}` : null,
