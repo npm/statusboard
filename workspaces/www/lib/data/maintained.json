@@ -53,12 +53,6 @@
     "pkg": "cmd-shim"
   },
   {
-    "id": "npm_config",
-    "name": "config",
-    "owner": "npm",
-    "pkg": "@npmcli/config"
-  },
-  {
     "id": "npm_cli_workspaces_config",
     "name": "cli",
     "owner": "npm",
