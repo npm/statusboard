@@ -273,12 +273,6 @@
     "pkg": "minipass-fetch"
   },
   {
-    "id": "npm_move-file",
-    "name": "move-file",
-    "owner": "npm",
-    "pkg": "@npmcli/move-file"
-  },
-  {
     "id": "npm_mute-stream",
     "name": "mute-stream",
     "owner": "npm",
@@ -467,12 +461,6 @@
     "name": "read-package-json-fast",
     "owner": "npm",
     "pkg": "read-package-json-fast"
-  },
-  {
-    "id": "npm_readdir-scoped-modules",
-    "name": "readdir-scoped-modules",
-    "owner": "npm",
-    "pkg": "readdir-scoped-modules"
   },
   {
     "id": "npm_release-please",
