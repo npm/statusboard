@@ -146,6 +146,11 @@
     "pkg": "form-auto-content"
   },
   {
+    "id": "Eomm_frontend-masters",
+    "name": "frontend-masters",
+    "owner": "Eomm"
+  },
+  {
     "id": "Eomm_google-photo-album",
     "name": "google-photo-album",
     "owner": "Eomm"
