@@ -112,6 +112,12 @@
     "pkg": "gauge"
   },
   {
+    "id": "npm_gentle-fs",
+    "name": "gentle-fs",
+    "owner": "npm",
+    "pkg": "gentle-fs"
+  },
+  {
     "id": "npm_git",
     "name": "git",
     "owner": "npm",
