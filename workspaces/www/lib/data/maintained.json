@@ -183,6 +183,11 @@
     "owner": "Eomm"
   },
   {
+    "id": "Eomm_joi-compiler",
+    "name": "joi-compiler",
+    "owner": "Eomm"
+  },
+  {
     "id": "Eomm_json-schema-resolver",
     "name": "json-schema-resolver",
     "owner": "Eomm",
