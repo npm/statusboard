@@ -185,7 +185,8 @@
   {
     "id": "Eomm_joi-compiler",
     "name": "joi-compiler",
-    "owner": "Eomm"
+    "owner": "Eomm",
+    "pkg": "joi-compiler"
   },
   {
     "id": "Eomm_json-schema-resolver",
