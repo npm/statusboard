@@ -93,12 +93,11 @@ module.exports = async ({
     stars,
     // package.json
     // these properties come from the repo pkg json since that
-    // will usually be more up to date for things like templateVersion
+    // will usually be more up to date for things like custom package.json props
     // that doesn't always trigger a release
     pkgPrivate: repoPkg?.private ?? false,
     pkgName: repoPkg?.name ?? null,
     coverage: getCoverage(repoPkg) ?? null,
-    templateVersion: repoPkg?.templateOSS?.version ?? null,
     license: license[0] ?? null,
     node: repoPkg?.engines?.node ?? null,
     // registry

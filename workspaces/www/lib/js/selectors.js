@@ -29,7 +29,6 @@ export const overrides = {
 // this is not portable but for now the template/node version checks
 // can be changed here or removed in the columns.js file
 export const templateOSS = (projects) => projects.find((p) => p.name === 'template-oss')
-export const templateVersion = (projects) => templateOSS(projects)?.version
 export const nodeVersion = (projects) => templateOSS(projects)?.node
 
 export const colId = (col) => `${typeof col === 'string' ? col : col.name}:name`
