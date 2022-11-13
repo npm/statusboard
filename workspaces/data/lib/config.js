@@ -56,10 +56,6 @@ module.exports = {
         issue.labels.some(l => l.name === 'good-first-issue' || l.name === 'good first issue'),
       url: 'label:"good-first-issue","good first issue"',
     },
-    triage: {
-      filter: (issue) => issue.labels.some(l => l.name === 'Needs Triage'),
-      url: 'label:"Needs Triage"',
-    },
   },
   prFilter: {
     release: {

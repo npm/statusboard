@@ -74,6 +74,10 @@ header a span {
   align-self: center;
 }
 
+#built .badge-dt {
+  display: inline;
+}
+
 /*
  * ===================
  * Cell Data
