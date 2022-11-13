@@ -210,7 +210,9 @@ const getColumns = (rows) => {
             display: EL.noData({ type: 'info' }),
           }
         }
-        const opts = data ? { type: 'danger', text: 'TODO' } : { type: 'success', text: 'No' }
+
+        const opts = data ? { type: 'secondary', text: '🔐' } : { type: 'success', text: '🔓' }
+
         return {
           sort: data ? 0 : 1,
           filter: opts.text,
