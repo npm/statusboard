@@ -14,7 +14,7 @@ export default async ({ fakeHistory } = {}) => {
       if (p.issues) {
         p.issues.history.unshift(...rand())
         p.issues.unlabeled.history.unshift(...rand())
-        p.issues.priority.history.unshift(...rand())
+        p.issues.goodFirstIssue.history.unshift(...rand())
         p.issues.triage.history.unshift(...rand())
         p.prs.history.unshift(...rand())
       }

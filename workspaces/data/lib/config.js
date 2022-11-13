@@ -51,9 +51,10 @@ module.exports = {
       filter: (issue) => issue.labels.length === 0,
       url: 'no:label',
     },
-    priority: {
-      filter: (issue) => issue.labels.some(l => l.name === 'Priority 1' || l.name === 'Priority 0'),
-      url: 'label:"Priority 1","Priority 0',
+    goodFirstIssue: {
+      filter: (issue) =>
+        issue.labels.some(l => l.name === 'good-first-issue' || l.name === 'good first issue'),
+      url: 'label:"good-first-issue","good first issue"',
     },
     triage: {
       filter: (issue) => issue.labels.some(l => l.name === 'Needs Triage'),

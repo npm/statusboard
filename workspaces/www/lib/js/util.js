@@ -50,6 +50,6 @@ export const num = {
   format: (n) => new Intl.NumberFormat('en-US').format(n),
 }
 
-export const titleCase = (str) => str.replace(/\w\S*/g,
+export const titleCase = (str) => str.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/\w\S*/g,
   (t) => t.charAt(0).toUpperCase() + t.substr(1).toLowerCase()
 )
