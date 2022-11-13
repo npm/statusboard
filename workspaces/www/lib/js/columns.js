@@ -142,32 +142,6 @@ const getColumns = (rows) => {
         }
       },
     },
-    'prs.release.version': {
-      title: 'Release',
-      type: 'num',
-      defaultContent: 0,
-      render: (data, row) => {
-        if ($$.isPrivate(row)) {
-          return {
-            sort: -1,
-            display: EL.noData({ type: 'info' }),
-          }
-        }
-        const opts = data ? {
-          text: data,
-          href: row.prs.release.url,
-          type: 'warning',
-        } : {
-          text: 'None',
-          type: 'success',
-        }
-        return {
-          sort: data ? util.semver.score(data) : 0,
-          filter: opts.text,
-          display: EL.cell(opts),
-        }
-      },
-    },
     coverage: {
       title: 'Coverage',
       type: 'num',
