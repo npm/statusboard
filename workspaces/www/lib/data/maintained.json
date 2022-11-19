@@ -29,12 +29,6 @@
     "owner": "npm"
   },
   {
-    "id": "npm_bin-links",
-    "name": "bin-links",
-    "owner": "npm",
-    "pkg": "bin-links"
-  },
-  {
     "id": "npm_cacache",
     "name": "cacache",
     "owner": "npm",
@@ -81,12 +75,6 @@
     "id": "npm_documentation",
     "name": "documentation",
     "owner": "npm"
-  },
-  {
-    "id": "npm_eslint-config",
-    "name": "eslint-config",
-    "owner": "npm",
-    "pkg": "@npmcli/eslint-config"
   },
   {
     "id": "npm_exec",
@@ -267,12 +255,6 @@
     "pkg": "@npmcli/metavuln-calculator"
   },
   {
-    "id": "npm_minify-registry-metadata",
-    "name": "minify-registry-metadata",
-    "owner": "npm",
-    "pkg": "minify-registry-metadata"
-  },
-  {
     "id": "npm_minipass-fetch",
     "name": "minipass-fetch",
     "owner": "npm",
@@ -289,6 +271,11 @@
     "name": "name-from-folder",
     "owner": "npm",
     "pkg": "@npmcli/name-from-folder"
+  },
+  {
+    "id": "npm_nock-registry",
+    "name": "nock-registry",
+    "owner": "npm"
   },
   {
     "id": "npm_nock-registry",
@@ -343,6 +330,11 @@
     "owner": "npm"
   },
   {
+    "id": "npm_npm-install-script",
+    "name": "npm-install-script",
+    "owner": "npm"
+  },
+  {
     "id": "npm_npm-normalize-package-bin",
     "name": "npm-normalize-package-bin",
     "owner": "npm",
@@ -377,12 +369,6 @@
     "name": "npm-registry-fetch",
     "owner": "npm",
     "pkg": "npm-registry-fetch"
-  },
-  {
-    "id": "npm_npm-registry-mock",
-    "name": "npm-registry-mock",
-    "owner": "npm",
-    "pkg": "npm-registry-mock"
   },
   {
     "id": "npm_npm-user-validate",
@@ -475,6 +461,12 @@
     "pkg": "release-please"
   },
   {
+    "id": "npm_release-please",
+    "name": "release-please",
+    "owner": "npm",
+    "pkg": "release-please"
+  },
+  {
     "id": "npm_rfcs",
     "name": "rfcs",
     "owner": "npm"
@@ -507,12 +499,6 @@
     "id": "npm_statusboard",
     "name": "statusboard",
     "owner": "npm"
-  },
-  {
-    "id": "npm_tap-nock",
-    "name": "tap-nock",
-    "owner": "npm",
-    "pkg": "@npmcli/tap-nock"
   },
   {
     "id": "npm_node-tar",
