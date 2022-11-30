@@ -9,6 +9,7 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    continue-on-error: true
     outputs:
       has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
@@ -28,6 +29,7 @@ jobs:
       - run: npm -v
       - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
       - run: npm run fetch:maintained -w data
+        continue-on-error: true
         env:
           AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check for changes

@@ -83,6 +83,7 @@ main()
     console.log(res.message)
     return metadata.save({ status: 'success' })
   })
-  .catch(() => {
-    return metadata.save({ status: 'error' })
+  .catch(async (err) => {
+    await metadata.save({ status: 'error' })
+    throw err
   })

@@ -112,7 +112,8 @@ exec(config)
     console.log(res.message)
     return metadata.save({ status: 'success', update: res.update })
   })
-  .catch((err) => {
+  .catch(async (err) => {
     log.error(err)
-    return metadata.save({ status: 'error' })
+    await metadata.save({ status: 'error' })
+    throw err
   })
