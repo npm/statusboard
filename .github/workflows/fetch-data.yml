@@ -46,7 +46,6 @@ jobs:
           git push origin ${{ github.ref_name }}
 
   publish:
-    continue-on-error: true
     needs: fetch
     if: needs.fetch.outputs.has_changes == '1'
     uses: ./.github/workflows/publish.yml
