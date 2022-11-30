@@ -58,7 +58,6 @@ module.exports = ({ auth }) => {
       owner,
       repo: name,
       ref,
-      per_page: 100,
     })
 
     // For some of our repos that don't get very many commits, we still run
@@ -97,7 +96,6 @@ module.exports = ({ auth }) => {
 
     return REST.paginate(REST.search.issuesAndPullRequests, {
       q: `repo:${owner}/${name}+${query}`,
-      per_page: 100,
     })
   }
 

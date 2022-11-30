@@ -63,8 +63,9 @@ const main = async (currentRun = 0) => {
     return await writeData(config)
   } catch (err) {
     log.error(err)
+    log.error('status', err.status)
 
-    if (currentRun <= 5) {
+    if (err.status === 403 && currentRun <= 5) {
       const retryDelay = config.delay ? 1000 * 60 * 10 : 0
       log.warn('='.repeat(80))
       log.warn('='.repeat(80))
