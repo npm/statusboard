@@ -8,7 +8,8 @@
   {
     "id": "npm_agent",
     "name": "agent",
-    "owner": "npm"
+    "owner": "npm",
+    "pkg": "@npmcli/agent"
   },
   {
     "id": "npm_cli_workspaces_arborist",
