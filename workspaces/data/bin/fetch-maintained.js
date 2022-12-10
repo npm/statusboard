@@ -43,7 +43,12 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
       return filterResult
     }
 
-    if (project.repo.isWorkspace && !project.manifest && project.pkg?.private) {
+    const notPublished = !project.manifest
+    const private = project.pkg?.private
+    const deprecated = project.manifest?.deprecated
+    const archived = project.repo.isArchived
+
+    if (project.repo.isWorkspace && notPublished && private) {
       logReason('private workspace')
       // These are workspaces within a repo that are not published
       // to the registry. There might be something to track here
@@ -58,7 +63,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
       return p.repo.isWorkspace && p.manifest && p.manifest.name === project.manifest?.name
     })
 
-    if (project.repo.isArchived && matchingWorkspace) {
+    if (archived && matchingWorkspace) {
       logReason('moved to workspace')
       // These are repos that were archived and moved to a different repo
       // as a workspace. These have nothing worth tracking but we keep the
@@ -67,7 +72,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
       return false
     }
 
-    if (project.repo.isArchived && (project.manifest?.deprecated || project.pkg?.private)) {
+    if (archived && (notPublished || deprecated || private)) {
       logReason('archived and deprecated')
       // Remove repos that are achived and the published package has been deprecated
       // This way we don't have to remove any topics on GH repos but we can safely
