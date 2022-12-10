@@ -10,6 +10,7 @@ const isRootRelease = (str = '') => str.match(new RegExp(`: release ${src[tokens
 const denyRepoNames = [
   'npm/node',
   'npm/npm-cli-release-please',
+  'npm/release-please',
 ]
 
 const {
