@@ -90,11 +90,6 @@
     "pkg": "@npmcli/eslint-config"
   },
   {
-    "id": "npm_exec",
-    "name": "exec",
-    "owner": "npm"
-  },
-  {
     "id": "npm_fs",
     "name": "fs",
     "owner": "npm",
@@ -292,11 +287,6 @@
     "pkg": "@npmcli/name-from-folder"
   },
   {
-    "id": "npm_nock-registry",
-    "name": "nock-registry",
-    "owner": "npm"
-  },
-  {
     "id": "npm_node-gyp",
     "name": "node-gyp",
     "owner": "npm",
@@ -378,12 +368,6 @@
     "name": "npm-registry-fetch",
     "owner": "npm",
     "pkg": "npm-registry-fetch"
-  },
-  {
-    "id": "npm_npm-registry-mock",
-    "name": "npm-registry-mock",
-    "owner": "npm",
-    "pkg": "npm-registry-mock"
   },
   {
     "id": "npm_npm-user-validate",
@@ -468,12 +452,6 @@
     "name": "read-package-json-fast",
     "owner": "npm",
     "pkg": "read-package-json-fast"
-  },
-  {
-    "id": "npm_release-please",
-    "name": "release-please",
-    "owner": "npm",
-    "pkg": "release-please"
   },
   {
     "id": "npm_rfcs",
