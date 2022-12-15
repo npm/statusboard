@@ -50,8 +50,6 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
 })
 
 const getColumns = (rows) => {
-  const templateOSS = $$.templateOSS(rows)
-  const requiredTemplate = $$.templateVersion(rows)
   const requiredNode = $$.nodeVersion(rows)
 
   const rowWithIssues = rows.find((project) => project.issues && project.prs) || {}
@@ -132,11 +130,15 @@ const getColumns = (rows) => {
           }
         }
         const hasUnpublished = data !== row.repoVersion ? row.repoVersion : ''
+        const pendingRelease = row.prs?.release?.version
+        const nextVersion = hasUnpublished || pendingRelease
+
         const type = !data ? 'danger'
-          : util.semver.parse(data)[0] < 1 || hasUnpublished ? 'warning' : 'success'
+          : util.semver.parse(data)[0] < 1 || nextVersion ? 'warning' : 'success'
         const text = data
-          ? `${data}${hasUnpublished ? ` / ${hasUnpublished}` : ''}`
+          ? `${data}${nextVersion ? ` / ${nextVersion}` : ''}`
           : EL.notPublished
+
         return {
           sort: data ? util.semver.score(data) : 0,
           filter: text,
@@ -144,57 +146,6 @@ const getColumns = (rows) => {
             text,
             type,
           }),
-        }
-      },
-    },
-    'prs.release.version': {
-      title: 'Release',
-      type: 'num',
-      defaultContent: 0,
-      render: (data, row) => {
-        if ($$.isPrivate(row)) {
-          return {
-            sort: -1,
-            display: EL.noData({ type: 'info' }),
-          }
-        }
-        const opts = data ? {
-          text: data,
-          href: row.prs.release.url,
-          type: 'warning',
-        } : {
-          text: 'None',
-          type: 'success',
-        }
-        return {
-          sort: data ? util.semver.score(data) : 0,
-          filter: opts.text,
-          display: EL.cell(opts),
-        }
-      },
-    },
-    templateVersion: {
-      title: 'Template',
-      type: 'num',
-      render: (data, row) => {
-        if (data === null) {
-          return {
-            sort: -1,
-            filter: 'N/A',
-            display: EL.cell({ text: 'N/A', type: 'info' }),
-          }
-        }
-
-        const isTemplateOSS = $$.rowId(row) === $$.rowId(templateOSS)
-        const type = isTemplateOSS || data === requiredTemplate ? 'success'
-          : data && data !== requiredTemplate ? 'warning'
-          : 'danger'
-        const version = isTemplateOSS ? requiredTemplate : data
-        const text = version || 'None'
-        return {
-          sort: version ? util.semver.score(version) : 0,
-          filter: text,
-          display: EL.cell({ text, type }),
         }
       },
     },
@@ -230,9 +181,10 @@ const getColumns = (rows) => {
           }
         }
 
-        const text = data || 'None'
+        const text = data ? data === requiredNode ? 'Default' : data : 'None'
         const type = !data || !requiredNode ? 'danger'
-          : util.semver.subset(data, requiredNode) ? 'success'
+          : data === requiredNode ? 'success'
+          : util.semver.subset(data, requiredNode) ? 'info'
           : util.semver.subset(data, '>=10') ? 'warning'
           : 'danger'
 
@@ -243,47 +195,11 @@ const getColumns = (rows) => {
         }
       },
     },
-    defaultBranch: {
-      title: 'Branch',
-      render: (data, row) => {
-        const branches = {
-          master: 'danger',
-          latest: 'success',
-          main: 'success',
-        }
-        const type = branches[data] || 'warning'
-        return {
-          sort: Object.keys(branches).indexOf(data),
-          filter: data,
-          display: EL.cell({ text: data, type, href: `${row.url}/settings/branches` }),
-        }
-      },
-    },
     license: {
       title: 'License',
       render: (data) => {
         return {
           display: EL.cell({ text: data || 'None', type: data ? 'success' : 'danger' }),
-        }
-      },
-    },
-    archived: {
-    // archived and deprecated are excluded so if something is here
-    // and it is archived then it needs to be deprecated
-      title: 'Deprecate',
-      type: 'num',
-      render: (data, row) => {
-        if ($$.isPrivate(row)) {
-          return {
-            sort: -1,
-            display: EL.noData({ type: 'info' }),
-          }
-        }
-        const opts = data ? { type: 'danger', text: 'TODO' } : { type: 'success', text: 'No' }
-        return {
-          sort: data ? 0 : 1,
-          filter: opts.text,
-          display: EL.cell(opts),
         }
       },
     },
