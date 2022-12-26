@@ -269,12 +269,6 @@
     "pkg": "minipass-fetch"
   },
   {
-    "id": "npm_mute-stream",
-    "name": "mute-stream",
-    "owner": "npm",
-    "pkg": "mute-stream"
-  },
-  {
     "id": "npm_name-from-folder",
     "name": "name-from-folder",
     "owner": "npm",
@@ -410,18 +404,6 @@
     "name": "promise-spawn",
     "owner": "npm",
     "pkg": "@npmcli/promise-spawn"
-  },
-  {
-    "id": "npm_promzard",
-    "name": "promzard",
-    "owner": "npm",
-    "pkg": "promzard"
-  },
-  {
-    "id": "npm_query",
-    "name": "query",
-    "owner": "npm",
-    "pkg": "@npmcli/query"
   },
   {
     "id": "npm_read",
