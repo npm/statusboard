@@ -67,12 +67,6 @@
     "pkg": "@npmcli/create-oss"
   },
   {
-    "id": "npm_dezalgo",
-    "name": "dezalgo",
-    "owner": "npm",
-    "pkg": "dezalgo"
-  },
-  {
     "id": "npm_disparity-colors",
     "name": "disparity-colors",
     "owner": "npm",
@@ -124,18 +118,6 @@
     "name": "ignore-walk",
     "owner": "npm",
     "pkg": "ignore-walk"
-  },
-  {
-    "id": "npm_infer-owner",
-    "name": "infer-owner",
-    "owner": "npm",
-    "pkg": "infer-owner"
-  },
-  {
-    "id": "npm_inflight",
-    "name": "inflight",
-    "owner": "npm",
-    "pkg": "inflight"
   },
   {
     "id": "npm_ini",
@@ -488,22 +470,10 @@
     "pkg": "@npmcli/tap-nock"
   },
   {
-    "id": "npm_node-tar",
-    "name": "node-tar",
-    "owner": "npm",
-    "pkg": "tar"
-  },
-  {
     "id": "npm_template-oss",
     "name": "template-oss",
     "owner": "npm",
     "pkg": "@npmcli/template-oss"
-  },
-  {
-    "id": "npm_treeverse",
-    "name": "treeverse",
-    "owner": "npm",
-    "pkg": "treeverse"
   },
   {
     "id": "npm_unique-filename",
@@ -528,12 +498,6 @@
     "name": "node-which",
     "owner": "npm",
     "pkg": "which"
-  },
-  {
-    "id": "npm_wrappy",
-    "name": "wrappy",
-    "owner": "npm",
-    "pkg": "wrappy"
   },
   {
     "id": "npm_write-file-atomic",
