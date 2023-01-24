@@ -13,6 +13,8 @@ const denyRepoNames = [
   'npm/release-please',
 ]
 
+const denyCheckRuns = /^nodejs@\w+\sintegration\s/
+
 const {
   // add a delay between requests in CI since the built in GH tokens
   // on actions seem to be more susceptible to secondary rate limits
@@ -43,6 +45,7 @@ module.exports = {
   write: !noWrite,
   repoQuery,
   issueAndPrQuery,
+  checkRunFilter: (name) => !denyCheckRuns.test(name),
   // Return null to fallback to other filters
   repoFilter: (p) => denyRepoNames.includes(`${p.repo.owner}/${p.repo.name}`) ? false : null,
   discussionQuery: 'answerChosenAt',

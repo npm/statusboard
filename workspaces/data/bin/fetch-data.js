@@ -16,8 +16,29 @@ logger()
 const metadata = updateMetadata(__filename)
 const api = Api(config)
 
-const writeData = async ({ write, ...restConfig }) => {
+const getProjects = (query) => {
   const projects = require(wwwPaths.maintained)
+  const projectKeys = projects.reduce((set, p) => {
+    for (const k of Object.keys(p)) {
+      set.add(k)
+    }
+    return set
+  }, new Set())
+  // This reuses the repoQuery config but only looks at query parts that indicate
+  // a specific repo. This is because this reads from our `maintained.json` list
+  // but sometimes during debugging we want to isolate a specific repo to test its
+  // data, eg `npm run -w data fetch:data -- --repoQuery='id:npm_cli'`
+  const filter = query.split(' ').map(q => {
+    const [key, value] = q.split(':')
+    if (projectKeys.has(key)) {
+      return (p) => p[key] === value
+    }
+  }).filter(Boolean)
+  return filter.length ? projects.filter(p => filter.some(fn => fn(p))) : projects
+}
+
+const writeData = async ({ write, ...restConfig }) => {
+  const projects = getProjects(restConfig.repoQuery)
 
   const dailyFile = wwwPaths.daily(metadata.date)
 
