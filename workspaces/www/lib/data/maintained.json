@@ -84,6 +84,12 @@
     "pkg": "@npmcli/eslint-config"
   },
   {
+    "id": "npm_figgy-pudding",
+    "name": "figgy-pudding",
+    "owner": "npm",
+    "pkg": "figgy-pudding"
+  },
+  {
     "id": "npm_fs",
     "name": "fs",
     "owner": "npm",
@@ -94,6 +100,12 @@
     "name": "fs-minipass",
     "owner": "npm",
     "pkg": "fs-minipass"
+  },
+  {
+    "id": "npm_fs-vacuum",
+    "name": "fs-vacuum",
+    "owner": "npm",
+    "pkg": "fs-vacuum"
   },
   {
     "id": "npm_gauge",
