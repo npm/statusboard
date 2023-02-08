@@ -62,12 +62,7 @@ const config = {
   metafile: true,
   bundle: true,
   minify: prod,
-  ...(dev && {
-    sourcemap: true,
-    watch: {
-      onRebuild: (err) => !err && console.log('Rebuilt'),
-    },
-  }),
+  sourcemap: !!dev,
   define: {
     'process.env.BUILD_CONTEXT': JSON.stringify({
       sha: sha(),
@@ -78,10 +73,9 @@ const config = {
   plugins: Object.entries(plugins).map(([name, setup]) => ({ name, setup })),
 }
 
-await esbuild.build(config)
-  .then(({ metafile }) => Object.keys(metafile.outputs).join('\n'))
-  .then(console.log)
-  .catch((err) => {
-    process.exitCode = 1
-    console.error(err)
-  })
+if (dev) {
+  const ctx = await esbuild.context(config)
+  await ctx.watch()
+} else {
+  await esbuild.build(config)
+}
