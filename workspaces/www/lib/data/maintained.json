@@ -42,12 +42,6 @@
     "pkg": "cacache"
   },
   {
-    "id": "npm_ci-detect",
-    "name": "ci-detect",
-    "owner": "npm",
-    "pkg": "@npmcli/ci-detect"
-  },
-  {
     "id": "npm_cmd-shim",
     "name": "cmd-shim",
     "owner": "npm",
