@@ -96,12 +96,6 @@
     "pkg": "fs-minipass"
   },
   {
-    "id": "npm_fs-vacuum",
-    "name": "fs-vacuum",
-    "owner": "npm",
-    "pkg": "fs-vacuum"
-  },
-  {
     "id": "npm_gauge",
     "name": "gauge",
     "owner": "npm",
