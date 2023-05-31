@@ -32,7 +32,7 @@
     "@octokit/plugin-throttling": "^5.0.1",
     "@octokit/rest": "^19.0.4",
     "dotenv": "^16.0.3",
-    "glob": "^8.0.3",
+    "glob": "^10.2.6",
     "lodash": "^4.17.21",
     "pacote": "^15.0.1",
     "proc-log": "^3.0.0",
