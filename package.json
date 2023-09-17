@@ -28,12 +28,7 @@
     "ciVersions": "latest",
     "windowsCI": false,
     "macCI": false,
-    "lockfile": true,
-    "workspaceRepo": {
-      "add": {
-        ".github/dependabot.yml": false
-      }
-    }
+    "lockfile": true
   },
   "tap": {
     "test-ignore": "^(workspaces)/",
