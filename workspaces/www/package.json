@@ -30,7 +30,7 @@
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.0",
     "@npmcli/template-oss": "4.19.0",
-    "esbuild": "^0.17.4",
+    "esbuild": "^0.19.3",
     "http-server": "^14.1.1",
     "tap": "^16.3.0"
   },
@@ -58,7 +58,7 @@
     "datatables.net-buttons-bs4": "^2.2.3",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
-    "jquery": "^3.6.1",
+    "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",
     "semver": "^7.3.8"
   },
