@@ -25,10 +25,7 @@
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "4.19.0",
-    "ciVersions": "latest",
-    "windowsCI": false,
-    "macCI": false,
-    "lockfile": true
+    "content": "./scripts/template-oss"
   },
   "tap": {
     "test-ignore": "^(workspaces)/",
@@ -41,7 +38,7 @@
   },
   "scripts": {
     "template-oss-apply": "template-oss-apply --force",
-    "lint": "eslint \"**/*.js\"",
+    "lint": "eslint \"**/*.{js,mjs}\"",
     "postlint": "template-oss-check",
     "lintfix": "npm run lint -- --fix",
     "snap": "tap",
