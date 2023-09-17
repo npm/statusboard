@@ -63,6 +63,8 @@ const config = {
   bundle: true,
   minify: prod,
   sourcemap: !!dev,
+  platform: 'neutral',
+  mainFields: ['module', 'main'],
   define: {
     'process.env.BUILD_CONTEXT': JSON.stringify({
       sha: sha(),
