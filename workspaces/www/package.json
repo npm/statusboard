@@ -32,7 +32,7 @@
     "@npmcli/template-oss": "4.15.1",
     "esbuild": "^0.17.4",
     "http-server": "^14.1.1",
-    "tap": "^16.3.0"
+    "tap": "^18.0.4"
   },
   "files": [
     "bin/",
