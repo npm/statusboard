@@ -29,7 +29,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.0",
-    "@npmcli/template-oss": "4.15.1",
+    "@npmcli/template-oss": "4.19.0",
     "esbuild": "^0.17.4",
     "http-server": "^14.1.1",
     "tap": "^16.3.0"
@@ -43,7 +43,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.15.1",
+    "version": "4.19.0",
     "ciVersions": "latest",
     "windowsCI": false,
     "macCI": false
