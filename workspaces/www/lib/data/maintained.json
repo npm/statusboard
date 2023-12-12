@@ -400,6 +400,12 @@
     "pkg": "promzard"
   },
   {
+    "id": "npm_publish-test",
+    "name": "publish-test",
+    "owner": "npm",
+    "pkg": "@npmcli/publish-test"
+  },
+  {
     "id": "npm_query",
     "name": "query",
     "owner": "npm",
