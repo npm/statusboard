@@ -50,6 +50,8 @@ const makeIssueColumns = ({ data: key, title, danger = 20, warning = 1 }) => ({
 })
 
 const getColumns = (rows) => {
+  const templateOSS = $$.templateOSS(rows)
+  const requiredTemplate = $$.templateVersion(rows)
   const requiredNode = $$.nodeVersion(rows)
 
   const rowWithIssues = rows.find((project) => project.issues && project.prs) || {}
@@ -149,6 +151,31 @@ const getColumns = (rows) => {
         }
       },
     },
+    templateVersion: {
+      title: 'Template',
+      type: 'num',
+      render: (data, row) => {
+        if (data === null) {
+          return {
+            sort: -1,
+            filter: 'N/A',
+            display: EL.cell({ text: 'N/A', type: 'info' }),
+          }
+        }
+
+        const isTemplateOSS = $$.rowId(row) === $$.rowId(templateOSS)
+        const type = isTemplateOSS || data === requiredTemplate ? 'success'
+          : data && data !== requiredTemplate ? 'warning'
+          : 'danger'
+        const version = isTemplateOSS ? requiredTemplate : data
+        const text = version || 'None'
+        return {
+          sort: version ? util.semver.score(version) : 0,
+          filter: text,
+          display: EL.cell({ text, type }),
+        }
+      },
+    },
     coverage: {
       title: 'Coverage',
       type: 'num',
@@ -203,6 +230,27 @@ const getColumns = (rows) => {
         }
       },
     },
+    archived: {
+      // archived and deprecated are excluded so if something is here
+      // and it is archived then it needs to be deprecated
+      title: 'Deprecate',
+      type: 'num',
+      render: (data, row) => {
+        if ($$.isPrivate(row)) {
+          return {
+            sort: -1,
+            display: EL.noData({ type: 'info' }),
+          }
+        }
+        const opts = data ? { type: 'danger', text: 'TODO' } : { type: 'success', text: 'No' }
+        return {
+          sort: data ? 0 : 1,
+          filter: opts.text,
+          display: EL.cell(opts),
+        }
+      },
+    },
+
     lastPublished: {
       title: 'Published',
       type: 'num',
