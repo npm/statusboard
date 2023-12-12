@@ -1,18 +1,12 @@
 module.exports = {
-  rootModule: {
+  rootRepo: {
     add: {
-      'package.json': {
-        file: './pkg.json',
-        overwrite: false,
-      },
+      '.github/settings.yml': 'settings-yml.hbs',
     },
   },
-  workspaceModule: {
+  workspaceRepo: {
     add: {
-      'package.json': {
-        file: './pkg.json',
-        overwrite: false,
-      },
+      '.github/settings.yml': 'settings-yml.hbs',
     },
   },
   ciVersions: 'latest',

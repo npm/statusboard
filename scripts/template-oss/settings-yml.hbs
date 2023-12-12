@@ -1,5 +1,3 @@
-# This file is automatically added by @npmcli/template-oss. Do not edit.
-
 repository:
   allow_merge_commit: false
   allow_rebase_merge: true
@@ -11,9 +9,11 @@ repository:
   enable_vulnerability_alerts: true
 
 branches:
-  - name: main
+  {{#each branches}}
+  - name: {{ . }}
     protection:
       required_status_checks: null
       enforce_admins: null
       required_pull_request_reviews: null
       restrictions: null
+  {{/each}}
