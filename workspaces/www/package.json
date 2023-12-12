@@ -8,7 +8,7 @@
     "build": "node ./bin/build.mjs --prod",
     "clean": "rm -rf lib/data/daily && rm -rf lib/data/latest.json",
     "test": "tap",
-    "lint": "eslint \"**/*.{js,mjs}\"",
+    "lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
     "postlint": "template-oss-check",
     "template-oss-apply": "template-oss-apply --force",
     "lintfix": "npm run lint -- --fix",
@@ -29,7 +29,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.0",
-    "@npmcli/template-oss": "4.21.1",
+    "@npmcli/template-oss": "4.21.3",
     "tap": "^16.3.0"
   },
   "files": [
@@ -41,7 +41,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.21.1",
+    "version": "4.21.3",
     "content": "../../scripts/template-oss"
   },
   "dependencies": {
