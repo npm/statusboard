@@ -78,12 +78,6 @@
     "pkg": "@npmcli/eslint-config"
   },
   {
-    "id": "npm_figgy-pudding",
-    "name": "figgy-pudding",
-    "owner": "npm",
-    "pkg": "figgy-pudding"
-  },
-  {
     "id": "npm_fs",
     "name": "fs",
     "owner": "npm",
@@ -480,6 +474,12 @@
     "name": "template-oss",
     "owner": "npm",
     "pkg": "@npmcli/template-oss"
+  },
+  {
+    "id": "npm_types",
+    "name": "types",
+    "owner": "npm",
+    "pkg": "@npm/types"
   },
   {
     "id": "npm_unique-filename",
