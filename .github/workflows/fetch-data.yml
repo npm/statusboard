@@ -13,7 +13,7 @@ jobs:
     outputs:
       has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
       - name: Setup git user
