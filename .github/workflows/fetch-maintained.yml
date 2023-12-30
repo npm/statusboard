@@ -36,7 +36,7 @@ jobs:
         id: status
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            echo "::set-output name=has_changes::1"
+            echo "has_changes=1" >> $GITHUB_OUTPUT
           fi
       - name: Commit changes
         if: steps.status.outputs.has_changes == '1'
