@@ -67,6 +67,11 @@
     "pkg": "@npmcli/disparity-colors"
   },
   {
+    "id": "npm_documentation",
+    "name": "documentation",
+    "owner": "npm"
+  },
+  {
     "id": "npm_eslint-config",
     "name": "eslint-config",
     "owner": "npm",
@@ -216,6 +221,12 @@
     "pkg": "make-fetch-happen"
   },
   {
+    "id": "npm_map-workspaces",
+    "name": "map-workspaces",
+    "owner": "npm",
+    "pkg": "@npmcli/map-workspaces"
+  },
+  {
     "id": "npm_metavuln-calculator",
     "name": "metavuln-calculator",
     "owner": "npm",
@@ -315,6 +326,12 @@
     "name": "npm-pick-manifest",
     "owner": "npm",
     "pkg": "npm-pick-manifest"
+  },
+  {
+    "id": "npm_npm-profile",
+    "name": "npm-profile",
+    "owner": "npm",
+    "pkg": "npm-profile"
   },
   {
     "id": "npm_npm-registry-fetch",
