@@ -33,11 +33,11 @@ module.exports = ({ auth }) => {
           `SecondaryRateLimit detected for request ${options.method} ${options.url}`
         )
 
-				if (options.request.retryCount === 0) {
-					// only retries once
-					octokit.log.info(`Retrying after ${retryAfter} seconds!`)
-					return true
-				}
+        if (options.request.retryCount === 0) {
+          // only retries once
+          octokit.log.info(`Retrying after ${retryAfter} seconds!`)
+          return true
+        }
       },
     },
   })
