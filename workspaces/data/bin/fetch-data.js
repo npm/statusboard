@@ -87,7 +87,7 @@ const main = async (currentRun = 0) => {
     log.error('status', err.status)
 
     if (err.status === 403 && currentRun <= 5) {
-      const retryDelay = config.delay ? 1000 * 60 * 10 : 0
+      const retryDelay = config.delay ? (currentRun + 1) * config.delay * 60 * 10 : 0
       log.warn('='.repeat(80))
       log.warn('='.repeat(80))
       log.warn(`Retrying: run number ${currentRun} fetch-data script in ${retryDelay}ms`)
