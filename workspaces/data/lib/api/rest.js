@@ -22,8 +22,7 @@ module.exports = ({ auth }) => {
           `Request quota exhausted for request ${options.method} ${options.url}`
         )
 
-        if (options.request.retryCount === 0) {
-          // only retries once
+        if (options.request.retryCount < 5) {
           octokit.log.info(`Retrying after ${retryAfter} seconds!`)
           return true
         }
@@ -33,8 +32,7 @@ module.exports = ({ auth }) => {
           `SecondaryRateLimit detected for request ${options.method} ${options.url}`
         )
 
-        if (options.request.retryCount === 0) {
-          // only retries once
+        if (options.request.retryCount < 5) {
           octokit.log.info(`Retrying after ${retryAfter} seconds!`)
           return true
         }
