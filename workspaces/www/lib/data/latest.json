@@ -5667,7 +5667,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 176,
+      "count": 177,
       "url": "https://github.com/npm/are-we-there-yet/stargazers"
     },
     "pkgPrivate": false,
@@ -25346,12 +25346,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/documentation",
     "lastPush": {
-      "date": "2024-02-28T17:59:58Z",
-      "url": "https://github.com/npm/documentation/commit/9f88d8d9a583e2de5965fe6d318f39d4bee0ed85"
+      "date": "2024-03-14T17:09:17Z",
+      "url": "https://github.com/npm/documentation/commit/de8d475650b459030d1a928c0364818af7d1e6f3"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/documentation/actions/runs/8229477600/job/22500759684",
+      "url": "https://github.com/npm/documentation/actions/runs/8284797425/job/22671336121",
       "conclusion": "failure"
     },
     "stars": {
@@ -26162,7 +26162,7 @@
       ]
     },
     "prs": {
-      "count": 15,
+      "count": 7,
       "url": "https://github.com/npm/documentation/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -26554,7 +26554,7 @@
         15,
         15,
         15,
-        15
+        7
       ]
     },
     "issues": {
@@ -56232,7 +56232,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 17,
+      "count": 18,
       "url": "https://github.com/npm/json-parse-even-better-errors/stargazers"
     },
     "pkgPrivate": false,
@@ -67825,7 +67825,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 3,
+      "count": 4,
       "url": "https://github.com/npm/minify-registry-metadata/stargazers"
     },
     "pkgPrivate": false,
@@ -84664,7 +84664,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 190,
+      "count": 191,
       "url": "https://github.com/npm/normalize-package-data/stargazers"
     },
     "pkgPrivate": false,
@@ -87465,8 +87465,8 @@
     "defaultBranch": "latest",
     "url": "https://github.com/npm/cli",
     "lastPush": {
-      "date": "2024-03-13T21:36:54Z",
-      "url": "https://github.com/npm/cli/commit/bdb3c28167f757060474ef2b82c92f3a1f210972"
+      "date": "2024-03-14T15:12:37Z",
+      "url": "https://github.com/npm/cli/commit/e1ecfa7829be91282373862669b92ef42b9e48df"
     },
     "archived": false,
     "status": {
@@ -88283,7 +88283,7 @@
       ]
     },
     "prs": {
-      "count": 29,
+      "count": 28,
       "url": "https://github.com/npm/cli/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/cli/pull/7265",
@@ -88679,7 +88679,7 @@
         29,
         30,
         28,
-        29
+        28
       ]
     },
     "issues": {
@@ -89478,7 +89478,7 @@
         ]
       },
       "triage": {
-        "count": 401,
+        "count": 402,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
           124,
@@ -89870,7 +89870,7 @@
           397,
           397,
           400,
-          401
+          402
         ]
       },
       "history": [
@@ -107139,8 +107139,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-packlist",
     "lastPush": {
-      "date": "2024-01-08T21:53:07Z",
-      "url": "https://github.com/npm/npm-packlist/commit/8c182a187e71c9f39b5558c2f6846c9161286441"
+      "date": "2024-03-14T16:01:28Z",
+      "url": "https://github.com/npm/npm-packlist/commit/68fa4d1002e07acc19ce655adae783ec672ed7b6"
     },
     "archived": false,
     "status": {
@@ -107154,7 +107154,7 @@
     "pkgPrivate": false,
     "pkgName": "npm-packlist",
     "coverage": 100,
-    "templateVersion": "4.21.2",
+    "templateVersion": "4.21.3",
     "license": "ISC",
     "node": "^14.17.0 || ^16.13.0 || >=18.0.0",
     "version": "8.0.2",
@@ -107959,7 +107959,10 @@
     "prs": {
       "count": 4,
       "url": "https://github.com/npm/npm-packlist/pulls?q=is%3Aopen",
-      "release": null,
+      "release": {
+        "url": "https://github.com/npm/npm-packlist/pull/220",
+        "version": "8.0.3"
+      },
       "history": [
         1,
         1,
@@ -109955,7 +109958,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 4,
+      "count": 5,
       "url": "https://github.com/npm/npm-pick-manifest/stargazers"
     },
     "pkgPrivate": false,
@@ -143632,13 +143635,13 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/publish-test",
     "lastPush": {
-      "date": "2023-05-03T18:30:03Z",
-      "url": "https://github.com/npm/publish-test/commit/a466a615fbdba5f5de2e21b7a4a14186b2799b20"
+      "date": "2024-03-14T15:53:47Z",
+      "url": "https://github.com/npm/publish-test/commit/1ee19dcbdf537ed51ed9b7682695db2ef3581aa5"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/publish-test/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/publish-test/actions/runs/8283722044/job/22667575925",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 2,
@@ -143647,7 +143650,7 @@
     "pkgPrivate": false,
     "pkgName": "@npmcli/publish-test",
     "coverage": 100,
-    "templateVersion": "4.12.0",
+    "templateVersion": "4.21.3",
     "license": "MIT",
     "node": ">=18.0.0",
     "version": "1.1.2",
@@ -143850,7 +143853,7 @@
       ]
     },
     "prs": {
-      "count": 2,
+      "count": 0,
       "url": "https://github.com/npm/publish-test/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -143943,7 +143946,7 @@
         2,
         2,
         2,
-        2
+        0
       ]
     },
     "issues": {
@@ -163939,7 +163942,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 4907,
+      "count": 4908,
       "url": "https://github.com/npm/node-semver/stargazers"
     },
     "pkgPrivate": false,
@@ -164748,7 +164751,7 @@
       ]
     },
     "prs": {
-      "count": 5,
+      "count": 6,
       "url": "https://github.com/npm/node-semver/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/node-semver/pull/683",
@@ -165144,7 +165147,7 @@
         5,
         5,
         5,
-        5
+        6
       ]
     },
     "issues": {
@@ -172360,12 +172363,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2024-03-14T11:01:35Z",
-      "url": "https://github.com/npm/statusboard/commit/94ada191964fbdd51b5dbb107af6c5107f69e3b2"
+      "date": "2024-03-14T17:37:38Z",
+      "url": "https://github.com/npm/statusboard/commit/dee5be0afd7191914b0c72d52101071b4e36d391"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/8280356345/job/22656699573",
+      "url": "https://github.com/npm/statusboard/actions/runs/8285195358/job/22672385609",
       "conclusion": "failure"
     },
     "stars": {
