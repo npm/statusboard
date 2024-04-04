@@ -28,7 +28,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
     "@octokit/graphql": "^7.0.1",
-    "@octokit/plugin-retry": "^6.0.0",
+    "@octokit/plugin-retry": "^7.1.0",
     "@octokit/plugin-throttling": "^8.1.0",
     "@octokit/rest": "^20.0.1",
     "dotenv": "^16.0.3",
