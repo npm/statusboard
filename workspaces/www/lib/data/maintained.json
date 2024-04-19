@@ -84,12 +84,6 @@
     "pkg": "@npmcli/fs"
   },
   {
-    "id": "npm_fs-minipass",
-    "name": "fs-minipass",
-    "owner": "npm",
-    "pkg": "fs-minipass"
-  },
-  {
     "id": "npm_gauge",
     "name": "gauge",
     "owner": "npm",
