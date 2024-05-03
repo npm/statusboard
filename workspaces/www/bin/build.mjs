@@ -42,7 +42,7 @@ const plugins = {
     })
   },
   html: (build) => {
-    build.onEnd((a) => {
+    build.onEnd(() => {
       copy('index.html')
     })
   },
