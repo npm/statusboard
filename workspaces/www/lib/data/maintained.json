@@ -424,6 +424,17 @@
     "pkg": "read-package-json-fast"
   },
   {
+    "id": "npm_redact",
+    "name": "redact",
+    "owner": "npm",
+    "pkg": "@npmcli/redact"
+  },
+  {
+    "id": "npm_registry",
+    "name": "registry",
+    "owner": "npm"
+  },
+  {
     "id": "npm_rfcs",
     "name": "rfcs",
     "owner": "npm"
