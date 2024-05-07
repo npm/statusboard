@@ -1,5 +1,5 @@
 
-import log from 'proc-log'
+import pLog from 'proc-log'
 import Api from '../lib/api/index.js'
 import logger from '../lib/logger.js'
 import writeJson from '../lib/write-json.js'
@@ -33,7 +33,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
   const allProjects = await api.searchReposWithManifests(repoQuery)
 
   const maintainedProjects = allProjects.filter((project) => {
-    const logReason = (reason, include) => log.info(
+    const logReason = (reason, include) => pLog.log.info(
       'fetch:maintained',
       `${include ? '' : 'not'} including ${projectId(project)} due to: ${reason}`.trim()
     )
@@ -99,7 +99,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
 
   maintained.sort((a, b) => sortKey(a).localeCompare(sortKey(b)))
 
-  log.info('fetch:maintained', `Found ${maintained.length} maintained projects`)
+  pLog.log.info('fetch:maintained', `Found ${maintained.length} maintained projects`)
 
   if (!write) {
     return JSON.stringify(maintained, null, 2)
@@ -119,7 +119,7 @@ exec(config)
     return metadata.save({ status: 'success', update: res.update })
   })
   .catch(async (err) => {
-    log.error(err)
+    pLog.log.error(err)
     await metadata.save({ status: 'error' })
     throw err
   })

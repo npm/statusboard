@@ -2,7 +2,7 @@ import path from 'path'
 import { graphql as Graphql } from '@octokit/graphql'
 import { glob } from 'glob'
 import lodash from 'lodash'
-import log from 'proc-log'
+import pLog from 'proc-log'
 import packageApi from './package.js'
 
 const { merge, get } = lodash
@@ -27,12 +27,12 @@ export default ({ auth }) => {
       nodes.push(...res.nodes)
 
       if (res.pageInfo.hasNextPage) {
-        log.verbose('graphql:paginate',
+        pLog.log.verbose('graphql:paginate',
           `nodes: ${res.nodes.length}, cursor:${res.pageInfo.endCursor}`)
         return paginatedQuery({ pageInfo: res.pageInfo, nodes })
       }
 
-      log.verbose('graphql:paginate', `total: ${nodes.length}`)
+      pLog.log.verbose('graphql:paginate', `total: ${nodes.length}`)
 
       return nodes
     }
@@ -41,7 +41,7 @@ export default ({ auth }) => {
   }
 
   const getDiscussions = async (owner, name, query = '') => {
-    log.verbose(`graphql:discussions`, `${owner}/${name} ${query}`)
+    pLog.log.verbose(`graphql:discussions`, `${owner}/${name} ${query}`)
 
     return paginateQuery(
       `query ($owner: String!, $name: String!, $first: Int!, $after: String) {
@@ -66,7 +66,7 @@ export default ({ auth }) => {
     * @returns {Promise<string[]>}
     */
   const getSubTrees = async (owner, name, paths) => {
-    log.verbose(`graphql:subTrees`, `${owner}/${name}/{${paths.join(',')}}`)
+    pLog.log.verbose(`graphql:subTrees`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
       `query ($owner: String!, $name: String!) {
@@ -100,7 +100,7 @@ export default ({ auth }) => {
     const isArray = Array.isArray(pathsOrPath)
     const paths = isArray ? pathsOrPath : [pathsOrPath]
 
-    log.verbose(`graphql:pkg`, `${owner}/${name}/{${paths.join(',')}}`)
+    pLog.log.verbose(`graphql:pkg`, `${owner}/${name}/{${paths.join(',')}}`)
 
     const { repository } = await GRAPHQL(
       `query ($owner: String!, $name: String!) {
@@ -125,7 +125,7 @@ export default ({ auth }) => {
     * @returns {Promise<({ repo: Record<string, any>, pkg: Record<string, any> })[]>}
     */
   const getWorkspaces = async (owner, name, workspaces) => {
-    log.verbose(`graphql:workspaces`, `${owner}/${name}`)
+    pLog.log.verbose(`graphql:workspaces`, `${owner}/${name}`)
 
     if (!Array.isArray(workspaces)) {
       return []
@@ -152,7 +152,7 @@ export default ({ auth }) => {
       wsDirs.push(...await getSubTrees(owner, name, validWsGlobs))
     }
 
-    log.verbose(
+    pLog.log.verbose(
       'graphql:workspaces',
         `Looking for workspaces in ${owner}/${name} ${wsDirs.length} dirs`
     )
@@ -170,7 +170,7 @@ export default ({ auth }) => {
     * })[]>}
     */
   const searchRepos = async (searchQuery) => {
-    log.verbose('graphql:search', searchQuery)
+    pLog.log.verbose('graphql:search', searchQuery)
 
     const nodes = await paginateQuery(
       `query ($searchQuery: String!, $first: Int!, $after: String) {
@@ -226,7 +226,7 @@ export default ({ auth }) => {
     * })[]>}
     */
   const searchReposWithWorkspaces = async (searchQuery) => {
-    log.verbose('graphql:searchWithWorkspaces', searchQuery)
+    pLog.log.verbose('graphql:searchWithWorkspaces', searchQuery)
 
     const allRepos = await searchRepos(searchQuery)
 
@@ -246,7 +246,7 @@ export default ({ auth }) => {
     * })[]>}
     */
   const searchReposWithManifests = async (searchQuery) => {
-    log.verbose('graphql:searchWithManifests', searchQuery)
+    pLog.log.verbose('graphql:searchWithManifests', searchQuery)
 
     const allRepos = await searchReposWithWorkspaces(searchQuery)
 
