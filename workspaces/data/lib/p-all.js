@@ -1,4 +1,4 @@
-module.exports = async (promises) => {
+export default async (promises) => {
   const result = []
 
   const isObj = typeof promises === 'object' && !Array.isArray(promises)

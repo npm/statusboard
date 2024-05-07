@@ -1,11 +1,13 @@
-const { Octokit } = require('@octokit/rest')
-const { retry } = require('@octokit/plugin-retry')
-const { throttling } = require('@octokit/plugin-throttling')
-const log = require('proc-log')
-const { groupBy, orderBy } = require('lodash')
-const config = require('../config')
+import { Octokit } from '@octokit/rest'
+import { retry } from '@octokit/plugin-retry'
+import { throttling } from '@octokit/plugin-throttling'
+import log from 'proc-log'
+import lodash from 'lodash'
+import config from '../config.js'
 
-module.exports = ({ auth }) => {
+const { groupBy, orderBy } = lodash
+
+export default ({ auth }) => {
   const REST = new (Octokit.plugin(retry, throttling))({
     auth,
     log,

@@ -1,7 +1,7 @@
-const pacote = require('pacote')
-const log = require('proc-log')
+import pacote from 'pacote'
+import log from 'proc-log'
 
-module.exports = {
+export default {
   manifest: (spec, opt) => {
     log.verbose(`api:package:manifest`, spec)
     return pacote.manifest(spec, opt).catch(() => null)

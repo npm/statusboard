@@ -2,7 +2,10 @@
   "name": "data",
   "version": "1.0.0",
   "private": true,
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "scripts": {
     "fetch:data": "node ./bin/fetch-data.js",
     "fetch:maintained": " node ./bin/fetch-maintained.js",
@@ -27,11 +30,13 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
+    "@octokit/core": "^6.1.2",
     "@octokit/graphql": "^8.1.1",
     "@octokit/plugin-retry": "^7.1.1",
     "@octokit/plugin-throttling": "^9.3.0",
     "@octokit/rest": "^20.0.1",
     "dotenv": "^16.0.3",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "glob": "^10.3.4",
     "lodash": "^4.17.21",
     "pacote": "^18.0.3",

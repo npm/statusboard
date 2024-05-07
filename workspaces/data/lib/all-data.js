@@ -1,7 +1,7 @@
-const path = require('path')
-const fs = require('fs/promises')
+import path from 'path'
+import fs from 'fs/promises'
 
-module.exports = async ({ dir, filter = () => true }) => {
+export default async ({ dir, filter = () => true }) => {
   const dirContents = await fs.readdir(dir).catch(() => [])
   const jsonFiles = dirContents.filter((f) => f.endsWith('.json') && filter(f))
 
