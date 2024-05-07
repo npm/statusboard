@@ -1,4 +1,4 @@
-import log from 'proc-log'
+import pLog from 'proc-log'
 import timers from 'timers/promises'
 
 // A memory cache for expensive requests like check-runs
@@ -21,7 +21,7 @@ const cacheMethod = (fn, { delay } = {}) => {
     const key = cacheKey(args)
 
     if (CACHE.get(fn).has(key)) {
-      log.info('cache', 'returning', fn.name, key)
+      pLog.log.info('cache', 'returning', fn.name, key)
       return CACHE.get(fn).get(key)
     }
 

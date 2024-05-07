@@ -1,6 +1,6 @@
 import path from 'path'
 import timers from 'timers/promises'
-import log from 'proc-log'
+import pLog from 'proc-log'
 import writeJson from '../lib/write-json.js'
 import Api from '../lib/api/index.js'
 import fetchData from '../lib/project-data.js'
@@ -74,25 +74,25 @@ const writeData = async ({ write, ...restConfig }) => {
 const main = async (currentRun = 0) => {
   currentRun++
 
-  log.info('='.repeat(80))
-  log.info('='.repeat(80))
-  log.info(`Starting: run number ${currentRun} at ${new Date().toISOString()}`)
-  log.info('='.repeat(80))
-  log.info('='.repeat(80))
+  pLog.log.info('='.repeat(80))
+  pLog.log.info('='.repeat(80))
+  pLog.log.info(`Starting: run number ${currentRun} at ${new Date().toISOString()}`)
+  pLog.log.info('='.repeat(80))
+  pLog.log.info('='.repeat(80))
 
   try {
     return await writeData(config)
   } catch (err) {
-    log.error(err)
-    log.error('status', err.status)
+    pLog.log.error(err)
+    pLog.log.error('status', err.status)
 
     if (err.status === 403 && currentRun <= 5) {
       const retryDelay = config.delay ? (currentRun + 1) * config.delay * 60 * 10 : 0
-      log.warn('='.repeat(80))
-      log.warn('='.repeat(80))
-      log.warn(`Retrying: run number ${currentRun} fetch-data script in ${retryDelay}ms`)
-      log.warn('='.repeat(80))
-      log.warn('='.repeat(80))
+      pLog.log.warn('='.repeat(80))
+      pLog.log.warn('='.repeat(80))
+      pLog.log.warn(`Retrying: run number ${currentRun} fetch-data script in ${retryDelay}ms`)
+      pLog.log.warn('='.repeat(80))
+      pLog.log.warn('='.repeat(80))
       return timers.setTimeout(retryDelay).then(() => main(currentRun))
     }
 

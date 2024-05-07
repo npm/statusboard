@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs/promises'
-import log from 'proc-log'
+import pLog from 'proc-log'
 import logger from '../lib/logger.js'
 import getAllData from '../lib/all-data.js'
 import wwwPaths from 'www'
@@ -59,6 +59,6 @@ main({
 })
   .then(console.log)
   .catch(err => {
-    log.error(err)
+    pLog.log.error(err)
     process.exitCode = 1
   })

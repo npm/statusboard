@@ -1,7 +1,7 @@
 import { Octokit } from '@octokit/rest'
 import { retry } from '@octokit/plugin-retry'
 import { throttling } from '@octokit/plugin-throttling'
-import log from 'proc-log'
+import pLog from 'proc-log'
 import lodash from 'lodash'
 import config from '../config.js'
 
@@ -10,7 +10,7 @@ const { groupBy, orderBy } = lodash
 export default ({ auth }) => {
   const REST = new (Octokit.plugin(retry, throttling))({
     auth,
-    log,
+    log: pLog,
     retry: {
       doNotRetry: [404, 422],
     },
@@ -43,12 +43,12 @@ export default ({ auth }) => {
   })
 
   const getRepo = (owner, repo) => {
-    log.verbose(`rest:repo:get`, `${owner}/${repo}`)
+    pLog.log.verbose(`rest:repo:get`, `${owner}/${repo}`)
     return REST.repos.get({ owner, repo }).then(d => d.data)
   }
 
   const getCommit = async (owner, name, p) => {
-    log.verbose(`rest:repo:commit`, `${owner}/${name}${p ? `/${p}` : ''}`)
+    pLog.log.verbose(`rest:repo:commit`, `${owner}/${name}${p ? `/${p}` : ''}`)
 
     return REST.repos.listCommits({
       owner,
@@ -59,7 +59,7 @@ export default ({ auth }) => {
   }
 
   const getStatus = async (owner, name, ref) => {
-    log.verbose(`rest:repo:status`, `${owner}/${name}#${ref}`)
+    pLog.log.verbose(`rest:repo:status`, `${owner}/${name}#${ref}`)
 
     const allCheckRuns = await REST.paginate(REST.checks.listForRef, {
       owner,
@@ -85,7 +85,7 @@ export default ({ auth }) => {
       return acc
     }, [])
 
-    log.verbose(`rest:repo:status:names`, checkRuns.map(c => c.name).join('\n'))
+    pLog.log.verbose(`rest:repo:status:names`, checkRuns.map(c => c.name).join('\n'))
 
     const failures = ['action_required', 'cancelled', 'failure', 'stale', 'timed_out', null]
     const statuses = { neutral: false, success: false, skipped: false }
@@ -109,7 +109,7 @@ export default ({ auth }) => {
   }
 
   const getAllIssuesAndPullRequests = (owner, name, query = '') => {
-    log.verbose('rest:issues:getAll', `${owner}/${name}`)
+    pLog.log.verbose('rest:issues:getAll', `${owner}/${name}`)
 
     return REST.paginate(REST.search.issuesAndPullRequests, {
       q: `repo:${owner}/${name}+${query}`,
