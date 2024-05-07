@@ -1,13 +1,15 @@
-const path = require('path')
-const { graphql: Graphql } = require('@octokit/graphql')
-const glob = require('glob')
-const { merge, get } = require('lodash')
-const log = require('proc-log')
-const packageApi = require('./package.js')
+import path from 'path'
+import { graphql as Graphql } from '@octokit/graphql'
+import { glob } from 'glob'
+import lodash from 'lodash'
+import log from 'proc-log'
+import packageApi from './package.js'
+
+const { merge, get } = lodash
 
 const graphqlKey = (k) => `_${k.replace(/[^_0-9A-Za-z]/g, '')}`
 
-module.exports = ({ auth }) => {
+export default ({ auth }) => {
   const GRAPHQL = Graphql.defaults({
     headers: {
       authorization: `token ${auth}`,

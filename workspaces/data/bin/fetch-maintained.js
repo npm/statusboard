@@ -1,15 +1,16 @@
 
-const log = require('proc-log')
-const Api = require('../lib/api/index.js')
-const logger = require('../lib/logger.js')
-const writeJson = require('../lib/write-json.js')
-const wwwPaths = require('www')
-const config = require('../lib/config.js')
-const updateMetadata = require('../lib/update-metadata.js')
+import log from 'proc-log'
+import Api from '../lib/api/index.js'
+import logger from '../lib/logger.js'
+import writeJson from '../lib/write-json.js'
+import wwwPaths from 'www'
+import config from '../lib/config.js'
+import updateMetadata from '../lib/update-metadata.js'
+import { fileURLToPath } from 'url'
 
 logger()
 const api = Api(config)
-const metadata = updateMetadata(__filename)
+const metadata = updateMetadata(fileURLToPath(import.meta.url))
 
 const sortKey = (p) => {
   const name = p.pkg ?? p.name
@@ -44,11 +45,11 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
     }
 
     const notPublished = !project.manifest
-    const private = project.pkg?.private
+    const prvt = project.pkg?.private
     const deprecated = project.manifest?.deprecated
     const archived = project.repo.isArchived
 
-    if (project.repo.isWorkspace && notPublished && private) {
+    if (project.repo.isWorkspace && notPublished && prvt) {
       logReason('private workspace')
       // These are workspaces within a repo that are not published
       // to the registry. There might be something to track here
@@ -72,7 +73,7 @@ const exec = async ({ write, repoQuery, repoFilter }) => {
       return false
     }
 
-    if (archived && (notPublished || deprecated || private)) {
+    if (archived && (notPublished || deprecated || prvt)) {
       logReason('archived and deprecated')
       // Remove repos that are achived and the published package has been deprecated
       // This way we don't have to remove any topics on GH repos but we can safely

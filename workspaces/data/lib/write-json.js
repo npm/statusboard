@@ -1,7 +1,7 @@
-const path = require('path')
-const fs = require('fs/promises')
+import path from 'path'
+import fs from 'fs/promises'
 
-module.exports = async (files, data) => {
+export default async (files, data) => {
   return Promise.all(files.map(async (fileOpts) => {
     const { path: filePath, indent = 0 } = typeof fileOpts === 'string'
       ? { path: fileOpts } : fileOpts

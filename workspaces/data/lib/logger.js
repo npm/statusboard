@@ -5,7 +5,7 @@ const logger = (level, ...args) => {
   }
 }
 
-module.exports = () => {
+export default () => {
   process.on('log', logger)
   return () => process.off('log', logger)
 }

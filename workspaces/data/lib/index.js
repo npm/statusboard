@@ -1,5 +1,1 @@
-const getWorkflowId = require('./workflow-id.js')
-
-module.exports = {
-  getWorkflowId,
-}
+export { default as getWorkflowId } from './workflow-id.js'

@@ -1,7 +1,8 @@
-require('dotenv').config()
+import 'dotenv/config'
+import { parseArgs } from 'util'
+import SemVer from 'semver'
 
-const { parseArgs } = require('util')
-const { re, src, tokens } = require('semver')
+const { re, src, tokens } = SemVer
 const getVersion = (str = '') => str.match(re[tokens.FULLPLAIN])?.[0]
 
 // workspace releases include a context between the word release and the version
@@ -39,7 +40,7 @@ const {
   },
 }).values
 
-module.exports = {
+export default {
   auth: process.env.AUTH_TOKEN,
   delay: +delay,
   write: !noWrite,

@@ -1,6 +1,6 @@
-const getAllData = require('./all-data.js')
+import getAllData from './all-data.js'
 
-module.exports = async ({ projects, dir, filter }) => {
+export default async ({ projects, dir, filter }) => {
   const historyData = await getAllData({ dir, filter })
     .then(data => data.map(r => r[1]))
 

@@ -1,4 +1,4 @@
-const Range = require('semver/classes/range')
+import Range from 'semver/classes/range'
 
 const floorAvg = (arr) => Math.floor(arr.reduce((a, b) => a + b, 0) / arr.length)
 const getMajor = (spec) => new Range(spec).set[0][0].semver.major
@@ -11,7 +11,7 @@ const coverageKeys = ['check-coverage', 'coverage'].reduce((acc, k) => {
 }, [])
 
 // Note: this only works for tap
-module.exports = (pkg) => {
+export default (pkg) => {
   const tapSpec = pkg.devDependencies?.tap
 
   if (!tapSpec) {

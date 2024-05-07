@@ -1,15 +1,15 @@
-const Rest = require('./rest.js')
-const Graphql = require('./graphql.js')
-const package = require('./package.js')
-const cacheMethod = require('./cache.js')
+import Rest from './rest.js'
+import Graphql from './graphql.js'
+import pkg from './package.js'
+import cacheMethod from './cache.js'
 
-module.exports = ({ auth, delay }) => {
+export default ({ auth, delay }) => {
   const rest = Rest({ auth })
   const graphql = Graphql({ auth })
   const methods = Object.entries({
     ...rest,
     ...graphql,
-    ...package,
+    ...pkg,
   })
   const cachedMethods = methods
     .map(([k, v]) => [k, cacheMethod(v, { delay })])

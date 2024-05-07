@@ -1,7 +1,7 @@
-const { pick, partition } = require('lodash')
-const getCoverage = require('./coverage.js')
-const pAll = require('./p-all.js')
-const filterCollection = require('./filter-collection.js')
+import { pick, partition } from 'lodash'
+import getCoverage from './coverage.js'
+import pAll from './p-all.js'
+import filterCollection from './filter-collection.js'
 
 const fetchAllRepoData = async ({ api, project: p, issueAndPrQuery, discussionQuery }) => {
   const { issuesAndPrs, ...result } = await pAll({
@@ -35,7 +35,7 @@ const fetchAllRepoData = async ({ api, project: p, issueAndPrQuery, discussionQu
   return result
 }
 
-module.exports = async ({
+export default async ({
   api,
   project,
   history,

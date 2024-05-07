@@ -1,4 +1,4 @@
-module.exports = ({ items, url, history, filters = {} }) => {
+export default ({ items, url, history, filters = {} }) => {
   if (!items || !url) {
     return null
   }

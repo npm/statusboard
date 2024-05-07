@@ -1,5 +1,5 @@
-const log = require('proc-log')
-const timers = require('timers/promises')
+import log from 'proc-log'
+import timers from 'timers/promises'
 
 // A memory cache for expensive requests like check-runs
 // which can get called for the same commit multiple times
@@ -34,4 +34,4 @@ const cacheMethod = (fn, { delay } = {}) => {
   }
 }
 
-module.exports = cacheMethod
+export default cacheMethod

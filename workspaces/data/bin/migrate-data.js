@@ -1,9 +1,9 @@
-const path = require('path')
-const fs = require('fs/promises')
-const log = require('proc-log')
-const logger = require('../lib/logger.js')
-const getAllData = require('../lib/all-data.js')
-const wwwPaths = require('www')
+import path from 'path'
+import fs from 'fs/promises'
+import log from 'proc-log'
+import logger from '../lib/logger.js'
+import getAllData from '../lib/all-data.js'
+import wwwPaths from 'www'
 
 logger()
 

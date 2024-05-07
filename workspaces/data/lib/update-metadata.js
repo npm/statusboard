@@ -1,7 +1,7 @@
-const fs = require('fs/promises')
-const wwwPaths = require('www')
-const { basename } = require('path')
-const getWorkflowId = require('./workflow-id.js')
+import fs from 'fs/promises'
+import wwwPaths from 'www'
+import { basename } from 'path'
+import getWorkflowId from './workflow-id.js'
 
 const updateJson = async (file, key, newData) => {
   let currentData = {}
@@ -20,7 +20,7 @@ const updateJson = async (file, key, newData) => {
   }, null, 2), 'utf-8')
 }
 
-module.exports = (filename) => {
+export default (filename) => {
   const date = new Date()
   return {
     date,

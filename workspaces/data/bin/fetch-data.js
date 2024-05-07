@@ -1,19 +1,19 @@
-
-const path = require('path')
-const timers = require('timers/promises')
-const log = require('proc-log')
-const writeJson = require('../lib/write-json.js')
-const Api = require('../lib/api/index.js')
-const fetchData = require('../lib/project-data.js')
-const logger = require('../lib/logger.js')
-const getProjectsHistory = require('../lib/projects-history.js')
-const pAll = require('../lib/p-all.js')
-const wwwPaths = require('www')
-const config = require('../lib/config.js')
-const updateMetadata = require('../lib/update-metadata.js')
+import path from 'path'
+import timers from 'timers/promises'
+import log from 'proc-log'
+import writeJson from '../lib/write-json.js'
+import Api from '../lib/api/index.js'
+import fetchData from '../lib/project-data.js'
+import logger from '../lib/logger.js'
+import getProjectsHistory from '../lib/projects-history.js'
+import pAll from '../lib/p-all.js'
+import wwwPaths from 'www'
+import config from '../lib/config.js'
+import updateMetadata from '../lib/update-metadata.js'
+import { fileURLToPath } from 'url'
 
 logger()
-const metadata = updateMetadata(__filename)
+const metadata = updateMetadata(fileURLToPath(import.meta.url))
 const api = Api(config)
 
 const getProjects = (query) => {
