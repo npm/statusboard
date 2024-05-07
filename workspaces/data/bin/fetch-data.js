@@ -11,13 +11,15 @@ import wwwPaths from 'www'
 import config from '../lib/config.js'
 import updateMetadata from '../lib/update-metadata.js'
 import { fileURLToPath } from 'url'
+import { readFileSync } from 'fs'
 
 logger()
 const metadata = updateMetadata(fileURLToPath(import.meta.url))
 const api = Api(config)
 
 const getProjects = (query) => {
-  const projects = require(wwwPaths.maintained)
+  const projects = JSON.parse(readFileSync(wwwPaths.maintained, 'utf-8'))
+
   const projectKeys = projects.reduce((set, p) => {
     for (const k of Object.keys(p)) {
       set.add(k)

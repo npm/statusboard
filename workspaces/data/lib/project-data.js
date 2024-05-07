@@ -1,7 +1,9 @@
-import { pick, partition } from 'lodash'
+import lodash from 'lodash'
 import getCoverage from './coverage.js'
 import pAll from './p-all.js'
 import filterCollection from './filter-collection.js'
+
+const { pick, partition } = lodash
 
 const fetchAllRepoData = async ({ api, project: p, issueAndPrQuery, discussionQuery }) => {
   const { issuesAndPrs, ...result } = await pAll({
