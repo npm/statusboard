@@ -38,8 +38,8 @@ export const cell = {
         onmousemove: (e, { index, value }) => {
           scrollBody.classList.add('with-tooltip')
           trendlineData.classList.add('active')
-          trendlineDate.innerHTML = trendlineDates[index]
-          trendlineValue.innerHTML = index < missingData.length ? 'No Data' : value
+          trendlineDate.textContent = trendlineDates[index]
+          trendlineValue.textContent = index < missingData.length ? 'No Data' : value
         },
         onmouseout: () => {
           scrollBody.classList.remove('with-tooltip')
