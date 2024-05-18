@@ -430,11 +430,6 @@
     "pkg": "@npmcli/redact"
   },
   {
-    "id": "npm_registry",
-    "name": "registry",
-    "owner": "npm"
-  },
-  {
     "id": "npm_rfcs",
     "name": "rfcs",
     "owner": "npm"
