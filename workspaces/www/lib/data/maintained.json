@@ -19,12 +19,6 @@
     "pkg": "@npmcli/arborist"
   },
   {
-    "id": "npm_are-we-there-yet",
-    "name": "are-we-there-yet",
-    "owner": "npm",
-    "pkg": "are-we-there-yet"
-  },
-  {
     "id": "npm_benchmarks",
     "name": "benchmarks",
     "owner": "npm"
@@ -61,12 +55,6 @@
     "pkg": "@npmcli/create-oss"
   },
   {
-    "id": "npm_disparity-colors",
-    "name": "disparity-colors",
-    "owner": "npm",
-    "pkg": "@npmcli/disparity-colors"
-  },
-  {
     "id": "npm_documentation",
     "name": "documentation",
     "owner": "npm"
@@ -82,12 +70,6 @@
     "name": "fs",
     "owner": "npm",
     "pkg": "@npmcli/fs"
-  },
-  {
-    "id": "npm_gauge",
-    "name": "gauge",
-    "owner": "npm",
-    "pkg": "gauge"
   },
   {
     "id": "npm_git",
@@ -340,12 +322,6 @@
     "pkg": "npm-user-validate"
   },
   {
-    "id": "npm_npmlog",
-    "name": "npmlog",
-    "owner": "npm",
-    "pkg": "npmlog"
-  },
-  {
     "id": "npm_package-json",
     "name": "package-json",
     "owner": "npm",
@@ -388,12 +364,6 @@
     "pkg": "promzard"
   },
   {
-    "id": "npm_publish-test",
-    "name": "publish-test",
-    "owner": "npm",
-    "pkg": "@npmcli/publish-test"
-  },
-  {
     "id": "npm_query",
     "name": "query",
     "owner": "npm",
@@ -410,12 +380,6 @@
     "name": "read-cmd-shim",
     "owner": "npm",
     "pkg": "read-cmd-shim"
-  },
-  {
-    "id": "npm_read-package-json",
-    "name": "read-package-json",
-    "owner": "npm",
-    "pkg": "read-package-json"
   },
   {
     "id": "npm_read-package-json-fast",
