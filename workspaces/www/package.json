@@ -55,7 +55,7 @@
     "datatables.net-buttons-bs4": "^3.0.2",
     "date-fns": "^3.6.0",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.21.0",
+    "esbuild": "^0.22.0",
     "http-server": "^14.1.1",
     "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",
