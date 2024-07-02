@@ -19,11 +19,6 @@
     "pkg": "@npmcli/arborist"
   },
   {
-    "id": "npm_benchmarks",
-    "name": "benchmarks",
-    "owner": "npm"
-  },
-  {
     "id": "npm_bin-links",
     "name": "bin-links",
     "owner": "npm",
