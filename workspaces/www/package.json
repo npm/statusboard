@@ -8,12 +8,13 @@
     "build": "node ./bin/build.mjs --prod",
     "clean": "rm -rf lib/data/daily && rm -rf lib/data/latest.json",
     "test": "tap",
-    "lint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lint": "npm run eslint",
     "postlint": "template-oss-check",
     "template-oss-apply": "template-oss-apply --force",
-    "lintfix": "npm run lint -- --fix",
+    "lintfix": "npm run eslint -- --fix",
     "snap": "tap",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
   },
   "repository": {
     "type": "git",
@@ -42,7 +43,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.22.0",
+    "version": "4.23.0",
     "content": "../../scripts/template-oss"
   },
   "dependencies": {
