@@ -17,5 +17,6 @@ module.exports = {
   extends: [
     '@npmcli',
     ...localConfigs,
+    'prettier',
   ],
 }
