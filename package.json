@@ -18,14 +18,18 @@
     "workspaces/*"
   ],
   "devDependencies": {
+    "@github/prettier-config": "^0.0.6",
     "@npmcli/eslint-config": "^4.0.4",
     "@npmcli/template-oss": "4.23.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
     "tap": "^16.3.0"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "4.23.0",
-    "content": "./scripts/template-oss"
+    "content": "./scripts/template-oss",
+    "prettier": "true"
   },
   "tap": {
     "test-ignore": "^(workspaces)/",
@@ -38,15 +42,16 @@
   },
   "scripts": {
     "template-oss-apply": "template-oss-apply --force",
-    "lint": "npm run eslint",
+    "lint": "npm run eslint && npm run prettier -- --check",
     "postlint": "template-oss-check",
-    "lintfix": "npm run eslint -- --fix",
+    "lintfix": "npm run eslint -- --fix && npm run prettier -- --write",
     "snap": "tap",
     "test": "tap",
     "posttest": "npm run lint",
     "test-all": "npm run test -ws -iwr --if-present",
     "lint-all": "npm run lint -ws -iwr --if-present",
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "prettier": "prettier \"**/*.{js,cjs,ts,mjs,jsx,tsx,json}\""
   },
   "files": [
     "bin/",
