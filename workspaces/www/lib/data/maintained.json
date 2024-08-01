@@ -423,12 +423,6 @@
     "owner": "npm"
   },
   {
-    "id": "npm_tap-nock",
-    "name": "tap-nock",
-    "owner": "npm",
-    "pkg": "@npmcli/tap-nock"
-  },
-  {
     "id": "npm_template-oss",
     "name": "template-oss",
     "owner": "npm",
