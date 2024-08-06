@@ -17,7 +17,7 @@ export const link = ({ class: c = '', href, text, title }) =>
   `<a href="${href}" class="${c}" ${title ? `title="${title}"` : ''}>${text}</a>`
 
 export const badge = ({ type, href, text, title }) => {
-  const classes = `badge badge-dt badge-${type}`
+  const classes = `badge badge-dt text-bg-${type}`
   return href
     ? link({ class: classes, href, text, title })
     : `<div class="${classes}" ${title ? `title="${title}"` : ''}>${text}</div>`
