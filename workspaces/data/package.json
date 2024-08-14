@@ -63,9 +63,6 @@
     "content": "../../scripts/template-oss"
   },
   "tap": {
-    "nyc-arg": [
-      "--exclude",
-      "tap-snapshots/**"
-    ]
+    "allow-empty-coverage": true
   }
 }

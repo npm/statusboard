@@ -28,12 +28,9 @@
     "content": "./scripts/template-oss"
   },
   "tap": {
-    "test-ignore": "^(workspaces)/",
-    "nyc-arg": [
-      "--exclude",
-      "workspaces/**",
-      "--exclude",
-      "tap-snapshots/**"
+    "allow-empty-coverage": true,
+    "exclude": [
+      "workspaces/**"
     ]
   },
   "scripts": {

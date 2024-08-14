@@ -63,9 +63,6 @@
     "semver": "^7.3.8"
   },
   "tap": {
-    "nyc-arg": [
-      "--exclude",
-      "tap-snapshots/**"
-    ]
+    "allow-incomplete-coverage": true
   }
 }
