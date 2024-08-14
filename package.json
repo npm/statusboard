@@ -20,7 +20,7 @@
   "devDependencies": {
     "@npmcli/eslint-config": "^4.0.4",
     "@npmcli/template-oss": "4.23.2",
-    "tap": "^16.3.0"
+    "tap": "^21.0.1"
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
@@ -28,12 +28,9 @@
     "content": "./scripts/template-oss"
   },
   "tap": {
-    "test-ignore": "^(workspaces)/",
-    "nyc-arg": [
-      "--exclude",
-      "workspaces/**",
-      "--exclude",
-      "tap-snapshots/**"
+    "allow-empty-coverage": true,
+    "exclude": [
+      "workspaces/**"
     ]
   },
   "scripts": {
