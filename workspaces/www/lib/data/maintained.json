@@ -44,12 +44,6 @@
     "pkg": "@npmcli/config"
   },
   {
-    "id": "npm_create-oss",
-    "name": "create-oss",
-    "owner": "npm",
-    "pkg": "@npmcli/create-oss"
-  },
-  {
     "id": "npm_documentation",
     "name": "documentation",
     "owner": "npm"
