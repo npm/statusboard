@@ -8371,8 +8371,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/bin-links",
     "lastPush": {
-      "date": "2024-09-25T19:38:44Z",
-      "url": "https://github.com/npm/bin-links/commit/a08d09b7e823a8ca321bcab3f6168bdd8057e3cd"
+      "date": "2024-09-26T15:16:03Z",
+      "url": "https://github.com/npm/bin-links/commit/21614a8d3f0479136a76648e2f9364aad3ffdd55"
     },
     "archived": false,
     "status": {
@@ -8389,10 +8389,10 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "4.0.4",
-    "repoVersion": "4.0.4",
-    "lastPublished": "2024-05-04T01:10:10.982Z",
-    "size": 20665,
+    "version": "5.0.0",
+    "repoVersion": "5.0.0",
+    "lastPublished": "2024-09-26T15:18:26.181Z",
+    "size": 20855,
     "pkgUrl": "https://www.npmjs.com/package/bin-links",
     "deprecated": false,
     "downloads": 11754504,
@@ -9575,12 +9575,9 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/bin-links/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/bin-links/pull/122",
-        "version": "5.0.0"
-      },
+      "release": null,
       "history": [
         1,
         1,
@@ -10164,7 +10161,7 @@
         5,
         5,
         5,
-        1
+        0
       ]
     },
     "issues": {
@@ -12532,8 +12529,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/cacache",
     "lastPush": {
-      "date": "2024-08-29T11:40:57Z",
-      "url": "https://github.com/npm/cacache/commit/f663562addcb9bf56eda9764c05b5de42d294672"
+      "date": "2024-09-26T16:35:22Z",
+      "url": "https://github.com/npm/cacache/commit/e56c7fc776c94937763ffe2f8ed9f92cac4f50a6"
     },
     "archived": false,
     "status": {
@@ -12549,11 +12546,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "18.0.4",
-    "repoVersion": "18.0.4",
-    "lastPublished": "2024-07-11T16:33:27.631Z",
-    "size": 63676,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "19.0.0",
+    "repoVersion": "19.0.0",
+    "lastPublished": "2024-09-26T16:30:39.994Z",
+    "size": 63709,
     "pkgUrl": "https://www.npmjs.com/package/cacache",
     "deprecated": false,
     "downloads": 118106976,
@@ -13738,9 +13735,12 @@
       ]
     },
     "prs": {
-      "count": 4,
+      "count": 1,
       "url": "https://github.com/npm/cacache/pulls?q=is%3Aopen",
-      "release": null,
+      "release": {
+        "url": "https://github.com/npm/cacache/pull/303",
+        "version": "19.0.1"
+      },
       "history": [
         1,
         1,
@@ -14325,7 +14325,7 @@
         6,
         7,
         5,
-        4
+        1
       ]
     },
     "issues": {
@@ -20896,8 +20896,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/documentation",
     "lastPush": {
-      "date": "2024-09-25T16:54:30Z",
-      "url": "https://github.com/npm/documentation/commit/eda158e2f251b1b9cdba4db48029c90d9e668a9c"
+      "date": "2024-09-26T14:18:24Z",
+      "url": "https://github.com/npm/documentation/commit/6ebd54931dc2db6bb6c45039693d6b54bfaa1e1b"
     },
     "archived": false,
     "status": {
@@ -20905,7 +20905,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 384,
+      "count": 385,
       "url": "https://github.com/npm/documentation/stargazers"
     },
     "pkgPrivate": true,
@@ -22100,7 +22100,7 @@
       ]
     },
     "prs": {
-      "count": 8,
+      "count": 7,
       "url": "https://github.com/npm/documentation/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -22686,7 +22686,7 @@
         9,
         8,
         8,
-        8
+        7
       ]
     },
     "issues": {
@@ -33377,8 +33377,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/git",
     "lastPush": {
-      "date": "2024-08-29T11:41:01Z",
-      "url": "https://github.com/npm/git/commit/dbfdd90965cde5e334ab9639ea6e881bbf096678"
+      "date": "2024-09-26T17:31:00Z",
+      "url": "https://github.com/npm/git/commit/f0f79455c9283514051f7cc625766e1c1191266c"
     },
     "archived": false,
     "status": {
@@ -33394,11 +33394,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "5.0.8",
-    "repoVersion": "5.0.8",
-    "lastPublished": "2024-07-09T14:59:32.503Z",
-    "size": 23042,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "6.0.0",
+    "repoVersion": "6.0.0",
+    "lastPublished": "2024-09-26T17:33:56.182Z",
+    "size": 23076,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/git",
     "deprecated": false,
     "downloads": 31991500,
@@ -34583,7 +34583,7 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 0,
       "url": "https://github.com/npm/git/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -35170,7 +35170,7 @@
         5,
         5,
         3,
-        3
+        0
       ]
     },
     "issues": {
@@ -50030,8 +50030,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/init-package-json",
     "lastPush": {
-      "date": "2024-08-29T11:41:48Z",
-      "url": "https://github.com/npm/init-package-json/commit/e61c6c7f998918098342eecd79c426b56fc992bf"
+      "date": "2024-09-26T19:39:57Z",
+      "url": "https://github.com/npm/init-package-json/commit/4b591575d283b7511c9514f868e858fce79f3840"
     },
     "archived": false,
     "status": {
@@ -50047,11 +50047,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "6.0.3",
-    "repoVersion": "6.0.3",
-    "lastPublished": "2024-05-04T01:10:51.419Z",
-    "size": 13825,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "7.0.0",
+    "repoVersion": "7.0.0",
+    "lastPublished": "2024-09-26T19:42:38.321Z",
+    "size": 13859,
     "pkgUrl": "https://www.npmjs.com/package/init-package-json",
     "deprecated": false,
     "downloads": 8648330,
@@ -51236,7 +51236,7 @@
       ]
     },
     "prs": {
-      "count": 4,
+      "count": 2,
       "url": "https://github.com/npm/init-package-json/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -51823,7 +51823,7 @@
         3,
         3,
         2,
-        4
+        2
       ]
     },
     "issues": {
@@ -54195,8 +54195,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/installed-package-contents",
     "lastPush": {
-      "date": "2024-09-25T19:38:57Z",
-      "url": "https://github.com/npm/installed-package-contents/commit/08fef397e6586bef50ae43285678450106e61ae1"
+      "date": "2024-09-26T15:16:28Z",
+      "url": "https://github.com/npm/installed-package-contents/commit/59f2893c45ffe264117fa873abceea24246ef369"
     },
     "archived": false,
     "status": {
@@ -54213,10 +54213,10 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "2.1.0",
-    "repoVersion": "2.1.0",
-    "lastPublished": "2024-04-23T18:08:00.115Z",
-    "size": 12325,
+    "version": "3.0.0",
+    "repoVersion": "3.0.0",
+    "lastPublished": "2024-09-26T15:19:03.879Z",
+    "size": 12351,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/installed-package-contents",
     "deprecated": false,
     "downloads": 28467895,
@@ -55401,12 +55401,9 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/installed-package-contents/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/installed-package-contents/pull/90",
-        "version": "3.0.0"
-      },
+      "release": null,
       "history": [
         1,
         1,
@@ -55991,7 +55988,7 @@
         2,
         2,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -62895,8 +62892,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/make-fetch-happen",
     "lastPush": {
-      "date": "2024-09-04T21:29:29Z",
-      "url": "https://github.com/npm/make-fetch-happen/commit/253f3b9be576a80df96e60fe99e92cf6c1596e22"
+      "date": "2024-09-26T17:31:29Z",
+      "url": "https://github.com/npm/make-fetch-happen/commit/d8057f34ca34eb45359aeffe0cc186f592e20224"
     },
     "archived": false,
     "status": {
@@ -62912,11 +62909,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "13.0.1",
-    "repoVersion": "13.0.1",
-    "lastPublished": "2024-04-30T14:54:38.936Z",
-    "size": 52787,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "14.0.0",
+    "repoVersion": "14.0.0",
+    "lastPublished": "2024-09-26T17:36:04.033Z",
+    "size": 52774,
     "pkgUrl": "https://www.npmjs.com/package/make-fetch-happen",
     "deprecated": false,
     "downloads": 80797009,
@@ -64101,12 +64098,9 @@
       ]
     },
     "prs": {
-      "count": 6,
+      "count": 1,
       "url": "https://github.com/npm/make-fetch-happen/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/make-fetch-happen/pull/300",
-        "version": "13.0.2"
-      },
+      "release": null,
       "history": [
         1,
         1,
@@ -64691,7 +64685,7 @@
         7,
         7,
         6,
-        6
+        1
       ]
     },
     "issues": {
@@ -67063,8 +67057,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/map-workspaces",
     "lastPush": {
-      "date": "2024-09-25T21:32:55Z",
-      "url": "https://github.com/npm/map-workspaces/commit/938d94ccf9fed4f8598368ea741faa33b8e0a3ba"
+      "date": "2024-09-26T15:17:12Z",
+      "url": "https://github.com/npm/map-workspaces/commit/83d79056b4f1b307f4b037107fdca94d8d253b50"
     },
     "archived": false,
     "status": {
@@ -67081,10 +67075,10 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "3.0.6",
-    "repoVersion": "3.0.6",
-    "lastPublished": "2024-04-10T18:20:02.676Z",
-    "size": 11207,
+    "version": "4.0.0",
+    "repoVersion": "4.0.0",
+    "lastPublished": "2024-09-26T15:19:31.537Z",
+    "size": 10940,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/map-workspaces",
     "deprecated": false,
     "downloads": 12744033,
@@ -68267,12 +68261,9 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 0,
       "url": "https://github.com/npm/map-workspaces/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/map-workspaces/pull/169",
-        "version": "4.0.0"
-      },
+      "release": null,
       "history": [
         1,
         0,
@@ -68856,7 +68847,7 @@
         8,
         8,
         8,
-        3
+        0
       ]
     },
     "issues": {
@@ -75387,8 +75378,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/minify-registry-metadata/actions/runs/11035808272/job/30652723647",
-      "conclusion": "failure"
+      "url": "https://github.com/npm/minify-registry-metadata/actions",
+      "conclusion": "success"
     },
     "stars": {
       "count": 3,
@@ -96186,8 +96177,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/nopt",
     "lastPush": {
-      "date": "2024-09-04T22:10:12Z",
-      "url": "https://github.com/npm/nopt/commit/a3b0bfc867502c4ca2faba36a217cb7af029227c"
+      "date": "2024-09-26T15:42:39Z",
+      "url": "https://github.com/npm/nopt/commit/9e64314c2c688b8309f6a9fa6c5d23ff60b4b7b8"
     },
     "archived": false,
     "status": {
@@ -97394,7 +97385,10 @@
     "prs": {
       "count": 1,
       "url": "https://github.com/npm/nopt/pulls?q=is%3Aopen",
-      "release": null,
+      "release": {
+        "url": "https://github.com/npm/nopt/pull/177",
+        "version": "8.0.1"
+      },
       "history": [
         0,
         0,
@@ -104525,7 +104519,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 8375,
+      "count": 8378,
       "url": "https://github.com/npm/cli/stargazers"
     },
     "pkgPrivate": false,
@@ -106316,7 +106310,7 @@
       ]
     },
     "issues": {
-      "count": 631,
+      "count": 630,
       "url": "https://github.com/npm/cli/issues?q=is%3Aopen",
       "unlabeled": {
         "count": 18,
@@ -107499,7 +107493,7 @@
         ]
       },
       "triage": {
-        "count": 308,
+        "count": 307,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
           124,
@@ -108085,7 +108079,7 @@
           310,
           308,
           306,
-          308
+          307
         ]
       },
       "history": [
@@ -108672,7 +108666,7 @@
         633,
         632,
         629,
-        631
+        630
       ]
     }
   },
@@ -129516,8 +129510,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-package-arg",
     "lastPush": {
-      "date": "2024-09-25T19:39:25Z",
-      "url": "https://github.com/npm/npm-package-arg/commit/3361e594418a6ed6088367682e362042e4318811"
+      "date": "2024-09-26T15:17:40Z",
+      "url": "https://github.com/npm/npm-package-arg/commit/c77c4c133be20c50f1d1734b05cbb5a641cf464b"
     },
     "archived": false,
     "status": {
@@ -129534,9 +129528,9 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "11.0.3",
-    "repoVersion": "11.0.3",
-    "lastPublished": "2024-07-22T15:45:40.354Z",
+    "version": "12.0.0",
+    "repoVersion": "12.0.0",
+    "lastPublished": "2024-09-26T15:20:32.637Z",
     "size": 19178,
     "pkgUrl": "https://www.npmjs.com/package/npm-package-arg",
     "deprecated": false,
@@ -130722,12 +130716,9 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/npm-package-arg/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/npm-package-arg/pull/195",
-        "version": "12.0.0"
-      },
+      "release": null,
       "history": [
         4,
         4,
@@ -131312,7 +131303,7 @@
         3,
         3,
         2,
-        1
+        0
       ]
     },
     "issues": {
@@ -137849,8 +137840,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-pick-manifest",
     "lastPush": {
-      "date": "2024-08-29T11:52:47Z",
-      "url": "https://github.com/npm/npm-pick-manifest/commit/7891f6bb820b10a2613dbbdfe2d1cb00de885510"
+      "date": "2024-09-26T16:23:29Z",
+      "url": "https://github.com/npm/npm-pick-manifest/commit/f68698d5af14f0a586a3015bbe7b91d2e9d4ad26"
     },
     "archived": false,
     "status": {
@@ -137866,11 +137857,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "9.1.0",
-    "repoVersion": "9.1.0",
-    "lastPublished": "2024-07-09T17:13:02.437Z",
-    "size": 16477,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "10.0.0",
+    "repoVersion": "10.0.0",
+    "lastPublished": "2024-09-26T16:28:43.529Z",
+    "size": 16512,
     "pkgUrl": "https://www.npmjs.com/package/npm-pick-manifest",
     "deprecated": false,
     "downloads": 35960795,
@@ -139053,7 +139044,7 @@
       ]
     },
     "prs": {
-      "count": 2,
+      "count": 0,
       "url": "https://github.com/npm/npm-pick-manifest/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -139639,7 +139630,7 @@
         3,
         3,
         2,
-        2
+        0
       ]
     },
     "issues": {
@@ -142007,8 +141998,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-profile",
     "lastPush": {
-      "date": "2024-09-20T17:24:33Z",
-      "url": "https://github.com/npm/npm-profile/commit/4ea3f70330f36b3d019709fa2ac41426e605e895"
+      "date": "2024-09-26T19:38:41Z",
+      "url": "https://github.com/npm/npm-profile/commit/81ebe2f0bdbcf4ed063867877d0b37e2a3e0d4f6"
     },
     "archived": false,
     "status": {
@@ -142024,11 +142015,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": ">=18.0.0",
-    "version": "10.0.0",
-    "repoVersion": "10.0.0",
-    "lastPublished": "2024-05-02T16:11:01.646Z",
-    "size": 27497,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "11.0.0",
+    "repoVersion": "11.0.0",
+    "lastPublished": "2024-09-26T19:41:55.360Z",
+    "size": 27535,
     "pkgUrl": "https://www.npmjs.com/package/npm-profile",
     "deprecated": false,
     "downloads": 3066054,
@@ -143211,12 +143202,9 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 0,
       "url": "https://github.com/npm/npm-profile/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/npm-profile/pull/149",
-        "version": "10.0.1"
-      },
+      "release": null,
       "history": [
         1,
         1,
@@ -143800,14 +143788,14 @@
         5,
         4,
         3,
-        3
+        0
       ]
     },
     "issues": {
-      "count": 1,
+      "count": 2,
       "url": "https://github.com/npm/npm-profile/issues?q=is%3Aopen",
       "unlabeled": {
-        "count": 1,
+        "count": 2,
         "url": "https://github.com/npm/npm-profile/issues?q=is%3Aopen+no%3Alabel",
         "history": [
           1,
@@ -144392,7 +144380,7 @@
           1,
           1,
           1,
-          1
+          2
         ]
       },
       "priority": {
@@ -146156,7 +146144,7 @@
         1,
         1,
         1,
-        1
+        2
       ]
     }
   },
@@ -146168,8 +146156,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-registry-fetch",
     "lastPush": {
-      "date": "2024-08-29T11:52:39Z",
-      "url": "https://github.com/npm/npm-registry-fetch/commit/0a9f05be03a8410edffbbf3dc121a930c21535ac"
+      "date": "2024-09-26T18:48:03Z",
+      "url": "https://github.com/npm/npm-registry-fetch/commit/99fd7a6836bdb04c61ba2bbdc1c84aaed59dee61"
     },
     "archived": false,
     "status": {
@@ -146185,11 +146173,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "17.1.0",
-    "repoVersion": "17.1.0",
-    "lastPublished": "2024-06-12T16:29:34.174Z",
-    "size": 44088,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "18.0.0",
+    "repoVersion": "18.0.0",
+    "lastPublished": "2024-09-26T18:51:55.888Z",
+    "size": 44098,
     "pkgUrl": "https://www.npmjs.com/package/npm-registry-fetch",
     "deprecated": false,
     "downloads": 34928644,
@@ -147374,7 +147362,7 @@
       ]
     },
     "prs": {
-      "count": 4,
+      "count": 0,
       "url": "https://github.com/npm/npm-registry-fetch/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -147961,7 +147949,7 @@
         5,
         5,
         4,
-        4
+        0
       ]
     },
     "issues": {
@@ -154498,8 +154486,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/package-json",
     "lastPush": {
-      "date": "2024-09-17T20:33:09Z",
-      "url": "https://github.com/npm/package-json/commit/3426666cc292489d6d7a6d5e89a5029175a86f06"
+      "date": "2024-09-26T18:48:20Z",
+      "url": "https://github.com/npm/package-json/commit/25761f127c0b1ae04f5cad710b9fc7852bc999ee"
     },
     "archived": false,
     "status": {
@@ -154515,10 +154503,10 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "5.2.1",
-    "repoVersion": "5.2.1",
-    "lastPublished": "2024-09-17T20:35:10.657Z",
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "6.0.0",
+    "repoVersion": "6.0.0",
+    "lastPublished": "2024-09-26T18:50:32.583Z",
     "size": 39522,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/package-json",
     "deprecated": false,
@@ -155704,7 +155692,7 @@
       ]
     },
     "prs": {
-      "count": 6,
+      "count": 0,
       "url": "https://github.com/npm/package-json/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -156291,7 +156279,7 @@
         6,
         6,
         5,
-        6
+        0
       ]
     },
     "issues": {
@@ -159869,7 +159857,7 @@
       ]
     },
     "prs": {
-      "count": 5,
+      "count": 6,
       "url": "https://github.com/npm/pacote/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -160456,7 +160444,7 @@
         5,
         5,
         4,
-        5
+        6
       ]
     },
     "issues": {
@@ -179481,8 +179469,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/promzard",
     "lastPush": {
-      "date": "2024-09-25T19:39:37Z",
-      "url": "https://github.com/npm/promzard/commit/c389d6bac7ddbe8d01aab36f1a65a3f68fc4369e"
+      "date": "2024-09-26T15:18:06Z",
+      "url": "https://github.com/npm/promzard/commit/754f1bbb84ac92414240c2b83b2d6d297f7a0974"
     },
     "archived": false,
     "status": {
@@ -179499,10 +179487,10 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "1.0.2",
-    "repoVersion": "1.0.2",
-    "lastPublished": "2024-05-04T01:10:27.643Z",
-    "size": 10938,
+    "version": "2.0.0",
+    "repoVersion": "2.0.0",
+    "lastPublished": "2024-09-26T15:20:45.412Z",
+    "size": 10960,
     "pkgUrl": "https://www.npmjs.com/package/promzard",
     "deprecated": false,
     "downloads": 8492039,
@@ -180685,12 +180673,9 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/promzard/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/promzard/pull/92",
-        "version": "2.0.0"
-      },
+      "release": null,
       "history": [
         6,
         6,
@@ -181274,7 +181259,7 @@
         1,
         1,
         0,
-        1
+        0
       ]
     },
     "issues": {
@@ -205468,8 +205453,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/run-script",
     "lastPush": {
-      "date": "2024-08-29T12:22:21Z",
-      "url": "https://github.com/npm/run-script/commit/1755bf8296951143482586d7d42d34c185c40518"
+      "date": "2024-09-26T19:39:26Z",
+      "url": "https://github.com/npm/run-script/commit/3552cd75ff79f0fcf94105f80fd566e1552d0295"
     },
     "archived": false,
     "status": {
@@ -205485,11 +205470,11 @@
     "coverage": 100,
     "templateVersion": "4.23.3",
     "license": "ISC",
-    "node": "^16.14.0 || >=18.0.0",
-    "version": "8.1.0",
-    "repoVersion": "8.1.0",
-    "lastPublished": "2024-04-29T16:30:27.209Z",
-    "size": 18251,
+    "node": "^18.17.0 || >=20.5.0",
+    "version": "9.0.0",
+    "repoVersion": "9.0.0",
+    "lastPublished": "2024-09-26T19:42:13.225Z",
+    "size": 18265,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/run-script",
     "deprecated": false,
     "downloads": 31544095,
@@ -206674,7 +206659,7 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 0,
       "url": "https://github.com/npm/run-script/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -207261,7 +207246,7 @@
         3,
         3,
         2,
-        3
+        0
       ]
     },
     "issues": {
@@ -209642,7 +209627,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 5064,
+      "count": 5065,
       "url": "https://github.com/npm/node-semver/stargazers"
     },
     "pkgPrivate": false,
@@ -222128,12 +222113,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2024-09-26T11:01:18Z",
-      "url": "https://github.com/npm/statusboard/commit/88a8d7c97566db82c04d5819b8593486b9ebb19d"
+      "date": "2024-09-26T12:37:21Z",
+      "url": "https://github.com/npm/statusboard/commit/37fa85ba541faef2c3e4eeb7d34f28a972a5a6cc"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/11051842955/job/30702618360",
+      "url": "https://github.com/npm/statusboard/actions/runs/11059617916/job/30728343770",
       "conclusion": "failure"
     },
     "stars": {
@@ -232519,8 +232504,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/unique-filename",
     "lastPush": {
-      "date": "2024-09-25T19:39:44Z",
-      "url": "https://github.com/npm/unique-filename/commit/194c3ef668a9f1b6bcc5d638f63a018719a29949"
+      "date": "2024-09-26T15:18:35Z",
+      "url": "https://github.com/npm/unique-filename/commit/938ae3b0b32b97f4903acdb0398688cdf4772a57"
     },
     "archived": false,
     "status": {
@@ -232537,10 +232522,10 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "3.0.0",
-    "repoVersion": "3.0.0",
-    "lastPublished": "2022-10-14T17:52:28.921Z",
-    "size": 3414,
+    "version": "4.0.0",
+    "repoVersion": "4.0.0",
+    "lastPublished": "2024-09-26T15:20:26.217Z",
+    "size": 3484,
     "pkgUrl": "https://www.npmjs.com/package/unique-filename",
     "deprecated": false,
     "downloads": 88837366,
@@ -233725,12 +233710,9 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/unique-filename/pulls?q=is%3Aopen",
-      "release": {
-        "url": "https://github.com/npm/unique-filename/pull/87",
-        "version": "4.0.0"
-      },
+      "release": null,
       "history": [
         2,
         2,
@@ -234315,7 +234297,7 @@
         1,
         1,
         0,
-        1
+        0
       ]
     },
     "issues": {
