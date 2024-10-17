@@ -131,10 +131,9 @@
     "pkg": "libnpmfund"
   },
   {
-    "id": "npm_cli_workspaces_libnpmhook",
-    "name": "cli",
+    "id": "npm_libnpmhook",
+    "name": "libnpmhook",
     "owner": "npm",
-    "path": "workspaces/libnpmhook",
     "pkg": "libnpmhook"
   },
   {
