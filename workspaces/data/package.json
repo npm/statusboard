@@ -40,7 +40,7 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "glob": "^11.0.0",
     "lodash": "^4.17.21",
-    "pacote": "^19.0.0",
+    "pacote": "^20.0.0",
     "proc-log": "^5.0.0",
     "semver": "^7.3.8",
     "www": "^1.0.0"
