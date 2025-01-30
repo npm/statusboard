@@ -29,7 +29,7 @@ jobs:
         ref: main
     
     - name: Setup Pages
-      uses: actions/configure-pages@v1
+      uses: actions/configure-pages@v5
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -41,7 +41,7 @@ jobs:
     - run: npm i --ignore-scripts --no-audit --no-fund --package-lock
     - run: npm run build -w www
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: './workspaces/www/build'
 
@@ -59,6 +59,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
         with:
           preview: ${{ github.event_name == 'pull_request_target' }}
