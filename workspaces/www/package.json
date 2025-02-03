@@ -43,7 +43,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.6",
+    "version": "4.24.0",
     "content": "../../scripts/template-oss"
   },
   "dependencies": {
@@ -63,6 +63,10 @@
     "semver": "^7.3.8"
   },
   "tap": {
-    "allow-incomplete-coverage": true
+    "allow-incomplete-coverage": true,
+    "show-full-coverage": true
+  },
+  "nyc": {
+    "exclude": []
   }
 }
