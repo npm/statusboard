@@ -4,6 +4,7 @@
 /*
 
 !**/.gitignore
+!/.eslint.config.js
 !/.eslintrc.cjs
 !/.eslintrc.local.*
 !/.git-blame-ignore-revs
