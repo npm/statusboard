@@ -18059,7 +18059,7 @@
       ]
     },
     "prs": {
-      "count": 2,
+      "count": 1,
       "url": "https://github.com/npm/cacache/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -18834,7 +18834,7 @@
         2,
         2,
         2,
-        2
+        1
       ]
     },
     "issues": {
@@ -29053,7 +29053,7 @@
       ]
     },
     "prs": {
-      "count": 11,
+      "count": 12,
       "url": "https://github.com/npm/documentation/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -29827,7 +29827,7 @@
         15,
         15,
         12,
-        11
+        12
       ]
     },
     "issues": {
@@ -49383,8 +49383,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/hosted-git-info",
     "lastPush": {
-      "date": "2025-01-03T15:15:59Z",
-      "url": "https://github.com/npm/hosted-git-info/commit/3c1cd4a248970f85a596a092afe49cc3028050e9"
+      "date": "2025-04-09T15:41:00Z",
+      "url": "https://github.com/npm/hosted-git-info/commit/80131c308c6b6fcf6799a1a512c997ee3ad6e669"
     },
     "archived": false,
     "status": {
@@ -49398,7 +49398,7 @@
     "pkgPrivate": false,
     "pkgName": "hosted-git-info",
     "coverage": 100,
-    "templateVersion": "4.23.5",
+    "templateVersion": "4.23.6",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
     "version": "8.0.2",
@@ -50965,7 +50965,7 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 1,
       "url": "https://github.com/npm/hosted-git-info/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -51740,7 +51740,7 @@
         3,
         3,
         3,
-        3
+        1
       ]
     },
     "issues": {
@@ -56444,7 +56444,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/ignore-walk/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -57218,7 +57218,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -65819,13 +65819,13 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/init-package-json",
     "lastPush": {
-      "date": "2024-12-02T17:30:34Z",
-      "url": "https://github.com/npm/init-package-json/commit/645aaf2e923bf9f5846934fd97e033540e56ade6"
+      "date": "2025-04-09T15:54:27Z",
+      "url": "https://github.com/npm/init-package-json/commit/0578b8ba703b92204e312c73d8aef9b93ef25e6a"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/init-package-json/actions/runs/12942076399/job/36099178370",
-      "conclusion": "failure"
+      "url": "https://github.com/npm/init-package-json/actions",
+      "conclusion": "success"
     },
     "stars": {
       "count": 319,
@@ -67401,7 +67401,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/init-package-json/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -68176,7 +68176,7 @@
         2,
         2,
         2,
-        1
+        0
       ]
     },
     "issues": {
@@ -72882,7 +72882,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/installed-package-contents/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -73657,7 +73657,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -78361,7 +78361,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/json-parse-even-better-errors/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -79135,7 +79135,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -90923,7 +90923,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/map-workspaces/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -91697,7 +91697,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -101869,7 +101869,7 @@
       ]
     },
     "prs": {
-      "count": 2,
+      "count": 1,
       "url": "https://github.com/npm/minify-registry-metadata/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -102642,7 +102642,7 @@
         2,
         2,
         2,
-        2
+        1
       ]
     },
     "issues": {
@@ -112819,7 +112819,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/mute-stream/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -113593,7 +113593,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -118295,7 +118295,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/name-from-folder/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -119070,7 +119070,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -140219,7 +140219,7 @@
       ]
     },
     "prs": {
-      "count": 43,
+      "count": 44,
       "url": "https://github.com/npm/cli/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/cli/pull/8214",
@@ -140997,11 +140997,11 @@
         46,
         46,
         45,
-        43
+        44
       ]
     },
     "issues": {
-      "count": 588,
+      "count": 589,
       "url": "https://github.com/npm/cli/issues?q=is%3Aopen",
       "unlabeled": {
         "count": 20,
@@ -142560,7 +142560,7 @@
         ]
       },
       "triage": {
-        "count": 265,
+        "count": 264,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
           124,
@@ -143334,7 +143334,7 @@
           266,
           267,
           268,
-          265
+          264
         ]
       },
       "history": [
@@ -144109,7 +144109,7 @@
         589,
         591,
         590,
-        588
+        589
       ]
     }
   },
@@ -166052,8 +166052,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-normalize-package-bin",
     "lastPush": {
-      "date": "2024-09-05T00:17:19Z",
-      "url": "https://github.com/npm/npm-normalize-package-bin/commit/4594c6855a937f2d1296fe5b61adf318a9bf529b"
+      "date": "2025-04-09T16:23:13Z",
+      "url": "https://github.com/npm/npm-normalize-package-bin/commit/d69ebdcf66f44be54a6a27c0beb55baf5c160539"
     },
     "archived": false,
     "status": {
@@ -166067,7 +166067,7 @@
     "pkgPrivate": false,
     "pkgName": "npm-normalize-package-bin",
     "coverage": 100,
-    "templateVersion": "4.23.3",
+    "templateVersion": "4.24.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
     "version": "4.0.0",
@@ -177014,13 +177014,13 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/npm-packlist",
     "lastPush": {
-      "date": "2024-11-25T21:59:11Z",
-      "url": "https://github.com/npm/npm-packlist/commit/b50e3c4dd38212d223334e8901357e3d6557622b"
+      "date": "2025-04-09T18:01:31Z",
+      "url": "https://github.com/npm/npm-packlist/commit/ff3ad1574a0b941e9b61598c8f8d920040eec6c4"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/npm-packlist/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/npm-packlist/actions/runs/14363904949/job/40272033571",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 111,
@@ -177029,7 +177029,7 @@
     "pkgPrivate": false,
     "pkgName": "npm-packlist",
     "coverage": 100,
-    "templateVersion": "4.23.4",
+    "templateVersion": "4.24.3",
     "license": "ISC",
     "node": "^20.17.0 || >=22.9.0",
     "version": "10.0.0",
@@ -178596,7 +178596,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/npm-packlist/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -179371,7 +179371,7 @@
         2,
         2,
         2,
-        1
+        0
       ]
     },
     "issues": {
@@ -242758,8 +242758,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/query",
     "lastPush": {
-      "date": "2024-09-05T00:21:17Z",
-      "url": "https://github.com/npm/query/commit/bccbba3be665209aae3725ab34b54211e7b60926"
+      "date": "2025-04-09T16:02:06Z",
+      "url": "https://github.com/npm/query/commit/d90c815ae5b1cae9d4cab10daefd3c8552418151"
     },
     "archived": false,
     "status": {
@@ -242776,9 +242776,9 @@
     "templateVersion": "4.23.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
-    "version": "4.0.0",
-    "repoVersion": "4.0.0",
-    "lastPublished": "2024-09-05T00:23:09.926Z",
+    "version": "4.0.1",
+    "repoVersion": "4.0.1",
+    "lastPublished": "2025-04-09T16:03:48.389Z",
     "size": 11025,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/query",
     "deprecated": false,
@@ -244322,7 +244322,7 @@
       ]
     },
     "prs": {
-      "count": 2,
+      "count": 0,
       "url": "https://github.com/npm/query/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -245088,7 +245088,7 @@
         2,
         2,
         2,
-        2
+        0
       ]
     },
     "issues": {
@@ -253657,8 +253657,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/read-cmd-shim",
     "lastPush": {
-      "date": "2024-09-24T19:21:22Z",
-      "url": "https://github.com/npm/read-cmd-shim/commit/3a9c4014da4b81556b070ad2e3ac82ac29bd3a36"
+      "date": "2025-04-09T16:45:01Z",
+      "url": "https://github.com/npm/read-cmd-shim/commit/fbaab997b5e3a69c7d9777b624238681815be181"
     },
     "archived": false,
     "status": {
@@ -253672,7 +253672,7 @@
     "pkgPrivate": false,
     "pkgName": "read-cmd-shim",
     "coverage": 100,
-    "templateVersion": "4.23.3",
+    "templateVersion": "4.24.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
     "version": "5.0.0",
@@ -260720,7 +260720,7 @@
       ]
     },
     "prs": {
-      "count": 1,
+      "count": 0,
       "url": "https://github.com/npm/read-package-json-fast/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -261495,7 +261495,7 @@
         1,
         1,
         1,
-        1
+        0
       ]
     },
     "issues": {
@@ -288923,8 +288923,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/stafftools",
     "lastPush": {
-      "date": "2024-10-02T16:38:59Z",
-      "url": "https://github.com/npm/stafftools/commit/e83c2f79b4ce432e5e1e6c00a1891af31a4f792f"
+      "date": "2025-04-09T18:01:14Z",
+      "url": "https://github.com/npm/stafftools/commit/37083dd48da7857a41017890b06438e59d9a41ab"
     },
     "archived": false,
     "status": {
@@ -288938,7 +288938,7 @@
     "pkgPrivate": false,
     "pkgName": "@npmcli/stafftools",
     "coverage": 0,
-    "templateVersion": "4.23.3",
+    "templateVersion": "4.24.3",
     "license": "ISC",
     "node": ">=22.0.0",
     "version": "3.1.1",
@@ -290505,9 +290505,12 @@
       ]
     },
     "prs": {
-      "count": 3,
+      "count": 4,
       "url": "https://github.com/npm/stafftools/pulls?q=is%3Aopen",
-      "release": null,
+      "release": {
+        "url": "https://github.com/npm/stafftools/pull/153",
+        "version": "3.1.2"
+      },
       "history": [
         0,
         0,
@@ -291280,7 +291283,7 @@
         4,
         4,
         4,
-        3
+        4
       ]
     },
     "issues": {
@@ -294404,12 +294407,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2025-04-09T12:27:25Z",
-      "url": "https://github.com/npm/statusboard/commit/54ceb899c1b011b70324d9679193a2d69bac5735"
+      "date": "2025-04-09T15:48:50Z",
+      "url": "https://github.com/npm/statusboard/commit/d870832e8e5416b19e86edee35cdf9e22ba7012f"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/14361116502/job/40262610405",
+      "url": "https://github.com/npm/statusboard/actions/runs/14363951472/job/40272193848",
       "conclusion": "failure"
     },
     "stars": {
@@ -305366,13 +305369,13 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/types",
     "lastPush": {
-      "date": "2024-10-07T18:19:04Z",
-      "url": "https://github.com/npm/types/commit/978047035dbe14c3dafb65eaa31413a5f8a9d197"
+      "date": "2025-04-09T15:53:38Z",
+      "url": "https://github.com/npm/types/commit/f85ed36b1f38860a440c7e7805375eed2ffe98eb"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/types/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/types/actions/runs/14361592304/job/40264356651",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 28,
@@ -305381,7 +305384,7 @@
     "pkgPrivate": false,
     "pkgName": "@npm/types",
     "coverage": 100,
-    "templateVersion": "4.23.3",
+    "templateVersion": "4.24.3",
     "license": "MIT",
     "node": ">=18.6.0",
     "version": "2.0.0",
@@ -306346,7 +306349,7 @@
       ]
     },
     "prs": {
-      "count": 4,
+      "count": 3,
       "url": "https://github.com/npm/types/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/types/pull/92",
@@ -306823,7 +306826,7 @@
         3,
         3,
         3,
-        4
+        3
       ]
     },
     "issues": {
@@ -308743,8 +308746,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/unique-filename",
     "lastPush": {
-      "date": "2024-09-26T15:18:35Z",
-      "url": "https://github.com/npm/unique-filename/commit/938ae3b0b32b97f4903acdb0398688cdf4772a57"
+      "date": "2025-04-09T16:01:06Z",
+      "url": "https://github.com/npm/unique-filename/commit/030f3e14e9e94e8fe2acb4fc5b40dd5f34c6262a"
     },
     "archived": false,
     "status": {
@@ -308758,7 +308761,7 @@
     "pkgPrivate": false,
     "pkgName": "unique-filename",
     "coverage": 100,
-    "templateVersion": "4.23.3",
+    "templateVersion": "4.24.3",
     "license": "ISC",
     "node": "^18.17.0 || >=20.5.0",
     "version": "4.0.0",
