@@ -34,7 +34,7 @@
     "@octokit/core": "^6.1.2",
     "@octokit/graphql": "^8.1.1",
     "@octokit/plugin-retry": "^7.1.1",
-    "@octokit/plugin-throttling": "^9.3.0",
+    "@octokit/plugin-throttling": "^10.0.0",
     "@octokit/rest": "^21.0.0",
     "dotenv": "^16.0.3",
     "eslint-import-resolver-typescript": "^4.3.1",
