@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
-    "@octokit/core": "^6.1.2",
+    "@octokit/core": "^7.0.0",
     "@octokit/graphql": "^8.1.1",
     "@octokit/plugin-retry": "^7.1.1",
     "@octokit/plugin-throttling": "^10.0.0",
