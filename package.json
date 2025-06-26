@@ -24,7 +24,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.24.3",
+    "version": "4.24.4",
     "content": "./scripts/template-oss"
   },
   "tap": {
@@ -42,8 +42,8 @@
     "snap": "tap",
     "test": "tap",
     "posttest": "npm run lint",
-    "test-all": "npm run test -ws -iwr --if-present",
-    "lint-all": "npm run lint -ws -iwr --if-present",
+    "test-all": "npm run test --workspaces --include-workspace-root --if-present",
+    "lint-all": "npm run lint --workspaces --include-workspace-root --if-present",
     "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
   },
   "files": [
