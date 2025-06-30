@@ -36,7 +36,7 @@
     "@octokit/plugin-retry": "^8.0.1",
     "@octokit/plugin-throttling": "^11.0.1",
     "@octokit/rest": "^22.0.0",
-    "dotenv": "^16.0.3",
+    "dotenv": "^17.0.0",
     "eslint-import-resolver-typescript": "^4.3.1",
     "glob": "^11.0.0",
     "lodash": "^4.17.21",
