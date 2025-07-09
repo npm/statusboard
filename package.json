@@ -25,7 +25,8 @@
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "4.25.0",
-    "content": "./scripts/template-oss"
+    "content": "./scripts/template-oss",
+    "dependabotInterval": "weekly"
   },
   "tap": {
     "allow-empty-coverage": true,
