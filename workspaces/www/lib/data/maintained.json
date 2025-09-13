@@ -49,18 +49,6 @@
     "owner": "npm"
   },
   {
-    "id": "npm_eslint-config",
-    "name": "eslint-config",
-    "owner": "npm",
-    "pkg": "@npmcli/eslint-config"
-  },
-  {
-    "id": "npm_fs",
-    "name": "fs",
-    "owner": "npm",
-    "pkg": "@npmcli/fs"
-  },
-  {
     "id": "npm_git",
     "name": "git",
     "owner": "npm",
@@ -405,21 +393,9 @@
     "pkg": "ssri"
   },
   {
-    "id": "npm_stafftools",
-    "name": "stafftools",
-    "owner": "npm",
-    "pkg": "@npmcli/stafftools"
-  },
-  {
     "id": "npm_statusboard",
     "name": "statusboard",
     "owner": "npm"
-  },
-  {
-    "id": "npm_template-oss",
-    "name": "template-oss",
-    "owner": "npm",
-    "pkg": "@npmcli/template-oss"
   },
   {
     "id": "npm_types",
