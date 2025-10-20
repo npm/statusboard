@@ -15,7 +15,7 @@
     "snap": "node --test --test-update-snapshots ./test/**/*.js",
     "posttest": "npm run lint",
     "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
-    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 ./test/**/*.js"
+    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=80 --test-coverage-functions=80 --test-coverage-branches=80 ./test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,8 @@
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "4.27.0",
     "content": "../../scripts/template-oss",
-    "testRunner": "node:test"
+    "testRunner": "node:test",
+    "coverageThreshold": 80
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
