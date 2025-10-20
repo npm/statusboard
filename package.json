@@ -26,37 +26,27 @@
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
     "version": "4.27.0",
     "content": "./scripts/template-oss",
-    "dependabotInterval": "weekly"
-  },
-  "tap": {
-    "allow-empty-coverage": true,
-    "exclude": [
-      "workspaces/**"
-    ],
-    "show-full-coverage": true
+    "dependabotInterval": "weekly",
+    "testRunner": "node:test"
   },
   "scripts": {
     "template-oss-apply": "template-oss-apply --force",
     "lint": "npm run eslint",
     "postlint": "template-oss-check",
     "lintfix": "npm run eslint -- --fix",
-    "snap": "tap",
-    "test": "tap",
+    "snap": "node --test --test-update-snapshots ./test/**/*.js",
+    "test": "node --test ./test/**/*.js",
     "posttest": "npm run lint",
     "test-all": "npm run test --workspaces --include-workspace-root --if-present",
     "lint-all": "npm run lint --workspaces --include-workspace-root --if-present",
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100 ./test/**/*.js"
   },
   "files": [
     "bin/",
     "lib/"
   ],
   "engines": {
-    "node": "^18.17.0 || >=20.5.0"
-  },
-  "nyc": {
-    "exclude": [
-      "workspaces/**"
-    ]
+    "node": ">=24.10.0"
   }
 }
