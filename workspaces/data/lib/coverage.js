@@ -10,9 +10,17 @@ const coverageKeys = ['check-coverage', 'coverage'].reduce((acc, k) => {
   return acc
 }, [])
 
-// Note: this only works for tap
+// Note: this only works for tap and node:test
 export default (pkg) => {
   const tapSpec = pkg.devDependencies?.tap
+  const templateOSS = pkg.templateOSS || {}
+
+  if (templateOSS.testRunner === 'node:test') {
+    if (typeof templateOSS.coverageThreshold === 'number') {
+      return templateOSS.coverageThreshold
+    }
+    return 100
+  }
 
   if (!tapSpec) {
     return 0
