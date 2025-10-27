@@ -34,7 +34,7 @@
     "postlint": "template-oss-check",
     "lintfix": "npm run eslint -- --fix",
     "snap": "node --test --test-update-snapshots ./test/**/*.js",
-    "test": "node --test ./test/**/*.js",
+    "test": "node --test",
     "posttest": "npm run lint",
     "test-all": "npm run test --workspaces --include-workspace-root --if-present",
     "lint-all": "npm run lint --workspaces --include-workspace-root --if-present",
