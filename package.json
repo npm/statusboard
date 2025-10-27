@@ -18,7 +18,7 @@
     "workspaces/*"
   ],
   "devDependencies": {
-    "@npmcli/eslint-config": "^5.0.0",
+    "@npmcli/eslint-config": "^6.0.0",
     "@npmcli/template-oss": "4.27.0"
   },
   "templateOSS": {
