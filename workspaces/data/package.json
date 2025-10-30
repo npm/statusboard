@@ -9,15 +9,16 @@
   "scripts": {
     "fetch:data": "node ./bin/fetch-data.js",
     "fetch:maintained": " node ./bin/fetch-maintained.js",
-    "test": "node --test ./test/**/*.js",
+    "test": "node --test './test/**/*.js'",
     "lint": "npm run eslint",
     "postlint": "template-oss-check",
     "template-oss-apply": "template-oss-apply --force",
     "lintfix": "npm run eslint -- --fix",
-    "snap": "node --test --test-update-snapshots ./test/**/*.js",
+    "snap": "node --test --test-update-snapshots './test/**/*.js'",
     "posttest": "npm run lint",
     "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
-    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 ./test/**/*.js"
+    "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 './test/**/*.js'",
+    "test:node20": "node --test test"
   },
   "repository": {
     "type": "git",
@@ -59,7 +60,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.27.0",
+    "version": "4.28.0",
     "content": "../../scripts/template-oss",
     "testRunner": "node:test",
     "coverageThreshold": 0
