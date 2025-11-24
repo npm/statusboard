@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@npmcli/eslint-config": "^6.0.0",
-    "@npmcli/template-oss": "4.28.0"
+    "@npmcli/template-oss": "4.28.1"
   },
   "files": [
     "bin/",
@@ -60,7 +60,7 @@
   },
   "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.28.0",
+    "version": "4.28.1",
     "content": "../../scripts/template-oss",
     "testRunner": "node:test",
     "coverageThreshold": 0
