@@ -91,6 +91,9 @@ jobs:
       - name: Test (with coverage on Node >= 24)
         if: ${{ startsWith(matrix.node-version, '24') }}
         run: npm run test:cover --ignore-scripts --workspace data
-      - name: Test (without coverage on Node < 24)
-        if: ${{ !startsWith(matrix.node-version, '24') }}
+      - name: Test (on Node 20 with globbing workaround)
+        if: ${{ startsWith(matrix.node-version, '20') }}
+        run: npm run test:node20 --ignore-scripts --workspace data
+      - name: Test
+        if: ${{ !startsWith(matrix.node-version, '24') && !startsWith(matrix.node-version, '20') }}
         run: npm test --ignore-scripts --workspace data
