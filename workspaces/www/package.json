@@ -32,7 +32,7 @@
   "homepage": "https://github.com/npm/statusboard#readme",
   "devDependencies": {
     "@npmcli/eslint-config": "^6.0.0",
-    "@npmcli/template-oss": "4.28.1",
+    "@npmcli/template-oss": "4.29.0",
     "eslint-import-resolver-typescript": "^4.3.1"
   },
   "files": [
