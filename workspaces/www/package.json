@@ -61,7 +61,7 @@
     "dotenv": "^17.0.0",
     "esbuild": "^0.27.0",
     "http-server": "^14.1.1",
-    "jquery": "^3.7.1",
+    "jquery": "^4.0.0",
     "normalize.css": "^8.0.1",
     "semver": "^7.3.8"
   }
