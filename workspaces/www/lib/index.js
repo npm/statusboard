@@ -5,10 +5,9 @@ import * as $$ from './js/selectors.js'
 import getColumns from './js/columns.js'
 import getTrends from './js/trends.js'
 import getData from './js/api.js'
-import DataTable from './js/datatable.js'
+import './js/datatable.js'
 import updateMetadata from './js/metadata.js'
 
-DataTable($)
 const TREND_OPTIONS = [7, 30, 90]
 
 $(async () => {
