@@ -13,16 +13,16 @@ jobs:
     outputs:
       has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
       - name: Setup git user
         run: |
           git config --global user.email "npm-cli+bot@github.com"
           git config --global user.name "npm CLI robot"
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 26.x
           cache: npm
       - name: Update npm to latest
         run: npm i --prefer-online --no-fund --no-audit -g npm@latest
@@ -36,7 +36,7 @@ jobs:
         id: status
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            echo "::set-output name=has_changes::1"
+            echo "has_changes=1" >> $GITHUB_OUTPUT
           fi
       - name: Commit changes
         if: steps.status.outputs.has_changes == '1'
