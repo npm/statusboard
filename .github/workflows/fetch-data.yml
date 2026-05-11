@@ -10,6 +10,8 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     continue-on-error: true
+    permissions:
+      contents: write
     outputs:
       has_changes: ${{ steps.status.outputs.has_changes }}
     steps:
@@ -48,4 +50,8 @@ jobs:
   publish:
     needs: fetch
     if: needs.fetch.outputs.has_changes == '1'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     uses: ./.github/workflows/publish.yml
