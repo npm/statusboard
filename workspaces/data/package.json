@@ -44,7 +44,7 @@
     "lodash": "^4.18.1",
     "pacote": "^21.0.0",
     "proc-log": "^6.0.0",
-    "semver": "^7.8.0",
+    "semver": "^7.8.1",
     "www": "^1.0.0"
   },
   "devDependencies": {
