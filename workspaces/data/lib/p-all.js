@@ -7,6 +7,9 @@ export default async (promises) => {
   for (const p of promisesArr) {
     if (isObj) {
       const [key, value] = p
+      if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+        continue
+      }
       if (typeof value === 'function') {
         result.push(await value().then(v => [key, v]))
       } else {
