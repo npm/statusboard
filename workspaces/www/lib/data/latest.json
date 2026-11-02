@@ -1319,6 +1319,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -1327,6 +1328,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -3891,6 +3893,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -5181,6 +5184,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -5188,6 +5192,7 @@
         "count": 0,
         "url": "https://github.com/npm/abbrev-js/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -7755,6 +7760,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -8806,6 +8812,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -10363,6 +10370,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -10371,6 +10379,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -12935,6 +12944,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -14225,6 +14235,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -14232,6 +14243,7 @@
         "count": 0,
         "url": "https://github.com/npm/agent/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -16799,6 +16811,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -18083,6 +18096,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -18134,7 +18148,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/bin-links/actions/runs/40299895237/job/121494917198",
+      "url": "https://github.com/npm/bin-links/actions/runs/41419288688/job/125190682783",
       "conclusion": "failure"
     },
     "stars": {
@@ -19440,6 +19454,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -19448,6 +19463,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -22010,6 +22026,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -23299,6 +23316,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -23306,6 +23324,7 @@
         "count": 0,
         "url": "https://github.com/npm/bin-links/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -25871,6 +25890,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -27154,6 +27174,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -27171,8 +27192,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cacache/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/cacache/actions/runs/41411031121/job/125163892255",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 301,
@@ -28478,6 +28499,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -28486,6 +28508,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -31050,6 +31073,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -32340,6 +32364,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -32347,6 +32372,7 @@
         "count": 0,
         "url": "https://github.com/npm/cacache/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -34914,6 +34940,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -36124,6 +36151,7 @@
         5,
         5,
         5,
+        4,
         4,
         4,
         4,
@@ -37522,6 +37550,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -37530,6 +37559,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -40094,6 +40124,7 @@
         2,
         3,
         3,
+        3,
         3
       ]
     },
@@ -41384,6 +41415,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -41534,6 +41566,7 @@
           0,
           0,
           0,
+          1,
           1,
           1,
           1,
@@ -43958,6 +43991,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -45242,6 +45276,7 @@
         9,
         9,
         9,
+        9,
         9
       ]
     }
@@ -45293,11 +45328,11 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/documentation/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/documentation/actions/runs/41411253078/job/125164576823",
+      "conclusion": "failure"
     },
     "stars": {
-      "count": 728,
+      "count": 729,
       "url": "https://github.com/npm/documentation/stargazers"
     },
     "pkgPrivate": true,
@@ -46599,6 +46634,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -46607,6 +46643,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -49169,6 +49206,7 @@
         42,
         46,
         36,
+        36,
         36
       ]
     },
@@ -50458,6 +50496,7 @@
           53,
           53,
           53,
+          53,
           53
         ]
       },
@@ -50465,6 +50504,7 @@
         "count": 0,
         "url": "https://github.com/npm/documentation/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -53030,6 +53070,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -54305,6 +54346,7 @@
         69,
         70,
         70,
+        69,
         69,
         69,
         69,
@@ -55635,6 +55677,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -55643,6 +55686,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -58203,6 +58247,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -59491,6 +59536,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -59498,6 +59544,7 @@
         "count": 0,
         "url": "https://github.com/npm/eslint-config/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -62061,6 +62108,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -63343,6 +63391,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -63360,7 +63409,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/fs/actions/runs/40306350394/job/121516302842",
+      "url": "https://github.com/npm/fs/actions/runs/41426623857/job/125214666083",
       "conclusion": "failure"
     },
     "stars": {
@@ -64666,6 +64715,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -64674,6 +64724,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -67236,6 +67287,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -68525,6 +68577,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -68532,6 +68585,7 @@
         "count": 0,
         "url": "https://github.com/npm/fs/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -71097,6 +71151,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -72143,6 +72198,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -73704,6 +73760,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -73712,6 +73769,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -76276,6 +76334,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -77566,6 +77625,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -77573,6 +77633,7 @@
         "count": 0,
         "url": "https://github.com/npm/git/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -80140,6 +80201,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -81376,6 +81438,7 @@
         4,
         4,
         4,
+        5,
         5,
         5,
         5,
@@ -82748,6 +82811,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -82756,6 +82820,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -85323,6 +85388,7 @@
         6,
         6,
         4,
+        5,
         5
       ]
     },
@@ -86613,6 +86679,7 @@
           2,
           1,
           1,
+          1,
           1
         ]
       },
@@ -86620,6 +86687,7 @@
         "count": 0,
         "url": "https://github.com/npm/hosted-git-info/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -89187,6 +89255,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -90471,6 +90540,7 @@
         4,
         3,
         3,
+        3,
         3
       ]
     }
@@ -90488,7 +90558,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/ignore-walk/actions/runs/40304530684/job/121510254587",
+      "url": "https://github.com/npm/ignore-walk/actions/runs/41425306453/job/125210367315",
       "conclusion": "failure"
     },
     "stars": {
@@ -91794,6 +91864,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -91802,6 +91873,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -94364,6 +94436,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -95653,6 +95726,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -95660,6 +95734,7 @@
         "count": 0,
         "url": "https://github.com/npm/ignore-walk/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -98225,6 +98300,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -99275,6 +99351,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -100832,6 +100909,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -100840,6 +100918,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -103404,6 +103483,7 @@
         13,
         14,
         14,
+        16,
         16
       ]
     },
@@ -104694,6 +104774,7 @@
           11,
           11,
           11,
+          12,
           12
         ]
       },
@@ -104701,6 +104782,7 @@
         "count": 0,
         "url": "https://github.com/npm/ini/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -107268,6 +107350,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -108552,6 +108635,7 @@
         15,
         15,
         15,
+        16,
         16
       ]
     }
@@ -108569,8 +108653,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/init-package-json/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/init-package-json/actions/runs/41411999638/job/125166914286",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 348,
@@ -109876,6 +109960,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -109884,6 +109969,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -112448,6 +112534,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -113738,6 +113825,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -113745,6 +113833,7 @@
         "count": 0,
         "url": "https://github.com/npm/init-package-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -116312,6 +116401,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -117425,6 +117515,7 @@
         6,
         6,
         6,
+        5,
         5,
         5,
         5,
@@ -118920,6 +119011,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -118928,6 +119020,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -121492,6 +121585,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -122782,6 +122876,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -122789,6 +122884,7 @@
         "count": 0,
         "url": "https://github.com/npm/installed-package-contents/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -125356,6 +125452,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -126407,6 +126504,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -127963,6 +128061,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -127970,6 +128069,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -130533,6 +130633,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -131822,6 +131923,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -131829,6 +131931,7 @@
         "count": 0,
         "url": "https://github.com/npm/json-parse-even-better-errors/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -134394,6 +134497,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -135440,6 +135544,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -136535,10 +136640,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -137225,6 +137332,7 @@
       "url": "https://github.com/npm/libnpmhook/pulls?q=is%3Aopen",
       "release": null,
       "history": [
+        0,
         0,
         0,
         0,
@@ -138591,6 +138699,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -138598,6 +138707,7 @@
         "count": 0,
         "url": "https://github.com/npm/libnpmhook/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -139961,10 +140071,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -140864,8 +140976,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/make-fetch-happen/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/make-fetch-happen/actions/runs/41410659632/job/125162709577",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 208,
@@ -142171,6 +142283,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -142179,6 +142292,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -144743,6 +144857,7 @@
         7,
         7,
         7,
+        7,
         7
       ]
     },
@@ -146033,6 +146148,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -146040,6 +146156,7 @@
         "count": 0,
         "url": "https://github.com/npm/make-fetch-happen/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -148607,6 +148724,7 @@
           4,
           5,
           5,
+          5,
           5
         ]
       },
@@ -149891,6 +150009,7 @@
         9,
         10,
         10,
+        10,
         10
       ]
     }
@@ -149908,8 +150027,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/map-workspaces/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/map-workspaces/actions/runs/41410731576/job/125162936171",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 26,
@@ -151214,6 +151333,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -151222,6 +151342,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -153784,6 +153905,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -155073,6 +155195,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -155080,6 +155203,7 @@
         "count": 0,
         "url": "https://github.com/npm/map-workspaces/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -157645,6 +157769,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -158695,6 +158820,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -160251,6 +160377,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -160259,6 +160386,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -162821,6 +162949,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -164110,6 +164239,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -164117,6 +164247,7 @@
         "count": 0,
         "url": "https://github.com/npm/metavuln-calculator/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -166682,6 +166813,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -167732,6 +167864,7 @@
         3,
         3,
         3,
+        2,
         2,
         2,
         2,
@@ -169287,6 +169420,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -169294,6 +169428,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -171855,6 +171990,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -173143,6 +173279,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -173150,6 +173287,7 @@
         "count": 0,
         "url": "https://github.com/npm/minify-registry-metadata/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -175713,6 +175851,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -176995,6 +177134,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -177012,7 +177152,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/minipass-fetch/actions/runs/40306459206/job/121516667911",
+      "url": "https://github.com/npm/minipass-fetch/actions/runs/41426721611/job/125214988687",
       "conclusion": "failure"
     },
     "stars": {
@@ -178319,6 +178459,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -178327,6 +178468,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -180891,6 +181033,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -182181,6 +182324,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -182188,6 +182332,7 @@
         "count": 0,
         "url": "https://github.com/npm/minipass-fetch/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -184755,6 +184900,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -185847,6 +185993,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -187362,6 +187509,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -187370,6 +187518,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -189932,6 +190081,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -191221,6 +191371,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -191228,6 +191379,7 @@
         "count": 0,
         "url": "https://github.com/npm/mute-stream/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -193793,6 +193945,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -194843,6 +194996,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -196400,6 +196554,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -196408,6 +196563,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -198972,6 +199128,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -200262,6 +200419,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -200269,6 +200427,7 @@
         "count": 0,
         "url": "https://github.com/npm/name-from-folder/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -202836,6 +202995,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -203887,6 +204047,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -205444,6 +205605,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -205452,6 +205614,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -208016,6 +208179,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -209306,6 +209470,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -209313,6 +209478,7 @@
         "count": 0,
         "url": "https://github.com/npm/node-gyp/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -211880,6 +212046,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -212927,6 +213094,7 @@
         1,
         1,
         1,
+        2,
         2,
         2,
         2,
@@ -214488,6 +214656,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -214496,6 +214665,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -217060,6 +217230,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -218350,6 +218521,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -218357,6 +218529,7 @@
         "count": 0,
         "url": "https://github.com/npm/nopt/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -220924,6 +221097,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -222124,6 +222298,7 @@
         11,
         11,
         11,
+        12,
         12,
         12,
         12,
@@ -223532,6 +223707,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -223540,6 +223716,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -226104,6 +226281,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -227394,6 +227572,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -227401,6 +227580,7 @@
         "count": 0,
         "url": "https://github.com/npm/normalize-package-data/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -229968,6 +230148,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -231252,6 +231433,7 @@
         18,
         18,
         18,
+        18,
         18
       ]
     }
@@ -231269,11 +231451,11 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/cli/actions/runs/41410289768/job/125161541854",
+      "conclusion": "failure"
     },
     "stars": {
-      "count": 10237,
+      "count": 10235,
       "url": "https://github.com/npm/cli/stargazers"
     },
     "pkgPrivate": false,
@@ -232576,6 +232758,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -233860,11 +234043,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 214,
+      "count": 217,
       "url": "https://github.com/npm/cli/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/cli/pull/10179",
@@ -235151,11 +235335,12 @@
         213,
         214,
         214,
-        214
+        214,
+        217
       ]
     },
     "issues": {
-      "count": 603,
+      "count": 602,
       "url": "https://github.com/npm/cli/issues?q=is%3Aopen",
       "unlabeled": {
         "count": 44,
@@ -236440,6 +236625,7 @@
           53,
           46,
           46,
+          44,
           44,
           44
         ]
@@ -237728,11 +237914,12 @@
           18,
           18,
           17,
+          17,
           17
         ]
       },
       "triage": {
-        "count": 227,
+        "count": 226,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
           124,
@@ -239015,7 +239202,8 @@
           228,
           229,
           226,
-          227
+          227,
+          226
         ]
       },
       "history": [
@@ -240299,7 +240487,8 @@
         602,
         604,
         602,
-        603
+        603,
+        602
       ]
     }
   },
@@ -240316,7 +240505,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/npm-audit-report/actions/runs/40305578192/job/121513734272",
+      "url": "https://github.com/npm/npm-audit-report/actions/runs/41426134321/job/125213077608",
       "conclusion": "failure"
     },
     "stars": {
@@ -241623,6 +241812,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -241631,6 +241821,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -244195,6 +244386,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -245485,6 +245677,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -245492,6 +245685,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-audit-report/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -248059,6 +248253,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -249110,6 +249305,7 @@
         2,
         2,
         2,
+        1,
         1,
         1,
         1,
@@ -250667,6 +250863,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -250675,6 +250872,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -253239,6 +253437,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -254529,6 +254728,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -254536,6 +254736,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-bundled/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -257103,6 +257304,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -258150,6 +258352,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -259711,6 +259914,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -259719,6 +259923,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -262283,6 +262488,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -262293,6 +262499,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-checks/issues?q=is%3Aopen+no%3Alabel",
         "history": [
+          0,
           0,
           0,
           0,
@@ -264860,6 +265067,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -264867,6 +265075,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-checks/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
+          0,
           0,
           0,
           0,
@@ -266720,6 +266929,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -268756,6 +268966,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -270041,6 +270252,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -270049,6 +270261,7 @@
       "url": "https://github.com/npm/npm-install-script/pulls?q=is%3Aopen",
       "release": null,
       "history": [
+        0,
         0,
         0,
         0,
@@ -272621,6 +272834,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -272628,6 +272842,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-script/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -275197,6 +275412,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -275808,6 +276024,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -277806,6 +278023,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -277814,6 +278032,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -280378,6 +280597,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -281668,6 +281888,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -281675,6 +281896,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-normalize-package-bin/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -284242,6 +284464,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -285293,6 +285516,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -286850,6 +287074,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -286858,6 +287083,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -289422,6 +289648,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -290712,6 +290939,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -290719,6 +290947,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-package-arg/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -293286,6 +293515,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -294570,6 +294800,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -294587,8 +294818,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/npm-packlist/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/npm-packlist/actions/runs/41411554587/job/125165525958",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 122,
@@ -295894,6 +296125,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -295902,6 +296134,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -298466,6 +298699,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -299236,6 +299470,7 @@
           2,
           2,
           3,
+          2,
           2,
           2,
           2,
@@ -301043,6 +301278,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -301573,6 +301809,7 @@
           1,
           1,
           2,
+          1,
           1,
           1,
           1,
@@ -303614,6 +303851,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -304937,6 +305175,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -304944,6 +305183,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -307507,6 +307747,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -308796,6 +309037,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -308803,6 +309045,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-pick-manifest/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -311368,6 +311611,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -312414,6 +312658,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -313974,6 +314219,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -313982,6 +314228,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -316544,6 +316791,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -317833,6 +318081,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -317840,6 +318089,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-profile/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -320405,6 +320655,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -321688,6 +321939,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -321705,8 +321957,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/npm-registry-fetch/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/npm-registry-fetch/actions/runs/41410158703/job/125161126976",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 161,
@@ -323012,6 +323264,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -323020,6 +323273,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -325584,6 +325838,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -326874,6 +327129,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -326881,6 +327137,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-registry-fetch/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -329448,6 +329705,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -330582,6 +330840,7 @@
         6,
         6,
         6,
+        5,
         5,
         5,
         5,
@@ -332056,6 +332315,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -332064,6 +332324,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -334628,6 +334889,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -335918,6 +336180,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -335925,6 +336188,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-user-validate/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -338492,6 +338756,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -339776,6 +340041,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -339793,8 +340059,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/package-json/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/package-json/actions/runs/41410239784/job/125161387528",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 103,
@@ -341100,6 +341366,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -341108,6 +341375,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -343672,6 +343940,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -344962,6 +345231,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -344969,6 +345239,7 @@
         "count": 0,
         "url": "https://github.com/npm/package-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -347536,6 +347807,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -348820,6 +349092,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -348837,8 +349110,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/pacote/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/pacote/actions/runs/41412007313/job/125166938955",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 404,
@@ -350144,6 +350417,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -351428,11 +351702,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 6,
+      "count": 8,
       "url": "https://github.com/npm/pacote/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -352716,7 +352991,8 @@
         8,
         8,
         6,
-        6
+        6,
+        8
       ]
     },
     "issues": {
@@ -354006,6 +354282,7 @@
           6,
           6,
           5,
+          5,
           5
         ]
       },
@@ -354013,6 +354290,7 @@
         "count": 0,
         "url": "https://github.com/npm/pacote/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -356580,6 +356858,7 @@
           8,
           8,
           8,
+          8,
           8
         ]
       },
@@ -357863,6 +358142,7 @@
         19,
         19,
         19,
+        18,
         18,
         18
       ]
@@ -359188,6 +359468,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -359196,6 +359477,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -361760,6 +362042,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -363050,6 +363333,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -363057,6 +363341,7 @@
         "count": 0,
         "url": "https://github.com/npm/parse-conflict-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -365624,6 +365909,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -366908,6 +367194,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -366925,7 +367212,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/proc-log/actions/runs/40305386694/job/121513093545",
+      "url": "https://github.com/npm/proc-log/actions/runs/41425894243/job/125212292653",
       "conclusion": "failure"
     },
     "stars": {
@@ -368231,6 +368518,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -368239,6 +368527,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -370801,6 +371090,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -372090,6 +372380,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -372097,6 +372388,7 @@
         "count": 0,
         "url": "https://github.com/npm/proc-log/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -374662,6 +374954,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -375945,6 +376238,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -375962,7 +376256,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/proggy/actions/runs/40306728776/job/121517550820",
+      "url": "https://github.com/npm/proggy/actions/runs/41426869842/job/125215484485",
       "conclusion": "failure"
     },
     "stars": {
@@ -377269,6 +377563,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -377277,6 +377572,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -379841,6 +380137,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -381131,6 +381428,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -381138,6 +381436,7 @@
         "count": 0,
         "url": "https://github.com/npm/proggy/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -383705,6 +384004,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -384989,6 +385289,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -385006,7 +385307,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/promise-spawn/actions/runs/40296887823/job/121484998453",
+      "url": "https://github.com/npm/promise-spawn/actions/runs/41417187334/job/125183810328",
       "conclusion": "failure"
     },
     "stars": {
@@ -386313,6 +386614,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -386321,6 +386623,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -388885,6 +389188,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -390175,6 +390479,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -390182,6 +390487,7 @@
         "count": 0,
         "url": "https://github.com/npm/promise-spawn/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -392749,6 +393055,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -393861,6 +394168,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -395356,6 +395664,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -395364,6 +395673,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -397926,6 +398236,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -399215,6 +399526,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -399222,6 +399534,7 @@
         "count": 0,
         "url": "https://github.com/npm/promzard/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -401787,6 +402100,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -402878,6 +403192,7 @@
         2,
         2,
         3,
+        4,
         4,
         4,
         4,
@@ -404385,10 +404700,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -406939,6 +407256,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -408220,6 +408538,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -408227,6 +408546,7 @@
         "count": 0,
         "url": "https://github.com/npm/query/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -410776,6 +411096,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -411814,6 +412135,7 @@
         0,
         0,
         0,
+        1,
         1,
         1,
         1,
@@ -413375,6 +413697,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -413383,6 +413706,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -415947,6 +416271,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -417237,6 +417562,7 @@
           11,
           11,
           11,
+          11,
           11
         ]
       },
@@ -417244,6 +417570,7 @@
         "count": 0,
         "url": "https://github.com/npm/read/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -419811,6 +420138,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -420259,6 +420587,7 @@
         11,
         11,
         0,
+        11,
         11,
         11,
         11,
@@ -422419,6 +422748,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -422427,6 +422757,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -424991,6 +425322,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -426281,6 +426613,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -426288,6 +426621,7 @@
         "count": 0,
         "url": "https://github.com/npm/read-cmd-shim/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -428855,6 +429189,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -429967,6 +430302,7 @@
         2,
         2,
         2,
+        3,
         3,
         3,
         3,
@@ -431463,6 +431799,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -431471,6 +431808,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -434035,6 +434373,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -435325,6 +435664,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -435332,6 +435672,7 @@
         "count": 0,
         "url": "https://github.com/npm/read-package-json-fast/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -437899,6 +438240,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -438950,6 +439292,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -440064,10 +440407,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -441750,6 +442095,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -442597,6 +442943,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -442604,6 +442951,7 @@
         "count": 0,
         "url": "https://github.com/npm/redact/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -444285,6 +444633,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -444889,6 +445238,7 @@
         2,
         2,
         2,
+        3,
         3,
         3,
         3,
@@ -446450,6 +446800,7 @@
           22,
           22,
           22,
+          22,
           22
         ]
       },
@@ -447605,6 +447956,7 @@
         153,
         153,
         153,
+        154,
         154,
         154,
         154,
@@ -449022,6 +449374,7 @@
         49,
         49,
         48,
+        48,
         48
       ]
     },
@@ -450312,6 +450665,7 @@
           129,
           129,
           129,
+          129,
           129
         ]
       },
@@ -450319,6 +450673,7 @@
         "count": 0,
         "url": "https://github.com/npm/rfcs/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -452886,6 +453241,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -454170,6 +454526,7 @@
         133,
         133,
         133,
+        133,
         133
       ]
     }
@@ -454187,8 +454544,8 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/run-script/actions",
-      "conclusion": "success"
+      "url": "https://github.com/npm/run-script/actions/runs/41411287288/job/125164687562",
+      "conclusion": "failure"
     },
     "stars": {
       "count": 60,
@@ -455494,6 +455851,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -455502,6 +455860,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -458066,6 +458425,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -459356,6 +459716,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -459363,6 +459724,7 @@
         "count": 0,
         "url": "https://github.com/npm/run-script/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -461930,6 +462292,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -463214,6 +463577,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -463235,7 +463599,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 5477,
+      "count": 5476,
       "url": "https://github.com/npm/node-semver/stargazers"
     },
     "pkgPrivate": false,
@@ -463262,6 +463626,7 @@
           null,
           null,
           null,
+          0,
           0,
           0,
           0,
@@ -465822,11 +466187,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 38,
+      "count": 39,
       "url": "https://github.com/npm/node-semver/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -467110,7 +467476,8 @@
         37,
         37,
         37,
-        38
+        38,
+        39
       ]
     },
     "issues": {
@@ -468400,6 +468767,7 @@
           10,
           10,
           10,
+          10,
           10
         ]
       },
@@ -468657,6 +469025,7 @@
           1,
           1,
           1,
+          0,
           0,
           0,
           0,
@@ -470974,6 +471343,7 @@
           7,
           7,
           7,
+          7,
           7
         ]
       },
@@ -472255,6 +472625,7 @@
         43,
         43,
         43,
+        44,
         44,
         44,
         44,
@@ -473582,6 +473953,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -473590,6 +473962,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -476154,6 +476527,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -477444,6 +477818,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -477451,6 +477826,7 @@
         "count": 0,
         "url": "https://github.com/npm/ssri/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -480018,6 +480394,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -481069,6 +481446,7 @@
         2,
         2,
         2,
+        1,
         1,
         1,
         1,
@@ -482625,6 +483003,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -482633,6 +483012,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -485198,6 +485578,7 @@
         8,
         8,
         8,
+        8,
         8
       ]
     },
@@ -486487,6 +486868,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -486494,6 +486876,7 @@
         "count": 0,
         "url": "https://github.com/npm/stafftools/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -489059,6 +489442,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -490342,6 +490726,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -490354,12 +490739,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2026-10-31T12:29:32Z",
-      "url": "https://github.com/npm/statusboard/commit/ec5ff76af29146439bd923f8f88c44162c1298b1"
+      "date": "2026-11-01T12:29:41Z",
+      "url": "https://github.com/npm/statusboard/commit/a104dc413850b7d34afce95f6e77d7d4373b1028"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/41304983040/job/124843440114",
+      "url": "https://github.com/npm/statusboard/actions/runs/41442476349/job/125267469194",
       "conclusion": "failure"
     },
     "stars": {
@@ -491666,6 +492051,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -491674,6 +492060,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -494238,6 +494625,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -495528,6 +495916,7 @@
           30,
           30,
           30,
+          30,
           30
         ]
       },
@@ -495535,6 +495924,7 @@
         "count": 0,
         "url": "https://github.com/npm/statusboard/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -498102,6 +498492,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -499253,6 +499644,7 @@
         71,
         71,
         69,
+        67,
         67,
         67,
         67,
@@ -500709,6 +501101,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -500717,6 +501110,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -503282,6 +503676,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -504571,6 +504966,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -504578,6 +504974,7 @@
         "count": 0,
         "url": "https://github.com/npm/template-oss/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -507143,6 +507540,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -508426,6 +508824,7 @@
         6,
         6,
         6,
+        6,
         6
       ]
     }
@@ -509449,10 +509848,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -511419,6 +511820,7 @@
         10,
         10,
         10,
+        10,
         10
       ]
     },
@@ -512408,6 +512810,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -512415,6 +512818,7 @@
         "count": 0,
         "url": "https://github.com/npm/types/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -514380,6 +514784,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -515126,6 +515531,7 @@
         3,
         3,
         3,
+        4,
         4,
         4,
         4,
@@ -516687,6 +517093,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -516695,6 +517102,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -519259,6 +519667,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -520549,6 +520958,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -520556,6 +520966,7 @@
         "count": 0,
         "url": "https://github.com/npm/unique-filename/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -523123,6 +523534,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -524170,6 +524582,7 @@
         1,
         1,
         1,
+        2,
         2,
         2,
         2,
@@ -525731,6 +526144,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -525739,6 +526153,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -528303,6 +528718,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -529593,6 +530009,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -529600,6 +530017,7 @@
         "count": 0,
         "url": "https://github.com/npm/unique-slug/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -532167,6 +532585,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -533218,6 +533637,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -534775,6 +535195,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -534783,6 +535204,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -537347,6 +537769,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -538637,6 +539060,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -538644,6 +539068,7 @@
         "count": 0,
         "url": "https://github.com/npm/validate-npm-package-name/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -541211,6 +541636,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -542256,6 +542682,7 @@
         4,
         4,
         3,
+        2,
         2,
         2,
         2,
@@ -543819,6 +544246,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -543827,6 +544255,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -546391,6 +546820,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -547681,6 +548111,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -547688,6 +548119,7 @@
         "count": 0,
         "url": "https://github.com/npm/node-which/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -550255,6 +550687,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -551368,6 +551801,7 @@
         5,
         5,
         5,
+        6,
         6,
         6,
         6,
@@ -552862,6 +553296,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -552870,6 +553305,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -555432,6 +555868,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -556721,6 +557158,7 @@
           8,
           8,
           8,
+          8,
           8
         ]
       },
@@ -556728,6 +557166,7 @@
         "count": 0,
         "url": "https://github.com/npm/write-file-atomic/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -559293,6 +559732,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -560559,6 +560999,7 @@
         13,
         13,
         13,
+        14,
         14,
         14,
         14,
