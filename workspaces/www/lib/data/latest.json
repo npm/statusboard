@@ -47997,7 +47997,7 @@
       ]
     },
     "prs": {
-      "count": 36,
+      "count": 37,
       "url": "https://github.com/npm/documentation/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -49283,7 +49283,7 @@
         36,
         36,
         36,
-        36
+        37
       ]
     },
     "issues": {
@@ -234416,7 +234416,7 @@
       ]
     },
     "prs": {
-      "count": 223,
+      "count": 225,
       "url": "https://github.com/npm/cli/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/cli/pull/10179",
@@ -235706,7 +235706,7 @@
         214,
         217,
         216,
-        223
+        225
       ]
     },
     "issues": {
@@ -491512,12 +491512,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2026-11-03T12:32:22Z",
-      "url": "https://github.com/npm/statusboard/commit/cd02ee4279b06e2b503ff29a87cd5b8973944bc0"
+      "date": "2026-11-04T17:33:46Z",
+      "url": "https://github.com/npm/statusboard/commit/5d69226af59d12ce92e2d98e1b7f9b9ddb6156fe"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/41826798930/job/126563482344",
+      "url": "https://github.com/npm/statusboard/actions/runs/41882417410/job/126758048165",
       "conclusion": "failure"
     },
     "stars": {
