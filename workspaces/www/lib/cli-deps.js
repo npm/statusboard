@@ -223,7 +223,7 @@ const start = async () => {
           `<code title="${escape(repo.defaultCommit)}">${repo.defaultCommit.slice(0, 12)}</code>`)}</small></div>
       <p class="package-list"><strong>Packages:</strong> ${packages.map(pkg => `<code>${escape(pkg)}</code>`).join(', ')}</p>
       ${versionFilter.value ? `<p class="detail-note">Showing matching package comparisons only,
-        for ${cliFilter.value ? `CLI v${cliFilter.value}` : 'any CLI line'}. Clear Version status to see every comparison.</p>` : ''}
+        for ${cliFilter.value ? `CLI v${escape(cliFilter.value)}` : 'any CLI line'}. Clear Version status to see every comparison.</p>` : ''}
       ${repo.repository === 'npm/template-oss' ? `<p class="detail-note"><strong>Tooling alignment:</strong>
         template-oss is expected to stay current on supported CLI branches. Older direct pins are alignment work,
         not a recommendation to maintain its historical dependency tree. This snapshot does not establish cross-major upgrade compatibility.</p>` : ''}
