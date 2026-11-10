@@ -4,6 +4,7 @@ import { glob } from 'glob'
 import lodash from 'lodash'
 import pLog from 'proc-log'
 import packageApi from './package.js'
+import cliDeps from './cli-deps.js'
 
 const { merge, get } = lodash
 
@@ -260,6 +261,7 @@ export default ({ auth }) => {
   }
 
   return {
+    ...cliDeps(GRAPHQL),
     searchReposWithManifests,
     getPkg,
     getDiscussions,

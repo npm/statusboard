@@ -47,6 +47,18 @@ export default ({ auth }) => {
     return REST.repos.get({ owner, repo }).then(d => d.data)
   }
 
+  const getDependencyLock = async (repository, commit) => {
+    const [owner, repo] = repository.split('/')
+    const response = await REST.repos.getContent({
+      owner,
+      repo,
+      path: 'package-lock.json',
+      ref: commit,
+      mediaType: { format: 'raw' },
+    })
+    return typeof response.data === 'string' ? JSON.parse(response.data) : response.data
+  }
+
   const getCommit = async (owner, name, p) => {
     pLog.log.verbose(`rest:repo:commit`, `${owner}/${name}${p ? `/${p}` : ''}`)
 
@@ -117,6 +129,7 @@ export default ({ auth }) => {
   }
 
   return {
+    getDependencyLock,
     getRepo,
     getCommit,
     getStatus,
