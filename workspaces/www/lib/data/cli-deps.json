@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-10T01:45:14.742Z",
+  "checkedAt": "2026-11-13T23:29:20.046Z",
   "cli": [
     {
       "major": 12,
       "branch": "latest",
       "version": "12.2.2",
-      "commit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
-      "committedAt": "2026-11-09T21:18:23Z"
+      "commit": "8f92e740ee1547568779284005454ce2f1a5e58b",
+      "committedAt": "2026-11-11T22:15:42Z"
     },
     {
       "major": 11,
       "branch": "release/v11",
       "version": "11.21.2",
-      "commit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
-      "committedAt": "2026-11-06T17:51:48Z"
+      "commit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
+      "committedAt": "2026-11-11T22:14:59Z"
     },
     {
       "major": 10,
@@ -130,12 +130,12 @@
       "publishedAt": "2026-05-08T18:40:37.970Z"
     },
     "@npmcli/package-json": {
-      "version": "8.0.0",
+      "version": "8.0.1",
       "repository": {
         "url": "git+https://github.com/npm/package-json.git",
         "type": "git"
       },
-      "publishedAt": "2026-05-22T16:41:16.114Z"
+      "publishedAt": "2026-11-11T18:44:42.048Z"
     },
     "@npmcli/promise-spawn": {
       "version": "10.0.1",
@@ -210,12 +210,12 @@
       "publishedAt": "2026-09-23T22:03:08.829Z"
     },
     "cacache": {
-      "version": "21.0.1",
+      "version": "21.0.2",
       "repository": {
         "url": "git+https://github.com/npm/cacache.git",
         "type": "git"
       },
-      "publishedAt": "2026-06-09T23:52:33.813Z"
+      "publishedAt": "2026-11-11T18:49:12.116Z"
     },
     "write-file-atomic": {
       "version": "8.0.0",
@@ -282,12 +282,12 @@
       "publishedAt": "2026-05-08T18:33:58.811Z"
     },
     "minipass-fetch": {
-      "version": "6.0.0",
+      "version": "6.0.1",
       "repository": {
         "url": "git+https://github.com/npm/minipass-fetch.git",
         "type": "git"
       },
-      "publishedAt": "2026-05-08T18:37:12.375Z"
+      "publishedAt": "2026-11-10T22:15:54.320Z"
     },
     "mute-stream": {
       "version": "4.0.0",
@@ -330,12 +330,12 @@
       "publishedAt": "2026-05-15T18:47:46.211Z"
     },
     "npm-packlist": {
-      "version": "11.3.0",
+      "version": "11.3.1",
       "repository": {
         "url": "git+https://github.com/npm/npm-packlist.git",
         "type": "git"
       },
-      "publishedAt": "2026-06-22T16:11:01.977Z"
+      "publishedAt": "2026-11-11T18:45:55.160Z"
     },
     "npm-pick-manifest": {
       "version": "12.0.0",
@@ -941,16 +941,16 @@
       "packageMajor": 21,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "21.0.1",
-      "branchCommit": "6e8eb4d7e82694149c34fbb0fbe5441628fc1703",
+      "branchCurrentVersion": "21.0.2",
+      "branchCommit": "12f2d6e48e9e344ca90fbcd2d3ce8c4b8b1b40eb",
       "manifestPath": "package.json",
       "published": {
-        "version": "21.0.1",
+        "version": "21.0.2",
         "repository": {
           "url": "git+https://github.com/npm/cacache.git",
           "type": "git"
         },
-        "publishedAt": "2026-06-09T23:52:33.813Z"
+        "publishedAt": "2026-11-11T18:49:12.116Z"
       },
       "integrated": {
         "10": [],
@@ -962,7 +962,7 @@
             "locations": [
               "node_modules/cacache"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -1059,7 +1059,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.4",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/arborist/package.json",
       "published": {
         "version": "10.0.4",
@@ -1099,7 +1099,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "9.9.3",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/arborist/package.json",
       "published": {
         "version": "9.9.3",
@@ -1179,7 +1179,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "11.2.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/config/package.json",
       "published": {
         "version": "11.2.0",
@@ -1219,7 +1219,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "10.14.0",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/config/package.json",
       "published": {
         "version": "10.14.0",
@@ -1299,7 +1299,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "11.0.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmaccess/package.json",
       "published": {
         "version": "11.0.0",
@@ -1339,7 +1339,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.3",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmaccess/package.json",
       "published": {
         "version": "10.0.3",
@@ -1419,7 +1419,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.4",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmdiff/package.json",
       "published": {
         "version": "9.0.4",
@@ -1459,7 +1459,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.1.14",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmdiff/package.json",
       "published": {
         "version": "8.1.14",
@@ -1539,7 +1539,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "11.0.5",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmexec/package.json",
       "published": {
         "version": "11.0.5",
@@ -1579,7 +1579,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "10.3.5",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmexec/package.json",
       "published": {
         "version": "10.3.5",
@@ -1659,7 +1659,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.4",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmfund/package.json",
       "published": {
         "version": "8.0.4",
@@ -1699,7 +1699,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "7.0.28",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmfund/package.json",
       "published": {
         "version": "7.0.28",
@@ -1819,7 +1819,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmorg/package.json",
       "published": {
         "version": "9.0.0",
@@ -1859,7 +1859,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.1",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmorg/package.json",
       "published": {
         "version": "8.0.1",
@@ -1939,7 +1939,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.4",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmpack/package.json",
       "published": {
         "version": "10.0.4",
@@ -1979,7 +1979,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "9.1.15",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmpack/package.json",
       "published": {
         "version": "9.1.15",
@@ -2059,7 +2059,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "12.0.1",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmpublish/package.json",
       "published": {
         "version": "12.0.1",
@@ -2099,7 +2099,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "11.2.1",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmpublish/package.json",
       "published": {
         "version": "11.2.1",
@@ -2179,7 +2179,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmsearch/package.json",
       "published": {
         "version": "10.0.0",
@@ -2219,7 +2219,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.1",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmsearch/package.json",
       "published": {
         "version": "9.0.1",
@@ -2299,7 +2299,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmteam/package.json",
       "published": {
         "version": "9.0.0",
@@ -2339,7 +2339,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.2",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmteam/package.json",
       "published": {
         "version": "8.0.2",
@@ -2419,7 +2419,7 @@
       "branch": "latest",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.0",
-      "branchCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "branchCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "manifestPath": "workspaces/libnpmversion/package.json",
       "published": {
         "version": "9.0.0",
@@ -2459,7 +2459,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.4",
-      "branchCommit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
+      "branchCommit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
       "manifestPath": "workspaces/libnpmversion/package.json",
       "published": {
         "version": "8.0.4",
@@ -4075,16 +4075,16 @@
       "packageMajor": 6,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "6.0.0",
-      "branchCommit": "44787148c7c913b25ca305a2e5853991d4bc13d0",
+      "branchCurrentVersion": "6.0.1",
+      "branchCommit": "c96b4dc5fc84bca32452628d1f43bed1dd31e236",
       "manifestPath": "package.json",
       "published": {
-        "version": "6.0.0",
+        "version": "6.0.1",
         "repository": {
           "url": "git+https://github.com/npm/minipass-fetch.git",
           "type": "git"
         },
-        "publishedAt": "2026-05-08T18:37:12.375Z"
+        "publishedAt": "2026-11-10T22:15:54.320Z"
       },
       "integrated": {
         "10": [],
@@ -4096,7 +4096,7 @@
             "locations": [
               "node_modules/minipass-fetch"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -5662,16 +5662,16 @@
       "packageMajor": 11,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "11.3.0",
-      "branchCommit": "d1eed617b1ff1eedf5909efec7867aee385d0350",
+      "branchCurrentVersion": "11.3.1",
+      "branchCommit": "e54d72b90e719af6f1c37143c7e91470cb9c4e2a",
       "manifestPath": "package.json",
       "published": {
-        "version": "11.3.0",
+        "version": "11.3.1",
         "repository": {
           "url": "git+https://github.com/npm/npm-packlist.git",
           "type": "git"
         },
-        "publishedAt": "2026-06-22T16:11:01.977Z"
+        "publishedAt": "2026-11-11T18:45:55.160Z"
       },
       "integrated": {
         "10": [],
@@ -5683,7 +5683,7 @@
             "locations": [
               "node_modules/npm-packlist"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -6247,16 +6247,16 @@
       "packageMajor": 8,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "8.0.0",
-      "branchCommit": "a7dafdbdee34c96c672862fadde9ae5b594c938e",
+      "branchCurrentVersion": "8.0.1",
+      "branchCommit": "c75aaa877a5e41195a7d910ae599787bd1436372",
       "manifestPath": "package.json",
       "published": {
-        "version": "8.0.0",
+        "version": "8.0.1",
         "repository": {
           "url": "git+https://github.com/npm/package-json.git",
           "type": "git"
         },
-        "publishedAt": "2026-05-22T16:41:16.114Z"
+        "publishedAt": "2026-11-11T18:44:42.048Z"
       },
       "integrated": {
         "10": [],
@@ -6268,7 +6268,7 @@
             "locations": [
               "node_modules/@npmcli/package-json"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -7299,12 +7299,12 @@
         "11": [],
         "12": [
           {
-            "version": "7.0.0",
+            "version": "7.0.1",
             "production": true,
             "locations": [
               "node_modules/bin-links/node_modules/read-cmd-shim"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ]
       },
@@ -7312,7 +7312,7 @@
         "10": [],
         "11": [],
         "12": [
-          "npm@12.2.2 -> bin-links@7.0.1 -> read-cmd-shim@7.0.0"
+          "npm@12.2.2 -> bin-links@7.0.1 -> read-cmd-shim@7.0.1"
         ]
       }
     },
@@ -7557,7 +7557,7 @@
       "branch": "main",
       "requiredBranch": null,
       "branchCurrentVersion": "11.0.0",
-      "branchCommit": "01fa56fd885ab653454007f9dee6ee254f19b925",
+      "branchCommit": "23859172567b4959eda359f353e3ba9818b8a6c1",
       "manifestPath": "package.json",
       "published": {
         "version": "11.0.0",
@@ -8469,8 +8469,8 @@
     {
       "repository": "npm/cacache",
       "defaultBranch": "main",
-      "defaultVersion": "21.0.1",
-      "defaultCommit": "6e8eb4d7e82694149c34fbb0fbe5441628fc1703",
+      "defaultVersion": "21.0.2",
+      "defaultCommit": "12f2d6e48e9e344ca90fbcd2d3ce8c4b8b1b40eb",
       "packages": [
         "cacache"
       ],
@@ -8536,7 +8536,7 @@
                 "locations": [
                   "node_modules/cacache"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -8547,7 +8547,7 @@
       "repository": "npm/cli",
       "defaultBranch": "latest",
       "defaultVersion": "12.2.2",
-      "defaultCommit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
+      "defaultCommit": "8f92e740ee1547568779284005454ce2f1a5e58b",
       "packages": [
         "@npmcli/arborist",
         "@npmcli/config",
@@ -10211,8 +10211,8 @@
     {
       "repository": "npm/minipass-fetch",
       "defaultBranch": "main",
-      "defaultVersion": "6.0.0",
-      "defaultCommit": "44787148c7c913b25ca305a2e5853991d4bc13d0",
+      "defaultVersion": "6.0.1",
+      "defaultCommit": "c96b4dc5fc84bca32452628d1f43bed1dd31e236",
       "packages": [
         "minipass-fetch"
       ],
@@ -10278,7 +10278,7 @@
                 "locations": [
                   "node_modules/minipass-fetch"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -11316,8 +11316,8 @@
     {
       "repository": "npm/npm-packlist",
       "defaultBranch": "main",
-      "defaultVersion": "11.3.0",
-      "defaultCommit": "d1eed617b1ff1eedf5909efec7867aee385d0350",
+      "defaultVersion": "11.3.1",
+      "defaultCommit": "e54d72b90e719af6f1c37143c7e91470cb9c4e2a",
       "packages": [
         "npm-packlist"
       ],
@@ -11383,7 +11383,7 @@
                 "locations": [
                   "node_modules/npm-packlist"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -11697,8 +11697,8 @@
     {
       "repository": "npm/package-json",
       "defaultBranch": "main",
-      "defaultVersion": "8.0.0",
-      "defaultCommit": "a7dafdbdee34c96c672862fadde9ae5b594c938e",
+      "defaultVersion": "8.0.1",
+      "defaultCommit": "c75aaa877a5e41195a7d910ae599787bd1436372",
       "packages": [
         "@npmcli/package-json"
       ],
@@ -11764,7 +11764,7 @@
                 "locations": [
                   "node_modules/@npmcli/package-json"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -12446,12 +12446,12 @@
             "branch": "main",
             "versions": [
               {
-                "version": "7.0.0",
+                "version": "7.0.1",
                 "production": true,
                 "locations": [
                   "node_modules/bin-links/node_modules/read-cmd-shim"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           }
@@ -12577,7 +12577,7 @@
       "repository": "npm/run-script",
       "defaultBranch": "main",
       "defaultVersion": "11.0.0",
-      "defaultCommit": "01fa56fd885ab653454007f9dee6ee254f19b925",
+      "defaultCommit": "23859172567b4959eda359f353e3ba9818b8a6c1",
       "packages": [
         "@npmcli/run-script"
       ],
@@ -13086,9 +13086,9 @@
     "packageBranchRows": 189,
     "requiredExistingRepositoryBranches": 61,
     "missingPackageMajorLines": 94,
-    "integrationCellsBehindPublished": 7
+    "integrationCellsBehindPublished": 10
   },
-  "analyzedAt": "2026-11-10T01:46:35.735Z",
+  "analyzedAt": "2026-11-13T23:34:16.058Z",
   "scope": {
     "excludeTemplateOssOnlyTransitives": true,
     "excludedTraversalPackage": "@npmcli/template-oss",
@@ -13126,7 +13126,7 @@
   },
   "checks": {
     "status": "complete",
-    "checkedAt": "2026-11-10T01:46:35.735Z",
+    "checkedAt": "2026-11-13T23:34:16.058Z",
     "branches": {
       "npm/abbrev-js:main": {
         "repository": "npm/abbrev-js",
@@ -13218,7 +13218,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/agent:main": {
         "repository": "npm/agent",
@@ -13310,7 +13310,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/agent:release/v4": {
         "repository": "npm/agent",
@@ -13402,7 +13402,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/bin-links:main": {
         "repository": "npm/bin-links",
@@ -13494,7 +13494,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/bin-links:release/v6": {
         "repository": "npm/bin-links",
@@ -13586,7 +13586,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/bin-links:release/v5": {
         "repository": "npm/bin-links",
@@ -13678,108 +13678,16 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/cacache:main": {
         "repository": "npm/cacache",
         "branch": "main",
-        "commit": "6e8eb4d7e82694149c34fbb0fbe5441628fc1703",
+        "commit": "12f2d6e48e9e344ca90fbcd2d3ce8c4b8b1b40eb",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
             "totalCount": 21,
-            "checkRunCountsByState": [
-              {
-                "state": "ACTION_REQUIRED",
-                "count": 0
-              },
-              {
-                "state": "CANCELLED",
-                "count": 0
-              },
-              {
-                "state": "COMPLETED",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 0
-              },
-              {
-                "state": "IN_PROGRESS",
-                "count": 0
-              },
-              {
-                "state": "NEUTRAL",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "QUEUED",
-                "count": 0
-              },
-              {
-                "state": "SKIPPED",
-                "count": 6
-              },
-              {
-                "state": "STALE",
-                "count": 0
-              },
-              {
-                "state": "STARTUP_FAILURE",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
-                "count": 15
-              },
-              {
-                "state": "TIMED_OUT",
-                "count": 0
-              },
-              {
-                "state": "WAITING",
-                "count": 0
-              }
-            ],
-            "statusContextCountsByState": [
-              {
-                "state": "EXPECTED",
-                "count": 0
-              },
-              {
-                "state": "ERROR",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
-                "count": 0
-              }
-            ]
-          }
-        },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
-      },
-      "npm/cli:latest": {
-        "repository": "npm/cli",
-        "branch": "latest",
-        "commit": "be1b7bc870d822437c5ae5a2b9b6356cf0ff069c",
-        "rollup": {
-          "state": "SUCCESS",
-          "contexts": {
-            "totalCount": 57,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -13827,98 +13735,6 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 54
-              },
-              {
-                "state": "TIMED_OUT",
-                "count": 0
-              },
-              {
-                "state": "WAITING",
-                "count": 0
-              }
-            ],
-            "statusContextCountsByState": [
-              {
-                "state": "EXPECTED",
-                "count": 0
-              },
-              {
-                "state": "ERROR",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
-                "count": 0
-              }
-            ]
-          }
-        },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
-      },
-      "npm/cli:release/v11": {
-        "repository": "npm/cli",
-        "branch": "release/v11",
-        "commit": "fa3737d0427c2f12ba6313326217bd27f473d94b",
-        "rollup": {
-          "state": "FAILURE",
-          "contexts": {
-            "totalCount": 25,
-            "checkRunCountsByState": [
-              {
-                "state": "ACTION_REQUIRED",
-                "count": 0
-              },
-              {
-                "state": "CANCELLED",
-                "count": 0
-              },
-              {
-                "state": "COMPLETED",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 1
-              },
-              {
-                "state": "IN_PROGRESS",
-                "count": 0
-              },
-              {
-                "state": "NEUTRAL",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "QUEUED",
-                "count": 0
-              },
-              {
-                "state": "SKIPPED",
-                "count": 6
-              },
-              {
-                "state": "STALE",
-                "count": 0
-              },
-              {
-                "state": "STARTUP_FAILURE",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
                 "count": 18
               },
               {
@@ -13954,7 +13770,191 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
+      },
+      "npm/cli:latest": {
+        "repository": "npm/cli",
+        "branch": "latest",
+        "commit": "8f92e740ee1547568779284005454ce2f1a5e58b",
+        "rollup": {
+          "state": "SUCCESS",
+          "contexts": {
+            "totalCount": 61,
+            "checkRunCountsByState": [
+              {
+                "state": "ACTION_REQUIRED",
+                "count": 0
+              },
+              {
+                "state": "CANCELLED",
+                "count": 0
+              },
+              {
+                "state": "COMPLETED",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "IN_PROGRESS",
+                "count": 0
+              },
+              {
+                "state": "NEUTRAL",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "QUEUED",
+                "count": 0
+              },
+              {
+                "state": "SKIPPED",
+                "count": 3
+              },
+              {
+                "state": "STALE",
+                "count": 0
+              },
+              {
+                "state": "STARTUP_FAILURE",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 58
+              },
+              {
+                "state": "TIMED_OUT",
+                "count": 0
+              },
+              {
+                "state": "WAITING",
+                "count": 0
+              }
+            ],
+            "statusContextCountsByState": [
+              {
+                "state": "EXPECTED",
+                "count": 0
+              },
+              {
+                "state": "ERROR",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 0
+              }
+            ]
+          }
+        },
+        "checkedAt": "2026-11-13T23:34:16.058Z"
+      },
+      "npm/cli:release/v11": {
+        "repository": "npm/cli",
+        "branch": "release/v11",
+        "commit": "aa678d1d231b0b89cd656ce962e9b31b33bef577",
+        "rollup": {
+          "state": "SUCCESS",
+          "contexts": {
+            "totalCount": 89,
+            "checkRunCountsByState": [
+              {
+                "state": "ACTION_REQUIRED",
+                "count": 0
+              },
+              {
+                "state": "CANCELLED",
+                "count": 0
+              },
+              {
+                "state": "COMPLETED",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "IN_PROGRESS",
+                "count": 0
+              },
+              {
+                "state": "NEUTRAL",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "QUEUED",
+                "count": 0
+              },
+              {
+                "state": "SKIPPED",
+                "count": 4
+              },
+              {
+                "state": "STALE",
+                "count": 0
+              },
+              {
+                "state": "STARTUP_FAILURE",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 85
+              },
+              {
+                "state": "TIMED_OUT",
+                "count": 0
+              },
+              {
+                "state": "WAITING",
+                "count": 0
+              }
+            ],
+            "statusContextCountsByState": [
+              {
+                "state": "EXPECTED",
+                "count": 0
+              },
+              {
+                "state": "ERROR",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 0
+              }
+            ]
+          }
+        },
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/cli:release/v10": {
         "repository": "npm/cli",
@@ -14046,7 +14046,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/cmd-shim:main": {
         "repository": "npm/cmd-shim",
@@ -14138,7 +14138,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/eslint-config:main": {
         "repository": "npm/eslint-config",
@@ -14230,7 +14230,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/fs:main": {
         "repository": "npm/fs",
@@ -14322,7 +14322,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/git:main": {
         "repository": "npm/git",
@@ -14414,7 +14414,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/hosted-git-info:main": {
         "repository": "npm/hosted-git-info",
@@ -14506,7 +14506,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/ignore-walk:main": {
         "repository": "npm/ignore-walk",
@@ -14598,7 +14598,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/ini:main": {
         "repository": "npm/ini",
@@ -14690,7 +14690,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/init-package-json:main": {
         "repository": "npm/init-package-json",
@@ -14782,7 +14782,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/installed-package-contents:main": {
         "repository": "npm/installed-package-contents",
@@ -14874,7 +14874,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/json-parse-even-better-errors:main": {
         "repository": "npm/json-parse-even-better-errors",
@@ -14966,7 +14966,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/make-fetch-happen:main": {
         "repository": "npm/make-fetch-happen",
@@ -15058,7 +15058,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/make-fetch-happen:release/v15": {
         "repository": "npm/make-fetch-happen",
@@ -15150,7 +15150,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/map-workspaces:main": {
         "repository": "npm/map-workspaces",
@@ -15159,7 +15159,7 @@
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 72,
+            "totalCount": 74,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -15207,7 +15207,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 66
+                "count": 68
               },
               {
                 "state": "TIMED_OUT",
@@ -15242,7 +15242,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/metavuln-calculator:main": {
         "repository": "npm/metavuln-calculator",
@@ -15334,7 +15334,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/minify-registry-metadata:main": {
         "repository": "npm/minify-registry-metadata",
@@ -15426,16 +15426,16 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/minipass-fetch:main": {
         "repository": "npm/minipass-fetch",
         "branch": "main",
-        "commit": "44787148c7c913b25ca305a2e5853991d4bc13d0",
+        "commit": "c96b4dc5fc84bca32452628d1f43bed1dd31e236",
         "rollup": {
-          "state": "FAILURE",
+          "state": "SUCCESS",
           "contexts": {
-            "totalCount": 69,
+            "totalCount": 27,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -15451,7 +15451,7 @@
               },
               {
                 "state": "FAILURE",
-                "count": 1
+                "count": 0
               },
               {
                 "state": "IN_PROGRESS",
@@ -15471,7 +15471,7 @@
               },
               {
                 "state": "SKIPPED",
-                "count": 6
+                "count": 3
               },
               {
                 "state": "STALE",
@@ -15483,7 +15483,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 62
+                "count": 24
               },
               {
                 "state": "TIMED_OUT",
@@ -15518,7 +15518,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/mute-stream:main": {
         "repository": "npm/mute-stream",
@@ -15610,7 +15610,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/name-from-folder:main": {
         "repository": "npm/name-from-folder",
@@ -15702,7 +15702,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/node-gyp:main": {
         "repository": "npm/node-gyp",
@@ -15794,7 +15794,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/node-semver:main": {
         "repository": "npm/node-semver",
@@ -15886,7 +15886,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/node-semver:release/v6": {
         "repository": "npm/node-semver",
@@ -15978,7 +15978,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/node-which:main": {
         "repository": "npm/node-which",
@@ -16070,7 +16070,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/nopt:main": {
         "repository": "npm/nopt",
@@ -16162,7 +16162,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/normalize-package-data:main": {
         "repository": "npm/normalize-package-data",
@@ -16254,7 +16254,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-audit-report:main": {
         "repository": "npm/npm-audit-report",
@@ -16346,7 +16346,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-bundled:main": {
         "repository": "npm/npm-bundled",
@@ -16438,7 +16438,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-install-checks:main": {
         "repository": "npm/npm-install-checks",
@@ -16530,7 +16530,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-normalize-package-bin:main": {
         "repository": "npm/npm-normalize-package-bin",
@@ -16622,7 +16622,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-package-arg:main": {
         "repository": "npm/npm-package-arg",
@@ -16714,12 +16714,12 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-packlist:main": {
         "repository": "npm/npm-packlist",
         "branch": "main",
-        "commit": "d1eed617b1ff1eedf5909efec7867aee385d0350",
+        "commit": "e54d72b90e719af6f1c37143c7e91470cb9c4e2a",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
@@ -16806,7 +16806,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-pick-manifest:main": {
         "repository": "npm/npm-pick-manifest",
@@ -16815,7 +16815,7 @@
         "rollup": {
           "state": "FAILURE",
           "contexts": {
-            "totalCount": 71,
+            "totalCount": 73,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -16863,7 +16863,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 64
+                "count": 66
               },
               {
                 "state": "TIMED_OUT",
@@ -16898,7 +16898,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-profile:main": {
         "repository": "npm/npm-profile",
@@ -16990,7 +16990,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-profile:release/v12": {
         "repository": "npm/npm-profile",
@@ -17082,7 +17082,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-registry-fetch:main": {
         "repository": "npm/npm-registry-fetch",
@@ -17174,7 +17174,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/npm-user-validate:main": {
         "repository": "npm/npm-user-validate",
@@ -17266,12 +17266,12 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/package-json:main": {
         "repository": "npm/package-json",
         "branch": "main",
-        "commit": "a7dafdbdee34c96c672862fadde9ae5b594c938e",
+        "commit": "c75aaa877a5e41195a7d910ae599787bd1436372",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
@@ -17311,7 +17311,7 @@
               },
               {
                 "state": "SKIPPED",
-                "count": 6
+                "count": 3
               },
               {
                 "state": "STALE",
@@ -17323,7 +17323,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 21
+                "count": 24
               },
               {
                 "state": "TIMED_OUT",
@@ -17358,7 +17358,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/pacote:main": {
         "repository": "npm/pacote",
@@ -17450,7 +17450,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/pacote:release/v21": {
         "repository": "npm/pacote",
@@ -17542,7 +17542,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/pacote:release/v20": {
         "repository": "npm/pacote",
@@ -17634,7 +17634,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/pacote:release/v19": {
         "repository": "npm/pacote",
@@ -17726,7 +17726,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/parse-conflict-json:main": {
         "repository": "npm/parse-conflict-json",
@@ -17735,7 +17735,7 @@
         "rollup": {
           "state": "FAILURE",
           "contexts": {
-            "totalCount": 69,
+            "totalCount": 71,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -17783,7 +17783,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 62
+                "count": 64
               },
               {
                 "state": "TIMED_OUT",
@@ -17818,7 +17818,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/proc-log:main": {
         "repository": "npm/proc-log",
@@ -17910,7 +17910,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/proggy:main": {
         "repository": "npm/proggy",
@@ -18002,7 +18002,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/promise-spawn:main": {
         "repository": "npm/promise-spawn",
@@ -18094,7 +18094,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/promise-spawn:release/v9": {
         "repository": "npm/promise-spawn",
@@ -18186,7 +18186,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/promise-spawn:release/v8": {
         "repository": "npm/promise-spawn",
@@ -18278,7 +18278,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/promzard:main": {
         "repository": "npm/promzard",
@@ -18287,7 +18287,7 @@
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 68,
+            "totalCount": 70,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -18335,7 +18335,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 62
+                "count": 64
               },
               {
                 "state": "TIMED_OUT",
@@ -18370,7 +18370,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/query:main": {
         "repository": "npm/query",
@@ -18462,7 +18462,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/read:main": {
         "repository": "npm/read",
@@ -18554,7 +18554,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/read-cmd-shim:main": {
         "repository": "npm/read-cmd-shim",
@@ -18646,7 +18646,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/read-package-json-fast:main": {
         "repository": "npm/read-package-json-fast",
@@ -18738,7 +18738,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/redact:main": {
         "repository": "npm/redact",
@@ -18830,16 +18830,16 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/run-script:main": {
         "repository": "npm/run-script",
         "branch": "main",
-        "commit": "01fa56fd885ab653454007f9dee6ee254f19b925",
+        "commit": "23859172567b4959eda359f353e3ba9818b8a6c1",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 68,
+            "totalCount": 47,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -18875,7 +18875,7 @@
               },
               {
                 "state": "SKIPPED",
-                "count": 6
+                "count": 3
               },
               {
                 "state": "STALE",
@@ -18887,7 +18887,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 62
+                "count": 44
               },
               {
                 "state": "TIMED_OUT",
@@ -18922,7 +18922,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/ssri:main": {
         "repository": "npm/ssri",
@@ -19014,7 +19014,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/template-oss:main": {
         "repository": "npm/template-oss",
@@ -19106,7 +19106,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/unique-filename:main": {
         "repository": "npm/unique-filename",
@@ -19198,7 +19198,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/unique-slug:main": {
         "repository": "npm/unique-slug",
@@ -19290,7 +19290,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/validate-npm-package-name:main": {
         "repository": "npm/validate-npm-package-name",
@@ -19382,7 +19382,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       },
       "npm/write-file-atomic:main": {
         "repository": "npm/write-file-atomic",
@@ -19474,7 +19474,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-10T01:46:35.735Z"
+        "checkedAt": "2026-11-13T23:34:16.058Z"
       }
     }
   }

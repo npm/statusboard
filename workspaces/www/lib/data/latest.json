@@ -45717,7 +45717,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 737,
+      "count": 738,
       "url": "https://github.com/npm/documentation/stargazers"
     },
     "pkgPrivate": true,
@@ -324733,7 +324733,7 @@
       "conclusion": "failure"
     },
     "stars": {
-      "count": 161,
+      "count": 162,
       "url": "https://github.com/npm/npm-registry-fetch/stargazers"
     },
     "pkgPrivate": false,
@@ -458466,13 +458466,13 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/run-script",
     "lastPush": {
-      "date": "2026-06-18T15:50:06Z",
-      "url": "https://github.com/npm/run-script/commit/01fa56fd885ab653454007f9dee6ee254f19b925"
+      "date": "2026-11-13T20:13:15Z",
+      "url": "https://github.com/npm/run-script/commit/23859172567b4959eda359f353e3ba9818b8a6c1"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/run-script/actions/runs/42584196526/job/129049952998",
-      "conclusion": "failure"
+      "url": "https://github.com/npm/run-script/actions",
+      "conclusion": "success"
     },
     "stars": {
       "count": 60,
@@ -461092,7 +461092,10 @@
     "prs": {
       "count": 4,
       "url": "https://github.com/npm/run-script/pulls?q=is%3Aopen",
-      "release": null,
+      "release": {
+        "url": "https://github.com/npm/run-script/pull/285",
+        "version": "11.0.1"
+      },
       "history": [
         0,
         1,
@@ -471518,10 +471521,10 @@
       ]
     },
     "issues": {
-      "count": 45,
+      "count": 46,
       "url": "https://github.com/npm/node-semver/issues?q=is%3Aopen",
       "unlabeled": {
-        "count": 11,
+        "count": 12,
         "url": "https://github.com/npm/node-semver/issues?q=is%3Aopen+no%3Alabel",
         "history": [
           19,
@@ -472816,7 +472819,7 @@
           10,
           11,
           11,
-          11
+          12
         ]
       },
       "priority": {
@@ -476710,7 +476713,7 @@
         44,
         45,
         45,
-        45
+        46
       ]
     }
   },
@@ -494974,12 +494977,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2026-11-12T12:32:29Z",
-      "url": "https://github.com/npm/statusboard/commit/dc15df330f4c8e06912d7ac4ae4759903054fb7d"
+      "date": "2026-11-13T22:56:34Z",
+      "url": "https://github.com/npm/statusboard/commit/799b058f91c3024a6e1d9d998f70746d41c942f7"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/43422707349/job/131876369981",
+      "url": "https://github.com/npm/statusboard/actions/runs/43524723156/job/132227525400",
       "conclusion": "failure"
     },
     "stars": {
@@ -497598,7 +497601,7 @@
       ]
     },
     "prs": {
-      "count": 5,
+      "count": 4,
       "url": "https://github.com/npm/statusboard/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -498894,7 +498897,7 @@
         5,
         5,
         5,
-        5
+        4
       ]
     },
     "issues": {
