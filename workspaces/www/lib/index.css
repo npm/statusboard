@@ -74,6 +74,16 @@ header a span {
   align-self: center;
 }
 
+.page-nav {
+  display: flex;
+  gap: 14px;
+  margin: 8px 0;
+}
+
+.page-nav [aria-current="page"] {
+  font-weight: bold;
+}
+
 /*
  * ===================
  * Cell Data

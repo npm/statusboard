@@ -4,6 +4,16 @@
 
 A single view to help monitor the status/health of the [`@npm/cli`](https://github.com/orgs/npm/teams/cli) teams's Open Source Projects.
 
+### CLI dependencies
+
+The separate [CLI deps page](https://npm.github.io/statusboard/cli-deps.html) shows npm-owned dependency repositories required by the configured CLI lines. Select a CLI line and **Not latest in line** to find integrations missing the newest stable release in a required major; **Latest overall not integrated** also compares across majors. Expand a repository for exact package versions, published releases, branch HEADs, checks, and dependency paths.
+
+The collector derives runtime and dev-only requirements from pinned CLI lockfiles and workspace manifests, including testing/linting dependencies. It retains template-oss itself but excludes transitives reachable only through it. Branches are discovered and matched by package manifests, not maintained in a dependency-branch list. **Potential gaps** are missing branch mappings, not confirmed support violations or upgrade recommendations.
+
+CLI inputs and the template-oss scope rule are configured in [`cli-deps-policy.js`](./workspaces/data/lib/cli-deps-policy.js). Generated data lives in [`cli-deps.json`](./workspaces/www/lib/data/cli-deps.json), independently of project-health data. Collection failures retain the previous dataset and record an error in the shared metadata file; the page displays the last success and failed/stale refreshes.
+
+Refresh locally with `npm run fetch:cli-deps -w data` using `AUTH_TOKEN`, or use the existing `gh workflow run fetch-data.yml` trigger. The daily/manual data workflow refreshes both datasets. PRs build both pages into the Pages artifact; the existing main-branch publish workflow deploys them after merge.
+
 ### Data
 
 #### Adding a project

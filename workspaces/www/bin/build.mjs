@@ -44,6 +44,7 @@ const plugins = {
   html: (build) => {
     build.onEnd(() => {
       copy('index.html')
+      copy('cli-deps.html')
     })
   },
 }
@@ -52,6 +53,8 @@ const config = {
   entryPoints: [
     join(libDir, 'index.css'),
     join(libDir, 'index.js'),
+    join(libDir, 'cli-deps.css'),
+    join(libDir, 'cli-deps.js'),
   ],
   outdir: buildDir,
   loader: {

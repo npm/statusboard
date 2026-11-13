@@ -14,6 +14,7 @@ module.exports = {
   dir,
   dailyDir,
   latest: path.join(dir, 'latest.json'),
+  cliDeps: path.join(dir, 'cli-deps.json'),
   maintained: path.join(dir, 'maintained.json'),
   metadata: path.join(dir, 'metadata.json'),
   daily: (d) => path.join(dailyDir, getDate(d)),

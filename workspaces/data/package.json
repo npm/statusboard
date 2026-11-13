@@ -8,6 +8,7 @@
   },
   "scripts": {
     "fetch:data": "node ./bin/fetch-data.js",
+    "fetch:cli-deps": "node ./bin/fetch-cli-deps.js",
     "fetch:maintained": " node ./bin/fetch-maintained.js",
     "test": "node --test './test/**/*.js'",
     "lint": "npm run eslint",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/npm/statusboard#readme",
   "dependencies": {
+    "@npmcli/arborist": "^10.0.4",
     "@octokit/core": "^7.0.8",
     "@octokit/graphql": "^9.0.1",
     "@octokit/plugin-retry": "^8.1.1",

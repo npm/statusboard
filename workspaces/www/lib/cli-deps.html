@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLI deps | npm statusboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cli-deps.css">
+</head>
+<body class="cli-deps-page">
+  <div class="container-fluid cli-deps-content">
+    <header>
+      <h2><a href="./"><span aria-hidden="true">&#10084;</span> <strong>npm</strong> project statusboard</a></h2>
+      <div id="built" aria-label="Collection metadata">
+        <span class="metadata-badge badge-dark" id="build-badge">Build: loading</span>
+        <span class="metadata-badge badge-warning" id="data-badge">Data: loading</span>
+        <span class="metadata-badge badge-warning" id="collection-badge">Checks: not collected</span>
+      </div>
+    </header>
+    <nav class="page-nav" aria-label="Statusboard pages">
+      <a href="./">Projects</a><a href="cli-deps.html" aria-current="page">CLI deps</a>
+    </nav>
+    <main>
+      <div class="intro">
+        <h1>CLI deps</h1>
+        <p class="subtitle">Dependency repository branches needed by the configured CLI lines.</p>
+      </div>
+      <div class="snapshot" id="freshness" role="status">Loading collection metadata...</div>
+      <div class="overview"><div id="totals" class="totals" aria-label="Snapshot totals"></div></div>
+      <p class="checks-provenance" id="checks-provenance" role="note"></p>
+      <details class="scope" id="scope">
+        <summary>Source commits, scope, and interpretation</summary>
+        <div class="scope-content">
+          <p>Inputs are pinned CLI lockfiles and workspace manifests, including runtime and development dependencies, direct and transitive, and workspace testing/linting requirements.</p>
+          <ul class="inputs" id="inputs"></ul>
+          <p>Template-oss itself stays in scope. Transitives reachable only through template-oss are excluded; dependencies with another path are retained. Repository ownership is canonical, not inferred from package names.</p>
+          <p>Existing branches match actual package names and majors in branch manifests. <strong>Potential gaps</strong> lists required branch names without a matching maintenance branch. Upgrades or other release practices may address a requirement instead.</p>
+          <p id="provenance"></p>
+          <p id="ownership-note"></p>
+          <p>CI badges summarize GitHub check runs and commit statuses for the exact pinned commit, collected separately from the dependency snapshot. They are not a branch-protection or release-readiness assessment.</p>
+          <p>Version indicators check whether the highest stable published version in each required package major is integrated. The newest configured CLI line also checks the highest stable published version across all majors, including majors the CLI has not yet integrated. These use registry evidence collected by CI, not branch HEADs or browser-side registry lookups.</p>
+          <p>A checkmark means the published version is present at least once; older copies can still be required. Monorepo indicators cover every package in the grouped branch. Missing versions do not establish upgrade compatibility.</p>
+          <p>Version filters use only the selected CLI line, or match any CLI when all lines are selected. Not latest in line includes mixed copies of a package major. Unavailable publication data is not classified as current or outdated.</p>
+        </div>
+      </details>
+      <p id="error" role="alert" hidden></p>
+      <noscript><p>Enable JavaScript to load the collected CLI dependency data.</p></noscript>
+      <div class="toolbar" aria-label="Repository filters">
+        <div class="control search-control">
+          <label for="search">Filter repositories</label>
+          <input id="search" type="search" placeholder="Repository, package, version, or branch" autocomplete="off">
+        </div>
+        <div class="control">
+          <label for="cli-filter">CLI line</label>
+          <select id="cli-filter"><option value="">All CLI lines</option></select>
+        </div>
+        <div class="control">
+          <label for="version-filter">Version status</label>
+          <select id="version-filter">
+            <option value="">All versions</option>
+            <option value="line">Not latest in line</option>
+            <option value="overall">Latest overall not integrated</option>
+          </select>
+        </div>
+        <label class="checkbox"><input type="checkbox" id="gaps-only"> With potential gaps only</label>
+        <button type="button" class="reset" id="reset">Reset</button>
+        <span class="results" id="results" role="status" aria-live="polite"></span>
+      </div>
+      <p class="filter-note" id="version-filter-note" role="note" hidden></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="CLI dependency repository table, scroll horizontally on smaller screens">
+        <table class="repo-table">
+          <caption>CLI columns show required lines and whether their latest stable release is integrated. The newest configured CLI line also checks latest stable overall. Use + for exact versions and dependency paths.</caption>
+          <thead><tr id="column-headings"></tr></thead>
+          <tbody id="repository-rows"></tbody>
+        </table>
+      </div>
+      <div class="legend">
+        <span><span class="line">vN</span> <code>(branch)</code> required line</span>
+        <span><span class="line dev">vN</span> dev-only</span>
+        <span><span class="required-branch">release/vN</span> required branch not found</span>
+        <span>Unmarked usage is runtime; only dev-only usage is labeled.</span>
+        <span>CI badges link to checks for the pinned commit.</span>
+        <span><span class="version-integrated">&#10003; Latest</span> integrated; <span class="version-missing">&#8593; version missing</span> not integrated in the collected CLI inputs.</span>
+      </div>
+    </main>
+    <footer>
+      <p><strong>Potential gaps are not confirmed support violations.</strong> Missing branches do not mean published packages are unsupported.</p>
+      <p>Generated data refreshes with the daily/manual data workflow. Source commits and collection times are pinned; opening this page does not scan GitHub or the registry. Read-only data, not an assertion of official npm support policy.</p>
+    </footer>
+  </div>
+  <script type="module" src="cli-deps.js"></script>
+</body>
+</html>
