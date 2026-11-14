@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-13T23:29:20.046Z",
+  "checkedAt": "2026-11-14T12:28:30.029Z",
   "cli": [
     {
       "major": 12,
@@ -13088,7 +13088,7 @@
     "missingPackageMajorLines": 94,
     "integrationCellsBehindPublished": 10
   },
-  "analyzedAt": "2026-11-13T23:34:16.058Z",
+  "analyzedAt": "2026-11-14T12:33:22.767Z",
   "scope": {
     "excludeTemplateOssOnlyTransitives": true,
     "excludedTraversalPackage": "@npmcli/template-oss",
@@ -13126,7 +13126,7 @@
   },
   "checks": {
     "status": "complete",
-    "checkedAt": "2026-11-13T23:34:16.058Z",
+    "checkedAt": "2026-11-14T12:33:22.767Z",
     "branches": {
       "npm/abbrev-js:main": {
         "repository": "npm/abbrev-js",
@@ -13218,7 +13218,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/agent:main": {
         "repository": "npm/agent",
@@ -13310,7 +13310,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/agent:release/v4": {
         "repository": "npm/agent",
@@ -13402,7 +13402,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/bin-links:main": {
         "repository": "npm/bin-links",
@@ -13494,7 +13494,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/bin-links:release/v6": {
         "repository": "npm/bin-links",
@@ -13586,7 +13586,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/bin-links:release/v5": {
         "repository": "npm/bin-links",
@@ -13678,7 +13678,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/cacache:main": {
         "repository": "npm/cacache",
@@ -13770,7 +13770,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/cli:latest": {
         "repository": "npm/cli",
@@ -13862,7 +13862,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/cli:release/v11": {
         "repository": "npm/cli",
@@ -13954,7 +13954,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/cli:release/v10": {
         "repository": "npm/cli",
@@ -14046,7 +14046,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/cmd-shim:main": {
         "repository": "npm/cmd-shim",
@@ -14138,7 +14138,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/eslint-config:main": {
         "repository": "npm/eslint-config",
@@ -14230,7 +14230,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/fs:main": {
         "repository": "npm/fs",
@@ -14322,7 +14322,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/git:main": {
         "repository": "npm/git",
@@ -14414,7 +14414,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/hosted-git-info:main": {
         "repository": "npm/hosted-git-info",
@@ -14506,7 +14506,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/ignore-walk:main": {
         "repository": "npm/ignore-walk",
@@ -14598,7 +14598,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/ini:main": {
         "repository": "npm/ini",
@@ -14690,7 +14690,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/init-package-json:main": {
         "repository": "npm/init-package-json",
@@ -14782,7 +14782,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/installed-package-contents:main": {
         "repository": "npm/installed-package-contents",
@@ -14874,7 +14874,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/json-parse-even-better-errors:main": {
         "repository": "npm/json-parse-even-better-errors",
@@ -14966,7 +14966,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/make-fetch-happen:main": {
         "repository": "npm/make-fetch-happen",
@@ -15058,7 +15058,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/make-fetch-happen:release/v15": {
         "repository": "npm/make-fetch-happen",
@@ -15150,7 +15150,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/map-workspaces:main": {
         "repository": "npm/map-workspaces",
@@ -15242,7 +15242,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/metavuln-calculator:main": {
         "repository": "npm/metavuln-calculator",
@@ -15334,7 +15334,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/minify-registry-metadata:main": {
         "repository": "npm/minify-registry-metadata",
@@ -15426,7 +15426,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/minipass-fetch:main": {
         "repository": "npm/minipass-fetch",
@@ -15518,7 +15518,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/mute-stream:main": {
         "repository": "npm/mute-stream",
@@ -15610,7 +15610,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/name-from-folder:main": {
         "repository": "npm/name-from-folder",
@@ -15702,7 +15702,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/node-gyp:main": {
         "repository": "npm/node-gyp",
@@ -15794,7 +15794,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/node-semver:main": {
         "repository": "npm/node-semver",
@@ -15886,7 +15886,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/node-semver:release/v6": {
         "repository": "npm/node-semver",
@@ -15978,7 +15978,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/node-which:main": {
         "repository": "npm/node-which",
@@ -16070,7 +16070,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/nopt:main": {
         "repository": "npm/nopt",
@@ -16162,7 +16162,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/normalize-package-data:main": {
         "repository": "npm/normalize-package-data",
@@ -16254,7 +16254,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-audit-report:main": {
         "repository": "npm/npm-audit-report",
@@ -16346,7 +16346,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-bundled:main": {
         "repository": "npm/npm-bundled",
@@ -16438,7 +16438,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-install-checks:main": {
         "repository": "npm/npm-install-checks",
@@ -16530,7 +16530,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-normalize-package-bin:main": {
         "repository": "npm/npm-normalize-package-bin",
@@ -16622,7 +16622,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-package-arg:main": {
         "repository": "npm/npm-package-arg",
@@ -16714,7 +16714,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-packlist:main": {
         "repository": "npm/npm-packlist",
@@ -16806,7 +16806,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-pick-manifest:main": {
         "repository": "npm/npm-pick-manifest",
@@ -16898,7 +16898,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-profile:main": {
         "repository": "npm/npm-profile",
@@ -16990,7 +16990,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-profile:release/v12": {
         "repository": "npm/npm-profile",
@@ -17082,7 +17082,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-registry-fetch:main": {
         "repository": "npm/npm-registry-fetch",
@@ -17174,7 +17174,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/npm-user-validate:main": {
         "repository": "npm/npm-user-validate",
@@ -17266,7 +17266,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/package-json:main": {
         "repository": "npm/package-json",
@@ -17358,7 +17358,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/pacote:main": {
         "repository": "npm/pacote",
@@ -17450,7 +17450,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/pacote:release/v21": {
         "repository": "npm/pacote",
@@ -17542,7 +17542,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/pacote:release/v20": {
         "repository": "npm/pacote",
@@ -17634,7 +17634,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/pacote:release/v19": {
         "repository": "npm/pacote",
@@ -17726,7 +17726,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/parse-conflict-json:main": {
         "repository": "npm/parse-conflict-json",
@@ -17818,7 +17818,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/proc-log:main": {
         "repository": "npm/proc-log",
@@ -17910,7 +17910,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/proggy:main": {
         "repository": "npm/proggy",
@@ -18002,7 +18002,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/promise-spawn:main": {
         "repository": "npm/promise-spawn",
@@ -18094,7 +18094,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/promise-spawn:release/v9": {
         "repository": "npm/promise-spawn",
@@ -18186,7 +18186,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/promise-spawn:release/v8": {
         "repository": "npm/promise-spawn",
@@ -18278,7 +18278,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/promzard:main": {
         "repository": "npm/promzard",
@@ -18370,7 +18370,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/query:main": {
         "repository": "npm/query",
@@ -18462,7 +18462,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/read:main": {
         "repository": "npm/read",
@@ -18554,7 +18554,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/read-cmd-shim:main": {
         "repository": "npm/read-cmd-shim",
@@ -18646,7 +18646,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/read-package-json-fast:main": {
         "repository": "npm/read-package-json-fast",
@@ -18738,7 +18738,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/redact:main": {
         "repository": "npm/redact",
@@ -18830,7 +18830,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/run-script:main": {
         "repository": "npm/run-script",
@@ -18922,7 +18922,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/ssri:main": {
         "repository": "npm/ssri",
@@ -19014,7 +19014,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/template-oss:main": {
         "repository": "npm/template-oss",
@@ -19106,7 +19106,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/unique-filename:main": {
         "repository": "npm/unique-filename",
@@ -19198,7 +19198,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/unique-slug:main": {
         "repository": "npm/unique-slug",
@@ -19290,7 +19290,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/validate-npm-package-name:main": {
         "repository": "npm/validate-npm-package-name",
@@ -19382,7 +19382,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       },
       "npm/write-file-atomic:main": {
         "repository": "npm/write-file-atomic",
@@ -19474,7 +19474,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-13T23:34:16.058Z"
+        "checkedAt": "2026-11-14T12:33:22.767Z"
       }
     }
   }
