@@ -31,7 +31,7 @@
     "size": 5221,
     "pkgUrl": "https://www.npmjs.com/package/abbrev",
     "deprecated": false,
-    "downloads": 392213356,
+    "downloads": 410447488,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/abbrev-js/discussions?discussions_q=",
@@ -1336,6 +1336,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -1344,6 +1345,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -3942,6 +3944,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -5249,6 +5252,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -5256,6 +5260,7 @@
         "count": 0,
         "url": "https://github.com/npm/abbrev-js/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -7857,6 +7862,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -9158,6 +9164,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -9194,7 +9201,7 @@
     "size": 19985,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/agent",
     "deprecated": false,
-    "downloads": 103682259,
+    "downloads": 108602719,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/agent/discussions?discussions_q=",
@@ -10499,6 +10506,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -10507,6 +10515,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -13105,6 +13114,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -14412,6 +14422,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -14419,6 +14430,7 @@
         "count": 0,
         "url": "https://github.com/npm/agent/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -17020,6 +17032,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -18321,6 +18334,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -18338,7 +18352,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -18354,7 +18368,7 @@
     "size": 603639,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/arborist",
     "deprecated": false,
-    "downloads": 36859596,
+    "downloads": 38590253,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -18391,7 +18405,7 @@
     "size": 19893,
     "pkgUrl": "https://www.npmjs.com/package/bin-links",
     "deprecated": false,
-    "downloads": 43867592,
+    "downloads": 45905317,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/bin-links/discussions?discussions_q=",
@@ -19695,6 +19709,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -19703,6 +19718,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -22299,6 +22315,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -23605,6 +23622,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -23612,6 +23630,7 @@
         "count": 0,
         "url": "https://github.com/npm/bin-links/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -26211,6 +26230,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -27511,6 +27531,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -27547,7 +27568,7 @@
     "size": 64916,
     "pkgUrl": "https://www.npmjs.com/package/cacache",
     "deprecated": false,
-    "downloads": 183596536,
+    "downloads": 191997199,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/cacache/discussions?discussions_q=",
@@ -28852,6 +28873,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -28860,6 +28882,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -31458,6 +31481,7 @@
         6,
         6,
         6,
+        6,
         6
       ]
     },
@@ -32765,6 +32789,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -32772,6 +32797,7 @@
         "count": 0,
         "url": "https://github.com/npm/cacache/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -35373,6 +35399,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -36674,6 +36701,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -36710,7 +36738,7 @@
     "size": 13440,
     "pkgUrl": "https://www.npmjs.com/package/cmd-shim",
     "deprecated": false,
-    "downloads": 46834965,
+    "downloads": 48996801,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/cmd-shim/discussions?discussions_q=",
@@ -38015,6 +38043,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -38023,6 +38052,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -40621,6 +40651,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -41928,6 +41959,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -42078,6 +42110,7 @@
           0,
           0,
           0,
+          1,
           1,
           1,
           1,
@@ -44536,6 +44569,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -45837,6 +45871,7 @@
         9,
         9,
         9,
+        9,
         9
       ]
     }
@@ -45854,7 +45889,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -45870,7 +45905,7 @@
     "size": 167235,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/config",
     "deprecated": false,
-    "downloads": 11535963,
+    "downloads": 12128674,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -45883,8 +45918,8 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/documentation",
     "lastPush": {
-      "date": "2026-11-18T00:37:02Z",
-      "url": "https://github.com/npm/documentation/commit/b58b983187b7d522b0e4188679ff6d7eb2dcc6b2"
+      "date": "2026-11-19T02:22:19Z",
+      "url": "https://github.com/npm/documentation/commit/507a73e810674390ba4ee4ae612f5c0280fa7246"
     },
     "archived": false,
     "status": {
@@ -45892,7 +45927,7 @@
       "conclusion": "success"
     },
     "stars": {
-      "count": 738,
+      "count": 739,
       "url": "https://github.com/npm/documentation/stargazers"
     },
     "pkgPrivate": true,
@@ -45919,6 +45954,7 @@
           null,
           null,
           null,
+          0,
           0,
           0,
           0,
@@ -48511,11 +48547,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 36,
+      "count": 38,
       "url": "https://github.com/npm/documentation/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -49815,7 +49852,8 @@
         36,
         36,
         36,
-        36
+        36,
+        38
       ]
     },
     "issues": {
@@ -51121,6 +51159,7 @@
           56,
           56,
           56,
+          56,
           56
         ]
       },
@@ -51128,6 +51167,7 @@
         "count": 0,
         "url": "https://github.com/npm/documentation/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -53727,6 +53767,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -55027,6 +55068,7 @@
         72,
         72,
         72,
+        72,
         72
       ]
     }
@@ -55063,7 +55105,7 @@
     "size": 11877,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/eslint-config",
     "deprecated": false,
-    "downloads": 31813,
+    "downloads": 33954,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/eslint-config/discussions?discussions_q=",
@@ -56366,6 +56408,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -56374,6 +56417,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -58968,6 +59012,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -60273,6 +60318,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -60280,6 +60326,7 @@
         "count": 0,
         "url": "https://github.com/npm/eslint-config/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -62877,6 +62924,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -64176,6 +64224,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -64212,7 +64261,7 @@
     "size": 26606,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/fs",
     "deprecated": false,
-    "downloads": 160920329,
+    "downloads": 168341888,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/fs/discussions?discussions_q=",
@@ -65516,6 +65565,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -65524,6 +65574,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -68120,6 +68171,7 @@
         2,
         3,
         3,
+        3,
         3
       ]
     },
@@ -69426,6 +69478,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -69433,6 +69486,7 @@
         "count": 0,
         "url": "https://github.com/npm/fs/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -72032,6 +72086,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -73332,6 +73387,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -73368,7 +73424,7 @@
     "size": 22961,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/git",
     "deprecated": false,
-    "downloads": 78054214,
+    "downloads": 81710923,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/git/discussions?discussions_q=",
@@ -74673,6 +74729,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -74681,6 +74738,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -77279,6 +77337,7 @@
         3,
         3,
         4,
+        4,
         4
       ]
     },
@@ -78586,6 +78645,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -78593,6 +78653,7 @@
         "count": 0,
         "url": "https://github.com/npm/git/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -81194,6 +81255,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -82495,6 +82557,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -82531,7 +82594,7 @@
     "size": 28402,
     "pkgUrl": "https://www.npmjs.com/package/hosted-git-info",
     "deprecated": false,
-    "downloads": 547714988,
+    "downloads": 572959958,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/hosted-git-info/discussions?discussions_q=",
@@ -83836,6 +83899,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -83844,6 +83908,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -86445,6 +86510,7 @@
         6,
         8,
         8,
+        8,
         8
       ]
     },
@@ -87752,6 +87818,7 @@
           1,
           3,
           3,
+          3,
           3
         ]
       },
@@ -87759,6 +87826,7 @@
         "count": 0,
         "url": "https://github.com/npm/hosted-git-info/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -90360,6 +90428,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -91661,6 +91730,7 @@
         3,
         5,
         5,
+        5,
         5
       ]
     }
@@ -91697,7 +91767,7 @@
     "size": 13249,
     "pkgUrl": "https://www.npmjs.com/package/ignore-walk",
     "deprecated": false,
-    "downloads": 83036387,
+    "downloads": 86867266,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/ignore-walk/discussions?discussions_q=",
@@ -93001,6 +93071,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -93009,6 +93080,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -95605,6 +95677,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -96911,6 +96984,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -96918,6 +96992,7 @@
         "count": 0,
         "url": "https://github.com/npm/ignore-walk/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -99517,6 +99592,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -100817,6 +100893,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -100853,7 +100930,7 @@
     "size": 12140,
     "pkgUrl": "https://www.npmjs.com/package/ini",
     "deprecated": false,
-    "downloads": 892782627,
+    "downloads": 933302146,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/ini/discussions?discussions_q=",
@@ -102158,6 +102235,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -102166,6 +102244,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -104764,6 +104843,7 @@
         16,
         16,
         16,
+        16,
         16
       ]
     },
@@ -106071,6 +106151,7 @@
           12,
           12,
           12,
+          12,
           12
         ]
       },
@@ -106078,6 +106159,7 @@
         "count": 0,
         "url": "https://github.com/npm/ini/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -108679,6 +108761,7 @@
           4,
           4,
           5,
+          5,
           5
         ]
       },
@@ -109980,6 +110063,7 @@
         16,
         16,
         17,
+        17,
         17
       ]
     }
@@ -110016,7 +110100,7 @@
     "size": 14431,
     "pkgUrl": "https://www.npmjs.com/package/init-package-json",
     "deprecated": false,
-    "downloads": 10895785,
+    "downloads": 11402753,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/init-package-json/discussions?discussions_q=",
@@ -111321,6 +111405,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -111329,6 +111414,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -113927,6 +114013,7 @@
         3,
         3,
         3,
+        2,
         2
       ]
     },
@@ -115234,6 +115321,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -115241,6 +115329,7 @@
         "count": 0,
         "url": "https://github.com/npm/init-package-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -117842,6 +117931,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -119143,6 +119233,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -119179,7 +119270,7 @@
     "size": 12361,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/installed-package-contents",
     "deprecated": false,
-    "downloads": 62337078,
+    "downloads": 65228319,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/installed-package-contents/discussions?discussions_q=",
@@ -120484,6 +120575,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -120492,6 +120584,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -123090,6 +123183,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -124397,6 +124491,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -124404,6 +124499,7 @@
         "count": 0,
         "url": "https://github.com/npm/installed-package-contents/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -127005,6 +127101,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -128306,6 +128403,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -128342,7 +128440,7 @@
     "size": 10230,
     "pkgUrl": "https://www.npmjs.com/package/json-parse-even-better-errors",
     "deprecated": false,
-    "downloads": 610975777,
+    "downloads": 639591095,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/json-parse-even-better-errors/discussions?discussions_q=",
@@ -129646,6 +129744,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -129653,6 +129752,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -132250,6 +132350,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -133556,6 +133657,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -133563,6 +133665,7 @@
         "count": 0,
         "url": "https://github.com/npm/json-parse-even-better-errors/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -136162,6 +136265,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -137462,6 +137566,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -137495,7 +137600,7 @@
     "size": 8616,
     "pkgUrl": "https://www.npmjs.com/package/libnpmaccess",
     "deprecated": false,
-    "downloads": 10026864,
+    "downloads": 10509831,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -137513,7 +137618,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -137529,7 +137634,7 @@
     "size": 15175,
     "pkgUrl": "https://www.npmjs.com/package/libnpmdiff",
     "deprecated": false,
-    "downloads": 2942013,
+    "downloads": 3089205,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -137547,7 +137652,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -137563,7 +137668,7 @@
     "size": 28820,
     "pkgUrl": "https://www.npmjs.com/package/libnpmexec",
     "deprecated": false,
-    "downloads": 2942880,
+    "downloads": 3090017,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -137581,7 +137686,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -137597,7 +137702,7 @@
     "size": 11134,
     "pkgUrl": "https://www.npmjs.com/package/libnpmfund",
     "deprecated": false,
-    "downloads": 2941012,
+    "downloads": 3088335,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -137634,7 +137739,7 @@
     "size": 11169,
     "pkgUrl": "https://www.npmjs.com/package/libnpmhook",
     "deprecated": false,
-    "downloads": 1852234,
+    "downloads": 1933956,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/libnpmhook/discussions?discussions_q=",
@@ -138337,10 +138442,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -139044,6 +139151,7 @@
       "url": "https://github.com/npm/libnpmhook/pulls?q=is%3Aopen",
       "release": null,
       "history": [
+        0,
         0,
         0,
         0,
@@ -140444,6 +140552,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -140451,6 +140560,7 @@
         "count": 0,
         "url": "https://github.com/npm/libnpmhook/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -141848,10 +141958,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -142580,7 +142692,7 @@
     "size": 8122,
     "pkgUrl": "https://www.npmjs.com/package/libnpmorg",
     "deprecated": false,
-    "downloads": 3212080,
+    "downloads": 3368100,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142598,7 +142710,7 @@
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
+      "url": "https://github.com/npm/cli/actions/runs/44342658177/job/134936554004",
       "conclusion": "failure"
     },
     "stars": null,
@@ -142614,7 +142726,7 @@
     "size": 8192,
     "pkgUrl": "https://www.npmjs.com/package/libnpmpack",
     "deprecated": false,
-    "downloads": 2996867,
+    "downloads": 3145656,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142648,7 +142760,7 @@
     "size": 29156,
     "pkgUrl": "https://www.npmjs.com/package/libnpmpublish",
     "deprecated": false,
-    "downloads": 10582617,
+    "downloads": 11096339,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142682,7 +142794,7 @@
     "size": 8937,
     "pkgUrl": "https://www.npmjs.com/package/libnpmsearch",
     "deprecated": false,
-    "downloads": 3260333,
+    "downloads": 3417939,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142716,7 +142828,7 @@
     "size": 8756,
     "pkgUrl": "https://www.npmjs.com/package/libnpmteam",
     "deprecated": false,
-    "downloads": 3211822,
+    "downloads": 3367858,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142750,7 +142862,7 @@
     "size": 15211,
     "pkgUrl": "https://www.npmjs.com/package/libnpmversion",
     "deprecated": false,
-    "downloads": 2910831,
+    "downloads": 3055135,
     "discussions": null,
     "prs": null,
     "issues": null
@@ -142787,7 +142899,7 @@
     "size": 53177,
     "pkgUrl": "https://www.npmjs.com/package/make-fetch-happen",
     "deprecated": false,
-    "downloads": 153716903,
+    "downloads": 160781641,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/make-fetch-happen/discussions?discussions_q=",
@@ -144092,6 +144204,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -144100,6 +144213,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -146698,6 +146812,7 @@
         7,
         7,
         7,
+        8,
         8
       ]
     },
@@ -148005,6 +148120,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -148012,6 +148128,7 @@
         "count": 0,
         "url": "https://github.com/npm/make-fetch-happen/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -150613,6 +150730,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -151914,6 +152032,7 @@
         10,
         10,
         10,
+        10,
         10
       ]
     }
@@ -151950,7 +152069,7 @@
     "size": 10977,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/map-workspaces",
     "deprecated": false,
-    "downloads": 42527947,
+    "downloads": 44552631,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/map-workspaces/discussions?discussions_q=",
@@ -153254,6 +153373,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -153262,6 +153382,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -155858,6 +155979,7 @@
         2,
         3,
         3,
+        2,
         2
       ]
     },
@@ -157164,6 +157286,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -157171,6 +157294,7 @@
         "count": 0,
         "url": "https://github.com/npm/map-workspaces/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -159770,6 +159894,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -161070,6 +161195,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -161106,7 +161232,7 @@
     "size": 30321,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/metavuln-calculator",
     "deprecated": false,
-    "downloads": 34807595,
+    "downloads": 36454142,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/metavuln-calculator/discussions?discussions_q=",
@@ -162410,6 +162536,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -162418,6 +162545,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -165014,6 +165142,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -166320,6 +166449,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -166327,6 +166457,7 @@
         "count": 0,
         "url": "https://github.com/npm/metavuln-calculator/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -168926,6 +169057,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -170226,6 +170358,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -170262,7 +170395,7 @@
     "size": 4961,
     "pkgUrl": "https://www.npmjs.com/package/minify-registry-metadata",
     "deprecated": false,
-    "downloads": 7536,
+    "downloads": 7756,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/minify-registry-metadata/discussions?discussions_q=",
@@ -171565,6 +171698,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -171572,6 +171706,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -174167,6 +174302,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -175472,6 +175608,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -175479,6 +175616,7 @@
         "count": 0,
         "url": "https://github.com/npm/minify-registry-metadata/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -178076,6 +178214,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -179375,6 +179514,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -179411,7 +179551,7 @@
     "size": 47868,
     "pkgUrl": "https://www.npmjs.com/package/minipass-fetch",
     "deprecated": false,
-    "downloads": 149265310,
+    "downloads": 156143161,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/minipass-fetch/discussions?discussions_q=",
@@ -180716,6 +180856,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -180724,6 +180865,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -183322,6 +183464,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -184629,6 +184772,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -184636,6 +184780,7 @@
         "count": 0,
         "url": "https://github.com/npm/minipass-fetch/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -187237,6 +187382,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -188538,6 +188684,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -188574,7 +188721,7 @@
     "size": 6678,
     "pkgUrl": "https://www.npmjs.com/package/mute-stream",
     "deprecated": false,
-    "downloads": 536636148,
+    "downloads": 562315263,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/mute-stream/discussions?discussions_q=",
@@ -189878,6 +190025,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -189886,6 +190034,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -192482,6 +192631,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -193788,6 +193938,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -193795,6 +193946,7 @@
         "count": 0,
         "url": "https://github.com/npm/mute-stream/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -196394,6 +196546,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -197694,6 +197847,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -197730,7 +197884,7 @@
     "size": 2711,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/name-from-folder",
     "deprecated": false,
-    "downloads": 44503019,
+    "downloads": 46606841,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/name-from-folder/discussions?discussions_q=",
@@ -199035,6 +199189,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -199043,6 +199198,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -201641,6 +201797,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -202948,6 +203105,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -202955,6 +203113,7 @@
         "count": 0,
         "url": "https://github.com/npm/name-from-folder/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -205556,6 +205715,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -206857,6 +207017,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -206893,7 +207054,7 @@
     "size": 2692,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/node-gyp",
     "deprecated": false,
-    "downloads": 63792563,
+    "downloads": 66754723,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/node-gyp/discussions?discussions_q=",
@@ -208198,6 +208359,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -208206,6 +208368,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -210804,6 +210967,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -212111,6 +212275,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -212118,6 +212283,7 @@
         "count": 0,
         "url": "https://github.com/npm/node-gyp/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -214719,6 +214885,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -216020,6 +216187,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -216056,7 +216224,7 @@
     "size": 26511,
     "pkgUrl": "https://www.npmjs.com/package/nopt",
     "deprecated": false,
-    "downloads": 421056772,
+    "downloads": 440561203,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/nopt/discussions?discussions_q=",
@@ -217361,6 +217529,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -217369,6 +217538,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -219967,6 +220137,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -221274,6 +221445,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -221281,6 +221453,7 @@
         "count": 0,
         "url": "https://github.com/npm/nopt/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -223882,6 +224055,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -225183,6 +225357,7 @@
         12,
         12,
         12,
+        12,
         12
       ]
     }
@@ -225219,7 +225394,7 @@
     "size": 28469,
     "pkgUrl": "https://www.npmjs.com/package/normalize-package-data",
     "deprecated": false,
-    "downloads": 320306287,
+    "downloads": 335137307,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/normalize-package-data/discussions?discussions_q=",
@@ -226524,6 +226699,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -226532,6 +226708,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -229130,6 +229307,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -230437,6 +230615,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -230444,6 +230623,7 @@
         "count": 0,
         "url": "https://github.com/npm/normalize-package-data/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -233045,6 +233225,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -234346,6 +234527,7 @@
         18,
         18,
         18,
+        18,
         18
       ]
     }
@@ -234358,16 +234540,16 @@
     "defaultBranch": "latest",
     "url": "https://github.com/npm/cli",
     "lastPush": {
-      "date": "2026-11-11T22:16:54Z",
-      "url": "https://github.com/npm/cli/commit/cfd03796843cc9ae26c7034ab99bae6c002a4ba4"
+      "date": "2026-11-18T21:57:21Z",
+      "url": "https://github.com/npm/cli/commit/787f1520fa412e91a5792468f1c7f25b166867a6"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/cli/actions/runs/44209228345/job/134536369174",
-      "conclusion": "failure"
+      "url": "https://github.com/npm/cli/actions",
+      "conclusion": "success"
     },
     "stars": {
-      "count": 10262,
+      "count": 10263,
       "url": "https://github.com/npm/cli/stargazers"
     },
     "pkgPrivate": false,
@@ -234382,7 +234564,7 @@
     "size": 12467986,
     "pkgUrl": "https://www.npmjs.com/package/npm",
     "deprecated": false,
-    "downloads": 95717180,
+    "downloads": 100020213,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/cli/discussions?discussions_q=",
@@ -235687,6 +235869,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -236988,11 +237171,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 235,
+      "count": 236,
       "url": "https://github.com/npm/cli/pulls?q=is%3Aopen",
       "release": {
         "url": "https://github.com/npm/cli/pull/10285",
@@ -238296,14 +238480,15 @@
         242,
         243,
         245,
-        235
+        235,
+        236
       ]
     },
     "issues": {
       "count": 613,
       "url": "https://github.com/npm/cli/issues?q=is%3Aopen",
       "unlabeled": {
-        "count": 47,
+        "count": 45,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+no%3Alabel",
         "history": [
           7,
@@ -239603,7 +239788,8 @@
           49,
           52,
           51,
-          47
+          47,
+          45
         ]
       },
       "priority": {
@@ -240907,11 +241093,12 @@
           17,
           17,
           18,
+          20,
           20
         ]
       },
       "triage": {
-        "count": 226,
+        "count": 227,
         "url": "https://github.com/npm/cli/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
           124,
@@ -242211,7 +242398,8 @@
           225,
           225,
           228,
-          226
+          226,
+          227
         ]
       },
       "history": [
@@ -243512,6 +243700,7 @@
         603,
         606,
         612,
+        613,
         613
       ]
     }
@@ -243548,7 +243737,7 @@
     "size": 11917,
     "pkgUrl": "https://www.npmjs.com/package/npm-audit-report",
     "deprecated": false,
-    "downloads": 3191249,
+    "downloads": 3345404,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-audit-report/discussions?discussions_q=",
@@ -244853,6 +245042,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -244861,6 +245051,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -247459,6 +247650,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -248766,6 +248958,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -248773,6 +248966,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-audit-report/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -251374,6 +251568,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -252675,6 +252870,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -252711,7 +252907,7 @@
     "size": 10264,
     "pkgUrl": "https://www.npmjs.com/package/npm-bundled",
     "deprecated": false,
-    "downloads": 80784073,
+    "downloads": 84471086,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-bundled/discussions?discussions_q=",
@@ -254016,6 +254212,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -254024,6 +254221,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -256622,6 +256820,7 @@
         1,
         2,
         2,
+        2,
         2
       ]
     },
@@ -257929,6 +258128,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -257936,6 +258136,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-bundled/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -260537,6 +260738,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -261838,6 +262040,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -261874,7 +262077,7 @@
     "size": 12123,
     "pkgUrl": "https://www.npmjs.com/package/npm-install-checks",
     "deprecated": false,
-    "downloads": 79928247,
+    "downloads": 83688829,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-install-checks/discussions?discussions_q=",
@@ -263179,6 +263382,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -263187,6 +263391,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -265785,6 +265990,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -265795,6 +266001,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-checks/issues?q=is%3Aopen+no%3Alabel",
         "history": [
+          0,
           0,
           0,
           0,
@@ -268396,6 +268603,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -268403,6 +268611,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-checks/issues?q=is%3Aopen+label%3A%22Needs+Triage%22",
         "history": [
+          0,
           0,
           0,
           0,
@@ -270273,6 +270482,7 @@
         1,
         1,
         1,
+        0,
         0,
         0,
         0,
@@ -272343,6 +272553,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -273645,6 +273856,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -273653,6 +273865,7 @@
       "url": "https://github.com/npm/npm-install-script/pulls?q=is%3Aopen",
       "release": null,
       "history": [
+        0,
         0,
         0,
         0,
@@ -276259,6 +276472,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -276266,6 +276480,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-install-script/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -278869,6 +279084,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -280171,6 +280387,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -280207,7 +280424,7 @@
     "size": 3886,
     "pkgUrl": "https://www.npmjs.com/package/npm-normalize-package-bin",
     "deprecated": false,
-    "downloads": 135527419,
+    "downloads": 141814436,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-normalize-package-bin/discussions?discussions_q=",
@@ -281512,6 +281729,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -281520,6 +281738,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -284118,6 +284337,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -285425,6 +285645,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -285432,6 +285653,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-normalize-package-bin/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -288033,6 +288255,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -289334,6 +289557,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -289370,7 +289594,7 @@
     "size": 21753,
     "pkgUrl": "https://www.npmjs.com/package/npm-package-arg",
     "deprecated": false,
-    "downloads": 188927234,
+    "downloads": 197720451,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-package-arg/discussions?discussions_q=",
@@ -290675,6 +290899,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -290683,6 +290908,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -293281,6 +293507,7 @@
         3,
         4,
         4,
+        4,
         4
       ]
     },
@@ -294588,6 +294815,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -294595,6 +294823,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-package-arg/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -297196,6 +297425,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -298497,6 +298727,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -298533,7 +298764,7 @@
     "size": 27137,
     "pkgUrl": "https://www.npmjs.com/package/npm-packlist",
     "deprecated": false,
-    "downloads": 79744403,
+    "downloads": 83394293,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-packlist/discussions?discussions_q=",
@@ -299838,6 +300069,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -299846,6 +300078,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -302444,6 +302677,7 @@
         7,
         7,
         7,
+        8,
         8
       ]
     },
@@ -303214,6 +303448,7 @@
           2,
           2,
           3,
+          2,
           2,
           2,
           2,
@@ -305055,6 +305290,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -305585,6 +305821,7 @@
           1,
           1,
           2,
+          1,
           1,
           1,
           1,
@@ -307660,6 +307897,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -307696,7 +307934,7 @@
     "size": 16714,
     "pkgUrl": "https://www.npmjs.com/package/npm-pick-manifest",
     "deprecated": false,
-    "downloads": 82509302,
+    "downloads": 86368905,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-pick-manifest/discussions?discussions_q=",
@@ -309000,6 +309238,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -309007,6 +309246,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -311604,6 +311844,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -312910,6 +313151,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -312917,6 +313159,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-pick-manifest/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -315516,6 +315759,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -316816,6 +317060,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -316852,7 +317097,7 @@
     "size": 24021,
     "pkgUrl": "https://www.npmjs.com/package/npm-profile",
     "deprecated": false,
-    "downloads": 3273160,
+    "downloads": 3431001,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-profile/discussions?discussions_q=",
@@ -318156,6 +318401,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -318164,6 +318410,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -320760,6 +321007,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -322066,6 +322314,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -322073,6 +322322,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-profile/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -324672,6 +324922,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -325972,6 +326223,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -326008,7 +326260,7 @@
     "size": 44541,
     "pkgUrl": "https://www.npmjs.com/package/npm-registry-fetch",
     "deprecated": false,
-    "downloads": 67419747,
+    "downloads": 70582014,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-registry-fetch/discussions?discussions_q=",
@@ -327313,6 +327565,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -327321,6 +327574,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -329919,6 +330173,7 @@
         2,
         3,
         3,
+        3,
         3
       ]
     },
@@ -331226,6 +331481,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -331233,6 +331489,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-registry-fetch/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -333834,6 +334091,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -335135,6 +335393,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -335171,7 +335430,7 @@
     "size": 4497,
     "pkgUrl": "https://www.npmjs.com/package/npm-user-validate",
     "deprecated": false,
-    "downloads": 3434002,
+    "downloads": 3599098,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/npm-user-validate/discussions?discussions_q=",
@@ -336476,6 +336735,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -336484,6 +336744,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -339082,6 +339343,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -340389,6 +340651,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -340396,6 +340659,7 @@
         "count": 0,
         "url": "https://github.com/npm/npm-user-validate/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -342997,6 +343261,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -344298,6 +344563,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -344334,7 +344600,7 @@
     "size": 54020,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/package-json",
     "deprecated": false,
-    "downloads": 71808620,
+    "downloads": 75219255,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/package-json/discussions?discussions_q=",
@@ -345639,6 +345905,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -345647,6 +345914,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -348245,6 +348513,7 @@
         3,
         4,
         4,
+        5,
         5
       ]
     },
@@ -349552,6 +349821,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -349559,6 +349829,7 @@
         "count": 0,
         "url": "https://github.com/npm/package-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -352160,6 +352431,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -353461,6 +353733,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -353497,7 +353770,7 @@
     "size": 82685,
     "pkgUrl": "https://www.npmjs.com/package/pacote",
     "deprecated": false,
-    "downloads": 65691865,
+    "downloads": 68713369,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/pacote/discussions?discussions_q=",
@@ -354802,6 +355075,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -354810,6 +355084,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -357408,6 +357683,7 @@
         12,
         12,
         13,
+        13,
         13
       ]
     },
@@ -358715,6 +358991,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -358722,6 +358999,7 @@
         "count": 0,
         "url": "https://github.com/npm/pacote/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -361323,6 +361601,7 @@
           8,
           8,
           8,
+          8,
           8
         ]
       },
@@ -362624,6 +362903,7 @@
         18,
         18,
         18,
+        18,
         18
       ]
     }
@@ -362660,7 +362940,7 @@
     "size": 6408,
     "pkgUrl": "https://www.npmjs.com/package/parse-conflict-json",
     "deprecated": false,
-    "downloads": 36584729,
+    "downloads": 38323284,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/parse-conflict-json/discussions?discussions_q=",
@@ -363965,6 +364245,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -363973,6 +364254,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -366571,6 +366853,7 @@
         4,
         5,
         5,
+        5,
         5
       ]
     },
@@ -367878,6 +368161,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -367885,6 +368169,7 @@
         "count": 0,
         "url": "https://github.com/npm/parse-conflict-json/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -370486,6 +370771,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -371787,6 +372073,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -371823,7 +372110,7 @@
     "size": 12583,
     "pkgUrl": "https://www.npmjs.com/package/proc-log",
     "deprecated": false,
-    "downloads": 339964586,
+    "downloads": 355756497,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/proc-log/discussions?discussions_q=",
@@ -373127,6 +373414,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -373135,6 +373423,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -375731,6 +376020,7 @@
         1,
         2,
         2,
+        2,
         2
       ]
     },
@@ -377037,6 +377327,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -377044,6 +377335,7 @@
         "count": 0,
         "url": "https://github.com/npm/proc-log/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -379643,6 +379935,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -380943,6 +381236,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -380979,7 +381273,7 @@
     "size": 13057,
     "pkgUrl": "https://www.npmjs.com/package/proggy",
     "deprecated": false,
-    "downloads": 30112114,
+    "downloads": 31596619,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/proggy/discussions?discussions_q=",
@@ -382284,6 +382578,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -382292,6 +382587,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -384890,6 +385186,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -386197,6 +386494,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -386204,6 +386502,7 @@
         "count": 0,
         "url": "https://github.com/npm/proggy/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -388805,6 +389104,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -390106,6 +390406,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -390142,7 +390443,7 @@
     "size": 12922,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/promise-spawn",
     "deprecated": false,
-    "downloads": 82052395,
+    "downloads": 85896576,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/promise-spawn/discussions?discussions_q=",
@@ -391447,6 +391748,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -391455,6 +391757,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -394053,6 +394356,7 @@
         6,
         7,
         7,
+        7,
         7
       ]
     },
@@ -395360,6 +395664,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -395367,6 +395672,7 @@
         "count": 0,
         "url": "https://github.com/npm/promise-spawn/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -397968,6 +398274,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -399269,6 +399576,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     }
@@ -399305,7 +399613,7 @@
     "size": 10970,
     "pkgUrl": "https://www.npmjs.com/package/promzard",
     "deprecated": false,
-    "downloads": 10758510,
+    "downloads": 11260086,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/promzard/discussions?discussions_q=",
@@ -400609,6 +400917,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -400617,6 +400926,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -403213,6 +403523,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -404519,6 +404830,7 @@
           4,
           4,
           4,
+          4,
           4
         ]
       },
@@ -404526,6 +404838,7 @@
         "count": 0,
         "url": "https://github.com/npm/promzard/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -407125,6 +407438,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -408425,6 +408739,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -408461,7 +408776,7 @@
     "size": 11035,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/query",
     "deprecated": false,
-    "downloads": 31718110,
+    "downloads": 33263343,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/query/discussions?discussions_q=",
@@ -409757,10 +410072,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -412345,6 +412662,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -413643,6 +413961,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -413650,6 +413969,7 @@
         "count": 0,
         "url": "https://github.com/npm/query/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -416233,6 +416553,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -417525,6 +417846,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     }
@@ -417561,7 +417883,7 @@
     "size": 25768,
     "pkgUrl": "https://www.npmjs.com/package/read",
     "deprecated": false,
-    "downloads": 30537377,
+    "downloads": 31899391,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/read/discussions?discussions_q=",
@@ -418866,6 +419188,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -418874,6 +419197,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -421472,6 +421796,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -422779,6 +423104,7 @@
           11,
           11,
           11,
+          11,
           11
         ]
       },
@@ -422786,6 +423112,7 @@
         "count": 0,
         "url": "https://github.com/npm/read/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -425387,6 +425714,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -426688,6 +427016,7 @@
         11,
         11,
         11,
+        11,
         11
       ]
     }
@@ -426724,7 +427053,7 @@
     "size": 5450,
     "pkgUrl": "https://www.npmjs.com/package/read-cmd-shim",
     "deprecated": false,
-    "downloads": 47211984,
+    "downloads": 49387317,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/read-cmd-shim/discussions?discussions_q=",
@@ -428029,6 +428358,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -428037,6 +428367,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -430635,6 +430966,7 @@
         2,
         3,
         3,
+        3,
         3
       ]
     },
@@ -431942,6 +432274,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -431949,6 +432282,7 @@
         "count": 0,
         "url": "https://github.com/npm/read-cmd-shim/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -434550,6 +434884,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -435851,6 +436186,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     }
@@ -435887,7 +436223,7 @@
     "size": 8695,
     "pkgUrl": "https://www.npmjs.com/package/read-package-json-fast",
     "deprecated": false,
-    "downloads": 39313317,
+    "downloads": 41146231,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/read-package-json-fast/discussions?discussions_q=",
@@ -437192,6 +437528,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -437200,6 +437537,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -439798,6 +440136,7 @@
         1,
         1,
         1,
+        1,
         1
       ]
     },
@@ -441105,6 +441444,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -441112,6 +441452,7 @@
         "count": 0,
         "url": "https://github.com/npm/read-package-json-fast/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -443713,6 +444054,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -445014,6 +445356,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -445050,7 +445393,7 @@
     "size": 16860,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/redact",
     "deprecated": false,
-    "downloads": 63673831,
+    "downloads": 66772958,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/redact/discussions?discussions_q=",
@@ -445912,10 +446255,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -447632,6 +447977,7 @@
         3,
         3,
         3,
+        3,
         3
       ]
     },
@@ -448496,6 +448842,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -448503,6 +448850,7 @@
         "count": 0,
         "url": "https://github.com/npm/redact/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -450218,6 +450566,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -450822,6 +451171,7 @@
         2,
         2,
         2,
+        3,
         3,
         3,
         3,
@@ -452417,6 +452767,7 @@
           22,
           22,
           22,
+          22,
           22
         ]
       },
@@ -453572,6 +453923,7 @@
         153,
         153,
         153,
+        154,
         154,
         154,
         154,
@@ -455023,14 +455375,15 @@
         50,
         50,
         50,
+        50,
         50
       ]
     },
     "issues": {
-      "count": 135,
+      "count": 132,
       "url": "https://github.com/npm/rfcs/issues?q=is%3Aopen",
       "unlabeled": {
-        "count": 131,
+        "count": 128,
         "url": "https://github.com/npm/rfcs/issues?q=is%3Aopen+no%3Alabel",
         "history": [
           78,
@@ -456330,13 +456683,15 @@
           128,
           128,
           131,
-          131
+          131,
+          128
         ]
       },
       "priority": {
         "count": 0,
         "url": "https://github.com/npm/rfcs/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -458938,6 +459293,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -460239,7 +460595,8 @@
         132,
         132,
         135,
-        135
+        135,
+        132
       ]
     }
   },
@@ -460275,7 +460632,7 @@
     "size": 18343,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/run-script",
     "deprecated": false,
-    "downloads": 64502866,
+    "downloads": 67503612,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/run-script/discussions?discussions_q=",
@@ -461580,6 +461937,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -461588,6 +461946,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -464186,6 +464545,7 @@
         4,
         5,
         5,
+        4,
         4
       ]
     },
@@ -465493,6 +465853,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -465500,6 +465861,7 @@
         "count": 0,
         "url": "https://github.com/npm/run-script/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -468101,6 +468463,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -469402,6 +469765,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -469438,7 +469802,7 @@
     "size": 118657,
     "pkgUrl": "https://www.npmjs.com/package/semver",
     "deprecated": false,
-    "downloads": 4670846098,
+    "downloads": 4884801292,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/node-semver/discussions?discussions_q=",
@@ -469450,6 +469814,7 @@
           null,
           null,
           null,
+          0,
           0,
           0,
           0,
@@ -472044,11 +472409,12 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
     "prs": {
-      "count": 40,
+      "count": 41,
       "url": "https://github.com/npm/node-semver/pulls?q=is%3Aopen",
       "release": null,
       "history": [
@@ -473349,7 +473715,8 @@
         39,
         40,
         40,
-        40
+        40,
+        41
       ]
     },
     "issues": {
@@ -474656,6 +475023,7 @@
           12,
           12,
           12,
+          12,
           12
         ]
       },
@@ -474913,6 +475281,7 @@
           1,
           1,
           1,
+          0,
           0,
           0,
           0,
@@ -477264,6 +477633,7 @@
           7,
           7,
           7,
+          7,
           7
         ]
       },
@@ -478565,6 +478935,7 @@
         46,
         46,
         46,
+        46,
         46
       ]
     }
@@ -478601,7 +478972,7 @@
     "size": 38519,
     "pkgUrl": "https://www.npmjs.com/package/ssri",
     "deprecated": false,
-    "downloads": 198681150,
+    "downloads": 207761113,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/ssri/discussions?discussions_q=",
@@ -479906,6 +480277,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -479914,6 +480286,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -482512,6 +482885,7 @@
         1,
         2,
         2,
+        2,
         2
       ]
     },
@@ -483819,6 +484193,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -483826,6 +484201,7 @@
         "count": 0,
         "url": "https://github.com/npm/ssri/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -486427,6 +486803,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -487478,6 +487855,7 @@
         2,
         2,
         2,
+        1,
         1,
         1,
         1,
@@ -489068,6 +489446,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -489076,6 +489455,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -491675,6 +492055,7 @@
         8,
         8,
         8,
+        8,
         8
       ]
     },
@@ -492981,6 +493362,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -492988,6 +493370,7 @@
         "count": 0,
         "url": "https://github.com/npm/stafftools/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -495587,6 +495970,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -496887,6 +497271,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -496899,12 +497284,12 @@
     "defaultBranch": "main",
     "url": "https://github.com/npm/statusboard",
     "lastPush": {
-      "date": "2026-11-17T12:37:30Z",
-      "url": "https://github.com/npm/statusboard/commit/3035d9f8fdf859895980502b036733a01a42a0d7"
+      "date": "2026-11-18T12:36:42Z",
+      "url": "https://github.com/npm/statusboard/commit/5e447ca3d9744bb3a7f2a93702c389ac5038a4d4"
     },
     "archived": false,
     "status": {
-      "url": "https://github.com/npm/statusboard/actions/runs/44301148529/job/134790894922",
+      "url": "https://github.com/npm/statusboard/actions/runs/44521176260/job/135549871359",
       "conclusion": "failure"
     },
     "stars": {
@@ -498228,6 +498613,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -498236,6 +498622,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -500834,6 +501221,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
@@ -502141,6 +502529,7 @@
           30,
           30,
           30,
+          30,
           30
         ]
       },
@@ -502148,6 +502537,7 @@
         "count": 0,
         "url": "https://github.com/npm/statusboard/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -504749,6 +505139,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -506050,6 +506441,7 @@
         67,
         67,
         67,
+        67,
         67
       ]
     }
@@ -506086,7 +506478,7 @@
     "size": 151875,
     "pkgUrl": "https://www.npmjs.com/package/@npmcli/template-oss",
     "deprecated": false,
-    "downloads": 34344,
+    "downloads": 36626,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/template-oss/discussions?discussions_q=",
@@ -507390,6 +507782,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -507398,6 +507791,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -509997,6 +510391,7 @@
         6,
         6,
         6,
+        6,
         6
       ]
     },
@@ -511303,6 +511698,7 @@
           5,
           5,
           5,
+          5,
           5
         ]
       },
@@ -511310,6 +511706,7 @@
         "count": 0,
         "url": "https://github.com/npm/template-oss/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -513909,6 +514306,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -515209,6 +515607,7 @@
         6,
         6,
         6,
+        6,
         6
       ]
     }
@@ -515245,7 +515644,7 @@
     "size": 9675,
     "pkgUrl": "https://www.npmjs.com/package/@npm/types",
     "deprecated": false,
-    "downloads": 1721718,
+    "downloads": 1815347,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/types/discussions?discussions_q=",
@@ -516249,10 +516648,12 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
       "history": [
+        0,
         0,
         0,
         0,
@@ -518253,6 +518654,7 @@
         10,
         10,
         10,
+        10,
         10
       ]
     },
@@ -519259,6 +519661,7 @@
           3,
           3,
           3,
+          3,
           3
         ]
       },
@@ -519266,6 +519669,7 @@
         "count": 0,
         "url": "https://github.com/npm/types/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -521265,6 +521669,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -522265,6 +522670,7 @@
         4,
         4,
         4,
+        4,
         4
       ]
     }
@@ -522301,7 +522707,7 @@
     "size": 3744,
     "pkgUrl": "https://www.npmjs.com/package/unique-filename",
     "deprecated": false,
-    "downloads": 120583579,
+    "downloads": 125963339,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/unique-filename/discussions?discussions_q=",
@@ -523606,6 +524012,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -523614,6 +524021,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -526212,6 +526620,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -527519,6 +527928,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -527526,6 +527936,7 @@
         "count": 0,
         "url": "https://github.com/npm/unique-filename/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -530127,6 +530538,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -531428,6 +531840,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -531464,7 +531877,7 @@
     "size": 2909,
     "pkgUrl": "https://www.npmjs.com/package/unique-slug",
     "deprecated": false,
-    "downloads": 120598003,
+    "downloads": 125982689,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/unique-slug/discussions?discussions_q=",
@@ -532769,6 +533182,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -532777,6 +533191,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -535375,6 +535790,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     },
@@ -536682,6 +537098,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -536689,6 +537106,7 @@
         "count": 0,
         "url": "https://github.com/npm/unique-slug/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -539290,6 +539708,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -540591,6 +541010,7 @@
         0,
         0,
         0,
+        0,
         0
       ]
     }
@@ -540627,7 +541047,7 @@
     "size": 9256,
     "pkgUrl": "https://www.npmjs.com/package/validate-npm-package-name",
     "deprecated": false,
-    "downloads": 287291429,
+    "downloads": 300801523,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/validate-npm-package-name/discussions?discussions_q=",
@@ -541932,6 +542352,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -541940,6 +542361,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -544538,6 +544960,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     },
@@ -545845,6 +546268,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -545852,6 +546276,7 @@
         "count": 0,
         "url": "https://github.com/npm/validate-npm-package-name/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -548453,6 +548878,7 @@
           1,
           1,
           1,
+          1,
           1
         ]
       },
@@ -549754,6 +550180,7 @@
         2,
         2,
         2,
+        2,
         2
       ]
     }
@@ -549790,7 +550217,7 @@
     "size": 7487,
     "pkgUrl": "https://www.npmjs.com/package/which",
     "deprecated": false,
-    "downloads": 1919200089,
+    "downloads": 2006506155,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/node-which/discussions?discussions_q=",
@@ -551095,6 +551522,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -551103,6 +551531,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -553701,6 +554130,7 @@
         2,
         3,
         3,
+        3,
         3
       ]
     },
@@ -555008,6 +555438,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -555015,6 +555446,7 @@
         "count": 0,
         "url": "https://github.com/npm/node-which/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -557616,6 +558048,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -558917,6 +559350,7 @@
         6,
         6,
         6,
+        6,
         6
       ]
     }
@@ -558953,7 +559387,7 @@
     "size": 12235,
     "pkgUrl": "https://www.npmjs.com/package/write-file-atomic",
     "deprecated": false,
-    "downloads": 552951827,
+    "downloads": 579088391,
     "discussions": {
       "count": 0,
       "url": "https://github.com/npm/write-file-atomic/discussions?discussions_q=",
@@ -560257,6 +560691,7 @@
           0,
           0,
           0,
+          0,
           0
         ]
       },
@@ -560265,6 +560700,7 @@
         null,
         null,
         null,
+        0,
         0,
         0,
         0,
@@ -562861,6 +563297,7 @@
         5,
         5,
         5,
+        5,
         5
       ]
     },
@@ -564167,6 +564604,7 @@
           9,
           9,
           9,
+          9,
           9
         ]
       },
@@ -564174,6 +564612,7 @@
         "count": 0,
         "url": "https://github.com/npm/write-file-atomic/issues?q=is%3Aopen+label%3A%22Priority+1%22%2C%22Priority+0",
         "history": [
+          0,
           0,
           0,
           0,
@@ -566773,6 +567212,7 @@
           2,
           2,
           2,
+          2,
           2
         ]
       },
@@ -568063,6 +568503,7 @@
         14,
         14,
         14,
+        15,
         15,
         15,
         15,
