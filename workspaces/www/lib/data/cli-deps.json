@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-19T12:31:10.060Z",
+  "checkedAt": "2026-11-20T12:31:07.113Z",
   "cli": [
     {
       "major": 12,
@@ -12,16 +12,16 @@
     {
       "major": 11,
       "branch": "release/v11",
-      "version": "11.21.2",
-      "commit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
-      "committedAt": "2026-11-17T21:37:26Z"
+      "version": "11.21.3",
+      "commit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
+      "committedAt": "2026-11-19T21:10:19Z"
     },
     {
       "major": 10,
       "branch": "release/v10",
-      "version": "10.9.10",
-      "commit": "8b380e08a3619b55438af168e74ba8cadda829d1",
-      "committedAt": "2026-11-17T21:04:13Z"
+      "version": "10.9.11",
+      "commit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
+      "committedAt": "2026-11-19T21:10:16Z"
     }
   ],
   "latestStableByPackage": {
@@ -657,7 +657,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> abbrev@4.0.0"
+          "npm@11.21.3 -> abbrev@4.0.0"
         ],
         "12": []
       }
@@ -695,7 +695,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> abbrev@3.0.1"
+          "npm@10.9.11 -> abbrev@3.0.1"
         ],
         "11": [],
         "12": []
@@ -774,7 +774,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> make-fetch-happen@15.0.6 -> @npmcli/agent@4.0.2"
+          "npm@11.21.3 -> make-fetch-happen@15.0.6 -> @npmcli/agent@4.0.2"
         ],
         "12": []
       }
@@ -812,7 +812,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> make-fetch-happen@14.0.3 -> @npmcli/agent@3.0.0"
+          "npm@10.9.11 -> make-fetch-happen@14.0.3 -> @npmcli/agent@3.0.0"
         ],
         "11": [],
         "12": []
@@ -891,7 +891,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> bin-links@6.0.3"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> bin-links@6.0.3"
         ],
         "12": []
       }
@@ -929,7 +929,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> bin-links@5.0.1"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> bin-links@5.0.1"
         ],
         "11": [],
         "12": []
@@ -1008,7 +1008,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> cacache@20.0.4"
+          "npm@11.21.3 -> cacache@20.0.4"
         ],
         "12": []
       }
@@ -1046,7 +1046,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> cacache@19.0.1"
+          "npm@10.9.11 -> cacache@19.0.1"
         ],
         "11": [],
         "12": []
@@ -1098,8 +1098,8 @@
       "packageMajor": 9,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "9.9.3",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "9.9.4",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/arborist/package.json",
       "published": {
         "version": "9.9.4",
@@ -1114,12 +1114,12 @@
         "10": [],
         "11": [
           {
-            "version": "9.9.3",
+            "version": "9.9.4",
             "production": true,
             "locations": [
               "workspaces/arborist"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -1127,7 +1127,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4"
         ],
         "12": []
       }
@@ -1138,8 +1138,8 @@
       "packageMajor": 8,
       "branch": "release/v10",
       "requiredBranch": null,
-      "branchCurrentVersion": "8.0.5",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCurrentVersion": "8.0.6",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/arborist/package.json",
       "published": {
         "version": "8.0.6",
@@ -1153,12 +1153,12 @@
       "integrated": {
         "10": [
           {
-            "version": "8.0.5",
+            "version": "8.0.6",
             "production": true,
             "locations": [
               "workspaces/arborist"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "11": [],
@@ -1166,7 +1166,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6"
         ],
         "11": [],
         "12": []
@@ -1218,8 +1218,8 @@
       "packageMajor": 10,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "10.14.0",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "10.14.1",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/config/package.json",
       "published": {
         "version": "10.14.1",
@@ -1234,12 +1234,12 @@
         "10": [],
         "11": [
           {
-            "version": "10.14.0",
+            "version": "10.14.1",
             "production": true,
             "locations": [
               "workspaces/config"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -1247,7 +1247,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/config@10.14.0"
+          "npm@11.21.3 -> @npmcli/config@10.14.1"
         ],
         "12": []
       }
@@ -1259,7 +1259,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/config/package.json",
       "published": {
         "version": "9.0.0",
@@ -1286,7 +1286,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/config@9.0.0"
+          "npm@10.9.11 -> @npmcli/config@9.0.0"
         ],
         "11": [],
         "12": []
@@ -1339,7 +1339,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.3",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmaccess/package.json",
       "published": {
         "version": "10.0.3",
@@ -1367,7 +1367,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmaccess@10.0.3"
+          "npm@11.21.3 -> libnpmaccess@10.0.3"
         ],
         "12": []
       }
@@ -1379,7 +1379,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmaccess/package.json",
       "published": {
         "version": "9.0.0",
@@ -1406,7 +1406,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmaccess@9.0.0"
+          "npm@10.9.11 -> libnpmaccess@9.0.0"
         ],
         "11": [],
         "12": []
@@ -1458,8 +1458,8 @@
       "packageMajor": 8,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "8.1.14",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "8.1.15",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmdiff/package.json",
       "published": {
         "version": "8.1.15",
@@ -1474,12 +1474,12 @@
         "10": [],
         "11": [
           {
-            "version": "8.1.14",
+            "version": "8.1.15",
             "production": true,
             "locations": [
               "workspaces/libnpmdiff"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -1487,7 +1487,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmdiff@8.1.14"
+          "npm@11.21.3 -> libnpmdiff@8.1.15"
         ],
         "12": []
       }
@@ -1498,8 +1498,8 @@
       "packageMajor": 7,
       "branch": "release/v10",
       "requiredBranch": null,
-      "branchCurrentVersion": "7.0.5",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCurrentVersion": "7.0.6",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmdiff/package.json",
       "published": {
         "version": "7.0.6",
@@ -1513,12 +1513,12 @@
       "integrated": {
         "10": [
           {
-            "version": "7.0.5",
+            "version": "7.0.6",
             "production": true,
             "locations": [
               "workspaces/libnpmdiff"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "11": [],
@@ -1526,7 +1526,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmdiff@7.0.5"
+          "npm@10.9.11 -> libnpmdiff@7.0.6"
         ],
         "11": [],
         "12": []
@@ -1578,8 +1578,8 @@
       "packageMajor": 10,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "10.3.5",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "10.3.6",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmexec/package.json",
       "published": {
         "version": "10.3.6",
@@ -1594,12 +1594,12 @@
         "10": [],
         "11": [
           {
-            "version": "10.3.5",
+            "version": "10.3.6",
             "production": true,
             "locations": [
               "workspaces/libnpmexec"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -1607,7 +1607,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmexec@10.3.5"
+          "npm@11.21.3 -> libnpmexec@10.3.6"
         ],
         "12": []
       }
@@ -1618,8 +1618,8 @@
       "packageMajor": 9,
       "branch": "release/v10",
       "requiredBranch": null,
-      "branchCurrentVersion": "9.0.5",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCurrentVersion": "9.0.6",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmexec/package.json",
       "published": {
         "version": "9.0.6",
@@ -1633,12 +1633,12 @@
       "integrated": {
         "10": [
           {
-            "version": "9.0.5",
+            "version": "9.0.6",
             "production": true,
             "locations": [
               "workspaces/libnpmexec"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "11": [],
@@ -1646,7 +1646,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmexec@9.0.5"
+          "npm@10.9.11 -> libnpmexec@9.0.6"
         ],
         "11": [],
         "12": []
@@ -1698,8 +1698,8 @@
       "packageMajor": 7,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "7.0.28",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "7.0.29",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmfund/package.json",
       "published": {
         "version": "7.0.29",
@@ -1714,12 +1714,12 @@
         "10": [],
         "11": [
           {
-            "version": "7.0.28",
+            "version": "7.0.29",
             "production": true,
             "locations": [
               "workspaces/libnpmfund"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -1727,7 +1727,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmfund@7.0.28"
+          "npm@11.21.3 -> libnpmfund@7.0.29"
         ],
         "12": []
       }
@@ -1738,8 +1738,8 @@
       "packageMajor": 6,
       "branch": "release/v10",
       "requiredBranch": null,
-      "branchCurrentVersion": "6.0.5",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCurrentVersion": "6.0.6",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmfund/package.json",
       "published": {
         "version": "6.0.6",
@@ -1753,12 +1753,12 @@
       "integrated": {
         "10": [
           {
-            "version": "6.0.5",
+            "version": "6.0.6",
             "production": true,
             "locations": [
               "workspaces/libnpmfund"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "11": [],
@@ -1766,7 +1766,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmfund@6.0.5"
+          "npm@10.9.11 -> libnpmfund@6.0.6"
         ],
         "11": [],
         "12": []
@@ -1779,7 +1779,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "11.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmhook/package.json",
       "published": {
         "version": "11.0.0",
@@ -1806,7 +1806,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmhook@11.0.0"
+          "npm@10.9.11 -> libnpmhook@11.0.0"
         ],
         "11": [],
         "12": []
@@ -1859,7 +1859,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.1",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmorg/package.json",
       "published": {
         "version": "8.0.1",
@@ -1887,7 +1887,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmorg@8.0.1"
+          "npm@11.21.3 -> libnpmorg@8.0.1"
         ],
         "12": []
       }
@@ -1899,7 +1899,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "7.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmorg/package.json",
       "published": {
         "version": "7.0.0",
@@ -1926,7 +1926,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmorg@7.0.0"
+          "npm@10.9.11 -> libnpmorg@7.0.0"
         ],
         "11": [],
         "12": []
@@ -1978,8 +1978,8 @@
       "packageMajor": 9,
       "branch": "release/v11",
       "requiredBranch": null,
-      "branchCurrentVersion": "9.1.15",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCurrentVersion": "9.1.16",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmpack/package.json",
       "published": {
         "version": "9.1.16",
@@ -1994,12 +1994,12 @@
         "10": [],
         "11": [
           {
-            "version": "9.1.15",
+            "version": "9.1.16",
             "production": true,
             "locations": [
               "workspaces/libnpmpack"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "12": []
@@ -2007,7 +2007,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmpack@9.1.15"
+          "npm@11.21.3 -> libnpmpack@9.1.16"
         ],
         "12": []
       }
@@ -2018,8 +2018,8 @@
       "packageMajor": 8,
       "branch": "release/v10",
       "requiredBranch": null,
-      "branchCurrentVersion": "8.0.5",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCurrentVersion": "8.0.6",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmpack/package.json",
       "published": {
         "version": "8.0.6",
@@ -2033,12 +2033,12 @@
       "integrated": {
         "10": [
           {
-            "version": "8.0.5",
+            "version": "8.0.6",
             "production": true,
             "locations": [
               "workspaces/libnpmpack"
             ],
-            "behindPublished": true
+            "behindPublished": false
           }
         ],
         "11": [],
@@ -2046,7 +2046,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmpack@8.0.5"
+          "npm@10.9.11 -> libnpmpack@8.0.6"
         ],
         "11": [],
         "12": []
@@ -2099,7 +2099,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "11.2.1",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmpublish/package.json",
       "published": {
         "version": "11.2.1",
@@ -2127,7 +2127,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmpublish@11.2.1"
+          "npm@11.21.3 -> libnpmpublish@11.2.1"
         ],
         "12": []
       }
@@ -2139,7 +2139,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "10.0.2",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmpublish/package.json",
       "published": {
         "version": "10.0.2",
@@ -2166,7 +2166,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmpublish@10.0.2"
+          "npm@10.9.11 -> libnpmpublish@10.0.2"
         ],
         "11": [],
         "12": []
@@ -2219,7 +2219,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "9.0.1",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmsearch/package.json",
       "published": {
         "version": "9.0.1",
@@ -2247,7 +2247,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmsearch@9.0.1"
+          "npm@11.21.3 -> libnpmsearch@9.0.1"
         ],
         "12": []
       }
@@ -2259,7 +2259,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmsearch/package.json",
       "published": {
         "version": "8.0.0",
@@ -2286,7 +2286,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmsearch@8.0.0"
+          "npm@10.9.11 -> libnpmsearch@8.0.0"
         ],
         "11": [],
         "12": []
@@ -2339,7 +2339,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.2",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmteam/package.json",
       "published": {
         "version": "8.0.2",
@@ -2367,7 +2367,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmteam@8.0.2"
+          "npm@11.21.3 -> libnpmteam@8.0.2"
         ],
         "12": []
       }
@@ -2379,7 +2379,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "7.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmteam/package.json",
       "published": {
         "version": "7.0.0",
@@ -2406,7 +2406,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmteam@7.0.0"
+          "npm@10.9.11 -> libnpmteam@7.0.0"
         ],
         "11": [],
         "12": []
@@ -2459,7 +2459,7 @@
       "branch": "release/v11",
       "requiredBranch": null,
       "branchCurrentVersion": "8.0.4",
-      "branchCommit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+      "branchCommit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
       "manifestPath": "workspaces/libnpmversion/package.json",
       "published": {
         "version": "8.0.4",
@@ -2487,7 +2487,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> libnpmversion@8.0.4"
+          "npm@11.21.3 -> libnpmversion@8.0.4"
         ],
         "12": []
       }
@@ -2499,7 +2499,7 @@
       "branch": "release/v10",
       "requiredBranch": null,
       "branchCurrentVersion": "7.0.0",
-      "branchCommit": "8b380e08a3619b55438af168e74ba8cadda829d1",
+      "branchCommit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
       "manifestPath": "workspaces/libnpmversion/package.json",
       "published": {
         "version": "7.0.0",
@@ -2526,7 +2526,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> libnpmversion@7.0.0"
+          "npm@10.9.11 -> libnpmversion@7.0.0"
         ],
         "11": [],
         "12": []
@@ -2605,7 +2605,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> bin-links@6.0.3 -> cmd-shim@8.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> bin-links@6.0.3 -> cmd-shim@8.0.0"
         ],
         "12": []
       }
@@ -2643,7 +2643,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> bin-links@5.0.1 -> cmd-shim@7.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> bin-links@5.0.1 -> cmd-shim@7.0.0"
         ],
         "11": [],
         "12": []
@@ -2700,10 +2700,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/eslint-config@5.1.0"
+          "npm@10.9.11 -> @npmcli/eslint-config@5.1.0"
         ],
         "11": [
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0"
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/eslint-config@5.1.0"
@@ -2783,7 +2783,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/fs@5.0.0"
+          "npm@11.21.3 -> @npmcli/fs@5.0.0"
         ],
         "12": []
       }
@@ -2821,7 +2821,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/fs@4.0.0"
+          "npm@10.9.11 -> @npmcli/fs@4.0.0"
         ],
         "11": [],
         "12": []
@@ -2900,7 +2900,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/git@7.0.2"
+          "npm@11.21.3 -> @npmcli/git@7.0.2"
         ],
         "12": []
       }
@@ -2938,7 +2938,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/git@6.0.3"
+          "npm@10.9.11 -> @npmcli/git@6.0.3"
         ],
         "11": [],
         "12": []
@@ -3017,7 +3017,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> hosted-git-info@9.0.3"
+          "npm@11.21.3 -> hosted-git-info@9.0.3"
         ],
         "12": []
       }
@@ -3055,7 +3055,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> hosted-git-info@8.1.0"
+          "npm@10.9.11 -> hosted-git-info@8.1.0"
         ],
         "11": [],
         "12": []
@@ -3143,7 +3143,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/docs@1.0.0 -> ignore-walk@8.0.0"
+          "npm@11.21.3 -> @npmcli/docs@1.0.0 -> ignore-walk@8.0.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/docs@1.0.0 -> ignore-walk@8.0.0"
@@ -3183,7 +3183,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/docs@1.0.0 -> ignore-walk@7.0.0"
+          "npm@10.9.11 -> @npmcli/docs@1.0.0 -> ignore-walk@7.0.0"
         ],
         "11": [],
         "12": []
@@ -3262,7 +3262,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> ini@6.0.0"
+          "npm@11.21.3 -> ini@6.0.0"
         ],
         "12": []
       }
@@ -3300,7 +3300,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> ini@5.0.0"
+          "npm@10.9.11 -> ini@5.0.0"
         ],
         "11": [],
         "12": []
@@ -3379,7 +3379,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> init-package-json@8.2.5"
+          "npm@11.21.3 -> init-package-json@8.2.5"
         ],
         "12": []
       }
@@ -3417,7 +3417,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> init-package-json@7.0.2"
+          "npm@10.9.11 -> init-package-json@7.0.2"
         ],
         "11": [],
         "12": []
@@ -3496,7 +3496,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> @npmcli/installed-package-contents@4.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> @npmcli/installed-package-contents@4.0.0"
         ],
         "12": []
       }
@@ -3534,7 +3534,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/installed-package-contents@3.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/installed-package-contents@3.0.0"
         ],
         "11": [],
         "12": []
@@ -3613,7 +3613,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> json-parse-even-better-errors@5.0.0"
+          "npm@11.21.3 -> json-parse-even-better-errors@5.0.0"
         ],
         "12": []
       }
@@ -3651,7 +3651,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> json-parse-even-better-errors@4.0.0"
+          "npm@10.9.11 -> json-parse-even-better-errors@4.0.0"
         ],
         "11": [],
         "12": []
@@ -3730,7 +3730,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> make-fetch-happen@15.0.6"
+          "npm@11.21.3 -> make-fetch-happen@15.0.6"
         ],
         "12": []
       }
@@ -3768,7 +3768,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> make-fetch-happen@14.0.3"
+          "npm@10.9.11 -> make-fetch-happen@14.0.3"
         ],
         "11": [],
         "12": []
@@ -3847,7 +3847,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/map-workspaces@5.0.3"
+          "npm@11.21.3 -> @npmcli/map-workspaces@5.0.3"
         ],
         "12": []
       }
@@ -3885,7 +3885,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/map-workspaces@4.0.2"
+          "npm@10.9.11 -> @npmcli/map-workspaces@4.0.2"
         ],
         "11": [],
         "12": []
@@ -3964,7 +3964,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/metavuln-calculator@9.0.3"
+          "npm@11.21.3 -> @npmcli/metavuln-calculator@9.0.3"
         ],
         "12": []
       }
@@ -4002,7 +4002,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/metavuln-calculator@8.0.1"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/metavuln-calculator@8.0.1"
         ],
         "11": [],
         "12": []
@@ -4059,10 +4059,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> minify-registry-metadata@4.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> minify-registry-metadata@4.0.0"
         ],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> minify-registry-metadata@4.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> minify-registry-metadata@4.0.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/arborist@10.0.5 -> minify-registry-metadata@4.0.0"
@@ -4142,7 +4142,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> make-fetch-happen@15.0.6 -> minipass-fetch@5.0.2"
+          "npm@11.21.3 -> make-fetch-happen@15.0.6 -> minipass-fetch@5.0.2"
         ],
         "12": []
       }
@@ -4180,7 +4180,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> make-fetch-happen@14.0.3 -> minipass-fetch@4.0.1"
+          "npm@10.9.11 -> make-fetch-happen@14.0.3 -> minipass-fetch@4.0.1"
         ],
         "11": [],
         "12": []
@@ -4259,7 +4259,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> read@5.0.1 -> mute-stream@3.0.0"
+          "npm@11.21.3 -> read@5.0.1 -> mute-stream@3.0.0"
         ],
         "12": []
       }
@@ -4297,7 +4297,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> read@4.1.0 -> mute-stream@2.0.0"
+          "npm@10.9.11 -> read@4.1.0 -> mute-stream@2.0.0"
         ],
         "11": [],
         "12": []
@@ -4376,7 +4376,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> @npmcli/name-from-folder@4.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> @npmcli/name-from-folder@4.0.0"
         ],
         "12": []
       }
@@ -4414,7 +4414,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/name-from-folder@3.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/name-from-folder@3.0.0"
         ],
         "11": [],
         "12": []
@@ -4493,7 +4493,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> @npmcli/node-gyp@5.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> @npmcli/node-gyp@5.0.0"
         ],
         "12": []
       }
@@ -4531,7 +4531,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/node-gyp@4.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/node-gyp@4.0.0"
         ],
         "11": [],
         "12": []
@@ -4588,10 +4588,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> semver@7.8.6"
+          "npm@10.9.11 -> semver@7.8.6"
         ],
         "11": [
-          "npm@11.21.2 -> semver@7.8.6"
+          "npm@11.21.3 -> semver@7.8.6"
         ],
         "12": [
           "npm@12.2.3 -> semver@7.8.6"
@@ -4669,23 +4669,23 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.0 -> semver@6.3.1",
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.0 -> @babel/helper-compilation-targets@7.28.6 -> semver@6.3.1",
-          "npm@10.9.10 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> semver@6.3.1",
-          "npm@10.9.10 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-node@11.1.0 -> semver@6.3.1",
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> semver@6.3.1",
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> make-dir@3.1.0 -> semver@6.3.1",
-          "npm@10.9.10 -> tap@16.3.10 -> @isaacs/import-jsx@4.0.1 -> @babel/core@7.23.6 -> semver@6.3.1"
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.0 -> semver@6.3.1",
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.0 -> @babel/helper-compilation-targets@7.28.6 -> semver@6.3.1",
+          "npm@10.9.11 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> semver@6.3.1",
+          "npm@10.9.11 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-node@11.1.0 -> semver@6.3.1",
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> semver@6.3.1",
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> make-dir@3.1.0 -> semver@6.3.1",
+          "npm@10.9.11 -> tap@16.3.10 -> @isaacs/import-jsx@4.0.1 -> @babel/core@7.23.6 -> semver@6.3.1"
         ],
         "11": [
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.7 -> semver@6.3.1",
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.7 -> @babel/helper-compilation-targets@7.29.7 -> semver@6.3.1",
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> semver@6.3.1",
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-node@11.1.0 -> semver@6.3.1",
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> semver@6.3.1",
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> make-dir@3.1.0 -> semver@6.3.1",
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> eslint-import-resolver-node@0.3.10 -> resolve@2.0.0-next.7 -> node-exports-info@1.6.2 -> semver@6.3.1",
-          "npm@11.21.2 -> tap@16.3.10 -> @isaacs/import-jsx@4.0.1 -> @babel/core@7.23.6 -> semver@6.3.1"
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.7 -> semver@6.3.1",
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.7 -> @babel/helper-compilation-targets@7.29.7 -> semver@6.3.1",
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> semver@6.3.1",
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-node@11.1.0 -> semver@6.3.1",
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> semver@6.3.1",
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> make-dir@3.1.0 -> semver@6.3.1",
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0 -> eslint-plugin-import@2.32.0 -> eslint-import-resolver-node@0.3.10 -> resolve@2.0.0-next.7 -> node-exports-info@1.6.2 -> semver@6.3.1",
+          "npm@11.21.3 -> tap@16.3.10 -> @isaacs/import-jsx@4.0.1 -> @babel/core@7.23.6 -> semver@6.3.1"
         ],
         "12": [
           "npm@12.2.3 -> tap@16.3.10 -> nyc@15.1.0 -> istanbul-lib-instrument@4.0.3 -> @babel/core@7.29.7 -> semver@6.3.1",
@@ -4772,7 +4772,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> which@6.0.1"
+          "npm@11.21.3 -> which@6.0.1"
         ],
         "12": []
       }
@@ -4828,10 +4828,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> which@5.0.0"
+          "npm@10.9.11 -> which@5.0.0"
         ],
         "11": [
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0 -> which@5.0.0"
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0 -> which@5.0.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/eslint-config@5.1.0 -> which@5.0.0"
@@ -4895,14 +4895,14 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> glob@10.5.0 -> foreground-child@3.3.1 -> cross-spawn@7.0.6 -> which@2.0.2",
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> spawn-wrap@2.0.0 -> which@2.0.2",
-          "npm@10.9.10 -> tap@16.3.10 -> which@2.0.2"
+          "npm@10.9.11 -> glob@10.5.0 -> foreground-child@3.3.1 -> cross-spawn@7.0.6 -> which@2.0.2",
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> spawn-wrap@2.0.0 -> which@2.0.2",
+          "npm@10.9.11 -> tap@16.3.10 -> which@2.0.2"
         ],
         "11": [
-          "npm@11.21.2 -> @npmcli/eslint-config@5.1.0 -> eslint@8.57.1 -> cross-spawn@7.0.6 -> which@2.0.2",
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> spawn-wrap@2.0.0 -> which@2.0.2",
-          "npm@11.21.2 -> tap@16.3.10 -> which@2.0.2"
+          "npm@11.21.3 -> @npmcli/eslint-config@5.1.0 -> eslint@8.57.1 -> cross-spawn@7.0.6 -> which@2.0.2",
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> spawn-wrap@2.0.0 -> which@2.0.2",
+          "npm@11.21.3 -> tap@16.3.10 -> which@2.0.2"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/eslint-config@5.1.0 -> eslint@8.57.1 -> cross-spawn@7.0.6 -> which@2.0.2",
@@ -4984,7 +4984,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> nopt@9.0.0"
+          "npm@11.21.3 -> nopt@9.0.0"
         ],
         "12": []
       }
@@ -5022,7 +5022,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> nopt@8.1.0"
+          "npm@10.9.11 -> nopt@8.1.0"
         ],
         "11": [],
         "12": []
@@ -5061,7 +5061,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> normalize-package-data@7.0.1"
+          "npm@10.9.11 -> normalize-package-data@7.0.1"
         ],
         "11": [],
         "12": []
@@ -5140,7 +5140,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-audit-report@7.0.0"
+          "npm@11.21.3 -> npm-audit-report@7.0.0"
         ],
         "12": []
       }
@@ -5178,7 +5178,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-audit-report@6.0.0"
+          "npm@10.9.11 -> npm-audit-report@6.0.0"
         ],
         "11": [],
         "12": []
@@ -5257,7 +5257,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> @npmcli/installed-package-contents@4.0.0 -> npm-bundled@5.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> @npmcli/installed-package-contents@4.0.0 -> npm-bundled@5.0.0"
         ],
         "12": []
       }
@@ -5295,7 +5295,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/installed-package-contents@3.0.0 -> npm-bundled@4.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/installed-package-contents@3.0.0 -> npm-bundled@4.0.0"
         ],
         "11": [],
         "12": []
@@ -5374,7 +5374,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-install-checks@8.0.0"
+          "npm@11.21.3 -> npm-install-checks@8.0.0"
         ],
         "12": []
       }
@@ -5412,7 +5412,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-install-checks@7.1.2"
+          "npm@10.9.11 -> npm-install-checks@7.1.2"
         ],
         "11": [],
         "12": []
@@ -5495,7 +5495,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-pick-manifest@11.0.3 -> npm-normalize-package-bin@5.0.0"
+          "npm@11.21.3 -> npm-pick-manifest@11.0.3 -> npm-normalize-package-bin@5.0.0"
         ],
         "12": []
       }
@@ -5533,7 +5533,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-pick-manifest@10.0.0 -> npm-normalize-package-bin@4.0.0"
+          "npm@10.9.11 -> npm-pick-manifest@10.0.0 -> npm-normalize-package-bin@4.0.0"
         ],
         "11": [],
         "12": []
@@ -5612,7 +5612,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-package-arg@13.0.2"
+          "npm@11.21.3 -> npm-package-arg@13.0.2"
         ],
         "12": []
       }
@@ -5650,7 +5650,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-package-arg@12.0.2"
+          "npm@10.9.11 -> npm-package-arg@12.0.2"
         ],
         "11": [],
         "12": []
@@ -5729,7 +5729,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-packlist@10.0.4"
+          "npm@11.21.3 -> npm-packlist@10.0.4"
         ],
         "12": []
       }
@@ -5767,7 +5767,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-packlist@9.0.0"
+          "npm@10.9.11 -> npm-packlist@9.0.0"
         ],
         "11": [],
         "12": []
@@ -5846,7 +5846,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-pick-manifest@11.0.3"
+          "npm@11.21.3 -> npm-pick-manifest@11.0.3"
         ],
         "12": []
       }
@@ -5884,7 +5884,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-pick-manifest@10.0.0"
+          "npm@10.9.11 -> npm-pick-manifest@10.0.0"
         ],
         "11": [],
         "12": []
@@ -5963,7 +5963,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-profile@12.0.2"
+          "npm@11.21.3 -> npm-profile@12.0.2"
         ],
         "12": []
       }
@@ -6001,7 +6001,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-profile@11.0.1"
+          "npm@10.9.11 -> npm-profile@11.0.1"
         ],
         "11": [],
         "12": []
@@ -6080,7 +6080,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-registry-fetch@19.1.1"
+          "npm@11.21.3 -> npm-registry-fetch@19.1.1"
         ],
         "12": []
       }
@@ -6118,7 +6118,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-registry-fetch@18.0.2"
+          "npm@10.9.11 -> npm-registry-fetch@18.0.2"
         ],
         "11": [],
         "12": []
@@ -6197,7 +6197,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> npm-user-validate@4.0.0"
+          "npm@11.21.3 -> npm-user-validate@4.0.0"
         ],
         "12": []
       }
@@ -6235,7 +6235,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> npm-user-validate@3.0.0"
+          "npm@10.9.11 -> npm-user-validate@3.0.0"
         ],
         "11": [],
         "12": []
@@ -6314,7 +6314,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/package-json@7.0.5"
+          "npm@11.21.3 -> @npmcli/package-json@7.0.5"
         ],
         "12": []
       }
@@ -6352,7 +6352,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/package-json@6.2.0"
+          "npm@10.9.11 -> @npmcli/package-json@6.2.0"
         ],
         "11": [],
         "12": []
@@ -6431,7 +6431,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> pacote@21.5.2"
+          "npm@11.21.3 -> pacote@21.5.2"
         ],
         "12": []
       }
@@ -6469,7 +6469,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/metavuln-calculator@8.0.1 -> pacote@20.0.1"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/metavuln-calculator@8.0.1 -> pacote@20.0.1"
         ],
         "11": [],
         "12": []
@@ -6508,7 +6508,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> pacote@19.0.3"
+          "npm@10.9.11 -> pacote@19.0.3"
         ],
         "11": [],
         "12": []
@@ -6587,7 +6587,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> parse-conflict-json@5.0.1"
+          "npm@11.21.3 -> parse-conflict-json@5.0.1"
         ],
         "12": []
       }
@@ -6625,7 +6625,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> parse-conflict-json@4.0.0"
+          "npm@10.9.11 -> parse-conflict-json@4.0.0"
         ],
         "11": [],
         "12": []
@@ -6704,7 +6704,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> proc-log@6.1.0"
+          "npm@11.21.3 -> proc-log@6.1.0"
         ],
         "12": []
       }
@@ -6742,7 +6742,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> proc-log@5.0.0"
+          "npm@10.9.11 -> proc-log@5.0.0"
         ],
         "11": [],
         "12": []
@@ -6791,7 +6791,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> proggy@4.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> proggy@4.0.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/arborist@10.0.5 -> proggy@4.0.0"
@@ -6831,7 +6831,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> proggy@3.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> proggy@3.0.0"
         ],
         "11": [],
         "12": []
@@ -6910,7 +6910,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/promise-spawn@9.0.2"
+          "npm@11.21.3 -> @npmcli/promise-spawn@9.0.2"
         ],
         "12": []
       }
@@ -6948,7 +6948,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/promise-spawn@8.0.4"
+          "npm@10.9.11 -> @npmcli/promise-spawn@8.0.4"
         ],
         "11": [],
         "12": []
@@ -7027,7 +7027,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> init-package-json@8.2.5 -> promzard@3.0.1"
+          "npm@11.21.3 -> init-package-json@8.2.5 -> promzard@3.0.1"
         ],
         "12": []
       }
@@ -7065,7 +7065,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> init-package-json@7.0.2 -> promzard@2.0.0"
+          "npm@10.9.11 -> init-package-json@7.0.2 -> promzard@2.0.0"
         ],
         "11": [],
         "12": []
@@ -7114,7 +7114,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> @npmcli/query@5.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> @npmcli/query@5.0.0"
         ],
         "12": [
           "npm@12.2.3 -> @npmcli/arborist@10.0.5 -> @npmcli/query@5.0.0"
@@ -7154,7 +7154,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> @npmcli/query@4.0.1"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> @npmcli/query@4.0.1"
         ],
         "11": [],
         "12": []
@@ -7233,7 +7233,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> read@5.0.1"
+          "npm@11.21.3 -> read@5.0.1"
         ],
         "12": []
       }
@@ -7271,7 +7271,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> read@4.1.0"
+          "npm@10.9.11 -> read@4.1.0"
         ],
         "11": [],
         "12": []
@@ -7350,7 +7350,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> bin-links@6.0.3 -> read-cmd-shim@6.0.0"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> bin-links@6.0.3 -> read-cmd-shim@6.0.0"
         ],
         "12": []
       }
@@ -7388,7 +7388,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> bin-links@5.0.1 -> read-cmd-shim@5.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> bin-links@5.0.1 -> read-cmd-shim@5.0.0"
         ],
         "11": [],
         "12": []
@@ -7427,7 +7427,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/arborist@8.0.5 -> read-package-json-fast@4.0.0"
+          "npm@10.9.11 -> @npmcli/arborist@8.0.6 -> read-package-json-fast@4.0.0"
         ],
         "11": [],
         "12": []
@@ -7506,7 +7506,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/redact@4.0.0"
+          "npm@11.21.3 -> @npmcli/redact@4.0.0"
         ],
         "12": []
       }
@@ -7544,7 +7544,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/redact@3.2.2"
+          "npm@10.9.11 -> @npmcli/redact@3.2.2"
         ],
         "11": [],
         "12": []
@@ -7623,7 +7623,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/run-script@10.0.4"
+          "npm@11.21.3 -> @npmcli/run-script@10.0.4"
         ],
         "12": []
       }
@@ -7661,7 +7661,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/run-script@9.1.0"
+          "npm@10.9.11 -> @npmcli/run-script@9.1.0"
         ],
         "11": [],
         "12": []
@@ -7740,7 +7740,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> ssri@13.0.1"
+          "npm@11.21.3 -> ssri@13.0.1"
         ],
         "12": []
       }
@@ -7778,7 +7778,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> ssri@12.0.0"
+          "npm@10.9.11 -> ssri@12.0.0"
         ],
         "11": [],
         "12": []
@@ -7865,10 +7865,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> @npmcli/template-oss@4.29.0"
+          "npm@10.9.11 -> @npmcli/template-oss@4.29.0"
         ],
         "11": [
-          "npm@11.21.2 -> @npmcli/template-oss@4.29.0"
+          "npm@11.21.3 -> @npmcli/template-oss@4.29.0"
         ],
         "12": []
       }
@@ -7906,7 +7906,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> cacache@19.0.1 -> unique-filename@4.0.0"
+          "npm@10.9.11 -> cacache@19.0.1 -> unique-filename@4.0.0"
         ],
         "11": [],
         "12": []
@@ -7945,7 +7945,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> cacache@19.0.1 -> unique-filename@4.0.0 -> unique-slug@5.0.0"
+          "npm@10.9.11 -> cacache@19.0.1 -> unique-filename@4.0.0 -> unique-slug@5.0.0"
         ],
         "11": [],
         "12": []
@@ -8024,7 +8024,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> validate-npm-package-name@7.0.2"
+          "npm@11.21.3 -> validate-npm-package-name@7.0.2"
         ],
         "12": []
       }
@@ -8062,7 +8062,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> validate-npm-package-name@6.0.2"
+          "npm@10.9.11 -> validate-npm-package-name@6.0.2"
         ],
         "11": [],
         "12": []
@@ -8141,7 +8141,7 @@
       "paths": {
         "10": [],
         "11": [
-          "npm@11.21.2 -> @npmcli/arborist@9.9.3 -> bin-links@6.0.3 -> write-file-atomic@7.0.1"
+          "npm@11.21.3 -> @npmcli/arborist@9.9.4 -> bin-links@6.0.3 -> write-file-atomic@7.0.1"
         ],
         "12": []
       }
@@ -8179,7 +8179,7 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> write-file-atomic@6.0.0"
+          "npm@10.9.11 -> write-file-atomic@6.0.0"
         ],
         "11": [],
         "12": []
@@ -8236,10 +8236,10 @@
       },
       "paths": {
         "10": [
-          "npm@10.9.10 -> tap@16.3.10 -> nyc@15.1.0 -> caching-transform@4.0.0 -> write-file-atomic@3.0.3"
+          "npm@10.9.11 -> tap@16.3.10 -> nyc@15.1.0 -> caching-transform@4.0.0 -> write-file-atomic@3.0.3"
         ],
         "11": [
-          "npm@11.21.2 -> tap@16.3.10 -> nyc@15.1.0 -> caching-transform@4.0.0 -> write-file-atomic@3.0.3"
+          "npm@11.21.3 -> tap@16.3.10 -> nyc@15.1.0 -> caching-transform@4.0.0 -> write-file-atomic@3.0.3"
         ],
         "12": [
           "npm@12.2.3 -> tap@16.3.10 -> nyc@15.1.0 -> caching-transform@4.0.0 -> write-file-atomic@3.0.3"
@@ -8577,12 +8577,12 @@
             "branch": "release/v10",
             "versions": [
               {
-                "version": "8.0.5",
+                "version": "8.0.6",
                 "production": true,
                 "locations": [
                   "workspaces/arborist"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8622,12 +8622,12 @@
             "branch": "release/v10",
             "versions": [
               {
-                "version": "7.0.5",
+                "version": "7.0.6",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmdiff"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8637,12 +8637,12 @@
             "branch": "release/v10",
             "versions": [
               {
-                "version": "9.0.5",
+                "version": "9.0.6",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmexec"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8652,12 +8652,12 @@
             "branch": "release/v10",
             "versions": [
               {
-                "version": "6.0.5",
+                "version": "6.0.6",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmfund"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8697,12 +8697,12 @@
             "branch": "release/v10",
             "versions": [
               {
-                "version": "8.0.5",
+                "version": "8.0.6",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmpack"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8774,12 +8774,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "9.9.3",
+                "version": "9.9.4",
                 "production": true,
                 "locations": [
                   "workspaces/arborist"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8789,12 +8789,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "10.14.0",
+                "version": "10.14.1",
                 "production": true,
                 "locations": [
                   "workspaces/config"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8819,12 +8819,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "8.1.14",
+                "version": "8.1.15",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmdiff"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8834,12 +8834,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "10.3.5",
+                "version": "10.3.6",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmexec"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8849,12 +8849,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "7.0.28",
+                "version": "7.0.29",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmfund"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -8879,12 +8879,12 @@
             "branch": "release/v11",
             "versions": [
               {
-                "version": "9.1.15",
+                "version": "9.1.16",
                 "production": true,
                 "locations": [
                   "workspaces/libnpmpack"
                 ],
-                "behindPublished": true
+                "behindPublished": false
               }
             ]
           },
@@ -13086,9 +13086,9 @@
     "packageBranchRows": 189,
     "requiredExistingRepositoryBranches": 61,
     "missingPackageMajorLines": 94,
-    "integrationCellsBehindPublished": 25
+    "integrationCellsBehindPublished": 14
   },
-  "analyzedAt": "2026-11-19T12:36:10.104Z",
+  "analyzedAt": "2026-11-20T12:36:02.041Z",
   "scope": {
     "excludeTemplateOssOnlyTransitives": true,
     "excludedTraversalPackage": "@npmcli/template-oss",
@@ -13126,7 +13126,7 @@
   },
   "checks": {
     "status": "complete",
-    "checkedAt": "2026-11-19T12:36:10.104Z",
+    "checkedAt": "2026-11-20T12:36:02.041Z",
     "branches": {
       "npm/abbrev-js:main": {
         "repository": "npm/abbrev-js",
@@ -13218,7 +13218,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/agent:main": {
         "repository": "npm/agent",
@@ -13310,7 +13310,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/agent:release/v4": {
         "repository": "npm/agent",
@@ -13402,7 +13402,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/bin-links:main": {
         "repository": "npm/bin-links",
@@ -13494,7 +13494,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/bin-links:release/v6": {
         "repository": "npm/bin-links",
@@ -13586,7 +13586,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/bin-links:release/v5": {
         "repository": "npm/bin-links",
@@ -13678,7 +13678,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/cacache:main": {
         "repository": "npm/cacache",
@@ -13770,7 +13770,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/cli:latest": {
         "repository": "npm/cli",
@@ -13862,16 +13862,108 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/cli:release/v11": {
         "repository": "npm/cli",
         "branch": "release/v11",
-        "commit": "e64a7b7eee3463c9be3595e6cc2b49d1ae50be68",
+        "commit": "ae0528e68635c6bb921f851e9e6700e583f217a6",
+        "rollup": {
+          "state": "SUCCESS",
+          "contexts": {
+            "totalCount": 318,
+            "checkRunCountsByState": [
+              {
+                "state": "ACTION_REQUIRED",
+                "count": 0
+              },
+              {
+                "state": "CANCELLED",
+                "count": 0
+              },
+              {
+                "state": "COMPLETED",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "IN_PROGRESS",
+                "count": 0
+              },
+              {
+                "state": "NEUTRAL",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "QUEUED",
+                "count": 0
+              },
+              {
+                "state": "SKIPPED",
+                "count": 3
+              },
+              {
+                "state": "STALE",
+                "count": 0
+              },
+              {
+                "state": "STARTUP_FAILURE",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 315
+              },
+              {
+                "state": "TIMED_OUT",
+                "count": 0
+              },
+              {
+                "state": "WAITING",
+                "count": 0
+              }
+            ],
+            "statusContextCountsByState": [
+              {
+                "state": "EXPECTED",
+                "count": 0
+              },
+              {
+                "state": "ERROR",
+                "count": 0
+              },
+              {
+                "state": "FAILURE",
+                "count": 0
+              },
+              {
+                "state": "PENDING",
+                "count": 0
+              },
+              {
+                "state": "SUCCESS",
+                "count": 0
+              }
+            ]
+          }
+        },
+        "checkedAt": "2026-11-20T12:36:02.041Z"
+      },
+      "npm/cli:release/v10": {
+        "repository": "npm/cli",
+        "branch": "release/v10",
+        "commit": "3475294c2ef9d57a96e8778a1cf02afefe0130ae",
         "rollup": {
           "state": "FAILURE",
           "contexts": {
-            "totalCount": 21,
+            "totalCount": 255,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -13907,7 +13999,7 @@
               },
               {
                 "state": "SKIPPED",
-                "count": 4
+                "count": 6
               },
               {
                 "state": "STALE",
@@ -13919,7 +14011,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 15
+                "count": 247
               },
               {
                 "state": "TIMED_OUT",
@@ -13954,99 +14046,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
-      },
-      "npm/cli:release/v10": {
-        "repository": "npm/cli",
-        "branch": "release/v10",
-        "commit": "8b380e08a3619b55438af168e74ba8cadda829d1",
-        "rollup": {
-          "state": "FAILURE",
-          "contexts": {
-            "totalCount": 44,
-            "checkRunCountsByState": [
-              {
-                "state": "ACTION_REQUIRED",
-                "count": 0
-              },
-              {
-                "state": "CANCELLED",
-                "count": 0
-              },
-              {
-                "state": "COMPLETED",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 1
-              },
-              {
-                "state": "IN_PROGRESS",
-                "count": 0
-              },
-              {
-                "state": "NEUTRAL",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "QUEUED",
-                "count": 0
-              },
-              {
-                "state": "SKIPPED",
-                "count": 3
-              },
-              {
-                "state": "STALE",
-                "count": 0
-              },
-              {
-                "state": "STARTUP_FAILURE",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
-                "count": 40
-              },
-              {
-                "state": "TIMED_OUT",
-                "count": 0
-              },
-              {
-                "state": "WAITING",
-                "count": 0
-              }
-            ],
-            "statusContextCountsByState": [
-              {
-                "state": "EXPECTED",
-                "count": 0
-              },
-              {
-                "state": "ERROR",
-                "count": 0
-              },
-              {
-                "state": "FAILURE",
-                "count": 0
-              },
-              {
-                "state": "PENDING",
-                "count": 0
-              },
-              {
-                "state": "SUCCESS",
-                "count": 0
-              }
-            ]
-          }
-        },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/cmd-shim:main": {
         "repository": "npm/cmd-shim",
@@ -14138,7 +14138,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/eslint-config:main": {
         "repository": "npm/eslint-config",
@@ -14230,7 +14230,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/fs:main": {
         "repository": "npm/fs",
@@ -14322,7 +14322,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/git:main": {
         "repository": "npm/git",
@@ -14414,7 +14414,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/hosted-git-info:main": {
         "repository": "npm/hosted-git-info",
@@ -14506,7 +14506,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/ignore-walk:main": {
         "repository": "npm/ignore-walk",
@@ -14598,7 +14598,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/ini:main": {
         "repository": "npm/ini",
@@ -14690,7 +14690,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/init-package-json:main": {
         "repository": "npm/init-package-json",
@@ -14782,7 +14782,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/installed-package-contents:main": {
         "repository": "npm/installed-package-contents",
@@ -14874,7 +14874,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/json-parse-even-better-errors:main": {
         "repository": "npm/json-parse-even-better-errors",
@@ -14966,7 +14966,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/make-fetch-happen:main": {
         "repository": "npm/make-fetch-happen",
@@ -15058,7 +15058,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/make-fetch-happen:release/v15": {
         "repository": "npm/make-fetch-happen",
@@ -15150,7 +15150,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/map-workspaces:main": {
         "repository": "npm/map-workspaces",
@@ -15159,7 +15159,7 @@
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 28,
+            "totalCount": 30,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -15207,7 +15207,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 25
+                "count": 27
               },
               {
                 "state": "TIMED_OUT",
@@ -15242,7 +15242,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/metavuln-calculator:main": {
         "repository": "npm/metavuln-calculator",
@@ -15334,7 +15334,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/minify-registry-metadata:main": {
         "repository": "npm/minify-registry-metadata",
@@ -15426,7 +15426,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/minipass-fetch:main": {
         "repository": "npm/minipass-fetch",
@@ -15518,7 +15518,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/mute-stream:main": {
         "repository": "npm/mute-stream",
@@ -15610,7 +15610,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/name-from-folder:main": {
         "repository": "npm/name-from-folder",
@@ -15702,7 +15702,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/node-gyp:main": {
         "repository": "npm/node-gyp",
@@ -15794,7 +15794,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/node-semver:main": {
         "repository": "npm/node-semver",
@@ -15886,7 +15886,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/node-semver:release/v6": {
         "repository": "npm/node-semver",
@@ -15978,7 +15978,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/node-which:main": {
         "repository": "npm/node-which",
@@ -16070,7 +16070,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/nopt:main": {
         "repository": "npm/nopt",
@@ -16162,7 +16162,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/normalize-package-data:main": {
         "repository": "npm/normalize-package-data",
@@ -16254,7 +16254,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-audit-report:main": {
         "repository": "npm/npm-audit-report",
@@ -16346,7 +16346,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-bundled:main": {
         "repository": "npm/npm-bundled",
@@ -16438,7 +16438,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-install-checks:main": {
         "repository": "npm/npm-install-checks",
@@ -16530,7 +16530,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-normalize-package-bin:main": {
         "repository": "npm/npm-normalize-package-bin",
@@ -16622,7 +16622,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-package-arg:main": {
         "repository": "npm/npm-package-arg",
@@ -16714,7 +16714,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-packlist:main": {
         "repository": "npm/npm-packlist",
@@ -16806,7 +16806,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-pick-manifest:main": {
         "repository": "npm/npm-pick-manifest",
@@ -16898,7 +16898,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-profile:main": {
         "repository": "npm/npm-profile",
@@ -16990,7 +16990,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-profile:release/v12": {
         "repository": "npm/npm-profile",
@@ -17082,7 +17082,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-registry-fetch:main": {
         "repository": "npm/npm-registry-fetch",
@@ -17174,7 +17174,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/npm-user-validate:main": {
         "repository": "npm/npm-user-validate",
@@ -17266,7 +17266,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/package-json:main": {
         "repository": "npm/package-json",
@@ -17358,7 +17358,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/pacote:main": {
         "repository": "npm/pacote",
@@ -17450,7 +17450,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/pacote:release/v21": {
         "repository": "npm/pacote",
@@ -17542,7 +17542,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/pacote:release/v20": {
         "repository": "npm/pacote",
@@ -17634,7 +17634,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/pacote:release/v19": {
         "repository": "npm/pacote",
@@ -17726,7 +17726,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/parse-conflict-json:main": {
         "repository": "npm/parse-conflict-json",
@@ -17818,7 +17818,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/proc-log:main": {
         "repository": "npm/proc-log",
@@ -17910,7 +17910,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/proggy:main": {
         "repository": "npm/proggy",
@@ -18002,7 +18002,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/promise-spawn:main": {
         "repository": "npm/promise-spawn",
@@ -18094,7 +18094,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/promise-spawn:release/v9": {
         "repository": "npm/promise-spawn",
@@ -18186,7 +18186,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/promise-spawn:release/v8": {
         "repository": "npm/promise-spawn",
@@ -18278,7 +18278,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/promzard:main": {
         "repository": "npm/promzard",
@@ -18370,7 +18370,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/query:main": {
         "repository": "npm/query",
@@ -18462,7 +18462,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/read:main": {
         "repository": "npm/read",
@@ -18554,7 +18554,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/read-cmd-shim:main": {
         "repository": "npm/read-cmd-shim",
@@ -18646,7 +18646,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/read-package-json-fast:main": {
         "repository": "npm/read-package-json-fast",
@@ -18738,7 +18738,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/redact:main": {
         "repository": "npm/redact",
@@ -18830,7 +18830,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/run-script:main": {
         "repository": "npm/run-script",
@@ -18922,7 +18922,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/ssri:main": {
         "repository": "npm/ssri",
@@ -19014,7 +19014,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/template-oss:main": {
         "repository": "npm/template-oss",
@@ -19106,7 +19106,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/unique-filename:main": {
         "repository": "npm/unique-filename",
@@ -19198,7 +19198,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/unique-slug:main": {
         "repository": "npm/unique-slug",
@@ -19290,7 +19290,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/validate-npm-package-name:main": {
         "repository": "npm/validate-npm-package-name",
@@ -19382,7 +19382,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       },
       "npm/write-file-atomic:main": {
         "repository": "npm/write-file-atomic",
@@ -19474,7 +19474,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-19T12:36:10.104Z"
+        "checkedAt": "2026-11-20T12:36:02.041Z"
       }
     }
   }
