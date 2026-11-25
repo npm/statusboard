@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-24T12:33:09.193Z",
+  "checkedAt": "2026-11-25T12:32:39.694Z",
   "cli": [
     {
       "major": 12,
@@ -346,20 +346,20 @@
       "publishedAt": "2026-05-18T21:08:49.267Z"
     },
     "npm-profile": {
-      "version": "13.0.1",
+      "version": "13.0.2",
       "repository": {
         "url": "git+https://github.com/npm/npm-profile.git",
         "type": "git"
       },
-      "publishedAt": "2026-06-18T20:21:18.288Z"
+      "publishedAt": "2026-11-24T21:08:40.878Z"
     },
     "npm-registry-fetch": {
-      "version": "20.0.1",
+      "version": "20.0.2",
       "repository": {
         "url": "git+https://github.com/npm/npm-registry-fetch.git",
         "type": "git"
       },
-      "publishedAt": "2026-06-02T18:45:45.800Z"
+      "publishedAt": "2026-11-24T20:39:24.268Z"
     },
     "npm-user-validate": {
       "version": "5.0.0",
@@ -5896,16 +5896,16 @@
       "packageMajor": 13,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "13.0.1",
-      "branchCommit": "67b32d049d41dac10b8ccba96208af522d1c8f40",
+      "branchCurrentVersion": "13.0.2",
+      "branchCommit": "8588838d5d293a7e94c3b0a73a70285d57c4947d",
       "manifestPath": "package.json",
       "published": {
-        "version": "13.0.1",
+        "version": "13.0.2",
         "repository": {
           "url": "git+https://github.com/npm/npm-profile.git",
           "type": "git"
         },
-        "publishedAt": "2026-06-18T20:21:18.288Z"
+        "publishedAt": "2026-11-24T21:08:40.878Z"
       },
       "integrated": {
         "10": [],
@@ -5917,7 +5917,7 @@
             "locations": [
               "node_modules/npm-profile"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -6013,16 +6013,16 @@
       "packageMajor": 20,
       "branch": "main",
       "requiredBranch": null,
-      "branchCurrentVersion": "20.0.1",
-      "branchCommit": "6b4159a2519ce5aab26cc4dd8d4596a0b47781d2",
+      "branchCurrentVersion": "20.0.2",
+      "branchCommit": "54162f691bcee3fce3bf1bb54fc2e5f8bf3234f3",
       "manifestPath": "package.json",
       "published": {
-        "version": "20.0.1",
+        "version": "20.0.2",
         "repository": {
           "url": "git+https://github.com/npm/npm-registry-fetch.git",
           "type": "git"
         },
-        "publishedAt": "2026-06-02T18:45:45.800Z"
+        "publishedAt": "2026-11-24T20:39:24.268Z"
       },
       "integrated": {
         "10": [],
@@ -6034,7 +6034,7 @@
             "locations": [
               "node_modules/npm-registry-fetch"
             ],
-            "behindPublished": false
+            "behindPublished": true
           }
         ]
       },
@@ -11470,8 +11470,8 @@
     {
       "repository": "npm/npm-profile",
       "defaultBranch": "main",
-      "defaultVersion": "13.0.1",
-      "defaultCommit": "67b32d049d41dac10b8ccba96208af522d1c8f40",
+      "defaultVersion": "13.0.2",
+      "defaultCommit": "8588838d5d293a7e94c3b0a73a70285d57c4947d",
       "packages": [
         "npm-profile"
       ],
@@ -11533,7 +11533,7 @@
                 "locations": [
                   "node_modules/npm-profile"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -11543,8 +11543,8 @@
     {
       "repository": "npm/npm-registry-fetch",
       "defaultBranch": "main",
-      "defaultVersion": "20.0.1",
-      "defaultCommit": "6b4159a2519ce5aab26cc4dd8d4596a0b47781d2",
+      "defaultVersion": "20.0.2",
+      "defaultCommit": "54162f691bcee3fce3bf1bb54fc2e5f8bf3234f3",
       "packages": [
         "npm-registry-fetch"
       ],
@@ -11610,7 +11610,7 @@
                 "locations": [
                   "node_modules/npm-registry-fetch"
                 ],
-                "behindPublished": false
+                "behindPublished": true
               }
             ]
           }
@@ -13086,9 +13086,9 @@
     "packageBranchRows": 189,
     "requiredExistingRepositoryBranches": 61,
     "missingPackageMajorLines": 94,
-    "integrationCellsBehindPublished": 15
+    "integrationCellsBehindPublished": 17
   },
-  "analyzedAt": "2026-11-24T12:38:09.466Z",
+  "analyzedAt": "2026-11-25T12:37:40.148Z",
   "scope": {
     "excludeTemplateOssOnlyTransitives": true,
     "excludedTraversalPackage": "@npmcli/template-oss",
@@ -13126,7 +13126,7 @@
   },
   "checks": {
     "status": "complete",
-    "checkedAt": "2026-11-24T12:38:09.466Z",
+    "checkedAt": "2026-11-25T12:37:40.148Z",
     "branches": {
       "npm/abbrev-js:main": {
         "repository": "npm/abbrev-js",
@@ -13218,7 +13218,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/agent:main": {
         "repository": "npm/agent",
@@ -13310,7 +13310,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/agent:release/v4": {
         "repository": "npm/agent",
@@ -13402,7 +13402,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/bin-links:main": {
         "repository": "npm/bin-links",
@@ -13494,7 +13494,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/bin-links:release/v6": {
         "repository": "npm/bin-links",
@@ -13586,7 +13586,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/bin-links:release/v5": {
         "repository": "npm/bin-links",
@@ -13678,7 +13678,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/cacache:main": {
         "repository": "npm/cacache",
@@ -13770,7 +13770,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/cli:latest": {
         "repository": "npm/cli",
@@ -13862,7 +13862,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/cli:release/v11": {
         "repository": "npm/cli",
@@ -13954,7 +13954,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/cli:release/v10": {
         "repository": "npm/cli",
@@ -14046,7 +14046,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/cmd-shim:main": {
         "repository": "npm/cmd-shim",
@@ -14138,7 +14138,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/eslint-config:main": {
         "repository": "npm/eslint-config",
@@ -14230,7 +14230,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/fs:main": {
         "repository": "npm/fs",
@@ -14322,7 +14322,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/git:main": {
         "repository": "npm/git",
@@ -14414,7 +14414,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/hosted-git-info:main": {
         "repository": "npm/hosted-git-info",
@@ -14506,7 +14506,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/ignore-walk:main": {
         "repository": "npm/ignore-walk",
@@ -14515,7 +14515,7 @@
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 9,
+            "totalCount": 11,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -14563,7 +14563,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 6
+                "count": 8
               },
               {
                 "state": "TIMED_OUT",
@@ -14598,7 +14598,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/ini:main": {
         "repository": "npm/ini",
@@ -14690,7 +14690,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/init-package-json:main": {
         "repository": "npm/init-package-json",
@@ -14782,7 +14782,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/installed-package-contents:main": {
         "repository": "npm/installed-package-contents",
@@ -14874,7 +14874,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/json-parse-even-better-errors:main": {
         "repository": "npm/json-parse-even-better-errors",
@@ -14966,7 +14966,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/make-fetch-happen:main": {
         "repository": "npm/make-fetch-happen",
@@ -15058,7 +15058,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/make-fetch-happen:release/v15": {
         "repository": "npm/make-fetch-happen",
@@ -15150,7 +15150,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/map-workspaces:main": {
         "repository": "npm/map-workspaces",
@@ -15242,7 +15242,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/metavuln-calculator:main": {
         "repository": "npm/metavuln-calculator",
@@ -15334,7 +15334,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/minify-registry-metadata:main": {
         "repository": "npm/minify-registry-metadata",
@@ -15426,7 +15426,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/minipass-fetch:main": {
         "repository": "npm/minipass-fetch",
@@ -15518,7 +15518,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/mute-stream:main": {
         "repository": "npm/mute-stream",
@@ -15610,7 +15610,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/name-from-folder:main": {
         "repository": "npm/name-from-folder",
@@ -15702,7 +15702,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/node-gyp:main": {
         "repository": "npm/node-gyp",
@@ -15794,7 +15794,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/node-semver:main": {
         "repository": "npm/node-semver",
@@ -15886,7 +15886,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/node-semver:release/v6": {
         "repository": "npm/node-semver",
@@ -15978,7 +15978,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/node-which:main": {
         "repository": "npm/node-which",
@@ -16070,7 +16070,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/nopt:main": {
         "repository": "npm/nopt",
@@ -16162,7 +16162,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/normalize-package-data:main": {
         "repository": "npm/normalize-package-data",
@@ -16254,7 +16254,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-audit-report:main": {
         "repository": "npm/npm-audit-report",
@@ -16346,7 +16346,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-bundled:main": {
         "repository": "npm/npm-bundled",
@@ -16438,7 +16438,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-install-checks:main": {
         "repository": "npm/npm-install-checks",
@@ -16530,7 +16530,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-normalize-package-bin:main": {
         "repository": "npm/npm-normalize-package-bin",
@@ -16622,7 +16622,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-package-arg:main": {
         "repository": "npm/npm-package-arg",
@@ -16714,7 +16714,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-packlist:main": {
         "repository": "npm/npm-packlist",
@@ -16806,7 +16806,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-pick-manifest:main": {
         "repository": "npm/npm-pick-manifest",
@@ -16898,16 +16898,16 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-profile:main": {
         "repository": "npm/npm-profile",
         "branch": "main",
-        "commit": "67b32d049d41dac10b8ccba96208af522d1c8f40",
+        "commit": "8588838d5d293a7e94c3b0a73a70285d57c4947d",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
-            "totalCount": 62,
+            "totalCount": 9,
             "checkRunCountsByState": [
               {
                 "state": "ACTION_REQUIRED",
@@ -16955,7 +16955,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 59
+                "count": 6
               },
               {
                 "state": "TIMED_OUT",
@@ -16990,7 +16990,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-profile:release/v12": {
         "repository": "npm/npm-profile",
@@ -17082,12 +17082,12 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-registry-fetch:main": {
         "repository": "npm/npm-registry-fetch",
         "branch": "main",
-        "commit": "6b4159a2519ce5aab26cc4dd8d4596a0b47781d2",
+        "commit": "54162f691bcee3fce3bf1bb54fc2e5f8bf3234f3",
         "rollup": {
           "state": "SUCCESS",
           "contexts": {
@@ -17127,7 +17127,7 @@
               },
               {
                 "state": "SKIPPED",
-                "count": 6
+                "count": 3
               },
               {
                 "state": "STALE",
@@ -17139,7 +17139,7 @@
               },
               {
                 "state": "SUCCESS",
-                "count": 21
+                "count": 24
               },
               {
                 "state": "TIMED_OUT",
@@ -17174,7 +17174,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/npm-user-validate:main": {
         "repository": "npm/npm-user-validate",
@@ -17266,7 +17266,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/package-json:main": {
         "repository": "npm/package-json",
@@ -17358,7 +17358,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/pacote:main": {
         "repository": "npm/pacote",
@@ -17450,7 +17450,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/pacote:release/v21": {
         "repository": "npm/pacote",
@@ -17542,7 +17542,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/pacote:release/v20": {
         "repository": "npm/pacote",
@@ -17634,7 +17634,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/pacote:release/v19": {
         "repository": "npm/pacote",
@@ -17726,7 +17726,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/parse-conflict-json:main": {
         "repository": "npm/parse-conflict-json",
@@ -17818,7 +17818,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/proc-log:main": {
         "repository": "npm/proc-log",
@@ -17910,7 +17910,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/proggy:main": {
         "repository": "npm/proggy",
@@ -18002,7 +18002,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/promise-spawn:main": {
         "repository": "npm/promise-spawn",
@@ -18094,7 +18094,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/promise-spawn:release/v9": {
         "repository": "npm/promise-spawn",
@@ -18186,7 +18186,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/promise-spawn:release/v8": {
         "repository": "npm/promise-spawn",
@@ -18278,7 +18278,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/promzard:main": {
         "repository": "npm/promzard",
@@ -18370,7 +18370,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/query:main": {
         "repository": "npm/query",
@@ -18462,7 +18462,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/read:main": {
         "repository": "npm/read",
@@ -18554,7 +18554,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/read-cmd-shim:main": {
         "repository": "npm/read-cmd-shim",
@@ -18646,7 +18646,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/read-package-json-fast:main": {
         "repository": "npm/read-package-json-fast",
@@ -18738,7 +18738,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/redact:main": {
         "repository": "npm/redact",
@@ -18830,7 +18830,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/run-script:main": {
         "repository": "npm/run-script",
@@ -18922,7 +18922,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/ssri:main": {
         "repository": "npm/ssri",
@@ -19014,7 +19014,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/template-oss:main": {
         "repository": "npm/template-oss",
@@ -19106,7 +19106,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/unique-filename:main": {
         "repository": "npm/unique-filename",
@@ -19198,7 +19198,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/unique-slug:main": {
         "repository": "npm/unique-slug",
@@ -19290,7 +19290,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/validate-npm-package-name:main": {
         "repository": "npm/validate-npm-package-name",
@@ -19382,7 +19382,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       },
       "npm/write-file-atomic:main": {
         "repository": "npm/write-file-atomic",
@@ -19474,7 +19474,7 @@
             ]
           }
         },
-        "checkedAt": "2026-11-24T12:38:09.466Z"
+        "checkedAt": "2026-11-25T12:37:40.148Z"
       }
     }
   }
